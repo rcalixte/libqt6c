@@ -32,10 +32,10 @@ const QMetaObject* k_textcustomeditor__textgotolinewidget_meta_object(const void
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback const QMetaObject* func(const TextCustomEditor__TextGoToLineWidget* self)
 ///
-void k_textcustomeditor__textgotolinewidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textcustomeditor__textgotolinewidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextGoToLineWidget.html)
 ///
@@ -242,9 +242,9 @@ const char* k_textcustomeditor__textgotolinewidget_tr3(const char* s, const char
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self TextCustomEditor__TextGoToLineWidget*
+/// @param self const TextCustomEditor__TextGoToLineWidget*
 ///
-QPaintDevice* k_textcustomeditor__textgotolinewidget_as_q_paint_device(void* self);
+QPaintDevice* k_textcustomeditor__textgotolinewidget_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -252,7 +252,7 @@ QPaintDevice* k_textcustomeditor__textgotolinewidget_as_q_paint_device(void* sel
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-TextCustomEditor__TextGoToLineWidget* k_textcustomeditor__textgotolinewidget_from_q_paint_device(void* _qpaintdevice);
+TextCustomEditor__TextGoToLineWidget* k_textcustomeditor__textgotolinewidget_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3237,10 +3237,10 @@ int32_t k_textcustomeditor__textgotolinewidget_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback int32_t func(TextCustomEditor__TextGoToLineWidget* self)
 ///
-void k_textcustomeditor__textgotolinewidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_textcustomeditor__textgotolinewidget_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3301,12 +3301,12 @@ QSize* k_textcustomeditor__textgotolinewidget_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback QSize* func(TextCustomEditor__TextGoToLineWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__textgotolinewidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textcustomeditor__textgotolinewidget_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3334,12 +3334,12 @@ QSize* k_textcustomeditor__textgotolinewidget_super_minimum_size_hint(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback QSize* func(TextCustomEditor__TextGoToLineWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__textgotolinewidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textcustomeditor__textgotolinewidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3369,10 +3369,10 @@ int32_t k_textcustomeditor__textgotolinewidget_super_height_for_width(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback int32_t func(TextCustomEditor__TextGoToLineWidget* self, int param1)
 ///
-void k_textcustomeditor__textgotolinewidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_textcustomeditor__textgotolinewidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3400,10 +3400,10 @@ bool k_textcustomeditor__textgotolinewidget_super_has_height_for_width(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback bool func(TextCustomEditor__TextGoToLineWidget* self)
 ///
-void k_textcustomeditor__textgotolinewidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_textcustomeditor__textgotolinewidget_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3431,10 +3431,10 @@ QPaintEngine* k_textcustomeditor__textgotolinewidget_super_paint_engine(const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback QPaintEngine* func(TextCustomEditor__TextGoToLineWidget* self)
 ///
-void k_textcustomeditor__textgotolinewidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_textcustomeditor__textgotolinewidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4293,10 +4293,10 @@ int32_t k_textcustomeditor__textgotolinewidget_super_metric(const void* self, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback int32_t func(TextCustomEditor__TextGoToLineWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_textcustomeditor__textgotolinewidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_textcustomeditor__textgotolinewidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4326,10 +4326,10 @@ void k_textcustomeditor__textgotolinewidget_super_init_painter(const void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback void func(TextCustomEditor__TextGoToLineWidget* self, QPainter* painter)
 ///
-void k_textcustomeditor__textgotolinewidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_textcustomeditor__textgotolinewidget_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4359,10 +4359,10 @@ QPaintDevice* k_textcustomeditor__textgotolinewidget_super_redirected(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback QPaintDevice* func(TextCustomEditor__TextGoToLineWidget* self, QPoint* offset)
 ///
-void k_textcustomeditor__textgotolinewidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_textcustomeditor__textgotolinewidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4390,10 +4390,10 @@ QPainter* k_textcustomeditor__textgotolinewidget_super_shared_painter(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback QPainter* func(TextCustomEditor__TextGoToLineWidget* self)
 ///
-void k_textcustomeditor__textgotolinewidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_textcustomeditor__textgotolinewidget_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4456,12 +4456,12 @@ QVariant* k_textcustomeditor__textgotolinewidget_super_input_method_query(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback QVariant* func(TextCustomEditor__TextGoToLineWidget* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__textgotolinewidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_textcustomeditor__textgotolinewidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4842,10 +4842,10 @@ QObject* k_textcustomeditor__textgotolinewidget_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback QObject* func(TextCustomEditor__TextGoToLineWidget* self)
 ///
-void k_textcustomeditor__textgotolinewidget_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textcustomeditor__textgotolinewidget_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4873,10 +4873,10 @@ int32_t k_textcustomeditor__textgotolinewidget_super_sender_signal_index(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback int32_t func(TextCustomEditor__TextGoToLineWidget* self)
 ///
-void k_textcustomeditor__textgotolinewidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textcustomeditor__textgotolinewidget_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4906,10 +4906,10 @@ int32_t k_textcustomeditor__textgotolinewidget_super_receivers(const void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback int32_t func(TextCustomEditor__TextGoToLineWidget* self, const char* signal)
 ///
-void k_textcustomeditor__textgotolinewidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textcustomeditor__textgotolinewidget_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4939,10 +4939,10 @@ bool k_textcustomeditor__textgotolinewidget_super_is_signal_connected(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback bool func(TextCustomEditor__TextGoToLineWidget* self, QMetaMethod* signal)
 ///
-void k_textcustomeditor__textgotolinewidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textcustomeditor__textgotolinewidget_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4974,10 +4974,10 @@ double k_textcustomeditor__textgotolinewidget_super_get_decoded_metric_f(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextGoToLineWidget*
+/// @param self TextCustomEditor__TextGoToLineWidget*
 /// @param callback double func(TextCustomEditor__TextGoToLineWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_textcustomeditor__textgotolinewidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_textcustomeditor__textgotolinewidget_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

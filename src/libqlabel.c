@@ -46,7 +46,7 @@ const QMetaObject* q_label_meta_object(const void* self) {
     return QLabel_MetaObject((QLabel*)self);
 }
 
-void q_label_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_label_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QLabel_OnMetaObject((QLabel*)self, (intptr_t)callback);
 }
 
@@ -168,7 +168,7 @@ QSize* q_label_size_hint(const void* self) {
     return QLabel_SizeHint((QLabel*)self);
 }
 
-void q_label_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_label_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QLabel_OnSizeHint((QLabel*)self, (intptr_t)callback);
 }
 
@@ -180,7 +180,7 @@ QSize* q_label_minimum_size_hint(const void* self) {
     return QLabel_MinimumSizeHint((QLabel*)self);
 }
 
-void q_label_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_label_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QLabel_OnMinimumSizeHint((QLabel*)self, (intptr_t)callback);
 }
 
@@ -200,7 +200,7 @@ int32_t q_label_height_for_width(const void* self, int param1) {
     return QLabel_HeightForWidth((QLabel*)self, param1);
 }
 
-void q_label_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+void q_label_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
     QLabel_OnHeightForWidth((QLabel*)self, (intptr_t)callback);
 }
 
@@ -485,11 +485,11 @@ void q_label_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_label_as_q_paint_device(void* self) {
+QPaintDevice* q_label_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QLabel* q_label_from_q_paint_device(void* _qpaintdevice) {
+QLabel* q_label_from_q_paint_device(const void* _qpaintdevice) {
     return (QLabel*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1880,8 +1880,8 @@ void q_label_super_init_style_option(const void* self, void* option) {
     QLabel_SuperInitStyleOption((QLabel*)self, (QStyleOptionFrame*)option);
 }
 
-void q_label_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QLabel_OnInitStyleOption((const QLabel*)self, (intptr_t)callback);
+void q_label_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QLabel_OnInitStyleOption((QLabel*)self, (intptr_t)callback);
 }
 
 int32_t q_label_dev_type(const void* self) {
@@ -1892,8 +1892,8 @@ int32_t q_label_super_dev_type(const void* self) {
     return QLabel_SuperDevType((QLabel*)self);
 }
 
-void q_label_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QLabel_OnDevType((const QLabel*)self, (intptr_t)callback);
+void q_label_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QLabel_OnDevType((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_set_visible(void* self, bool visible) {
@@ -1916,8 +1916,8 @@ bool q_label_super_has_height_for_width(const void* self) {
     return QLabel_SuperHasHeightForWidth((QLabel*)self);
 }
 
-void q_label_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QLabel_OnHasHeightForWidth((const QLabel*)self, (intptr_t)callback);
+void q_label_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QLabel_OnHasHeightForWidth((QLabel*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_label_paint_engine(const void* self) {
@@ -1928,8 +1928,8 @@ QPaintEngine* q_label_super_paint_engine(const void* self) {
     return QLabel_SuperPaintEngine((QLabel*)self);
 }
 
-void q_label_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QLabel_OnPaintEngine((const QLabel*)self, (intptr_t)callback);
+void q_label_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QLabel_OnPaintEngine((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_mouse_double_click_event(void* self, void* event) {
@@ -2144,8 +2144,8 @@ int32_t q_label_super_metric(const void* self, int32_t param1) {
     return QLabel_SuperMetric((QLabel*)self, param1);
 }
 
-void q_label_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QLabel_OnMetric((const QLabel*)self, (intptr_t)callback);
+void q_label_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QLabel_OnMetric((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_init_painter(const void* self, void* painter) {
@@ -2156,8 +2156,8 @@ void q_label_super_init_painter(const void* self, void* painter) {
     QLabel_SuperInitPainter((QLabel*)self, (QPainter*)painter);
 }
 
-void q_label_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QLabel_OnInitPainter((const QLabel*)self, (intptr_t)callback);
+void q_label_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QLabel_OnInitPainter((QLabel*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_label_redirected(const void* self, void* offset) {
@@ -2168,8 +2168,8 @@ QPaintDevice* q_label_super_redirected(const void* self, void* offset) {
     return QLabel_SuperRedirected((QLabel*)self, (QPoint*)offset);
 }
 
-void q_label_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QLabel_OnRedirected((const QLabel*)self, (intptr_t)callback);
+void q_label_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QLabel_OnRedirected((QLabel*)self, (intptr_t)callback);
 }
 
 QPainter* q_label_shared_painter(const void* self) {
@@ -2180,8 +2180,8 @@ QPainter* q_label_super_shared_painter(const void* self) {
     return QLabel_SuperSharedPainter((QLabel*)self);
 }
 
-void q_label_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QLabel_OnSharedPainter((const QLabel*)self, (intptr_t)callback);
+void q_label_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QLabel_OnSharedPainter((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_input_method_event(void* self, void* param1) {
@@ -2204,8 +2204,8 @@ QVariant* q_label_super_input_method_query(const void* self, int32_t param1) {
     return QLabel_SuperInputMethodQuery((QLabel*)self, param1);
 }
 
-void q_label_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QLabel_OnInputMethodQuery((const QLabel*)self, (intptr_t)callback);
+void q_label_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QLabel_OnInputMethodQuery((QLabel*)self, (intptr_t)callback);
 }
 
 bool q_label_event_filter(void* self, void* watched, void* event) {

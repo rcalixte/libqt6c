@@ -26,7 +26,7 @@ const QMetaObject* k_sslcertificatebox_meta_object(const void* self) {
     return KSslCertificateBox_MetaObject((KSslCertificateBox*)self);
 }
 
-void k_sslcertificatebox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_sslcertificatebox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSslCertificateBox_OnMetaObject((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
@@ -87,11 +87,11 @@ const char* k_sslcertificatebox_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_sslcertificatebox_as_q_paint_device(void* self) {
+QPaintDevice* k_sslcertificatebox_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KSslCertificateBox* k_sslcertificatebox_from_q_paint_device(void* _qpaintdevice) {
+KSslCertificateBox* k_sslcertificatebox_from_q_paint_device(const void* _qpaintdevice) {
     return (KSslCertificateBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1482,8 +1482,8 @@ int32_t k_sslcertificatebox_super_dev_type(const void* self) {
     return KSslCertificateBox_SuperDevType((KSslCertificateBox*)self);
 }
 
-void k_sslcertificatebox_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KSslCertificateBox_OnDevType((const KSslCertificateBox*)self, (intptr_t)callback);
+void k_sslcertificatebox_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KSslCertificateBox_OnDevType((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
 void k_sslcertificatebox_set_visible(void* self, bool visible) {
@@ -1506,8 +1506,8 @@ QSize* k_sslcertificatebox_super_size_hint(const void* self) {
     return KSslCertificateBox_SuperSizeHint((KSslCertificateBox*)self);
 }
 
-void k_sslcertificatebox_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KSslCertificateBox_OnSizeHint((const KSslCertificateBox*)self, (intptr_t)callback);
+void k_sslcertificatebox_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KSslCertificateBox_OnSizeHint((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
 QSize* k_sslcertificatebox_minimum_size_hint(const void* self) {
@@ -1518,8 +1518,8 @@ QSize* k_sslcertificatebox_super_minimum_size_hint(const void* self) {
     return KSslCertificateBox_SuperMinimumSizeHint((KSslCertificateBox*)self);
 }
 
-void k_sslcertificatebox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KSslCertificateBox_OnMinimumSizeHint((const KSslCertificateBox*)self, (intptr_t)callback);
+void k_sslcertificatebox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KSslCertificateBox_OnMinimumSizeHint((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
 int32_t k_sslcertificatebox_height_for_width(const void* self, int param1) {
@@ -1530,8 +1530,8 @@ int32_t k_sslcertificatebox_super_height_for_width(const void* self, int param1)
     return KSslCertificateBox_SuperHeightForWidth((KSslCertificateBox*)self, param1);
 }
 
-void k_sslcertificatebox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KSslCertificateBox_OnHeightForWidth((const KSslCertificateBox*)self, (intptr_t)callback);
+void k_sslcertificatebox_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KSslCertificateBox_OnHeightForWidth((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
 bool k_sslcertificatebox_has_height_for_width(const void* self) {
@@ -1542,8 +1542,8 @@ bool k_sslcertificatebox_super_has_height_for_width(const void* self) {
     return KSslCertificateBox_SuperHasHeightForWidth((KSslCertificateBox*)self);
 }
 
-void k_sslcertificatebox_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KSslCertificateBox_OnHasHeightForWidth((const KSslCertificateBox*)self, (intptr_t)callback);
+void k_sslcertificatebox_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KSslCertificateBox_OnHasHeightForWidth((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_sslcertificatebox_paint_engine(const void* self) {
@@ -1554,8 +1554,8 @@ QPaintEngine* k_sslcertificatebox_super_paint_engine(const void* self) {
     return KSslCertificateBox_SuperPaintEngine((KSslCertificateBox*)self);
 }
 
-void k_sslcertificatebox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KSslCertificateBox_OnPaintEngine((const KSslCertificateBox*)self, (intptr_t)callback);
+void k_sslcertificatebox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KSslCertificateBox_OnPaintEngine((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
 bool k_sslcertificatebox_event(void* self, void* event) {
@@ -1890,8 +1890,8 @@ int32_t k_sslcertificatebox_super_metric(const void* self, int32_t param1) {
     return KSslCertificateBox_SuperMetric((KSslCertificateBox*)self, param1);
 }
 
-void k_sslcertificatebox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KSslCertificateBox_OnMetric((const KSslCertificateBox*)self, (intptr_t)callback);
+void k_sslcertificatebox_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KSslCertificateBox_OnMetric((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
 void k_sslcertificatebox_init_painter(const void* self, void* painter) {
@@ -1902,8 +1902,8 @@ void k_sslcertificatebox_super_init_painter(const void* self, void* painter) {
     KSslCertificateBox_SuperInitPainter((KSslCertificateBox*)self, (QPainter*)painter);
 }
 
-void k_sslcertificatebox_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KSslCertificateBox_OnInitPainter((const KSslCertificateBox*)self, (intptr_t)callback);
+void k_sslcertificatebox_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KSslCertificateBox_OnInitPainter((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_sslcertificatebox_redirected(const void* self, void* offset) {
@@ -1914,8 +1914,8 @@ QPaintDevice* k_sslcertificatebox_super_redirected(const void* self, void* offse
     return KSslCertificateBox_SuperRedirected((KSslCertificateBox*)self, (QPoint*)offset);
 }
 
-void k_sslcertificatebox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KSslCertificateBox_OnRedirected((const KSslCertificateBox*)self, (intptr_t)callback);
+void k_sslcertificatebox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KSslCertificateBox_OnRedirected((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
 QPainter* k_sslcertificatebox_shared_painter(const void* self) {
@@ -1926,8 +1926,8 @@ QPainter* k_sslcertificatebox_super_shared_painter(const void* self) {
     return KSslCertificateBox_SuperSharedPainter((KSslCertificateBox*)self);
 }
 
-void k_sslcertificatebox_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KSslCertificateBox_OnSharedPainter((const KSslCertificateBox*)self, (intptr_t)callback);
+void k_sslcertificatebox_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KSslCertificateBox_OnSharedPainter((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
 void k_sslcertificatebox_input_method_event(void* self, void* param1) {
@@ -1950,8 +1950,8 @@ QVariant* k_sslcertificatebox_super_input_method_query(const void* self, int32_t
     return KSslCertificateBox_SuperInputMethodQuery((KSslCertificateBox*)self, param1);
 }
 
-void k_sslcertificatebox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KSslCertificateBox_OnInputMethodQuery((const KSslCertificateBox*)self, (intptr_t)callback);
+void k_sslcertificatebox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KSslCertificateBox_OnInputMethodQuery((KSslCertificateBox*)self, (intptr_t)callback);
 }
 
 bool k_sslcertificatebox_focus_next_prev_child(void* self, bool next) {

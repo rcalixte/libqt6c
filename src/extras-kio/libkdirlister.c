@@ -20,7 +20,7 @@ const QMetaObject* k_dirlister_meta_object(const void* self) {
     return KDirLister_MetaObject((KDirLister*)self);
 }
 
-void k_dirlister_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_dirlister_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KDirLister_OnMetaObject((KDirLister*)self, (intptr_t)callback);
 }
 

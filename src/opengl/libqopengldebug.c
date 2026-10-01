@@ -100,7 +100,7 @@ const QMetaObject* q_opengldebuglogger_meta_object(const void* self) {
     return QOpenGLDebugLogger_MetaObject((QOpenGLDebugLogger*)self);
 }
 
-void q_opengldebuglogger_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_opengldebuglogger_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QOpenGLDebugLogger_OnMetaObject((QOpenGLDebugLogger*)self, (intptr_t)callback);
 }
 

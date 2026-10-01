@@ -21,7 +21,7 @@ const QMetaObject* q_virtualkeyboardabstractinputmethod_meta_object(const void* 
     return QVirtualKeyboardAbstractInputMethod_MetaObject((QVirtualKeyboardAbstractInputMethod*)self);
 }
 
-void q_virtualkeyboardabstractinputmethod_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_virtualkeyboardabstractinputmethod_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVirtualKeyboardAbstractInputMethod_OnMetaObject((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 
@@ -168,7 +168,7 @@ libqt_list /* of enum QVirtualKeyboardInputEngine__PatternRecognitionMode */ q_v
     return _arr;
 }
 
-void q_virtualkeyboardabstractinputmethod_on_pattern_recognition_modes(const void* self, libqt_list /* of enum QVirtualKeyboardInputEngine__PatternRecognitionMode */ (*callback)(const void*)) {
+void q_virtualkeyboardabstractinputmethod_on_pattern_recognition_modes(void* self, libqt_list /* of enum QVirtualKeyboardInputEngine__PatternRecognitionMode */ (*callback)(const void*)) {
     QVirtualKeyboardAbstractInputMethod_OnPatternRecognitionModes((QVirtualKeyboardAbstractInputMethod*)self, (intptr_t)callback);
 }
 

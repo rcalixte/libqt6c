@@ -36,10 +36,10 @@ const QMetaObject* k_textcustomeditor__texteditorcompleter_meta_object(const voi
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextCustomEditor__TextEditorCompleter*
+/// @param self TextCustomEditor__TextEditorCompleter*
 /// @param callback const QMetaObject* func(const TextCustomEditor__TextEditorCompleter* self)
 ///
-void k_textcustomeditor__texteditorcompleter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textcustomeditor__texteditorcompleter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1TextEditorCompleter.html)
 ///
@@ -850,10 +850,10 @@ QObject* k_textcustomeditor__texteditorcompleter_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextEditorCompleter*
+/// @param self TextCustomEditor__TextEditorCompleter*
 /// @param callback QObject* func(TextCustomEditor__TextEditorCompleter* self)
 ///
-void k_textcustomeditor__texteditorcompleter_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textcustomeditor__texteditorcompleter_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -881,10 +881,10 @@ int32_t k_textcustomeditor__texteditorcompleter_super_sender_signal_index(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextEditorCompleter*
+/// @param self TextCustomEditor__TextEditorCompleter*
 /// @param callback int32_t func(TextCustomEditor__TextEditorCompleter* self)
 ///
-void k_textcustomeditor__texteditorcompleter_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textcustomeditor__texteditorcompleter_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -914,10 +914,10 @@ int32_t k_textcustomeditor__texteditorcompleter_super_receivers(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextEditorCompleter*
+/// @param self TextCustomEditor__TextEditorCompleter*
 /// @param callback int32_t func(TextCustomEditor__TextEditorCompleter* self, const char* signal)
 ///
-void k_textcustomeditor__texteditorcompleter_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textcustomeditor__texteditorcompleter_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -947,10 +947,10 @@ bool k_textcustomeditor__texteditorcompleter_super_is_signal_connected(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__TextEditorCompleter*
+/// @param self TextCustomEditor__TextEditorCompleter*
 /// @param callback bool func(TextCustomEditor__TextEditorCompleter* self, QMetaMethod* signal)
 ///
-void k_textcustomeditor__texteditorcompleter_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textcustomeditor__texteditorcompleter_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

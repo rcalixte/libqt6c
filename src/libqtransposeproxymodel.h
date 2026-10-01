@@ -32,10 +32,10 @@ const QMetaObject* q_transposeproxymodel_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback const QMetaObject* func(const QTransposeProxyModel* self)
 ///
-void q_transposeproxymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_transposeproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -131,10 +131,10 @@ int32_t q_transposeproxymodel_row_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback int32_t func(const QTransposeProxyModel* self, QModelIndex* parent)
 ///
-void q_transposeproxymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#rowCount)
 ///
@@ -156,10 +156,10 @@ int32_t q_transposeproxymodel_column_count(const void* self, const void* parent)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback int32_t func(const QTransposeProxyModel* self, QModelIndex* parent)
 ///
-void q_transposeproxymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#columnCount)
 ///
@@ -183,12 +183,12 @@ QVariant* q_transposeproxymodel_header_data(const void* self, int section, int32
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QVariant* func(const QTransposeProxyModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
+void q_transposeproxymodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#headerData)
 ///
@@ -270,12 +270,12 @@ QSize* q_transposeproxymodel_span(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QSize* func(const QTransposeProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_span(void* self, QSize* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#span)
 ///
@@ -310,10 +310,10 @@ libqt_map q_transposeproxymodel_item_data(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback libqt_map of int to QVariant* func(const QTransposeProxyModel* self, QModelIndex* index)
 ///
-void q_transposeproxymodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_item_data(void* self, libqt_map (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#itemData)
 ///
@@ -337,12 +337,12 @@ QModelIndex* q_transposeproxymodel_map_from_source(const void* self, const void*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(const QTransposeProxyModel* self, QModelIndex* sourceIndex)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_map_from_source(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#mapFromSource)
 ///
@@ -364,12 +364,12 @@ QModelIndex* q_transposeproxymodel_map_to_source(const void* self, const void* p
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(const QTransposeProxyModel* self, QModelIndex* proxyIndex)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_map_to_source(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#mapToSource)
 ///
@@ -391,12 +391,12 @@ QModelIndex* q_transposeproxymodel_parent(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(const QTransposeProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#parent)
 ///
@@ -420,12 +420,12 @@ QModelIndex* q_transposeproxymodel_index(const void* self, int row, int column, 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(const QTransposeProxyModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_transposeproxymodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransposeproxymodel.html#index)
 ///
@@ -1448,12 +1448,12 @@ QItemSelection* q_transposeproxymodel_super_map_selection_to_source(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QItemSelection* func(QTransposeProxyModel* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_map_selection_to_source(const void* self, QItemSelection* (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1483,12 +1483,12 @@ QItemSelection* q_transposeproxymodel_super_map_selection_from_source(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QItemSelection* func(QTransposeProxyModel* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_map_selection_from_source(const void* self, QItemSelection* (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1582,12 +1582,12 @@ QVariant* q_transposeproxymodel_super_data(const void* self, const void* proxyIn
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QVariant* func(QTransposeProxyModel* self, QModelIndex* proxyIndex, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
+void q_transposeproxymodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1621,10 +1621,10 @@ int32_t q_transposeproxymodel_super_flags(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback int32_t func(QTransposeProxyModel* self, QModelIndex* index)
 ///
-void q_transposeproxymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_flags(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1724,12 +1724,12 @@ QModelIndex* q_transposeproxymodel_super_buddy(const void* self, const void* ind
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(QTransposeProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1759,10 +1759,10 @@ bool q_transposeproxymodel_super_can_fetch_more(const void* self, const void* pa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback bool func(QTransposeProxyModel* self, QModelIndex* parent)
 ///
-void q_transposeproxymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1825,10 +1825,10 @@ bool q_transposeproxymodel_super_has_children(const void* self, const void* pare
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback bool func(QTransposeProxyModel* self, QModelIndex* parent)
 ///
-void q_transposeproxymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_has_children(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1862,12 +1862,12 @@ QModelIndex* q_transposeproxymodel_super_sibling(const void* self, int row, int 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(QTransposeProxyModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_transposeproxymodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1897,10 +1897,10 @@ QMimeData* q_transposeproxymodel_super_mime_data(const void* self, libqt_list in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QMimeData* func(QTransposeProxyModel* self, libqt_list of QModelIndex* indexes)
 ///
-void q_transposeproxymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void q_transposeproxymodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1938,10 +1938,10 @@ bool q_transposeproxymodel_super_can_drop_mime_data(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback bool func(QTransposeProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void q_transposeproxymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
+void q_transposeproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2014,10 +2014,10 @@ const char** q_transposeproxymodel_super_mime_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback const char** func(QTransposeProxyModel* self)
 ///
-void q_transposeproxymodel_on_mime_types(const void* self, const char** (*callback)(const void*));
+void q_transposeproxymodel_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2049,10 +2049,10 @@ int32_t q_transposeproxymodel_super_supported_drag_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback int32_t func(QTransposeProxyModel* self)
 ///
-void q_transposeproxymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
+void q_transposeproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2084,10 +2084,10 @@ int32_t q_transposeproxymodel_super_supported_drop_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback int32_t func(QTransposeProxyModel* self)
 ///
-void q_transposeproxymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void q_transposeproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2141,10 +2141,10 @@ libqt_map q_transposeproxymodel_super_role_names(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback libqt_map of int to char* func(QTransposeProxyModel* self)
 ///
-void q_transposeproxymodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
+void q_transposeproxymodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2186,10 +2186,10 @@ libqt_list q_transposeproxymodel_super_match(const void* self, const void* start
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback libqt_list of QModelIndex* func(QTransposeProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void q_transposeproxymodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
+void q_transposeproxymodel_on_match(void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2221,10 +2221,10 @@ void q_transposeproxymodel_super_multi_data(const void* self, const void* index,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback void func(QTransposeProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void q_transposeproxymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
+void q_transposeproxymodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2522,12 +2522,12 @@ QModelIndex* q_transposeproxymodel_super_create_source_index(const void* self, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(QTransposeProxyModel* self, int row, int col, void* internalPtr)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_create_source_index(const void* self, QModelIndex* (*callback)(const void*, int, int, void*));
+void q_transposeproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(const void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2559,12 +2559,12 @@ QModelIndex* q_transposeproxymodel_super_create_index(const void* self, int row,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(QTransposeProxyModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_transposeproxymodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
+void q_transposeproxymodel_on_create_index(void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2596,10 +2596,10 @@ void q_transposeproxymodel_super_encode_data(const void* self, libqt_list indexe
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback void func(QTransposeProxyModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void q_transposeproxymodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
+void q_transposeproxymodel_on_encode_data(void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3218,10 +3218,10 @@ libqt_list q_transposeproxymodel_super_persistent_index_list(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback libqt_list of QModelIndex* func(QTransposeProxyModel* self)
 ///
-void q_transposeproxymodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
+void q_transposeproxymodel_on_persistent_index_list(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3249,10 +3249,10 @@ QObject* q_transposeproxymodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback QObject* func(QTransposeProxyModel* self)
 ///
-void q_transposeproxymodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_transposeproxymodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3280,10 +3280,10 @@ int32_t q_transposeproxymodel_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback int32_t func(QTransposeProxyModel* self)
 ///
-void q_transposeproxymodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_transposeproxymodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3313,10 +3313,10 @@ int32_t q_transposeproxymodel_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback int32_t func(QTransposeProxyModel* self, const char* signal)
 ///
-void q_transposeproxymodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_transposeproxymodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3346,10 +3346,10 @@ bool q_transposeproxymodel_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTransposeProxyModel*
+/// @param self QTransposeProxyModel*
 /// @param callback bool func(QTransposeProxyModel* self, QMetaMethod* signal)
 ///
-void q_transposeproxymodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_transposeproxymodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///

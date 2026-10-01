@@ -24,7 +24,7 @@ const QMetaObject* q_abstractitemdelegate_meta_object(const void* self) {
     return QAbstractItemDelegate_MetaObject((QAbstractItemDelegate*)self);
 }
 
-void q_abstractitemdelegate_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstractitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractItemDelegate_OnMetaObject((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -67,7 +67,7 @@ void q_abstractitemdelegate_paint(const void* self, void* painter, const void* o
     QAbstractItemDelegate_Paint((QAbstractItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void q_abstractitemdelegate_on_paint(const void* self, void (*callback)(const void*, void*, const void*, const void*)) {
+void q_abstractitemdelegate_on_paint(void* self, void (*callback)(const void*, void*, const void*, const void*)) {
     QAbstractItemDelegate_OnPaint((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -75,7 +75,7 @@ QSize* q_abstractitemdelegate_size_hint(const void* self, const void* option, co
     return QAbstractItemDelegate_SizeHint((QAbstractItemDelegate*)self, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void q_abstractitemdelegate_on_size_hint(const void* self, QSize* (*callback)(const void*, const void*, const void*)) {
+void q_abstractitemdelegate_on_size_hint(void* self, QSize* (*callback)(const void*, const void*, const void*)) {
     QAbstractItemDelegate_OnSizeHint((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -83,7 +83,7 @@ QWidget* q_abstractitemdelegate_create_editor(const void* self, void* parent, co
     return QAbstractItemDelegate_CreateEditor((QAbstractItemDelegate*)self, (QWidget*)parent, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void q_abstractitemdelegate_on_create_editor(const void* self, QWidget* (*callback)(const void*, void*, const void*, const void*)) {
+void q_abstractitemdelegate_on_create_editor(void* self, QWidget* (*callback)(const void*, void*, const void*, const void*)) {
     QAbstractItemDelegate_OnCreateEditor((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -95,7 +95,7 @@ void q_abstractitemdelegate_destroy_editor(const void* self, void* editor, const
     QAbstractItemDelegate_DestroyEditor((QAbstractItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
-void q_abstractitemdelegate_on_destroy_editor(const void* self, void (*callback)(const void*, void*, const void*)) {
+void q_abstractitemdelegate_on_destroy_editor(void* self, void (*callback)(const void*, void*, const void*)) {
     QAbstractItemDelegate_OnDestroyEditor((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -107,7 +107,7 @@ void q_abstractitemdelegate_set_editor_data(const void* self, void* editor, cons
     QAbstractItemDelegate_SetEditorData((QAbstractItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
-void q_abstractitemdelegate_on_set_editor_data(const void* self, void (*callback)(const void*, void*, const void*)) {
+void q_abstractitemdelegate_on_set_editor_data(void* self, void (*callback)(const void*, void*, const void*)) {
     QAbstractItemDelegate_OnSetEditorData((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -119,7 +119,7 @@ void q_abstractitemdelegate_set_model_data(const void* self, void* editor, void*
     QAbstractItemDelegate_SetModelData((QAbstractItemDelegate*)self, (QWidget*)editor, (QAbstractItemModel*)model, (QModelIndex*)index);
 }
 
-void q_abstractitemdelegate_on_set_model_data(const void* self, void (*callback)(const void*, void*, void*, const void*)) {
+void q_abstractitemdelegate_on_set_model_data(void* self, void (*callback)(const void*, void*, void*, const void*)) {
     QAbstractItemDelegate_OnSetModelData((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -131,7 +131,7 @@ void q_abstractitemdelegate_update_editor_geometry(const void* self, void* edito
     QAbstractItemDelegate_UpdateEditorGeometry((QAbstractItemDelegate*)self, (QWidget*)editor, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void q_abstractitemdelegate_on_update_editor_geometry(const void* self, void (*callback)(const void*, void*, const void*, const void*)) {
+void q_abstractitemdelegate_on_update_editor_geometry(void* self, void (*callback)(const void*, void*, const void*, const void*)) {
     QAbstractItemDelegate_OnUpdateEditorGeometry((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -168,7 +168,7 @@ libqt_list /* of int */ q_abstractitemdelegate_painting_roles(const void* self) 
     return _arr;
 }
 
-void q_abstractitemdelegate_on_painting_roles(const void* self, libqt_list /* of int */ (*callback)(const void*)) {
+void q_abstractitemdelegate_on_painting_roles(void* self, libqt_list /* of int */ (*callback)(const void*)) {
     QAbstractItemDelegate_OnPaintingRoles((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 

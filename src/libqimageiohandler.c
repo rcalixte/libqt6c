@@ -41,7 +41,7 @@ bool q_imageiohandler_can_read(const void* self) {
     return QImageIOHandler_CanRead((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_can_read(const void* self, bool (*callback)(const void*)) {
+void q_imageiohandler_on_can_read(void* self, bool (*callback)(const void*)) {
     QImageIOHandler_OnCanRead((QImageIOHandler*)self, (intptr_t)callback);
 }
 
@@ -69,7 +69,7 @@ QVariant* q_imageiohandler_option(const void* self, int32_t option) {
     return QImageIOHandler_Option((QImageIOHandler*)self, option);
 }
 
-void q_imageiohandler_on_option(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+void q_imageiohandler_on_option(void* self, QVariant* (*callback)(const void*, int32_t)) {
     QImageIOHandler_OnOption((QImageIOHandler*)self, (intptr_t)callback);
 }
 
@@ -93,7 +93,7 @@ bool q_imageiohandler_supports_option(const void* self, int32_t option) {
     return QImageIOHandler_SupportsOption((QImageIOHandler*)self, option);
 }
 
-void q_imageiohandler_on_supports_option(const void* self, bool (*callback)(const void*, int32_t)) {
+void q_imageiohandler_on_supports_option(void* self, bool (*callback)(const void*, int32_t)) {
     QImageIOHandler_OnSupportsOption((QImageIOHandler*)self, (intptr_t)callback);
 }
 
@@ -129,7 +129,7 @@ int32_t q_imageiohandler_loop_count(const void* self) {
     return QImageIOHandler_LoopCount((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_loop_count(const void* self, int32_t (*callback)(const void*)) {
+void q_imageiohandler_on_loop_count(void* self, int32_t (*callback)(const void*)) {
     QImageIOHandler_OnLoopCount((QImageIOHandler*)self, (intptr_t)callback);
 }
 
@@ -141,7 +141,7 @@ int32_t q_imageiohandler_image_count(const void* self) {
     return QImageIOHandler_ImageCount((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_image_count(const void* self, int32_t (*callback)(const void*)) {
+void q_imageiohandler_on_image_count(void* self, int32_t (*callback)(const void*)) {
     QImageIOHandler_OnImageCount((QImageIOHandler*)self, (intptr_t)callback);
 }
 
@@ -153,7 +153,7 @@ int32_t q_imageiohandler_next_image_delay(const void* self) {
     return QImageIOHandler_NextImageDelay((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_next_image_delay(const void* self, int32_t (*callback)(const void*)) {
+void q_imageiohandler_on_next_image_delay(void* self, int32_t (*callback)(const void*)) {
     QImageIOHandler_OnNextImageDelay((QImageIOHandler*)self, (intptr_t)callback);
 }
 
@@ -165,7 +165,7 @@ int32_t q_imageiohandler_current_image_number(const void* self) {
     return QImageIOHandler_CurrentImageNumber((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_current_image_number(const void* self, int32_t (*callback)(const void*)) {
+void q_imageiohandler_on_current_image_number(void* self, int32_t (*callback)(const void*)) {
     QImageIOHandler_OnCurrentImageNumber((QImageIOHandler*)self, (intptr_t)callback);
 }
 
@@ -177,7 +177,7 @@ QRect* q_imageiohandler_current_image_rect(const void* self) {
     return QImageIOHandler_CurrentImageRect((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_current_image_rect(const void* self, QRect* (*callback)(const void*)) {
+void q_imageiohandler_on_current_image_rect(void* self, QRect* (*callback)(const void*)) {
     QImageIOHandler_OnCurrentImageRect((QImageIOHandler*)self, (intptr_t)callback);
 }
 
@@ -205,7 +205,7 @@ const QMetaObject* q_imageioplugin_meta_object(const void* self) {
     return QImageIOPlugin_MetaObject((QImageIOPlugin*)self);
 }
 
-void q_imageioplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_imageioplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QImageIOPlugin_OnMetaObject((QImageIOPlugin*)self, (intptr_t)callback);
 }
 
@@ -248,7 +248,7 @@ int32_t q_imageioplugin_capabilities(const void* self, void* device, char* forma
     return QImageIOPlugin_Capabilities((QImageIOPlugin*)self, (QIODevice*)device, qstring(format));
 }
 
-void q_imageioplugin_on_capabilities(const void* self, int32_t (*callback)(const void*, void*, libqt_string)) {
+void q_imageioplugin_on_capabilities(void* self, int32_t (*callback)(const void*, void*, libqt_string)) {
     QImageIOPlugin_OnCapabilities((QImageIOPlugin*)self, (intptr_t)callback);
 }
 
@@ -256,7 +256,7 @@ QImageIOHandler* q_imageioplugin_create(const void* self, void* device, char* fo
     return QImageIOPlugin_Create((QImageIOPlugin*)self, (QIODevice*)device, qstring(format));
 }
 
-void q_imageioplugin_on_create(const void* self, QImageIOHandler* (*callback)(const void*, void*, libqt_string)) {
+void q_imageioplugin_on_create(void* self, QImageIOHandler* (*callback)(const void*, void*, libqt_string)) {
     QImageIOPlugin_OnCreate((QImageIOPlugin*)self, (intptr_t)callback);
 }
 

@@ -21,7 +21,7 @@ const QMetaObject* q_abstracttransition_meta_object(const void* self) {
     return QAbstractTransition_MetaObject((QAbstractTransition*)self);
 }
 
-void q_abstracttransition_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstracttransition_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractTransition_OnMetaObject((QAbstractTransition*)self, (intptr_t)callback);
 }
 

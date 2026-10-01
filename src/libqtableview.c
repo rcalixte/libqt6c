@@ -36,7 +36,7 @@ const QMetaObject* q_tableview_meta_object(const void* self) {
     return QTableView_MetaObject((QTableView*)self);
 }
 
-void q_tableview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_tableview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTableView_OnMetaObject((QTableView*)self, (intptr_t)callback);
 }
 
@@ -227,7 +227,7 @@ QRect* q_tableview_visual_rect(const void* self, const void* index) {
     return QTableView_VisualRect((QTableView*)self, (QModelIndex*)index);
 }
 
-void q_tableview_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*)) {
+void q_tableview_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*)) {
     QTableView_OnVisualRect((QTableView*)self, (intptr_t)callback);
 }
 
@@ -251,7 +251,7 @@ QModelIndex* q_tableview_index_at(const void* self, const void* p) {
     return QTableView_IndexAt((QTableView*)self, (QPoint*)p);
 }
 
-void q_tableview_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_tableview_on_index_at(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QTableView_OnIndexAt((QTableView*)self, (intptr_t)callback);
 }
 
@@ -363,7 +363,7 @@ void q_tableview_init_view_item_option(const void* self, void* option) {
     QTableView_InitViewItemOption((QTableView*)self, (QStyleOptionViewItem*)option);
 }
 
-void q_tableview_on_init_view_item_option(const void* self, void (*callback)(const void*, void*)) {
+void q_tableview_on_init_view_item_option(void* self, void (*callback)(const void*, void*)) {
     QTableView_OnInitViewItemOption((QTableView*)self, (intptr_t)callback);
 }
 
@@ -411,7 +411,7 @@ int32_t q_tableview_horizontal_offset(const void* self) {
     return QTableView_HorizontalOffset((QTableView*)self);
 }
 
-void q_tableview_on_horizontal_offset(const void* self, int32_t (*callback)(const void*)) {
+void q_tableview_on_horizontal_offset(void* self, int32_t (*callback)(const void*)) {
     QTableView_OnHorizontalOffset((QTableView*)self, (intptr_t)callback);
 }
 
@@ -423,7 +423,7 @@ int32_t q_tableview_vertical_offset(const void* self) {
     return QTableView_VerticalOffset((QTableView*)self);
 }
 
-void q_tableview_on_vertical_offset(const void* self, int32_t (*callback)(const void*)) {
+void q_tableview_on_vertical_offset(void* self, int32_t (*callback)(const void*)) {
     QTableView_OnVerticalOffset((QTableView*)self, (intptr_t)callback);
 }
 
@@ -459,7 +459,7 @@ QRegion* q_tableview_visual_region_for_selection(const void* self, const void* s
     return QTableView_VisualRegionForSelection((QTableView*)self, (QItemSelection*)selection);
 }
 
-void q_tableview_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*)) {
+void q_tableview_on_visual_region_for_selection(void* self, QRegion* (*callback)(const void*, const void*)) {
     QTableView_OnVisualRegionForSelection((QTableView*)self, (intptr_t)callback);
 }
 
@@ -472,7 +472,7 @@ libqt_list /* of QModelIndex* */ q_tableview_selected_indexes(const void* self) 
     return _arr;
 }
 
-void q_tableview_on_selected_indexes(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
+void q_tableview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
     QTableView_OnSelectedIndexes((QTableView*)self, (intptr_t)callback);
 }
 
@@ -497,7 +497,7 @@ QSize* q_tableview_viewport_size_hint(const void* self) {
     return QTableView_ViewportSizeHint((QTableView*)self);
 }
 
-void q_tableview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_tableview_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
     QTableView_OnViewportSizeHint((QTableView*)self, (intptr_t)callback);
 }
 
@@ -509,7 +509,7 @@ int32_t q_tableview_size_hint_for_row(const void* self, int row) {
     return QTableView_SizeHintForRow((QTableView*)self, row);
 }
 
-void q_tableview_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int)) {
+void q_tableview_on_size_hint_for_row(void* self, int32_t (*callback)(const void*, int)) {
     QTableView_OnSizeHintForRow((QTableView*)self, (intptr_t)callback);
 }
 
@@ -521,7 +521,7 @@ int32_t q_tableview_size_hint_for_column(const void* self, int column) {
     return QTableView_SizeHintForColumn((QTableView*)self, column);
 }
 
-void q_tableview_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int)) {
+void q_tableview_on_size_hint_for_column(void* self, int32_t (*callback)(const void*, int)) {
     QTableView_OnSizeHintForColumn((QTableView*)self, (intptr_t)callback);
 }
 
@@ -557,7 +557,7 @@ bool q_tableview_is_index_hidden(const void* self, const void* index) {
     return QTableView_IsIndexHidden((QTableView*)self, (QModelIndex*)index);
 }
 
-void q_tableview_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*)) {
+void q_tableview_on_is_index_hidden(void* self, bool (*callback)(const void*, const void*)) {
     QTableView_OnIsIndexHidden((QTableView*)self, (intptr_t)callback);
 }
 
@@ -1008,11 +1008,11 @@ void q_tableview_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_tableview_as_q_paint_device(void* self) {
+QPaintDevice* q_tableview_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QTableView* q_tableview_from_q_paint_device(void* _qpaintdevice) {
+QTableView* q_tableview_from_q_paint_device(const void* _qpaintdevice) {
     return (QTableView*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2411,8 +2411,8 @@ QAbstractItemDelegate* q_tableview_super_item_delegate_for_index(const void* sel
     return QTableView_SuperItemDelegateForIndex((QTableView*)self, (QModelIndex*)index);
 }
 
-void q_tableview_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
-    QTableView_OnItemDelegateForIndex((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
+    QTableView_OnItemDelegateForIndex((QTableView*)self, (intptr_t)callback);
 }
 
 QVariant* q_tableview_input_method_query(const void* self, int32_t query) {
@@ -2423,8 +2423,8 @@ QVariant* q_tableview_super_input_method_query(const void* self, int32_t query) 
     return QTableView_SuperInputMethodQuery((QTableView*)self, query);
 }
 
-void q_tableview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QTableView_OnInputMethodQuery((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QTableView_OnInputMethodQuery((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_reset(void* self) {
@@ -2591,8 +2591,8 @@ int32_t q_tableview_super_selection_command(const void* self, const void* index,
     return QTableView_SuperSelectionCommand((QTableView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_tableview_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*)) {
-    QTableView_OnSelectionCommand((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_selection_command(void* self, int32_t (*callback)(const void*, const void*, const void*)) {
+    QTableView_OnSelectionCommand((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_start_drag(void* self, int32_t supportedActions) {
@@ -2807,8 +2807,8 @@ QSize* q_tableview_super_minimum_size_hint(const void* self) {
     return QTableView_SuperMinimumSizeHint((QTableView*)self);
 }
 
-void q_tableview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTableView_OnMinimumSizeHint((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTableView_OnMinimumSizeHint((QTableView*)self, (intptr_t)callback);
 }
 
 QSize* q_tableview_size_hint(const void* self) {
@@ -2819,8 +2819,8 @@ QSize* q_tableview_super_size_hint(const void* self) {
     return QTableView_SuperSizeHint((QTableView*)self);
 }
 
-void q_tableview_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTableView_OnSizeHint((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTableView_OnSizeHint((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_setup_viewport(void* self, void* viewport) {
@@ -2879,8 +2879,8 @@ void q_tableview_super_init_style_option(const void* self, void* option) {
     QTableView_SuperInitStyleOption((QTableView*)self, (QStyleOptionFrame*)option);
 }
 
-void q_tableview_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QTableView_OnInitStyleOption((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QTableView_OnInitStyleOption((QTableView*)self, (intptr_t)callback);
 }
 
 int32_t q_tableview_dev_type(const void* self) {
@@ -2891,8 +2891,8 @@ int32_t q_tableview_super_dev_type(const void* self) {
     return QTableView_SuperDevType((QTableView*)self);
 }
 
-void q_tableview_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QTableView_OnDevType((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QTableView_OnDevType((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_set_visible(void* self, bool visible) {
@@ -2915,8 +2915,8 @@ int32_t q_tableview_super_height_for_width(const void* self, int param1) {
     return QTableView_SuperHeightForWidth((QTableView*)self, param1);
 }
 
-void q_tableview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QTableView_OnHeightForWidth((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QTableView_OnHeightForWidth((QTableView*)self, (intptr_t)callback);
 }
 
 bool q_tableview_has_height_for_width(const void* self) {
@@ -2927,8 +2927,8 @@ bool q_tableview_super_has_height_for_width(const void* self) {
     return QTableView_SuperHasHeightForWidth((QTableView*)self);
 }
 
-void q_tableview_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QTableView_OnHasHeightForWidth((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QTableView_OnHasHeightForWidth((QTableView*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_tableview_paint_engine(const void* self) {
@@ -2939,8 +2939,8 @@ QPaintEngine* q_tableview_super_paint_engine(const void* self) {
     return QTableView_SuperPaintEngine((QTableView*)self);
 }
 
-void q_tableview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QTableView_OnPaintEngine((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QTableView_OnPaintEngine((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_key_release_event(void* self, void* event) {
@@ -3071,8 +3071,8 @@ int32_t q_tableview_super_metric(const void* self, int32_t param1) {
     return QTableView_SuperMetric((QTableView*)self, param1);
 }
 
-void q_tableview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QTableView_OnMetric((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QTableView_OnMetric((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_init_painter(const void* self, void* painter) {
@@ -3083,8 +3083,8 @@ void q_tableview_super_init_painter(const void* self, void* painter) {
     QTableView_SuperInitPainter((QTableView*)self, (QPainter*)painter);
 }
 
-void q_tableview_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QTableView_OnInitPainter((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QTableView_OnInitPainter((QTableView*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_tableview_redirected(const void* self, void* offset) {
@@ -3095,8 +3095,8 @@ QPaintDevice* q_tableview_super_redirected(const void* self, void* offset) {
     return QTableView_SuperRedirected((QTableView*)self, (QPoint*)offset);
 }
 
-void q_tableview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QTableView_OnRedirected((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QTableView_OnRedirected((QTableView*)self, (intptr_t)callback);
 }
 
 QPainter* q_tableview_shared_painter(const void* self) {
@@ -3107,8 +3107,8 @@ QPainter* q_tableview_super_shared_painter(const void* self) {
     return QTableView_SuperSharedPainter((QTableView*)self);
 }
 
-void q_tableview_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QTableView_OnSharedPainter((const QTableView*)self, (intptr_t)callback);
+void q_tableview_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QTableView_OnSharedPainter((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_child_event(void* self, void* event) {

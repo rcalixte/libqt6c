@@ -11,11 +11,11 @@
 #include "libqpaintdevicewindow.hpp"
 #include "libqpaintdevicewindow.h"
 
-QPaintDevice* q_paintdevicewindow_as_q_paint_device(void* self) {
+QPaintDevice* q_paintdevicewindow_as_q_paint_device(const void* self) {
     return QPaintDeviceWindow_AsQPaintDevice((QPaintDeviceWindow*)self);
 }
 
-QPaintDeviceWindow* q_paintdevicewindow_from_q_paint_device(void* _qpaintdevice) {
+QPaintDeviceWindow* q_paintdevicewindow_from_q_paint_device(const void* _qpaintdevice) {
     return (QPaintDeviceWindow*)QPaintDeviceWindow_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -64,11 +64,11 @@ const char* q_paintdevicewindow_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QSurface* q_paintdevicewindow_as_q_surface(void* self) {
+QSurface* q_paintdevicewindow_as_q_surface(const void* self) {
     return QWindow_AsQSurface((QWindow*)self);
 }
 
-QPaintDeviceWindow* q_paintdevicewindow_from_q_surface(void* _qsurface) {
+QPaintDeviceWindow* q_paintdevicewindow_from_q_surface(const void* _qsurface) {
     return (QPaintDeviceWindow*)QWindow_FromQSurface((QSurface*)_qsurface);
 }
 

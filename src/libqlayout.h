@@ -24,15 +24,15 @@ QLayout* q_layout_new2();
 
 /// Upcasts to a QLayoutItem object
 ///
-/// @param self QLayout*
+/// @param self const QLayout*
 ///
-QLayoutItem* q_layout_as_q_layout_item(void* self);
+QLayoutItem* q_layout_as_q_layout_item(const void* self);
 
 /// Downcasts to a QLayout object
 ///
 /// @param _qlayoutitem QLayoutItem*
 ///
-QLayout* q_layout_from_q_layout_item(void* _qlayoutitem);
+QLayout* q_layout_from_q_layout_item(const void* _qlayoutitem);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -44,10 +44,10 @@ const QMetaObject* q_layout_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback const QMetaObject* func(const QLayout* self)
 ///
-void q_layout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_layout_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -117,10 +117,10 @@ int32_t q_layout_spacing(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback int32_t func(const QLayout* self)
 ///
-void q_layout_on_spacing(const void* self, int32_t (*callback)(const void*));
+void q_layout_on_spacing(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#spacing)
 ///
@@ -283,12 +283,12 @@ QRect* q_layout_geometry(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback QRect* func(const QLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_layout_on_geometry(const void* self, QRect* (*callback)(const void*));
+void q_layout_on_geometry(void* self, QRect* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#geometry)
 ///
@@ -361,10 +361,10 @@ int32_t q_layout_expanding_directions(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback int32_t func(const QLayout* self)
 ///
-void q_layout_on_expanding_directions(const void* self, int32_t (*callback)(const void*));
+void q_layout_on_expanding_directions(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#expandingDirections)
 ///
@@ -386,12 +386,12 @@ QSize* q_layout_minimum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback QSize* func(const QLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_layout_on_minimum_size(const void* self, QSize* (*callback)(const void*));
+void q_layout_on_minimum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#minimumSize)
 ///
@@ -411,12 +411,12 @@ QSize* q_layout_maximum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback QSize* func(const QLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_layout_on_maximum_size(const void* self, QSize* (*callback)(const void*));
+void q_layout_on_maximum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#maximumSize)
 ///
@@ -464,10 +464,10 @@ QLayoutItem* q_layout_item_at(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback QLayoutItem* func(const QLayout* self, int index)
 ///
-void q_layout_on_item_at(const void* self, QLayoutItem* (*callback)(const void*, int));
+void q_layout_on_item_at(void* self, QLayoutItem* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#takeAt)
 ///
@@ -498,10 +498,10 @@ int32_t q_layout_index_of(const void* self, const void* param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback int32_t func(const QLayout* self, QWidget* param1)
 ///
-void q_layout_on_index_of(const void* self, int32_t (*callback)(const void*, const void*));
+void q_layout_on_index_of(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
@@ -523,10 +523,10 @@ int32_t q_layout_index_of2(const void* self, const void* param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback int32_t func(const QLayout* self, QLayoutItem* param1)
 ///
-void q_layout_on_index_of2(const void* self, int32_t (*callback)(const void*, const void*));
+void q_layout_on_index_of2(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
@@ -549,10 +549,10 @@ int32_t q_layout_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback int32_t func(const QLayout* self)
 ///
-void q_layout_on_count(const void* self, int32_t (*callback)(const void*));
+void q_layout_on_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#isEmpty)
 ///
@@ -564,10 +564,10 @@ bool q_layout_is_empty(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback bool func(const QLayout* self)
 ///
-void q_layout_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_layout_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#isEmpty)
 ///
@@ -589,10 +589,10 @@ int32_t q_layout_control_types(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback int32_t func(const QLayout* self)
 ///
-void q_layout_on_control_types(const void* self, int32_t (*callback)(const void*));
+void q_layout_on_control_types(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
 ///
@@ -1471,12 +1471,12 @@ QSize* q_layout_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback QSize* func(QLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_layout_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_layout_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QLayoutItem
 ///
@@ -1504,10 +1504,10 @@ bool q_layout_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback bool func(QLayout* self)
 ///
-void q_layout_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_layout_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QLayoutItem
 ///
@@ -1537,10 +1537,10 @@ int32_t q_layout_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback int32_t func(QLayout* self, int param1)
 ///
-void q_layout_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_layout_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QLayoutItem
 ///
@@ -1570,10 +1570,10 @@ int32_t q_layout_super_minimum_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback int32_t func(QLayout* self, int param1)
 ///
-void q_layout_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_layout_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QLayoutItem
 ///
@@ -1601,10 +1601,10 @@ QWidget* q_layout_super_widget(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback QWidget* func(QLayout* self)
 ///
-void q_layout_on_widget(const void* self, QWidget* (*callback)(const void*));
+void q_layout_on_widget(void* self, QWidget* (*callback)(const void*));
 
 /// Inherited from QLayoutItem
 ///
@@ -1663,10 +1663,10 @@ QObject* q_layout_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback QObject* func(QLayout* self)
 ///
-void q_layout_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_layout_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1694,10 +1694,10 @@ int32_t q_layout_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback int32_t func(QLayout* self)
 ///
-void q_layout_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_layout_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1727,10 +1727,10 @@ int32_t q_layout_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback int32_t func(QLayout* self, const char* signal)
 ///
-void q_layout_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_layout_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1760,10 +1760,10 @@ bool q_layout_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLayout*
+/// @param self QLayout*
 /// @param callback bool func(QLayout* self, QMetaMethod* signal)
 ///
-void q_layout_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_layout_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -46,7 +46,7 @@ const QMetaObject* q_svgrenderer_meta_object(const void* self) {
     return QSvgRenderer_MetaObject((QSvgRenderer*)self);
 }
 
-void q_svgrenderer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_svgrenderer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSvgRenderer_OnMetaObject((QSvgRenderer*)self, (intptr_t)callback);
 }
 

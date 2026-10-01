@@ -24,10 +24,10 @@ QSGMaterialType* q_sgopaquetexturematerial_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGOpaqueTextureMaterial*
+/// @param self QSGOpaqueTextureMaterial*
 /// @param callback QSGMaterialType* func(const QSGOpaqueTextureMaterial* self)
 ///
-void q_sgopaquetexturematerial_on_type(const void* self, QSGMaterialType* (*callback)(const void*));
+void q_sgopaquetexturematerial_on_type(void* self, QSGMaterialType* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgopaquetexturematerial.html#type)
 ///
@@ -48,10 +48,10 @@ QSGMaterialShader* q_sgopaquetexturematerial_create_shader(const void* self, int
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGOpaqueTextureMaterial*
+/// @param self QSGOpaqueTextureMaterial*
 /// @param callback QSGMaterialShader* func(const QSGOpaqueTextureMaterial* self, enum QSGRendererInterface__RenderMode renderMode)
 ///
-void q_sgopaquetexturematerial_on_create_shader(const void* self, QSGMaterialShader* (*callback)(const void*, int32_t));
+void q_sgopaquetexturematerial_on_create_shader(void* self, QSGMaterialShader* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgopaquetexturematerial.html#createShader)
 ///
@@ -73,10 +73,10 @@ int32_t q_sgopaquetexturematerial_compare(const void* self, const void* other);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGOpaqueTextureMaterial*
+/// @param self QSGOpaqueTextureMaterial*
 /// @param callback int32_t func(const QSGOpaqueTextureMaterial* self, QSGMaterial* other)
 ///
-void q_sgopaquetexturematerial_on_compare(const void* self, int32_t (*callback)(const void*, const void*));
+void q_sgopaquetexturematerial_on_compare(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgopaquetexturematerial.html#compare)
 ///
@@ -236,10 +236,10 @@ QSGMaterialType* q_sgtexturematerial_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGTextureMaterial*
+/// @param self QSGTextureMaterial*
 /// @param callback QSGMaterialType* func(const QSGTextureMaterial* self)
 ///
-void q_sgtexturematerial_on_type(const void* self, QSGMaterialType* (*callback)(const void*));
+void q_sgtexturematerial_on_type(void* self, QSGMaterialType* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtexturematerial.html#type)
 ///
@@ -260,10 +260,10 @@ QSGMaterialShader* q_sgtexturematerial_create_shader(const void* self, int32_t r
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGTextureMaterial*
+/// @param self QSGTextureMaterial*
 /// @param callback QSGMaterialShader* func(const QSGTextureMaterial* self, enum QSGRendererInterface__RenderMode renderMode)
 ///
-void q_sgtexturematerial_on_create_shader(const void* self, QSGMaterialShader* (*callback)(const void*, int32_t));
+void q_sgtexturematerial_on_create_shader(void* self, QSGMaterialShader* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtexturematerial.html#createShader)
 ///
@@ -451,10 +451,10 @@ int32_t q_sgtexturematerial_super_compare(const void* self, const void* other);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGTextureMaterial*
+/// @param self QSGTextureMaterial*
 /// @param callback int32_t func(QSGTextureMaterial* self, QSGMaterial* other)
 ///
-void q_sgtexturematerial_on_compare(const void* self, int32_t (*callback)(const void*, const void*));
+void q_sgtexturematerial_on_compare(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtexturematerial.html#dtor.QSGTextureMaterial)
 ///

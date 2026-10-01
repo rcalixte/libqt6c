@@ -24,7 +24,7 @@ const QMetaObject* q_sctpsocket_meta_object(const void* self) {
     return QSctpSocket_MetaObject((QSctpSocket*)self);
 }
 
-void q_sctpsocket_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_sctpsocket_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSctpSocket_OnMetaObject((QSctpSocket*)self, (intptr_t)callback);
 }
 
@@ -295,7 +295,7 @@ void q_sctpsocket_connect_to_host3(void* self, const void* address, uint16_t por
     QAbstractSocket_ConnectToHost3((QAbstractSocket*)self, (QHostAddress*)address, port, mode);
 }
 
-QIODeviceBase* q_sctpsocket_as_q_i_o_device_base(void* self) {
+QIODeviceBase* q_sctpsocket_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
@@ -746,8 +746,8 @@ int64_t q_sctpsocket_super_bytes_available(const void* self) {
     return QSctpSocket_SuperBytesAvailable((QSctpSocket*)self);
 }
 
-void q_sctpsocket_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
-    QSctpSocket_OnBytesAvailable((const QSctpSocket*)self, (intptr_t)callback);
+void q_sctpsocket_on_bytes_available(void* self, int64_t (*callback)(const void*)) {
+    QSctpSocket_OnBytesAvailable((QSctpSocket*)self, (intptr_t)callback);
 }
 
 int64_t q_sctpsocket_bytes_to_write(const void* self) {
@@ -758,8 +758,8 @@ int64_t q_sctpsocket_super_bytes_to_write(const void* self) {
     return QSctpSocket_SuperBytesToWrite((QSctpSocket*)self);
 }
 
-void q_sctpsocket_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
-    QSctpSocket_OnBytesToWrite((const QSctpSocket*)self, (intptr_t)callback);
+void q_sctpsocket_on_bytes_to_write(void* self, int64_t (*callback)(const void*)) {
+    QSctpSocket_OnBytesToWrite((QSctpSocket*)self, (intptr_t)callback);
 }
 
 void q_sctpsocket_set_read_buffer_size(void* self, int64_t size) {
@@ -782,8 +782,8 @@ intptr_t q_sctpsocket_super_socket_descriptor(const void* self) {
     return QSctpSocket_SuperSocketDescriptor((QSctpSocket*)self);
 }
 
-void q_sctpsocket_on_socket_descriptor(const void* self, intptr_t (*callback)(const void*)) {
-    QSctpSocket_OnSocketDescriptor((const QSctpSocket*)self, (intptr_t)callback);
+void q_sctpsocket_on_socket_descriptor(void* self, intptr_t (*callback)(const void*)) {
+    QSctpSocket_OnSocketDescriptor((QSctpSocket*)self, (intptr_t)callback);
 }
 
 bool q_sctpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode) {
@@ -830,8 +830,8 @@ bool q_sctpsocket_super_is_sequential(const void* self) {
     return QSctpSocket_SuperIsSequential((QSctpSocket*)self);
 }
 
-void q_sctpsocket_on_is_sequential(const void* self, bool (*callback)(const void*)) {
-    QSctpSocket_OnIsSequential((const QSctpSocket*)self, (intptr_t)callback);
+void q_sctpsocket_on_is_sequential(void* self, bool (*callback)(const void*)) {
+    QSctpSocket_OnIsSequential((QSctpSocket*)self, (intptr_t)callback);
 }
 
 bool q_sctpsocket_wait_for_connected(void* self, int msecs) {
@@ -926,8 +926,8 @@ int64_t q_sctpsocket_super_pos(const void* self) {
     return QSctpSocket_SuperPos((QSctpSocket*)self);
 }
 
-void q_sctpsocket_on_pos(const void* self, int64_t (*callback)(const void*)) {
-    QSctpSocket_OnPos((const QSctpSocket*)self, (intptr_t)callback);
+void q_sctpsocket_on_pos(void* self, int64_t (*callback)(const void*)) {
+    QSctpSocket_OnPos((QSctpSocket*)self, (intptr_t)callback);
 }
 
 int64_t q_sctpsocket_size(const void* self) {
@@ -938,8 +938,8 @@ int64_t q_sctpsocket_super_size(const void* self) {
     return QSctpSocket_SuperSize((QSctpSocket*)self);
 }
 
-void q_sctpsocket_on_size(const void* self, int64_t (*callback)(const void*)) {
-    QSctpSocket_OnSize((const QSctpSocket*)self, (intptr_t)callback);
+void q_sctpsocket_on_size(void* self, int64_t (*callback)(const void*)) {
+    QSctpSocket_OnSize((QSctpSocket*)self, (intptr_t)callback);
 }
 
 bool q_sctpsocket_seek(void* self, int64_t pos) {
@@ -962,8 +962,8 @@ bool q_sctpsocket_super_at_end(const void* self) {
     return QSctpSocket_SuperAtEnd((QSctpSocket*)self);
 }
 
-void q_sctpsocket_on_at_end(const void* self, bool (*callback)(const void*)) {
-    QSctpSocket_OnAtEnd((const QSctpSocket*)self, (intptr_t)callback);
+void q_sctpsocket_on_at_end(void* self, bool (*callback)(const void*)) {
+    QSctpSocket_OnAtEnd((QSctpSocket*)self, (intptr_t)callback);
 }
 
 bool q_sctpsocket_reset(void* self) {
@@ -986,8 +986,8 @@ bool q_sctpsocket_super_can_read_line(const void* self) {
     return QSctpSocket_SuperCanReadLine((QSctpSocket*)self);
 }
 
-void q_sctpsocket_on_can_read_line(const void* self, bool (*callback)(const void*)) {
-    QSctpSocket_OnCanReadLine((const QSctpSocket*)self, (intptr_t)callback);
+void q_sctpsocket_on_can_read_line(void* self, bool (*callback)(const void*)) {
+    QSctpSocket_OnCanReadLine((QSctpSocket*)self, (intptr_t)callback);
 }
 
 bool q_sctpsocket_event(void* self, void* event) {

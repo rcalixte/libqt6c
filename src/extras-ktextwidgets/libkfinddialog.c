@@ -78,7 +78,7 @@ const QMetaObject* k_finddialog_meta_object(const void* self) {
     return KFindDialog_MetaObject((KFindDialog*)self);
 }
 
-void k_finddialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_finddialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFindDialog_OnMetaObject((KFindDialog*)self, (intptr_t)callback);
 }
 
@@ -289,11 +289,11 @@ void k_finddialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_finddialog_as_q_paint_device(void* self) {
+QPaintDevice* k_finddialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KFindDialog* k_finddialog_from_q_paint_device(void* _qpaintdevice) {
+KFindDialog* k_finddialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KFindDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1696,8 +1696,8 @@ QSize* k_finddialog_super_size_hint(const void* self) {
     return KFindDialog_SuperSizeHint((KFindDialog*)self);
 }
 
-void k_finddialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KFindDialog_OnSizeHint((const KFindDialog*)self, (intptr_t)callback);
+void k_finddialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KFindDialog_OnSizeHint((KFindDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_finddialog_minimum_size_hint(const void* self) {
@@ -1708,8 +1708,8 @@ QSize* k_finddialog_super_minimum_size_hint(const void* self) {
     return KFindDialog_SuperMinimumSizeHint((KFindDialog*)self);
 }
 
-void k_finddialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KFindDialog_OnMinimumSizeHint((const KFindDialog*)self, (intptr_t)callback);
+void k_finddialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KFindDialog_OnMinimumSizeHint((KFindDialog*)self, (intptr_t)callback);
 }
 
 void k_finddialog_open(void* self) {
@@ -1840,8 +1840,8 @@ int32_t k_finddialog_super_dev_type(const void* self) {
     return KFindDialog_SuperDevType((KFindDialog*)self);
 }
 
-void k_finddialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KFindDialog_OnDevType((const KFindDialog*)self, (intptr_t)callback);
+void k_finddialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KFindDialog_OnDevType((KFindDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_finddialog_height_for_width(const void* self, int param1) {
@@ -1852,8 +1852,8 @@ int32_t k_finddialog_super_height_for_width(const void* self, int param1) {
     return KFindDialog_SuperHeightForWidth((KFindDialog*)self, param1);
 }
 
-void k_finddialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KFindDialog_OnHeightForWidth((const KFindDialog*)self, (intptr_t)callback);
+void k_finddialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KFindDialog_OnHeightForWidth((KFindDialog*)self, (intptr_t)callback);
 }
 
 bool k_finddialog_has_height_for_width(const void* self) {
@@ -1864,8 +1864,8 @@ bool k_finddialog_super_has_height_for_width(const void* self) {
     return KFindDialog_SuperHasHeightForWidth((KFindDialog*)self);
 }
 
-void k_finddialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KFindDialog_OnHasHeightForWidth((const KFindDialog*)self, (intptr_t)callback);
+void k_finddialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KFindDialog_OnHasHeightForWidth((KFindDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_finddialog_paint_engine(const void* self) {
@@ -1876,8 +1876,8 @@ QPaintEngine* k_finddialog_super_paint_engine(const void* self) {
     return KFindDialog_SuperPaintEngine((KFindDialog*)self);
 }
 
-void k_finddialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KFindDialog_OnPaintEngine((const KFindDialog*)self, (intptr_t)callback);
+void k_finddialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KFindDialog_OnPaintEngine((KFindDialog*)self, (intptr_t)callback);
 }
 
 bool k_finddialog_event(void* self, void* event) {
@@ -2152,8 +2152,8 @@ int32_t k_finddialog_super_metric(const void* self, int32_t param1) {
     return KFindDialog_SuperMetric((KFindDialog*)self, param1);
 }
 
-void k_finddialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KFindDialog_OnMetric((const KFindDialog*)self, (intptr_t)callback);
+void k_finddialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KFindDialog_OnMetric((KFindDialog*)self, (intptr_t)callback);
 }
 
 void k_finddialog_init_painter(const void* self, void* painter) {
@@ -2164,8 +2164,8 @@ void k_finddialog_super_init_painter(const void* self, void* painter) {
     KFindDialog_SuperInitPainter((KFindDialog*)self, (QPainter*)painter);
 }
 
-void k_finddialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KFindDialog_OnInitPainter((const KFindDialog*)self, (intptr_t)callback);
+void k_finddialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KFindDialog_OnInitPainter((KFindDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_finddialog_redirected(const void* self, void* offset) {
@@ -2176,8 +2176,8 @@ QPaintDevice* k_finddialog_super_redirected(const void* self, void* offset) {
     return KFindDialog_SuperRedirected((KFindDialog*)self, (QPoint*)offset);
 }
 
-void k_finddialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KFindDialog_OnRedirected((const KFindDialog*)self, (intptr_t)callback);
+void k_finddialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KFindDialog_OnRedirected((KFindDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_finddialog_shared_painter(const void* self) {
@@ -2188,8 +2188,8 @@ QPainter* k_finddialog_super_shared_painter(const void* self) {
     return KFindDialog_SuperSharedPainter((KFindDialog*)self);
 }
 
-void k_finddialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KFindDialog_OnSharedPainter((const KFindDialog*)self, (intptr_t)callback);
+void k_finddialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KFindDialog_OnSharedPainter((KFindDialog*)self, (intptr_t)callback);
 }
 
 void k_finddialog_input_method_event(void* self, void* param1) {
@@ -2212,8 +2212,8 @@ QVariant* k_finddialog_super_input_method_query(const void* self, int32_t param1
     return KFindDialog_SuperInputMethodQuery((KFindDialog*)self, param1);
 }
 
-void k_finddialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KFindDialog_OnInputMethodQuery((const KFindDialog*)self, (intptr_t)callback);
+void k_finddialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KFindDialog_OnInputMethodQuery((KFindDialog*)self, (intptr_t)callback);
 }
 
 bool k_finddialog_focus_next_prev_child(void* self, bool next) {

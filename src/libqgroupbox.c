@@ -34,7 +34,7 @@ const QMetaObject* q_groupbox_meta_object(const void* self) {
     return QGroupBox_MetaObject((QGroupBox*)self);
 }
 
-void q_groupbox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_groupbox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGroupBox_OnMetaObject((QGroupBox*)self, (intptr_t)callback);
 }
 
@@ -96,7 +96,7 @@ QSize* q_groupbox_minimum_size_hint(const void* self) {
     return QGroupBox_MinimumSizeHint((QGroupBox*)self);
 }
 
-void q_groupbox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_groupbox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QGroupBox_OnMinimumSizeHint((QGroupBox*)self, (intptr_t)callback);
 }
 
@@ -256,7 +256,7 @@ void q_groupbox_init_style_option(const void* self, void* option) {
     QGroupBox_InitStyleOption((QGroupBox*)self, (QStyleOptionGroupBox*)option);
 }
 
-void q_groupbox_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_groupbox_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QGroupBox_OnInitStyleOption((QGroupBox*)self, (intptr_t)callback);
 }
 
@@ -286,11 +286,11 @@ void q_groupbox_on_clicked1(void* self, void (*callback)(void*, bool)) {
     QGroupBox_Connect_Clicked1((QGroupBox*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_groupbox_as_q_paint_device(void* self) {
+QPaintDevice* q_groupbox_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QGroupBox* q_groupbox_from_q_paint_device(void* _qpaintdevice) {
+QGroupBox* q_groupbox_from_q_paint_device(const void* _qpaintdevice) {
     return (QGroupBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1681,8 +1681,8 @@ int32_t q_groupbox_super_dev_type(const void* self) {
     return QGroupBox_SuperDevType((QGroupBox*)self);
 }
 
-void q_groupbox_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QGroupBox_OnDevType((const QGroupBox*)self, (intptr_t)callback);
+void q_groupbox_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QGroupBox_OnDevType((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_set_visible(void* self, bool visible) {
@@ -1705,8 +1705,8 @@ QSize* q_groupbox_super_size_hint(const void* self) {
     return QGroupBox_SuperSizeHint((QGroupBox*)self);
 }
 
-void q_groupbox_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QGroupBox_OnSizeHint((const QGroupBox*)self, (intptr_t)callback);
+void q_groupbox_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QGroupBox_OnSizeHint((QGroupBox*)self, (intptr_t)callback);
 }
 
 int32_t q_groupbox_height_for_width(const void* self, int param1) {
@@ -1717,8 +1717,8 @@ int32_t q_groupbox_super_height_for_width(const void* self, int param1) {
     return QGroupBox_SuperHeightForWidth((QGroupBox*)self, param1);
 }
 
-void q_groupbox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QGroupBox_OnHeightForWidth((const QGroupBox*)self, (intptr_t)callback);
+void q_groupbox_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QGroupBox_OnHeightForWidth((QGroupBox*)self, (intptr_t)callback);
 }
 
 bool q_groupbox_has_height_for_width(const void* self) {
@@ -1729,8 +1729,8 @@ bool q_groupbox_super_has_height_for_width(const void* self) {
     return QGroupBox_SuperHasHeightForWidth((QGroupBox*)self);
 }
 
-void q_groupbox_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QGroupBox_OnHasHeightForWidth((const QGroupBox*)self, (intptr_t)callback);
+void q_groupbox_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QGroupBox_OnHasHeightForWidth((QGroupBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_groupbox_paint_engine(const void* self) {
@@ -1741,8 +1741,8 @@ QPaintEngine* q_groupbox_super_paint_engine(const void* self) {
     return QGroupBox_SuperPaintEngine((QGroupBox*)self);
 }
 
-void q_groupbox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QGroupBox_OnPaintEngine((const QGroupBox*)self, (intptr_t)callback);
+void q_groupbox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QGroupBox_OnPaintEngine((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_mouse_double_click_event(void* self, void* event) {
@@ -1981,8 +1981,8 @@ int32_t q_groupbox_super_metric(const void* self, int32_t param1) {
     return QGroupBox_SuperMetric((QGroupBox*)self, param1);
 }
 
-void q_groupbox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QGroupBox_OnMetric((const QGroupBox*)self, (intptr_t)callback);
+void q_groupbox_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QGroupBox_OnMetric((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_init_painter(const void* self, void* painter) {
@@ -1993,8 +1993,8 @@ void q_groupbox_super_init_painter(const void* self, void* painter) {
     QGroupBox_SuperInitPainter((QGroupBox*)self, (QPainter*)painter);
 }
 
-void q_groupbox_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QGroupBox_OnInitPainter((const QGroupBox*)self, (intptr_t)callback);
+void q_groupbox_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QGroupBox_OnInitPainter((QGroupBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_groupbox_redirected(const void* self, void* offset) {
@@ -2005,8 +2005,8 @@ QPaintDevice* q_groupbox_super_redirected(const void* self, void* offset) {
     return QGroupBox_SuperRedirected((QGroupBox*)self, (QPoint*)offset);
 }
 
-void q_groupbox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QGroupBox_OnRedirected((const QGroupBox*)self, (intptr_t)callback);
+void q_groupbox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QGroupBox_OnRedirected((QGroupBox*)self, (intptr_t)callback);
 }
 
 QPainter* q_groupbox_shared_painter(const void* self) {
@@ -2017,8 +2017,8 @@ QPainter* q_groupbox_super_shared_painter(const void* self) {
     return QGroupBox_SuperSharedPainter((QGroupBox*)self);
 }
 
-void q_groupbox_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QGroupBox_OnSharedPainter((const QGroupBox*)self, (intptr_t)callback);
+void q_groupbox_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QGroupBox_OnSharedPainter((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_input_method_event(void* self, void* param1) {
@@ -2041,8 +2041,8 @@ QVariant* q_groupbox_super_input_method_query(const void* self, int32_t param1) 
     return QGroupBox_SuperInputMethodQuery((QGroupBox*)self, param1);
 }
 
-void q_groupbox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QGroupBox_OnInputMethodQuery((const QGroupBox*)self, (intptr_t)callback);
+void q_groupbox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QGroupBox_OnInputMethodQuery((QGroupBox*)self, (intptr_t)callback);
 }
 
 bool q_groupbox_focus_next_prev_child(void* self, bool next) {

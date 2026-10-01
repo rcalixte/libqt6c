@@ -38,7 +38,7 @@ const QMetaObject* k_codecaction_meta_object(const void* self) {
     return KCodecAction_MetaObject((KCodecAction*)self);
 }
 
-void k_codecaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_codecaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KCodecAction_OnMetaObject((KCodecAction*)self, (intptr_t)callback);
 }
 

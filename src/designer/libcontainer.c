@@ -10,7 +10,7 @@ int32_t q_designercontainerextension_count(const void* self) {
     return QDesignerContainerExtension_Count((QDesignerContainerExtension*)self);
 }
 
-void q_designercontainerextension_on_count(const void* self, int32_t (*callback)(const void*)) {
+void q_designercontainerextension_on_count(void* self, int32_t (*callback)(const void*)) {
     QDesignerContainerExtension_OnCount((QDesignerContainerExtension*)self, (intptr_t)callback);
 }
 
@@ -18,7 +18,7 @@ QWidget* q_designercontainerextension_widget(const void* self, int index) {
     return QDesignerContainerExtension_Widget((QDesignerContainerExtension*)self, index);
 }
 
-void q_designercontainerextension_on_widget(const void* self, QWidget* (*callback)(const void*, int)) {
+void q_designercontainerextension_on_widget(void* self, QWidget* (*callback)(const void*, int)) {
     QDesignerContainerExtension_OnWidget((QDesignerContainerExtension*)self, (intptr_t)callback);
 }
 
@@ -26,7 +26,7 @@ int32_t q_designercontainerextension_current_index(const void* self) {
     return QDesignerContainerExtension_CurrentIndex((QDesignerContainerExtension*)self);
 }
 
-void q_designercontainerextension_on_current_index(const void* self, int32_t (*callback)(const void*)) {
+void q_designercontainerextension_on_current_index(void* self, int32_t (*callback)(const void*)) {
     QDesignerContainerExtension_OnCurrentIndex((QDesignerContainerExtension*)self, (intptr_t)callback);
 }
 
@@ -42,7 +42,7 @@ bool q_designercontainerextension_can_add_widget(const void* self) {
     return QDesignerContainerExtension_CanAddWidget((QDesignerContainerExtension*)self);
 }
 
-void q_designercontainerextension_on_can_add_widget(const void* self, bool (*callback)(const void*)) {
+void q_designercontainerextension_on_can_add_widget(void* self, bool (*callback)(const void*)) {
     QDesignerContainerExtension_OnCanAddWidget((QDesignerContainerExtension*)self, (intptr_t)callback);
 }
 
@@ -66,7 +66,7 @@ bool q_designercontainerextension_can_remove(const void* self, int index) {
     return QDesignerContainerExtension_CanRemove((QDesignerContainerExtension*)self, index);
 }
 
-void q_designercontainerextension_on_can_remove(const void* self, bool (*callback)(const void*, int)) {
+void q_designercontainerextension_on_can_remove(void* self, bool (*callback)(const void*, int)) {
     QDesignerContainerExtension_OnCanRemove((QDesignerContainerExtension*)self, (intptr_t)callback);
 }
 

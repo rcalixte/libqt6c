@@ -54,10 +54,10 @@ const QMetaObject* k_io__openurljob_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KIO__OpenUrlJob*
+/// @param self KIO__OpenUrlJob*
 /// @param callback const QMetaObject* func(const KIO__OpenUrlJob* self)
 ///
-void k_io__openurljob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_io__openurljob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1165,10 +1165,10 @@ const char* k_io__openurljob_super_error_string(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__OpenUrlJob*
+/// @param self KIO__OpenUrlJob*
 /// @param callback const char* func(KIO__OpenUrlJob* self)
 ///
-void k_io__openurljob_on_error_string(const void* self, const char* (*callback)(const void*));
+void k_io__openurljob_on_error_string(void* self, const char* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1429,10 +1429,10 @@ bool k_io__openurljob_super_has_subjobs(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__OpenUrlJob*
+/// @param self KIO__OpenUrlJob*
 /// @param callback bool func(KIO__OpenUrlJob* self)
 ///
-void k_io__openurljob_on_has_subjobs(const void* self, bool (*callback)(const void*));
+void k_io__openurljob_on_has_subjobs(void* self, bool (*callback)(const void*));
 
 /// Inherited from KCompositeJob
 ///
@@ -1464,10 +1464,10 @@ libqt_list k_io__openurljob_super_subjobs(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__OpenUrlJob*
+/// @param self KIO__OpenUrlJob*
 /// @param callback libqt_list of KJob* func(KIO__OpenUrlJob* self)
 ///
-void k_io__openurljob_on_subjobs(const void* self, libqt_list (*callback)(const void*));
+void k_io__openurljob_on_subjobs(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from KCompositeJob
 ///
@@ -1559,10 +1559,10 @@ bool k_io__openurljob_super_is_finished(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__OpenUrlJob*
+/// @param self KIO__OpenUrlJob*
 /// @param callback bool func(KIO__OpenUrlJob* self)
 ///
-void k_io__openurljob_on_is_finished(const void* self, bool (*callback)(const void*));
+void k_io__openurljob_on_is_finished(void* self, bool (*callback)(const void*));
 
 /// Inherited from KJob
 ///
@@ -1922,10 +1922,10 @@ QObject* k_io__openurljob_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__OpenUrlJob*
+/// @param self KIO__OpenUrlJob*
 /// @param callback QObject* func(KIO__OpenUrlJob* self)
 ///
-void k_io__openurljob_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_io__openurljob_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1953,10 +1953,10 @@ int32_t k_io__openurljob_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__OpenUrlJob*
+/// @param self KIO__OpenUrlJob*
 /// @param callback int32_t func(KIO__OpenUrlJob* self)
 ///
-void k_io__openurljob_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_io__openurljob_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1986,10 +1986,10 @@ int32_t k_io__openurljob_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__OpenUrlJob*
+/// @param self KIO__OpenUrlJob*
 /// @param callback int32_t func(KIO__OpenUrlJob* self, const char* signal)
 ///
-void k_io__openurljob_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_io__openurljob_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2019,10 +2019,10 @@ bool k_io__openurljob_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__OpenUrlJob*
+/// @param self KIO__OpenUrlJob*
 /// @param callback bool func(KIO__OpenUrlJob* self, QMetaMethod* signal)
 ///
-void k_io__openurljob_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_io__openurljob_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KJob
 ///

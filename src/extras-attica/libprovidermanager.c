@@ -19,7 +19,7 @@ const QMetaObject* k_attica__providermanager_meta_object(const void* self) {
     return Attica__ProviderManager_MetaObject((Attica__ProviderManager*)self);
 }
 
-void k_attica__providermanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_attica__providermanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Attica__ProviderManager_OnMetaObject((Attica__ProviderManager*)self, (intptr_t)callback);
 }
 

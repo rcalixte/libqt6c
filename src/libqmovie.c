@@ -47,7 +47,7 @@ const QMetaObject* q_movie_meta_object(const void* self) {
     return QMovie_MetaObject((QMovie*)self);
 }
 
-void q_movie_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_movie_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QMovie_OnMetaObject((QMovie*)self, (intptr_t)callback);
 }
 

@@ -21,7 +21,7 @@ const QMetaObject* q_quickrendercontrol_meta_object(const void* self) {
     return QQuickRenderControl_MetaObject((QQuickRenderControl*)self);
 }
 
-void q_quickrendercontrol_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quickrendercontrol_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickRenderControl_OnMetaObject((QQuickRenderControl*)self, (intptr_t)callback);
 }
 

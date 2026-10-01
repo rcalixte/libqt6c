@@ -514,10 +514,10 @@ const QMetaObject* q_abstractitemmodel_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback const QMetaObject* func(const QAbstractItemModel* self)
 ///
-void q_abstractitemmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_abstractitemmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -600,12 +600,12 @@ QModelIndex* q_abstractitemmodel_index(const void* self, int row, int column, co
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback QModelIndex* func(const QAbstractItemModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_abstractitemmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#parent)
 ///
@@ -620,12 +620,12 @@ QModelIndex* q_abstractitemmodel_parent(const void* self, const void* child);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback QModelIndex* func(const QAbstractItemModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_abstractitemmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
 ///
@@ -640,12 +640,12 @@ QModelIndex* q_abstractitemmodel_sibling(const void* self, int row, int column, 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback QModelIndex* func(const QAbstractItemModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_abstractitemmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
 ///
@@ -671,10 +671,10 @@ int32_t q_abstractitemmodel_row_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback int32_t func(const QAbstractItemModel* self, QModelIndex* parent)
 ///
-void q_abstractitemmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_abstractitemmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnCount)
 ///
@@ -689,10 +689,10 @@ int32_t q_abstractitemmodel_column_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback int32_t func(const QAbstractItemModel* self, QModelIndex* parent)
 ///
-void q_abstractitemmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_abstractitemmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
 ///
@@ -705,10 +705,10 @@ bool q_abstractitemmodel_has_children(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback bool func(const QAbstractItemModel* self, QModelIndex* parent)
 ///
-void q_abstractitemmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
+void q_abstractitemmodel_on_has_children(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
 ///
@@ -733,12 +733,12 @@ QVariant* q_abstractitemmodel_data(const void* self, const void* index, int role
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback QVariant* func(const QAbstractItemModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
+void q_abstractitemmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
 ///
@@ -782,12 +782,12 @@ QVariant* q_abstractitemmodel_header_data(const void* self, int section, int32_t
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback QVariant* func(const QAbstractItemModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
+void q_abstractitemmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerData)
 ///
@@ -855,10 +855,10 @@ libqt_map q_abstractitemmodel_item_data(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback libqt_map of int to QVariant* func(const QAbstractItemModel* self, QModelIndex* index)
 ///
-void q_abstractitemmodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
+void q_abstractitemmodel_on_item_data(void* self, libqt_map (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
 ///
@@ -935,10 +935,10 @@ const char** q_abstractitemmodel_mime_types(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback const char** func(const QAbstractItemModel* self)
 ///
-void q_abstractitemmodel_on_mime_types(const void* self, const char** (*callback)(const void*));
+void q_abstractitemmodel_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
@@ -959,10 +959,10 @@ QMimeData* q_abstractitemmodel_mime_data(const void* self, libqt_list indexes);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback QMimeData* func(const QAbstractItemModel* self, libqt_list of QModelIndex* indexes)
 ///
-void q_abstractitemmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void q_abstractitemmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
 ///
@@ -988,10 +988,10 @@ bool q_abstractitemmodel_can_drop_mime_data(const void* self, const void* data, 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback bool func(const QAbstractItemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void q_abstractitemmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
+void q_abstractitemmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
 ///
@@ -1051,10 +1051,10 @@ int32_t q_abstractitemmodel_supported_drop_actions(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback int32_t func(const QAbstractItemModel* self)
 ///
-void q_abstractitemmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void q_abstractitemmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
 ///
@@ -1078,10 +1078,10 @@ int32_t q_abstractitemmodel_supported_drag_actions(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback int32_t func(const QAbstractItemModel* self)
 ///
-void q_abstractitemmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
+void q_abstractitemmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
@@ -1359,10 +1359,10 @@ bool q_abstractitemmodel_can_fetch_more(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback bool func(const QAbstractItemModel* self, QModelIndex* parent)
 ///
-void q_abstractitemmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
+void q_abstractitemmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
 ///
@@ -1386,10 +1386,10 @@ int32_t q_abstractitemmodel_flags(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback int32_t func(const QAbstractItemModel* self, QModelIndex* index)
 ///
-void q_abstractitemmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
+void q_abstractitemmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#flags)
 ///
@@ -1440,12 +1440,12 @@ QModelIndex* q_abstractitemmodel_buddy(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback QModelIndex* func(const QAbstractItemModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_abstractitemmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
 ///
@@ -1473,10 +1473,10 @@ libqt_list q_abstractitemmodel_match(const void* self, const void* start, int ro
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback libqt_list of QModelIndex* func(const QAbstractItemModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void q_abstractitemmodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
+void q_abstractitemmodel_on_match(void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
 ///
@@ -1504,12 +1504,12 @@ QSize* q_abstractitemmodel_span(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback QSize* func(const QAbstractItemModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
+void q_abstractitemmodel_on_span(void* self, QSize* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
 ///
@@ -1543,10 +1543,10 @@ libqt_map q_abstractitemmodel_role_names(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback libqt_map of int to char* func(const QAbstractItemModel* self)
 ///
-void q_abstractitemmodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
+void q_abstractitemmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
 ///
@@ -1577,10 +1577,10 @@ void q_abstractitemmodel_multi_data(const void* self, const void* index, void* r
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback void func(const QAbstractItemModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void q_abstractitemmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
+void q_abstractitemmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
@@ -2732,10 +2732,10 @@ QObject* q_abstractitemmodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback QObject* func(QAbstractItemModel* self)
 ///
-void q_abstractitemmodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_abstractitemmodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2763,10 +2763,10 @@ int32_t q_abstractitemmodel_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback int32_t func(QAbstractItemModel* self)
 ///
-void q_abstractitemmodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_abstractitemmodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2796,10 +2796,10 @@ int32_t q_abstractitemmodel_super_receivers(const void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback int32_t func(QAbstractItemModel* self, const char* signal)
 ///
-void q_abstractitemmodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_abstractitemmodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2829,10 +2829,10 @@ bool q_abstractitemmodel_super_is_signal_connected(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemModel*
+/// @param self QAbstractItemModel*
 /// @param callback bool func(QAbstractItemModel* self, QMetaMethod* signal)
 ///
-void q_abstractitemmodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_abstractitemmodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
 ///
@@ -3003,10 +3003,10 @@ const QMetaObject* q_abstracttablemodel_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback const QMetaObject* func(const QAbstractTableModel* self)
 ///
-void q_abstracttablemodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_abstracttablemodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -3079,12 +3079,12 @@ QModelIndex* q_abstracttablemodel_index(const void* self, int row, int column, c
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback QModelIndex* func(const QAbstractTableModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstracttablemodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_abstracttablemodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttablemodel.html#index)
 ///
@@ -3110,12 +3110,12 @@ QModelIndex* q_abstracttablemodel_sibling(const void* self, int row, int column,
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback QModelIndex* func(const QAbstractTableModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstracttablemodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_abstracttablemodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttablemodel.html#sibling)
 ///
@@ -3174,10 +3174,10 @@ int32_t q_abstracttablemodel_flags(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback int32_t func(const QAbstractTableModel* self, QModelIndex* index)
 ///
-void q_abstracttablemodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
+void q_abstracttablemodel_on_flags(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttablemodel.html#flags)
 ///
@@ -3236,12 +3236,12 @@ QModelIndex* q_abstracttablemodel_parent(const void* self, const void* child);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback QModelIndex* func(const QAbstractTableModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstracttablemodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_abstracttablemodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3258,10 +3258,10 @@ bool q_abstracttablemodel_has_children(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback bool func(const QAbstractTableModel* self, QModelIndex* parent)
 ///
-void q_abstracttablemodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
+void q_abstracttablemodel_on_has_children(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4029,10 +4029,10 @@ int32_t q_abstracttablemodel_row_count(const void* self, const void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback int32_t func(QAbstractTableModel* self, QModelIndex* parent)
 ///
-void q_abstracttablemodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_abstracttablemodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4053,10 +4053,10 @@ int32_t q_abstracttablemodel_column_count(const void* self, const void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback int32_t func(QAbstractTableModel* self, QModelIndex* parent)
 ///
-void q_abstracttablemodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_abstracttablemodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4078,12 +4078,12 @@ QVariant* q_abstracttablemodel_data(const void* self, const void* index, int rol
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback QVariant* func(QAbstractTableModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstracttablemodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
+void q_abstracttablemodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4154,12 +4154,12 @@ QVariant* q_abstracttablemodel_super_header_data(const void* self, int section, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback QVariant* func(QAbstractTableModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstracttablemodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
+void q_abstracttablemodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4254,10 +4254,10 @@ libqt_map q_abstracttablemodel_super_item_data(const void* self, const void* ind
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback libqt_map of int to QVariant* func(QAbstractTableModel* self, QModelIndex* index)
 ///
-void q_abstracttablemodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
+void q_abstracttablemodel_on_item_data(void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4357,10 +4357,10 @@ const char** q_abstracttablemodel_super_mime_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback const char** func(QAbstractTableModel* self)
 ///
-void q_abstracttablemodel_on_mime_types(const void* self, const char** (*callback)(const void*));
+void q_abstracttablemodel_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4390,10 +4390,10 @@ QMimeData* q_abstracttablemodel_super_mime_data(const void* self, libqt_list ind
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback QMimeData* func(QAbstractTableModel* self, libqt_list of QModelIndex* indexes)
 ///
-void q_abstracttablemodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void q_abstracttablemodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4431,10 +4431,10 @@ bool q_abstracttablemodel_super_can_drop_mime_data(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback bool func(QAbstractTableModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void q_abstracttablemodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
+void q_abstracttablemodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4466,10 +4466,10 @@ int32_t q_abstracttablemodel_super_supported_drop_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback int32_t func(QAbstractTableModel* self)
 ///
-void q_abstracttablemodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void q_abstracttablemodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4501,10 +4501,10 @@ int32_t q_abstracttablemodel_super_supported_drag_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback int32_t func(QAbstractTableModel* self)
 ///
-void q_abstracttablemodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
+void q_abstracttablemodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4797,10 +4797,10 @@ bool q_abstracttablemodel_super_can_fetch_more(const void* self, const void* par
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback bool func(QAbstractTableModel* self, QModelIndex* parent)
 ///
-void q_abstracttablemodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
+void q_abstracttablemodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4865,12 +4865,12 @@ QModelIndex* q_abstracttablemodel_super_buddy(const void* self, const void* inde
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback QModelIndex* func(QAbstractTableModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstracttablemodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_abstracttablemodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4912,10 +4912,10 @@ libqt_list q_abstracttablemodel_super_match(const void* self, const void* start,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback libqt_list of QModelIndex* func(QAbstractTableModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void q_abstracttablemodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
+void q_abstracttablemodel_on_match(void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4945,12 +4945,12 @@ QSize* q_abstracttablemodel_super_span(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback QSize* func(QAbstractTableModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstracttablemodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
+void q_abstracttablemodel_on_span(void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5004,10 +5004,10 @@ libqt_map q_abstracttablemodel_super_role_names(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback libqt_map of int to char* func(QAbstractTableModel* self)
 ///
-void q_abstracttablemodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
+void q_abstracttablemodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5039,10 +5039,10 @@ void q_abstracttablemodel_super_multi_data(const void* self, const void* index, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback void func(QAbstractTableModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void q_abstracttablemodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
+void q_abstracttablemodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5400,12 +5400,12 @@ QModelIndex* q_abstracttablemodel_super_create_index(const void* self, int row, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback QModelIndex* func(QAbstractTableModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstracttablemodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
+void q_abstracttablemodel_on_create_index(void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5437,10 +5437,10 @@ void q_abstracttablemodel_super_encode_data(const void* self, libqt_list indexes
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback void func(QAbstractTableModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void q_abstracttablemodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
+void q_abstracttablemodel_on_encode_data(void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6059,10 +6059,10 @@ libqt_list q_abstracttablemodel_super_persistent_index_list(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback libqt_list of QModelIndex* func(QAbstractTableModel* self)
 ///
-void q_abstracttablemodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
+void q_abstracttablemodel_on_persistent_index_list(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6090,10 +6090,10 @@ QObject* q_abstracttablemodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback QObject* func(QAbstractTableModel* self)
 ///
-void q_abstracttablemodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_abstracttablemodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6121,10 +6121,10 @@ int32_t q_abstracttablemodel_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback int32_t func(QAbstractTableModel* self)
 ///
-void q_abstracttablemodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_abstracttablemodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6154,10 +6154,10 @@ int32_t q_abstracttablemodel_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback int32_t func(QAbstractTableModel* self, const char* signal)
 ///
-void q_abstracttablemodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_abstracttablemodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6187,10 +6187,10 @@ bool q_abstracttablemodel_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractTableModel*
+/// @param self QAbstractTableModel*
 /// @param callback bool func(QAbstractTableModel* self, QMetaMethod* signal)
 ///
-void q_abstracttablemodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_abstracttablemodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6389,10 +6389,10 @@ const QMetaObject* q_abstractlistmodel_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback const QMetaObject* func(const QAbstractListModel* self)
 ///
-void q_abstractlistmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_abstractlistmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -6465,12 +6465,12 @@ QModelIndex* q_abstractlistmodel_index(const void* self, int row, int column, co
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback QModelIndex* func(const QAbstractListModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractlistmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_abstractlistmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#index)
 ///
@@ -6496,12 +6496,12 @@ QModelIndex* q_abstractlistmodel_sibling(const void* self, int row, int column, 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback QModelIndex* func(const QAbstractListModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractlistmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_abstractlistmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#sibling)
 ///
@@ -6560,10 +6560,10 @@ int32_t q_abstractlistmodel_flags(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback int32_t func(const QAbstractListModel* self, QModelIndex* index)
 ///
-void q_abstractlistmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
+void q_abstractlistmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractlistmodel.html#flags)
 ///
@@ -6622,12 +6622,12 @@ QModelIndex* q_abstractlistmodel_parent(const void* self, const void* child);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback QModelIndex* func(const QAbstractListModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractlistmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_abstractlistmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6646,10 +6646,10 @@ int32_t q_abstractlistmodel_column_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback int32_t func(const QAbstractListModel* self, QModelIndex* parent)
 ///
-void q_abstractlistmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_abstractlistmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6666,10 +6666,10 @@ bool q_abstractlistmodel_has_children(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback bool func(const QAbstractListModel* self, QModelIndex* parent)
 ///
-void q_abstractlistmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
+void q_abstractlistmodel_on_has_children(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7437,10 +7437,10 @@ int32_t q_abstractlistmodel_row_count(const void* self, const void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback int32_t func(QAbstractListModel* self, QModelIndex* parent)
 ///
-void q_abstractlistmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_abstractlistmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7462,12 +7462,12 @@ QVariant* q_abstractlistmodel_data(const void* self, const void* index, int role
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback QVariant* func(QAbstractListModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractlistmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
+void q_abstractlistmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7538,12 +7538,12 @@ QVariant* q_abstractlistmodel_super_header_data(const void* self, int section, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback QVariant* func(QAbstractListModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractlistmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
+void q_abstractlistmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7638,10 +7638,10 @@ libqt_map q_abstractlistmodel_super_item_data(const void* self, const void* inde
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback libqt_map of int to QVariant* func(QAbstractListModel* self, QModelIndex* index)
 ///
-void q_abstractlistmodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
+void q_abstractlistmodel_on_item_data(void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7741,10 +7741,10 @@ const char** q_abstractlistmodel_super_mime_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback const char** func(QAbstractListModel* self)
 ///
-void q_abstractlistmodel_on_mime_types(const void* self, const char** (*callback)(const void*));
+void q_abstractlistmodel_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7774,10 +7774,10 @@ QMimeData* q_abstractlistmodel_super_mime_data(const void* self, libqt_list inde
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback QMimeData* func(QAbstractListModel* self, libqt_list of QModelIndex* indexes)
 ///
-void q_abstractlistmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void q_abstractlistmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7815,10 +7815,10 @@ bool q_abstractlistmodel_super_can_drop_mime_data(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback bool func(QAbstractListModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void q_abstractlistmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
+void q_abstractlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7850,10 +7850,10 @@ int32_t q_abstractlistmodel_super_supported_drop_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback int32_t func(QAbstractListModel* self)
 ///
-void q_abstractlistmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void q_abstractlistmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7885,10 +7885,10 @@ int32_t q_abstractlistmodel_super_supported_drag_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback int32_t func(QAbstractListModel* self)
 ///
-void q_abstractlistmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
+void q_abstractlistmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8181,10 +8181,10 @@ bool q_abstractlistmodel_super_can_fetch_more(const void* self, const void* pare
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback bool func(QAbstractListModel* self, QModelIndex* parent)
 ///
-void q_abstractlistmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
+void q_abstractlistmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8249,12 +8249,12 @@ QModelIndex* q_abstractlistmodel_super_buddy(const void* self, const void* index
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback QModelIndex* func(QAbstractListModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractlistmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_abstractlistmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8296,10 +8296,10 @@ libqt_list q_abstractlistmodel_super_match(const void* self, const void* start, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback libqt_list of QModelIndex* func(QAbstractListModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void q_abstractlistmodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
+void q_abstractlistmodel_on_match(void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8329,12 +8329,12 @@ QSize* q_abstractlistmodel_super_span(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback QSize* func(QAbstractListModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractlistmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
+void q_abstractlistmodel_on_span(void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8388,10 +8388,10 @@ libqt_map q_abstractlistmodel_super_role_names(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback libqt_map of int to char* func(QAbstractListModel* self)
 ///
-void q_abstractlistmodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
+void q_abstractlistmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8423,10 +8423,10 @@ void q_abstractlistmodel_super_multi_data(const void* self, const void* index, v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback void func(QAbstractListModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void q_abstractlistmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
+void q_abstractlistmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8784,12 +8784,12 @@ QModelIndex* q_abstractlistmodel_super_create_index(const void* self, int row, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback QModelIndex* func(QAbstractListModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractlistmodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
+void q_abstractlistmodel_on_create_index(void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -8821,10 +8821,10 @@ void q_abstractlistmodel_super_encode_data(const void* self, libqt_list indexes,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback void func(QAbstractListModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void q_abstractlistmodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
+void q_abstractlistmodel_on_encode_data(void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -9443,10 +9443,10 @@ libqt_list q_abstractlistmodel_super_persistent_index_list(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback libqt_list of QModelIndex* func(QAbstractListModel* self)
 ///
-void q_abstractlistmodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
+void q_abstractlistmodel_on_persistent_index_list(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -9474,10 +9474,10 @@ QObject* q_abstractlistmodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback QObject* func(QAbstractListModel* self)
 ///
-void q_abstractlistmodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_abstractlistmodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -9505,10 +9505,10 @@ int32_t q_abstractlistmodel_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback int32_t func(QAbstractListModel* self)
 ///
-void q_abstractlistmodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_abstractlistmodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -9538,10 +9538,10 @@ int32_t q_abstractlistmodel_super_receivers(const void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback int32_t func(QAbstractListModel* self, const char* signal)
 ///
-void q_abstractlistmodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_abstractlistmodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -9571,10 +9571,10 @@ bool q_abstractlistmodel_super_is_signal_connected(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractListModel*
+/// @param self QAbstractListModel*
 /// @param callback bool func(QAbstractListModel* self, QMetaMethod* signal)
 ///
-void q_abstractlistmodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_abstractlistmodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///

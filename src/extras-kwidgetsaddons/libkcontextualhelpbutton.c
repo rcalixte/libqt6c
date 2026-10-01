@@ -32,7 +32,7 @@ const QMetaObject* k_contextualhelpbutton_meta_object(const void* self) {
     return KContextualHelpButton_MetaObject((KContextualHelpButton*)self);
 }
 
-void k_contextualhelpbutton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_contextualhelpbutton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KContextualHelpButton_OnMetaObject((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
@@ -94,7 +94,7 @@ QSize* k_contextualhelpbutton_size_hint(const void* self) {
     return KContextualHelpButton_SizeHint((KContextualHelpButton*)self);
 }
 
-void k_contextualhelpbutton_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_contextualhelpbutton_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KContextualHelpButton_OnSizeHint((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
@@ -331,11 +331,11 @@ void k_contextualhelpbutton_on_clicked1(void* self, void (*callback)(void*, bool
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_contextualhelpbutton_as_q_paint_device(void* self) {
+QPaintDevice* k_contextualhelpbutton_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KContextualHelpButton* k_contextualhelpbutton_from_q_paint_device(void* _qpaintdevice) {
+KContextualHelpButton* k_contextualhelpbutton_from_q_paint_device(const void* _qpaintdevice) {
     return (KContextualHelpButton*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1726,8 +1726,8 @@ QSize* k_contextualhelpbutton_super_minimum_size_hint(const void* self) {
     return KContextualHelpButton_SuperMinimumSizeHint((KContextualHelpButton*)self);
 }
 
-void k_contextualhelpbutton_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KContextualHelpButton_OnMinimumSizeHint((const KContextualHelpButton*)self, (intptr_t)callback);
+void k_contextualhelpbutton_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KContextualHelpButton_OnMinimumSizeHint((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
 bool k_contextualhelpbutton_event(void* self, void* e) {
@@ -1846,8 +1846,8 @@ bool k_contextualhelpbutton_super_hit_button(const void* self, const void* pos) 
     return KContextualHelpButton_SuperHitButton((KContextualHelpButton*)self, (QPoint*)pos);
 }
 
-void k_contextualhelpbutton_on_hit_button(const void* self, bool (*callback)(const void*, const void*)) {
-    KContextualHelpButton_OnHitButton((const KContextualHelpButton*)self, (intptr_t)callback);
+void k_contextualhelpbutton_on_hit_button(void* self, bool (*callback)(const void*, const void*)) {
+    KContextualHelpButton_OnHitButton((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
 void k_contextualhelpbutton_check_state_set(void* self) {
@@ -1882,8 +1882,8 @@ void k_contextualhelpbutton_super_init_style_option(const void* self, void* opti
     KContextualHelpButton_SuperInitStyleOption((KContextualHelpButton*)self, (QStyleOptionToolButton*)option);
 }
 
-void k_contextualhelpbutton_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KContextualHelpButton_OnInitStyleOption((const KContextualHelpButton*)self, (intptr_t)callback);
+void k_contextualhelpbutton_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KContextualHelpButton_OnInitStyleOption((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
 void k_contextualhelpbutton_key_press_event(void* self, void* e) {
@@ -1954,8 +1954,8 @@ int32_t k_contextualhelpbutton_super_dev_type(const void* self) {
     return KContextualHelpButton_SuperDevType((KContextualHelpButton*)self);
 }
 
-void k_contextualhelpbutton_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KContextualHelpButton_OnDevType((const KContextualHelpButton*)self, (intptr_t)callback);
+void k_contextualhelpbutton_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KContextualHelpButton_OnDevType((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
 void k_contextualhelpbutton_set_visible(void* self, bool visible) {
@@ -1978,8 +1978,8 @@ int32_t k_contextualhelpbutton_super_height_for_width(const void* self, int para
     return KContextualHelpButton_SuperHeightForWidth((KContextualHelpButton*)self, param1);
 }
 
-void k_contextualhelpbutton_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KContextualHelpButton_OnHeightForWidth((const KContextualHelpButton*)self, (intptr_t)callback);
+void k_contextualhelpbutton_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KContextualHelpButton_OnHeightForWidth((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
 bool k_contextualhelpbutton_has_height_for_width(const void* self) {
@@ -1990,8 +1990,8 @@ bool k_contextualhelpbutton_super_has_height_for_width(const void* self) {
     return KContextualHelpButton_SuperHasHeightForWidth((KContextualHelpButton*)self);
 }
 
-void k_contextualhelpbutton_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KContextualHelpButton_OnHasHeightForWidth((const KContextualHelpButton*)self, (intptr_t)callback);
+void k_contextualhelpbutton_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KContextualHelpButton_OnHasHeightForWidth((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_contextualhelpbutton_paint_engine(const void* self) {
@@ -2002,8 +2002,8 @@ QPaintEngine* k_contextualhelpbutton_super_paint_engine(const void* self) {
     return KContextualHelpButton_SuperPaintEngine((KContextualHelpButton*)self);
 }
 
-void k_contextualhelpbutton_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KContextualHelpButton_OnPaintEngine((const KContextualHelpButton*)self, (intptr_t)callback);
+void k_contextualhelpbutton_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KContextualHelpButton_OnPaintEngine((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
 void k_contextualhelpbutton_mouse_double_click_event(void* self, void* event) {
@@ -2182,8 +2182,8 @@ int32_t k_contextualhelpbutton_super_metric(const void* self, int32_t param1) {
     return KContextualHelpButton_SuperMetric((KContextualHelpButton*)self, param1);
 }
 
-void k_contextualhelpbutton_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KContextualHelpButton_OnMetric((const KContextualHelpButton*)self, (intptr_t)callback);
+void k_contextualhelpbutton_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KContextualHelpButton_OnMetric((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
 void k_contextualhelpbutton_init_painter(const void* self, void* painter) {
@@ -2194,8 +2194,8 @@ void k_contextualhelpbutton_super_init_painter(const void* self, void* painter) 
     KContextualHelpButton_SuperInitPainter((KContextualHelpButton*)self, (QPainter*)painter);
 }
 
-void k_contextualhelpbutton_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KContextualHelpButton_OnInitPainter((const KContextualHelpButton*)self, (intptr_t)callback);
+void k_contextualhelpbutton_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KContextualHelpButton_OnInitPainter((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_contextualhelpbutton_redirected(const void* self, void* offset) {
@@ -2206,8 +2206,8 @@ QPaintDevice* k_contextualhelpbutton_super_redirected(const void* self, void* of
     return KContextualHelpButton_SuperRedirected((KContextualHelpButton*)self, (QPoint*)offset);
 }
 
-void k_contextualhelpbutton_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KContextualHelpButton_OnRedirected((const KContextualHelpButton*)self, (intptr_t)callback);
+void k_contextualhelpbutton_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KContextualHelpButton_OnRedirected((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
 QPainter* k_contextualhelpbutton_shared_painter(const void* self) {
@@ -2218,8 +2218,8 @@ QPainter* k_contextualhelpbutton_super_shared_painter(const void* self) {
     return KContextualHelpButton_SuperSharedPainter((KContextualHelpButton*)self);
 }
 
-void k_contextualhelpbutton_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KContextualHelpButton_OnSharedPainter((const KContextualHelpButton*)self, (intptr_t)callback);
+void k_contextualhelpbutton_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KContextualHelpButton_OnSharedPainter((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
 void k_contextualhelpbutton_input_method_event(void* self, void* param1) {
@@ -2242,8 +2242,8 @@ QVariant* k_contextualhelpbutton_super_input_method_query(const void* self, int3
     return KContextualHelpButton_SuperInputMethodQuery((KContextualHelpButton*)self, param1);
 }
 
-void k_contextualhelpbutton_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KContextualHelpButton_OnInputMethodQuery((const KContextualHelpButton*)self, (intptr_t)callback);
+void k_contextualhelpbutton_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KContextualHelpButton_OnInputMethodQuery((KContextualHelpButton*)self, (intptr_t)callback);
 }
 
 bool k_contextualhelpbutton_focus_next_prev_child(void* self, bool next) {

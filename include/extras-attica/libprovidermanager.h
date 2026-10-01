@@ -32,10 +32,10 @@ const QMetaObject* k_attica__providermanager_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Attica__ProviderManager*
+/// @param self Attica__ProviderManager*
 /// @param callback const QMetaObject* func(const Attica__ProviderManager* self)
 ///
-void k_attica__providermanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_attica__providermanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -968,10 +968,10 @@ QObject* k_attica__providermanager_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Attica__ProviderManager*
+/// @param self Attica__ProviderManager*
 /// @param callback QObject* func(Attica__ProviderManager* self)
 ///
-void k_attica__providermanager_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_attica__providermanager_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -999,10 +999,10 @@ int32_t k_attica__providermanager_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Attica__ProviderManager*
+/// @param self Attica__ProviderManager*
 /// @param callback int32_t func(Attica__ProviderManager* self)
 ///
-void k_attica__providermanager_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_attica__providermanager_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1032,10 +1032,10 @@ int32_t k_attica__providermanager_super_receivers(const void* self, const char* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Attica__ProviderManager*
+/// @param self Attica__ProviderManager*
 /// @param callback int32_t func(Attica__ProviderManager* self, const char* signal)
 ///
-void k_attica__providermanager_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_attica__providermanager_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1065,10 +1065,10 @@ bool k_attica__providermanager_super_is_signal_connected(const void* self, const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Attica__ProviderManager*
+/// @param self Attica__ProviderManager*
 /// @param callback bool func(Attica__ProviderManager* self, QMetaMethod* signal)
 ///
-void k_attica__providermanager_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_attica__providermanager_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

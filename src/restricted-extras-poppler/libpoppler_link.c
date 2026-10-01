@@ -83,7 +83,7 @@ int32_t q_poppler__link_link_type(const void* self) {
     return Poppler__Link_LinkType((Poppler__Link*)self);
 }
 
-void q_poppler__link_on_link_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__link_on_link_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__Link_OnLinkType((Poppler__Link*)self, (intptr_t)callback);
 }
 
@@ -127,7 +127,7 @@ int32_t q_poppler__linkgoto_link_type(const void* self) {
     return Poppler__LinkGoto_LinkType((Poppler__LinkGoto*)self);
 }
 
-void q_poppler__linkgoto_on_link_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__linkgoto_on_link_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__LinkGoto_OnLinkType((Poppler__LinkGoto*)self, (intptr_t)callback);
 }
 
@@ -170,7 +170,7 @@ int32_t q_poppler__linkexecute_link_type(const void* self) {
     return Poppler__LinkExecute_LinkType((Poppler__LinkExecute*)self);
 }
 
-void q_poppler__linkexecute_on_link_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__linkexecute_on_link_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__LinkExecute_OnLinkType((Poppler__LinkExecute*)self, (intptr_t)callback);
 }
 
@@ -206,7 +206,7 @@ int32_t q_poppler__linkbrowse_link_type(const void* self) {
     return Poppler__LinkBrowse_LinkType((Poppler__LinkBrowse*)self);
 }
 
-void q_poppler__linkbrowse_on_link_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__linkbrowse_on_link_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__LinkBrowse_OnLinkType((Poppler__LinkBrowse*)self, (intptr_t)callback);
 }
 
@@ -239,7 +239,7 @@ int32_t q_poppler__linkaction_link_type(const void* self) {
     return Poppler__LinkAction_LinkType((Poppler__LinkAction*)self);
 }
 
-void q_poppler__linkaction_on_link_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__linkaction_on_link_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__LinkAction_OnLinkType((Poppler__LinkAction*)self, (intptr_t)callback);
 }
 
@@ -268,7 +268,7 @@ int32_t q_poppler__linksound_link_type(const void* self) {
     return Poppler__LinkSound_LinkType((Poppler__LinkSound*)self);
 }
 
-void q_poppler__linksound_on_link_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__linksound_on_link_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__LinkSound_OnLinkType((Poppler__LinkSound*)self, (intptr_t)callback);
 }
 
@@ -353,7 +353,7 @@ int32_t q_poppler__linkjavascript_link_type(const void* self) {
     return Poppler__LinkJavaScript_LinkType((Poppler__LinkJavaScript*)self);
 }
 
-void q_poppler__linkjavascript_on_link_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__linkjavascript_on_link_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__LinkJavaScript_OnLinkType((Poppler__LinkJavaScript*)self, (intptr_t)callback);
 }
 

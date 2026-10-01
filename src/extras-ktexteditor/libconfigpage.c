@@ -22,7 +22,7 @@ const QMetaObject* k_texteditor__configpage_meta_object(const void* self) {
     return KTextEditor__ConfigPage_MetaObject((KTextEditor__ConfigPage*)self);
 }
 
-void k_texteditor__configpage_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_texteditor__configpage_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KTextEditor__ConfigPage_OnMetaObject((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
@@ -68,7 +68,7 @@ const char* k_texteditor__configpage_name(const void* self) {
     return _ret;
 }
 
-void k_texteditor__configpage_on_name(const void* self, const char* (*callback)(const void*)) {
+void k_texteditor__configpage_on_name(void* self, const char* (*callback)(const void*)) {
     KTextEditor__ConfigPage_OnName((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
@@ -79,7 +79,7 @@ const char* k_texteditor__configpage_full_name(const void* self) {
     return _ret;
 }
 
-void k_texteditor__configpage_on_full_name(const void* self, const char* (*callback)(const void*)) {
+void k_texteditor__configpage_on_full_name(void* self, const char* (*callback)(const void*)) {
     KTextEditor__ConfigPage_OnFullName((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
@@ -94,7 +94,7 @@ QIcon* k_texteditor__configpage_icon(const void* self) {
     return KTextEditor__ConfigPage_Icon((KTextEditor__ConfigPage*)self);
 }
 
-void k_texteditor__configpage_on_icon(const void* self, QIcon* (*callback)(const void*)) {
+void k_texteditor__configpage_on_icon(void* self, QIcon* (*callback)(const void*)) {
     KTextEditor__ConfigPage_OnIcon((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
@@ -148,11 +148,11 @@ const char* k_texteditor__configpage_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_texteditor__configpage_as_q_paint_device(void* self) {
+QPaintDevice* k_texteditor__configpage_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KTextEditor__ConfigPage* k_texteditor__configpage_from_q_paint_device(void* _qpaintdevice) {
+KTextEditor__ConfigPage* k_texteditor__configpage_from_q_paint_device(const void* _qpaintdevice) {
     return (KTextEditor__ConfigPage*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1543,8 +1543,8 @@ int32_t k_texteditor__configpage_super_dev_type(const void* self) {
     return KTextEditor__ConfigPage_SuperDevType((KTextEditor__ConfigPage*)self);
 }
 
-void k_texteditor__configpage_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KTextEditor__ConfigPage_OnDevType((const KTextEditor__ConfigPage*)self, (intptr_t)callback);
+void k_texteditor__configpage_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KTextEditor__ConfigPage_OnDevType((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
 void k_texteditor__configpage_set_visible(void* self, bool visible) {
@@ -1567,8 +1567,8 @@ QSize* k_texteditor__configpage_super_size_hint(const void* self) {
     return KTextEditor__ConfigPage_SuperSizeHint((KTextEditor__ConfigPage*)self);
 }
 
-void k_texteditor__configpage_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KTextEditor__ConfigPage_OnSizeHint((const KTextEditor__ConfigPage*)self, (intptr_t)callback);
+void k_texteditor__configpage_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KTextEditor__ConfigPage_OnSizeHint((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
 QSize* k_texteditor__configpage_minimum_size_hint(const void* self) {
@@ -1579,8 +1579,8 @@ QSize* k_texteditor__configpage_super_minimum_size_hint(const void* self) {
     return KTextEditor__ConfigPage_SuperMinimumSizeHint((KTextEditor__ConfigPage*)self);
 }
 
-void k_texteditor__configpage_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KTextEditor__ConfigPage_OnMinimumSizeHint((const KTextEditor__ConfigPage*)self, (intptr_t)callback);
+void k_texteditor__configpage_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KTextEditor__ConfigPage_OnMinimumSizeHint((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
 int32_t k_texteditor__configpage_height_for_width(const void* self, int param1) {
@@ -1591,8 +1591,8 @@ int32_t k_texteditor__configpage_super_height_for_width(const void* self, int pa
     return KTextEditor__ConfigPage_SuperHeightForWidth((KTextEditor__ConfigPage*)self, param1);
 }
 
-void k_texteditor__configpage_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KTextEditor__ConfigPage_OnHeightForWidth((const KTextEditor__ConfigPage*)self, (intptr_t)callback);
+void k_texteditor__configpage_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KTextEditor__ConfigPage_OnHeightForWidth((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
 bool k_texteditor__configpage_has_height_for_width(const void* self) {
@@ -1603,8 +1603,8 @@ bool k_texteditor__configpage_super_has_height_for_width(const void* self) {
     return KTextEditor__ConfigPage_SuperHasHeightForWidth((KTextEditor__ConfigPage*)self);
 }
 
-void k_texteditor__configpage_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KTextEditor__ConfigPage_OnHasHeightForWidth((const KTextEditor__ConfigPage*)self, (intptr_t)callback);
+void k_texteditor__configpage_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KTextEditor__ConfigPage_OnHasHeightForWidth((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_texteditor__configpage_paint_engine(const void* self) {
@@ -1615,8 +1615,8 @@ QPaintEngine* k_texteditor__configpage_super_paint_engine(const void* self) {
     return KTextEditor__ConfigPage_SuperPaintEngine((KTextEditor__ConfigPage*)self);
 }
 
-void k_texteditor__configpage_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KTextEditor__ConfigPage_OnPaintEngine((const KTextEditor__ConfigPage*)self, (intptr_t)callback);
+void k_texteditor__configpage_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KTextEditor__ConfigPage_OnPaintEngine((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
 bool k_texteditor__configpage_event(void* self, void* event) {
@@ -1951,8 +1951,8 @@ int32_t k_texteditor__configpage_super_metric(const void* self, int32_t param1) 
     return KTextEditor__ConfigPage_SuperMetric((KTextEditor__ConfigPage*)self, param1);
 }
 
-void k_texteditor__configpage_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KTextEditor__ConfigPage_OnMetric((const KTextEditor__ConfigPage*)self, (intptr_t)callback);
+void k_texteditor__configpage_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KTextEditor__ConfigPage_OnMetric((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
 void k_texteditor__configpage_init_painter(const void* self, void* painter) {
@@ -1963,8 +1963,8 @@ void k_texteditor__configpage_super_init_painter(const void* self, void* painter
     KTextEditor__ConfigPage_SuperInitPainter((KTextEditor__ConfigPage*)self, (QPainter*)painter);
 }
 
-void k_texteditor__configpage_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KTextEditor__ConfigPage_OnInitPainter((const KTextEditor__ConfigPage*)self, (intptr_t)callback);
+void k_texteditor__configpage_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KTextEditor__ConfigPage_OnInitPainter((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_texteditor__configpage_redirected(const void* self, void* offset) {
@@ -1975,8 +1975,8 @@ QPaintDevice* k_texteditor__configpage_super_redirected(const void* self, void* 
     return KTextEditor__ConfigPage_SuperRedirected((KTextEditor__ConfigPage*)self, (QPoint*)offset);
 }
 
-void k_texteditor__configpage_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KTextEditor__ConfigPage_OnRedirected((const KTextEditor__ConfigPage*)self, (intptr_t)callback);
+void k_texteditor__configpage_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KTextEditor__ConfigPage_OnRedirected((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
 QPainter* k_texteditor__configpage_shared_painter(const void* self) {
@@ -1987,8 +1987,8 @@ QPainter* k_texteditor__configpage_super_shared_painter(const void* self) {
     return KTextEditor__ConfigPage_SuperSharedPainter((KTextEditor__ConfigPage*)self);
 }
 
-void k_texteditor__configpage_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KTextEditor__ConfigPage_OnSharedPainter((const KTextEditor__ConfigPage*)self, (intptr_t)callback);
+void k_texteditor__configpage_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KTextEditor__ConfigPage_OnSharedPainter((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
 void k_texteditor__configpage_input_method_event(void* self, void* param1) {
@@ -2011,8 +2011,8 @@ QVariant* k_texteditor__configpage_super_input_method_query(const void* self, in
     return KTextEditor__ConfigPage_SuperInputMethodQuery((KTextEditor__ConfigPage*)self, param1);
 }
 
-void k_texteditor__configpage_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KTextEditor__ConfigPage_OnInputMethodQuery((const KTextEditor__ConfigPage*)self, (intptr_t)callback);
+void k_texteditor__configpage_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KTextEditor__ConfigPage_OnInputMethodQuery((KTextEditor__ConfigPage*)self, (intptr_t)callback);
 }
 
 bool k_texteditor__configpage_focus_next_prev_child(void* self, bool next) {

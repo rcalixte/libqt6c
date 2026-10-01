@@ -1679,9 +1679,9 @@ void k_texteditor__document_on_url_changed(void* self, void (*callback)(void*, c
 ///
 /// Upcasts to a KParts::PartBase object
 ///
-/// @param self KTextEditor__Document*
+/// @param self const KTextEditor__Document*
 ///
-KParts__PartBase* k_texteditor__document_as_k_parts___part_base(void* self);
+KParts__PartBase* k_texteditor__document_as_k_parts___part_base(const void* self);
 
 /// Inherited from KParts::Part
 ///
@@ -1689,7 +1689,7 @@ KParts__PartBase* k_texteditor__document_as_k_parts___part_base(void* self);
 ///
 /// @param _kparts__partbase KParts__PartBase*
 ///
-KTextEditor__Document* k_texteditor__document_from_k_parts___part_base(void* _kparts__partbase);
+KTextEditor__Document* k_texteditor__document_from_k_parts___part_base(const void* _kparts__partbase);
 
 /// Inherited from KParts::Part
 ///

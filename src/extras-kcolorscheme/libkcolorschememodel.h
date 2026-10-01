@@ -32,10 +32,10 @@ const QMetaObject* k_colorschememodel_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback const QMetaObject* func(const KColorSchemeModel* self)
 ///
-void k_colorschememodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_colorschememodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -107,12 +107,12 @@ QVariant* k_colorschememodel_data(const void* self, const void* index, int role)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback QVariant* func(const KColorSchemeModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_colorschememodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
+void k_colorschememodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// [Upstream resources](https://api.kde.org/kcolorschememodel.html#data)
 ///
@@ -135,10 +135,10 @@ int32_t k_colorschememodel_row_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback int32_t func(const KColorSchemeModel* self, QModelIndex* parent)
 ///
-void k_colorschememodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
+void k_colorschememodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcolorschememodel.html#rowCount)
 ///
@@ -195,12 +195,12 @@ QModelIndex* k_colorschememodel_parent(const void* self, const void* child);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback QModelIndex* func(const KColorSchemeModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_colorschememodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_colorschememodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -219,10 +219,10 @@ int32_t k_colorschememodel_column_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback int32_t func(const KColorSchemeModel* self, QModelIndex* parent)
 ///
-void k_colorschememodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
+void k_colorschememodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -239,10 +239,10 @@ bool k_colorschememodel_has_children(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback bool func(const KColorSchemeModel* self, QModelIndex* parent)
 ///
-void k_colorschememodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
+void k_colorschememodel_on_has_children(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1023,12 +1023,12 @@ QModelIndex* k_colorschememodel_super_index(const void* self, int row, int colum
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback QModelIndex* func(KColorSchemeModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_colorschememodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void k_colorschememodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractListModel
 ///
@@ -1062,12 +1062,12 @@ QModelIndex* k_colorschememodel_super_sibling(const void* self, int row, int col
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback QModelIndex* func(KColorSchemeModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_colorschememodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void k_colorschememodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractListModel
 ///
@@ -1142,10 +1142,10 @@ int32_t k_colorschememodel_super_flags(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback int32_t func(KColorSchemeModel* self, QModelIndex* index)
 ///
-void k_colorschememodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
+void k_colorschememodel_on_flags(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1216,12 +1216,12 @@ QVariant* k_colorschememodel_super_header_data(const void* self, int section, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback QVariant* func(KColorSchemeModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_colorschememodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
+void k_colorschememodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1316,10 +1316,10 @@ libqt_map k_colorschememodel_super_item_data(const void* self, const void* index
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback libqt_map of int to QVariant* func(KColorSchemeModel* self, QModelIndex* index)
 ///
-void k_colorschememodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
+void k_colorschememodel_on_item_data(void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1419,10 +1419,10 @@ const char** k_colorschememodel_super_mime_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback const char** func(KColorSchemeModel* self)
 ///
-void k_colorschememodel_on_mime_types(const void* self, const char** (*callback)(const void*));
+void k_colorschememodel_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1452,10 +1452,10 @@ QMimeData* k_colorschememodel_super_mime_data(const void* self, libqt_list index
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback QMimeData* func(KColorSchemeModel* self, libqt_list of QModelIndex* indexes)
 ///
-void k_colorschememodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void k_colorschememodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1493,10 +1493,10 @@ bool k_colorschememodel_super_can_drop_mime_data(const void* self, const void* d
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback bool func(KColorSchemeModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void k_colorschememodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
+void k_colorschememodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1528,10 +1528,10 @@ int32_t k_colorschememodel_super_supported_drop_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback int32_t func(KColorSchemeModel* self)
 ///
-void k_colorschememodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void k_colorschememodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1563,10 +1563,10 @@ int32_t k_colorschememodel_super_supported_drag_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback int32_t func(KColorSchemeModel* self)
 ///
-void k_colorschememodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
+void k_colorschememodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1859,10 +1859,10 @@ bool k_colorschememodel_super_can_fetch_more(const void* self, const void* paren
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback bool func(KColorSchemeModel* self, QModelIndex* parent)
 ///
-void k_colorschememodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
+void k_colorschememodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1927,12 +1927,12 @@ QModelIndex* k_colorschememodel_super_buddy(const void* self, const void* index)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback QModelIndex* func(KColorSchemeModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_colorschememodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_colorschememodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1974,10 +1974,10 @@ libqt_list k_colorschememodel_super_match(const void* self, const void* start, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback libqt_list of QModelIndex* func(KColorSchemeModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void k_colorschememodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
+void k_colorschememodel_on_match(void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2007,12 +2007,12 @@ QSize* k_colorschememodel_super_span(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback QSize* func(KColorSchemeModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_colorschememodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
+void k_colorschememodel_on_span(void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2066,10 +2066,10 @@ libqt_map k_colorschememodel_super_role_names(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback libqt_map of int to char* func(KColorSchemeModel* self)
 ///
-void k_colorschememodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
+void k_colorschememodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2101,10 +2101,10 @@ void k_colorschememodel_super_multi_data(const void* self, const void* index, vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback void func(KColorSchemeModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void k_colorschememodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
+void k_colorschememodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2462,12 +2462,12 @@ QModelIndex* k_colorschememodel_super_create_index(const void* self, int row, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback QModelIndex* func(KColorSchemeModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_colorschememodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
+void k_colorschememodel_on_create_index(void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2499,10 +2499,10 @@ void k_colorschememodel_super_encode_data(const void* self, libqt_list indexes, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback void func(KColorSchemeModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void k_colorschememodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
+void k_colorschememodel_on_encode_data(void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3121,10 +3121,10 @@ libqt_list k_colorschememodel_super_persistent_index_list(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback libqt_list of QModelIndex* func(KColorSchemeModel* self)
 ///
-void k_colorschememodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
+void k_colorschememodel_on_persistent_index_list(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3152,10 +3152,10 @@ QObject* k_colorschememodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback QObject* func(KColorSchemeModel* self)
 ///
-void k_colorschememodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_colorschememodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3183,10 +3183,10 @@ int32_t k_colorschememodel_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback int32_t func(KColorSchemeModel* self)
 ///
-void k_colorschememodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_colorschememodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3216,10 +3216,10 @@ int32_t k_colorschememodel_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback int32_t func(KColorSchemeModel* self, const char* signal)
 ///
-void k_colorschememodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_colorschememodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3249,10 +3249,10 @@ bool k_colorschememodel_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KColorSchemeModel*
+/// @param self KColorSchemeModel*
 /// @param callback bool func(KColorSchemeModel* self, QMetaMethod* signal)
 ///
-void k_colorschememodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_colorschememodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///

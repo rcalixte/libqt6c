@@ -25,7 +25,7 @@ const QMetaObject* q_designerresourcebrowserinterface_meta_object(const void* se
     return QDesignerResourceBrowserInterface_MetaObject((QDesignerResourceBrowserInterface*)self);
 }
 
-void q_designerresourcebrowserinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_designerresourcebrowserinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerResourceBrowserInterface_OnMetaObject((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
@@ -79,7 +79,7 @@ const char* q_designerresourcebrowserinterface_current_path(const void* self) {
     return _ret;
 }
 
-void q_designerresourcebrowserinterface_on_current_path(const void* self, const char* (*callback)(const void*)) {
+void q_designerresourcebrowserinterface_on_current_path(void* self, const char* (*callback)(const void*)) {
     QDesignerResourceBrowserInterface_OnCurrentPath((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
@@ -113,11 +113,11 @@ const char* q_designerresourcebrowserinterface_tr3(const char* s, const char* c,
     return _ret;
 }
 
-QPaintDevice* q_designerresourcebrowserinterface_as_q_paint_device(void* self) {
+QPaintDevice* q_designerresourcebrowserinterface_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QDesignerResourceBrowserInterface* q_designerresourcebrowserinterface_from_q_paint_device(void* _qpaintdevice) {
+QDesignerResourceBrowserInterface* q_designerresourcebrowserinterface_from_q_paint_device(const void* _qpaintdevice) {
     return (QDesignerResourceBrowserInterface*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1508,8 +1508,8 @@ int32_t q_designerresourcebrowserinterface_super_dev_type(const void* self) {
     return QDesignerResourceBrowserInterface_SuperDevType((QDesignerResourceBrowserInterface*)self);
 }
 
-void q_designerresourcebrowserinterface_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QDesignerResourceBrowserInterface_OnDevType((const QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+void q_designerresourcebrowserinterface_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QDesignerResourceBrowserInterface_OnDevType((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
 void q_designerresourcebrowserinterface_set_visible(void* self, bool visible) {
@@ -1532,8 +1532,8 @@ QSize* q_designerresourcebrowserinterface_super_size_hint(const void* self) {
     return QDesignerResourceBrowserInterface_SuperSizeHint((QDesignerResourceBrowserInterface*)self);
 }
 
-void q_designerresourcebrowserinterface_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDesignerResourceBrowserInterface_OnSizeHint((const QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+void q_designerresourcebrowserinterface_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDesignerResourceBrowserInterface_OnSizeHint((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
 QSize* q_designerresourcebrowserinterface_minimum_size_hint(const void* self) {
@@ -1544,8 +1544,8 @@ QSize* q_designerresourcebrowserinterface_super_minimum_size_hint(const void* se
     return QDesignerResourceBrowserInterface_SuperMinimumSizeHint((QDesignerResourceBrowserInterface*)self);
 }
 
-void q_designerresourcebrowserinterface_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDesignerResourceBrowserInterface_OnMinimumSizeHint((const QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+void q_designerresourcebrowserinterface_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDesignerResourceBrowserInterface_OnMinimumSizeHint((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
 int32_t q_designerresourcebrowserinterface_height_for_width(const void* self, int param1) {
@@ -1556,8 +1556,8 @@ int32_t q_designerresourcebrowserinterface_super_height_for_width(const void* se
     return QDesignerResourceBrowserInterface_SuperHeightForWidth((QDesignerResourceBrowserInterface*)self, param1);
 }
 
-void q_designerresourcebrowserinterface_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QDesignerResourceBrowserInterface_OnHeightForWidth((const QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+void q_designerresourcebrowserinterface_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QDesignerResourceBrowserInterface_OnHeightForWidth((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
 bool q_designerresourcebrowserinterface_has_height_for_width(const void* self) {
@@ -1568,8 +1568,8 @@ bool q_designerresourcebrowserinterface_super_has_height_for_width(const void* s
     return QDesignerResourceBrowserInterface_SuperHasHeightForWidth((QDesignerResourceBrowserInterface*)self);
 }
 
-void q_designerresourcebrowserinterface_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QDesignerResourceBrowserInterface_OnHasHeightForWidth((const QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+void q_designerresourcebrowserinterface_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QDesignerResourceBrowserInterface_OnHasHeightForWidth((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_designerresourcebrowserinterface_paint_engine(const void* self) {
@@ -1580,8 +1580,8 @@ QPaintEngine* q_designerresourcebrowserinterface_super_paint_engine(const void* 
     return QDesignerResourceBrowserInterface_SuperPaintEngine((QDesignerResourceBrowserInterface*)self);
 }
 
-void q_designerresourcebrowserinterface_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QDesignerResourceBrowserInterface_OnPaintEngine((const QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+void q_designerresourcebrowserinterface_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QDesignerResourceBrowserInterface_OnPaintEngine((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
 bool q_designerresourcebrowserinterface_event(void* self, void* event) {
@@ -1916,8 +1916,8 @@ int32_t q_designerresourcebrowserinterface_super_metric(const void* self, int32_
     return QDesignerResourceBrowserInterface_SuperMetric((QDesignerResourceBrowserInterface*)self, param1);
 }
 
-void q_designerresourcebrowserinterface_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QDesignerResourceBrowserInterface_OnMetric((const QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+void q_designerresourcebrowserinterface_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QDesignerResourceBrowserInterface_OnMetric((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
 void q_designerresourcebrowserinterface_init_painter(const void* self, void* painter) {
@@ -1928,8 +1928,8 @@ void q_designerresourcebrowserinterface_super_init_painter(const void* self, voi
     QDesignerResourceBrowserInterface_SuperInitPainter((QDesignerResourceBrowserInterface*)self, (QPainter*)painter);
 }
 
-void q_designerresourcebrowserinterface_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QDesignerResourceBrowserInterface_OnInitPainter((const QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+void q_designerresourcebrowserinterface_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QDesignerResourceBrowserInterface_OnInitPainter((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_designerresourcebrowserinterface_redirected(const void* self, void* offset) {
@@ -1940,8 +1940,8 @@ QPaintDevice* q_designerresourcebrowserinterface_super_redirected(const void* se
     return QDesignerResourceBrowserInterface_SuperRedirected((QDesignerResourceBrowserInterface*)self, (QPoint*)offset);
 }
 
-void q_designerresourcebrowserinterface_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QDesignerResourceBrowserInterface_OnRedirected((const QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+void q_designerresourcebrowserinterface_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QDesignerResourceBrowserInterface_OnRedirected((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
 QPainter* q_designerresourcebrowserinterface_shared_painter(const void* self) {
@@ -1952,8 +1952,8 @@ QPainter* q_designerresourcebrowserinterface_super_shared_painter(const void* se
     return QDesignerResourceBrowserInterface_SuperSharedPainter((QDesignerResourceBrowserInterface*)self);
 }
 
-void q_designerresourcebrowserinterface_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QDesignerResourceBrowserInterface_OnSharedPainter((const QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+void q_designerresourcebrowserinterface_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QDesignerResourceBrowserInterface_OnSharedPainter((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
 void q_designerresourcebrowserinterface_input_method_event(void* self, void* param1) {
@@ -1976,8 +1976,8 @@ QVariant* q_designerresourcebrowserinterface_super_input_method_query(const void
     return QDesignerResourceBrowserInterface_SuperInputMethodQuery((QDesignerResourceBrowserInterface*)self, param1);
 }
 
-void q_designerresourcebrowserinterface_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QDesignerResourceBrowserInterface_OnInputMethodQuery((const QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
+void q_designerresourcebrowserinterface_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QDesignerResourceBrowserInterface_OnInputMethodQuery((QDesignerResourceBrowserInterface*)self, (intptr_t)callback);
 }
 
 bool q_designerresourcebrowserinterface_focus_next_prev_child(void* self, bool next) {

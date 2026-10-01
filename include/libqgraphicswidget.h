@@ -33,15 +33,15 @@ QGraphicsWidget* q_graphicswidget_new3(void* parent, int32_t wFlags);
 
 /// Upcasts to a QGraphicsLayoutItem object
 ///
-/// @param self QGraphicsWidget*
+/// @param self const QGraphicsWidget*
 ///
-QGraphicsLayoutItem* q_graphicswidget_as_q_graphics_layout_item(void* self);
+QGraphicsLayoutItem* q_graphicswidget_as_q_graphics_layout_item(const void* self);
 
 /// Downcasts to a QGraphicsWidget object
 ///
 /// @param _qgraphicslayoutitem QGraphicsLayoutItem*
 ///
-QGraphicsWidget* q_graphicswidget_from_q_graphics_layout_item(void* _qgraphicslayoutitem);
+QGraphicsWidget* q_graphicswidget_from_q_graphics_layout_item(const void* _qgraphicslayoutitem);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -53,10 +53,10 @@ const QMetaObject* q_graphicswidget_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback const QMetaObject* func(const QGraphicsWidget* self)
 ///
-void q_graphicswidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_graphicswidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -301,10 +301,10 @@ void q_graphicswidget_get_contents_margins(const void* self, double* left, doubl
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback void func(const QGraphicsWidget* self, double* left, double* top, double* right, double* bottom)
 ///
-void q_graphicswidget_on_get_contents_margins(const void* self, void (*callback)(const void*, double*, double*, double*, double*));
+void q_graphicswidget_on_get_contents_margins(void* self, void (*callback)(const void*, double*, double*, double*, double*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#getContentsMargins)
 ///
@@ -532,10 +532,10 @@ int32_t q_graphicswidget_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback int32_t func(const QGraphicsWidget* self)
 ///
-void q_graphicswidget_on_type(const void* self, int32_t (*callback)(const void*));
+void q_graphicswidget_on_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#type)
 ///
@@ -613,12 +613,12 @@ QRectF* q_graphicswidget_bounding_rect(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback QRectF* func(const QGraphicsWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicswidget_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
+void q_graphicswidget_on_bounding_rect(void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#boundingRect)
 ///
@@ -638,12 +638,12 @@ QPainterPath* q_graphicswidget_shape(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback QPainterPath* func(const QGraphicsWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicswidget_on_shape(const void* self, QPainterPath* (*callback)(const void*));
+void q_graphicswidget_on_shape(void* self, QPainterPath* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#shape)
 ///
@@ -696,10 +696,10 @@ void q_graphicswidget_init_style_option(const void* self, void* option);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback void func(const QGraphicsWidget* self, QStyleOption* option)
 ///
-void q_graphicswidget_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_graphicswidget_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#initStyleOption)
 ///
@@ -722,12 +722,12 @@ QSizeF* q_graphicswidget_size_hint(const void* self, int32_t which, const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback QSizeF* func(const QGraphicsWidget* self, enum Qt__SizeHint which, QSizeF* constraint)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicswidget_on_size_hint(const void* self, QSizeF* (*callback)(const void*, int32_t, const void*));
+void q_graphicswidget_on_size_hint(void* self, QSizeF* (*callback)(const void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#sizeHint)
 ///
@@ -883,10 +883,10 @@ int32_t q_graphicswidget_window_frame_section_at(const void* self, const void* p
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback int32_t func(const QGraphicsWidget* self, QPointF* pos)
 ///
-void q_graphicswidget_on_window_frame_section_at(const void* self, int32_t (*callback)(const void*, const void*));
+void q_graphicswidget_on_window_frame_section_at(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameSectionAt)
 ///
@@ -1377,9 +1377,9 @@ void q_graphicswidget_set_attribute2(void* self, int32_t attribute, bool on);
 ///
 /// Upcasts to a QGraphicsItem object
 ///
-/// @param self QGraphicsWidget*
+/// @param self const QGraphicsWidget*
 ///
-QGraphicsItem* q_graphicswidget_as_q_graphics_item(void* self);
+QGraphicsItem* q_graphicswidget_as_q_graphics_item(const void* self);
 
 /// Inherited from QGraphicsObject
 ///
@@ -1387,7 +1387,7 @@ QGraphicsItem* q_graphicswidget_as_q_graphics_item(void* self);
 ///
 /// @param _qgraphicsitem QGraphicsItem*
 ///
-QGraphicsWidget* q_graphicswidget_from_q_graphics_item(void* _qgraphicsitem);
+QGraphicsWidget* q_graphicswidget_from_q_graphics_item(const void* _qgraphicsitem);
 
 /// Inherited from QGraphicsObject
 ///
@@ -4321,10 +4321,10 @@ bool q_graphicswidget_super_contains(const void* self, const void* point);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback bool func(QGraphicsWidget* self, QPointF* point)
 ///
-void q_graphicswidget_on_contains(const void* self, bool (*callback)(const void*, const void*));
+void q_graphicswidget_on_contains(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -4356,10 +4356,10 @@ bool q_graphicswidget_super_collides_with_item(const void* self, const void* oth
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback bool func(QGraphicsWidget* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicswidget_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
+void q_graphicswidget_on_collides_with_item(void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -4391,10 +4391,10 @@ bool q_graphicswidget_super_collides_with_path(const void* self, const void* pat
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback bool func(QGraphicsWidget* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_graphicswidget_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
+void q_graphicswidget_on_collides_with_path(void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -4424,10 +4424,10 @@ bool q_graphicswidget_super_is_obscured_by(const void* self, const void* item);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback bool func(QGraphicsWidget* self, QGraphicsItem* item)
 ///
-void q_graphicswidget_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
+void q_graphicswidget_on_is_obscured_by(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -4455,12 +4455,12 @@ QPainterPath* q_graphicswidget_super_opaque_area(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback QPainterPath* func(QGraphicsWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicswidget_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
+void q_graphicswidget_on_opaque_area(void* self, QPainterPath* (*callback)(const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -4987,12 +4987,12 @@ QVariant* q_graphicswidget_super_input_method_query(const void* self, int32_t qu
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback QVariant* func(QGraphicsWidget* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicswidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_graphicswidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5022,10 +5022,10 @@ bool q_graphicswidget_super_supports_extension(const void* self, int32_t extensi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback bool func(QGraphicsWidget* self, enum QGraphicsItem__Extension extension)
 ///
-void q_graphicswidget_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
+void q_graphicswidget_on_supports_extension(void* self, bool (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5090,12 +5090,12 @@ QVariant* q_graphicswidget_super_extension(const void* self, const void* variant
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback QVariant* func(QGraphicsWidget* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicswidget_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
+void q_graphicswidget_on_extension(void* self, QVariant* (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -5123,10 +5123,10 @@ bool q_graphicswidget_super_is_empty(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback bool func(QGraphicsWidget* self)
 ///
-void q_graphicswidget_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_graphicswidget_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// Inherited from QGraphicsObject
 ///
@@ -5185,10 +5185,10 @@ QObject* q_graphicswidget_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback QObject* func(QGraphicsWidget* self)
 ///
-void q_graphicswidget_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_graphicswidget_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5216,10 +5216,10 @@ int32_t q_graphicswidget_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback int32_t func(QGraphicsWidget* self)
 ///
-void q_graphicswidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_graphicswidget_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5249,10 +5249,10 @@ int32_t q_graphicswidget_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback int32_t func(QGraphicsWidget* self, const char* signal)
 ///
-void q_graphicswidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_graphicswidget_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5282,10 +5282,10 @@ bool q_graphicswidget_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsWidget*
+/// @param self QGraphicsWidget*
 /// @param callback bool func(QGraphicsWidget* self, QMetaMethod* signal)
 ///
-void q_graphicswidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_graphicswidget_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///

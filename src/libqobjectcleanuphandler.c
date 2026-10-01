@@ -13,7 +13,7 @@ const QMetaObject* q_objectcleanuphandler_meta_object(const void* self) {
     return QObjectCleanupHandler_MetaObject((QObjectCleanupHandler*)self);
 }
 
-void q_objectcleanuphandler_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_objectcleanuphandler_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QObjectCleanupHandler_OnMetaObject((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 

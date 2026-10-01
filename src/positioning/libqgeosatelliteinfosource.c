@@ -15,7 +15,7 @@ const QMetaObject* q_geosatelliteinfosource_meta_object(const void* self) {
     return QGeoSatelliteInfoSource_MetaObject((QGeoSatelliteInfoSource*)self);
 }
 
-void q_geosatelliteinfosource_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_geosatelliteinfosource_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGeoSatelliteInfoSource_OnMetaObject((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
@@ -164,7 +164,7 @@ int32_t q_geosatelliteinfosource_minimum_update_interval(const void* self) {
     return QGeoSatelliteInfoSource_MinimumUpdateInterval((QGeoSatelliteInfoSource*)self);
 }
 
-void q_geosatelliteinfosource_on_minimum_update_interval(const void* self, int32_t (*callback)(const void*)) {
+void q_geosatelliteinfosource_on_minimum_update_interval(void* self, int32_t (*callback)(const void*)) {
     QGeoSatelliteInfoSource_OnMinimumUpdateInterval((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
@@ -172,7 +172,7 @@ int32_t q_geosatelliteinfosource_error(const void* self) {
     return QGeoSatelliteInfoSource_Error((QGeoSatelliteInfoSource*)self);
 }
 
-void q_geosatelliteinfosource_on_error(const void* self, int32_t (*callback)(const void*)) {
+void q_geosatelliteinfosource_on_error(void* self, int32_t (*callback)(const void*)) {
     QGeoSatelliteInfoSource_OnError((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
@@ -192,7 +192,7 @@ QVariant* q_geosatelliteinfosource_backend_property(const void* self, const char
     return QGeoSatelliteInfoSource_BackendProperty((QGeoSatelliteInfoSource*)self, qstring(name));
 }
 
-void q_geosatelliteinfosource_on_backend_property(const void* self, QVariant* (*callback)(const void*, const char*)) {
+void q_geosatelliteinfosource_on_backend_property(void* self, QVariant* (*callback)(const void*, const char*)) {
     QGeoSatelliteInfoSource_OnBackendProperty((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 

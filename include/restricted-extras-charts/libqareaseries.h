@@ -49,10 +49,10 @@ const QMetaObject* q_areaseries_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAreaSeries*
+/// @param self QAreaSeries*
 /// @param callback const QMetaObject* func(const QAreaSeries* self)
 ///
-void q_areaseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_areaseries_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -124,10 +124,10 @@ int32_t q_areaseries_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAreaSeries*
+/// @param self QAreaSeries*
 /// @param callback int32_t func(const QAreaSeries* self)
 ///
-void q_areaseries_on_type(const void* self, int32_t (*callback)(const void*));
+void q_areaseries_on_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#type)
 ///
@@ -1428,10 +1428,10 @@ QObject* q_areaseries_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAreaSeries*
+/// @param self QAreaSeries*
 /// @param callback QObject* func(QAreaSeries* self)
 ///
-void q_areaseries_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_areaseries_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1459,10 +1459,10 @@ int32_t q_areaseries_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAreaSeries*
+/// @param self QAreaSeries*
 /// @param callback int32_t func(QAreaSeries* self)
 ///
-void q_areaseries_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_areaseries_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1492,10 +1492,10 @@ int32_t q_areaseries_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAreaSeries*
+/// @param self QAreaSeries*
 /// @param callback int32_t func(QAreaSeries* self, const char* signal)
 ///
-void q_areaseries_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_areaseries_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1525,10 +1525,10 @@ bool q_areaseries_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAreaSeries*
+/// @param self QAreaSeries*
 /// @param callback bool func(QAreaSeries* self, QMetaMethod* signal)
 ///
-void q_areaseries_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_areaseries_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

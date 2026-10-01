@@ -26,7 +26,7 @@ const QMetaObject* q_audiooutput_meta_object(const void* self) {
     return QAudioOutput_MetaObject((QAudioOutput*)self);
 }
 
-void q_audiooutput_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_audiooutput_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAudioOutput_OnMetaObject((QAudioOutput*)self, (intptr_t)callback);
 }
 

@@ -18,7 +18,7 @@ const QMetaObject* q_iconengineplugin_meta_object(const void* self) {
     return QIconEnginePlugin_MetaObject((QIconEnginePlugin*)self);
 }
 
-void q_iconengineplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_iconengineplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QIconEnginePlugin_OnMetaObject((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 

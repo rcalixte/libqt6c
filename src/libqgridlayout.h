@@ -32,10 +32,10 @@ const QMetaObject* q_gridlayout_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback const QMetaObject* func(const QGridLayout* self)
 ///
-void q_gridlayout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_gridlayout_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -105,12 +105,12 @@ QSize* q_gridlayout_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback QSize* func(const QGridLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_gridlayout_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_gridlayout_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#sizeHint)
 ///
@@ -130,12 +130,12 @@ QSize* q_gridlayout_minimum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback QSize* func(const QGridLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_gridlayout_on_minimum_size(const void* self, QSize* (*callback)(const void*));
+void q_gridlayout_on_minimum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#minimumSize)
 ///
@@ -155,12 +155,12 @@ QSize* q_gridlayout_maximum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback QSize* func(const QGridLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_gridlayout_on_maximum_size(const void* self, QSize* (*callback)(const void*));
+void q_gridlayout_on_maximum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#maximumSize)
 ///
@@ -231,10 +231,10 @@ int32_t q_gridlayout_spacing(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback int32_t func(const QGridLayout* self)
 ///
-void q_gridlayout_on_spacing(const void* self, int32_t (*callback)(const void*));
+void q_gridlayout_on_spacing(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#spacing)
 ///
@@ -334,10 +334,10 @@ bool q_gridlayout_has_height_for_width(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback bool func(const QGridLayout* self)
 ///
-void q_gridlayout_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_gridlayout_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#hasHeightForWidth)
 ///
@@ -358,10 +358,10 @@ int32_t q_gridlayout_height_for_width(const void* self, int param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback int32_t func(const QGridLayout* self, int param1)
 ///
-void q_gridlayout_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_gridlayout_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#heightForWidth)
 ///
@@ -383,10 +383,10 @@ int32_t q_gridlayout_minimum_height_for_width(const void* self, int param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback int32_t func(const QGridLayout* self, int param1)
 ///
-void q_gridlayout_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_gridlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#minimumHeightForWidth)
 ///
@@ -409,10 +409,10 @@ int32_t q_gridlayout_expanding_directions(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback int32_t func(const QGridLayout* self)
 ///
-void q_gridlayout_on_expanding_directions(const void* self, int32_t (*callback)(const void*));
+void q_gridlayout_on_expanding_directions(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#expandingDirections)
 ///
@@ -520,10 +520,10 @@ QLayoutItem* q_gridlayout_item_at(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback QLayoutItem* func(const QGridLayout* self, int index)
 ///
-void q_gridlayout_on_item_at(const void* self, QLayoutItem* (*callback)(const void*, int));
+void q_gridlayout_on_item_at(void* self, QLayoutItem* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#itemAt)
 ///
@@ -577,10 +577,10 @@ int32_t q_gridlayout_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback int32_t func(const QGridLayout* self)
 ///
-void q_gridlayout_on_count(const void* self, int32_t (*callback)(const void*));
+void q_gridlayout_on_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgridlayout.html#count)
 ///
@@ -768,9 +768,9 @@ void q_gridlayout_add_item6(void* self, void* item, int row, int column, int row
 ///
 /// Upcasts to a QLayoutItem object
 ///
-/// @param self QGridLayout*
+/// @param self const QGridLayout*
 ///
-QLayoutItem* q_gridlayout_as_q_layout_item(void* self);
+QLayoutItem* q_gridlayout_as_q_layout_item(const void* self);
 
 /// Inherited from QLayout
 ///
@@ -778,7 +778,7 @@ QLayoutItem* q_gridlayout_as_q_layout_item(void* self);
 ///
 /// @param _qlayoutitem QLayoutItem*
 ///
-QGridLayout* q_gridlayout_from_q_layout_item(void* _qlayoutitem);
+QGridLayout* q_gridlayout_from_q_layout_item(const void* _qlayoutitem);
 
 /// Inherited from QLayout
 ///
@@ -950,10 +950,10 @@ int32_t q_gridlayout_index_of2(const void* self, const void* param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback int32_t func(const QGridLayout* self, QLayoutItem* param1)
 ///
-void q_gridlayout_on_index_of2(const void* self, int32_t (*callback)(const void*, const void*));
+void q_gridlayout_on_index_of2(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QLayout
 ///
@@ -1526,12 +1526,12 @@ QRect* q_gridlayout_super_geometry(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback QRect* func(QGridLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_gridlayout_on_geometry(const void* self, QRect* (*callback)(const void*));
+void q_gridlayout_on_geometry(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QLayout
 ///
@@ -1561,10 +1561,10 @@ int32_t q_gridlayout_super_index_of(const void* self, const void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback int32_t func(QGridLayout* self, QWidget* param1)
 ///
-void q_gridlayout_on_index_of(const void* self, int32_t (*callback)(const void*, const void*));
+void q_gridlayout_on_index_of(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QLayout
 ///
@@ -1592,10 +1592,10 @@ bool q_gridlayout_super_is_empty(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback bool func(QGridLayout* self)
 ///
-void q_gridlayout_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_gridlayout_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// Inherited from QLayout
 ///
@@ -1627,10 +1627,10 @@ int32_t q_gridlayout_super_control_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback int32_t func(QGridLayout* self)
 ///
-void q_gridlayout_on_control_types(const void* self, int32_t (*callback)(const void*));
+void q_gridlayout_on_control_types(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QLayout
 ///
@@ -1959,10 +1959,10 @@ QWidget* q_gridlayout_super_widget(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback QWidget* func(QGridLayout* self)
 ///
-void q_gridlayout_on_widget(const void* self, QWidget* (*callback)(const void*));
+void q_gridlayout_on_widget(void* self, QWidget* (*callback)(const void*));
 
 /// Inherited from QLayoutItem
 ///
@@ -2155,12 +2155,12 @@ QRect* q_gridlayout_super_alignment_rect(const void* self, const void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback QRect* func(QGridLayout* self, QRect* param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_gridlayout_on_alignment_rect(const void* self, QRect* (*callback)(const void*, const void*));
+void q_gridlayout_on_alignment_rect(void* self, QRect* (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2188,10 +2188,10 @@ QObject* q_gridlayout_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback QObject* func(QGridLayout* self)
 ///
-void q_gridlayout_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_gridlayout_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2219,10 +2219,10 @@ int32_t q_gridlayout_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback int32_t func(QGridLayout* self)
 ///
-void q_gridlayout_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_gridlayout_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2252,10 +2252,10 @@ int32_t q_gridlayout_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback int32_t func(QGridLayout* self, const char* signal)
 ///
-void q_gridlayout_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_gridlayout_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2285,10 +2285,10 @@ bool q_gridlayout_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGridLayout*
+/// @param self QGridLayout*
 /// @param callback bool func(QGridLayout* self, QMetaMethod* signal)
 ///
-void q_gridlayout_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_gridlayout_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

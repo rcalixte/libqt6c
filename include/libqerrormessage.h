@@ -32,10 +32,10 @@ const QMetaObject* q_errormessage_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback const QMetaObject* func(const QErrorMessage* self)
 ///
-void q_errormessage_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_errormessage_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -282,9 +282,9 @@ void q_errormessage_on_rejected(void* self, void (*callback)(void*));
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QErrorMessage*
+/// @param self const QErrorMessage*
 ///
-QPaintDevice* q_errormessage_as_q_paint_device(void* self);
+QPaintDevice* q_errormessage_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -292,7 +292,7 @@ QPaintDevice* q_errormessage_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QErrorMessage* q_errormessage_from_q_paint_device(void* _qpaintdevice);
+QErrorMessage* q_errormessage_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3310,12 +3310,12 @@ QSize* q_errormessage_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback QSize* func(QErrorMessage* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_errormessage_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_errormessage_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3343,12 +3343,12 @@ QSize* q_errormessage_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback QSize* func(QErrorMessage* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_errormessage_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_errormessage_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3700,10 +3700,10 @@ int32_t q_errormessage_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback int32_t func(QErrorMessage* self)
 ///
-void q_errormessage_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_errormessage_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3733,10 +3733,10 @@ int32_t q_errormessage_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback int32_t func(QErrorMessage* self, int param1)
 ///
-void q_errormessage_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_errormessage_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3764,10 +3764,10 @@ bool q_errormessage_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback bool func(QErrorMessage* self)
 ///
-void q_errormessage_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_errormessage_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3795,10 +3795,10 @@ QPaintEngine* q_errormessage_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback QPaintEngine* func(QErrorMessage* self)
 ///
-void q_errormessage_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_errormessage_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4525,10 +4525,10 @@ int32_t q_errormessage_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback int32_t func(QErrorMessage* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_errormessage_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_errormessage_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4558,10 +4558,10 @@ void q_errormessage_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback void func(QErrorMessage* self, QPainter* painter)
 ///
-void q_errormessage_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_errormessage_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4591,10 +4591,10 @@ QPaintDevice* q_errormessage_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback QPaintDevice* func(QErrorMessage* self, QPoint* offset)
 ///
-void q_errormessage_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_errormessage_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4622,10 +4622,10 @@ QPainter* q_errormessage_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback QPainter* func(QErrorMessage* self)
 ///
-void q_errormessage_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_errormessage_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4688,12 +4688,12 @@ QVariant* q_errormessage_super_input_method_query(const void* self, int32_t para
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback QVariant* func(QErrorMessage* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_errormessage_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_errormessage_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5107,10 +5107,10 @@ QObject* q_errormessage_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback QObject* func(QErrorMessage* self)
 ///
-void q_errormessage_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_errormessage_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5138,10 +5138,10 @@ int32_t q_errormessage_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback int32_t func(QErrorMessage* self)
 ///
-void q_errormessage_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_errormessage_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5171,10 +5171,10 @@ int32_t q_errormessage_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback int32_t func(QErrorMessage* self, const char* signal)
 ///
-void q_errormessage_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_errormessage_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5204,10 +5204,10 @@ bool q_errormessage_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback bool func(QErrorMessage* self, QMetaMethod* signal)
 ///
-void q_errormessage_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_errormessage_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5239,10 +5239,10 @@ double q_errormessage_super_get_decoded_metric_f(const void* self, int32_t metri
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QErrorMessage*
+/// @param self QErrorMessage*
 /// @param callback double func(QErrorMessage* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_errormessage_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_errormessage_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

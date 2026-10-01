@@ -48,7 +48,7 @@ const QMetaObject* k_xmessages_meta_object(const void* self) {
 #endif
 
 #ifdef __linux__
-void k_xmessages_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_xmessages_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KXMessages_OnMetaObject((KXMessages*)self, (intptr_t)callback);
 }
 #endif

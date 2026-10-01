@@ -24,10 +24,10 @@ const QMetaObject* k_shellcompletion_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback const QMetaObject* func(const KShellCompletion* self)
 ///
-void k_shellcompletion_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_shellcompletion_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -125,10 +125,10 @@ void k_shellcompletion_post_process_matches(const void* self, const char* matche
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback void func(const KShellCompletion* self, const char** matches)
 ///
-void k_shellcompletion_on_post_process_matches(const void* self, void (*callback)(const void*, const char**));
+void k_shellcompletion_on_post_process_matches(void* self, void (*callback)(const void*, const char**));
 
 /// [Upstream resources](https://api.kde.org/kshellcompletion.html#postProcessMatches)
 ///
@@ -150,10 +150,10 @@ void k_shellcompletion_post_process_matches2(const void* self, void* matches);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback void func(const KShellCompletion* self, KCompletionMatches* matches)
 ///
-void k_shellcompletion_on_post_process_matches2(const void* self, void (*callback)(const void*, void*));
+void k_shellcompletion_on_post_process_matches2(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kshellcompletion.html#postProcessMatches)
 ///
@@ -971,12 +971,12 @@ QUrl* k_shellcompletion_super_dir(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback QUrl* func(KShellCompletion* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_shellcompletion_on_dir(const void* self, QUrl* (*callback)(const void*));
+void k_shellcompletion_on_dir(void* self, QUrl* (*callback)(const void*));
 
 /// Inherited from KUrlCompletion
 ///
@@ -1004,10 +1004,10 @@ bool k_shellcompletion_super_is_running(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback bool func(KShellCompletion* self)
 ///
-void k_shellcompletion_on_is_running(const void* self, bool (*callback)(const void*));
+void k_shellcompletion_on_is_running(void* self, bool (*callback)(const void*));
 
 /// Inherited from KUrlCompletion
 ///
@@ -1070,10 +1070,10 @@ int32_t k_shellcompletion_super_mode(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback int32_t func(KShellCompletion* self)
 ///
-void k_shellcompletion_on_mode(const void* self, int32_t (*callback)(const void*));
+void k_shellcompletion_on_mode(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from KUrlCompletion
 ///
@@ -1134,10 +1134,10 @@ bool k_shellcompletion_super_replace_env(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback bool func(KShellCompletion* self)
 ///
-void k_shellcompletion_on_replace_env(const void* self, bool (*callback)(const void*));
+void k_shellcompletion_on_replace_env(void* self, bool (*callback)(const void*));
 
 /// Inherited from KUrlCompletion
 ///
@@ -1198,10 +1198,10 @@ bool k_shellcompletion_super_replace_home(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback bool func(KShellCompletion* self)
 ///
-void k_shellcompletion_on_replace_home(const void* self, bool (*callback)(const void*));
+void k_shellcompletion_on_replace_home(void* self, bool (*callback)(const void*));
 
 /// Inherited from KUrlCompletion
 ///
@@ -1266,10 +1266,10 @@ const char* k_shellcompletion_super_last_match(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback const char* func(KShellCompletion* self)
 ///
-void k_shellcompletion_on_last_match(const void* self, const char* (*callback)(const void*));
+void k_shellcompletion_on_last_match(void* self, const char* (*callback)(const void*));
 
 /// Inherited from KCompletion
 ///
@@ -1759,10 +1759,10 @@ QObject* k_shellcompletion_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback QObject* func(KShellCompletion* self)
 ///
-void k_shellcompletion_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_shellcompletion_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1790,10 +1790,10 @@ int32_t k_shellcompletion_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback int32_t func(KShellCompletion* self)
 ///
-void k_shellcompletion_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_shellcompletion_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1823,10 +1823,10 @@ int32_t k_shellcompletion_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback int32_t func(KShellCompletion* self, const char* signal)
 ///
-void k_shellcompletion_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_shellcompletion_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1856,10 +1856,10 @@ bool k_shellcompletion_super_is_signal_connected(const void* self, const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShellCompletion*
+/// @param self KShellCompletion*
 /// @param callback bool func(KShellCompletion* self, QMetaMethod* signal)
 ///
-void k_shellcompletion_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_shellcompletion_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

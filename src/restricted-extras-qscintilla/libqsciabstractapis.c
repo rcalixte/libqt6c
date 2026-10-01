@@ -14,7 +14,7 @@ const QMetaObject* q_sciabstractapis_meta_object(const void* self) {
     return QsciAbstractAPIs_MetaObject((QsciAbstractAPIs*)self);
 }
 
-void q_sciabstractapis_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_sciabstractapis_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QsciAbstractAPIs_OnMetaObject((QsciAbstractAPIs*)self, (intptr_t)callback);
 }
 

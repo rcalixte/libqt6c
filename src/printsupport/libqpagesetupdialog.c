@@ -35,7 +35,7 @@ const QMetaObject* q_pagesetupdialog_meta_object(const void* self) {
     return QPageSetupDialog_MetaObject((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pagesetupdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPageSetupDialog_OnMetaObject((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
@@ -160,11 +160,11 @@ void q_pagesetupdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_pagesetupdialog_as_q_paint_device(void* self) {
+QPaintDevice* q_pagesetupdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QPageSetupDialog* q_pagesetupdialog_from_q_paint_device(void* _qpaintdevice) {
+QPageSetupDialog* q_pagesetupdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (QPageSetupDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1567,8 +1567,8 @@ QSize* q_pagesetupdialog_super_size_hint(const void* self) {
     return QPageSetupDialog_SuperSizeHint((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QPageSetupDialog_OnSizeHint((const QPageSetupDialog*)self, (intptr_t)callback);
+void q_pagesetupdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QPageSetupDialog_OnSizeHint((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
 QSize* q_pagesetupdialog_minimum_size_hint(const void* self) {
@@ -1579,8 +1579,8 @@ QSize* q_pagesetupdialog_super_minimum_size_hint(const void* self) {
     return QPageSetupDialog_SuperMinimumSizeHint((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QPageSetupDialog_OnMinimumSizeHint((const QPageSetupDialog*)self, (intptr_t)callback);
+void q_pagesetupdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QPageSetupDialog_OnMinimumSizeHint((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
 void q_pagesetupdialog_open(void* self) {
@@ -1699,8 +1699,8 @@ int32_t q_pagesetupdialog_super_dev_type(const void* self) {
     return QPageSetupDialog_SuperDevType((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QPageSetupDialog_OnDevType((const QPageSetupDialog*)self, (intptr_t)callback);
+void q_pagesetupdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QPageSetupDialog_OnDevType((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_pagesetupdialog_height_for_width(const void* self, int param1) {
@@ -1711,8 +1711,8 @@ int32_t q_pagesetupdialog_super_height_for_width(const void* self, int param1) {
     return QPageSetupDialog_SuperHeightForWidth((QPageSetupDialog*)self, param1);
 }
 
-void q_pagesetupdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QPageSetupDialog_OnHeightForWidth((const QPageSetupDialog*)self, (intptr_t)callback);
+void q_pagesetupdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QPageSetupDialog_OnHeightForWidth((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
 bool q_pagesetupdialog_has_height_for_width(const void* self) {
@@ -1723,8 +1723,8 @@ bool q_pagesetupdialog_super_has_height_for_width(const void* self) {
     return QPageSetupDialog_SuperHasHeightForWidth((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QPageSetupDialog_OnHasHeightForWidth((const QPageSetupDialog*)self, (intptr_t)callback);
+void q_pagesetupdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QPageSetupDialog_OnHasHeightForWidth((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_pagesetupdialog_paint_engine(const void* self) {
@@ -1735,8 +1735,8 @@ QPaintEngine* q_pagesetupdialog_super_paint_engine(const void* self) {
     return QPageSetupDialog_SuperPaintEngine((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QPageSetupDialog_OnPaintEngine((const QPageSetupDialog*)self, (intptr_t)callback);
+void q_pagesetupdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QPageSetupDialog_OnPaintEngine((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
 bool q_pagesetupdialog_event(void* self, void* event) {
@@ -2011,8 +2011,8 @@ int32_t q_pagesetupdialog_super_metric(const void* self, int32_t param1) {
     return QPageSetupDialog_SuperMetric((QPageSetupDialog*)self, param1);
 }
 
-void q_pagesetupdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QPageSetupDialog_OnMetric((const QPageSetupDialog*)self, (intptr_t)callback);
+void q_pagesetupdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QPageSetupDialog_OnMetric((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
 void q_pagesetupdialog_init_painter(const void* self, void* painter) {
@@ -2023,8 +2023,8 @@ void q_pagesetupdialog_super_init_painter(const void* self, void* painter) {
     QPageSetupDialog_SuperInitPainter((QPageSetupDialog*)self, (QPainter*)painter);
 }
 
-void q_pagesetupdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QPageSetupDialog_OnInitPainter((const QPageSetupDialog*)self, (intptr_t)callback);
+void q_pagesetupdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QPageSetupDialog_OnInitPainter((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_pagesetupdialog_redirected(const void* self, void* offset) {
@@ -2035,8 +2035,8 @@ QPaintDevice* q_pagesetupdialog_super_redirected(const void* self, void* offset)
     return QPageSetupDialog_SuperRedirected((QPageSetupDialog*)self, (QPoint*)offset);
 }
 
-void q_pagesetupdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QPageSetupDialog_OnRedirected((const QPageSetupDialog*)self, (intptr_t)callback);
+void q_pagesetupdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QPageSetupDialog_OnRedirected((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
 QPainter* q_pagesetupdialog_shared_painter(const void* self) {
@@ -2047,8 +2047,8 @@ QPainter* q_pagesetupdialog_super_shared_painter(const void* self) {
     return QPageSetupDialog_SuperSharedPainter((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QPageSetupDialog_OnSharedPainter((const QPageSetupDialog*)self, (intptr_t)callback);
+void q_pagesetupdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QPageSetupDialog_OnSharedPainter((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
 void q_pagesetupdialog_input_method_event(void* self, void* param1) {
@@ -2071,8 +2071,8 @@ QVariant* q_pagesetupdialog_super_input_method_query(const void* self, int32_t p
     return QPageSetupDialog_SuperInputMethodQuery((QPageSetupDialog*)self, param1);
 }
 
-void q_pagesetupdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QPageSetupDialog_OnInputMethodQuery((const QPageSetupDialog*)self, (intptr_t)callback);
+void q_pagesetupdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QPageSetupDialog_OnInputMethodQuery((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
 bool q_pagesetupdialog_focus_next_prev_child(void* self, bool next) {

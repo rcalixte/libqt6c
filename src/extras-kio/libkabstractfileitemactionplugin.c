@@ -16,7 +16,7 @@ const QMetaObject* k_abstractfileitemactionplugin_meta_object(const void* self) 
     return KAbstractFileItemActionPlugin_MetaObject((KAbstractFileItemActionPlugin*)self);
 }
 
-void k_abstractfileitemactionplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_abstractfileitemactionplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KAbstractFileItemActionPlugin_OnMetaObject((KAbstractFileItemActionPlugin*)self, (intptr_t)callback);
 }
 

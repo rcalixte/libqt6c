@@ -14,11 +14,11 @@ QQuick3DObject* q_quick3dobject_new2(void* parent) {
     return QQuick3DObject_New2((QQuick3DObject*)parent);
 }
 
-QQmlParserStatus* q_quick3dobject_as_q_qml_parser_status(void* self) {
+QQmlParserStatus* q_quick3dobject_as_q_qml_parser_status(const void* self) {
     return QQuick3DObject_AsQQmlParserStatus((QQuick3DObject*)self);
 }
 
-QQuick3DObject* q_quick3dobject_from_q_qml_parser_status(void* _qqmlparserstatus) {
+QQuick3DObject* q_quick3dobject_from_q_qml_parser_status(const void* _qqmlparserstatus) {
     return (QQuick3DObject*)QQuick3DObject_FromQQmlParserStatus((QQmlParserStatus*)_qqmlparserstatus);
 }
 
@@ -26,7 +26,7 @@ const QMetaObject* q_quick3dobject_meta_object(const void* self) {
     return QQuick3DObject_MetaObject((QQuick3DObject*)self);
 }
 
-void q_quick3dobject_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quick3dobject_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuick3DObject_OnMetaObject((QQuick3DObject*)self, (intptr_t)callback);
 }
 

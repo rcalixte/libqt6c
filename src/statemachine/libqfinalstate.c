@@ -19,7 +19,7 @@ const QMetaObject* q_finalstate_meta_object(const void* self) {
     return QFinalState_MetaObject((QFinalState*)self);
 }
 
-void q_finalstate_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_finalstate_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QFinalState_OnMetaObject((QFinalState*)self, (intptr_t)callback);
 }
 

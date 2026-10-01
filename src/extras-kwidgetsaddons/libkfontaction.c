@@ -30,7 +30,7 @@ const QMetaObject* k_fontaction_meta_object(const void* self) {
     return KFontAction_MetaObject((KFontAction*)self);
 }
 
-void k_fontaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_fontaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFontAction_OnMetaObject((KFontAction*)self, (intptr_t)callback);
 }
 

@@ -20,7 +20,7 @@ const QMetaObject* q_quick3dgeometry_meta_object(const void* self) {
     return QQuick3DGeometry_MetaObject((QQuick3DGeometry*)self);
 }
 
-void q_quick3dgeometry_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quick3dgeometry_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuick3DGeometry_OnMetaObject((QQuick3DGeometry*)self, (intptr_t)callback);
 }
 
@@ -249,11 +249,11 @@ void q_quick3dgeometry_add_target_attribute4(void* self, uint32_t targetId, int3
     QQuick3DGeometry_AddTargetAttribute4((QQuick3DGeometry*)self, targetId, semantic, offset, stride);
 }
 
-QQmlParserStatus* q_quick3dgeometry_as_q_qml_parser_status(void* self) {
+QQmlParserStatus* q_quick3dgeometry_as_q_qml_parser_status(const void* self) {
     return QQuick3DObject_AsQQmlParserStatus((QQuick3DObject*)self);
 }
 
-QQuick3DGeometry* q_quick3dgeometry_from_q_qml_parser_status(void* _qqmlparserstatus) {
+QQuick3DGeometry* q_quick3dgeometry_from_q_qml_parser_status(const void* _qqmlparserstatus) {
     return (QQuick3DGeometry*)QQuick3DObject_FromQQmlParserStatus((QQmlParserStatus*)_qqmlparserstatus);
 }
 

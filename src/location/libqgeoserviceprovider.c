@@ -78,7 +78,7 @@ const QMetaObject* q_geoserviceprovider_meta_object(const void* self) {
     return QGeoServiceProvider_MetaObject((QGeoServiceProvider*)self);
 }
 
-void q_geoserviceprovider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_geoserviceprovider_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGeoServiceProvider_OnMetaObject((QGeoServiceProvider*)self, (intptr_t)callback);
 }
 

@@ -19,7 +19,7 @@ const QMetaObject* q_localsocket_meta_object(const void* self) {
     return QLocalSocket_MetaObject((QLocalSocket*)self);
 }
 
-void q_localsocket_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_localsocket_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QLocalSocket_OnMetaObject((QLocalSocket*)self, (intptr_t)callback);
 }
 
@@ -96,7 +96,7 @@ bool q_localsocket_is_sequential(const void* self) {
     return QLocalSocket_IsSequential((QLocalSocket*)self);
 }
 
-void q_localsocket_on_is_sequential(const void* self, bool (*callback)(const void*)) {
+void q_localsocket_on_is_sequential(void* self, bool (*callback)(const void*)) {
     QLocalSocket_OnIsSequential((QLocalSocket*)self, (intptr_t)callback);
 }
 
@@ -108,7 +108,7 @@ int64_t q_localsocket_bytes_available(const void* self) {
     return QLocalSocket_BytesAvailable((QLocalSocket*)self);
 }
 
-void q_localsocket_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
+void q_localsocket_on_bytes_available(void* self, int64_t (*callback)(const void*)) {
     QLocalSocket_OnBytesAvailable((QLocalSocket*)self, (intptr_t)callback);
 }
 
@@ -120,7 +120,7 @@ int64_t q_localsocket_bytes_to_write(const void* self) {
     return QLocalSocket_BytesToWrite((QLocalSocket*)self);
 }
 
-void q_localsocket_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
+void q_localsocket_on_bytes_to_write(void* self, int64_t (*callback)(const void*)) {
     QLocalSocket_OnBytesToWrite((QLocalSocket*)self, (intptr_t)callback);
 }
 
@@ -132,7 +132,7 @@ bool q_localsocket_can_read_line(const void* self) {
     return QLocalSocket_CanReadLine((QLocalSocket*)self);
 }
 
-void q_localsocket_on_can_read_line(const void* self, bool (*callback)(const void*)) {
+void q_localsocket_on_can_read_line(void* self, bool (*callback)(const void*)) {
     QLocalSocket_OnCanReadLine((QLocalSocket*)self, (intptr_t)callback);
 }
 
@@ -354,7 +354,7 @@ bool q_localsocket_wait_for_disconnected1(void* self, int msecs) {
     return QLocalSocket_WaitForDisconnected1((QLocalSocket*)self, msecs);
 }
 
-QIODeviceBase* q_localsocket_as_q_i_o_device_base(void* self) {
+QIODeviceBase* q_localsocket_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
@@ -769,8 +769,8 @@ int64_t q_localsocket_super_pos(const void* self) {
     return QLocalSocket_SuperPos((QLocalSocket*)self);
 }
 
-void q_localsocket_on_pos(const void* self, int64_t (*callback)(const void*)) {
-    QLocalSocket_OnPos((const QLocalSocket*)self, (intptr_t)callback);
+void q_localsocket_on_pos(void* self, int64_t (*callback)(const void*)) {
+    QLocalSocket_OnPos((QLocalSocket*)self, (intptr_t)callback);
 }
 
 int64_t q_localsocket_size(const void* self) {
@@ -781,8 +781,8 @@ int64_t q_localsocket_super_size(const void* self) {
     return QLocalSocket_SuperSize((QLocalSocket*)self);
 }
 
-void q_localsocket_on_size(const void* self, int64_t (*callback)(const void*)) {
-    QLocalSocket_OnSize((const QLocalSocket*)self, (intptr_t)callback);
+void q_localsocket_on_size(void* self, int64_t (*callback)(const void*)) {
+    QLocalSocket_OnSize((QLocalSocket*)self, (intptr_t)callback);
 }
 
 bool q_localsocket_seek(void* self, int64_t pos) {
@@ -805,8 +805,8 @@ bool q_localsocket_super_at_end(const void* self) {
     return QLocalSocket_SuperAtEnd((QLocalSocket*)self);
 }
 
-void q_localsocket_on_at_end(const void* self, bool (*callback)(const void*)) {
-    QLocalSocket_OnAtEnd((const QLocalSocket*)self, (intptr_t)callback);
+void q_localsocket_on_at_end(void* self, bool (*callback)(const void*)) {
+    QLocalSocket_OnAtEnd((QLocalSocket*)self, (intptr_t)callback);
 }
 
 bool q_localsocket_reset(void* self) {

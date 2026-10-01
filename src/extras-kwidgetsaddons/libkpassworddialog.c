@@ -32,7 +32,7 @@ const QMetaObject* k_passworddialog_meta_object(const void* self) {
     return KPasswordDialog_MetaObject((KPasswordDialog*)self);
 }
 
-void k_passworddialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_passworddialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPasswordDialog_OnMetaObject((KPasswordDialog*)self, (intptr_t)callback);
 }
 
@@ -305,11 +305,11 @@ void k_passworddialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_passworddialog_as_q_paint_device(void* self) {
+QPaintDevice* k_passworddialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KPasswordDialog* k_passworddialog_from_q_paint_device(void* _qpaintdevice) {
+KPasswordDialog* k_passworddialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KPasswordDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1712,8 +1712,8 @@ QSize* k_passworddialog_super_size_hint(const void* self) {
     return KPasswordDialog_SuperSizeHint((KPasswordDialog*)self);
 }
 
-void k_passworddialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPasswordDialog_OnSizeHint((const KPasswordDialog*)self, (intptr_t)callback);
+void k_passworddialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPasswordDialog_OnSizeHint((KPasswordDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_passworddialog_minimum_size_hint(const void* self) {
@@ -1724,8 +1724,8 @@ QSize* k_passworddialog_super_minimum_size_hint(const void* self) {
     return KPasswordDialog_SuperMinimumSizeHint((KPasswordDialog*)self);
 }
 
-void k_passworddialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPasswordDialog_OnMinimumSizeHint((const KPasswordDialog*)self, (intptr_t)callback);
+void k_passworddialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPasswordDialog_OnMinimumSizeHint((KPasswordDialog*)self, (intptr_t)callback);
 }
 
 void k_passworddialog_open(void* self) {
@@ -1856,8 +1856,8 @@ int32_t k_passworddialog_super_dev_type(const void* self) {
     return KPasswordDialog_SuperDevType((KPasswordDialog*)self);
 }
 
-void k_passworddialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KPasswordDialog_OnDevType((const KPasswordDialog*)self, (intptr_t)callback);
+void k_passworddialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KPasswordDialog_OnDevType((KPasswordDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_passworddialog_height_for_width(const void* self, int param1) {
@@ -1868,8 +1868,8 @@ int32_t k_passworddialog_super_height_for_width(const void* self, int param1) {
     return KPasswordDialog_SuperHeightForWidth((KPasswordDialog*)self, param1);
 }
 
-void k_passworddialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KPasswordDialog_OnHeightForWidth((const KPasswordDialog*)self, (intptr_t)callback);
+void k_passworddialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KPasswordDialog_OnHeightForWidth((KPasswordDialog*)self, (intptr_t)callback);
 }
 
 bool k_passworddialog_has_height_for_width(const void* self) {
@@ -1880,8 +1880,8 @@ bool k_passworddialog_super_has_height_for_width(const void* self) {
     return KPasswordDialog_SuperHasHeightForWidth((KPasswordDialog*)self);
 }
 
-void k_passworddialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KPasswordDialog_OnHasHeightForWidth((const KPasswordDialog*)self, (intptr_t)callback);
+void k_passworddialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KPasswordDialog_OnHasHeightForWidth((KPasswordDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_passworddialog_paint_engine(const void* self) {
@@ -1892,8 +1892,8 @@ QPaintEngine* k_passworddialog_super_paint_engine(const void* self) {
     return KPasswordDialog_SuperPaintEngine((KPasswordDialog*)self);
 }
 
-void k_passworddialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KPasswordDialog_OnPaintEngine((const KPasswordDialog*)self, (intptr_t)callback);
+void k_passworddialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KPasswordDialog_OnPaintEngine((KPasswordDialog*)self, (intptr_t)callback);
 }
 
 bool k_passworddialog_event(void* self, void* event) {
@@ -2168,8 +2168,8 @@ int32_t k_passworddialog_super_metric(const void* self, int32_t param1) {
     return KPasswordDialog_SuperMetric((KPasswordDialog*)self, param1);
 }
 
-void k_passworddialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KPasswordDialog_OnMetric((const KPasswordDialog*)self, (intptr_t)callback);
+void k_passworddialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KPasswordDialog_OnMetric((KPasswordDialog*)self, (intptr_t)callback);
 }
 
 void k_passworddialog_init_painter(const void* self, void* painter) {
@@ -2180,8 +2180,8 @@ void k_passworddialog_super_init_painter(const void* self, void* painter) {
     KPasswordDialog_SuperInitPainter((KPasswordDialog*)self, (QPainter*)painter);
 }
 
-void k_passworddialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KPasswordDialog_OnInitPainter((const KPasswordDialog*)self, (intptr_t)callback);
+void k_passworddialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KPasswordDialog_OnInitPainter((KPasswordDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_passworddialog_redirected(const void* self, void* offset) {
@@ -2192,8 +2192,8 @@ QPaintDevice* k_passworddialog_super_redirected(const void* self, void* offset) 
     return KPasswordDialog_SuperRedirected((KPasswordDialog*)self, (QPoint*)offset);
 }
 
-void k_passworddialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KPasswordDialog_OnRedirected((const KPasswordDialog*)self, (intptr_t)callback);
+void k_passworddialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KPasswordDialog_OnRedirected((KPasswordDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_passworddialog_shared_painter(const void* self) {
@@ -2204,8 +2204,8 @@ QPainter* k_passworddialog_super_shared_painter(const void* self) {
     return KPasswordDialog_SuperSharedPainter((KPasswordDialog*)self);
 }
 
-void k_passworddialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KPasswordDialog_OnSharedPainter((const KPasswordDialog*)self, (intptr_t)callback);
+void k_passworddialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KPasswordDialog_OnSharedPainter((KPasswordDialog*)self, (intptr_t)callback);
 }
 
 void k_passworddialog_input_method_event(void* self, void* param1) {
@@ -2228,8 +2228,8 @@ QVariant* k_passworddialog_super_input_method_query(const void* self, int32_t pa
     return KPasswordDialog_SuperInputMethodQuery((KPasswordDialog*)self, param1);
 }
 
-void k_passworddialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KPasswordDialog_OnInputMethodQuery((const KPasswordDialog*)self, (intptr_t)callback);
+void k_passworddialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KPasswordDialog_OnInputMethodQuery((KPasswordDialog*)self, (intptr_t)callback);
 }
 
 bool k_passworddialog_focus_next_prev_child(void* self, bool next) {

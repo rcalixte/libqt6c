@@ -267,8 +267,8 @@ const QMetaObject* q_maskgenerator_super_meta_object(const void* self) {
     return QMaskGenerator_SuperMetaObject((QMaskGenerator*)self);
 }
 
-void q_maskgenerator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    QMaskGenerator_OnMetaObject((const QMaskGenerator*)self, (intptr_t)callback);
+void q_maskgenerator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    QMaskGenerator_OnMetaObject((QMaskGenerator*)self, (intptr_t)callback);
 }
 
 void* q_maskgenerator_metacast(void* self, const char* param1) {

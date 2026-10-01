@@ -18,7 +18,7 @@ const QMetaObject* q_placesearchsuggestionreply_meta_object(const void* self) {
     return QPlaceSearchSuggestionReply_MetaObject((QPlaceSearchSuggestionReply*)self);
 }
 
-void q_placesearchsuggestionreply_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_placesearchsuggestionreply_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPlaceSearchSuggestionReply_OnMetaObject((QPlaceSearchSuggestionReply*)self, (intptr_t)callback);
 }
 
@@ -78,7 +78,7 @@ int32_t q_placesearchsuggestionreply_type(const void* self) {
     return QPlaceSearchSuggestionReply_Type((QPlaceSearchSuggestionReply*)self);
 }
 
-void q_placesearchsuggestionreply_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_placesearchsuggestionreply_on_type(void* self, int32_t (*callback)(const void*)) {
     QPlaceSearchSuggestionReply_OnType((QPlaceSearchSuggestionReply*)self, (intptr_t)callback);
 }
 

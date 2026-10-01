@@ -19,7 +19,7 @@ const QMetaObject* q_pdfpagenavigator_meta_object(const void* self) {
     return QPdfPageNavigator_MetaObject((QPdfPageNavigator*)self);
 }
 
-void q_pdfpagenavigator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pdfpagenavigator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPdfPageNavigator_OnMetaObject((QPdfPageNavigator*)self, (intptr_t)callback);
 }
 

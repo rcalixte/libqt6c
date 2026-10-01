@@ -32,7 +32,7 @@ const QMetaObject* q_areaseries_meta_object(const void* self) {
     return QAreaSeries_MetaObject((QAreaSeries*)self);
 }
 
-void q_areaseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_areaseries_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAreaSeries_OnMetaObject((QAreaSeries*)self, (intptr_t)callback);
 }
 
@@ -75,7 +75,7 @@ int32_t q_areaseries_type(const void* self) {
     return QAreaSeries_Type((QAreaSeries*)self);
 }
 
-void q_areaseries_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_areaseries_on_type(void* self, int32_t (*callback)(const void*)) {
     QAreaSeries_OnType((QAreaSeries*)self, (intptr_t)callback);
 }
 

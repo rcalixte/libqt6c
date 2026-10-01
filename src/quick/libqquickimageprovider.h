@@ -24,10 +24,10 @@ const QMetaObject* q_quicktexturefactory_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickTextureFactory*
+/// @param self QQuickTextureFactory*
 /// @param callback const QMetaObject* func(const QQuickTextureFactory* self)
 ///
-void q_quicktexturefactory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_quicktexturefactory_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -100,10 +100,10 @@ QSGTexture* q_quicktexturefactory_create_texture(const void* self, void* window)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickTextureFactory*
+/// @param self QQuickTextureFactory*
 /// @param callback QSGTexture* func(const QQuickTextureFactory* self, QQuickWindow* window)
 ///
-void q_quicktexturefactory_on_create_texture(const void* self, QSGTexture* (*callback)(const void*, void*));
+void q_quicktexturefactory_on_create_texture(void* self, QSGTexture* (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#textureSize)
 ///
@@ -117,12 +117,12 @@ QSize* q_quicktexturefactory_texture_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickTextureFactory*
+/// @param self QQuickTextureFactory*
 /// @param callback QSize* func(const QQuickTextureFactory* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quicktexturefactory_on_texture_size(const void* self, QSize* (*callback)(const void*));
+void q_quicktexturefactory_on_texture_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#textureByteCount)
 ///
@@ -136,10 +136,10 @@ int32_t q_quicktexturefactory_texture_byte_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickTextureFactory*
+/// @param self QQuickTextureFactory*
 /// @param callback int32_t func(const QQuickTextureFactory* self)
 ///
-void q_quicktexturefactory_on_texture_byte_count(const void* self, int32_t (*callback)(const void*));
+void q_quicktexturefactory_on_texture_byte_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#image)
 ///
@@ -151,12 +151,12 @@ QImage* q_quicktexturefactory_image(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickTextureFactory*
+/// @param self QQuickTextureFactory*
 /// @param callback QImage* func(const QQuickTextureFactory* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quicktexturefactory_on_image(const void* self, QImage* (*callback)(const void*));
+void q_quicktexturefactory_on_image(void* self, QImage* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#image)
 ///
@@ -897,10 +897,10 @@ QObject* q_quicktexturefactory_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickTextureFactory*
+/// @param self QQuickTextureFactory*
 /// @param callback QObject* func(QQuickTextureFactory* self)
 ///
-void q_quicktexturefactory_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_quicktexturefactory_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -928,10 +928,10 @@ int32_t q_quicktexturefactory_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickTextureFactory*
+/// @param self QQuickTextureFactory*
 /// @param callback int32_t func(QQuickTextureFactory* self)
 ///
-void q_quicktexturefactory_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_quicktexturefactory_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -961,10 +961,10 @@ int32_t q_quicktexturefactory_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickTextureFactory*
+/// @param self QQuickTextureFactory*
 /// @param callback int32_t func(QQuickTextureFactory* self, const char* signal)
 ///
-void q_quicktexturefactory_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_quicktexturefactory_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -994,10 +994,10 @@ bool q_quicktexturefactory_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickTextureFactory*
+/// @param self QQuickTextureFactory*
 /// @param callback bool func(QQuickTextureFactory* self, QMetaMethod* signal)
 ///
-void q_quicktexturefactory_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_quicktexturefactory_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1034,10 +1034,10 @@ const QMetaObject* q_quickimageresponse_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickImageResponse*
+/// @param self QQuickImageResponse*
 /// @param callback const QMetaObject* func(const QQuickImageResponse* self)
 ///
-void q_quickimageresponse_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_quickimageresponse_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1109,10 +1109,10 @@ QQuickTextureFactory* q_quickimageresponse_texture_factory(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickImageResponse*
+/// @param self QQuickImageResponse*
 /// @param callback QQuickTextureFactory* func(const QQuickImageResponse* self)
 ///
-void q_quickimageresponse_on_texture_factory(const void* self, QQuickTextureFactory* (*callback)(const void*));
+void q_quickimageresponse_on_texture_factory(void* self, QQuickTextureFactory* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageresponse.html#errorString)
 ///
@@ -1126,10 +1126,10 @@ const char* q_quickimageresponse_error_string(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickImageResponse*
+/// @param self QQuickImageResponse*
 /// @param callback const char* func(const QQuickImageResponse* self)
 ///
-void q_quickimageresponse_on_error_string(const void* self, const char* (*callback)(const void*));
+void q_quickimageresponse_on_error_string(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageresponse.html#errorString)
 ///
@@ -1900,10 +1900,10 @@ QObject* q_quickimageresponse_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickImageResponse*
+/// @param self QQuickImageResponse*
 /// @param callback QObject* func(QQuickImageResponse* self)
 ///
-void q_quickimageresponse_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_quickimageresponse_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1931,10 +1931,10 @@ int32_t q_quickimageresponse_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickImageResponse*
+/// @param self QQuickImageResponse*
 /// @param callback int32_t func(QQuickImageResponse* self)
 ///
-void q_quickimageresponse_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_quickimageresponse_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1964,10 +1964,10 @@ int32_t q_quickimageresponse_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickImageResponse*
+/// @param self QQuickImageResponse*
 /// @param callback int32_t func(QQuickImageResponse* self, const char* signal)
 ///
-void q_quickimageresponse_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_quickimageresponse_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1997,10 +1997,10 @@ bool q_quickimageresponse_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickImageResponse*
+/// @param self QQuickImageResponse*
 /// @param callback bool func(QQuickImageResponse* self, QMetaMethod* signal)
 ///
-void q_quickimageresponse_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_quickimageresponse_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2048,10 +2048,10 @@ const QMetaObject* q_quickimageprovider_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickImageProvider*
+/// @param self QQuickImageProvider*
 /// @param callback const QMetaObject* func(const QQuickImageProvider* self)
 ///
-void q_quickimageprovider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_quickimageprovider_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -2123,10 +2123,10 @@ int32_t q_quickimageprovider_image_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickImageProvider*
+/// @param self QQuickImageProvider*
 /// @param callback int32_t func(const QQuickImageProvider* self)
 ///
-void q_quickimageprovider_on_image_type(const void* self, int32_t (*callback)(const void*));
+void q_quickimageprovider_on_image_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#imageType)
 ///
@@ -2150,10 +2150,10 @@ int32_t q_quickimageprovider_flags(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickImageProvider*
+/// @param self QQuickImageProvider*
 /// @param callback int32_t func(const QQuickImageProvider* self)
 ///
-void q_quickimageprovider_on_flags(const void* self, int32_t (*callback)(const void*));
+void q_quickimageprovider_on_flags(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#flags)
 ///
@@ -2981,10 +2981,10 @@ QObject* q_quickimageprovider_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickImageProvider*
+/// @param self QQuickImageProvider*
 /// @param callback QObject* func(QQuickImageProvider* self)
 ///
-void q_quickimageprovider_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_quickimageprovider_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3012,10 +3012,10 @@ int32_t q_quickimageprovider_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickImageProvider*
+/// @param self QQuickImageProvider*
 /// @param callback int32_t func(QQuickImageProvider* self)
 ///
-void q_quickimageprovider_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_quickimageprovider_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3045,10 +3045,10 @@ int32_t q_quickimageprovider_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickImageProvider*
+/// @param self QQuickImageProvider*
 /// @param callback int32_t func(QQuickImageProvider* self, const char* signal)
 ///
-void q_quickimageprovider_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_quickimageprovider_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3078,10 +3078,10 @@ bool q_quickimageprovider_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickImageProvider*
+/// @param self QQuickImageProvider*
 /// @param callback bool func(QQuickImageProvider* self, QMetaMethod* signal)
 ///
-void q_quickimageprovider_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_quickimageprovider_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3633,10 +3633,10 @@ const QMetaObject* q_quickasyncimageprovider_super_meta_object(const void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickAsyncImageProvider*
+/// @param self QQuickAsyncImageProvider*
 /// @param callback const QMetaObject* func(QQuickAsyncImageProvider* self)
 ///
-void q_quickasyncimageprovider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_quickasyncimageprovider_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3738,10 +3738,10 @@ int32_t q_quickasyncimageprovider_super_image_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickAsyncImageProvider*
+/// @param self QQuickAsyncImageProvider*
 /// @param callback int32_t func(QQuickAsyncImageProvider* self)
 ///
-void q_quickasyncimageprovider_on_image_type(const void* self, int32_t (*callback)(const void*));
+void q_quickasyncimageprovider_on_image_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3773,10 +3773,10 @@ int32_t q_quickasyncimageprovider_super_flags(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickAsyncImageProvider*
+/// @param self QQuickAsyncImageProvider*
 /// @param callback int32_t func(QQuickAsyncImageProvider* self)
 ///
-void q_quickasyncimageprovider_on_flags(const void* self, int32_t (*callback)(const void*));
+void q_quickasyncimageprovider_on_flags(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QQuickImageProvider
 ///
@@ -4152,10 +4152,10 @@ QObject* q_quickasyncimageprovider_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickAsyncImageProvider*
+/// @param self QQuickAsyncImageProvider*
 /// @param callback QObject* func(QQuickAsyncImageProvider* self)
 ///
-void q_quickasyncimageprovider_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_quickasyncimageprovider_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4183,10 +4183,10 @@ int32_t q_quickasyncimageprovider_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickAsyncImageProvider*
+/// @param self QQuickAsyncImageProvider*
 /// @param callback int32_t func(QQuickAsyncImageProvider* self)
 ///
-void q_quickasyncimageprovider_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_quickasyncimageprovider_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4216,10 +4216,10 @@ int32_t q_quickasyncimageprovider_super_receivers(const void* self, const char* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickAsyncImageProvider*
+/// @param self QQuickAsyncImageProvider*
 /// @param callback int32_t func(QQuickAsyncImageProvider* self, const char* signal)
 ///
-void q_quickasyncimageprovider_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_quickasyncimageprovider_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4249,10 +4249,10 @@ bool q_quickasyncimageprovider_super_is_signal_connected(const void* self, const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickAsyncImageProvider*
+/// @param self QQuickAsyncImageProvider*
 /// @param callback bool func(QQuickAsyncImageProvider* self, QMetaMethod* signal)
 ///
-void q_quickasyncimageprovider_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_quickasyncimageprovider_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

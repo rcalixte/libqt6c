@@ -32,10 +32,10 @@ const QMetaObject* q_virtualkeyboardabstractinputmethod_meta_object(const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QVirtualKeyboardAbstractInputMethod*
+/// @param self QVirtualKeyboardAbstractInputMethod*
 /// @param callback const QMetaObject* func(const QVirtualKeyboardAbstractInputMethod* self)
 ///
-void q_virtualkeyboardabstractinputmethod_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_virtualkeyboardabstractinputmethod_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -333,10 +333,10 @@ libqt_list q_virtualkeyboardabstractinputmethod_pattern_recognition_modes(const 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QVirtualKeyboardAbstractInputMethod*
+/// @param self QVirtualKeyboardAbstractInputMethod*
 /// @param callback libqt_list of enum QVirtualKeyboardInputEngine__PatternRecognitionMode func(const QVirtualKeyboardAbstractInputMethod* self)
 ///
-void q_virtualkeyboardabstractinputmethod_on_pattern_recognition_modes(const void* self, libqt_list (*callback)(const void*));
+void q_virtualkeyboardabstractinputmethod_on_pattern_recognition_modes(void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboardabstractinputmethod.html#patternRecognitionModes)
 ///
@@ -1292,10 +1292,10 @@ QObject* q_virtualkeyboardabstractinputmethod_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVirtualKeyboardAbstractInputMethod*
+/// @param self QVirtualKeyboardAbstractInputMethod*
 /// @param callback QObject* func(QVirtualKeyboardAbstractInputMethod* self)
 ///
-void q_virtualkeyboardabstractinputmethod_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_virtualkeyboardabstractinputmethod_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1323,10 +1323,10 @@ int32_t q_virtualkeyboardabstractinputmethod_super_sender_signal_index(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVirtualKeyboardAbstractInputMethod*
+/// @param self QVirtualKeyboardAbstractInputMethod*
 /// @param callback int32_t func(QVirtualKeyboardAbstractInputMethod* self)
 ///
-void q_virtualkeyboardabstractinputmethod_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_virtualkeyboardabstractinputmethod_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1356,10 +1356,10 @@ int32_t q_virtualkeyboardabstractinputmethod_super_receivers(const void* self, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVirtualKeyboardAbstractInputMethod*
+/// @param self QVirtualKeyboardAbstractInputMethod*
 /// @param callback int32_t func(QVirtualKeyboardAbstractInputMethod* self, const char* signal)
 ///
-void q_virtualkeyboardabstractinputmethod_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_virtualkeyboardabstractinputmethod_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1389,10 +1389,10 @@ bool q_virtualkeyboardabstractinputmethod_super_is_signal_connected(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVirtualKeyboardAbstractInputMethod*
+/// @param self QVirtualKeyboardAbstractInputMethod*
 /// @param callback bool func(QVirtualKeyboardAbstractInputMethod* self, QMetaMethod* signal)
 ///
-void q_virtualkeyboardabstractinputmethod_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_virtualkeyboardabstractinputmethod_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

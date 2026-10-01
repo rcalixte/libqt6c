@@ -24,10 +24,10 @@ QAction* q_designertaskmenuextension_preferred_edit_action(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerTaskMenuExtension*
+/// @param self QDesignerTaskMenuExtension*
 /// @param callback QAction* func(const QDesignerTaskMenuExtension* self)
 ///
-void q_designertaskmenuextension_on_preferred_edit_action(const void* self, QAction* (*callback)(const void*));
+void q_designertaskmenuextension_on_preferred_edit_action(void* self, QAction* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#preferredEditAction)
 ///
@@ -51,10 +51,10 @@ libqt_list q_designertaskmenuextension_task_actions(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerTaskMenuExtension*
+/// @param self QDesignerTaskMenuExtension*
 /// @param callback libqt_list of QAction* func(const QDesignerTaskMenuExtension* self)
 ///
-void q_designertaskmenuextension_on_task_actions(const void* self, libqt_list (*callback)(const void*));
+void q_designertaskmenuextension_on_task_actions(void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#dtor.QDesignerTaskMenuExtension)
 ///

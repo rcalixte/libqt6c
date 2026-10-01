@@ -27,7 +27,7 @@ const QMetaObject* q_eventtransition_meta_object(const void* self) {
     return QEventTransition_MetaObject((QEventTransition*)self);
 }
 
-void q_eventtransition_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_eventtransition_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QEventTransition_OnMetaObject((QEventTransition*)self, (intptr_t)callback);
 }
 

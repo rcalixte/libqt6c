@@ -19,7 +19,7 @@ const QMetaObject* q_quicktexturefactory_meta_object(const void* self) {
     return QQuickTextureFactory_MetaObject((QQuickTextureFactory*)self);
 }
 
-void q_quicktexturefactory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quicktexturefactory_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickTextureFactory_OnMetaObject((QQuickTextureFactory*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ QSGTexture* q_quicktexturefactory_create_texture(const void* self, void* window)
     return QQuickTextureFactory_CreateTexture((QQuickTextureFactory*)self, (QQuickWindow*)window);
 }
 
-void q_quicktexturefactory_on_create_texture(const void* self, QSGTexture* (*callback)(const void*, void*)) {
+void q_quicktexturefactory_on_create_texture(void* self, QSGTexture* (*callback)(const void*, void*)) {
     QQuickTextureFactory_OnCreateTexture((QQuickTextureFactory*)self, (intptr_t)callback);
 }
 
@@ -70,7 +70,7 @@ QSize* q_quicktexturefactory_texture_size(const void* self) {
     return QQuickTextureFactory_TextureSize((QQuickTextureFactory*)self);
 }
 
-void q_quicktexturefactory_on_texture_size(const void* self, QSize* (*callback)(const void*)) {
+void q_quicktexturefactory_on_texture_size(void* self, QSize* (*callback)(const void*)) {
     QQuickTextureFactory_OnTextureSize((QQuickTextureFactory*)self, (intptr_t)callback);
 }
 
@@ -78,7 +78,7 @@ int32_t q_quicktexturefactory_texture_byte_count(const void* self) {
     return QQuickTextureFactory_TextureByteCount((QQuickTextureFactory*)self);
 }
 
-void q_quicktexturefactory_on_texture_byte_count(const void* self, int32_t (*callback)(const void*)) {
+void q_quicktexturefactory_on_texture_byte_count(void* self, int32_t (*callback)(const void*)) {
     QQuickTextureFactory_OnTextureByteCount((QQuickTextureFactory*)self, (intptr_t)callback);
 }
 
@@ -86,7 +86,7 @@ QImage* q_quicktexturefactory_image(const void* self) {
     return QQuickTextureFactory_Image((QQuickTextureFactory*)self);
 }
 
-void q_quicktexturefactory_on_image(const void* self, QImage* (*callback)(const void*)) {
+void q_quicktexturefactory_on_image(void* self, QImage* (*callback)(const void*)) {
     QQuickTextureFactory_OnImage((QQuickTextureFactory*)self, (intptr_t)callback);
 }
 
@@ -437,7 +437,7 @@ const QMetaObject* q_quickimageresponse_meta_object(const void* self) {
     return QQuickImageResponse_MetaObject((QQuickImageResponse*)self);
 }
 
-void q_quickimageresponse_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quickimageresponse_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickImageResponse_OnMetaObject((QQuickImageResponse*)self, (intptr_t)callback);
 }
 
@@ -480,7 +480,7 @@ QQuickTextureFactory* q_quickimageresponse_texture_factory(const void* self) {
     return QQuickImageResponse_TextureFactory((QQuickImageResponse*)self);
 }
 
-void q_quickimageresponse_on_texture_factory(const void* self, QQuickTextureFactory* (*callback)(const void*)) {
+void q_quickimageresponse_on_texture_factory(void* self, QQuickTextureFactory* (*callback)(const void*)) {
     QQuickImageResponse_OnTextureFactory((QQuickImageResponse*)self, (intptr_t)callback);
 }
 
@@ -491,7 +491,7 @@ const char* q_quickimageresponse_error_string(const void* self) {
     return _ret;
 }
 
-void q_quickimageresponse_on_error_string(const void* self, const char* (*callback)(const void*)) {
+void q_quickimageresponse_on_error_string(void* self, const char* (*callback)(const void*)) {
     QQuickImageResponse_OnErrorString((QQuickImageResponse*)self, (intptr_t)callback);
 }
 
@@ -865,7 +865,7 @@ const QMetaObject* q_quickimageprovider_meta_object(const void* self) {
     return QQuickImageProvider_MetaObject((QQuickImageProvider*)self);
 }
 
-void q_quickimageprovider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quickimageprovider_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickImageProvider_OnMetaObject((QQuickImageProvider*)self, (intptr_t)callback);
 }
 
@@ -908,7 +908,7 @@ int32_t q_quickimageprovider_image_type(const void* self) {
     return QQuickImageProvider_ImageType((QQuickImageProvider*)self);
 }
 
-void q_quickimageprovider_on_image_type(const void* self, int32_t (*callback)(const void*)) {
+void q_quickimageprovider_on_image_type(void* self, int32_t (*callback)(const void*)) {
     QQuickImageProvider_OnImageType((QQuickImageProvider*)self, (intptr_t)callback);
 }
 
@@ -920,7 +920,7 @@ int32_t q_quickimageprovider_flags(const void* self) {
     return QQuickImageProvider_Flags((QQuickImageProvider*)self);
 }
 
-void q_quickimageprovider_on_flags(const void* self, int32_t (*callback)(const void*)) {
+void q_quickimageprovider_on_flags(void* self, int32_t (*callback)(const void*)) {
     QQuickImageProvider_OnFlags((QQuickImageProvider*)self, (intptr_t)callback);
 }
 
@@ -1545,8 +1545,8 @@ const QMetaObject* q_quickasyncimageprovider_super_meta_object(const void* self)
     return QQuickAsyncImageProvider_SuperMetaObject((QQuickAsyncImageProvider*)self);
 }
 
-void q_quickasyncimageprovider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    QQuickAsyncImageProvider_OnMetaObject((const QQuickAsyncImageProvider*)self, (intptr_t)callback);
+void q_quickasyncimageprovider_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    QQuickAsyncImageProvider_OnMetaObject((QQuickAsyncImageProvider*)self, (intptr_t)callback);
 }
 
 void* q_quickasyncimageprovider_metacast(void* self, const char* param1) {
@@ -1581,8 +1581,8 @@ int32_t q_quickasyncimageprovider_super_image_type(const void* self) {
     return QQuickAsyncImageProvider_SuperImageType((QQuickAsyncImageProvider*)self);
 }
 
-void q_quickasyncimageprovider_on_image_type(const void* self, int32_t (*callback)(const void*)) {
-    QQuickAsyncImageProvider_OnImageType((const QQuickAsyncImageProvider*)self, (intptr_t)callback);
+void q_quickasyncimageprovider_on_image_type(void* self, int32_t (*callback)(const void*)) {
+    QQuickAsyncImageProvider_OnImageType((QQuickAsyncImageProvider*)self, (intptr_t)callback);
 }
 
 int32_t q_quickasyncimageprovider_flags(const void* self) {
@@ -1593,8 +1593,8 @@ int32_t q_quickasyncimageprovider_super_flags(const void* self) {
     return QQuickAsyncImageProvider_SuperFlags((QQuickAsyncImageProvider*)self);
 }
 
-void q_quickasyncimageprovider_on_flags(const void* self, int32_t (*callback)(const void*)) {
-    QQuickAsyncImageProvider_OnFlags((const QQuickAsyncImageProvider*)self, (intptr_t)callback);
+void q_quickasyncimageprovider_on_flags(void* self, int32_t (*callback)(const void*)) {
+    QQuickAsyncImageProvider_OnFlags((QQuickAsyncImageProvider*)self, (intptr_t)callback);
 }
 
 QImage* q_quickasyncimageprovider_request_image(void* self, const char* id, void* size, const void* requestedSize) {

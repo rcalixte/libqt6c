@@ -43,10 +43,10 @@ const QMetaObject* k_richtextwidget_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback const QMetaObject* func(const KRichTextWidget* self)
 ///
-void k_richtextwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_richtextwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1997,9 +1997,9 @@ void k_richtextwidget_set_frame_rect(void* self, const void* frameRect);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self KRichTextWidget*
+/// @param self const KRichTextWidget*
 ///
-QPaintDevice* k_richtextwidget_as_q_paint_device(void* self);
+QPaintDevice* k_richtextwidget_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2007,7 +2007,7 @@ QPaintDevice* k_richtextwidget_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-KRichTextWidget* k_richtextwidget_from_q_paint_device(void* _qpaintdevice);
+KRichTextWidget* k_richtextwidget_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -5074,10 +5074,10 @@ bool k_richtextwidget_super_check_spelling_enabled(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback bool func(KRichTextWidget* self)
 ///
-void k_richtextwidget_on_check_spelling_enabled(const void* self, bool (*callback)(const void*));
+void k_richtextwidget_on_check_spelling_enabled(void* self, bool (*callback)(const void*));
 
 /// Inherited from KTextEdit
 ///
@@ -5107,10 +5107,10 @@ bool k_richtextwidget_super_should_block_be_spell_checked(const void* self, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback bool func(KRichTextWidget* self, const char* block)
 ///
-void k_richtextwidget_on_should_block_be_spell_checked(const void* self, bool (*callback)(const void*, const char*));
+void k_richtextwidget_on_should_block_be_spell_checked(void* self, bool (*callback)(const void*, const char*));
 
 /// Inherited from KTextEdit
 ///
@@ -5400,12 +5400,12 @@ QVariant* k_richtextwidget_super_input_method_query(const void* self, int32_t pr
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback QVariant* func(KRichTextWidget* self, enum Qt__InputMethodQuery property)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_richtextwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_richtextwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QTextEdit
 ///
@@ -5961,10 +5961,10 @@ QMimeData* k_richtextwidget_super_create_mime_data_from_selection(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback QMimeData* func(KRichTextWidget* self)
 ///
-void k_richtextwidget_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*));
+void k_richtextwidget_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)(const void*));
 
 /// Inherited from QTextEdit
 ///
@@ -5994,10 +5994,10 @@ bool k_richtextwidget_super_can_insert_from_mime_data(const void* self, const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback bool func(KRichTextWidget* self, QMimeData* source)
 ///
-void k_richtextwidget_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*));
+void k_richtextwidget_on_can_insert_from_mime_data(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QTextEdit
 ///
@@ -6159,12 +6159,12 @@ QSize* k_richtextwidget_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback QSize* func(KRichTextWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_richtextwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_richtextwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6192,12 +6192,12 @@ QSize* k_richtextwidget_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback QSize* func(KRichTextWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_richtextwidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_richtextwidget_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6326,12 +6326,12 @@ QSize* k_richtextwidget_super_viewport_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback QSize* func(KRichTextWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_richtextwidget_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_richtextwidget_on_viewport_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -6361,10 +6361,10 @@ void k_richtextwidget_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback void func(KRichTextWidget* self, QStyleOptionFrame* option)
 ///
-void k_richtextwidget_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void k_richtextwidget_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6392,10 +6392,10 @@ int32_t k_richtextwidget_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback int32_t func(KRichTextWidget* self)
 ///
-void k_richtextwidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_richtextwidget_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6458,10 +6458,10 @@ int32_t k_richtextwidget_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback int32_t func(KRichTextWidget* self, int param1)
 ///
-void k_richtextwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_richtextwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -6489,10 +6489,10 @@ bool k_richtextwidget_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback bool func(KRichTextWidget* self)
 ///
-void k_richtextwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_richtextwidget_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6520,10 +6520,10 @@ QPaintEngine* k_richtextwidget_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback QPaintEngine* func(KRichTextWidget* self)
 ///
-void k_richtextwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_richtextwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6821,10 +6821,10 @@ int32_t k_richtextwidget_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback int32_t func(KRichTextWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_richtextwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_richtextwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6854,10 +6854,10 @@ void k_richtextwidget_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback void func(KRichTextWidget* self, QPainter* painter)
 ///
-void k_richtextwidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_richtextwidget_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6887,10 +6887,10 @@ QPaintDevice* k_richtextwidget_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback QPaintDevice* func(KRichTextWidget* self, QPoint* offset)
 ///
-void k_richtextwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_richtextwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6918,10 +6918,10 @@ QPainter* k_richtextwidget_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback QPainter* func(KRichTextWidget* self)
 ///
-void k_richtextwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_richtextwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7401,12 +7401,12 @@ QMargins* k_richtextwidget_super_viewport_margins(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback QMargins* func(KRichTextWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_richtextwidget_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
+void k_richtextwidget_on_viewport_margins(void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -7622,10 +7622,10 @@ QObject* k_richtextwidget_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback QObject* func(KRichTextWidget* self)
 ///
-void k_richtextwidget_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_richtextwidget_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7653,10 +7653,10 @@ int32_t k_richtextwidget_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback int32_t func(KRichTextWidget* self)
 ///
-void k_richtextwidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_richtextwidget_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7686,10 +7686,10 @@ int32_t k_richtextwidget_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback int32_t func(KRichTextWidget* self, const char* signal)
 ///
-void k_richtextwidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_richtextwidget_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -7719,10 +7719,10 @@ bool k_richtextwidget_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback bool func(KRichTextWidget* self, QMetaMethod* signal)
 ///
-void k_richtextwidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_richtextwidget_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -7754,10 +7754,10 @@ double k_richtextwidget_super_get_decoded_metric_f(const void* self, int32_t met
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KRichTextWidget*
+/// @param self KRichTextWidget*
 /// @param callback double func(KRichTextWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_richtextwidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_richtextwidget_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

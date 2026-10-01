@@ -32,10 +32,10 @@ const QMetaObject* k_filefiltercombo_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback const QMetaObject* func(const KFileFilterCombo* self)
 ///
-void k_filefiltercombo_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_filefiltercombo_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -213,9 +213,9 @@ void k_filefiltercombo_set_filters2(void* self, libqt_list filters, const void* 
 ///
 /// Upcasts to a KCompletionBase object
 ///
-/// @param self KFileFilterCombo*
+/// @param self const KFileFilterCombo*
 ///
-KCompletionBase* k_filefiltercombo_as_k_completion_base(void* self);
+KCompletionBase* k_filefiltercombo_as_k_completion_base(const void* self);
 
 /// Inherited from KComboBox
 ///
@@ -223,7 +223,7 @@ KCompletionBase* k_filefiltercombo_as_k_completion_base(void* self);
 ///
 /// @param _kcompletionbase KCompletionBase*
 ///
-KFileFilterCombo* k_filefiltercombo_from_k_completion_base(void* _kcompletionbase);
+KFileFilterCombo* k_filefiltercombo_from_k_completion_base(const void* _kcompletionbase);
 
 /// Inherited from KComboBox
 ///
@@ -1287,9 +1287,9 @@ void k_filefiltercombo_set_item_data3(void* self, int index, const void* value, 
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self KFileFilterCombo*
+/// @param self const KFileFilterCombo*
 ///
-QPaintDevice* k_filefiltercombo_as_q_paint_device(void* self);
+QPaintDevice* k_filefiltercombo_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1297,7 +1297,7 @@ QPaintDevice* k_filefiltercombo_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-KFileFilterCombo* k_filefiltercombo_from_q_paint_device(void* _qpaintdevice);
+KFileFilterCombo* k_filefiltercombo_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -4463,12 +4463,12 @@ QSize* k_filefiltercombo_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback QSize* func(KFileFilterCombo* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_filefiltercombo_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_filefiltercombo_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from KComboBox
 ///
@@ -4630,12 +4630,12 @@ QSize* k_filefiltercombo_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback QSize* func(KFileFilterCombo* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_filefiltercombo_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_filefiltercombo_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QComboBox
 ///
@@ -4760,12 +4760,12 @@ QVariant* k_filefiltercombo_super_input_method_query(const void* self, int32_t p
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback QVariant* func(KFileFilterCombo* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_filefiltercombo_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_filefiltercombo_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QComboBox
 ///
@@ -5257,10 +5257,10 @@ void k_filefiltercombo_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback void func(KFileFilterCombo* self, QStyleOptionComboBox* option)
 ///
-void k_filefiltercombo_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void k_filefiltercombo_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5288,10 +5288,10 @@ int32_t k_filefiltercombo_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback int32_t func(KFileFilterCombo* self)
 ///
-void k_filefiltercombo_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_filefiltercombo_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5354,10 +5354,10 @@ int32_t k_filefiltercombo_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback int32_t func(KFileFilterCombo* self, int param1)
 ///
-void k_filefiltercombo_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_filefiltercombo_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5385,10 +5385,10 @@ bool k_filefiltercombo_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback bool func(KFileFilterCombo* self)
 ///
-void k_filefiltercombo_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_filefiltercombo_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5416,10 +5416,10 @@ QPaintEngine* k_filefiltercombo_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback QPaintEngine* func(KFileFilterCombo* self)
 ///
-void k_filefiltercombo_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_filefiltercombo_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5882,10 +5882,10 @@ int32_t k_filefiltercombo_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback int32_t func(KFileFilterCombo* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_filefiltercombo_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_filefiltercombo_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5915,10 +5915,10 @@ void k_filefiltercombo_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback void func(KFileFilterCombo* self, QPainter* painter)
 ///
-void k_filefiltercombo_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_filefiltercombo_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5948,10 +5948,10 @@ QPaintDevice* k_filefiltercombo_super_redirected(const void* self, void* offset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback QPaintDevice* func(KFileFilterCombo* self, QPoint* offset)
 ///
-void k_filefiltercombo_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_filefiltercombo_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5979,10 +5979,10 @@ QPainter* k_filefiltercombo_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback QPainter* func(KFileFilterCombo* self)
 ///
-void k_filefiltercombo_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_filefiltercombo_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6499,10 +6499,10 @@ QObject* k_filefiltercombo_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback QObject* func(KFileFilterCombo* self)
 ///
-void k_filefiltercombo_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_filefiltercombo_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6530,10 +6530,10 @@ int32_t k_filefiltercombo_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback int32_t func(KFileFilterCombo* self)
 ///
-void k_filefiltercombo_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_filefiltercombo_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6563,10 +6563,10 @@ int32_t k_filefiltercombo_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback int32_t func(KFileFilterCombo* self, const char* signal)
 ///
-void k_filefiltercombo_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_filefiltercombo_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6596,10 +6596,10 @@ bool k_filefiltercombo_super_is_signal_connected(const void* self, const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback bool func(KFileFilterCombo* self, QMetaMethod* signal)
 ///
-void k_filefiltercombo_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_filefiltercombo_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -6631,10 +6631,10 @@ double k_filefiltercombo_super_get_decoded_metric_f(const void* self, int32_t me
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback double func(KFileFilterCombo* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_filefiltercombo_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_filefiltercombo_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from KCompletionBase
 ///
@@ -6692,10 +6692,10 @@ libqt_map k_filefiltercombo_super_key_binding_map(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* func(KFileFilterCombo* self)
 ///
-void k_filefiltercombo_on_key_binding_map(const void* self, libqt_map (*callback)(const void*));
+void k_filefiltercombo_on_key_binding_map(void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from KCompletionBase
 ///
@@ -6789,10 +6789,10 @@ KCompletionBase* k_filefiltercombo_super_delegate(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileFilterCombo*
+/// @param self KFileFilterCombo*
 /// @param callback KCompletionBase* func(KFileFilterCombo* self)
 ///
-void k_filefiltercombo_on_delegate(const void* self, KCompletionBase* (*callback)(const void*));
+void k_filefiltercombo_on_delegate(void* self, KCompletionBase* (*callback)(const void*));
 
 /// Inherited from QObject
 ///

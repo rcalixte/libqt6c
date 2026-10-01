@@ -1443,10 +1443,10 @@ const QMetaObject* k_configloader_super_meta_object(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigLoader*
+/// @param self KConfigLoader*
 /// @param callback const QMetaObject* func(KConfigLoader* self)
 ///
-void k_configloader_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_configloader_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// Inherited from KConfigSkeleton
 ///
@@ -1936,10 +1936,10 @@ QObject* k_configloader_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigLoader*
+/// @param self KConfigLoader*
 /// @param callback QObject* func(KConfigLoader* self)
 ///
-void k_configloader_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_configloader_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1967,10 +1967,10 @@ int32_t k_configloader_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigLoader*
+/// @param self KConfigLoader*
 /// @param callback int32_t func(KConfigLoader* self)
 ///
-void k_configloader_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_configloader_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2000,10 +2000,10 @@ int32_t k_configloader_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigLoader*
+/// @param self KConfigLoader*
 /// @param callback int32_t func(KConfigLoader* self, const char* signal)
 ///
-void k_configloader_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_configloader_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2033,10 +2033,10 @@ bool k_configloader_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigLoader*
+/// @param self KConfigLoader*
 /// @param callback bool func(KConfigLoader* self, QMetaMethod* signal)
 ///
-void k_configloader_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_configloader_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

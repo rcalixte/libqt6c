@@ -29,7 +29,7 @@ const QMetaObject* q_mouseeventtransition_meta_object(const void* self) {
     return QMouseEventTransition_MetaObject((QMouseEventTransition*)self);
 }
 
-void q_mouseeventtransition_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_mouseeventtransition_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QMouseEventTransition_OnMetaObject((QMouseEventTransition*)self, (intptr_t)callback);
 }
 

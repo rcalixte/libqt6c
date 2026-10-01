@@ -85,7 +85,7 @@ bool q_sgnode_is_subtree_blocked(const void* self) {
     return QSGNode_IsSubtreeBlocked((QSGNode*)self);
 }
 
-void q_sgnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
+void q_sgnode_on_is_subtree_blocked(void* self, bool (*callback)(const void*)) {
     QSGNode_OnIsSubtreeBlocked((QSGNode*)self, (intptr_t)callback);
 }
 
@@ -433,8 +433,8 @@ bool q_sggeometrynode_super_is_subtree_blocked(const void* self) {
     return QSGGeometryNode_SuperIsSubtreeBlocked((QSGGeometryNode*)self);
 }
 
-void q_sggeometrynode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
-    QSGGeometryNode_OnIsSubtreeBlocked((const QSGGeometryNode*)self, (intptr_t)callback);
+void q_sggeometrynode_on_is_subtree_blocked(void* self, bool (*callback)(const void*)) {
+    QSGGeometryNode_OnIsSubtreeBlocked((QSGGeometryNode*)self, (intptr_t)callback);
 }
 
 void q_sggeometrynode_preprocess(void* self) {
@@ -601,8 +601,8 @@ bool q_sgclipnode_super_is_subtree_blocked(const void* self) {
     return QSGClipNode_SuperIsSubtreeBlocked((QSGClipNode*)self);
 }
 
-void q_sgclipnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
-    QSGClipNode_OnIsSubtreeBlocked((const QSGClipNode*)self, (intptr_t)callback);
+void q_sgclipnode_on_is_subtree_blocked(void* self, bool (*callback)(const void*)) {
+    QSGClipNode_OnIsSubtreeBlocked((QSGClipNode*)self, (intptr_t)callback);
 }
 
 void q_sgclipnode_preprocess(void* self) {
@@ -741,8 +741,8 @@ bool q_sgtransformnode_super_is_subtree_blocked(const void* self) {
     return QSGTransformNode_SuperIsSubtreeBlocked((QSGTransformNode*)self);
 }
 
-void q_sgtransformnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
-    QSGTransformNode_OnIsSubtreeBlocked((const QSGTransformNode*)self, (intptr_t)callback);
+void q_sgtransformnode_on_is_subtree_blocked(void* self, bool (*callback)(const void*)) {
+    QSGTransformNode_OnIsSubtreeBlocked((QSGTransformNode*)self, (intptr_t)callback);
 }
 
 void q_sgtransformnode_preprocess(void* self) {
@@ -865,8 +865,8 @@ bool q_sgrootnode_super_is_subtree_blocked(const void* self) {
     return QSGRootNode_SuperIsSubtreeBlocked((QSGRootNode*)self);
 }
 
-void q_sgrootnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
-    QSGRootNode_OnIsSubtreeBlocked((const QSGRootNode*)self, (intptr_t)callback);
+void q_sgrootnode_on_is_subtree_blocked(void* self, bool (*callback)(const void*)) {
+    QSGRootNode_OnIsSubtreeBlocked((QSGRootNode*)self, (intptr_t)callback);
 }
 
 void q_sgrootnode_preprocess(void* self) {
@@ -909,7 +909,7 @@ bool q_sgopacitynode_is_subtree_blocked(const void* self) {
     return QSGOpacityNode_IsSubtreeBlocked((QSGOpacityNode*)self);
 }
 
-void q_sgopacitynode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
+void q_sgopacitynode_on_is_subtree_blocked(void* self, bool (*callback)(const void*)) {
     QSGOpacityNode_OnIsSubtreeBlocked((QSGOpacityNode*)self, (intptr_t)callback);
 }
 

@@ -23,7 +23,7 @@ QAction* k_xmlguiclient_action2(const void* self, const void* element) {
     return KXMLGUIClient_Action2((KXMLGUIClient*)self, (QDomElement*)element);
 }
 
-void k_xmlguiclient_on_action2(const void* self, QAction* (*callback)(const void*, const void*)) {
+void k_xmlguiclient_on_action2(void* self, QAction* (*callback)(const void*, const void*)) {
     KXMLGUIClient_OnAction2((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
@@ -35,7 +35,7 @@ KActionCollection* k_xmlguiclient_action_collection(const void* self) {
     return KXMLGUIClient_ActionCollection((KXMLGUIClient*)self);
 }
 
-void k_xmlguiclient_on_action_collection(const void* self, KActionCollection* (*callback)(const void*)) {
+void k_xmlguiclient_on_action_collection(void* self, KActionCollection* (*callback)(const void*)) {
     KXMLGUIClient_OnActionCollection((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
@@ -50,7 +50,7 @@ const char* k_xmlguiclient_component_name(const void* self) {
     return _ret;
 }
 
-void k_xmlguiclient_on_component_name(const void* self, const char* (*callback)(const void*)) {
+void k_xmlguiclient_on_component_name(void* self, const char* (*callback)(const void*)) {
     KXMLGUIClient_OnComponentName((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
@@ -65,7 +65,7 @@ QDomDocument* k_xmlguiclient_dom_document(const void* self) {
     return KXMLGUIClient_DomDocument((KXMLGUIClient*)self);
 }
 
-void k_xmlguiclient_on_dom_document(const void* self, QDomDocument* (*callback)(const void*)) {
+void k_xmlguiclient_on_dom_document(void* self, QDomDocument* (*callback)(const void*)) {
     KXMLGUIClient_OnDomDocument((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
@@ -80,7 +80,7 @@ const char* k_xmlguiclient_xml_file(const void* self) {
     return _ret;
 }
 
-void k_xmlguiclient_on_xml_file(const void* self, const char* (*callback)(const void*)) {
+void k_xmlguiclient_on_xml_file(void* self, const char* (*callback)(const void*)) {
     KXMLGUIClient_OnXmlFile((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
@@ -98,7 +98,7 @@ const char* k_xmlguiclient_local_x_m_l_file(const void* self) {
     return _ret;
 }
 
-void k_xmlguiclient_on_local_x_m_l_file(const void* self, const char* (*callback)(const void*)) {
+void k_xmlguiclient_on_local_x_m_l_file(void* self, const char* (*callback)(const void*)) {
     KXMLGUIClient_OnLocalXMLFile((KXMLGUIClient*)self, (intptr_t)callback);
 }
 

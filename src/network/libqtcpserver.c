@@ -20,7 +20,7 @@ const QMetaObject* q_tcpserver_meta_object(const void* self) {
     return QTcpServer_MetaObject((QTcpServer*)self);
 }
 
-void q_tcpserver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_tcpserver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTcpServer_OnMetaObject((QTcpServer*)self, (intptr_t)callback);
 }
 
@@ -111,7 +111,7 @@ bool q_tcpserver_has_pending_connections(const void* self) {
     return QTcpServer_HasPendingConnections((QTcpServer*)self);
 }
 
-void q_tcpserver_on_has_pending_connections(const void* self, bool (*callback)(const void*)) {
+void q_tcpserver_on_has_pending_connections(void* self, bool (*callback)(const void*)) {
     QTcpServer_OnHasPendingConnections((QTcpServer*)self, (intptr_t)callback);
 }
 

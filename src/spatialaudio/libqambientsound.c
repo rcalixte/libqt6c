@@ -15,7 +15,7 @@ const QMetaObject* q_ambientsound_meta_object(const void* self) {
     return QAmbientSound_MetaObject((QAmbientSound*)self);
 }
 
-void q_ambientsound_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_ambientsound_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAmbientSound_OnMetaObject((QAmbientSound*)self, (intptr_t)callback);
 }
 

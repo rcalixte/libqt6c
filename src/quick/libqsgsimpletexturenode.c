@@ -228,8 +228,8 @@ bool q_sgsimpletexturenode_super_is_subtree_blocked(const void* self) {
     return QSGSimpleTextureNode_SuperIsSubtreeBlocked((QSGSimpleTextureNode*)self);
 }
 
-void q_sgsimpletexturenode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
-    QSGSimpleTextureNode_OnIsSubtreeBlocked((const QSGSimpleTextureNode*)self, (intptr_t)callback);
+void q_sgsimpletexturenode_on_is_subtree_blocked(void* self, bool (*callback)(const void*)) {
+    QSGSimpleTextureNode_OnIsSubtreeBlocked((QSGSimpleTextureNode*)self, (intptr_t)callback);
 }
 
 void q_sgsimpletexturenode_preprocess(void* self) {

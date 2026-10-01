@@ -37,7 +37,7 @@ const QMetaObject* k_treewidgetsearchline_meta_object(const void* self) {
     return KTreeWidgetSearchLine_MetaObject((KTreeWidgetSearchLine*)self);
 }
 
-void k_treewidgetsearchline_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_treewidgetsearchline_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KTreeWidgetSearchLine_OnMetaObject((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
@@ -174,7 +174,7 @@ bool k_treewidgetsearchline_item_matches(const void* self, const void* item, con
     return KTreeWidgetSearchLine_ItemMatches((KTreeWidgetSearchLine*)self, (QTreeWidgetItem*)item, qstring(pattern));
 }
 
-void k_treewidgetsearchline_on_item_matches(const void* self, bool (*callback)(const void*, const void*, const char*)) {
+void k_treewidgetsearchline_on_item_matches(void* self, bool (*callback)(const void*, const void*, const char*)) {
     KTreeWidgetSearchLine_OnItemMatches((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
@@ -607,11 +607,11 @@ void k_treewidgetsearchline_cursor_backward2(void* self, bool mark, int steps) {
     QLineEdit_CursorBackward2((QLineEdit*)self, mark, steps);
 }
 
-QPaintDevice* k_treewidgetsearchline_as_q_paint_device(void* self) {
+QPaintDevice* k_treewidgetsearchline_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KTreeWidgetSearchLine* k_treewidgetsearchline_from_q_paint_device(void* _qpaintdevice) {
+KTreeWidgetSearchLine* k_treewidgetsearchline_from_q_paint_device(const void* _qpaintdevice) {
     return (KTreeWidgetSearchLine*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1994,8 +1994,8 @@ QSize* k_treewidgetsearchline_super_size_hint(const void* self) {
     return KTreeWidgetSearchLine_SuperSizeHint((KTreeWidgetSearchLine*)self);
 }
 
-void k_treewidgetsearchline_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KTreeWidgetSearchLine_OnSizeHint((const KTreeWidgetSearchLine*)self, (intptr_t)callback);
+void k_treewidgetsearchline_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KTreeWidgetSearchLine_OnSizeHint((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 QSize* k_treewidgetsearchline_minimum_size_hint(const void* self) {
@@ -2006,8 +2006,8 @@ QSize* k_treewidgetsearchline_super_minimum_size_hint(const void* self) {
     return KTreeWidgetSearchLine_SuperMinimumSizeHint((KTreeWidgetSearchLine*)self);
 }
 
-void k_treewidgetsearchline_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KTreeWidgetSearchLine_OnMinimumSizeHint((const KTreeWidgetSearchLine*)self, (intptr_t)callback);
+void k_treewidgetsearchline_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KTreeWidgetSearchLine_OnMinimumSizeHint((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 void k_treewidgetsearchline_mouse_press_event(void* self, void* param1) {
@@ -2198,8 +2198,8 @@ void k_treewidgetsearchline_super_init_style_option(const void* self, void* opti
     KTreeWidgetSearchLine_SuperInitStyleOption((KTreeWidgetSearchLine*)self, (QStyleOptionFrame*)option);
 }
 
-void k_treewidgetsearchline_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KTreeWidgetSearchLine_OnInitStyleOption((const KTreeWidgetSearchLine*)self, (intptr_t)callback);
+void k_treewidgetsearchline_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KTreeWidgetSearchLine_OnInitStyleOption((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 QVariant* k_treewidgetsearchline_input_method_query(const void* self, int32_t param1) {
@@ -2210,8 +2210,8 @@ QVariant* k_treewidgetsearchline_super_input_method_query(const void* self, int3
     return KTreeWidgetSearchLine_SuperInputMethodQuery((KTreeWidgetSearchLine*)self, param1);
 }
 
-void k_treewidgetsearchline_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KTreeWidgetSearchLine_OnInputMethodQuery((const KTreeWidgetSearchLine*)self, (intptr_t)callback);
+void k_treewidgetsearchline_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KTreeWidgetSearchLine_OnInputMethodQuery((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 void k_treewidgetsearchline_timer_event(void* self, void* param1) {
@@ -2234,8 +2234,8 @@ int32_t k_treewidgetsearchline_super_dev_type(const void* self) {
     return KTreeWidgetSearchLine_SuperDevType((KTreeWidgetSearchLine*)self);
 }
 
-void k_treewidgetsearchline_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KTreeWidgetSearchLine_OnDevType((const KTreeWidgetSearchLine*)self, (intptr_t)callback);
+void k_treewidgetsearchline_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KTreeWidgetSearchLine_OnDevType((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 void k_treewidgetsearchline_set_visible(void* self, bool visible) {
@@ -2258,8 +2258,8 @@ int32_t k_treewidgetsearchline_super_height_for_width(const void* self, int para
     return KTreeWidgetSearchLine_SuperHeightForWidth((KTreeWidgetSearchLine*)self, param1);
 }
 
-void k_treewidgetsearchline_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KTreeWidgetSearchLine_OnHeightForWidth((const KTreeWidgetSearchLine*)self, (intptr_t)callback);
+void k_treewidgetsearchline_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KTreeWidgetSearchLine_OnHeightForWidth((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 bool k_treewidgetsearchline_has_height_for_width(const void* self) {
@@ -2270,8 +2270,8 @@ bool k_treewidgetsearchline_super_has_height_for_width(const void* self) {
     return KTreeWidgetSearchLine_SuperHasHeightForWidth((KTreeWidgetSearchLine*)self);
 }
 
-void k_treewidgetsearchline_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KTreeWidgetSearchLine_OnHasHeightForWidth((const KTreeWidgetSearchLine*)self, (intptr_t)callback);
+void k_treewidgetsearchline_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KTreeWidgetSearchLine_OnHasHeightForWidth((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_treewidgetsearchline_paint_engine(const void* self) {
@@ -2282,8 +2282,8 @@ QPaintEngine* k_treewidgetsearchline_super_paint_engine(const void* self) {
     return KTreeWidgetSearchLine_SuperPaintEngine((KTreeWidgetSearchLine*)self);
 }
 
-void k_treewidgetsearchline_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KTreeWidgetSearchLine_OnPaintEngine((const KTreeWidgetSearchLine*)self, (intptr_t)callback);
+void k_treewidgetsearchline_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KTreeWidgetSearchLine_OnPaintEngine((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 void k_treewidgetsearchline_wheel_event(void* self, void* event) {
@@ -2426,8 +2426,8 @@ int32_t k_treewidgetsearchline_super_metric(const void* self, int32_t param1) {
     return KTreeWidgetSearchLine_SuperMetric((KTreeWidgetSearchLine*)self, param1);
 }
 
-void k_treewidgetsearchline_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KTreeWidgetSearchLine_OnMetric((const KTreeWidgetSearchLine*)self, (intptr_t)callback);
+void k_treewidgetsearchline_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KTreeWidgetSearchLine_OnMetric((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 void k_treewidgetsearchline_init_painter(const void* self, void* painter) {
@@ -2438,8 +2438,8 @@ void k_treewidgetsearchline_super_init_painter(const void* self, void* painter) 
     KTreeWidgetSearchLine_SuperInitPainter((KTreeWidgetSearchLine*)self, (QPainter*)painter);
 }
 
-void k_treewidgetsearchline_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KTreeWidgetSearchLine_OnInitPainter((const KTreeWidgetSearchLine*)self, (intptr_t)callback);
+void k_treewidgetsearchline_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KTreeWidgetSearchLine_OnInitPainter((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_treewidgetsearchline_redirected(const void* self, void* offset) {
@@ -2450,8 +2450,8 @@ QPaintDevice* k_treewidgetsearchline_super_redirected(const void* self, void* of
     return KTreeWidgetSearchLine_SuperRedirected((KTreeWidgetSearchLine*)self, (QPoint*)offset);
 }
 
-void k_treewidgetsearchline_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KTreeWidgetSearchLine_OnRedirected((const KTreeWidgetSearchLine*)self, (intptr_t)callback);
+void k_treewidgetsearchline_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KTreeWidgetSearchLine_OnRedirected((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 QPainter* k_treewidgetsearchline_shared_painter(const void* self) {
@@ -2462,8 +2462,8 @@ QPainter* k_treewidgetsearchline_super_shared_painter(const void* self) {
     return KTreeWidgetSearchLine_SuperSharedPainter((KTreeWidgetSearchLine*)self);
 }
 
-void k_treewidgetsearchline_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KTreeWidgetSearchLine_OnSharedPainter((const KTreeWidgetSearchLine*)self, (intptr_t)callback);
+void k_treewidgetsearchline_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KTreeWidgetSearchLine_OnSharedPainter((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 bool k_treewidgetsearchline_focus_next_prev_child(void* self, bool next) {

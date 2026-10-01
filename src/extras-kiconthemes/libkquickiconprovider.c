@@ -264,8 +264,8 @@ const QMetaObject* k_quickiconprovider_super_meta_object(const void* self) {
     return KQuickIconProvider_SuperMetaObject((KQuickIconProvider*)self);
 }
 
-void k_quickiconprovider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    KQuickIconProvider_OnMetaObject((const KQuickIconProvider*)self, (intptr_t)callback);
+void k_quickiconprovider_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    KQuickIconProvider_OnMetaObject((KQuickIconProvider*)self, (intptr_t)callback);
 }
 
 void* k_quickiconprovider_metacast(void* self, const char* param1) {
@@ -300,8 +300,8 @@ int32_t k_quickiconprovider_super_image_type(const void* self) {
     return KQuickIconProvider_SuperImageType((KQuickIconProvider*)self);
 }
 
-void k_quickiconprovider_on_image_type(const void* self, int32_t (*callback)(const void*)) {
-    KQuickIconProvider_OnImageType((const KQuickIconProvider*)self, (intptr_t)callback);
+void k_quickiconprovider_on_image_type(void* self, int32_t (*callback)(const void*)) {
+    KQuickIconProvider_OnImageType((KQuickIconProvider*)self, (intptr_t)callback);
 }
 
 int32_t k_quickiconprovider_flags(const void* self) {
@@ -312,8 +312,8 @@ int32_t k_quickiconprovider_super_flags(const void* self) {
     return KQuickIconProvider_SuperFlags((KQuickIconProvider*)self);
 }
 
-void k_quickiconprovider_on_flags(const void* self, int32_t (*callback)(const void*)) {
-    KQuickIconProvider_OnFlags((const KQuickIconProvider*)self, (intptr_t)callback);
+void k_quickiconprovider_on_flags(void* self, int32_t (*callback)(const void*)) {
+    KQuickIconProvider_OnFlags((KQuickIconProvider*)self, (intptr_t)callback);
 }
 
 QImage* k_quickiconprovider_request_image(void* self, const char* id, void* size, const void* requestedSize) {

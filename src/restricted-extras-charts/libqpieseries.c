@@ -19,7 +19,7 @@ const QMetaObject* q_pieseries_meta_object(const void* self) {
     return QPieSeries_MetaObject((QPieSeries*)self);
 }
 
-void q_pieseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pieseries_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPieSeries_OnMetaObject((QPieSeries*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ int32_t q_pieseries_type(const void* self) {
     return QPieSeries_Type((QPieSeries*)self);
 }
 
-void q_pieseries_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_pieseries_on_type(void* self, int32_t (*callback)(const void*)) {
     QPieSeries_OnType((QPieSeries*)self, (intptr_t)callback);
 }
 

@@ -116,7 +116,7 @@ bool k_texteditor__codecompletionmodelcontrollerinterface_should_hide_items_with
     return KTextEditor__CodeCompletionModelControllerInterface_ShouldHideItemsWithEqualNames((KTextEditor__CodeCompletionModelControllerInterface*)self);
 }
 
-void k_texteditor__codecompletionmodelcontrollerinterface_on_should_hide_items_with_equal_names(const void* self, bool (*callback)(const void*)) {
+void k_texteditor__codecompletionmodelcontrollerinterface_on_should_hide_items_with_equal_names(void* self, bool (*callback)(const void*)) {
     KTextEditor__CodeCompletionModelControllerInterface_OnShouldHideItemsWithEqualNames((KTextEditor__CodeCompletionModelControllerInterface*)self, (intptr_t)callback);
 }
 

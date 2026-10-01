@@ -18,7 +18,7 @@ const QMetaObject* q_vcandlestickmodelmapper_meta_object(const void* self) {
     return QVCandlestickModelMapper_MetaObject((QVCandlestickModelMapper*)self);
 }
 
-void q_vcandlestickmodelmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_vcandlestickmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVCandlestickModelMapper_OnMetaObject((QVCandlestickModelMapper*)self, (intptr_t)callback);
 }
 
@@ -61,7 +61,7 @@ int32_t q_vcandlestickmodelmapper_orientation(const void* self) {
     return QVCandlestickModelMapper_Orientation((QVCandlestickModelMapper*)self);
 }
 
-void q_vcandlestickmodelmapper_on_orientation(const void* self, int32_t (*callback)(const void*)) {
+void q_vcandlestickmodelmapper_on_orientation(void* self, int32_t (*callback)(const void*)) {
     QVCandlestickModelMapper_OnOrientation((QVCandlestickModelMapper*)self, (intptr_t)callback);
 }
 

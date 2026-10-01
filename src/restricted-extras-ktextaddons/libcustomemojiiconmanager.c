@@ -282,8 +282,8 @@ const QMetaObject* k_textemoticonscore__customemojiiconmanager_super_meta_object
     return TextEmoticonsCore__CustomEmojiIconManager_SuperMetaObject((TextEmoticonsCore__CustomEmojiIconManager*)self);
 }
 
-void k_textemoticonscore__customemojiiconmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    TextEmoticonsCore__CustomEmojiIconManager_OnMetaObject((const TextEmoticonsCore__CustomEmojiIconManager*)self, (intptr_t)callback);
+void k_textemoticonscore__customemojiiconmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    TextEmoticonsCore__CustomEmojiIconManager_OnMetaObject((TextEmoticonsCore__CustomEmojiIconManager*)self, (intptr_t)callback);
 }
 
 void* k_textemoticonscore__customemojiiconmanager_metacast(void* self, const char* param1) {

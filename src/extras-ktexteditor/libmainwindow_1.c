@@ -21,7 +21,7 @@ const QMetaObject* k_texteditor__mainwindow_meta_object(const void* self) {
     return KTextEditor__MainWindow_MetaObject((KTextEditor__MainWindow*)self);
 }
 
-void k_texteditor__mainwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_texteditor__mainwindow_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KTextEditor__MainWindow_OnMetaObject((KTextEditor__MainWindow*)self, (intptr_t)callback);
 }
 

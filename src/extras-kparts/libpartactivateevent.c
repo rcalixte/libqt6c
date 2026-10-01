@@ -84,8 +84,8 @@ QEvent* k_parts__partactivateevent_super_clone(const void* self) {
     return KParts__PartActivateEvent_SuperClone((KParts__PartActivateEvent*)self);
 }
 
-void k_parts__partactivateevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    KParts__PartActivateEvent_OnClone((const KParts__PartActivateEvent*)self, (intptr_t)callback);
+void k_parts__partactivateevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    KParts__PartActivateEvent_OnClone((KParts__PartActivateEvent*)self, (intptr_t)callback);
 }
 
 void k_parts__partactivateevent_delete(void* self) {

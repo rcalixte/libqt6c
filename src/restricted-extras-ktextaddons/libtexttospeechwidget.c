@@ -26,7 +26,7 @@ const QMetaObject* k_textedittexttospeech__texttospeechwidget_meta_object(const 
     return TextEditTextToSpeech__TextToSpeechWidget_MetaObject((TextEditTextToSpeech__TextToSpeechWidget*)self);
 }
 
-void k_textedittexttospeech__texttospeechwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textedittexttospeech__texttospeechwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextEditTextToSpeech__TextToSpeechWidget_OnMetaObject((TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
 }
 
@@ -123,11 +123,11 @@ const char* k_textedittexttospeech__texttospeechwidget_tr3(const char* s, const 
     return _ret;
 }
 
-QPaintDevice* k_textedittexttospeech__texttospeechwidget_as_q_paint_device(void* self) {
+QPaintDevice* k_textedittexttospeech__texttospeechwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextEditTextToSpeech__TextToSpeechWidget* k_textedittexttospeech__texttospeechwidget_from_q_paint_device(void* _qpaintdevice) {
+TextEditTextToSpeech__TextToSpeechWidget* k_textedittexttospeech__texttospeechwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (TextEditTextToSpeech__TextToSpeechWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1518,8 +1518,8 @@ int32_t k_textedittexttospeech__texttospeechwidget_super_dev_type(const void* se
     return TextEditTextToSpeech__TextToSpeechWidget_SuperDevType((TextEditTextToSpeech__TextToSpeechWidget*)self);
 }
 
-void k_textedittexttospeech__texttospeechwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextEditTextToSpeech__TextToSpeechWidget_OnDevType((const TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
+void k_textedittexttospeech__texttospeechwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextEditTextToSpeech__TextToSpeechWidget_OnDevType((TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
 }
 
 void k_textedittexttospeech__texttospeechwidget_set_visible(void* self, bool visible) {
@@ -1542,8 +1542,8 @@ QSize* k_textedittexttospeech__texttospeechwidget_super_size_hint(const void* se
     return TextEditTextToSpeech__TextToSpeechWidget_SuperSizeHint((TextEditTextToSpeech__TextToSpeechWidget*)self);
 }
 
-void k_textedittexttospeech__texttospeechwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextEditTextToSpeech__TextToSpeechWidget_OnSizeHint((const TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
+void k_textedittexttospeech__texttospeechwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextEditTextToSpeech__TextToSpeechWidget_OnSizeHint((TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
 }
 
 QSize* k_textedittexttospeech__texttospeechwidget_minimum_size_hint(const void* self) {
@@ -1554,8 +1554,8 @@ QSize* k_textedittexttospeech__texttospeechwidget_super_minimum_size_hint(const 
     return TextEditTextToSpeech__TextToSpeechWidget_SuperMinimumSizeHint((TextEditTextToSpeech__TextToSpeechWidget*)self);
 }
 
-void k_textedittexttospeech__texttospeechwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextEditTextToSpeech__TextToSpeechWidget_OnMinimumSizeHint((const TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
+void k_textedittexttospeech__texttospeechwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextEditTextToSpeech__TextToSpeechWidget_OnMinimumSizeHint((TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
 }
 
 int32_t k_textedittexttospeech__texttospeechwidget_height_for_width(const void* self, int param1) {
@@ -1566,8 +1566,8 @@ int32_t k_textedittexttospeech__texttospeechwidget_super_height_for_width(const 
     return TextEditTextToSpeech__TextToSpeechWidget_SuperHeightForWidth((TextEditTextToSpeech__TextToSpeechWidget*)self, param1);
 }
 
-void k_textedittexttospeech__texttospeechwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextEditTextToSpeech__TextToSpeechWidget_OnHeightForWidth((const TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
+void k_textedittexttospeech__texttospeechwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextEditTextToSpeech__TextToSpeechWidget_OnHeightForWidth((TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
 }
 
 bool k_textedittexttospeech__texttospeechwidget_has_height_for_width(const void* self) {
@@ -1578,8 +1578,8 @@ bool k_textedittexttospeech__texttospeechwidget_super_has_height_for_width(const
     return TextEditTextToSpeech__TextToSpeechWidget_SuperHasHeightForWidth((TextEditTextToSpeech__TextToSpeechWidget*)self);
 }
 
-void k_textedittexttospeech__texttospeechwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextEditTextToSpeech__TextToSpeechWidget_OnHasHeightForWidth((const TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
+void k_textedittexttospeech__texttospeechwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextEditTextToSpeech__TextToSpeechWidget_OnHasHeightForWidth((TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textedittexttospeech__texttospeechwidget_paint_engine(const void* self) {
@@ -1590,8 +1590,8 @@ QPaintEngine* k_textedittexttospeech__texttospeechwidget_super_paint_engine(cons
     return TextEditTextToSpeech__TextToSpeechWidget_SuperPaintEngine((TextEditTextToSpeech__TextToSpeechWidget*)self);
 }
 
-void k_textedittexttospeech__texttospeechwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextEditTextToSpeech__TextToSpeechWidget_OnPaintEngine((const TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
+void k_textedittexttospeech__texttospeechwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextEditTextToSpeech__TextToSpeechWidget_OnPaintEngine((TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
 }
 
 bool k_textedittexttospeech__texttospeechwidget_event(void* self, void* event) {
@@ -1926,8 +1926,8 @@ int32_t k_textedittexttospeech__texttospeechwidget_super_metric(const void* self
     return TextEditTextToSpeech__TextToSpeechWidget_SuperMetric((TextEditTextToSpeech__TextToSpeechWidget*)self, param1);
 }
 
-void k_textedittexttospeech__texttospeechwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextEditTextToSpeech__TextToSpeechWidget_OnMetric((const TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
+void k_textedittexttospeech__texttospeechwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextEditTextToSpeech__TextToSpeechWidget_OnMetric((TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
 }
 
 void k_textedittexttospeech__texttospeechwidget_init_painter(const void* self, void* painter) {
@@ -1938,8 +1938,8 @@ void k_textedittexttospeech__texttospeechwidget_super_init_painter(const void* s
     TextEditTextToSpeech__TextToSpeechWidget_SuperInitPainter((TextEditTextToSpeech__TextToSpeechWidget*)self, (QPainter*)painter);
 }
 
-void k_textedittexttospeech__texttospeechwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextEditTextToSpeech__TextToSpeechWidget_OnInitPainter((const TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
+void k_textedittexttospeech__texttospeechwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextEditTextToSpeech__TextToSpeechWidget_OnInitPainter((TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textedittexttospeech__texttospeechwidget_redirected(const void* self, void* offset) {
@@ -1950,8 +1950,8 @@ QPaintDevice* k_textedittexttospeech__texttospeechwidget_super_redirected(const 
     return TextEditTextToSpeech__TextToSpeechWidget_SuperRedirected((TextEditTextToSpeech__TextToSpeechWidget*)self, (QPoint*)offset);
 }
 
-void k_textedittexttospeech__texttospeechwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextEditTextToSpeech__TextToSpeechWidget_OnRedirected((const TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
+void k_textedittexttospeech__texttospeechwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextEditTextToSpeech__TextToSpeechWidget_OnRedirected((TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
 }
 
 QPainter* k_textedittexttospeech__texttospeechwidget_shared_painter(const void* self) {
@@ -1962,8 +1962,8 @@ QPainter* k_textedittexttospeech__texttospeechwidget_super_shared_painter(const 
     return TextEditTextToSpeech__TextToSpeechWidget_SuperSharedPainter((TextEditTextToSpeech__TextToSpeechWidget*)self);
 }
 
-void k_textedittexttospeech__texttospeechwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextEditTextToSpeech__TextToSpeechWidget_OnSharedPainter((const TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
+void k_textedittexttospeech__texttospeechwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextEditTextToSpeech__TextToSpeechWidget_OnSharedPainter((TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
 }
 
 void k_textedittexttospeech__texttospeechwidget_input_method_event(void* self, void* param1) {
@@ -1986,8 +1986,8 @@ QVariant* k_textedittexttospeech__texttospeechwidget_super_input_method_query(co
     return TextEditTextToSpeech__TextToSpeechWidget_SuperInputMethodQuery((TextEditTextToSpeech__TextToSpeechWidget*)self, param1);
 }
 
-void k_textedittexttospeech__texttospeechwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextEditTextToSpeech__TextToSpeechWidget_OnInputMethodQuery((const TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
+void k_textedittexttospeech__texttospeechwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextEditTextToSpeech__TextToSpeechWidget_OnInputMethodQuery((TextEditTextToSpeech__TextToSpeechWidget*)self, (intptr_t)callback);
 }
 
 bool k_textedittexttospeech__texttospeechwidget_focus_next_prev_child(void* self, bool next) {

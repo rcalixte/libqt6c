@@ -20,7 +20,7 @@ const QMetaObject* q_variantanimation_meta_object(const void* self) {
     return QVariantAnimation_MetaObject((QVariantAnimation*)self);
 }
 
-void q_variantanimation_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_variantanimation_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVariantAnimation_OnMetaObject((QVariantAnimation*)self, (intptr_t)callback);
 }
 
@@ -99,7 +99,7 @@ int32_t q_variantanimation_duration(const void* self) {
     return QVariantAnimation_Duration((QVariantAnimation*)self);
 }
 
-void q_variantanimation_on_duration(const void* self, int32_t (*callback)(const void*)) {
+void q_variantanimation_on_duration(void* self, int32_t (*callback)(const void*)) {
     QVariantAnimation_OnDuration((QVariantAnimation*)self, (intptr_t)callback);
 }
 
@@ -179,7 +179,7 @@ QVariant* q_variantanimation_interpolated(const void* self, const void* from, co
     return QVariantAnimation_Interpolated((QVariantAnimation*)self, (QVariant*)from, (QVariant*)to, progress);
 }
 
-void q_variantanimation_on_interpolated(const void* self, QVariant* (*callback)(const void*, const void*, const void*, double)) {
+void q_variantanimation_on_interpolated(void* self, QVariant* (*callback)(const void*, const void*, const void*, double)) {
     QVariantAnimation_OnInterpolated((QVariantAnimation*)self, (intptr_t)callback);
 }
 

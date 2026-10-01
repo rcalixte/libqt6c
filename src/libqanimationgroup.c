@@ -18,7 +18,7 @@ const QMetaObject* q_animationgroup_meta_object(const void* self) {
     return QAnimationGroup_MetaObject((QAnimationGroup*)self);
 }
 
-void q_animationgroup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_animationgroup_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAnimationGroup_OnMetaObject((QAnimationGroup*)self, (intptr_t)callback);
 }
 
@@ -428,8 +428,8 @@ int32_t q_animationgroup_duration(const void* self) {
     return QAnimationGroup_Duration((QAnimationGroup*)self);
 }
 
-void q_animationgroup_on_duration(const void* self, int32_t (*callback)(const void*)) {
-    QAnimationGroup_OnDuration((const QAnimationGroup*)self, (intptr_t)callback);
+void q_animationgroup_on_duration(void* self, int32_t (*callback)(const void*)) {
+    QAnimationGroup_OnDuration((QAnimationGroup*)self, (intptr_t)callback);
 }
 
 void q_animationgroup_update_current_time(void* self, int currentTime) {

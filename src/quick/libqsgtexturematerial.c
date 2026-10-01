@@ -12,7 +12,7 @@ QSGMaterialType* q_sgopaquetexturematerial_type(const void* self) {
     return QSGOpaqueTextureMaterial_Type((QSGOpaqueTextureMaterial*)self);
 }
 
-void q_sgopaquetexturematerial_on_type(const void* self, QSGMaterialType* (*callback)(const void*)) {
+void q_sgopaquetexturematerial_on_type(void* self, QSGMaterialType* (*callback)(const void*)) {
     QSGOpaqueTextureMaterial_OnType((QSGOpaqueTextureMaterial*)self, (intptr_t)callback);
 }
 
@@ -24,7 +24,7 @@ QSGMaterialShader* q_sgopaquetexturematerial_create_shader(const void* self, int
     return QSGOpaqueTextureMaterial_CreateShader((QSGOpaqueTextureMaterial*)self, renderMode);
 }
 
-void q_sgopaquetexturematerial_on_create_shader(const void* self, QSGMaterialShader* (*callback)(const void*, int32_t)) {
+void q_sgopaquetexturematerial_on_create_shader(void* self, QSGMaterialShader* (*callback)(const void*, int32_t)) {
     QSGOpaqueTextureMaterial_OnCreateShader((QSGOpaqueTextureMaterial*)self, (intptr_t)callback);
 }
 
@@ -36,7 +36,7 @@ int32_t q_sgopaquetexturematerial_compare(const void* self, const void* other) {
     return QSGOpaqueTextureMaterial_Compare((QSGOpaqueTextureMaterial*)self, (QSGMaterial*)other);
 }
 
-void q_sgopaquetexturematerial_on_compare(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_sgopaquetexturematerial_on_compare(void* self, int32_t (*callback)(const void*, const void*)) {
     QSGOpaqueTextureMaterial_OnCompare((QSGOpaqueTextureMaterial*)self, (intptr_t)callback);
 }
 
@@ -120,7 +120,7 @@ QSGMaterialType* q_sgtexturematerial_type(const void* self) {
     return QSGTextureMaterial_Type((QSGTextureMaterial*)self);
 }
 
-void q_sgtexturematerial_on_type(const void* self, QSGMaterialType* (*callback)(const void*)) {
+void q_sgtexturematerial_on_type(void* self, QSGMaterialType* (*callback)(const void*)) {
     QSGTextureMaterial_OnType((QSGTextureMaterial*)self, (intptr_t)callback);
 }
 
@@ -132,7 +132,7 @@ QSGMaterialShader* q_sgtexturematerial_create_shader(const void* self, int32_t r
     return QSGTextureMaterial_CreateShader((QSGTextureMaterial*)self, renderMode);
 }
 
-void q_sgtexturematerial_on_create_shader(const void* self, QSGMaterialShader* (*callback)(const void*, int32_t)) {
+void q_sgtexturematerial_on_create_shader(void* self, QSGMaterialShader* (*callback)(const void*, int32_t)) {
     QSGTextureMaterial_OnCreateShader((QSGTextureMaterial*)self, (intptr_t)callback);
 }
 
@@ -212,8 +212,8 @@ int32_t q_sgtexturematerial_super_compare(const void* self, const void* other) {
     return QSGTextureMaterial_SuperCompare((QSGTextureMaterial*)self, (QSGMaterial*)other);
 }
 
-void q_sgtexturematerial_on_compare(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QSGTextureMaterial_OnCompare((const QSGTextureMaterial*)self, (intptr_t)callback);
+void q_sgtexturematerial_on_compare(void* self, int32_t (*callback)(const void*, const void*)) {
+    QSGTextureMaterial_OnCompare((QSGTextureMaterial*)self, (intptr_t)callback);
 }
 
 void q_sgtexturematerial_delete(void* self) {

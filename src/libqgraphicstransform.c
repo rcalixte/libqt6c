@@ -19,7 +19,7 @@ const QMetaObject* q_graphicstransform_meta_object(const void* self) {
     return QGraphicsTransform_MetaObject((QGraphicsTransform*)self);
 }
 
-void q_graphicstransform_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_graphicstransform_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGraphicsTransform_OnMetaObject((QGraphicsTransform*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ void q_graphicstransform_apply_to(const void* self, void* matrix) {
     QGraphicsTransform_ApplyTo((QGraphicsTransform*)self, (QMatrix4x4*)matrix);
 }
 
-void q_graphicstransform_on_apply_to(const void* self, void (*callback)(const void*, void*)) {
+void q_graphicstransform_on_apply_to(void* self, void (*callback)(const void*, void*)) {
     QGraphicsTransform_OnApplyTo((QGraphicsTransform*)self, (intptr_t)callback);
 }
 
@@ -413,7 +413,7 @@ const QMetaObject* q_graphicsscale_meta_object(const void* self) {
     return QGraphicsScale_MetaObject((QGraphicsScale*)self);
 }
 
-void q_graphicsscale_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_graphicsscale_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGraphicsScale_OnMetaObject((QGraphicsScale*)self, (intptr_t)callback);
 }
 
@@ -488,7 +488,7 @@ void q_graphicsscale_apply_to(const void* self, void* matrix) {
     QGraphicsScale_ApplyTo((QGraphicsScale*)self, (QMatrix4x4*)matrix);
 }
 
-void q_graphicsscale_on_apply_to(const void* self, void (*callback)(const void*, void*)) {
+void q_graphicsscale_on_apply_to(void* self, void (*callback)(const void*, void*)) {
     QGraphicsScale_OnApplyTo((QGraphicsScale*)self, (intptr_t)callback);
 }
 
@@ -883,7 +883,7 @@ const QMetaObject* q_graphicsrotation_meta_object(const void* self) {
     return QGraphicsRotation_MetaObject((QGraphicsRotation*)self);
 }
 
-void q_graphicsrotation_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_graphicsrotation_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGraphicsRotation_OnMetaObject((QGraphicsRotation*)self, (intptr_t)callback);
 }
 
@@ -954,7 +954,7 @@ void q_graphicsrotation_apply_to(const void* self, void* matrix) {
     QGraphicsRotation_ApplyTo((QGraphicsRotation*)self, (QMatrix4x4*)matrix);
 }
 
-void q_graphicsrotation_on_apply_to(const void* self, void (*callback)(const void*, void*)) {
+void q_graphicsrotation_on_apply_to(void* self, void (*callback)(const void*, void*)) {
     QGraphicsRotation_OnApplyTo((QGraphicsRotation*)self, (intptr_t)callback);
 }
 

@@ -26,7 +26,7 @@ const QMetaObject* k_configskeleton_meta_object(const void* self) {
     return KConfigSkeleton_MetaObject((KConfigSkeleton*)self);
 }
 
-void k_configskeleton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_configskeleton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KConfigSkeleton_OnMetaObject((KConfigSkeleton*)self, (intptr_t)callback);
 }
 
@@ -885,7 +885,7 @@ bool k_configskeleton__itemcolor_is_equal(const void* self, const void* p) {
     return KConfigSkeleton__ItemColor_IsEqual((KConfigSkeleton__ItemColor*)self, (QVariant*)p);
 }
 
-void k_configskeleton__itemcolor_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_configskeleton__itemcolor_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KConfigSkeleton__ItemColor_OnIsEqual((KConfigSkeleton__ItemColor*)self, (intptr_t)callback);
 }
 
@@ -897,7 +897,7 @@ QVariant* k_configskeleton__itemcolor_property(const void* self) {
     return KConfigSkeleton__ItemColor_Property((KConfigSkeleton__ItemColor*)self);
 }
 
-void k_configskeleton__itemcolor_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_configskeleton__itemcolor_on_property(void* self, QVariant* (*callback)(const void*)) {
     KConfigSkeleton__ItemColor_OnProperty((KConfigSkeleton__ItemColor*)self, (intptr_t)callback);
 }
 
@@ -945,7 +945,7 @@ bool k_configskeleton__itemfont_is_equal(const void* self, const void* p) {
     return KConfigSkeleton__ItemFont_IsEqual((KConfigSkeleton__ItemFont*)self, (QVariant*)p);
 }
 
-void k_configskeleton__itemfont_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_configskeleton__itemfont_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KConfigSkeleton__ItemFont_OnIsEqual((KConfigSkeleton__ItemFont*)self, (intptr_t)callback);
 }
 
@@ -957,7 +957,7 @@ QVariant* k_configskeleton__itemfont_property(const void* self) {
     return KConfigSkeleton__ItemFont_Property((KConfigSkeleton__ItemFont*)self);
 }
 
-void k_configskeleton__itemfont_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_configskeleton__itemfont_on_property(void* self, QVariant* (*callback)(const void*)) {
     KConfigSkeleton__ItemFont_OnProperty((KConfigSkeleton__ItemFont*)self, (intptr_t)callback);
 }
 

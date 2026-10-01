@@ -20,7 +20,7 @@ const QMetaObject* k_sonnet__spellcheckdecorator_meta_object(const void* self) {
     return Sonnet__SpellCheckDecorator_MetaObject((Sonnet__SpellCheckDecorator*)self);
 }
 
-void k_sonnet__spellcheckdecorator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_sonnet__spellcheckdecorator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Sonnet__SpellCheckDecorator_OnMetaObject((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
 }
 
@@ -83,7 +83,7 @@ bool k_sonnet__spellcheckdecorator_is_spell_checking_enabled_for_block(const voi
     return Sonnet__SpellCheckDecorator_IsSpellCheckingEnabledForBlock((Sonnet__SpellCheckDecorator*)self, qstring(textBlock));
 }
 
-void k_sonnet__spellcheckdecorator_on_is_spell_checking_enabled_for_block(const void* self, bool (*callback)(const void*, const char*)) {
+void k_sonnet__spellcheckdecorator_on_is_spell_checking_enabled_for_block(void* self, bool (*callback)(const void*, const char*)) {
     Sonnet__SpellCheckDecorator_OnIsSpellCheckingEnabledForBlock((Sonnet__SpellCheckDecorator*)self, (intptr_t)callback);
 }
 

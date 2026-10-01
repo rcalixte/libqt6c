@@ -57,7 +57,7 @@ const QMetaObject* k_iconloader_meta_object(const void* self) {
     return KIconLoader_MetaObject((KIconLoader*)self);
 }
 
-void k_iconloader_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_iconloader_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIconLoader_OnMetaObject((KIconLoader*)self, (intptr_t)callback);
 }
 

@@ -29,7 +29,7 @@ const QMetaObject* k_pixmapregionselectorwidget_meta_object(const void* self) {
     return KPixmapRegionSelectorWidget_MetaObject((KPixmapRegionSelectorWidget*)self);
 }
 
-void k_pixmapregionselectorwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_pixmapregionselectorwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPixmapRegionSelectorWidget_OnMetaObject((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
@@ -166,11 +166,11 @@ const char* k_pixmapregionselectorwidget_tr3(const char* s, const char* c, int n
     return _ret;
 }
 
-QPaintDevice* k_pixmapregionselectorwidget_as_q_paint_device(void* self) {
+QPaintDevice* k_pixmapregionselectorwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KPixmapRegionSelectorWidget* k_pixmapregionselectorwidget_from_q_paint_device(void* _qpaintdevice) {
+KPixmapRegionSelectorWidget* k_pixmapregionselectorwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (KPixmapRegionSelectorWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1561,8 +1561,8 @@ int32_t k_pixmapregionselectorwidget_super_dev_type(const void* self) {
     return KPixmapRegionSelectorWidget_SuperDevType((KPixmapRegionSelectorWidget*)self);
 }
 
-void k_pixmapregionselectorwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KPixmapRegionSelectorWidget_OnDevType((const KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
+void k_pixmapregionselectorwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KPixmapRegionSelectorWidget_OnDevType((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
 void k_pixmapregionselectorwidget_set_visible(void* self, bool visible) {
@@ -1585,8 +1585,8 @@ QSize* k_pixmapregionselectorwidget_super_size_hint(const void* self) {
     return KPixmapRegionSelectorWidget_SuperSizeHint((KPixmapRegionSelectorWidget*)self);
 }
 
-void k_pixmapregionselectorwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPixmapRegionSelectorWidget_OnSizeHint((const KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
+void k_pixmapregionselectorwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPixmapRegionSelectorWidget_OnSizeHint((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
 QSize* k_pixmapregionselectorwidget_minimum_size_hint(const void* self) {
@@ -1597,8 +1597,8 @@ QSize* k_pixmapregionselectorwidget_super_minimum_size_hint(const void* self) {
     return KPixmapRegionSelectorWidget_SuperMinimumSizeHint((KPixmapRegionSelectorWidget*)self);
 }
 
-void k_pixmapregionselectorwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPixmapRegionSelectorWidget_OnMinimumSizeHint((const KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
+void k_pixmapregionselectorwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPixmapRegionSelectorWidget_OnMinimumSizeHint((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
 int32_t k_pixmapregionselectorwidget_height_for_width(const void* self, int param1) {
@@ -1609,8 +1609,8 @@ int32_t k_pixmapregionselectorwidget_super_height_for_width(const void* self, in
     return KPixmapRegionSelectorWidget_SuperHeightForWidth((KPixmapRegionSelectorWidget*)self, param1);
 }
 
-void k_pixmapregionselectorwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KPixmapRegionSelectorWidget_OnHeightForWidth((const KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
+void k_pixmapregionselectorwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KPixmapRegionSelectorWidget_OnHeightForWidth((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
 bool k_pixmapregionselectorwidget_has_height_for_width(const void* self) {
@@ -1621,8 +1621,8 @@ bool k_pixmapregionselectorwidget_super_has_height_for_width(const void* self) {
     return KPixmapRegionSelectorWidget_SuperHasHeightForWidth((KPixmapRegionSelectorWidget*)self);
 }
 
-void k_pixmapregionselectorwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KPixmapRegionSelectorWidget_OnHasHeightForWidth((const KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
+void k_pixmapregionselectorwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KPixmapRegionSelectorWidget_OnHasHeightForWidth((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_pixmapregionselectorwidget_paint_engine(const void* self) {
@@ -1633,8 +1633,8 @@ QPaintEngine* k_pixmapregionselectorwidget_super_paint_engine(const void* self) 
     return KPixmapRegionSelectorWidget_SuperPaintEngine((KPixmapRegionSelectorWidget*)self);
 }
 
-void k_pixmapregionselectorwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KPixmapRegionSelectorWidget_OnPaintEngine((const KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
+void k_pixmapregionselectorwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KPixmapRegionSelectorWidget_OnPaintEngine((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
 bool k_pixmapregionselectorwidget_event(void* self, void* event) {
@@ -1969,8 +1969,8 @@ int32_t k_pixmapregionselectorwidget_super_metric(const void* self, int32_t para
     return KPixmapRegionSelectorWidget_SuperMetric((KPixmapRegionSelectorWidget*)self, param1);
 }
 
-void k_pixmapregionselectorwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KPixmapRegionSelectorWidget_OnMetric((const KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
+void k_pixmapregionselectorwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KPixmapRegionSelectorWidget_OnMetric((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
 void k_pixmapregionselectorwidget_init_painter(const void* self, void* painter) {
@@ -1981,8 +1981,8 @@ void k_pixmapregionselectorwidget_super_init_painter(const void* self, void* pai
     KPixmapRegionSelectorWidget_SuperInitPainter((KPixmapRegionSelectorWidget*)self, (QPainter*)painter);
 }
 
-void k_pixmapregionselectorwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KPixmapRegionSelectorWidget_OnInitPainter((const KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
+void k_pixmapregionselectorwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KPixmapRegionSelectorWidget_OnInitPainter((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_pixmapregionselectorwidget_redirected(const void* self, void* offset) {
@@ -1993,8 +1993,8 @@ QPaintDevice* k_pixmapregionselectorwidget_super_redirected(const void* self, vo
     return KPixmapRegionSelectorWidget_SuperRedirected((KPixmapRegionSelectorWidget*)self, (QPoint*)offset);
 }
 
-void k_pixmapregionselectorwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KPixmapRegionSelectorWidget_OnRedirected((const KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
+void k_pixmapregionselectorwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KPixmapRegionSelectorWidget_OnRedirected((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
 QPainter* k_pixmapregionselectorwidget_shared_painter(const void* self) {
@@ -2005,8 +2005,8 @@ QPainter* k_pixmapregionselectorwidget_super_shared_painter(const void* self) {
     return KPixmapRegionSelectorWidget_SuperSharedPainter((KPixmapRegionSelectorWidget*)self);
 }
 
-void k_pixmapregionselectorwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KPixmapRegionSelectorWidget_OnSharedPainter((const KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
+void k_pixmapregionselectorwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KPixmapRegionSelectorWidget_OnSharedPainter((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
 void k_pixmapregionselectorwidget_input_method_event(void* self, void* param1) {
@@ -2029,8 +2029,8 @@ QVariant* k_pixmapregionselectorwidget_super_input_method_query(const void* self
     return KPixmapRegionSelectorWidget_SuperInputMethodQuery((KPixmapRegionSelectorWidget*)self, param1);
 }
 
-void k_pixmapregionselectorwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KPixmapRegionSelectorWidget_OnInputMethodQuery((const KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
+void k_pixmapregionselectorwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KPixmapRegionSelectorWidget_OnInputMethodQuery((KPixmapRegionSelectorWidget*)self, (intptr_t)callback);
 }
 
 bool k_pixmapregionselectorwidget_focus_next_prev_child(void* self, bool next) {

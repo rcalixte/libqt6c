@@ -32,10 +32,10 @@ const QMetaObject* k_textcustomeditor__plaintexteditor_meta_object(const void* s
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback const QMetaObject* func(const TextCustomEditor__PlainTextEditor* self)
 ///
-void k_textcustomeditor__plaintexteditor_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1PlainTextEditor.html)
 ///
@@ -1708,9 +1708,9 @@ void k_textcustomeditor__plaintexteditor_set_frame_rect(void* self, const void* 
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self TextCustomEditor__PlainTextEditor*
+/// @param self const TextCustomEditor__PlainTextEditor*
 ///
-QPaintDevice* k_textcustomeditor__plaintexteditor_as_q_paint_device(void* self);
+QPaintDevice* k_textcustomeditor__plaintexteditor_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1718,7 +1718,7 @@ QPaintDevice* k_textcustomeditor__plaintexteditor_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-TextCustomEditor__PlainTextEditor* k_textcustomeditor__plaintexteditor_from_q_paint_device(void* _qpaintdevice);
+TextCustomEditor__PlainTextEditor* k_textcustomeditor__plaintexteditor_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -4734,12 +4734,12 @@ QVariant* k_textcustomeditor__plaintexteditor_super_input_method_query(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QVariant* func(TextCustomEditor__PlainTextEditor* self, enum Qt__InputMethodQuery property)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__plaintexteditor_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_textcustomeditor__plaintexteditor_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5295,10 +5295,10 @@ QMimeData* k_textcustomeditor__plaintexteditor_super_create_mime_data_from_selec
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QMimeData* func(TextCustomEditor__PlainTextEditor* self)
 ///
-void k_textcustomeditor__plaintexteditor_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)(const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5328,10 +5328,10 @@ bool k_textcustomeditor__plaintexteditor_super_can_insert_from_mime_data(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback bool func(TextCustomEditor__PlainTextEditor* self, QMimeData* source)
 ///
-void k_textcustomeditor__plaintexteditor_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*));
+void k_textcustomeditor__plaintexteditor_on_can_insert_from_mime_data(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5493,12 +5493,12 @@ QSize* k_textcustomeditor__plaintexteditor_super_minimum_size_hint(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QSize* func(TextCustomEditor__PlainTextEditor* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__plaintexteditor_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5526,12 +5526,12 @@ QSize* k_textcustomeditor__plaintexteditor_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QSize* func(TextCustomEditor__PlainTextEditor* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__plaintexteditor_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5660,12 +5660,12 @@ QSize* k_textcustomeditor__plaintexteditor_super_viewport_size_hint(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QSize* func(TextCustomEditor__PlainTextEditor* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__plaintexteditor_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_viewport_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -5695,10 +5695,10 @@ void k_textcustomeditor__plaintexteditor_super_init_style_option(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback void func(TextCustomEditor__PlainTextEditor* self, QStyleOptionFrame* option)
 ///
-void k_textcustomeditor__plaintexteditor_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void k_textcustomeditor__plaintexteditor_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5726,10 +5726,10 @@ int32_t k_textcustomeditor__plaintexteditor_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback int32_t func(TextCustomEditor__PlainTextEditor* self)
 ///
-void k_textcustomeditor__plaintexteditor_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5792,10 +5792,10 @@ int32_t k_textcustomeditor__plaintexteditor_super_height_for_width(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback int32_t func(TextCustomEditor__PlainTextEditor* self, int param1)
 ///
-void k_textcustomeditor__plaintexteditor_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_textcustomeditor__plaintexteditor_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5823,10 +5823,10 @@ bool k_textcustomeditor__plaintexteditor_super_has_height_for_width(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback bool func(TextCustomEditor__PlainTextEditor* self)
 ///
-void k_textcustomeditor__plaintexteditor_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5854,10 +5854,10 @@ QPaintEngine* k_textcustomeditor__plaintexteditor_super_paint_engine(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QPaintEngine* func(TextCustomEditor__PlainTextEditor* self)
 ///
-void k_textcustomeditor__plaintexteditor_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6155,10 +6155,10 @@ int32_t k_textcustomeditor__plaintexteditor_super_metric(const void* self, int32
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback int32_t func(TextCustomEditor__PlainTextEditor* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_textcustomeditor__plaintexteditor_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_textcustomeditor__plaintexteditor_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6188,10 +6188,10 @@ void k_textcustomeditor__plaintexteditor_super_init_painter(const void* self, vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback void func(TextCustomEditor__PlainTextEditor* self, QPainter* painter)
 ///
-void k_textcustomeditor__plaintexteditor_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_textcustomeditor__plaintexteditor_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6221,10 +6221,10 @@ QPaintDevice* k_textcustomeditor__plaintexteditor_super_redirected(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QPaintDevice* func(TextCustomEditor__PlainTextEditor* self, QPoint* offset)
 ///
-void k_textcustomeditor__plaintexteditor_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_textcustomeditor__plaintexteditor_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6252,10 +6252,10 @@ QPainter* k_textcustomeditor__plaintexteditor_super_shared_painter(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QPainter* func(TextCustomEditor__PlainTextEditor* self)
 ///
-void k_textcustomeditor__plaintexteditor_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6415,12 +6415,12 @@ QTextBlock* k_textcustomeditor__plaintexteditor_super_first_visible_block(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QTextBlock* func(TextCustomEditor__PlainTextEditor* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__plaintexteditor_on_first_visible_block(const void* self, QTextBlock* (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_first_visible_block(void* self, QTextBlock* (*callback)(const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6448,12 +6448,12 @@ QPointF* k_textcustomeditor__plaintexteditor_super_content_offset(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QPointF* func(TextCustomEditor__PlainTextEditor* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__plaintexteditor_on_content_offset(const void* self, QPointF* (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_content_offset(void* self, QPointF* (*callback)(const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6483,12 +6483,12 @@ QRectF* k_textcustomeditor__plaintexteditor_super_block_bounding_rect(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QRectF* func(TextCustomEditor__PlainTextEditor* self, QTextBlock* block)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__plaintexteditor_on_block_bounding_rect(const void* self, QRectF* (*callback)(const void*, const void*));
+void k_textcustomeditor__plaintexteditor_on_block_bounding_rect(void* self, QRectF* (*callback)(const void*, const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6518,12 +6518,12 @@ QRectF* k_textcustomeditor__plaintexteditor_super_block_bounding_geometry(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QRectF* func(TextCustomEditor__PlainTextEditor* self, QTextBlock* block)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__plaintexteditor_on_block_bounding_geometry(const void* self, QRectF* (*callback)(const void*, const void*));
+void k_textcustomeditor__plaintexteditor_on_block_bounding_geometry(void* self, QRectF* (*callback)(const void*, const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6551,12 +6551,12 @@ QAbstractTextDocumentLayout__PaintContext* k_textcustomeditor__plaintexteditor_s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QAbstractTextDocumentLayout__PaintContext* func(TextCustomEditor__PlainTextEditor* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__plaintexteditor_on_get_paint_context(const void* self, QAbstractTextDocumentLayout__PaintContext* (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_get_paint_context(void* self, QAbstractTextDocumentLayout__PaintContext* (*callback)(const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6656,12 +6656,12 @@ QMargins* k_textcustomeditor__plaintexteditor_super_viewport_margins(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QMargins* func(TextCustomEditor__PlainTextEditor* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__plaintexteditor_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_viewport_margins(void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -6877,10 +6877,10 @@ QObject* k_textcustomeditor__plaintexteditor_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QObject* func(TextCustomEditor__PlainTextEditor* self)
 ///
-void k_textcustomeditor__plaintexteditor_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6908,10 +6908,10 @@ int32_t k_textcustomeditor__plaintexteditor_super_sender_signal_index(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback int32_t func(TextCustomEditor__PlainTextEditor* self)
 ///
-void k_textcustomeditor__plaintexteditor_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textcustomeditor__plaintexteditor_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6941,10 +6941,10 @@ int32_t k_textcustomeditor__plaintexteditor_super_receivers(const void* self, co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback int32_t func(TextCustomEditor__PlainTextEditor* self, const char* signal)
 ///
-void k_textcustomeditor__plaintexteditor_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textcustomeditor__plaintexteditor_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6974,10 +6974,10 @@ bool k_textcustomeditor__plaintexteditor_super_is_signal_connected(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback bool func(TextCustomEditor__PlainTextEditor* self, QMetaMethod* signal)
 ///
-void k_textcustomeditor__plaintexteditor_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textcustomeditor__plaintexteditor_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -7009,10 +7009,10 @@ double k_textcustomeditor__plaintexteditor_super_get_decoded_metric_f(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__PlainTextEditor*
+/// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback double func(TextCustomEditor__PlainTextEditor* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_textcustomeditor__plaintexteditor_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_textcustomeditor__plaintexteditor_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

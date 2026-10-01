@@ -22,7 +22,7 @@ const QMetaObject* q_syntaxhighlighter_meta_object(const void* self) {
     return QSyntaxHighlighter_MetaObject((QSyntaxHighlighter*)self);
 }
 
-void q_syntaxhighlighter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_syntaxhighlighter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSyntaxHighlighter_OnMetaObject((QSyntaxHighlighter*)self, (intptr_t)callback);
 }
 

@@ -291,7 +291,7 @@ const QMetaObject* q_qmlengine_meta_object(const void* self) {
     return QQmlEngine_MetaObject((QQmlEngine*)self);
 }
 
-void q_qmlengine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_qmlengine_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlEngine_OnMetaObject((QQmlEngine*)self, (intptr_t)callback);
 }
 

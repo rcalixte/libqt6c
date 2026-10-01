@@ -32,7 +32,7 @@ const char* k_urifiltersearchprovider_icon_name(const void* self) {
     return _ret;
 }
 
-void k_urifiltersearchprovider_on_icon_name(const void* self, const char* (*callback)(const void*)) {
+void k_urifiltersearchprovider_on_icon_name(void* self, const char* (*callback)(const void*)) {
     KUriFilterSearchProvider_OnIconName((KUriFilterSearchProvider*)self, (intptr_t)callback);
 }
 

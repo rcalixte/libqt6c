@@ -12,15 +12,15 @@
 
 /// Upcasts to a KXMLGUIClient object
 ///
-/// @param self KTextEditor__View*
+/// @param self const KTextEditor__View*
 ///
-KXMLGUIClient* k_texteditor__view_as_k_x_m_l_g_u_i_client(void* self);
+KXMLGUIClient* k_texteditor__view_as_k_x_m_l_g_u_i_client(const void* self);
 
 /// Downcasts to a KTextEditor__View object
 ///
 /// @param _kxmlguiclient KXMLGUIClient*
 ///
-KTextEditor__View* k_texteditor__view_from_k_x_m_l_g_u_i_client(void* _kxmlguiclient);
+KTextEditor__View* k_texteditor__view_from_k_x_m_l_g_u_i_client(const void* _kxmlguiclient);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -977,9 +977,9 @@ int32_t k_texteditor__view_last_displayed_line1(const void* self, int32_t lineTy
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self KTextEditor__View*
+/// @param self const KTextEditor__View*
 ///
-QPaintDevice* k_texteditor__view_as_q_paint_device(void* self);
+QPaintDevice* k_texteditor__view_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -987,7 +987,7 @@ QPaintDevice* k_texteditor__view_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-KTextEditor__View* k_texteditor__view_from_q_paint_device(void* _qpaintdevice);
+KTextEditor__View* k_texteditor__view_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

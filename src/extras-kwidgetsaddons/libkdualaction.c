@@ -20,7 +20,7 @@ const QMetaObject* k_dualaction_meta_object(const void* self) {
     return KDualAction_MetaObject((KDualAction*)self);
 }
 
-void k_dualaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_dualaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KDualAction_OnMetaObject((KDualAction*)self, (intptr_t)callback);
 }
 

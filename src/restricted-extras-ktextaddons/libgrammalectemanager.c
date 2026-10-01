@@ -17,7 +17,7 @@ const QMetaObject* k_textgrammarcheck__grammalectemanager_meta_object(const void
     return TextGrammarCheck__GrammalecteManager_MetaObject((TextGrammarCheck__GrammalecteManager*)self);
 }
 
-void k_textgrammarcheck__grammalectemanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textgrammarcheck__grammalectemanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextGrammarCheck__GrammalecteManager_OnMetaObject((TextGrammarCheck__GrammalecteManager*)self, (intptr_t)callback);
 }
 

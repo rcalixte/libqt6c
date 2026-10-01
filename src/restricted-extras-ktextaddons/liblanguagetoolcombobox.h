@@ -32,10 +32,10 @@ const QMetaObject* k_textgrammarcheck__languagetoolcombobox_meta_object(const vo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback const QMetaObject* func(const TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textgrammarcheck__languagetoolcombobox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1LanguageToolComboBox.html)
 ///
@@ -908,9 +908,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_item_data3(void* self, int ind
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QPaintDevice* k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(void* self);
+QPaintDevice* k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -918,7 +918,7 @@ QPaintDevice* k_textgrammarcheck__languagetoolcombobox_as_q_paint_device(void* s
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-TextGrammarCheck__LanguageToolComboBox* k_textgrammarcheck__languagetoolcombobox_from_q_paint_device(void* _qpaintdevice);
+TextGrammarCheck__LanguageToolComboBox* k_textgrammarcheck__languagetoolcombobox_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3936,12 +3936,12 @@ QSize* k_textgrammarcheck__languagetoolcombobox_super_size_hint(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback QSize* func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textgrammarcheck__languagetoolcombobox_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QComboBox
 ///
@@ -3969,12 +3969,12 @@ QSize* k_textgrammarcheck__languagetoolcombobox_super_minimum_size_hint(const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback QSize* func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textgrammarcheck__languagetoolcombobox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QComboBox
 ///
@@ -4099,12 +4099,12 @@ QVariant* k_textgrammarcheck__languagetoolcombobox_super_input_method_query(cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback QVariant* func(TextGrammarCheck__LanguageToolComboBox* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_textgrammarcheck__languagetoolcombobox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QComboBox
 ///
@@ -4596,10 +4596,10 @@ void k_textgrammarcheck__languagetoolcombobox_super_init_style_option(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self, QStyleOptionComboBox* option)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void k_textgrammarcheck__languagetoolcombobox_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4627,10 +4627,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_super_dev_type(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback int32_t func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_textgrammarcheck__languagetoolcombobox_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4693,10 +4693,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_super_height_for_width(const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback int32_t func(TextGrammarCheck__LanguageToolComboBox* self, int param1)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_textgrammarcheck__languagetoolcombobox_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4724,10 +4724,10 @@ bool k_textgrammarcheck__languagetoolcombobox_super_has_height_for_width(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback bool func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_textgrammarcheck__languagetoolcombobox_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4755,10 +4755,10 @@ QPaintEngine* k_textgrammarcheck__languagetoolcombobox_super_paint_engine(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback QPaintEngine* func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_textgrammarcheck__languagetoolcombobox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5221,10 +5221,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_super_metric(const void* self, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback int32_t func(TextGrammarCheck__LanguageToolComboBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_textgrammarcheck__languagetoolcombobox_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5254,10 +5254,10 @@ void k_textgrammarcheck__languagetoolcombobox_super_init_painter(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self, QPainter* painter)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_textgrammarcheck__languagetoolcombobox_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5287,10 +5287,10 @@ QPaintDevice* k_textgrammarcheck__languagetoolcombobox_super_redirected(const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback QPaintDevice* func(TextGrammarCheck__LanguageToolComboBox* self, QPoint* offset)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_textgrammarcheck__languagetoolcombobox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5318,10 +5318,10 @@ QPainter* k_textgrammarcheck__languagetoolcombobox_super_shared_painter(const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback QPainter* func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_textgrammarcheck__languagetoolcombobox_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5737,10 +5737,10 @@ QObject* k_textgrammarcheck__languagetoolcombobox_super_sender(const void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback QObject* func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textgrammarcheck__languagetoolcombobox_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5768,10 +5768,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_super_sender_signal_index(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback int32_t func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textgrammarcheck__languagetoolcombobox_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5801,10 +5801,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_super_receivers(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback int32_t func(TextGrammarCheck__LanguageToolComboBox* self, const char* signal)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textgrammarcheck__languagetoolcombobox_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5834,10 +5834,10 @@ bool k_textgrammarcheck__languagetoolcombobox_super_is_signal_connected(const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback bool func(TextGrammarCheck__LanguageToolComboBox* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textgrammarcheck__languagetoolcombobox_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5869,10 +5869,10 @@ double k_textgrammarcheck__languagetoolcombobox_super_get_decoded_metric_f(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback double func(TextGrammarCheck__LanguageToolComboBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_textgrammarcheck__languagetoolcombobox_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -16,11 +16,11 @@ QQmlExtensionPlugin* q_qmlextensionplugin_new2(void* parent) {
     return QQmlExtensionPlugin_New2((QObject*)parent);
 }
 
-QQmlExtensionInterface* q_qmlextensionplugin_as_q_qml_extension_interface(void* self) {
+QQmlExtensionInterface* q_qmlextensionplugin_as_q_qml_extension_interface(const void* self) {
     return QQmlExtensionPlugin_AsQQmlExtensionInterface((QQmlExtensionPlugin*)self);
 }
 
-QQmlExtensionPlugin* q_qmlextensionplugin_from_q_qml_extension_interface(void* _qqmlextensioninterface) {
+QQmlExtensionPlugin* q_qmlextensionplugin_from_q_qml_extension_interface(const void* _qqmlextensioninterface) {
     return (QQmlExtensionPlugin*)QQmlExtensionPlugin_FromQQmlExtensionInterface((QQmlExtensionInterface*)_qqmlextensioninterface);
 }
 
@@ -28,7 +28,7 @@ const QMetaObject* q_qmlextensionplugin_meta_object(const void* self) {
     return QQmlExtensionPlugin_MetaObject((QQmlExtensionPlugin*)self);
 }
 
-void q_qmlextensionplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_qmlextensionplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlExtensionPlugin_OnMetaObject((QQmlExtensionPlugin*)self, (intptr_t)callback);
 }
 
@@ -446,11 +446,11 @@ QQmlEngineExtensionPlugin* q_qmlengineextensionplugin_new2(void* parent) {
     return QQmlEngineExtensionPlugin_New2((QObject*)parent);
 }
 
-QQmlEngineExtensionInterface* q_qmlengineextensionplugin_as_q_qml_engine_extension_interface(void* self) {
+QQmlEngineExtensionInterface* q_qmlengineextensionplugin_as_q_qml_engine_extension_interface(const void* self) {
     return QQmlEngineExtensionPlugin_AsQQmlEngineExtensionInterface((QQmlEngineExtensionPlugin*)self);
 }
 
-QQmlEngineExtensionPlugin* q_qmlengineextensionplugin_from_q_qml_engine_extension_interface(void* _qqmlengineextensioninterface) {
+QQmlEngineExtensionPlugin* q_qmlengineextensionplugin_from_q_qml_engine_extension_interface(const void* _qqmlengineextensioninterface) {
     return (QQmlEngineExtensionPlugin*)QQmlEngineExtensionPlugin_FromQQmlEngineExtensionInterface((QQmlEngineExtensionInterface*)_qqmlengineextensioninterface);
 }
 
@@ -458,7 +458,7 @@ const QMetaObject* q_qmlengineextensionplugin_meta_object(const void* self) {
     return QQmlEngineExtensionPlugin_MetaObject((QQmlEngineExtensionPlugin*)self);
 }
 
-void q_qmlengineextensionplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_qmlengineextensionplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlEngineExtensionPlugin_OnMetaObject((QQmlEngineExtensionPlugin*)self, (intptr_t)callback);
 }
 

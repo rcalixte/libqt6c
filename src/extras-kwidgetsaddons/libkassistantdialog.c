@@ -35,7 +35,7 @@ const QMetaObject* k_assistantdialog_meta_object(const void* self) {
     return KAssistantDialog_MetaObject((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_assistantdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KAssistantDialog_OnMetaObject((KAssistantDialog*)self, (intptr_t)callback);
 }
 
@@ -264,11 +264,11 @@ void k_assistantdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_assistantdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_assistantdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KAssistantDialog* k_assistantdialog_from_q_paint_device(void* _qpaintdevice) {
+KAssistantDialog* k_assistantdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KAssistantDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1671,8 +1671,8 @@ QSize* k_assistantdialog_super_size_hint(const void* self) {
     return KAssistantDialog_SuperSizeHint((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KAssistantDialog_OnSizeHint((const KAssistantDialog*)self, (intptr_t)callback);
+void k_assistantdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KAssistantDialog_OnSizeHint((KAssistantDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_assistantdialog_minimum_size_hint(const void* self) {
@@ -1683,8 +1683,8 @@ QSize* k_assistantdialog_super_minimum_size_hint(const void* self) {
     return KAssistantDialog_SuperMinimumSizeHint((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KAssistantDialog_OnMinimumSizeHint((const KAssistantDialog*)self, (intptr_t)callback);
+void k_assistantdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KAssistantDialog_OnMinimumSizeHint((KAssistantDialog*)self, (intptr_t)callback);
 }
 
 void k_assistantdialog_open(void* self) {
@@ -1815,8 +1815,8 @@ int32_t k_assistantdialog_super_dev_type(const void* self) {
     return KAssistantDialog_SuperDevType((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KAssistantDialog_OnDevType((const KAssistantDialog*)self, (intptr_t)callback);
+void k_assistantdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KAssistantDialog_OnDevType((KAssistantDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_assistantdialog_height_for_width(const void* self, int param1) {
@@ -1827,8 +1827,8 @@ int32_t k_assistantdialog_super_height_for_width(const void* self, int param1) {
     return KAssistantDialog_SuperHeightForWidth((KAssistantDialog*)self, param1);
 }
 
-void k_assistantdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KAssistantDialog_OnHeightForWidth((const KAssistantDialog*)self, (intptr_t)callback);
+void k_assistantdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KAssistantDialog_OnHeightForWidth((KAssistantDialog*)self, (intptr_t)callback);
 }
 
 bool k_assistantdialog_has_height_for_width(const void* self) {
@@ -1839,8 +1839,8 @@ bool k_assistantdialog_super_has_height_for_width(const void* self) {
     return KAssistantDialog_SuperHasHeightForWidth((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KAssistantDialog_OnHasHeightForWidth((const KAssistantDialog*)self, (intptr_t)callback);
+void k_assistantdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KAssistantDialog_OnHasHeightForWidth((KAssistantDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_assistantdialog_paint_engine(const void* self) {
@@ -1851,8 +1851,8 @@ QPaintEngine* k_assistantdialog_super_paint_engine(const void* self) {
     return KAssistantDialog_SuperPaintEngine((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KAssistantDialog_OnPaintEngine((const KAssistantDialog*)self, (intptr_t)callback);
+void k_assistantdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KAssistantDialog_OnPaintEngine((KAssistantDialog*)self, (intptr_t)callback);
 }
 
 bool k_assistantdialog_event(void* self, void* event) {
@@ -2127,8 +2127,8 @@ int32_t k_assistantdialog_super_metric(const void* self, int32_t param1) {
     return KAssistantDialog_SuperMetric((KAssistantDialog*)self, param1);
 }
 
-void k_assistantdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KAssistantDialog_OnMetric((const KAssistantDialog*)self, (intptr_t)callback);
+void k_assistantdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KAssistantDialog_OnMetric((KAssistantDialog*)self, (intptr_t)callback);
 }
 
 void k_assistantdialog_init_painter(const void* self, void* painter) {
@@ -2139,8 +2139,8 @@ void k_assistantdialog_super_init_painter(const void* self, void* painter) {
     KAssistantDialog_SuperInitPainter((KAssistantDialog*)self, (QPainter*)painter);
 }
 
-void k_assistantdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KAssistantDialog_OnInitPainter((const KAssistantDialog*)self, (intptr_t)callback);
+void k_assistantdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KAssistantDialog_OnInitPainter((KAssistantDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_assistantdialog_redirected(const void* self, void* offset) {
@@ -2151,8 +2151,8 @@ QPaintDevice* k_assistantdialog_super_redirected(const void* self, void* offset)
     return KAssistantDialog_SuperRedirected((KAssistantDialog*)self, (QPoint*)offset);
 }
 
-void k_assistantdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KAssistantDialog_OnRedirected((const KAssistantDialog*)self, (intptr_t)callback);
+void k_assistantdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KAssistantDialog_OnRedirected((KAssistantDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_assistantdialog_shared_painter(const void* self) {
@@ -2163,8 +2163,8 @@ QPainter* k_assistantdialog_super_shared_painter(const void* self) {
     return KAssistantDialog_SuperSharedPainter((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KAssistantDialog_OnSharedPainter((const KAssistantDialog*)self, (intptr_t)callback);
+void k_assistantdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KAssistantDialog_OnSharedPainter((KAssistantDialog*)self, (intptr_t)callback);
 }
 
 void k_assistantdialog_input_method_event(void* self, void* param1) {
@@ -2187,8 +2187,8 @@ QVariant* k_assistantdialog_super_input_method_query(const void* self, int32_t p
     return KAssistantDialog_SuperInputMethodQuery((KAssistantDialog*)self, param1);
 }
 
-void k_assistantdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KAssistantDialog_OnInputMethodQuery((const KAssistantDialog*)self, (intptr_t)callback);
+void k_assistantdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KAssistantDialog_OnInputMethodQuery((KAssistantDialog*)self, (intptr_t)callback);
 }
 
 bool k_assistantdialog_focus_next_prev_child(void* self, bool next) {

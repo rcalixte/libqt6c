@@ -679,10 +679,10 @@ const QMetaObject* q_keychain__readpasswordjob_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QKeychain__ReadPasswordJob*
+/// @param self QKeychain__ReadPasswordJob*
 /// @param callback const QMetaObject* func(const QKeychain__ReadPasswordJob* self)
 ///
-void q_keychain__readpasswordjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_keychain__readpasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1658,10 +1658,10 @@ QObject* q_keychain__readpasswordjob_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QKeychain__ReadPasswordJob*
+/// @param self QKeychain__ReadPasswordJob*
 /// @param callback QObject* func(QKeychain__ReadPasswordJob* self)
 ///
-void q_keychain__readpasswordjob_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_keychain__readpasswordjob_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1689,10 +1689,10 @@ int32_t q_keychain__readpasswordjob_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QKeychain__ReadPasswordJob*
+/// @param self QKeychain__ReadPasswordJob*
 /// @param callback int32_t func(QKeychain__ReadPasswordJob* self)
 ///
-void q_keychain__readpasswordjob_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_keychain__readpasswordjob_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1722,10 +1722,10 @@ int32_t q_keychain__readpasswordjob_super_receivers(const void* self, const char
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QKeychain__ReadPasswordJob*
+/// @param self QKeychain__ReadPasswordJob*
 /// @param callback int32_t func(QKeychain__ReadPasswordJob* self, const char* signal)
 ///
-void q_keychain__readpasswordjob_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_keychain__readpasswordjob_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1755,10 +1755,10 @@ bool q_keychain__readpasswordjob_super_is_signal_connected(const void* self, con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QKeychain__ReadPasswordJob*
+/// @param self QKeychain__ReadPasswordJob*
 /// @param callback bool func(QKeychain__ReadPasswordJob* self, QMetaMethod* signal)
 ///
-void q_keychain__readpasswordjob_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_keychain__readpasswordjob_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1806,10 +1806,10 @@ const QMetaObject* q_keychain__writepasswordjob_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QKeychain__WritePasswordJob*
+/// @param self QKeychain__WritePasswordJob*
 /// @param callback const QMetaObject* func(const QKeychain__WritePasswordJob* self)
 ///
-void q_keychain__writepasswordjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_keychain__writepasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -2783,10 +2783,10 @@ QObject* q_keychain__writepasswordjob_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QKeychain__WritePasswordJob*
+/// @param self QKeychain__WritePasswordJob*
 /// @param callback QObject* func(QKeychain__WritePasswordJob* self)
 ///
-void q_keychain__writepasswordjob_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_keychain__writepasswordjob_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2814,10 +2814,10 @@ int32_t q_keychain__writepasswordjob_super_sender_signal_index(const void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QKeychain__WritePasswordJob*
+/// @param self QKeychain__WritePasswordJob*
 /// @param callback int32_t func(QKeychain__WritePasswordJob* self)
 ///
-void q_keychain__writepasswordjob_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_keychain__writepasswordjob_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2847,10 +2847,10 @@ int32_t q_keychain__writepasswordjob_super_receivers(const void* self, const cha
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QKeychain__WritePasswordJob*
+/// @param self QKeychain__WritePasswordJob*
 /// @param callback int32_t func(QKeychain__WritePasswordJob* self, const char* signal)
 ///
-void q_keychain__writepasswordjob_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_keychain__writepasswordjob_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2880,10 +2880,10 @@ bool q_keychain__writepasswordjob_super_is_signal_connected(const void* self, co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QKeychain__WritePasswordJob*
+/// @param self QKeychain__WritePasswordJob*
 /// @param callback bool func(QKeychain__WritePasswordJob* self, QMetaMethod* signal)
 ///
-void q_keychain__writepasswordjob_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_keychain__writepasswordjob_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2931,10 +2931,10 @@ const QMetaObject* q_keychain__deletepasswordjob_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QKeychain__DeletePasswordJob*
+/// @param self QKeychain__DeletePasswordJob*
 /// @param callback const QMetaObject* func(const QKeychain__DeletePasswordJob* self)
 ///
-void q_keychain__deletepasswordjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_keychain__deletepasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -3894,10 +3894,10 @@ QObject* q_keychain__deletepasswordjob_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QKeychain__DeletePasswordJob*
+/// @param self QKeychain__DeletePasswordJob*
 /// @param callback QObject* func(QKeychain__DeletePasswordJob* self)
 ///
-void q_keychain__deletepasswordjob_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_keychain__deletepasswordjob_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3925,10 +3925,10 @@ int32_t q_keychain__deletepasswordjob_super_sender_signal_index(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QKeychain__DeletePasswordJob*
+/// @param self QKeychain__DeletePasswordJob*
 /// @param callback int32_t func(QKeychain__DeletePasswordJob* self)
 ///
-void q_keychain__deletepasswordjob_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_keychain__deletepasswordjob_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3958,10 +3958,10 @@ int32_t q_keychain__deletepasswordjob_super_receivers(const void* self, const ch
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QKeychain__DeletePasswordJob*
+/// @param self QKeychain__DeletePasswordJob*
 /// @param callback int32_t func(QKeychain__DeletePasswordJob* self, const char* signal)
 ///
-void q_keychain__deletepasswordjob_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_keychain__deletepasswordjob_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3991,10 +3991,10 @@ bool q_keychain__deletepasswordjob_super_is_signal_connected(const void* self, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QKeychain__DeletePasswordJob*
+/// @param self QKeychain__DeletePasswordJob*
 /// @param callback bool func(QKeychain__DeletePasswordJob* self, QMetaMethod* signal)
 ///
-void q_keychain__deletepasswordjob_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_keychain__deletepasswordjob_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -32,10 +32,10 @@ const QMetaObject* q_rasterwindow_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback const QMetaObject* func(const QRasterWindow* self)
 ///
-void q_rasterwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_rasterwindow_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -106,10 +106,10 @@ int32_t q_rasterwindow_metric(const void* self, int32_t metric);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback int32_t func(const QRasterWindow* self, enum QPaintDevice__PaintDeviceMetric metric)
 ///
-void q_rasterwindow_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_rasterwindow_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#metric)
 ///
@@ -131,10 +131,10 @@ QPaintDevice* q_rasterwindow_redirected(const void* self, void* param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback QPaintDevice* func(const QRasterWindow* self, QPoint* param1)
 ///
-void q_rasterwindow_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_rasterwindow_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrasterwindow.html#redirected)
 ///
@@ -193,9 +193,9 @@ const char* q_rasterwindow_tr3(const char* s, const char* c, int n);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QRasterWindow*
+/// @param self const QRasterWindow*
 ///
-QPaintDevice* q_rasterwindow_as_q_paint_device(void* self);
+QPaintDevice* q_rasterwindow_as_q_paint_device(const void* self);
 
 /// Inherited from QPaintDeviceWindow
 ///
@@ -203,7 +203,7 @@ QPaintDevice* q_rasterwindow_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QRasterWindow* q_rasterwindow_from_q_paint_device(void* _qpaintdevice);
+QRasterWindow* q_rasterwindow_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QPaintDeviceWindow
 ///
@@ -235,9 +235,9 @@ void q_rasterwindow_update3(void* self);
 ///
 /// Upcasts to a QSurface object
 ///
-/// @param self QRasterWindow*
+/// @param self const QRasterWindow*
 ///
-QSurface* q_rasterwindow_as_q_surface(void* self);
+QSurface* q_rasterwindow_as_q_surface(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -245,7 +245,7 @@ QSurface* q_rasterwindow_as_q_surface(void* self);
 ///
 /// @param _qsurface QSurface*
 ///
-QRasterWindow* q_rasterwindow_from_q_surface(void* _qsurface);
+QRasterWindow* q_rasterwindow_from_q_surface(const void* _qsurface);
 
 /// Inherited from QWindow
 ///
@@ -2210,10 +2210,10 @@ int32_t q_rasterwindow_super_surface_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback int32_t func(QRasterWindow* self)
 ///
-void q_rasterwindow_on_surface_type(const void* self, int32_t (*callback)(const void*));
+void q_rasterwindow_on_surface_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -2241,12 +2241,12 @@ QSurfaceFormat* q_rasterwindow_super_format(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback QSurfaceFormat* func(QRasterWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_rasterwindow_on_format(const void* self, QSurfaceFormat* (*callback)(const void*));
+void q_rasterwindow_on_format(void* self, QSurfaceFormat* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -2274,12 +2274,12 @@ QSize* q_rasterwindow_super_size(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback QSize* func(QRasterWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_rasterwindow_on_size(const void* self, QSize* (*callback)(const void*));
+void q_rasterwindow_on_size(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -2307,10 +2307,10 @@ QAccessibleInterface* q_rasterwindow_super_accessible_root(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback QAccessibleInterface* func(QRasterWindow* self)
 ///
-void q_rasterwindow_on_accessible_root(const void* self, QAccessibleInterface* (*callback)(const void*));
+void q_rasterwindow_on_accessible_root(void* self, QAccessibleInterface* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -2338,10 +2338,10 @@ QObject* q_rasterwindow_super_focus_object(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback QObject* func(QRasterWindow* self)
 ///
-void q_rasterwindow_on_focus_object(const void* self, QObject* (*callback)(const void*));
+void q_rasterwindow_on_focus_object(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -3101,10 +3101,10 @@ int32_t q_rasterwindow_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback int32_t func(QRasterWindow* self)
 ///
-void q_rasterwindow_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_rasterwindow_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -3134,10 +3134,10 @@ void q_rasterwindow_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback void func(QRasterWindow* self, QPainter* painter)
 ///
-void q_rasterwindow_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_rasterwindow_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -3165,10 +3165,10 @@ QPainter* q_rasterwindow_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback QPainter* func(QRasterWindow* self)
 ///
-void q_rasterwindow_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_rasterwindow_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -3200,10 +3200,10 @@ void* q_rasterwindow_super_resolve_interface(const void* self, const char* name,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback void* func(QRasterWindow* self, const char* name, int revision)
 ///
-void q_rasterwindow_on_resolve_interface(const void* self, void* (*callback)(const void*, const char*, int));
+void q_rasterwindow_on_resolve_interface(void* self, void* (*callback)(const void*, const char*, int));
 
 /// Inherited from QObject
 ///
@@ -3231,10 +3231,10 @@ QObject* q_rasterwindow_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback QObject* func(QRasterWindow* self)
 ///
-void q_rasterwindow_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_rasterwindow_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3262,10 +3262,10 @@ int32_t q_rasterwindow_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback int32_t func(QRasterWindow* self)
 ///
-void q_rasterwindow_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_rasterwindow_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3295,10 +3295,10 @@ int32_t q_rasterwindow_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback int32_t func(QRasterWindow* self, const char* signal)
 ///
-void q_rasterwindow_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_rasterwindow_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3328,10 +3328,10 @@ bool q_rasterwindow_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback bool func(QRasterWindow* self, QMetaMethod* signal)
 ///
-void q_rasterwindow_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_rasterwindow_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -3363,10 +3363,10 @@ double q_rasterwindow_super_get_decoded_metric_f(const void* self, int32_t metri
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QRasterWindow*
+/// @param self QRasterWindow*
 /// @param callback double func(QRasterWindow* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_rasterwindow_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_rasterwindow_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

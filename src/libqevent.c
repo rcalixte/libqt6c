@@ -32,7 +32,7 @@ QInputEvent* q_inputevent_clone(const void* self) {
     return QInputEvent_Clone((QInputEvent*)self);
 }
 
-void q_inputevent_on_clone(const void* self, QInputEvent* (*callback)(const void*)) {
+void q_inputevent_on_clone(void* self, QInputEvent* (*callback)(const void*)) {
     QInputEvent_OnClone((QInputEvent*)self, (intptr_t)callback);
 }
 
@@ -144,7 +144,7 @@ QPointerEvent* q_pointerevent_clone(const void* self) {
     return QPointerEvent_Clone((QPointerEvent*)self);
 }
 
-void q_pointerevent_on_clone(const void* self, QPointerEvent* (*callback)(const void*)) {
+void q_pointerevent_on_clone(void* self, QPointerEvent* (*callback)(const void*)) {
     QPointerEvent_OnClone((QPointerEvent*)self, (intptr_t)callback);
 }
 
@@ -197,7 +197,7 @@ bool q_pointerevent_is_begin_event(const void* self) {
     return QPointerEvent_IsBeginEvent((QPointerEvent*)self);
 }
 
-void q_pointerevent_on_is_begin_event(const void* self, bool (*callback)(const void*)) {
+void q_pointerevent_on_is_begin_event(void* self, bool (*callback)(const void*)) {
     QPointerEvent_OnIsBeginEvent((QPointerEvent*)self, (intptr_t)callback);
 }
 
@@ -209,7 +209,7 @@ bool q_pointerevent_is_update_event(const void* self) {
     return QPointerEvent_IsUpdateEvent((QPointerEvent*)self);
 }
 
-void q_pointerevent_on_is_update_event(const void* self, bool (*callback)(const void*)) {
+void q_pointerevent_on_is_update_event(void* self, bool (*callback)(const void*)) {
     QPointerEvent_OnIsUpdateEvent((QPointerEvent*)self, (intptr_t)callback);
 }
 
@@ -221,7 +221,7 @@ bool q_pointerevent_is_end_event(const void* self) {
     return QPointerEvent_IsEndEvent((QPointerEvent*)self);
 }
 
-void q_pointerevent_on_is_end_event(const void* self, bool (*callback)(const void*)) {
+void q_pointerevent_on_is_end_event(void* self, bool (*callback)(const void*)) {
     QPointerEvent_OnIsEndEvent((QPointerEvent*)self, (intptr_t)callback);
 }
 
@@ -510,7 +510,7 @@ QEnterEvent* q_enterevent_clone(const void* self) {
     return QEnterEvent_Clone((QEnterEvent*)self);
 }
 
-void q_enterevent_on_clone(const void* self, QEnterEvent* (*callback)(const void*)) {
+void q_enterevent_on_clone(void* self, QEnterEvent* (*callback)(const void*)) {
     QEnterEvent_OnClone((QEnterEvent*)self, (intptr_t)callback);
 }
 
@@ -703,8 +703,8 @@ bool q_enterevent_super_is_begin_event(const void* self) {
     return QEnterEvent_SuperIsBeginEvent((QEnterEvent*)self);
 }
 
-void q_enterevent_on_is_begin_event(const void* self, bool (*callback)(const void*)) {
-    QEnterEvent_OnIsBeginEvent((const QEnterEvent*)self, (intptr_t)callback);
+void q_enterevent_on_is_begin_event(void* self, bool (*callback)(const void*)) {
+    QEnterEvent_OnIsBeginEvent((QEnterEvent*)self, (intptr_t)callback);
 }
 
 bool q_enterevent_is_update_event(const void* self) {
@@ -715,8 +715,8 @@ bool q_enterevent_super_is_update_event(const void* self) {
     return QEnterEvent_SuperIsUpdateEvent((QEnterEvent*)self);
 }
 
-void q_enterevent_on_is_update_event(const void* self, bool (*callback)(const void*)) {
-    QEnterEvent_OnIsUpdateEvent((const QEnterEvent*)self, (intptr_t)callback);
+void q_enterevent_on_is_update_event(void* self, bool (*callback)(const void*)) {
+    QEnterEvent_OnIsUpdateEvent((QEnterEvent*)self, (intptr_t)callback);
 }
 
 bool q_enterevent_is_end_event(const void* self) {
@@ -727,8 +727,8 @@ bool q_enterevent_super_is_end_event(const void* self) {
     return QEnterEvent_SuperIsEndEvent((QEnterEvent*)self);
 }
 
-void q_enterevent_on_is_end_event(const void* self, bool (*callback)(const void*)) {
-    QEnterEvent_OnIsEndEvent((const QEnterEvent*)self, (intptr_t)callback);
+void q_enterevent_on_is_end_event(void* self, bool (*callback)(const void*)) {
+    QEnterEvent_OnIsEndEvent((QEnterEvent*)self, (intptr_t)callback);
 }
 
 void q_enterevent_set_timestamp(void* self, uint64_t timestamp) {
@@ -795,7 +795,7 @@ QMouseEvent* q_mouseevent_clone(const void* self) {
     return QMouseEvent_Clone((QMouseEvent*)self);
 }
 
-void q_mouseevent_on_clone(const void* self, QMouseEvent* (*callback)(const void*)) {
+void q_mouseevent_on_clone(void* self, QMouseEvent* (*callback)(const void*)) {
     QMouseEvent_OnClone((QMouseEvent*)self, (intptr_t)callback);
 }
 
@@ -996,8 +996,8 @@ bool q_mouseevent_super_is_begin_event(const void* self) {
     return QMouseEvent_SuperIsBeginEvent((QMouseEvent*)self);
 }
 
-void q_mouseevent_on_is_begin_event(const void* self, bool (*callback)(const void*)) {
-    QMouseEvent_OnIsBeginEvent((const QMouseEvent*)self, (intptr_t)callback);
+void q_mouseevent_on_is_begin_event(void* self, bool (*callback)(const void*)) {
+    QMouseEvent_OnIsBeginEvent((QMouseEvent*)self, (intptr_t)callback);
 }
 
 bool q_mouseevent_is_update_event(const void* self) {
@@ -1008,8 +1008,8 @@ bool q_mouseevent_super_is_update_event(const void* self) {
     return QMouseEvent_SuperIsUpdateEvent((QMouseEvent*)self);
 }
 
-void q_mouseevent_on_is_update_event(const void* self, bool (*callback)(const void*)) {
-    QMouseEvent_OnIsUpdateEvent((const QMouseEvent*)self, (intptr_t)callback);
+void q_mouseevent_on_is_update_event(void* self, bool (*callback)(const void*)) {
+    QMouseEvent_OnIsUpdateEvent((QMouseEvent*)self, (intptr_t)callback);
 }
 
 bool q_mouseevent_is_end_event(const void* self) {
@@ -1020,8 +1020,8 @@ bool q_mouseevent_super_is_end_event(const void* self) {
     return QMouseEvent_SuperIsEndEvent((QMouseEvent*)self);
 }
 
-void q_mouseevent_on_is_end_event(const void* self, bool (*callback)(const void*)) {
-    QMouseEvent_OnIsEndEvent((const QMouseEvent*)self, (intptr_t)callback);
+void q_mouseevent_on_is_end_event(void* self, bool (*callback)(const void*)) {
+    QMouseEvent_OnIsEndEvent((QMouseEvent*)self, (intptr_t)callback);
 }
 
 void q_mouseevent_set_timestamp(void* self, uint64_t timestamp) {
@@ -1080,7 +1080,7 @@ QHoverEvent* q_hoverevent_clone(const void* self) {
     return QHoverEvent_Clone((QHoverEvent*)self);
 }
 
-void q_hoverevent_on_clone(const void* self, QHoverEvent* (*callback)(const void*)) {
+void q_hoverevent_on_clone(void* self, QHoverEvent* (*callback)(const void*)) {
     QHoverEvent_OnClone((QHoverEvent*)self, (intptr_t)callback);
 }
 
@@ -1100,7 +1100,7 @@ bool q_hoverevent_is_update_event(const void* self) {
     return QHoverEvent_IsUpdateEvent((QHoverEvent*)self);
 }
 
-void q_hoverevent_on_is_update_event(const void* self, bool (*callback)(const void*)) {
+void q_hoverevent_on_is_update_event(void* self, bool (*callback)(const void*)) {
     QHoverEvent_OnIsUpdateEvent((QHoverEvent*)self, (intptr_t)callback);
 }
 
@@ -1265,8 +1265,8 @@ bool q_hoverevent_super_is_begin_event(const void* self) {
     return QHoverEvent_SuperIsBeginEvent((QHoverEvent*)self);
 }
 
-void q_hoverevent_on_is_begin_event(const void* self, bool (*callback)(const void*)) {
-    QHoverEvent_OnIsBeginEvent((const QHoverEvent*)self, (intptr_t)callback);
+void q_hoverevent_on_is_begin_event(void* self, bool (*callback)(const void*)) {
+    QHoverEvent_OnIsBeginEvent((QHoverEvent*)self, (intptr_t)callback);
 }
 
 bool q_hoverevent_is_end_event(const void* self) {
@@ -1277,8 +1277,8 @@ bool q_hoverevent_super_is_end_event(const void* self) {
     return QHoverEvent_SuperIsEndEvent((QHoverEvent*)self);
 }
 
-void q_hoverevent_on_is_end_event(const void* self, bool (*callback)(const void*)) {
-    QHoverEvent_OnIsEndEvent((const QHoverEvent*)self, (intptr_t)callback);
+void q_hoverevent_on_is_end_event(void* self, bool (*callback)(const void*)) {
+    QHoverEvent_OnIsEndEvent((QHoverEvent*)self, (intptr_t)callback);
 }
 
 void q_hoverevent_set_timestamp(void* self, uint64_t timestamp) {
@@ -1325,7 +1325,7 @@ QWheelEvent* q_wheelevent_clone(const void* self) {
     return QWheelEvent_Clone((QWheelEvent*)self);
 }
 
-void q_wheelevent_on_clone(const void* self, QWheelEvent* (*callback)(const void*)) {
+void q_wheelevent_on_clone(void* self, QWheelEvent* (*callback)(const void*)) {
     QWheelEvent_OnClone((QWheelEvent*)self, (intptr_t)callback);
 }
 
@@ -1361,7 +1361,7 @@ bool q_wheelevent_is_begin_event(const void* self) {
     return QWheelEvent_IsBeginEvent((QWheelEvent*)self);
 }
 
-void q_wheelevent_on_is_begin_event(const void* self, bool (*callback)(const void*)) {
+void q_wheelevent_on_is_begin_event(void* self, bool (*callback)(const void*)) {
     QWheelEvent_OnIsBeginEvent((QWheelEvent*)self, (intptr_t)callback);
 }
 
@@ -1373,7 +1373,7 @@ bool q_wheelevent_is_update_event(const void* self) {
     return QWheelEvent_IsUpdateEvent((QWheelEvent*)self);
 }
 
-void q_wheelevent_on_is_update_event(const void* self, bool (*callback)(const void*)) {
+void q_wheelevent_on_is_update_event(void* self, bool (*callback)(const void*)) {
     QWheelEvent_OnIsUpdateEvent((QWheelEvent*)self, (intptr_t)callback);
 }
 
@@ -1385,7 +1385,7 @@ bool q_wheelevent_is_end_event(const void* self) {
     return QWheelEvent_IsEndEvent((QWheelEvent*)self);
 }
 
-void q_wheelevent_on_is_end_event(const void* self, bool (*callback)(const void*)) {
+void q_wheelevent_on_is_end_event(void* self, bool (*callback)(const void*)) {
     QWheelEvent_OnIsEndEvent((QWheelEvent*)self, (intptr_t)callback);
 }
 
@@ -1574,7 +1574,7 @@ QTabletEvent* q_tabletevent_clone(const void* self) {
     return QTabletEvent_Clone((QTabletEvent*)self);
 }
 
-void q_tabletevent_on_clone(const void* self, QTabletEvent* (*callback)(const void*)) {
+void q_tabletevent_on_clone(void* self, QTabletEvent* (*callback)(const void*)) {
     QTabletEvent_OnClone((QTabletEvent*)self, (intptr_t)callback);
 }
 
@@ -1799,8 +1799,8 @@ bool q_tabletevent_super_is_begin_event(const void* self) {
     return QTabletEvent_SuperIsBeginEvent((QTabletEvent*)self);
 }
 
-void q_tabletevent_on_is_begin_event(const void* self, bool (*callback)(const void*)) {
-    QTabletEvent_OnIsBeginEvent((const QTabletEvent*)self, (intptr_t)callback);
+void q_tabletevent_on_is_begin_event(void* self, bool (*callback)(const void*)) {
+    QTabletEvent_OnIsBeginEvent((QTabletEvent*)self, (intptr_t)callback);
 }
 
 bool q_tabletevent_is_update_event(const void* self) {
@@ -1811,8 +1811,8 @@ bool q_tabletevent_super_is_update_event(const void* self) {
     return QTabletEvent_SuperIsUpdateEvent((QTabletEvent*)self);
 }
 
-void q_tabletevent_on_is_update_event(const void* self, bool (*callback)(const void*)) {
-    QTabletEvent_OnIsUpdateEvent((const QTabletEvent*)self, (intptr_t)callback);
+void q_tabletevent_on_is_update_event(void* self, bool (*callback)(const void*)) {
+    QTabletEvent_OnIsUpdateEvent((QTabletEvent*)self, (intptr_t)callback);
 }
 
 bool q_tabletevent_is_end_event(const void* self) {
@@ -1823,8 +1823,8 @@ bool q_tabletevent_super_is_end_event(const void* self) {
     return QTabletEvent_SuperIsEndEvent((QTabletEvent*)self);
 }
 
-void q_tabletevent_on_is_end_event(const void* self, bool (*callback)(const void*)) {
-    QTabletEvent_OnIsEndEvent((const QTabletEvent*)self, (intptr_t)callback);
+void q_tabletevent_on_is_end_event(void* self, bool (*callback)(const void*)) {
+    QTabletEvent_OnIsEndEvent((QTabletEvent*)self, (intptr_t)callback);
 }
 
 void q_tabletevent_set_timestamp(void* self, uint64_t timestamp) {
@@ -1871,7 +1871,7 @@ QNativeGestureEvent* q_nativegestureevent_clone(const void* self) {
     return QNativeGestureEvent_Clone((QNativeGestureEvent*)self);
 }
 
-void q_nativegestureevent_on_clone(const void* self, QNativeGestureEvent* (*callback)(const void*)) {
+void q_nativegestureevent_on_clone(void* self, QNativeGestureEvent* (*callback)(const void*)) {
     QNativeGestureEvent_OnClone((QNativeGestureEvent*)self, (intptr_t)callback);
 }
 
@@ -2064,8 +2064,8 @@ bool q_nativegestureevent_super_is_begin_event(const void* self) {
     return QNativeGestureEvent_SuperIsBeginEvent((QNativeGestureEvent*)self);
 }
 
-void q_nativegestureevent_on_is_begin_event(const void* self, bool (*callback)(const void*)) {
-    QNativeGestureEvent_OnIsBeginEvent((const QNativeGestureEvent*)self, (intptr_t)callback);
+void q_nativegestureevent_on_is_begin_event(void* self, bool (*callback)(const void*)) {
+    QNativeGestureEvent_OnIsBeginEvent((QNativeGestureEvent*)self, (intptr_t)callback);
 }
 
 bool q_nativegestureevent_is_update_event(const void* self) {
@@ -2076,8 +2076,8 @@ bool q_nativegestureevent_super_is_update_event(const void* self) {
     return QNativeGestureEvent_SuperIsUpdateEvent((QNativeGestureEvent*)self);
 }
 
-void q_nativegestureevent_on_is_update_event(const void* self, bool (*callback)(const void*)) {
-    QNativeGestureEvent_OnIsUpdateEvent((const QNativeGestureEvent*)self, (intptr_t)callback);
+void q_nativegestureevent_on_is_update_event(void* self, bool (*callback)(const void*)) {
+    QNativeGestureEvent_OnIsUpdateEvent((QNativeGestureEvent*)self, (intptr_t)callback);
 }
 
 bool q_nativegestureevent_is_end_event(const void* self) {
@@ -2088,8 +2088,8 @@ bool q_nativegestureevent_super_is_end_event(const void* self) {
     return QNativeGestureEvent_SuperIsEndEvent((QNativeGestureEvent*)self);
 }
 
-void q_nativegestureevent_on_is_end_event(const void* self, bool (*callback)(const void*)) {
-    QNativeGestureEvent_OnIsEndEvent((const QNativeGestureEvent*)self, (intptr_t)callback);
+void q_nativegestureevent_on_is_end_event(void* self, bool (*callback)(const void*)) {
+    QNativeGestureEvent_OnIsEndEvent((QNativeGestureEvent*)self, (intptr_t)callback);
 }
 
 void q_nativegestureevent_set_timestamp(void* self, uint64_t timestamp) {
@@ -2160,7 +2160,7 @@ QKeyEvent* q_keyevent_clone(const void* self) {
     return QKeyEvent_Clone((QKeyEvent*)self);
 }
 
-void q_keyevent_on_clone(const void* self, QKeyEvent* (*callback)(const void*)) {
+void q_keyevent_on_clone(void* self, QKeyEvent* (*callback)(const void*)) {
     QKeyEvent_OnClone((QKeyEvent*)self, (intptr_t)callback);
 }
 
@@ -2307,7 +2307,7 @@ QFocusEvent* q_focusevent_clone(const void* self) {
     return QFocusEvent_Clone((QFocusEvent*)self);
 }
 
-void q_focusevent_on_clone(const void* self, QFocusEvent* (*callback)(const void*)) {
+void q_focusevent_on_clone(void* self, QFocusEvent* (*callback)(const void*)) {
     QFocusEvent_OnClone((QFocusEvent*)self, (intptr_t)callback);
 }
 
@@ -2395,7 +2395,7 @@ QPaintEvent* q_paintevent_clone(const void* self) {
     return QPaintEvent_Clone((QPaintEvent*)self);
 }
 
-void q_paintevent_on_clone(const void* self, QPaintEvent* (*callback)(const void*)) {
+void q_paintevent_on_clone(void* self, QPaintEvent* (*callback)(const void*)) {
     QPaintEvent_OnClone((QPaintEvent*)self, (intptr_t)callback);
 }
 
@@ -2475,7 +2475,7 @@ QMoveEvent* q_moveevent_clone(const void* self) {
     return QMoveEvent_Clone((QMoveEvent*)self);
 }
 
-void q_moveevent_on_clone(const void* self, QMoveEvent* (*callback)(const void*)) {
+void q_moveevent_on_clone(void* self, QMoveEvent* (*callback)(const void*)) {
     QMoveEvent_OnClone((QMoveEvent*)self, (intptr_t)callback);
 }
 
@@ -2555,7 +2555,7 @@ QExposeEvent* q_exposeevent_clone(const void* self) {
     return QExposeEvent_Clone((QExposeEvent*)self);
 }
 
-void q_exposeevent_on_clone(const void* self, QExposeEvent* (*callback)(const void*)) {
+void q_exposeevent_on_clone(void* self, QExposeEvent* (*callback)(const void*)) {
     QExposeEvent_OnClone((QExposeEvent*)self, (intptr_t)callback);
 }
 
@@ -2631,7 +2631,7 @@ QPlatformSurfaceEvent* q_platformsurfaceevent_clone(const void* self) {
     return QPlatformSurfaceEvent_Clone((QPlatformSurfaceEvent*)self);
 }
 
-void q_platformsurfaceevent_on_clone(const void* self, QPlatformSurfaceEvent* (*callback)(const void*)) {
+void q_platformsurfaceevent_on_clone(void* self, QPlatformSurfaceEvent* (*callback)(const void*)) {
     QPlatformSurfaceEvent_OnClone((QPlatformSurfaceEvent*)self, (intptr_t)callback);
 }
 
@@ -2707,7 +2707,7 @@ QResizeEvent* q_resizeevent_clone(const void* self) {
     return QResizeEvent_Clone((QResizeEvent*)self);
 }
 
-void q_resizeevent_on_clone(const void* self, QResizeEvent* (*callback)(const void*)) {
+void q_resizeevent_on_clone(void* self, QResizeEvent* (*callback)(const void*)) {
     QResizeEvent_OnClone((QResizeEvent*)self, (intptr_t)callback);
 }
 
@@ -2787,7 +2787,7 @@ QCloseEvent* q_closeevent_clone(const void* self) {
     return QCloseEvent_Clone((QCloseEvent*)self);
 }
 
-void q_closeevent_on_clone(const void* self, QCloseEvent* (*callback)(const void*)) {
+void q_closeevent_on_clone(void* self, QCloseEvent* (*callback)(const void*)) {
     QCloseEvent_OnClone((QCloseEvent*)self, (intptr_t)callback);
 }
 
@@ -2859,7 +2859,7 @@ QIconDragEvent* q_icondragevent_clone(const void* self) {
     return QIconDragEvent_Clone((QIconDragEvent*)self);
 }
 
-void q_icondragevent_on_clone(const void* self, QIconDragEvent* (*callback)(const void*)) {
+void q_icondragevent_on_clone(void* self, QIconDragEvent* (*callback)(const void*)) {
     QIconDragEvent_OnClone((QIconDragEvent*)self, (intptr_t)callback);
 }
 
@@ -2931,7 +2931,7 @@ QShowEvent* q_showevent_clone(const void* self) {
     return QShowEvent_Clone((QShowEvent*)self);
 }
 
-void q_showevent_on_clone(const void* self, QShowEvent* (*callback)(const void*)) {
+void q_showevent_on_clone(void* self, QShowEvent* (*callback)(const void*)) {
     QShowEvent_OnClone((QShowEvent*)self, (intptr_t)callback);
 }
 
@@ -3003,7 +3003,7 @@ QHideEvent* q_hideevent_clone(const void* self) {
     return QHideEvent_Clone((QHideEvent*)self);
 }
 
-void q_hideevent_on_clone(const void* self, QHideEvent* (*callback)(const void*)) {
+void q_hideevent_on_clone(void* self, QHideEvent* (*callback)(const void*)) {
     QHideEvent_OnClone((QHideEvent*)self, (intptr_t)callback);
 }
 
@@ -3083,7 +3083,7 @@ QContextMenuEvent* q_contextmenuevent_clone(const void* self) {
     return QContextMenuEvent_Clone((QContextMenuEvent*)self);
 }
 
-void q_contextmenuevent_on_clone(const void* self, QContextMenuEvent* (*callback)(const void*)) {
+void q_contextmenuevent_on_clone(void* self, QContextMenuEvent* (*callback)(const void*)) {
     QContextMenuEvent_OnClone((QContextMenuEvent*)self, (intptr_t)callback);
 }
 
@@ -3219,7 +3219,7 @@ QInputMethodEvent* q_inputmethodevent_clone(const void* self) {
     return QInputMethodEvent_Clone((QInputMethodEvent*)self);
 }
 
-void q_inputmethodevent_on_clone(const void* self, QInputMethodEvent* (*callback)(const void*)) {
+void q_inputmethodevent_on_clone(void* self, QInputMethodEvent* (*callback)(const void*)) {
     QInputMethodEvent_OnClone((QInputMethodEvent*)self, (intptr_t)callback);
 }
 
@@ -3330,7 +3330,7 @@ QInputMethodQueryEvent* q_inputmethodqueryevent_clone(const void* self) {
     return QInputMethodQueryEvent_Clone((QInputMethodQueryEvent*)self);
 }
 
-void q_inputmethodqueryevent_on_clone(const void* self, QInputMethodQueryEvent* (*callback)(const void*)) {
+void q_inputmethodqueryevent_on_clone(void* self, QInputMethodQueryEvent* (*callback)(const void*)) {
     QInputMethodQueryEvent_OnClone((QInputMethodQueryEvent*)self, (intptr_t)callback);
 }
 
@@ -3418,7 +3418,7 @@ QDropEvent* q_dropevent_clone(const void* self) {
     return QDropEvent_Clone((QDropEvent*)self);
 }
 
-void q_dropevent_on_clone(const void* self, QDropEvent* (*callback)(const void*)) {
+void q_dropevent_on_clone(void* self, QDropEvent* (*callback)(const void*)) {
     QDropEvent_OnClone((QDropEvent*)self, (intptr_t)callback);
 }
 
@@ -3550,7 +3550,7 @@ QDragMoveEvent* q_dragmoveevent_clone(const void* self) {
     return QDragMoveEvent_Clone((QDragMoveEvent*)self);
 }
 
-void q_dragmoveevent_on_clone(const void* self, QDragMoveEvent* (*callback)(const void*)) {
+void q_dragmoveevent_on_clone(void* self, QDragMoveEvent* (*callback)(const void*)) {
     QDragMoveEvent_OnClone((QDragMoveEvent*)self, (intptr_t)callback);
 }
 
@@ -3690,7 +3690,7 @@ QDragEnterEvent* q_dragenterevent_clone(const void* self) {
     return QDragEnterEvent_Clone((QDragEnterEvent*)self);
 }
 
-void q_dragenterevent_on_clone(const void* self, QDragEnterEvent* (*callback)(const void*)) {
+void q_dragenterevent_on_clone(void* self, QDragEnterEvent* (*callback)(const void*)) {
     QDragEnterEvent_OnClone((QDragEnterEvent*)self, (intptr_t)callback);
 }
 
@@ -3830,7 +3830,7 @@ QDragLeaveEvent* q_dragleaveevent_clone(const void* self) {
     return QDragLeaveEvent_Clone((QDragLeaveEvent*)self);
 }
 
-void q_dragleaveevent_on_clone(const void* self, QDragLeaveEvent* (*callback)(const void*)) {
+void q_dragleaveevent_on_clone(void* self, QDragLeaveEvent* (*callback)(const void*)) {
     QDragLeaveEvent_OnClone((QDragLeaveEvent*)self, (intptr_t)callback);
 }
 
@@ -3902,7 +3902,7 @@ QHelpEvent* q_helpevent_clone(const void* self) {
     return QHelpEvent_Clone((QHelpEvent*)self);
 }
 
-void q_helpevent_on_clone(const void* self, QHelpEvent* (*callback)(const void*)) {
+void q_helpevent_on_clone(void* self, QHelpEvent* (*callback)(const void*)) {
     QHelpEvent_OnClone((QHelpEvent*)self, (intptr_t)callback);
 }
 
@@ -3998,7 +3998,7 @@ QStatusTipEvent* q_statustipevent_clone(const void* self) {
     return QStatusTipEvent_Clone((QStatusTipEvent*)self);
 }
 
-void q_statustipevent_on_clone(const void* self, QStatusTipEvent* (*callback)(const void*)) {
+void q_statustipevent_on_clone(void* self, QStatusTipEvent* (*callback)(const void*)) {
     QStatusTipEvent_OnClone((QStatusTipEvent*)self, (intptr_t)callback);
 }
 
@@ -4077,7 +4077,7 @@ QWhatsThisClickedEvent* q_whatsthisclickedevent_clone(const void* self) {
     return QWhatsThisClickedEvent_Clone((QWhatsThisClickedEvent*)self);
 }
 
-void q_whatsthisclickedevent_on_clone(const void* self, QWhatsThisClickedEvent* (*callback)(const void*)) {
+void q_whatsthisclickedevent_on_clone(void* self, QWhatsThisClickedEvent* (*callback)(const void*)) {
     QWhatsThisClickedEvent_OnClone((QWhatsThisClickedEvent*)self, (intptr_t)callback);
 }
 
@@ -4160,7 +4160,7 @@ QActionEvent* q_actionevent_clone(const void* self) {
     return QActionEvent_Clone((QActionEvent*)self);
 }
 
-void q_actionevent_on_clone(const void* self, QActionEvent* (*callback)(const void*)) {
+void q_actionevent_on_clone(void* self, QActionEvent* (*callback)(const void*)) {
     QActionEvent_OnClone((QActionEvent*)self, (intptr_t)callback);
 }
 
@@ -4244,7 +4244,7 @@ QFileOpenEvent* q_fileopenevent_clone(const void* self) {
     return QFileOpenEvent_Clone((QFileOpenEvent*)self);
 }
 
-void q_fileopenevent_on_clone(const void* self, QFileOpenEvent* (*callback)(const void*)) {
+void q_fileopenevent_on_clone(void* self, QFileOpenEvent* (*callback)(const void*)) {
     QFileOpenEvent_OnClone((QFileOpenEvent*)self, (intptr_t)callback);
 }
 
@@ -4331,7 +4331,7 @@ QToolBarChangeEvent* q_toolbarchangeevent_clone(const void* self) {
     return QToolBarChangeEvent_Clone((QToolBarChangeEvent*)self);
 }
 
-void q_toolbarchangeevent_on_clone(const void* self, QToolBarChangeEvent* (*callback)(const void*)) {
+void q_toolbarchangeevent_on_clone(void* self, QToolBarChangeEvent* (*callback)(const void*)) {
     QToolBarChangeEvent_OnClone((QToolBarChangeEvent*)self, (intptr_t)callback);
 }
 
@@ -4423,7 +4423,7 @@ QShortcutEvent* q_shortcutevent_clone(const void* self) {
     return QShortcutEvent_Clone((QShortcutEvent*)self);
 }
 
-void q_shortcutevent_on_clone(const void* self, QShortcutEvent* (*callback)(const void*)) {
+void q_shortcutevent_on_clone(void* self, QShortcutEvent* (*callback)(const void*)) {
     QShortcutEvent_OnClone((QShortcutEvent*)self, (intptr_t)callback);
 }
 
@@ -4511,7 +4511,7 @@ QWindowStateChangeEvent* q_windowstatechangeevent_clone(const void* self) {
     return QWindowStateChangeEvent_Clone((QWindowStateChangeEvent*)self);
 }
 
-void q_windowstatechangeevent_on_clone(const void* self, QWindowStateChangeEvent* (*callback)(const void*)) {
+void q_windowstatechangeevent_on_clone(void* self, QWindowStateChangeEvent* (*callback)(const void*)) {
     QWindowStateChangeEvent_OnClone((QWindowStateChangeEvent*)self, (intptr_t)callback);
 }
 
@@ -4611,7 +4611,7 @@ QTouchEvent* q_touchevent_clone(const void* self) {
     return QTouchEvent_Clone((QTouchEvent*)self);
 }
 
-void q_touchevent_on_clone(const void* self, QTouchEvent* (*callback)(const void*)) {
+void q_touchevent_on_clone(void* self, QTouchEvent* (*callback)(const void*)) {
     QTouchEvent_OnClone((QTouchEvent*)self, (intptr_t)callback);
 }
 
@@ -4636,7 +4636,7 @@ bool q_touchevent_is_begin_event(const void* self) {
     return QTouchEvent_IsBeginEvent((QTouchEvent*)self);
 }
 
-void q_touchevent_on_is_begin_event(const void* self, bool (*callback)(const void*)) {
+void q_touchevent_on_is_begin_event(void* self, bool (*callback)(const void*)) {
     QTouchEvent_OnIsBeginEvent((QTouchEvent*)self, (intptr_t)callback);
 }
 
@@ -4648,7 +4648,7 @@ bool q_touchevent_is_update_event(const void* self) {
     return QTouchEvent_IsUpdateEvent((QTouchEvent*)self);
 }
 
-void q_touchevent_on_is_update_event(const void* self, bool (*callback)(const void*)) {
+void q_touchevent_on_is_update_event(void* self, bool (*callback)(const void*)) {
     QTouchEvent_OnIsUpdateEvent((QTouchEvent*)self, (intptr_t)callback);
 }
 
@@ -4660,7 +4660,7 @@ bool q_touchevent_is_end_event(const void* self) {
     return QTouchEvent_IsEndEvent((QTouchEvent*)self);
 }
 
-void q_touchevent_on_is_end_event(const void* self, bool (*callback)(const void*)) {
+void q_touchevent_on_is_end_event(void* self, bool (*callback)(const void*)) {
     QTouchEvent_OnIsEndEvent((QTouchEvent*)self, (intptr_t)callback);
 }
 
@@ -4817,7 +4817,7 @@ QScrollPrepareEvent* q_scrollprepareevent_clone(const void* self) {
     return QScrollPrepareEvent_Clone((QScrollPrepareEvent*)self);
 }
 
-void q_scrollprepareevent_on_clone(const void* self, QScrollPrepareEvent* (*callback)(const void*)) {
+void q_scrollprepareevent_on_clone(void* self, QScrollPrepareEvent* (*callback)(const void*)) {
     QScrollPrepareEvent_OnClone((QScrollPrepareEvent*)self, (intptr_t)callback);
 }
 
@@ -4917,7 +4917,7 @@ QScrollEvent* q_scrollevent_clone(const void* self) {
     return QScrollEvent_Clone((QScrollEvent*)self);
 }
 
-void q_scrollevent_on_clone(const void* self, QScrollEvent* (*callback)(const void*)) {
+void q_scrollevent_on_clone(void* self, QScrollEvent* (*callback)(const void*)) {
     QScrollEvent_OnClone((QScrollEvent*)self, (intptr_t)callback);
 }
 
@@ -5001,7 +5001,7 @@ QScreenOrientationChangeEvent* q_screenorientationchangeevent_clone(const void* 
     return QScreenOrientationChangeEvent_Clone((QScreenOrientationChangeEvent*)self);
 }
 
-void q_screenorientationchangeevent_on_clone(const void* self, QScreenOrientationChangeEvent* (*callback)(const void*)) {
+void q_screenorientationchangeevent_on_clone(void* self, QScreenOrientationChangeEvent* (*callback)(const void*)) {
     QScreenOrientationChangeEvent_OnClone((QScreenOrientationChangeEvent*)self, (intptr_t)callback);
 }
 
@@ -5081,7 +5081,7 @@ QApplicationStateChangeEvent* q_applicationstatechangeevent_clone(const void* se
     return QApplicationStateChangeEvent_Clone((QApplicationStateChangeEvent*)self);
 }
 
-void q_applicationstatechangeevent_on_clone(const void* self, QApplicationStateChangeEvent* (*callback)(const void*)) {
+void q_applicationstatechangeevent_on_clone(void* self, QApplicationStateChangeEvent* (*callback)(const void*)) {
     QApplicationStateChangeEvent_OnClone((QApplicationStateChangeEvent*)self, (intptr_t)callback);
 }
 
@@ -5157,7 +5157,7 @@ QChildWindowEvent* q_childwindowevent_clone(const void* self) {
     return QChildWindowEvent_Clone((QChildWindowEvent*)self);
 }
 
-void q_childwindowevent_on_clone(const void* self, QChildWindowEvent* (*callback)(const void*)) {
+void q_childwindowevent_on_clone(void* self, QChildWindowEvent* (*callback)(const void*)) {
     QChildWindowEvent_OnClone((QChildWindowEvent*)self, (intptr_t)callback);
 }
 

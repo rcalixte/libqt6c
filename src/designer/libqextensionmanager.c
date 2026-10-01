@@ -14,11 +14,11 @@ QExtensionManager* q_extensionmanager_new2(void* parent) {
     return QExtensionManager_New2((QObject*)parent);
 }
 
-QAbstractExtensionManager* q_extensionmanager_as_q_abstract_extension_manager(void* self) {
+QAbstractExtensionManager* q_extensionmanager_as_q_abstract_extension_manager(const void* self) {
     return QExtensionManager_AsQAbstractExtensionManager((QExtensionManager*)self);
 }
 
-QExtensionManager* q_extensionmanager_from_q_abstract_extension_manager(void* _qabstractextensionmanager) {
+QExtensionManager* q_extensionmanager_from_q_abstract_extension_manager(const void* _qabstractextensionmanager) {
     return (QExtensionManager*)QExtensionManager_FromQAbstractExtensionManager((QAbstractExtensionManager*)_qabstractextensionmanager);
 }
 
@@ -26,7 +26,7 @@ const QMetaObject* q_extensionmanager_meta_object(const void* self) {
     return QExtensionManager_MetaObject((QExtensionManager*)self);
 }
 
-void q_extensionmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_extensionmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QExtensionManager_OnMetaObject((QExtensionManager*)self, (intptr_t)callback);
 }
 
@@ -93,7 +93,7 @@ QObject* q_extensionmanager_extension(const void* self, void* object, const char
     return QExtensionManager_Extension((QExtensionManager*)self, (QObject*)object, qstring(iid));
 }
 
-void q_extensionmanager_on_extension(const void* self, QObject* (*callback)(const void*, void*, const char*)) {
+void q_extensionmanager_on_extension(void* self, QObject* (*callback)(const void*, void*, const char*)) {
     QExtensionManager_OnExtension((QExtensionManager*)self, (intptr_t)callback);
 }
 

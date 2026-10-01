@@ -28,7 +28,7 @@ const QMetaObject* q_propertyanimation_meta_object(const void* self) {
     return QPropertyAnimation_MetaObject((QPropertyAnimation*)self);
 }
 
-void q_propertyanimation_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_propertyanimation_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPropertyAnimation_OnMetaObject((QPropertyAnimation*)self, (intptr_t)callback);
 }
 
@@ -509,8 +509,8 @@ int32_t q_propertyanimation_super_duration(const void* self) {
     return QPropertyAnimation_SuperDuration((QPropertyAnimation*)self);
 }
 
-void q_propertyanimation_on_duration(const void* self, int32_t (*callback)(const void*)) {
-    QPropertyAnimation_OnDuration((const QPropertyAnimation*)self, (intptr_t)callback);
+void q_propertyanimation_on_duration(void* self, int32_t (*callback)(const void*)) {
+    QPropertyAnimation_OnDuration((QPropertyAnimation*)self, (intptr_t)callback);
 }
 
 void q_propertyanimation_update_current_time(void* self, int param1) {
@@ -533,8 +533,8 @@ QVariant* q_propertyanimation_super_interpolated(const void* self, const void* f
     return QPropertyAnimation_SuperInterpolated((QPropertyAnimation*)self, (QVariant*)from, (QVariant*)to, progress);
 }
 
-void q_propertyanimation_on_interpolated(const void* self, QVariant* (*callback)(const void*, const void*, const void*, double)) {
-    QPropertyAnimation_OnInterpolated((const QPropertyAnimation*)self, (intptr_t)callback);
+void q_propertyanimation_on_interpolated(void* self, QVariant* (*callback)(const void*, const void*, const void*, double)) {
+    QPropertyAnimation_OnInterpolated((QPropertyAnimation*)self, (intptr_t)callback);
 }
 
 void q_propertyanimation_update_direction(void* self, int32_t direction) {

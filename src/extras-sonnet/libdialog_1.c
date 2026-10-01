@@ -23,7 +23,7 @@ const QMetaObject* k_sonnet__dialog_meta_object(const void* self) {
     return Sonnet__Dialog_MetaObject((Sonnet__Dialog*)self);
 }
 
-void k_sonnet__dialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_sonnet__dialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Sonnet__Dialog_OnMetaObject((Sonnet__Dialog*)self, (intptr_t)callback);
 }
 
@@ -230,11 +230,11 @@ void k_sonnet__dialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_sonnet__dialog_as_q_paint_device(void* self) {
+QPaintDevice* k_sonnet__dialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-Sonnet__Dialog* k_sonnet__dialog_from_q_paint_device(void* _qpaintdevice) {
+Sonnet__Dialog* k_sonnet__dialog_from_q_paint_device(const void* _qpaintdevice) {
     return (Sonnet__Dialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1633,8 +1633,8 @@ QSize* k_sonnet__dialog_super_size_hint(const void* self) {
     return Sonnet__Dialog_SuperSizeHint((Sonnet__Dialog*)self);
 }
 
-void k_sonnet__dialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    Sonnet__Dialog_OnSizeHint((const Sonnet__Dialog*)self, (intptr_t)callback);
+void k_sonnet__dialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    Sonnet__Dialog_OnSizeHint((Sonnet__Dialog*)self, (intptr_t)callback);
 }
 
 QSize* k_sonnet__dialog_minimum_size_hint(const void* self) {
@@ -1645,8 +1645,8 @@ QSize* k_sonnet__dialog_super_minimum_size_hint(const void* self) {
     return Sonnet__Dialog_SuperMinimumSizeHint((Sonnet__Dialog*)self);
 }
 
-void k_sonnet__dialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    Sonnet__Dialog_OnMinimumSizeHint((const Sonnet__Dialog*)self, (intptr_t)callback);
+void k_sonnet__dialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    Sonnet__Dialog_OnMinimumSizeHint((Sonnet__Dialog*)self, (intptr_t)callback);
 }
 
 void k_sonnet__dialog_open(void* self) {
@@ -1789,8 +1789,8 @@ int32_t k_sonnet__dialog_super_dev_type(const void* self) {
     return Sonnet__Dialog_SuperDevType((Sonnet__Dialog*)self);
 }
 
-void k_sonnet__dialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    Sonnet__Dialog_OnDevType((const Sonnet__Dialog*)self, (intptr_t)callback);
+void k_sonnet__dialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    Sonnet__Dialog_OnDevType((Sonnet__Dialog*)self, (intptr_t)callback);
 }
 
 int32_t k_sonnet__dialog_height_for_width(const void* self, int param1) {
@@ -1801,8 +1801,8 @@ int32_t k_sonnet__dialog_super_height_for_width(const void* self, int param1) {
     return Sonnet__Dialog_SuperHeightForWidth((Sonnet__Dialog*)self, param1);
 }
 
-void k_sonnet__dialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    Sonnet__Dialog_OnHeightForWidth((const Sonnet__Dialog*)self, (intptr_t)callback);
+void k_sonnet__dialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    Sonnet__Dialog_OnHeightForWidth((Sonnet__Dialog*)self, (intptr_t)callback);
 }
 
 bool k_sonnet__dialog_has_height_for_width(const void* self) {
@@ -1813,8 +1813,8 @@ bool k_sonnet__dialog_super_has_height_for_width(const void* self) {
     return Sonnet__Dialog_SuperHasHeightForWidth((Sonnet__Dialog*)self);
 }
 
-void k_sonnet__dialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    Sonnet__Dialog_OnHasHeightForWidth((const Sonnet__Dialog*)self, (intptr_t)callback);
+void k_sonnet__dialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    Sonnet__Dialog_OnHasHeightForWidth((Sonnet__Dialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_sonnet__dialog_paint_engine(const void* self) {
@@ -1825,8 +1825,8 @@ QPaintEngine* k_sonnet__dialog_super_paint_engine(const void* self) {
     return Sonnet__Dialog_SuperPaintEngine((Sonnet__Dialog*)self);
 }
 
-void k_sonnet__dialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    Sonnet__Dialog_OnPaintEngine((const Sonnet__Dialog*)self, (intptr_t)callback);
+void k_sonnet__dialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    Sonnet__Dialog_OnPaintEngine((Sonnet__Dialog*)self, (intptr_t)callback);
 }
 
 bool k_sonnet__dialog_event(void* self, void* event) {
@@ -2101,8 +2101,8 @@ int32_t k_sonnet__dialog_super_metric(const void* self, int32_t param1) {
     return Sonnet__Dialog_SuperMetric((Sonnet__Dialog*)self, param1);
 }
 
-void k_sonnet__dialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    Sonnet__Dialog_OnMetric((const Sonnet__Dialog*)self, (intptr_t)callback);
+void k_sonnet__dialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    Sonnet__Dialog_OnMetric((Sonnet__Dialog*)self, (intptr_t)callback);
 }
 
 void k_sonnet__dialog_init_painter(const void* self, void* painter) {
@@ -2113,8 +2113,8 @@ void k_sonnet__dialog_super_init_painter(const void* self, void* painter) {
     Sonnet__Dialog_SuperInitPainter((Sonnet__Dialog*)self, (QPainter*)painter);
 }
 
-void k_sonnet__dialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    Sonnet__Dialog_OnInitPainter((const Sonnet__Dialog*)self, (intptr_t)callback);
+void k_sonnet__dialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    Sonnet__Dialog_OnInitPainter((Sonnet__Dialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_sonnet__dialog_redirected(const void* self, void* offset) {
@@ -2125,8 +2125,8 @@ QPaintDevice* k_sonnet__dialog_super_redirected(const void* self, void* offset) 
     return Sonnet__Dialog_SuperRedirected((Sonnet__Dialog*)self, (QPoint*)offset);
 }
 
-void k_sonnet__dialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    Sonnet__Dialog_OnRedirected((const Sonnet__Dialog*)self, (intptr_t)callback);
+void k_sonnet__dialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    Sonnet__Dialog_OnRedirected((Sonnet__Dialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_sonnet__dialog_shared_painter(const void* self) {
@@ -2137,8 +2137,8 @@ QPainter* k_sonnet__dialog_super_shared_painter(const void* self) {
     return Sonnet__Dialog_SuperSharedPainter((Sonnet__Dialog*)self);
 }
 
-void k_sonnet__dialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    Sonnet__Dialog_OnSharedPainter((const Sonnet__Dialog*)self, (intptr_t)callback);
+void k_sonnet__dialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    Sonnet__Dialog_OnSharedPainter((Sonnet__Dialog*)self, (intptr_t)callback);
 }
 
 void k_sonnet__dialog_input_method_event(void* self, void* param1) {
@@ -2161,8 +2161,8 @@ QVariant* k_sonnet__dialog_super_input_method_query(const void* self, int32_t pa
     return Sonnet__Dialog_SuperInputMethodQuery((Sonnet__Dialog*)self, param1);
 }
 
-void k_sonnet__dialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    Sonnet__Dialog_OnInputMethodQuery((const Sonnet__Dialog*)self, (intptr_t)callback);
+void k_sonnet__dialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    Sonnet__Dialog_OnInputMethodQuery((Sonnet__Dialog*)self, (intptr_t)callback);
 }
 
 bool k_sonnet__dialog_focus_next_prev_child(void* self, bool next) {

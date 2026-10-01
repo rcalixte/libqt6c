@@ -483,10 +483,10 @@ bool q_sgsimpletexturenode_super_is_subtree_blocked(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGSimpleTextureNode*
+/// @param self QSGSimpleTextureNode*
 /// @param callback bool func(QSGSimpleTextureNode* self)
 ///
-void q_sgsimpletexturenode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
+void q_sgsimpletexturenode_on_is_subtree_blocked(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///

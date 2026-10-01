@@ -54,10 +54,10 @@ const QMetaObject* q_wavedecoder_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWaveDecoder*
+/// @param self QWaveDecoder*
 /// @param callback const QMetaObject* func(const QWaveDecoder* self)
 ///
-void q_wavedecoder_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_wavedecoder_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -222,10 +222,10 @@ int64_t q_wavedecoder_pos(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWaveDecoder*
+/// @param self QWaveDecoder*
 /// @param callback int64_t func(const QWaveDecoder* self)
 ///
-void q_wavedecoder_on_pos(const void* self, int64_t (*callback)(const void*));
+void q_wavedecoder_on_pos(void* self, int64_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#pos)
 ///
@@ -252,10 +252,10 @@ int64_t q_wavedecoder_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWaveDecoder*
+/// @param self QWaveDecoder*
 /// @param callback int64_t func(const QWaveDecoder* self)
 ///
-void q_wavedecoder_on_size(const void* self, int64_t (*callback)(const void*));
+void q_wavedecoder_on_size(void* self, int64_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#size)
 ///
@@ -275,10 +275,10 @@ bool q_wavedecoder_is_sequential(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWaveDecoder*
+/// @param self QWaveDecoder*
 /// @param callback bool func(const QWaveDecoder* self)
 ///
-void q_wavedecoder_on_is_sequential(const void* self, bool (*callback)(const void*));
+void q_wavedecoder_on_is_sequential(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#isSequential)
 ///
@@ -298,10 +298,10 @@ int64_t q_wavedecoder_bytes_available(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWaveDecoder*
+/// @param self QWaveDecoder*
 /// @param callback int64_t func(const QWaveDecoder* self)
 ///
-void q_wavedecoder_on_bytes_available(const void* self, int64_t (*callback)(const void*));
+void q_wavedecoder_on_bytes_available(void* self, int64_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#bytesAvailable)
 ///
@@ -360,9 +360,9 @@ const char* q_wavedecoder_tr3(const char* s, const char* c, int n);
 ///
 /// Upcasts to a QIODeviceBase object
 ///
-/// @param self QWaveDecoder*
+/// @param self const QWaveDecoder*
 ///
-QIODeviceBase* q_wavedecoder_as_q_i_o_device_base(void* self);
+QIODeviceBase* q_wavedecoder_as_q_i_o_device_base(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1233,10 +1233,10 @@ bool q_wavedecoder_super_at_end(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWaveDecoder*
+/// @param self QWaveDecoder*
 /// @param callback bool func(QWaveDecoder* self)
 ///
-void q_wavedecoder_on_at_end(const void* self, bool (*callback)(const void*));
+void q_wavedecoder_on_at_end(void* self, bool (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1295,10 +1295,10 @@ int64_t q_wavedecoder_super_bytes_to_write(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWaveDecoder*
+/// @param self QWaveDecoder*
 /// @param callback int64_t func(QWaveDecoder* self)
 ///
-void q_wavedecoder_on_bytes_to_write(const void* self, int64_t (*callback)(const void*));
+void q_wavedecoder_on_bytes_to_write(void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1326,10 +1326,10 @@ bool q_wavedecoder_super_can_read_line(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWaveDecoder*
+/// @param self QWaveDecoder*
 /// @param callback bool func(QWaveDecoder* self)
 ///
-void q_wavedecoder_on_can_read_line(const void* self, bool (*callback)(const void*));
+void q_wavedecoder_on_can_read_line(void* self, bool (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1790,10 +1790,10 @@ QObject* q_wavedecoder_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWaveDecoder*
+/// @param self QWaveDecoder*
 /// @param callback QObject* func(QWaveDecoder* self)
 ///
-void q_wavedecoder_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_wavedecoder_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1821,10 +1821,10 @@ int32_t q_wavedecoder_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWaveDecoder*
+/// @param self QWaveDecoder*
 /// @param callback int32_t func(QWaveDecoder* self)
 ///
-void q_wavedecoder_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_wavedecoder_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1854,10 +1854,10 @@ int32_t q_wavedecoder_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWaveDecoder*
+/// @param self QWaveDecoder*
 /// @param callback int32_t func(QWaveDecoder* self, const char* signal)
 ///
-void q_wavedecoder_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_wavedecoder_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1887,10 +1887,10 @@ bool q_wavedecoder_super_is_signal_connected(const void* self, const void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWaveDecoder*
+/// @param self QWaveDecoder*
 /// @param callback bool func(QWaveDecoder* self, QMetaMethod* signal)
 ///
-void q_wavedecoder_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_wavedecoder_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

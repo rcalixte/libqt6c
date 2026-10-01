@@ -38,7 +38,7 @@ const QMetaObject* k_multitabbar_meta_object(const void* self) {
     return KMultiTabBar_MetaObject((KMultiTabBar*)self);
 }
 
-void k_multitabbar_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_multitabbar_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KMultiTabBar_OnMetaObject((KMultiTabBar*)self, (intptr_t)callback);
 }
 
@@ -187,11 +187,11 @@ int32_t k_multitabbar_append_tab3(void* self, const void* icon, int id, const ch
     return KMultiTabBar_AppendTab3((KMultiTabBar*)self, (QIcon*)icon, id, qstring(text));
 }
 
-QPaintDevice* k_multitabbar_as_q_paint_device(void* self) {
+QPaintDevice* k_multitabbar_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KMultiTabBar* k_multitabbar_from_q_paint_device(void* _qpaintdevice) {
+KMultiTabBar* k_multitabbar_from_q_paint_device(const void* _qpaintdevice) {
     return (KMultiTabBar*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1578,8 +1578,8 @@ int32_t k_multitabbar_super_dev_type(const void* self) {
     return KMultiTabBar_SuperDevType((KMultiTabBar*)self);
 }
 
-void k_multitabbar_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KMultiTabBar_OnDevType((const KMultiTabBar*)self, (intptr_t)callback);
+void k_multitabbar_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KMultiTabBar_OnDevType((KMultiTabBar*)self, (intptr_t)callback);
 }
 
 void k_multitabbar_set_visible(void* self, bool visible) {
@@ -1602,8 +1602,8 @@ QSize* k_multitabbar_super_size_hint(const void* self) {
     return KMultiTabBar_SuperSizeHint((KMultiTabBar*)self);
 }
 
-void k_multitabbar_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KMultiTabBar_OnSizeHint((const KMultiTabBar*)self, (intptr_t)callback);
+void k_multitabbar_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KMultiTabBar_OnSizeHint((KMultiTabBar*)self, (intptr_t)callback);
 }
 
 QSize* k_multitabbar_minimum_size_hint(const void* self) {
@@ -1614,8 +1614,8 @@ QSize* k_multitabbar_super_minimum_size_hint(const void* self) {
     return KMultiTabBar_SuperMinimumSizeHint((KMultiTabBar*)self);
 }
 
-void k_multitabbar_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KMultiTabBar_OnMinimumSizeHint((const KMultiTabBar*)self, (intptr_t)callback);
+void k_multitabbar_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KMultiTabBar_OnMinimumSizeHint((KMultiTabBar*)self, (intptr_t)callback);
 }
 
 int32_t k_multitabbar_height_for_width(const void* self, int param1) {
@@ -1626,8 +1626,8 @@ int32_t k_multitabbar_super_height_for_width(const void* self, int param1) {
     return KMultiTabBar_SuperHeightForWidth((KMultiTabBar*)self, param1);
 }
 
-void k_multitabbar_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KMultiTabBar_OnHeightForWidth((const KMultiTabBar*)self, (intptr_t)callback);
+void k_multitabbar_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KMultiTabBar_OnHeightForWidth((KMultiTabBar*)self, (intptr_t)callback);
 }
 
 bool k_multitabbar_has_height_for_width(const void* self) {
@@ -1638,8 +1638,8 @@ bool k_multitabbar_super_has_height_for_width(const void* self) {
     return KMultiTabBar_SuperHasHeightForWidth((KMultiTabBar*)self);
 }
 
-void k_multitabbar_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KMultiTabBar_OnHasHeightForWidth((const KMultiTabBar*)self, (intptr_t)callback);
+void k_multitabbar_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KMultiTabBar_OnHasHeightForWidth((KMultiTabBar*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_multitabbar_paint_engine(const void* self) {
@@ -1650,8 +1650,8 @@ QPaintEngine* k_multitabbar_super_paint_engine(const void* self) {
     return KMultiTabBar_SuperPaintEngine((KMultiTabBar*)self);
 }
 
-void k_multitabbar_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KMultiTabBar_OnPaintEngine((const KMultiTabBar*)self, (intptr_t)callback);
+void k_multitabbar_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KMultiTabBar_OnPaintEngine((KMultiTabBar*)self, (intptr_t)callback);
 }
 
 bool k_multitabbar_event(void* self, void* event) {
@@ -1974,8 +1974,8 @@ int32_t k_multitabbar_super_metric(const void* self, int32_t param1) {
     return KMultiTabBar_SuperMetric((KMultiTabBar*)self, param1);
 }
 
-void k_multitabbar_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KMultiTabBar_OnMetric((const KMultiTabBar*)self, (intptr_t)callback);
+void k_multitabbar_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KMultiTabBar_OnMetric((KMultiTabBar*)self, (intptr_t)callback);
 }
 
 void k_multitabbar_init_painter(const void* self, void* painter) {
@@ -1986,8 +1986,8 @@ void k_multitabbar_super_init_painter(const void* self, void* painter) {
     KMultiTabBar_SuperInitPainter((KMultiTabBar*)self, (QPainter*)painter);
 }
 
-void k_multitabbar_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KMultiTabBar_OnInitPainter((const KMultiTabBar*)self, (intptr_t)callback);
+void k_multitabbar_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KMultiTabBar_OnInitPainter((KMultiTabBar*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_multitabbar_redirected(const void* self, void* offset) {
@@ -1998,8 +1998,8 @@ QPaintDevice* k_multitabbar_super_redirected(const void* self, void* offset) {
     return KMultiTabBar_SuperRedirected((KMultiTabBar*)self, (QPoint*)offset);
 }
 
-void k_multitabbar_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KMultiTabBar_OnRedirected((const KMultiTabBar*)self, (intptr_t)callback);
+void k_multitabbar_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KMultiTabBar_OnRedirected((KMultiTabBar*)self, (intptr_t)callback);
 }
 
 QPainter* k_multitabbar_shared_painter(const void* self) {
@@ -2010,8 +2010,8 @@ QPainter* k_multitabbar_super_shared_painter(const void* self) {
     return KMultiTabBar_SuperSharedPainter((KMultiTabBar*)self);
 }
 
-void k_multitabbar_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KMultiTabBar_OnSharedPainter((const KMultiTabBar*)self, (intptr_t)callback);
+void k_multitabbar_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KMultiTabBar_OnSharedPainter((KMultiTabBar*)self, (intptr_t)callback);
 }
 
 void k_multitabbar_input_method_event(void* self, void* param1) {
@@ -2034,8 +2034,8 @@ QVariant* k_multitabbar_super_input_method_query(const void* self, int32_t param
     return KMultiTabBar_SuperInputMethodQuery((KMultiTabBar*)self, param1);
 }
 
-void k_multitabbar_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KMultiTabBar_OnInputMethodQuery((const KMultiTabBar*)self, (intptr_t)callback);
+void k_multitabbar_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KMultiTabBar_OnInputMethodQuery((KMultiTabBar*)self, (intptr_t)callback);
 }
 
 bool k_multitabbar_focus_next_prev_child(void* self, bool next) {
@@ -2398,11 +2398,11 @@ void k_multitabbarbutton_on_clicked1(void* self, void (*callback)(void*, bool)) 
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_multitabbarbutton_as_q_paint_device(void* self) {
+QPaintDevice* k_multitabbarbutton_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KMultiTabBarButton* k_multitabbarbutton_from_q_paint_device(void* _qpaintdevice) {
+KMultiTabBarButton* k_multitabbarbutton_from_q_paint_device(const void* _qpaintdevice) {
     return (KMultiTabBarButton*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -4061,11 +4061,11 @@ void k_multitabbartab_on_clicked1(void* self, void (*callback)(void*, bool)) {
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_multitabbartab_as_q_paint_device(void* self) {
+QPaintDevice* k_multitabbartab_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KMultiTabBarTab* k_multitabbartab_from_q_paint_device(void* _qpaintdevice) {
+KMultiTabBarTab* k_multitabbartab_from_q_paint_device(const void* _qpaintdevice) {
     return (KMultiTabBarTab*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 

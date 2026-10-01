@@ -763,9 +763,9 @@ void q_designerformwindowinterface_activate_resource_file_paths2(void* self, con
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QDesignerFormWindowInterface*
+/// @param self const QDesignerFormWindowInterface*
 ///
-QPaintDevice* q_designerformwindowinterface_as_q_paint_device(void* self);
+QPaintDevice* q_designerformwindowinterface_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -773,7 +773,7 @@ QPaintDevice* q_designerformwindowinterface_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QDesignerFormWindowInterface* q_designerformwindowinterface_from_q_paint_device(void* _qpaintdevice);
+QDesignerFormWindowInterface* q_designerformwindowinterface_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

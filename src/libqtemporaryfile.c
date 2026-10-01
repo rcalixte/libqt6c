@@ -29,7 +29,7 @@ const QMetaObject* q_temporaryfile_meta_object(const void* self) {
     return QTemporaryFile_MetaObject((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_temporaryfile_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTemporaryFile_OnMetaObject((QTemporaryFile*)self, (intptr_t)callback);
 }
 
@@ -87,7 +87,7 @@ const char* q_temporaryfile_file_name(const void* self) {
     return _ret;
 }
 
-void q_temporaryfile_on_file_name(const void* self, const char* (*callback)(const void*)) {
+void q_temporaryfile_on_file_name(void* self, const char* (*callback)(const void*)) {
     QTemporaryFile_OnFileName((QTemporaryFile*)self, (intptr_t)callback);
 }
 
@@ -286,7 +286,7 @@ unsigned char* q_temporaryfile_map3(void* self, int64_t offset, int64_t size, in
     return (unsigned char*)QFileDevice_Map3((QFileDevice*)self, offset, size, flags);
 }
 
-QIODeviceBase* q_temporaryfile_as_q_i_o_device_base(void* self) {
+QIODeviceBase* q_temporaryfile_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
@@ -701,8 +701,8 @@ int64_t q_temporaryfile_super_size(const void* self) {
     return QTemporaryFile_SuperSize((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_size(const void* self, int64_t (*callback)(const void*)) {
-    QTemporaryFile_OnSize((const QTemporaryFile*)self, (intptr_t)callback);
+void q_temporaryfile_on_size(void* self, int64_t (*callback)(const void*)) {
+    QTemporaryFile_OnSize((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_resize(void* self, int64_t sz) {
@@ -725,8 +725,8 @@ int32_t q_temporaryfile_super_permissions(const void* self) {
     return QTemporaryFile_SuperPermissions((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_permissions(const void* self, int32_t (*callback)(const void*)) {
-    QTemporaryFile_OnPermissions((const QTemporaryFile*)self, (intptr_t)callback);
+void q_temporaryfile_on_permissions(void* self, int32_t (*callback)(const void*)) {
+    QTemporaryFile_OnPermissions((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_set_permissions(void* self, int32_t permissionSpec) {
@@ -761,8 +761,8 @@ bool q_temporaryfile_super_is_sequential(const void* self) {
     return QTemporaryFile_SuperIsSequential((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_is_sequential(const void* self, bool (*callback)(const void*)) {
-    QTemporaryFile_OnIsSequential((const QTemporaryFile*)self, (intptr_t)callback);
+void q_temporaryfile_on_is_sequential(void* self, bool (*callback)(const void*)) {
+    QTemporaryFile_OnIsSequential((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 int64_t q_temporaryfile_pos(const void* self) {
@@ -773,8 +773,8 @@ int64_t q_temporaryfile_super_pos(const void* self) {
     return QTemporaryFile_SuperPos((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_pos(const void* self, int64_t (*callback)(const void*)) {
-    QTemporaryFile_OnPos((const QTemporaryFile*)self, (intptr_t)callback);
+void q_temporaryfile_on_pos(void* self, int64_t (*callback)(const void*)) {
+    QTemporaryFile_OnPos((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_seek(void* self, int64_t offset) {
@@ -797,8 +797,8 @@ bool q_temporaryfile_super_at_end(const void* self) {
     return QTemporaryFile_SuperAtEnd((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_at_end(const void* self, bool (*callback)(const void*)) {
-    QTemporaryFile_OnAtEnd((const QTemporaryFile*)self, (intptr_t)callback);
+void q_temporaryfile_on_at_end(void* self, bool (*callback)(const void*)) {
+    QTemporaryFile_OnAtEnd((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 int64_t q_temporaryfile_read_data(void* self, char* data, int64_t maxlen) {
@@ -857,8 +857,8 @@ int64_t q_temporaryfile_super_bytes_available(const void* self) {
     return QTemporaryFile_SuperBytesAvailable((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
-    QTemporaryFile_OnBytesAvailable((const QTemporaryFile*)self, (intptr_t)callback);
+void q_temporaryfile_on_bytes_available(void* self, int64_t (*callback)(const void*)) {
+    QTemporaryFile_OnBytesAvailable((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 int64_t q_temporaryfile_bytes_to_write(const void* self) {
@@ -869,8 +869,8 @@ int64_t q_temporaryfile_super_bytes_to_write(const void* self) {
     return QTemporaryFile_SuperBytesToWrite((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
-    QTemporaryFile_OnBytesToWrite((const QTemporaryFile*)self, (intptr_t)callback);
+void q_temporaryfile_on_bytes_to_write(void* self, int64_t (*callback)(const void*)) {
+    QTemporaryFile_OnBytesToWrite((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_can_read_line(const void* self) {
@@ -881,8 +881,8 @@ bool q_temporaryfile_super_can_read_line(const void* self) {
     return QTemporaryFile_SuperCanReadLine((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_can_read_line(const void* self, bool (*callback)(const void*)) {
-    QTemporaryFile_OnCanReadLine((const QTemporaryFile*)self, (intptr_t)callback);
+void q_temporaryfile_on_can_read_line(void* self, bool (*callback)(const void*)) {
+    QTemporaryFile_OnCanReadLine((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_wait_for_ready_read(void* self, int msecs) {

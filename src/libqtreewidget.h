@@ -167,10 +167,10 @@ QTreeWidgetItem* q_treewidgetitem_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTreeWidgetItem*
+/// @param self QTreeWidgetItem*
 /// @param callback QTreeWidgetItem* func(const QTreeWidgetItem* self)
 ///
-void q_treewidgetitem_on_clone(const void* self, QTreeWidgetItem* (*callback)(const void*));
+void q_treewidgetitem_on_clone(void* self, QTreeWidgetItem* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitem.html#clone)
 ///
@@ -484,12 +484,12 @@ QVariant* q_treewidgetitem_data(const void* self, int column, int role);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTreeWidgetItem*
+/// @param self QTreeWidgetItem*
 /// @param callback QVariant* func(const QTreeWidgetItem* self, int column, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_treewidgetitem_on_data(const void* self, QVariant* (*callback)(const void*, int, int));
+void q_treewidgetitem_on_data(void* self, QVariant* (*callback)(const void*, int, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitem.html#data)
 ///
@@ -541,10 +541,10 @@ bool q_treewidgetitem_operator_lesser(const void* self, const void* other);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTreeWidgetItem*
+/// @param self QTreeWidgetItem*
 /// @param callback bool func(const QTreeWidgetItem* self, QTreeWidgetItem* other)
 ///
-void q_treewidgetitem_on_operator_lesser(const void* self, bool (*callback)(const void*, const void*));
+void q_treewidgetitem_on_operator_lesser(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitem.html#operator-lt)
 ///
@@ -591,10 +591,10 @@ void q_treewidgetitem_write(const void* self, void* out);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTreeWidgetItem*
+/// @param self QTreeWidgetItem*
 /// @param callback void func(const QTreeWidgetItem* self, QDataStream* out)
 ///
-void q_treewidgetitem_on_write(const void* self, void (*callback)(const void*, void*));
+void q_treewidgetitem_on_write(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitem.html#write)
 ///
@@ -748,10 +748,10 @@ const QMetaObject* q_treewidget_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback const QMetaObject* func(const QTreeWidget* self)
 ///
-void q_treewidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_treewidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1320,10 +1320,10 @@ const char** q_treewidget_mime_types(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback const char** func(const QTreeWidget* self)
 ///
-void q_treewidget_on_mime_types(const void* self, const char** (*callback)(const void*));
+void q_treewidget_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidget.html#mimeTypes)
 ///
@@ -1344,10 +1344,10 @@ QMimeData* q_treewidget_mime_data(const void* self, libqt_list items);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QMimeData* func(const QTreeWidget* self, libqt_list of QTreeWidgetItem* items)
 ///
-void q_treewidget_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void q_treewidget_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidget.html#mimeData)
 ///
@@ -1401,10 +1401,10 @@ int32_t q_treewidget_supported_drop_actions(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(const QTreeWidget* self)
 ///
-void q_treewidget_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void q_treewidget_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidget.html#supportedDropActions)
 ///
@@ -2925,9 +2925,9 @@ void q_treewidget_set_frame_rect(void* self, const void* frameRect);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QTreeWidget*
+/// @param self const QTreeWidget*
 ///
-QPaintDevice* q_treewidget_as_q_paint_device(void* self);
+QPaintDevice* q_treewidget_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2935,7 +2935,7 @@ QPaintDevice* q_treewidget_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QTreeWidget* q_treewidget_from_q_paint_device(void* _qpaintdevice);
+QTreeWidget* q_treewidget_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -5980,12 +5980,12 @@ QRect* q_treewidget_super_visual_rect(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QRect* func(QTreeWidget* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_treewidget_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*));
+void q_treewidget_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*));
 
 /// Inherited from QTreeView
 ///
@@ -6050,12 +6050,12 @@ QModelIndex* q_treewidget_super_index_at(const void* self, const void* p);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QModelIndex* func(QTreeWidget* self, QPoint* p)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_treewidget_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_treewidget_on_index_at(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QTreeView
 ///
@@ -6392,10 +6392,10 @@ int32_t q_treewidget_super_horizontal_offset(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self)
 ///
-void q_treewidget_on_horizontal_offset(const void* self, int32_t (*callback)(const void*));
+void q_treewidget_on_horizontal_offset(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QTreeView
 ///
@@ -6423,10 +6423,10 @@ int32_t q_treewidget_super_vertical_offset(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self)
 ///
-void q_treewidget_on_vertical_offset(const void* self, int32_t (*callback)(const void*));
+void q_treewidget_on_vertical_offset(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QTreeView
 ///
@@ -6491,12 +6491,12 @@ QRegion* q_treewidget_super_visual_region_for_selection(const void* self, const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QRegion* func(QTreeWidget* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_treewidget_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*));
+void q_treewidget_on_visual_region_for_selection(void* self, QRegion* (*callback)(const void*, const void*));
 
 /// Inherited from QTreeView
 ///
@@ -6528,10 +6528,10 @@ libqt_list q_treewidget_super_selected_indexes(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback libqt_list of QModelIndex* func(QTreeWidget* self)
 ///
-void q_treewidget_on_selected_indexes(const void* self, libqt_list (*callback)(const void*));
+void q_treewidget_on_selected_indexes(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QTreeView
 ///
@@ -6664,10 +6664,10 @@ void q_treewidget_super_draw_row(const void* self, void* painter, const void* op
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback void func(QTreeWidget* self, QPainter* painter, QStyleOptionViewItem* options, QModelIndex* index)
 ///
-void q_treewidget_on_draw_row(const void* self, void (*callback)(const void*, void*, const void*, const void*));
+void q_treewidget_on_draw_row(void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// Inherited from QTreeView
 ///
@@ -6701,10 +6701,10 @@ void q_treewidget_super_draw_branches(const void* self, void* painter, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback void func(QTreeWidget* self, QPainter* painter, QRect* rect, QModelIndex* index)
 ///
-void q_treewidget_on_draw_branches(const void* self, void (*callback)(const void*, void*, const void*, const void*));
+void q_treewidget_on_draw_branches(void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// Inherited from QTreeView
 ///
@@ -6994,12 +6994,12 @@ QSize* q_treewidget_super_viewport_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QSize* func(QTreeWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_treewidget_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_treewidget_on_viewport_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QTreeView
 ///
@@ -7029,10 +7029,10 @@ int32_t q_treewidget_super_size_hint_for_column(const void* self, int column);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self, int column)
 ///
-void q_treewidget_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int));
+void q_treewidget_on_size_hint_for_column(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QTreeView
 ///
@@ -7095,10 +7095,10 @@ bool q_treewidget_super_is_index_hidden(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback bool func(QTreeWidget* self, QModelIndex* index)
 ///
-void q_treewidget_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*));
+void q_treewidget_on_is_index_hidden(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QTreeView
 ///
@@ -7198,10 +7198,10 @@ int32_t q_treewidget_super_size_hint_for_row(const void* self, int row);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self, int row)
 ///
-void q_treewidget_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int));
+void q_treewidget_on_size_hint_for_row(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7231,10 +7231,10 @@ QAbstractItemDelegate* q_treewidget_super_item_delegate_for_index(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QAbstractItemDelegate* func(QTreeWidget* self, QModelIndex* index)
 ///
-void q_treewidget_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
+void q_treewidget_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7264,12 +7264,12 @@ QVariant* q_treewidget_super_input_method_query(const void* self, int32_t query)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QVariant* func(QTreeWidget* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_treewidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_treewidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7571,10 +7571,10 @@ int32_t q_treewidget_super_selection_command(const void* self, const void* index
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self, QModelIndex* index, QEvent* event)
 ///
-void q_treewidget_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*));
+void q_treewidget_on_selection_command(void* self, int32_t (*callback)(const void*, const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7637,10 +7637,10 @@ void q_treewidget_super_init_view_item_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback void func(QTreeWidget* self, QStyleOptionViewItem* option)
 ///
-void q_treewidget_on_init_view_item_option(const void* self, void (*callback)(const void*, void*));
+void q_treewidget_on_init_view_item_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7934,12 +7934,12 @@ QSize* q_treewidget_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QSize* func(QTreeWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_treewidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_treewidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7967,12 +7967,12 @@ QSize* q_treewidget_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QSize* func(QTreeWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_treewidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_treewidget_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8101,10 +8101,10 @@ void q_treewidget_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback void func(QTreeWidget* self, QStyleOptionFrame* option)
 ///
-void q_treewidget_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_treewidget_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -8132,10 +8132,10 @@ int32_t q_treewidget_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self)
 ///
-void q_treewidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_treewidget_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -8198,10 +8198,10 @@ int32_t q_treewidget_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self, int param1)
 ///
-void q_treewidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_treewidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -8229,10 +8229,10 @@ bool q_treewidget_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback bool func(QTreeWidget* self)
 ///
-void q_treewidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_treewidget_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -8260,10 +8260,10 @@ QPaintEngine* q_treewidget_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QPaintEngine* func(QTreeWidget* self)
 ///
-void q_treewidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_treewidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -8627,10 +8627,10 @@ int32_t q_treewidget_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_treewidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_treewidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -8660,10 +8660,10 @@ void q_treewidget_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback void func(QTreeWidget* self, QPainter* painter)
 ///
-void q_treewidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_treewidget_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -8693,10 +8693,10 @@ QPaintDevice* q_treewidget_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QPaintDevice* func(QTreeWidget* self, QPoint* offset)
 ///
-void q_treewidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_treewidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -8724,10 +8724,10 @@ QPainter* q_treewidget_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QPainter* func(QTreeWidget* self)
 ///
-void q_treewidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_treewidget_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -9062,10 +9062,10 @@ void q_treewidget_super_draw_tree(const void* self, void* painter, const void* r
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback void func(QTreeWidget* self, QPainter* painter, QRegion* region)
 ///
-void q_treewidget_on_draw_tree(const void* self, void (*callback)(const void*, void*, const void*));
+void q_treewidget_on_draw_tree(void* self, void (*callback)(const void*, void*, const void*));
 
 /// Inherited from QTreeView
 ///
@@ -9095,10 +9095,10 @@ int32_t q_treewidget_super_index_row_size_hint(const void* self, const void* ind
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self, QModelIndex* index)
 ///
-void q_treewidget_on_index_row_size_hint(const void* self, int32_t (*callback)(const void*, const void*));
+void q_treewidget_on_index_row_size_hint(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QTreeView
 ///
@@ -9128,10 +9128,10 @@ int32_t q_treewidget_super_row_height(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self, QModelIndex* index)
 ///
-void q_treewidget_on_row_height(const void* self, int32_t (*callback)(const void*, const void*));
+void q_treewidget_on_row_height(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -9163,10 +9163,10 @@ int32_t q_treewidget_super_state(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self)
 ///
-void q_treewidget_on_state(const void* self, int32_t (*callback)(const void*));
+void q_treewidget_on_state(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -9357,12 +9357,12 @@ QPoint* q_treewidget_super_dirty_region_offset(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QPoint* func(QTreeWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_treewidget_on_dirty_region_offset(const void* self, QPoint* (*callback)(const void*));
+void q_treewidget_on_dirty_region_offset(void* self, QPoint* (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -9487,10 +9487,10 @@ int32_t q_treewidget_super_drop_indicator_position(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self)
 ///
-void q_treewidget_on_drop_indicator_position(const void* self, int32_t (*callback)(const void*));
+void q_treewidget_on_drop_indicator_position(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -9557,12 +9557,12 @@ QMargins* q_treewidget_super_viewport_margins(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QMargins* func(QTreeWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_treewidget_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
+void q_treewidget_on_viewport_margins(void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -9778,10 +9778,10 @@ QObject* q_treewidget_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback QObject* func(QTreeWidget* self)
 ///
-void q_treewidget_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_treewidget_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -9809,10 +9809,10 @@ int32_t q_treewidget_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self)
 ///
-void q_treewidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_treewidget_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -9842,10 +9842,10 @@ int32_t q_treewidget_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback int32_t func(QTreeWidget* self, const char* signal)
 ///
-void q_treewidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_treewidget_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -9875,10 +9875,10 @@ bool q_treewidget_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback bool func(QTreeWidget* self, QMetaMethod* signal)
 ///
-void q_treewidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_treewidget_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -9910,10 +9910,10 @@ double q_treewidget_super_get_decoded_metric_f(const void* self, int32_t metricA
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTreeWidget*
+/// @param self QTreeWidget*
 /// @param callback double func(QTreeWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_treewidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_treewidget_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

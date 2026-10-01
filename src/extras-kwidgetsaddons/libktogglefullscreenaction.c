@@ -20,7 +20,7 @@ const QMetaObject* k_togglefullscreenaction_meta_object(const void* self) {
     return KToggleFullScreenAction_MetaObject((KToggleFullScreenAction*)self);
 }
 
-void k_togglefullscreenaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_togglefullscreenaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KToggleFullScreenAction_OnMetaObject((KToggleFullScreenAction*)self, (intptr_t)callback);
 }
 

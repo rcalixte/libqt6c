@@ -15,11 +15,11 @@ QExtensionFactory* q_extensionfactory_new2(void* parent) {
     return QExtensionFactory_New2((QExtensionManager*)parent);
 }
 
-QAbstractExtensionFactory* q_extensionfactory_as_q_abstract_extension_factory(void* self) {
+QAbstractExtensionFactory* q_extensionfactory_as_q_abstract_extension_factory(const void* self) {
     return QExtensionFactory_AsQAbstractExtensionFactory((QExtensionFactory*)self);
 }
 
-QExtensionFactory* q_extensionfactory_from_q_abstract_extension_factory(void* _qabstractextensionfactory) {
+QExtensionFactory* q_extensionfactory_from_q_abstract_extension_factory(const void* _qabstractextensionfactory) {
     return (QExtensionFactory*)QExtensionFactory_FromQAbstractExtensionFactory((QAbstractExtensionFactory*)_qabstractextensionfactory);
 }
 
@@ -27,7 +27,7 @@ const QMetaObject* q_extensionfactory_meta_object(const void* self) {
     return QExtensionFactory_MetaObject((QExtensionFactory*)self);
 }
 
-void q_extensionfactory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_extensionfactory_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QExtensionFactory_OnMetaObject((QExtensionFactory*)self, (intptr_t)callback);
 }
 
@@ -70,7 +70,7 @@ QObject* q_extensionfactory_extension(const void* self, void* object, const char
     return QExtensionFactory_Extension((QExtensionFactory*)self, (QObject*)object, qstring(iid));
 }
 
-void q_extensionfactory_on_extension(const void* self, QObject* (*callback)(const void*, void*, const char*)) {
+void q_extensionfactory_on_extension(void* self, QObject* (*callback)(const void*, void*, const char*)) {
     QExtensionFactory_OnExtension((QExtensionFactory*)self, (intptr_t)callback);
 }
 
@@ -86,7 +86,7 @@ QObject* q_extensionfactory_create_extension(const void* self, void* object, con
     return QExtensionFactory_CreateExtension((QExtensionFactory*)self, (QObject*)object, qstring(iid), (QObject*)parent);
 }
 
-void q_extensionfactory_on_create_extension(const void* self, QObject* (*callback)(const void*, void*, const char*, void*)) {
+void q_extensionfactory_on_create_extension(void* self, QObject* (*callback)(const void*, void*, const char*, void*)) {
     QExtensionFactory_OnCreateExtension((QExtensionFactory*)self, (intptr_t)callback);
 }
 

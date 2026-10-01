@@ -29,11 +29,11 @@ QWindow* q_window_new3(void* screen) {
     return QWindow_New3((QScreen*)screen);
 }
 
-QSurface* q_window_as_q_surface(void* self) {
+QSurface* q_window_as_q_surface(const void* self) {
     return QWindow_AsQSurface((QWindow*)self);
 }
 
-QWindow* q_window_from_q_surface(void* _qsurface) {
+QWindow* q_window_from_q_surface(const void* _qsurface) {
     return (QWindow*)QWindow_FromQSurface((QSurface*)_qsurface);
 }
 
@@ -41,7 +41,7 @@ const QMetaObject* q_window_meta_object(const void* self) {
     return QWindow_MetaObject((QWindow*)self);
 }
 
-void q_window_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_window_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QWindow_OnMetaObject((QWindow*)self, (intptr_t)callback);
 }
 
@@ -88,7 +88,7 @@ int32_t q_window_surface_type(const void* self) {
     return QWindow_SurfaceType((QWindow*)self);
 }
 
-void q_window_on_surface_type(const void* self, int32_t (*callback)(const void*)) {
+void q_window_on_surface_type(void* self, int32_t (*callback)(const void*)) {
     QWindow_OnSurfaceType((QWindow*)self, (intptr_t)callback);
 }
 
@@ -148,7 +148,7 @@ QSurfaceFormat* q_window_format(const void* self) {
     return QWindow_Format((QWindow*)self);
 }
 
-void q_window_on_format(const void* self, QSurfaceFormat* (*callback)(const void*)) {
+void q_window_on_format(void* self, QSurfaceFormat* (*callback)(const void*)) {
     QWindow_OnFormat((QWindow*)self, (intptr_t)callback);
 }
 
@@ -335,7 +335,7 @@ QSize* q_window_size(const void* self) {
     return QWindow_Size((QWindow*)self);
 }
 
-void q_window_on_size(const void* self, QSize* (*callback)(const void*)) {
+void q_window_on_size(void* self, QSize* (*callback)(const void*)) {
     QWindow_OnSize((QWindow*)self, (intptr_t)callback);
 }
 
@@ -406,7 +406,7 @@ QAccessibleInterface* q_window_accessible_root(const void* self) {
     return QWindow_AccessibleRoot((QWindow*)self);
 }
 
-void q_window_on_accessible_root(const void* self, QAccessibleInterface* (*callback)(const void*)) {
+void q_window_on_accessible_root(void* self, QAccessibleInterface* (*callback)(const void*)) {
     QWindow_OnAccessibleRoot((QWindow*)self, (intptr_t)callback);
 }
 
@@ -418,7 +418,7 @@ QObject* q_window_focus_object(const void* self) {
     return QWindow_FocusObject((QWindow*)self);
 }
 
-void q_window_on_focus_object(const void* self, QObject* (*callback)(const void*)) {
+void q_window_on_focus_object(void* self, QObject* (*callback)(const void*)) {
     QWindow_OnFocusObject((QWindow*)self, (intptr_t)callback);
 }
 

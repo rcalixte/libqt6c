@@ -25,7 +25,7 @@ const QMetaObject* k_widgetitemdelegate_meta_object(const void* self) {
     return KWidgetItemDelegate_MetaObject((KWidgetItemDelegate*)self);
 }
 
-void k_widgetitemdelegate_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_widgetitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KWidgetItemDelegate_OnMetaObject((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -81,7 +81,7 @@ libqt_list /* of QWidget* */ k_widgetitemdelegate_create_item_widgets(const void
     return _arr;
 }
 
-void k_widgetitemdelegate_on_create_item_widgets(const void* self, libqt_list /* of QWidget* */ (*callback)(const void*, const void*)) {
+void k_widgetitemdelegate_on_create_item_widgets(void* self, libqt_list /* of QWidget* */ (*callback)(const void*, const void*)) {
     KWidgetItemDelegate_OnCreateItemWidgets((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -89,7 +89,7 @@ void k_widgetitemdelegate_update_item_widgets(const void* self, libqt_list /* of
     KWidgetItemDelegate_UpdateItemWidgets((KWidgetItemDelegate*)self, widgets, (QStyleOptionViewItem*)option, (QPersistentModelIndex*)index);
 }
 
-void k_widgetitemdelegate_on_update_item_widgets(const void* self, void (*callback)(const void*, libqt_list /* of QWidget* */, const void*, const void*)) {
+void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(const void*, libqt_list /* of QWidget* */, const void*, const void*)) {
     KWidgetItemDelegate_OnUpdateItemWidgets((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -361,16 +361,16 @@ void k_widgetitemdelegate_paint(const void* self, void* painter, const void* opt
     KWidgetItemDelegate_Paint((KWidgetItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void k_widgetitemdelegate_on_paint(const void* self, void (*callback)(const void*, void*, const void*, const void*)) {
-    KWidgetItemDelegate_OnPaint((const KWidgetItemDelegate*)self, (intptr_t)callback);
+void k_widgetitemdelegate_on_paint(void* self, void (*callback)(const void*, void*, const void*, const void*)) {
+    KWidgetItemDelegate_OnPaint((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
 QSize* k_widgetitemdelegate_size_hint(const void* self, const void* option, const void* index) {
     return KWidgetItemDelegate_SizeHint((KWidgetItemDelegate*)self, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void k_widgetitemdelegate_on_size_hint(const void* self, QSize* (*callback)(const void*, const void*, const void*)) {
-    KWidgetItemDelegate_OnSizeHint((const KWidgetItemDelegate*)self, (intptr_t)callback);
+void k_widgetitemdelegate_on_size_hint(void* self, QSize* (*callback)(const void*, const void*, const void*)) {
+    KWidgetItemDelegate_OnSizeHint((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
 QWidget* k_widgetitemdelegate_create_editor(const void* self, void* parent, const void* option, const void* index) {
@@ -381,8 +381,8 @@ QWidget* k_widgetitemdelegate_super_create_editor(const void* self, void* parent
     return KWidgetItemDelegate_SuperCreateEditor((KWidgetItemDelegate*)self, (QWidget*)parent, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void k_widgetitemdelegate_on_create_editor(const void* self, QWidget* (*callback)(const void*, void*, const void*, const void*)) {
-    KWidgetItemDelegate_OnCreateEditor((const KWidgetItemDelegate*)self, (intptr_t)callback);
+void k_widgetitemdelegate_on_create_editor(void* self, QWidget* (*callback)(const void*, void*, const void*, const void*)) {
+    KWidgetItemDelegate_OnCreateEditor((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
 void k_widgetitemdelegate_destroy_editor(const void* self, void* editor, const void* index) {
@@ -393,8 +393,8 @@ void k_widgetitemdelegate_super_destroy_editor(const void* self, void* editor, c
     KWidgetItemDelegate_SuperDestroyEditor((KWidgetItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
-void k_widgetitemdelegate_on_destroy_editor(const void* self, void (*callback)(const void*, void*, const void*)) {
-    KWidgetItemDelegate_OnDestroyEditor((const KWidgetItemDelegate*)self, (intptr_t)callback);
+void k_widgetitemdelegate_on_destroy_editor(void* self, void (*callback)(const void*, void*, const void*)) {
+    KWidgetItemDelegate_OnDestroyEditor((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
 void k_widgetitemdelegate_set_editor_data(const void* self, void* editor, const void* index) {
@@ -405,8 +405,8 @@ void k_widgetitemdelegate_super_set_editor_data(const void* self, void* editor, 
     KWidgetItemDelegate_SuperSetEditorData((KWidgetItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
-void k_widgetitemdelegate_on_set_editor_data(const void* self, void (*callback)(const void*, void*, const void*)) {
-    KWidgetItemDelegate_OnSetEditorData((const KWidgetItemDelegate*)self, (intptr_t)callback);
+void k_widgetitemdelegate_on_set_editor_data(void* self, void (*callback)(const void*, void*, const void*)) {
+    KWidgetItemDelegate_OnSetEditorData((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
 void k_widgetitemdelegate_set_model_data(const void* self, void* editor, void* model, const void* index) {
@@ -417,8 +417,8 @@ void k_widgetitemdelegate_super_set_model_data(const void* self, void* editor, v
     KWidgetItemDelegate_SuperSetModelData((KWidgetItemDelegate*)self, (QWidget*)editor, (QAbstractItemModel*)model, (QModelIndex*)index);
 }
 
-void k_widgetitemdelegate_on_set_model_data(const void* self, void (*callback)(const void*, void*, void*, const void*)) {
-    KWidgetItemDelegate_OnSetModelData((const KWidgetItemDelegate*)self, (intptr_t)callback);
+void k_widgetitemdelegate_on_set_model_data(void* self, void (*callback)(const void*, void*, void*, const void*)) {
+    KWidgetItemDelegate_OnSetModelData((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
 void k_widgetitemdelegate_update_editor_geometry(const void* self, void* editor, const void* option, const void* index) {
@@ -429,8 +429,8 @@ void k_widgetitemdelegate_super_update_editor_geometry(const void* self, void* e
     KWidgetItemDelegate_SuperUpdateEditorGeometry((KWidgetItemDelegate*)self, (QWidget*)editor, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void k_widgetitemdelegate_on_update_editor_geometry(const void* self, void (*callback)(const void*, void*, const void*, const void*)) {
-    KWidgetItemDelegate_OnUpdateEditorGeometry((const KWidgetItemDelegate*)self, (intptr_t)callback);
+void k_widgetitemdelegate_on_update_editor_geometry(void* self, void (*callback)(const void*, void*, const void*, const void*)) {
+    KWidgetItemDelegate_OnUpdateEditorGeometry((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
 bool k_widgetitemdelegate_editor_event(void* self, void* event, void* model, const void* option, const void* index) {
@@ -467,8 +467,8 @@ libqt_list /* of int */ k_widgetitemdelegate_super_painting_roles(const void* se
     return _arr;
 }
 
-void k_widgetitemdelegate_on_painting_roles(const void* self, libqt_list /* of int */ (*callback)(const void*)) {
-    KWidgetItemDelegate_OnPaintingRoles((const KWidgetItemDelegate*)self, (intptr_t)callback);
+void k_widgetitemdelegate_on_painting_roles(void* self, libqt_list /* of int */ (*callback)(const void*)) {
+    KWidgetItemDelegate_OnPaintingRoles((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
 bool k_widgetitemdelegate_event(void* self, void* event) {

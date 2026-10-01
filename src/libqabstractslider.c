@@ -25,7 +25,7 @@ const QMetaObject* q_abstractslider_meta_object(const void* self) {
     return QAbstractSlider_MetaObject((QAbstractSlider*)self);
 }
 
-void q_abstractslider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstractslider_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractSlider_OnMetaObject((QAbstractSlider*)self, (intptr_t)callback);
 }
 
@@ -310,11 +310,11 @@ void q_abstractslider_set_repeat_action3(void* self, int32_t action, int thresho
     QAbstractSlider_SetRepeatAction3((QAbstractSlider*)self, action, thresholdTime, repeatTime);
 }
 
-QPaintDevice* q_abstractslider_as_q_paint_device(void* self) {
+QPaintDevice* q_abstractslider_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QAbstractSlider* q_abstractslider_from_q_paint_device(void* _qpaintdevice) {
+QAbstractSlider* q_abstractslider_from_q_paint_device(const void* _qpaintdevice) {
     return (QAbstractSlider*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1705,8 +1705,8 @@ int32_t q_abstractslider_super_dev_type(const void* self) {
     return QAbstractSlider_SuperDevType((QAbstractSlider*)self);
 }
 
-void q_abstractslider_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QAbstractSlider_OnDevType((const QAbstractSlider*)self, (intptr_t)callback);
+void q_abstractslider_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QAbstractSlider_OnDevType((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_abstractslider_set_visible(void* self, bool visible) {
@@ -1729,8 +1729,8 @@ QSize* q_abstractslider_super_size_hint(const void* self) {
     return QAbstractSlider_SuperSizeHint((QAbstractSlider*)self);
 }
 
-void q_abstractslider_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QAbstractSlider_OnSizeHint((const QAbstractSlider*)self, (intptr_t)callback);
+void q_abstractslider_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QAbstractSlider_OnSizeHint((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 QSize* q_abstractslider_minimum_size_hint(const void* self) {
@@ -1741,8 +1741,8 @@ QSize* q_abstractslider_super_minimum_size_hint(const void* self) {
     return QAbstractSlider_SuperMinimumSizeHint((QAbstractSlider*)self);
 }
 
-void q_abstractslider_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QAbstractSlider_OnMinimumSizeHint((const QAbstractSlider*)self, (intptr_t)callback);
+void q_abstractslider_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QAbstractSlider_OnMinimumSizeHint((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 int32_t q_abstractslider_height_for_width(const void* self, int param1) {
@@ -1753,8 +1753,8 @@ int32_t q_abstractslider_super_height_for_width(const void* self, int param1) {
     return QAbstractSlider_SuperHeightForWidth((QAbstractSlider*)self, param1);
 }
 
-void q_abstractslider_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QAbstractSlider_OnHeightForWidth((const QAbstractSlider*)self, (intptr_t)callback);
+void q_abstractslider_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QAbstractSlider_OnHeightForWidth((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 bool q_abstractslider_has_height_for_width(const void* self) {
@@ -1765,8 +1765,8 @@ bool q_abstractslider_super_has_height_for_width(const void* self) {
     return QAbstractSlider_SuperHasHeightForWidth((QAbstractSlider*)self);
 }
 
-void q_abstractslider_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QAbstractSlider_OnHasHeightForWidth((const QAbstractSlider*)self, (intptr_t)callback);
+void q_abstractslider_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QAbstractSlider_OnHasHeightForWidth((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_abstractslider_paint_engine(const void* self) {
@@ -1777,8 +1777,8 @@ QPaintEngine* q_abstractslider_super_paint_engine(const void* self) {
     return QAbstractSlider_SuperPaintEngine((QAbstractSlider*)self);
 }
 
-void q_abstractslider_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QAbstractSlider_OnPaintEngine((const QAbstractSlider*)self, (intptr_t)callback);
+void q_abstractslider_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QAbstractSlider_OnPaintEngine((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_abstractslider_mouse_press_event(void* self, void* event) {
@@ -2065,8 +2065,8 @@ int32_t q_abstractslider_super_metric(const void* self, int32_t param1) {
     return QAbstractSlider_SuperMetric((QAbstractSlider*)self, param1);
 }
 
-void q_abstractslider_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QAbstractSlider_OnMetric((const QAbstractSlider*)self, (intptr_t)callback);
+void q_abstractslider_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QAbstractSlider_OnMetric((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_abstractslider_init_painter(const void* self, void* painter) {
@@ -2077,8 +2077,8 @@ void q_abstractslider_super_init_painter(const void* self, void* painter) {
     QAbstractSlider_SuperInitPainter((QAbstractSlider*)self, (QPainter*)painter);
 }
 
-void q_abstractslider_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QAbstractSlider_OnInitPainter((const QAbstractSlider*)self, (intptr_t)callback);
+void q_abstractslider_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QAbstractSlider_OnInitPainter((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_abstractslider_redirected(const void* self, void* offset) {
@@ -2089,8 +2089,8 @@ QPaintDevice* q_abstractslider_super_redirected(const void* self, void* offset) 
     return QAbstractSlider_SuperRedirected((QAbstractSlider*)self, (QPoint*)offset);
 }
 
-void q_abstractslider_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QAbstractSlider_OnRedirected((const QAbstractSlider*)self, (intptr_t)callback);
+void q_abstractslider_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QAbstractSlider_OnRedirected((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 QPainter* q_abstractslider_shared_painter(const void* self) {
@@ -2101,8 +2101,8 @@ QPainter* q_abstractslider_super_shared_painter(const void* self) {
     return QAbstractSlider_SuperSharedPainter((QAbstractSlider*)self);
 }
 
-void q_abstractslider_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QAbstractSlider_OnSharedPainter((const QAbstractSlider*)self, (intptr_t)callback);
+void q_abstractslider_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QAbstractSlider_OnSharedPainter((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_abstractslider_input_method_event(void* self, void* param1) {
@@ -2125,8 +2125,8 @@ QVariant* q_abstractslider_super_input_method_query(const void* self, int32_t pa
     return QAbstractSlider_SuperInputMethodQuery((QAbstractSlider*)self, param1);
 }
 
-void q_abstractslider_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QAbstractSlider_OnInputMethodQuery((const QAbstractSlider*)self, (intptr_t)callback);
+void q_abstractslider_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QAbstractSlider_OnInputMethodQuery((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 bool q_abstractslider_focus_next_prev_child(void* self, bool next) {

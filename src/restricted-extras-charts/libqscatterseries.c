@@ -22,7 +22,7 @@ const QMetaObject* q_scatterseries_meta_object(const void* self) {
     return QScatterSeries_MetaObject((QScatterSeries*)self);
 }
 
-void q_scatterseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_scatterseries_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QScatterSeries_OnMetaObject((QScatterSeries*)self, (intptr_t)callback);
 }
 
@@ -65,7 +65,7 @@ int32_t q_scatterseries_type(const void* self) {
     return QScatterSeries_Type((QScatterSeries*)self);
 }
 
-void q_scatterseries_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_scatterseries_on_type(void* self, int32_t (*callback)(const void*)) {
     QScatterSeries_OnType((QScatterSeries*)self, (intptr_t)callback);
 }
 
@@ -117,7 +117,7 @@ QColor* q_scatterseries_color(const void* self) {
     return QScatterSeries_Color((QScatterSeries*)self);
 }
 
-void q_scatterseries_on_color(const void* self, QColor* (*callback)(const void*)) {
+void q_scatterseries_on_color(void* self, QColor* (*callback)(const void*)) {
     QScatterSeries_OnColor((QScatterSeries*)self, (intptr_t)callback);
 }
 

@@ -27,7 +27,7 @@ const QMetaObject* k_actionselector_meta_object(const void* self) {
     return KActionSelector_MetaObject((KActionSelector*)self);
 }
 
-void k_actionselector_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_actionselector_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KActionSelector_OnMetaObject((KActionSelector*)self, (intptr_t)callback);
 }
 
@@ -226,11 +226,11 @@ const char* k_actionselector_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_actionselector_as_q_paint_device(void* self) {
+QPaintDevice* k_actionselector_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KActionSelector* k_actionselector_from_q_paint_device(void* _qpaintdevice) {
+KActionSelector* k_actionselector_from_q_paint_device(const void* _qpaintdevice) {
     return (KActionSelector*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1621,8 +1621,8 @@ int32_t k_actionselector_super_dev_type(const void* self) {
     return KActionSelector_SuperDevType((KActionSelector*)self);
 }
 
-void k_actionselector_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KActionSelector_OnDevType((const KActionSelector*)self, (intptr_t)callback);
+void k_actionselector_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KActionSelector_OnDevType((KActionSelector*)self, (intptr_t)callback);
 }
 
 void k_actionselector_set_visible(void* self, bool visible) {
@@ -1645,8 +1645,8 @@ QSize* k_actionselector_super_size_hint(const void* self) {
     return KActionSelector_SuperSizeHint((KActionSelector*)self);
 }
 
-void k_actionselector_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KActionSelector_OnSizeHint((const KActionSelector*)self, (intptr_t)callback);
+void k_actionselector_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KActionSelector_OnSizeHint((KActionSelector*)self, (intptr_t)callback);
 }
 
 QSize* k_actionselector_minimum_size_hint(const void* self) {
@@ -1657,8 +1657,8 @@ QSize* k_actionselector_super_minimum_size_hint(const void* self) {
     return KActionSelector_SuperMinimumSizeHint((KActionSelector*)self);
 }
 
-void k_actionselector_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KActionSelector_OnMinimumSizeHint((const KActionSelector*)self, (intptr_t)callback);
+void k_actionselector_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KActionSelector_OnMinimumSizeHint((KActionSelector*)self, (intptr_t)callback);
 }
 
 int32_t k_actionselector_height_for_width(const void* self, int param1) {
@@ -1669,8 +1669,8 @@ int32_t k_actionselector_super_height_for_width(const void* self, int param1) {
     return KActionSelector_SuperHeightForWidth((KActionSelector*)self, param1);
 }
 
-void k_actionselector_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KActionSelector_OnHeightForWidth((const KActionSelector*)self, (intptr_t)callback);
+void k_actionselector_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KActionSelector_OnHeightForWidth((KActionSelector*)self, (intptr_t)callback);
 }
 
 bool k_actionselector_has_height_for_width(const void* self) {
@@ -1681,8 +1681,8 @@ bool k_actionselector_super_has_height_for_width(const void* self) {
     return KActionSelector_SuperHasHeightForWidth((KActionSelector*)self);
 }
 
-void k_actionselector_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KActionSelector_OnHasHeightForWidth((const KActionSelector*)self, (intptr_t)callback);
+void k_actionselector_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KActionSelector_OnHasHeightForWidth((KActionSelector*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_actionselector_paint_engine(const void* self) {
@@ -1693,8 +1693,8 @@ QPaintEngine* k_actionselector_super_paint_engine(const void* self) {
     return KActionSelector_SuperPaintEngine((KActionSelector*)self);
 }
 
-void k_actionselector_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KActionSelector_OnPaintEngine((const KActionSelector*)self, (intptr_t)callback);
+void k_actionselector_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KActionSelector_OnPaintEngine((KActionSelector*)self, (intptr_t)callback);
 }
 
 bool k_actionselector_event(void* self, void* event) {
@@ -2017,8 +2017,8 @@ int32_t k_actionselector_super_metric(const void* self, int32_t param1) {
     return KActionSelector_SuperMetric((KActionSelector*)self, param1);
 }
 
-void k_actionselector_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KActionSelector_OnMetric((const KActionSelector*)self, (intptr_t)callback);
+void k_actionselector_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KActionSelector_OnMetric((KActionSelector*)self, (intptr_t)callback);
 }
 
 void k_actionselector_init_painter(const void* self, void* painter) {
@@ -2029,8 +2029,8 @@ void k_actionselector_super_init_painter(const void* self, void* painter) {
     KActionSelector_SuperInitPainter((KActionSelector*)self, (QPainter*)painter);
 }
 
-void k_actionselector_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KActionSelector_OnInitPainter((const KActionSelector*)self, (intptr_t)callback);
+void k_actionselector_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KActionSelector_OnInitPainter((KActionSelector*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_actionselector_redirected(const void* self, void* offset) {
@@ -2041,8 +2041,8 @@ QPaintDevice* k_actionselector_super_redirected(const void* self, void* offset) 
     return KActionSelector_SuperRedirected((KActionSelector*)self, (QPoint*)offset);
 }
 
-void k_actionselector_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KActionSelector_OnRedirected((const KActionSelector*)self, (intptr_t)callback);
+void k_actionselector_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KActionSelector_OnRedirected((KActionSelector*)self, (intptr_t)callback);
 }
 
 QPainter* k_actionselector_shared_painter(const void* self) {
@@ -2053,8 +2053,8 @@ QPainter* k_actionselector_super_shared_painter(const void* self) {
     return KActionSelector_SuperSharedPainter((KActionSelector*)self);
 }
 
-void k_actionselector_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KActionSelector_OnSharedPainter((const KActionSelector*)self, (intptr_t)callback);
+void k_actionselector_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KActionSelector_OnSharedPainter((KActionSelector*)self, (intptr_t)callback);
 }
 
 void k_actionselector_input_method_event(void* self, void* param1) {
@@ -2077,8 +2077,8 @@ QVariant* k_actionselector_super_input_method_query(const void* self, int32_t pa
     return KActionSelector_SuperInputMethodQuery((KActionSelector*)self, param1);
 }
 
-void k_actionselector_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KActionSelector_OnInputMethodQuery((const KActionSelector*)self, (intptr_t)callback);
+void k_actionselector_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KActionSelector_OnInputMethodQuery((KActionSelector*)self, (intptr_t)callback);
 }
 
 bool k_actionselector_focus_next_prev_child(void* self, bool next) {

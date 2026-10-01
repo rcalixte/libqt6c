@@ -32,10 +32,10 @@ const QMetaObject* k_textemoticonscore__emojimodelmanager_meta_object(const void
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextEmoticonsCore__EmojiModelManager*
+/// @param self TextEmoticonsCore__EmojiModelManager*
 /// @param callback const QMetaObject* func(const TextEmoticonsCore__EmojiModelManager* self)
 ///
-void k_textemoticonscore__emojimodelmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textemoticonscore__emojimodelmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiModelManager.html)
 ///
@@ -907,10 +907,10 @@ QObject* k_textemoticonscore__emojimodelmanager_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModelManager*
+/// @param self TextEmoticonsCore__EmojiModelManager*
 /// @param callback QObject* func(TextEmoticonsCore__EmojiModelManager* self)
 ///
-void k_textemoticonscore__emojimodelmanager_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textemoticonscore__emojimodelmanager_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -938,10 +938,10 @@ int32_t k_textemoticonscore__emojimodelmanager_super_sender_signal_index(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModelManager*
+/// @param self TextEmoticonsCore__EmojiModelManager*
 /// @param callback int32_t func(TextEmoticonsCore__EmojiModelManager* self)
 ///
-void k_textemoticonscore__emojimodelmanager_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textemoticonscore__emojimodelmanager_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -971,10 +971,10 @@ int32_t k_textemoticonscore__emojimodelmanager_super_receivers(const void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModelManager*
+/// @param self TextEmoticonsCore__EmojiModelManager*
 /// @param callback int32_t func(TextEmoticonsCore__EmojiModelManager* self, const char* signal)
 ///
-void k_textemoticonscore__emojimodelmanager_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textemoticonscore__emojimodelmanager_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1004,10 +1004,10 @@ bool k_textemoticonscore__emojimodelmanager_super_is_signal_connected(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModelManager*
+/// @param self TextEmoticonsCore__EmojiModelManager*
 /// @param callback bool func(TextEmoticonsCore__EmojiModelManager* self, QMetaMethod* signal)
 ///
-void k_textemoticonscore__emojimodelmanager_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textemoticonscore__emojimodelmanager_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

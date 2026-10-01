@@ -18,7 +18,7 @@ const QMetaObject* q_valueaxis_meta_object(const void* self) {
     return QValueAxis_MetaObject((QValueAxis*)self);
 }
 
-void q_valueaxis_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_valueaxis_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QValueAxis_OnMetaObject((QValueAxis*)self, (intptr_t)callback);
 }
 
@@ -61,7 +61,7 @@ int32_t q_valueaxis_type(const void* self) {
     return QValueAxis_Type((QValueAxis*)self);
 }
 
-void q_valueaxis_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_valueaxis_on_type(void* self, int32_t (*callback)(const void*)) {
     QValueAxis_OnType((QValueAxis*)self, (intptr_t)callback);
 }
 

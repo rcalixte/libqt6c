@@ -29,7 +29,7 @@ const QMetaObject* q_dbusinterface_meta_object(const void* self) {
     return QDBusInterface_MetaObject((QDBusInterface*)self);
 }
 
-void q_dbusinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_dbusinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDBusInterface_OnMetaObject((QDBusInterface*)self, (intptr_t)callback);
 }
 

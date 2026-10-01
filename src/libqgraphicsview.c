@@ -44,7 +44,7 @@ const QMetaObject* q_graphicsview_meta_object(const void* self) {
     return QGraphicsView_MetaObject((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_graphicsview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGraphicsView_OnMetaObject((QGraphicsView*)self, (intptr_t)callback);
 }
 
@@ -87,7 +87,7 @@ QSize* q_graphicsview_size_hint(const void* self) {
     return QGraphicsView_SizeHint((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_graphicsview_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QGraphicsView_OnSizeHint((QGraphicsView*)self, (intptr_t)callback);
 }
 
@@ -382,7 +382,7 @@ QVariant* q_graphicsview_input_method_query(const void* self, int32_t query) {
     return QGraphicsView_InputMethodQuery((QGraphicsView*)self, query);
 }
 
-void q_graphicsview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+void q_graphicsview_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
     QGraphicsView_OnInputMethodQuery((QGraphicsView*)self, (intptr_t)callback);
 }
 
@@ -961,11 +961,11 @@ void q_graphicsview_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_graphicsview_as_q_paint_device(void* self) {
+QPaintDevice* q_graphicsview_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QGraphicsView* q_graphicsview_from_q_paint_device(void* _qpaintdevice) {
+QGraphicsView* q_graphicsview_from_q_paint_device(const void* _qpaintdevice) {
     return (QGraphicsView*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2340,8 +2340,8 @@ QSize* q_graphicsview_super_minimum_size_hint(const void* self) {
     return QGraphicsView_SuperMinimumSizeHint((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QGraphicsView_OnMinimumSizeHint((const QGraphicsView*)self, (intptr_t)callback);
+void q_graphicsview_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QGraphicsView_OnMinimumSizeHint((QGraphicsView*)self, (intptr_t)callback);
 }
 
 bool q_graphicsview_event_filter(void* self, void* param1, void* param2) {
@@ -2364,8 +2364,8 @@ QSize* q_graphicsview_super_viewport_size_hint(const void* self) {
     return QGraphicsView_SuperViewportSizeHint((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QGraphicsView_OnViewportSizeHint((const QGraphicsView*)self, (intptr_t)callback);
+void q_graphicsview_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QGraphicsView_OnViewportSizeHint((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_change_event(void* self, void* param1) {
@@ -2388,8 +2388,8 @@ void q_graphicsview_super_init_style_option(const void* self, void* option) {
     QGraphicsView_SuperInitStyleOption((QGraphicsView*)self, (QStyleOptionFrame*)option);
 }
 
-void q_graphicsview_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QGraphicsView_OnInitStyleOption((const QGraphicsView*)self, (intptr_t)callback);
+void q_graphicsview_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QGraphicsView_OnInitStyleOption((QGraphicsView*)self, (intptr_t)callback);
 }
 
 int32_t q_graphicsview_dev_type(const void* self) {
@@ -2400,8 +2400,8 @@ int32_t q_graphicsview_super_dev_type(const void* self) {
     return QGraphicsView_SuperDevType((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QGraphicsView_OnDevType((const QGraphicsView*)self, (intptr_t)callback);
+void q_graphicsview_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QGraphicsView_OnDevType((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_set_visible(void* self, bool visible) {
@@ -2424,8 +2424,8 @@ int32_t q_graphicsview_super_height_for_width(const void* self, int param1) {
     return QGraphicsView_SuperHeightForWidth((QGraphicsView*)self, param1);
 }
 
-void q_graphicsview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QGraphicsView_OnHeightForWidth((const QGraphicsView*)self, (intptr_t)callback);
+void q_graphicsview_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QGraphicsView_OnHeightForWidth((QGraphicsView*)self, (intptr_t)callback);
 }
 
 bool q_graphicsview_has_height_for_width(const void* self) {
@@ -2436,8 +2436,8 @@ bool q_graphicsview_super_has_height_for_width(const void* self) {
     return QGraphicsView_SuperHasHeightForWidth((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QGraphicsView_OnHasHeightForWidth((const QGraphicsView*)self, (intptr_t)callback);
+void q_graphicsview_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QGraphicsView_OnHasHeightForWidth((QGraphicsView*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_graphicsview_paint_engine(const void* self) {
@@ -2448,8 +2448,8 @@ QPaintEngine* q_graphicsview_super_paint_engine(const void* self) {
     return QGraphicsView_SuperPaintEngine((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QGraphicsView_OnPaintEngine((const QGraphicsView*)self, (intptr_t)callback);
+void q_graphicsview_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QGraphicsView_OnPaintEngine((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_enter_event(void* self, void* event) {
@@ -2556,8 +2556,8 @@ int32_t q_graphicsview_super_metric(const void* self, int32_t param1) {
     return QGraphicsView_SuperMetric((QGraphicsView*)self, param1);
 }
 
-void q_graphicsview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QGraphicsView_OnMetric((const QGraphicsView*)self, (intptr_t)callback);
+void q_graphicsview_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QGraphicsView_OnMetric((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_init_painter(const void* self, void* painter) {
@@ -2568,8 +2568,8 @@ void q_graphicsview_super_init_painter(const void* self, void* painter) {
     QGraphicsView_SuperInitPainter((QGraphicsView*)self, (QPainter*)painter);
 }
 
-void q_graphicsview_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QGraphicsView_OnInitPainter((const QGraphicsView*)self, (intptr_t)callback);
+void q_graphicsview_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QGraphicsView_OnInitPainter((QGraphicsView*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_graphicsview_redirected(const void* self, void* offset) {
@@ -2580,8 +2580,8 @@ QPaintDevice* q_graphicsview_super_redirected(const void* self, void* offset) {
     return QGraphicsView_SuperRedirected((QGraphicsView*)self, (QPoint*)offset);
 }
 
-void q_graphicsview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QGraphicsView_OnRedirected((const QGraphicsView*)self, (intptr_t)callback);
+void q_graphicsview_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QGraphicsView_OnRedirected((QGraphicsView*)self, (intptr_t)callback);
 }
 
 QPainter* q_graphicsview_shared_painter(const void* self) {
@@ -2592,8 +2592,8 @@ QPainter* q_graphicsview_super_shared_painter(const void* self) {
     return QGraphicsView_SuperSharedPainter((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QGraphicsView_OnSharedPainter((const QGraphicsView*)self, (intptr_t)callback);
+void q_graphicsview_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QGraphicsView_OnSharedPainter((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_timer_event(void* self, void* event) {

@@ -19,7 +19,7 @@ const QMetaObject* q_signon__authservice_meta_object(const void* self) {
     return SignOn__AuthService_MetaObject((SignOn__AuthService*)self);
 }
 
-void q_signon__authservice_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_signon__authservice_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     SignOn__AuthService_OnMetaObject((SignOn__AuthService*)self, (intptr_t)callback);
 }
 

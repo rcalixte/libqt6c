@@ -54,10 +54,10 @@ const QMetaObject* k_fontaction_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KFontAction*
+/// @param self KFontAction*
 /// @param callback const QMetaObject* func(const KFontAction* self)
 ///
-void k_fontaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_fontaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -2023,10 +2023,10 @@ libqt_list k_fontaction_super_created_widgets(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFontAction*
+/// @param self KFontAction*
 /// @param callback libqt_list of QWidget* func(KFontAction* self)
 ///
-void k_fontaction_on_created_widgets(const void* self, libqt_list (*callback)(const void*));
+void k_fontaction_on_created_widgets(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2054,10 +2054,10 @@ QObject* k_fontaction_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFontAction*
+/// @param self KFontAction*
 /// @param callback QObject* func(KFontAction* self)
 ///
-void k_fontaction_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_fontaction_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2085,10 +2085,10 @@ int32_t k_fontaction_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFontAction*
+/// @param self KFontAction*
 /// @param callback int32_t func(KFontAction* self)
 ///
-void k_fontaction_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_fontaction_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2118,10 +2118,10 @@ int32_t k_fontaction_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFontAction*
+/// @param self KFontAction*
 /// @param callback int32_t func(KFontAction* self, const char* signal)
 ///
-void k_fontaction_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_fontaction_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2151,10 +2151,10 @@ bool k_fontaction_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFontAction*
+/// @param self KFontAction*
 /// @param callback bool func(KFontAction* self, QMetaMethod* signal)
 ///
-void k_fontaction_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_fontaction_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

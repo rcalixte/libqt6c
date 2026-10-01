@@ -16,7 +16,7 @@ QIconEngine* k_countryflagemojiiconengine_clone(const void* self) {
     return KCountryFlagEmojiIconEngine_Clone((KCountryFlagEmojiIconEngine*)self);
 }
 
-void k_countryflagemojiiconengine_on_clone(const void* self, QIconEngine* (*callback)(const void*)) {
+void k_countryflagemojiiconengine_on_clone(void* self, QIconEngine* (*callback)(const void*)) {
     KCountryFlagEmojiIconEngine_OnClone((KCountryFlagEmojiIconEngine*)self, (intptr_t)callback);
 }
 
@@ -31,7 +31,7 @@ const char* k_countryflagemojiiconengine_key(const void* self) {
     return _ret;
 }
 
-void k_countryflagemojiiconengine_on_key(const void* self, const char* (*callback)(const void*)) {
+void k_countryflagemojiiconengine_on_key(void* self, const char* (*callback)(const void*)) {
     KCountryFlagEmojiIconEngine_OnKey((KCountryFlagEmojiIconEngine*)self, (intptr_t)callback);
 }
 
@@ -150,8 +150,8 @@ bool k_countryflagemojiiconengine_super_write(const void* self, void* out) {
     return KCountryFlagEmojiIconEngine_SuperWrite((KCountryFlagEmojiIconEngine*)self, (QDataStream*)out);
 }
 
-void k_countryflagemojiiconengine_on_write(const void* self, bool (*callback)(const void*, void*)) {
-    KCountryFlagEmojiIconEngine_OnWrite((const KCountryFlagEmojiIconEngine*)self, (intptr_t)callback);
+void k_countryflagemojiiconengine_on_write(void* self, bool (*callback)(const void*, void*)) {
+    KCountryFlagEmojiIconEngine_OnWrite((KCountryFlagEmojiIconEngine*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QSize* */ k_countryflagemojiiconengine_available_sizes(void* self, int32_t mode, int32_t state) {

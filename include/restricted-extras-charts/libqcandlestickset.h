@@ -77,10 +77,10 @@ const QMetaObject* q_candlestickset_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCandlestickSet*
+/// @param self QCandlestickSet*
 /// @param callback const QMetaObject* func(const QCandlestickSet* self)
 ///
-void q_candlestickset_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_candlestickset_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1113,10 +1113,10 @@ QObject* q_candlestickset_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCandlestickSet*
+/// @param self QCandlestickSet*
 /// @param callback QObject* func(QCandlestickSet* self)
 ///
-void q_candlestickset_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_candlestickset_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1144,10 +1144,10 @@ int32_t q_candlestickset_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCandlestickSet*
+/// @param self QCandlestickSet*
 /// @param callback int32_t func(QCandlestickSet* self)
 ///
-void q_candlestickset_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_candlestickset_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1177,10 +1177,10 @@ int32_t q_candlestickset_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCandlestickSet*
+/// @param self QCandlestickSet*
 /// @param callback int32_t func(QCandlestickSet* self, const char* signal)
 ///
-void q_candlestickset_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_candlestickset_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1210,10 +1210,10 @@ bool q_candlestickset_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCandlestickSet*
+/// @param self QCandlestickSet*
 /// @param callback bool func(QCandlestickSet* self, QMetaMethod* signal)
 ///
-void q_candlestickset_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_candlestickset_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

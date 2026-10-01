@@ -79,7 +79,7 @@ const QMetaObject* q_qmlcomponent_meta_object(const void* self) {
     return QQmlComponent_MetaObject((QQmlComponent*)self);
 }
 
-void q_qmlcomponent_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_qmlcomponent_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlComponent_OnMetaObject((QQmlComponent*)self, (intptr_t)callback);
 }
 

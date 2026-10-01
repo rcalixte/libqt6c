@@ -21,7 +21,7 @@ const QMetaObject* q_pielegendmarker_meta_object(const void* self) {
     return QPieLegendMarker_MetaObject((QPieLegendMarker*)self);
 }
 
-void q_pielegendmarker_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pielegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPieLegendMarker_OnMetaObject((QPieLegendMarker*)self, (intptr_t)callback);
 }
 

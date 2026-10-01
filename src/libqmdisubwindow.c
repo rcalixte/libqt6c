@@ -31,7 +31,7 @@ const QMetaObject* q_mdisubwindow_meta_object(const void* self) {
     return QMdiSubWindow_MetaObject((QMdiSubWindow*)self);
 }
 
-void q_mdisubwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_mdisubwindow_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QMdiSubWindow_OnMetaObject((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
@@ -74,7 +74,7 @@ QSize* q_mdisubwindow_size_hint(const void* self) {
     return QMdiSubWindow_SizeHint((QMdiSubWindow*)self);
 }
 
-void q_mdisubwindow_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_mdisubwindow_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QMdiSubWindow_OnSizeHint((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
@@ -86,7 +86,7 @@ QSize* q_mdisubwindow_minimum_size_hint(const void* self) {
     return QMdiSubWindow_MinimumSizeHint((QMdiSubWindow*)self);
 }
 
-void q_mdisubwindow_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_mdisubwindow_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QMdiSubWindow_OnMinimumSizeHint((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
@@ -432,11 +432,11 @@ void q_mdisubwindow_set_option2(void* self, int32_t option, bool on) {
     QMdiSubWindow_SetOption2((QMdiSubWindow*)self, option, on);
 }
 
-QPaintDevice* q_mdisubwindow_as_q_paint_device(void* self) {
+QPaintDevice* q_mdisubwindow_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QMdiSubWindow* q_mdisubwindow_from_q_paint_device(void* _qpaintdevice) {
+QMdiSubWindow* q_mdisubwindow_from_q_paint_device(const void* _qpaintdevice) {
     return (QMdiSubWindow*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1827,8 +1827,8 @@ int32_t q_mdisubwindow_super_dev_type(const void* self) {
     return QMdiSubWindow_SuperDevType((QMdiSubWindow*)self);
 }
 
-void q_mdisubwindow_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QMdiSubWindow_OnDevType((const QMdiSubWindow*)self, (intptr_t)callback);
+void q_mdisubwindow_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QMdiSubWindow_OnDevType((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
 void q_mdisubwindow_set_visible(void* self, bool visible) {
@@ -1851,8 +1851,8 @@ int32_t q_mdisubwindow_super_height_for_width(const void* self, int param1) {
     return QMdiSubWindow_SuperHeightForWidth((QMdiSubWindow*)self, param1);
 }
 
-void q_mdisubwindow_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QMdiSubWindow_OnHeightForWidth((const QMdiSubWindow*)self, (intptr_t)callback);
+void q_mdisubwindow_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QMdiSubWindow_OnHeightForWidth((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
 bool q_mdisubwindow_has_height_for_width(const void* self) {
@@ -1863,8 +1863,8 @@ bool q_mdisubwindow_super_has_height_for_width(const void* self) {
     return QMdiSubWindow_SuperHasHeightForWidth((QMdiSubWindow*)self);
 }
 
-void q_mdisubwindow_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QMdiSubWindow_OnHasHeightForWidth((const QMdiSubWindow*)self, (intptr_t)callback);
+void q_mdisubwindow_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QMdiSubWindow_OnHasHeightForWidth((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_mdisubwindow_paint_engine(const void* self) {
@@ -1875,8 +1875,8 @@ QPaintEngine* q_mdisubwindow_super_paint_engine(const void* self) {
     return QMdiSubWindow_SuperPaintEngine((QMdiSubWindow*)self);
 }
 
-void q_mdisubwindow_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QMdiSubWindow_OnPaintEngine((const QMdiSubWindow*)self, (intptr_t)callback);
+void q_mdisubwindow_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QMdiSubWindow_OnPaintEngine((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
 void q_mdisubwindow_wheel_event(void* self, void* event) {
@@ -2007,8 +2007,8 @@ int32_t q_mdisubwindow_super_metric(const void* self, int32_t param1) {
     return QMdiSubWindow_SuperMetric((QMdiSubWindow*)self, param1);
 }
 
-void q_mdisubwindow_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QMdiSubWindow_OnMetric((const QMdiSubWindow*)self, (intptr_t)callback);
+void q_mdisubwindow_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QMdiSubWindow_OnMetric((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
 void q_mdisubwindow_init_painter(const void* self, void* painter) {
@@ -2019,8 +2019,8 @@ void q_mdisubwindow_super_init_painter(const void* self, void* painter) {
     QMdiSubWindow_SuperInitPainter((QMdiSubWindow*)self, (QPainter*)painter);
 }
 
-void q_mdisubwindow_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QMdiSubWindow_OnInitPainter((const QMdiSubWindow*)self, (intptr_t)callback);
+void q_mdisubwindow_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QMdiSubWindow_OnInitPainter((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_mdisubwindow_redirected(const void* self, void* offset) {
@@ -2031,8 +2031,8 @@ QPaintDevice* q_mdisubwindow_super_redirected(const void* self, void* offset) {
     return QMdiSubWindow_SuperRedirected((QMdiSubWindow*)self, (QPoint*)offset);
 }
 
-void q_mdisubwindow_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QMdiSubWindow_OnRedirected((const QMdiSubWindow*)self, (intptr_t)callback);
+void q_mdisubwindow_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QMdiSubWindow_OnRedirected((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
 QPainter* q_mdisubwindow_shared_painter(const void* self) {
@@ -2043,8 +2043,8 @@ QPainter* q_mdisubwindow_super_shared_painter(const void* self) {
     return QMdiSubWindow_SuperSharedPainter((QMdiSubWindow*)self);
 }
 
-void q_mdisubwindow_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QMdiSubWindow_OnSharedPainter((const QMdiSubWindow*)self, (intptr_t)callback);
+void q_mdisubwindow_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QMdiSubWindow_OnSharedPainter((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
 void q_mdisubwindow_input_method_event(void* self, void* param1) {
@@ -2067,8 +2067,8 @@ QVariant* q_mdisubwindow_super_input_method_query(const void* self, int32_t para
     return QMdiSubWindow_SuperInputMethodQuery((QMdiSubWindow*)self, param1);
 }
 
-void q_mdisubwindow_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QMdiSubWindow_OnInputMethodQuery((const QMdiSubWindow*)self, (intptr_t)callback);
+void q_mdisubwindow_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QMdiSubWindow_OnInputMethodQuery((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
 bool q_mdisubwindow_focus_next_prev_child(void* self, bool next) {

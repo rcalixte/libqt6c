@@ -27,7 +27,7 @@ const QMetaObject* q_pluginloader_meta_object(const void* self) {
     return QPluginLoader_MetaObject((QPluginLoader*)self);
 }
 
-void q_pluginloader_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pluginloader_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPluginLoader_OnMetaObject((QPluginLoader*)self, (intptr_t)callback);
 }
 

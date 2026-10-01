@@ -33,7 +33,7 @@ const QMetaObject* k_listwidgetsearchline_meta_object(const void* self) {
     return KListWidgetSearchLine_MetaObject((KListWidgetSearchLine*)self);
 }
 
-void k_listwidgetsearchline_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_listwidgetsearchline_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KListWidgetSearchLine_OnMetaObject((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
@@ -108,7 +108,7 @@ bool k_listwidgetsearchline_item_matches(const void* self, const void* item, con
     return KListWidgetSearchLine_ItemMatches((KListWidgetSearchLine*)self, (QListWidgetItem*)item, qstring(s));
 }
 
-void k_listwidgetsearchline_on_item_matches(const void* self, bool (*callback)(const void*, const void*, const char*)) {
+void k_listwidgetsearchline_on_item_matches(void* self, bool (*callback)(const void*, const void*, const char*)) {
     KListWidgetSearchLine_OnItemMatches((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
@@ -477,11 +477,11 @@ void k_listwidgetsearchline_cursor_backward2(void* self, bool mark, int steps) {
     QLineEdit_CursorBackward2((QLineEdit*)self, mark, steps);
 }
 
-QPaintDevice* k_listwidgetsearchline_as_q_paint_device(void* self) {
+QPaintDevice* k_listwidgetsearchline_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KListWidgetSearchLine* k_listwidgetsearchline_from_q_paint_device(void* _qpaintdevice) {
+KListWidgetSearchLine* k_listwidgetsearchline_from_q_paint_device(const void* _qpaintdevice) {
     return (KListWidgetSearchLine*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1864,8 +1864,8 @@ QSize* k_listwidgetsearchline_super_size_hint(const void* self) {
     return KListWidgetSearchLine_SuperSizeHint((KListWidgetSearchLine*)self);
 }
 
-void k_listwidgetsearchline_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KListWidgetSearchLine_OnSizeHint((const KListWidgetSearchLine*)self, (intptr_t)callback);
+void k_listwidgetsearchline_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KListWidgetSearchLine_OnSizeHint((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 QSize* k_listwidgetsearchline_minimum_size_hint(const void* self) {
@@ -1876,8 +1876,8 @@ QSize* k_listwidgetsearchline_super_minimum_size_hint(const void* self) {
     return KListWidgetSearchLine_SuperMinimumSizeHint((KListWidgetSearchLine*)self);
 }
 
-void k_listwidgetsearchline_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KListWidgetSearchLine_OnMinimumSizeHint((const KListWidgetSearchLine*)self, (intptr_t)callback);
+void k_listwidgetsearchline_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KListWidgetSearchLine_OnMinimumSizeHint((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 void k_listwidgetsearchline_mouse_press_event(void* self, void* param1) {
@@ -2080,8 +2080,8 @@ void k_listwidgetsearchline_super_init_style_option(const void* self, void* opti
     KListWidgetSearchLine_SuperInitStyleOption((KListWidgetSearchLine*)self, (QStyleOptionFrame*)option);
 }
 
-void k_listwidgetsearchline_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KListWidgetSearchLine_OnInitStyleOption((const KListWidgetSearchLine*)self, (intptr_t)callback);
+void k_listwidgetsearchline_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KListWidgetSearchLine_OnInitStyleOption((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 QVariant* k_listwidgetsearchline_input_method_query(const void* self, int32_t param1) {
@@ -2092,8 +2092,8 @@ QVariant* k_listwidgetsearchline_super_input_method_query(const void* self, int3
     return KListWidgetSearchLine_SuperInputMethodQuery((KListWidgetSearchLine*)self, param1);
 }
 
-void k_listwidgetsearchline_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KListWidgetSearchLine_OnInputMethodQuery((const KListWidgetSearchLine*)self, (intptr_t)callback);
+void k_listwidgetsearchline_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KListWidgetSearchLine_OnInputMethodQuery((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 void k_listwidgetsearchline_timer_event(void* self, void* param1) {
@@ -2116,8 +2116,8 @@ int32_t k_listwidgetsearchline_super_dev_type(const void* self) {
     return KListWidgetSearchLine_SuperDevType((KListWidgetSearchLine*)self);
 }
 
-void k_listwidgetsearchline_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KListWidgetSearchLine_OnDevType((const KListWidgetSearchLine*)self, (intptr_t)callback);
+void k_listwidgetsearchline_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KListWidgetSearchLine_OnDevType((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 void k_listwidgetsearchline_set_visible(void* self, bool visible) {
@@ -2140,8 +2140,8 @@ int32_t k_listwidgetsearchline_super_height_for_width(const void* self, int para
     return KListWidgetSearchLine_SuperHeightForWidth((KListWidgetSearchLine*)self, param1);
 }
 
-void k_listwidgetsearchline_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KListWidgetSearchLine_OnHeightForWidth((const KListWidgetSearchLine*)self, (intptr_t)callback);
+void k_listwidgetsearchline_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KListWidgetSearchLine_OnHeightForWidth((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 bool k_listwidgetsearchline_has_height_for_width(const void* self) {
@@ -2152,8 +2152,8 @@ bool k_listwidgetsearchline_super_has_height_for_width(const void* self) {
     return KListWidgetSearchLine_SuperHasHeightForWidth((KListWidgetSearchLine*)self);
 }
 
-void k_listwidgetsearchline_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KListWidgetSearchLine_OnHasHeightForWidth((const KListWidgetSearchLine*)self, (intptr_t)callback);
+void k_listwidgetsearchline_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KListWidgetSearchLine_OnHasHeightForWidth((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_listwidgetsearchline_paint_engine(const void* self) {
@@ -2164,8 +2164,8 @@ QPaintEngine* k_listwidgetsearchline_super_paint_engine(const void* self) {
     return KListWidgetSearchLine_SuperPaintEngine((KListWidgetSearchLine*)self);
 }
 
-void k_listwidgetsearchline_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KListWidgetSearchLine_OnPaintEngine((const KListWidgetSearchLine*)self, (intptr_t)callback);
+void k_listwidgetsearchline_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KListWidgetSearchLine_OnPaintEngine((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 void k_listwidgetsearchline_wheel_event(void* self, void* event) {
@@ -2308,8 +2308,8 @@ int32_t k_listwidgetsearchline_super_metric(const void* self, int32_t param1) {
     return KListWidgetSearchLine_SuperMetric((KListWidgetSearchLine*)self, param1);
 }
 
-void k_listwidgetsearchline_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KListWidgetSearchLine_OnMetric((const KListWidgetSearchLine*)self, (intptr_t)callback);
+void k_listwidgetsearchline_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KListWidgetSearchLine_OnMetric((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 void k_listwidgetsearchline_init_painter(const void* self, void* painter) {
@@ -2320,8 +2320,8 @@ void k_listwidgetsearchline_super_init_painter(const void* self, void* painter) 
     KListWidgetSearchLine_SuperInitPainter((KListWidgetSearchLine*)self, (QPainter*)painter);
 }
 
-void k_listwidgetsearchline_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KListWidgetSearchLine_OnInitPainter((const KListWidgetSearchLine*)self, (intptr_t)callback);
+void k_listwidgetsearchline_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KListWidgetSearchLine_OnInitPainter((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_listwidgetsearchline_redirected(const void* self, void* offset) {
@@ -2332,8 +2332,8 @@ QPaintDevice* k_listwidgetsearchline_super_redirected(const void* self, void* of
     return KListWidgetSearchLine_SuperRedirected((KListWidgetSearchLine*)self, (QPoint*)offset);
 }
 
-void k_listwidgetsearchline_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KListWidgetSearchLine_OnRedirected((const KListWidgetSearchLine*)self, (intptr_t)callback);
+void k_listwidgetsearchline_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KListWidgetSearchLine_OnRedirected((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 QPainter* k_listwidgetsearchline_shared_painter(const void* self) {
@@ -2344,8 +2344,8 @@ QPainter* k_listwidgetsearchline_super_shared_painter(const void* self) {
     return KListWidgetSearchLine_SuperSharedPainter((KListWidgetSearchLine*)self);
 }
 
-void k_listwidgetsearchline_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KListWidgetSearchLine_OnSharedPainter((const KListWidgetSearchLine*)self, (intptr_t)callback);
+void k_listwidgetsearchline_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KListWidgetSearchLine_OnSharedPainter((KListWidgetSearchLine*)self, (intptr_t)callback);
 }
 
 bool k_listwidgetsearchline_focus_next_prev_child(void* self, bool next) {

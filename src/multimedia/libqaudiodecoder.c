@@ -21,7 +21,7 @@ const QMetaObject* q_audiodecoder_meta_object(const void* self) {
     return QAudioDecoder_MetaObject((QAudioDecoder*)self);
 }
 
-void q_audiodecoder_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_audiodecoder_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAudioDecoder_OnMetaObject((QAudioDecoder*)self, (intptr_t)callback);
 }
 

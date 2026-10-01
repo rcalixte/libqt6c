@@ -17,7 +17,7 @@ const QMetaObject* k_textemoticonswidgets__emoticontexteditaction_meta_object(co
     return TextEmoticonsWidgets__EmoticonTextEditAction_MetaObject((TextEmoticonsWidgets__EmoticonTextEditAction*)self);
 }
 
-void k_textemoticonswidgets__emoticontexteditaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textemoticonswidgets__emoticontexteditaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextEmoticonsWidgets__EmoticonTextEditAction_OnMetaObject((TextEmoticonsWidgets__EmoticonTextEditAction*)self, (intptr_t)callback);
 }
 

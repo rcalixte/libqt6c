@@ -26,7 +26,7 @@ bool q_designersettingsinterface_contains(const void* self, const char* key) {
     return QDesignerSettingsInterface_Contains((QDesignerSettingsInterface*)self, qstring(key));
 }
 
-void q_designersettingsinterface_on_contains(const void* self, bool (*callback)(const void*, const char*)) {
+void q_designersettingsinterface_on_contains(void* self, bool (*callback)(const void*, const char*)) {
     QDesignerSettingsInterface_OnContains((QDesignerSettingsInterface*)self, (intptr_t)callback);
 }
 
@@ -42,7 +42,7 @@ QVariant* q_designersettingsinterface_value(const void* self, const char* key, c
     return QDesignerSettingsInterface_Value((QDesignerSettingsInterface*)self, qstring(key), (QVariant*)defaultValue);
 }
 
-void q_designersettingsinterface_on_value(const void* self, QVariant* (*callback)(const void*, const char*, const void*)) {
+void q_designersettingsinterface_on_value(void* self, QVariant* (*callback)(const void*, const char*, const void*)) {
     QDesignerSettingsInterface_OnValue((QDesignerSettingsInterface*)self, (intptr_t)callback);
 }
 

@@ -19,7 +19,7 @@ const QMetaObject* k_textgrammarcheck__languagetoolmanager_meta_object(const voi
     return TextGrammarCheck__LanguageToolManager_MetaObject((TextGrammarCheck__LanguageToolManager*)self);
 }
 
-void k_textgrammarcheck__languagetoolmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textgrammarcheck__languagetoolmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextGrammarCheck__LanguageToolManager_OnMetaObject((TextGrammarCheck__LanguageToolManager*)self, (intptr_t)callback);
 }
 

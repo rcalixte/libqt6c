@@ -24,15 +24,15 @@ QQmlExtensionPlugin* q_qmlextensionplugin_new2(void* parent);
 
 /// Upcasts to a QQmlExtensionInterface object
 ///
-/// @param self QQmlExtensionPlugin*
+/// @param self const QQmlExtensionPlugin*
 ///
-QQmlExtensionInterface* q_qmlextensionplugin_as_q_qml_extension_interface(void* self);
+QQmlExtensionInterface* q_qmlextensionplugin_as_q_qml_extension_interface(const void* self);
 
 /// Downcasts to a QQmlExtensionPlugin object
 ///
 /// @param _qqmlextensioninterface QQmlExtensionInterface*
 ///
-QQmlExtensionPlugin* q_qmlextensionplugin_from_q_qml_extension_interface(void* _qqmlextensioninterface);
+QQmlExtensionPlugin* q_qmlextensionplugin_from_q_qml_extension_interface(const void* _qqmlextensioninterface);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -44,10 +44,10 @@ const QMetaObject* q_qmlextensionplugin_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQmlExtensionPlugin*
+/// @param self QQmlExtensionPlugin*
 /// @param callback const QMetaObject* func(const QQmlExtensionPlugin* self)
 ///
-void q_qmlextensionplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_qmlextensionplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -915,10 +915,10 @@ QObject* q_qmlextensionplugin_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQmlExtensionPlugin*
+/// @param self QQmlExtensionPlugin*
 /// @param callback QObject* func(QQmlExtensionPlugin* self)
 ///
-void q_qmlextensionplugin_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_qmlextensionplugin_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -946,10 +946,10 @@ int32_t q_qmlextensionplugin_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQmlExtensionPlugin*
+/// @param self QQmlExtensionPlugin*
 /// @param callback int32_t func(QQmlExtensionPlugin* self)
 ///
-void q_qmlextensionplugin_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_qmlextensionplugin_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -979,10 +979,10 @@ int32_t q_qmlextensionplugin_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQmlExtensionPlugin*
+/// @param self QQmlExtensionPlugin*
 /// @param callback int32_t func(QQmlExtensionPlugin* self, const char* signal)
 ///
-void q_qmlextensionplugin_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_qmlextensionplugin_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1012,10 +1012,10 @@ bool q_qmlextensionplugin_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQmlExtensionPlugin*
+/// @param self QQmlExtensionPlugin*
 /// @param callback bool func(QQmlExtensionPlugin* self, QMetaMethod* signal)
 ///
-void q_qmlextensionplugin_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_qmlextensionplugin_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1052,15 +1052,15 @@ QQmlEngineExtensionPlugin* q_qmlengineextensionplugin_new2(void* parent);
 
 /// Upcasts to a QQmlEngineExtensionInterface object
 ///
-/// @param self QQmlEngineExtensionPlugin*
+/// @param self const QQmlEngineExtensionPlugin*
 ///
-QQmlEngineExtensionInterface* q_qmlengineextensionplugin_as_q_qml_engine_extension_interface(void* self);
+QQmlEngineExtensionInterface* q_qmlengineextensionplugin_as_q_qml_engine_extension_interface(const void* self);
 
 /// Downcasts to a QQmlEngineExtensionPlugin object
 ///
 /// @param _qqmlengineextensioninterface QQmlEngineExtensionInterface*
 ///
-QQmlEngineExtensionPlugin* q_qmlengineextensionplugin_from_q_qml_engine_extension_interface(void* _qqmlengineextensioninterface);
+QQmlEngineExtensionPlugin* q_qmlengineextensionplugin_from_q_qml_engine_extension_interface(const void* _qqmlengineextensioninterface);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1072,10 +1072,10 @@ const QMetaObject* q_qmlengineextensionplugin_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQmlEngineExtensionPlugin*
+/// @param self QQmlEngineExtensionPlugin*
 /// @param callback const QMetaObject* func(const QQmlEngineExtensionPlugin* self)
 ///
-void q_qmlengineextensionplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_qmlengineextensionplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1896,10 +1896,10 @@ QObject* q_qmlengineextensionplugin_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQmlEngineExtensionPlugin*
+/// @param self QQmlEngineExtensionPlugin*
 /// @param callback QObject* func(QQmlEngineExtensionPlugin* self)
 ///
-void q_qmlengineextensionplugin_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_qmlengineextensionplugin_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1927,10 +1927,10 @@ int32_t q_qmlengineextensionplugin_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQmlEngineExtensionPlugin*
+/// @param self QQmlEngineExtensionPlugin*
 /// @param callback int32_t func(QQmlEngineExtensionPlugin* self)
 ///
-void q_qmlengineextensionplugin_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_qmlengineextensionplugin_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1960,10 +1960,10 @@ int32_t q_qmlengineextensionplugin_super_receivers(const void* self, const char*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQmlEngineExtensionPlugin*
+/// @param self QQmlEngineExtensionPlugin*
 /// @param callback int32_t func(QQmlEngineExtensionPlugin* self, const char* signal)
 ///
-void q_qmlengineextensionplugin_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_qmlengineextensionplugin_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1993,10 +1993,10 @@ bool q_qmlengineextensionplugin_super_is_signal_connected(const void* self, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQmlEngineExtensionPlugin*
+/// @param self QQmlEngineExtensionPlugin*
 /// @param callback bool func(QQmlEngineExtensionPlugin* self, QMetaMethod* signal)
 ///
-void q_qmlengineextensionplugin_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_qmlengineextensionplugin_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

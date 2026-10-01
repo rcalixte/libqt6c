@@ -19,7 +19,7 @@ const QMetaObject* q_virtualkeyboardtrace_meta_object(const void* self) {
     return QVirtualKeyboardTrace_MetaObject((QVirtualKeyboardTrace*)self);
 }
 
-void q_virtualkeyboardtrace_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_virtualkeyboardtrace_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVirtualKeyboardTrace_OnMetaObject((QVirtualKeyboardTrace*)self, (intptr_t)callback);
 }
 

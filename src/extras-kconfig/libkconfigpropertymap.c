@@ -20,7 +20,7 @@ const QMetaObject* k_configpropertymap_meta_object(const void* self) {
     return KConfigPropertyMap_MetaObject((KConfigPropertyMap*)self);
 }
 
-void k_configpropertymap_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_configpropertymap_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KConfigPropertyMap_OnMetaObject((KConfigPropertyMap*)self, (intptr_t)callback);
 }
 

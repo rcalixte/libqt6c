@@ -17,7 +17,7 @@ const QMetaObject* q_timer_meta_object(const void* self) {
     return QTimer_MetaObject((QTimer*)self);
 }
 
-void q_timer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_timer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTimer_OnMetaObject((QTimer*)self, (intptr_t)callback);
 }
 

@@ -21,7 +21,7 @@ const QMetaObject* q_barlegendmarker_meta_object(const void* self) {
     return QBarLegendMarker_MetaObject((QBarLegendMarker*)self);
 }
 
-void q_barlegendmarker_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_barlegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QBarLegendMarker_OnMetaObject((QBarLegendMarker*)self, (intptr_t)callback);
 }
 

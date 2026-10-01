@@ -36,7 +36,7 @@ const QMetaObject* q_toolbar_meta_object(const void* self) {
     return QToolBar_MetaObject((QToolBar*)self);
 }
 
-void q_toolbar_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_toolbar_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QToolBar_OnMetaObject((QToolBar*)self, (intptr_t)callback);
 }
 
@@ -287,7 +287,7 @@ void q_toolbar_init_style_option(const void* self, void* option) {
     QToolBar_InitStyleOption((QToolBar*)self, (QStyleOptionToolBar*)option);
 }
 
-void q_toolbar_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_toolbar_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QToolBar_OnInitStyleOption((QToolBar*)self, (intptr_t)callback);
 }
 
@@ -309,11 +309,11 @@ const char* q_toolbar_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_toolbar_as_q_paint_device(void* self) {
+QPaintDevice* q_toolbar_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QToolBar* q_toolbar_from_q_paint_device(void* _qpaintdevice) {
+QToolBar* q_toolbar_from_q_paint_device(const void* _qpaintdevice) {
     return (QToolBar*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1704,8 +1704,8 @@ int32_t q_toolbar_super_dev_type(const void* self) {
     return QToolBar_SuperDevType((QToolBar*)self);
 }
 
-void q_toolbar_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QToolBar_OnDevType((const QToolBar*)self, (intptr_t)callback);
+void q_toolbar_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QToolBar_OnDevType((QToolBar*)self, (intptr_t)callback);
 }
 
 void q_toolbar_set_visible(void* self, bool visible) {
@@ -1728,8 +1728,8 @@ QSize* q_toolbar_super_size_hint(const void* self) {
     return QToolBar_SuperSizeHint((QToolBar*)self);
 }
 
-void q_toolbar_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QToolBar_OnSizeHint((const QToolBar*)self, (intptr_t)callback);
+void q_toolbar_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QToolBar_OnSizeHint((QToolBar*)self, (intptr_t)callback);
 }
 
 QSize* q_toolbar_minimum_size_hint(const void* self) {
@@ -1740,8 +1740,8 @@ QSize* q_toolbar_super_minimum_size_hint(const void* self) {
     return QToolBar_SuperMinimumSizeHint((QToolBar*)self);
 }
 
-void q_toolbar_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QToolBar_OnMinimumSizeHint((const QToolBar*)self, (intptr_t)callback);
+void q_toolbar_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QToolBar_OnMinimumSizeHint((QToolBar*)self, (intptr_t)callback);
 }
 
 int32_t q_toolbar_height_for_width(const void* self, int param1) {
@@ -1752,8 +1752,8 @@ int32_t q_toolbar_super_height_for_width(const void* self, int param1) {
     return QToolBar_SuperHeightForWidth((QToolBar*)self, param1);
 }
 
-void q_toolbar_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QToolBar_OnHeightForWidth((const QToolBar*)self, (intptr_t)callback);
+void q_toolbar_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QToolBar_OnHeightForWidth((QToolBar*)self, (intptr_t)callback);
 }
 
 bool q_toolbar_has_height_for_width(const void* self) {
@@ -1764,8 +1764,8 @@ bool q_toolbar_super_has_height_for_width(const void* self) {
     return QToolBar_SuperHasHeightForWidth((QToolBar*)self);
 }
 
-void q_toolbar_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QToolBar_OnHasHeightForWidth((const QToolBar*)self, (intptr_t)callback);
+void q_toolbar_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QToolBar_OnHasHeightForWidth((QToolBar*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_toolbar_paint_engine(const void* self) {
@@ -1776,8 +1776,8 @@ QPaintEngine* q_toolbar_super_paint_engine(const void* self) {
     return QToolBar_SuperPaintEngine((QToolBar*)self);
 }
 
-void q_toolbar_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QToolBar_OnPaintEngine((const QToolBar*)self, (intptr_t)callback);
+void q_toolbar_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QToolBar_OnPaintEngine((QToolBar*)self, (intptr_t)callback);
 }
 
 void q_toolbar_mouse_press_event(void* self, void* event) {
@@ -2064,8 +2064,8 @@ int32_t q_toolbar_super_metric(const void* self, int32_t param1) {
     return QToolBar_SuperMetric((QToolBar*)self, param1);
 }
 
-void q_toolbar_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QToolBar_OnMetric((const QToolBar*)self, (intptr_t)callback);
+void q_toolbar_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QToolBar_OnMetric((QToolBar*)self, (intptr_t)callback);
 }
 
 void q_toolbar_init_painter(const void* self, void* painter) {
@@ -2076,8 +2076,8 @@ void q_toolbar_super_init_painter(const void* self, void* painter) {
     QToolBar_SuperInitPainter((QToolBar*)self, (QPainter*)painter);
 }
 
-void q_toolbar_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QToolBar_OnInitPainter((const QToolBar*)self, (intptr_t)callback);
+void q_toolbar_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QToolBar_OnInitPainter((QToolBar*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_toolbar_redirected(const void* self, void* offset) {
@@ -2088,8 +2088,8 @@ QPaintDevice* q_toolbar_super_redirected(const void* self, void* offset) {
     return QToolBar_SuperRedirected((QToolBar*)self, (QPoint*)offset);
 }
 
-void q_toolbar_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QToolBar_OnRedirected((const QToolBar*)self, (intptr_t)callback);
+void q_toolbar_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QToolBar_OnRedirected((QToolBar*)self, (intptr_t)callback);
 }
 
 QPainter* q_toolbar_shared_painter(const void* self) {
@@ -2100,8 +2100,8 @@ QPainter* q_toolbar_super_shared_painter(const void* self) {
     return QToolBar_SuperSharedPainter((QToolBar*)self);
 }
 
-void q_toolbar_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QToolBar_OnSharedPainter((const QToolBar*)self, (intptr_t)callback);
+void q_toolbar_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QToolBar_OnSharedPainter((QToolBar*)self, (intptr_t)callback);
 }
 
 void q_toolbar_input_method_event(void* self, void* param1) {
@@ -2124,8 +2124,8 @@ QVariant* q_toolbar_super_input_method_query(const void* self, int32_t param1) {
     return QToolBar_SuperInputMethodQuery((QToolBar*)self, param1);
 }
 
-void q_toolbar_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QToolBar_OnInputMethodQuery((const QToolBar*)self, (intptr_t)callback);
+void q_toolbar_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QToolBar_OnInputMethodQuery((QToolBar*)self, (intptr_t)callback);
 }
 
 bool q_toolbar_focus_next_prev_child(void* self, bool next) {

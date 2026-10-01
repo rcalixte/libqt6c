@@ -28,7 +28,7 @@ const QMetaObject* k_io__openurljob_meta_object(const void* self) {
     return KIO__OpenUrlJob_MetaObject((KIO__OpenUrlJob*)self);
 }
 
-void k_io__openurljob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__openurljob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__OpenUrlJob_OnMetaObject((KIO__OpenUrlJob*)self, (intptr_t)callback);
 }
 
@@ -555,8 +555,8 @@ const char* k_io__openurljob_super_error_string(const void* self) {
     return _ret;
 }
 
-void k_io__openurljob_on_error_string(const void* self, const char* (*callback)(const void*)) {
-    KIO__OpenUrlJob_OnErrorString((const KIO__OpenUrlJob*)self, (intptr_t)callback);
+void k_io__openurljob_on_error_string(void* self, const char* (*callback)(const void*)) {
+    KIO__OpenUrlJob_OnErrorString((KIO__OpenUrlJob*)self, (intptr_t)callback);
 }
 
 bool k_io__openurljob_event(void* self, void* event) {

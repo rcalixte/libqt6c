@@ -74,8 +74,8 @@ QEvent* k_parts__guiactivateevent_super_clone(const void* self) {
     return KParts__GUIActivateEvent_SuperClone((KParts__GUIActivateEvent*)self);
 }
 
-void k_parts__guiactivateevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    KParts__GUIActivateEvent_OnClone((const KParts__GUIActivateEvent*)self, (intptr_t)callback);
+void k_parts__guiactivateevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    KParts__GUIActivateEvent_OnClone((KParts__GUIActivateEvent*)self, (intptr_t)callback);
 }
 
 void k_parts__guiactivateevent_delete(void* self) {

@@ -434,9 +434,9 @@ void k_buildsycocaprogressdialog_reject(void* self);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self KBuildSycocaProgressDialog*
+/// @param self const KBuildSycocaProgressDialog*
 ///
-QPaintDevice* k_buildsycocaprogressdialog_as_q_paint_device(void* self);
+QPaintDevice* k_buildsycocaprogressdialog_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -444,7 +444,7 @@ QPaintDevice* k_buildsycocaprogressdialog_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-KBuildSycocaProgressDialog* k_buildsycocaprogressdialog_from_q_paint_device(void* _qpaintdevice);
+KBuildSycocaProgressDialog* k_buildsycocaprogressdialog_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

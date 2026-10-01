@@ -49,7 +49,7 @@ const QMetaObject* q_filesystemwatcher_meta_object(const void* self) {
     return QFileSystemWatcher_MetaObject((QFileSystemWatcher*)self);
 }
 
-void q_filesystemwatcher_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_filesystemwatcher_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QFileSystemWatcher_OnMetaObject((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 

@@ -28,10 +28,10 @@ const char* q_designeroptionspageinterface_name(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerOptionsPageInterface*
+/// @param self QDesignerOptionsPageInterface*
 /// @param callback const char* func(const QDesignerOptionsPageInterface* self)
 ///
-void q_designeroptionspageinterface_on_name(const void* self, const char* (*callback)(const void*));
+void q_designeroptionspageinterface_on_name(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesigneroptionspageinterface.html#createPage)
 ///

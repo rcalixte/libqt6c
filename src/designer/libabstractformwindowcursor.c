@@ -12,7 +12,7 @@ QDesignerFormWindowInterface* q_designerformwindowcursorinterface_form_window(co
     return QDesignerFormWindowCursorInterface_FormWindow((QDesignerFormWindowCursorInterface*)self);
 }
 
-void q_designerformwindowcursorinterface_on_form_window(const void* self, QDesignerFormWindowInterface* (*callback)(const void*)) {
+void q_designerformwindowcursorinterface_on_form_window(void* self, QDesignerFormWindowInterface* (*callback)(const void*)) {
     QDesignerFormWindowCursorInterface_OnFormWindow((QDesignerFormWindowCursorInterface*)self, (intptr_t)callback);
 }
 
@@ -28,7 +28,7 @@ int32_t q_designerformwindowcursorinterface_position(const void* self) {
     return QDesignerFormWindowCursorInterface_Position((QDesignerFormWindowCursorInterface*)self);
 }
 
-void q_designerformwindowcursorinterface_on_position(const void* self, int32_t (*callback)(const void*)) {
+void q_designerformwindowcursorinterface_on_position(void* self, int32_t (*callback)(const void*)) {
     QDesignerFormWindowCursorInterface_OnPosition((QDesignerFormWindowCursorInterface*)self, (intptr_t)callback);
 }
 
@@ -44,7 +44,7 @@ QWidget* q_designerformwindowcursorinterface_current(const void* self) {
     return QDesignerFormWindowCursorInterface_Current((QDesignerFormWindowCursorInterface*)self);
 }
 
-void q_designerformwindowcursorinterface_on_current(const void* self, QWidget* (*callback)(const void*)) {
+void q_designerformwindowcursorinterface_on_current(void* self, QWidget* (*callback)(const void*)) {
     QDesignerFormWindowCursorInterface_OnCurrent((QDesignerFormWindowCursorInterface*)self, (intptr_t)callback);
 }
 
@@ -52,7 +52,7 @@ int32_t q_designerformwindowcursorinterface_widget_count(const void* self) {
     return QDesignerFormWindowCursorInterface_WidgetCount((QDesignerFormWindowCursorInterface*)self);
 }
 
-void q_designerformwindowcursorinterface_on_widget_count(const void* self, int32_t (*callback)(const void*)) {
+void q_designerformwindowcursorinterface_on_widget_count(void* self, int32_t (*callback)(const void*)) {
     QDesignerFormWindowCursorInterface_OnWidgetCount((QDesignerFormWindowCursorInterface*)self, (intptr_t)callback);
 }
 
@@ -60,7 +60,7 @@ QWidget* q_designerformwindowcursorinterface_widget(const void* self, int index)
     return QDesignerFormWindowCursorInterface_Widget((QDesignerFormWindowCursorInterface*)self, index);
 }
 
-void q_designerformwindowcursorinterface_on_widget(const void* self, QWidget* (*callback)(const void*, int)) {
+void q_designerformwindowcursorinterface_on_widget(void* self, QWidget* (*callback)(const void*, int)) {
     QDesignerFormWindowCursorInterface_OnWidget((QDesignerFormWindowCursorInterface*)self, (intptr_t)callback);
 }
 
@@ -68,7 +68,7 @@ bool q_designerformwindowcursorinterface_has_selection(const void* self) {
     return QDesignerFormWindowCursorInterface_HasSelection((QDesignerFormWindowCursorInterface*)self);
 }
 
-void q_designerformwindowcursorinterface_on_has_selection(const void* self, bool (*callback)(const void*)) {
+void q_designerformwindowcursorinterface_on_has_selection(void* self, bool (*callback)(const void*)) {
     QDesignerFormWindowCursorInterface_OnHasSelection((QDesignerFormWindowCursorInterface*)self, (intptr_t)callback);
 }
 
@@ -76,7 +76,7 @@ int32_t q_designerformwindowcursorinterface_selected_widget_count(const void* se
     return QDesignerFormWindowCursorInterface_SelectedWidgetCount((QDesignerFormWindowCursorInterface*)self);
 }
 
-void q_designerformwindowcursorinterface_on_selected_widget_count(const void* self, int32_t (*callback)(const void*)) {
+void q_designerformwindowcursorinterface_on_selected_widget_count(void* self, int32_t (*callback)(const void*)) {
     QDesignerFormWindowCursorInterface_OnSelectedWidgetCount((QDesignerFormWindowCursorInterface*)self, (intptr_t)callback);
 }
 
@@ -84,7 +84,7 @@ QWidget* q_designerformwindowcursorinterface_selected_widget(const void* self, i
     return QDesignerFormWindowCursorInterface_SelectedWidget((QDesignerFormWindowCursorInterface*)self, index);
 }
 
-void q_designerformwindowcursorinterface_on_selected_widget(const void* self, QWidget* (*callback)(const void*, int)) {
+void q_designerformwindowcursorinterface_on_selected_widget(void* self, QWidget* (*callback)(const void*, int)) {
     QDesignerFormWindowCursorInterface_OnSelectedWidget((QDesignerFormWindowCursorInterface*)self, (intptr_t)callback);
 }
 

@@ -16,7 +16,7 @@ const QMetaObject* k_toolbarspaceraction_meta_object(const void* self) {
     return KToolBarSpacerAction_MetaObject((KToolBarSpacerAction*)self);
 }
 
-void k_toolbarspaceraction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_toolbarspaceraction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KToolBarSpacerAction_OnMetaObject((KToolBarSpacerAction*)self, (intptr_t)callback);
 }
 

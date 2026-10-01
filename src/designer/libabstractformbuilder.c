@@ -121,7 +121,7 @@ bool q_abstractformbuilder_check_property(const void* self, void* obj, const cha
     return QAbstractFormBuilder_CheckProperty((QAbstractFormBuilder*)self, (QObject*)obj, qstring(prop));
 }
 
-void q_abstractformbuilder_on_check_property(const void* self, bool (*callback)(const void*, void*, const char*)) {
+void q_abstractformbuilder_on_check_property(void* self, bool (*callback)(const void*, void*, const char*)) {
     QAbstractFormBuilder_OnCheckProperty((QAbstractFormBuilder*)self, (intptr_t)callback);
 }
 

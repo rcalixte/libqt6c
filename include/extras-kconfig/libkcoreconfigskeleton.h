@@ -229,10 +229,10 @@ bool k_configskeletonitem_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfigSkeletonItem*
+/// @param self KConfigSkeletonItem*
 /// @param callback bool func(const KConfigSkeletonItem* self, QVariant* p)
 ///
-void k_configskeletonitem_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_configskeletonitem_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#property)
 ///
@@ -246,12 +246,12 @@ QVariant* k_configskeletonitem_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfigSkeletonItem*
+/// @param self KConfigSkeletonItem*
 /// @param callback QVariant* func(const KConfigSkeletonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_configskeletonitem_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_configskeletonitem_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#minValue)
 ///
@@ -263,12 +263,12 @@ QVariant* k_configskeletonitem_min_value(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfigSkeletonItem*
+/// @param self KConfigSkeletonItem*
 /// @param callback QVariant* func(const KConfigSkeletonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_configskeletonitem_on_min_value(const void* self, QVariant* (*callback)(const void*));
+void k_configskeletonitem_on_min_value(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#minValue)
 ///
@@ -288,12 +288,12 @@ QVariant* k_configskeletonitem_max_value(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfigSkeletonItem*
+/// @param self KConfigSkeletonItem*
 /// @param callback QVariant* func(const KConfigSkeletonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_configskeletonitem_on_max_value(const void* self, QVariant* (*callback)(const void*));
+void k_configskeletonitem_on_max_value(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#maxValue)
 ///
@@ -404,12 +404,12 @@ QVariant* k_propertyskeletonitem_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPropertySkeletonItem*
+/// @param self KPropertySkeletonItem*
 /// @param callback QVariant* func(const KPropertySkeletonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_propertyskeletonitem_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_propertyskeletonitem_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#property)
 ///
@@ -455,10 +455,10 @@ bool k_propertyskeletonitem_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPropertySkeletonItem*
+/// @param self KPropertySkeletonItem*
 /// @param callback bool func(const KPropertySkeletonItem* self, QVariant* p)
 ///
-void k_propertyskeletonitem_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_propertyskeletonitem_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#isEqual)
 ///
@@ -806,12 +806,12 @@ QVariant* k_propertyskeletonitem_super_min_value(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertySkeletonItem*
+/// @param self KPropertySkeletonItem*
 /// @param callback QVariant* func(KPropertySkeletonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_propertyskeletonitem_on_min_value(const void* self, QVariant* (*callback)(const void*));
+void k_propertyskeletonitem_on_min_value(void* self, QVariant* (*callback)(const void*));
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -839,12 +839,12 @@ QVariant* k_propertyskeletonitem_super_max_value(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertySkeletonItem*
+/// @param self KPropertySkeletonItem*
 /// @param callback QVariant* func(KPropertySkeletonItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_propertyskeletonitem_on_max_value(const void* self, QVariant* (*callback)(const void*));
+void k_propertyskeletonitem_on_max_value(void* self, QVariant* (*callback)(const void*));
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -1170,10 +1170,10 @@ const QMetaObject* k_coreconfigskeleton_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton*
+/// @param self KCoreConfigSkeleton*
 /// @param callback const QMetaObject* func(const KCoreConfigSkeleton* self)
 ///
-void k_coreconfigskeleton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_coreconfigskeleton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -2733,10 +2733,10 @@ QObject* k_coreconfigskeleton_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton*
+/// @param self KCoreConfigSkeleton*
 /// @param callback QObject* func(KCoreConfigSkeleton* self)
 ///
-void k_coreconfigskeleton_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_coreconfigskeleton_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2764,10 +2764,10 @@ int32_t k_coreconfigskeleton_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton*
+/// @param self KCoreConfigSkeleton*
 /// @param callback int32_t func(KCoreConfigSkeleton* self)
 ///
-void k_coreconfigskeleton_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_coreconfigskeleton_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2797,10 +2797,10 @@ int32_t k_coreconfigskeleton_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton*
+/// @param self KCoreConfigSkeleton*
 /// @param callback int32_t func(KCoreConfigSkeleton* self, const char* signal)
 ///
-void k_coreconfigskeleton_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_coreconfigskeleton_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2830,10 +2830,10 @@ bool k_coreconfigskeleton_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton*
+/// @param self KCoreConfigSkeleton*
 /// @param callback bool func(KCoreConfigSkeleton* self, QMetaMethod* signal)
 ///
-void k_coreconfigskeleton_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2973,10 +2973,10 @@ bool k_coreconfigskeleton__itemstring_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemString*
+/// @param self KCoreConfigSkeleton__ItemString*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemString* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemstring_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemstring_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#isEqual)
 ///
@@ -2997,12 +2997,12 @@ QVariant* k_coreconfigskeleton__itemstring_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemString*
+/// @param self KCoreConfigSkeleton__ItemString*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemString* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemstring_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemstring_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstring.html#property)
 ///
@@ -3166,10 +3166,10 @@ bool k_coreconfigskeleton__itempassword_super_is_equal(const void* self, const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton__ItemPassword*
+/// @param self KCoreConfigSkeleton__ItemPassword*
 /// @param callback bool func(KCoreConfigSkeleton__ItemPassword* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempassword_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itempassword_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3197,12 +3197,12 @@ QVariant* k_coreconfigskeleton__itempassword_super_property(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton__ItemPassword*
+/// @param self KCoreConfigSkeleton__ItemPassword*
 /// @param callback QVariant* func(KCoreConfigSkeleton__ItemPassword* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itempassword_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itempassword_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///
@@ -3358,10 +3358,10 @@ bool k_coreconfigskeleton__itempath_super_is_equal(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton__ItemPath*
+/// @param self KCoreConfigSkeleton__ItemPath*
 /// @param callback bool func(KCoreConfigSkeleton__ItemPath* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempath_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itempath_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
 ///
@@ -3389,12 +3389,12 @@ QVariant* k_coreconfigskeleton__itempath_super_property(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton__ItemPath*
+/// @param self KCoreConfigSkeleton__ItemPath*
 /// @param callback QVariant* func(KCoreConfigSkeleton__ItemPath* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itempath_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itempath_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///
@@ -3509,10 +3509,10 @@ bool k_coreconfigskeleton__itemurl_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemUrl*
+/// @param self KCoreConfigSkeleton__ItemUrl*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemUrl* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemurl_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemurl_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#isEqual)
 ///
@@ -3533,12 +3533,12 @@ QVariant* k_coreconfigskeleton__itemurl_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemUrl*
+/// @param self KCoreConfigSkeleton__ItemUrl*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemUrl* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemurl_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemurl_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurl.html#property)
 ///
@@ -3636,10 +3636,10 @@ bool k_coreconfigskeleton__itemproperty_is_equal(const void* self, const void* p
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemProperty*
+/// @param self KCoreConfigSkeleton__ItemProperty*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemProperty* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemproperty_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemproperty_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#isEqual)
 ///
@@ -3660,12 +3660,12 @@ QVariant* k_coreconfigskeleton__itemproperty_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemProperty*
+/// @param self KCoreConfigSkeleton__ItemProperty*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemProperty* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemproperty_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemproperty_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#property)
 ///
@@ -3763,10 +3763,10 @@ bool k_coreconfigskeleton__itembool_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemBool*
+/// @param self KCoreConfigSkeleton__ItemBool*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemBool* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itembool_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itembool_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#isEqual)
 ///
@@ -3787,12 +3787,12 @@ QVariant* k_coreconfigskeleton__itembool_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemBool*
+/// @param self KCoreConfigSkeleton__ItemBool*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemBool* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itembool_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itembool_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itembool.html#property)
 ///
@@ -3890,10 +3890,10 @@ bool k_coreconfigskeleton__itemint_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemInt*
+/// @param self KCoreConfigSkeleton__ItemInt*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemInt* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemint_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemint_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#isEqual)
 ///
@@ -3914,12 +3914,12 @@ QVariant* k_coreconfigskeleton__itemint_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemInt*
+/// @param self KCoreConfigSkeleton__ItemInt*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemInt* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemint_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemint_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#property)
 ///
@@ -3939,12 +3939,12 @@ QVariant* k_coreconfigskeleton__itemint_min_value(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemInt*
+/// @param self KCoreConfigSkeleton__ItemInt*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemInt* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemint_on_min_value(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemint_on_min_value(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#minValue)
 ///
@@ -3964,12 +3964,12 @@ QVariant* k_coreconfigskeleton__itemint_max_value(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemInt*
+/// @param self KCoreConfigSkeleton__ItemInt*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemInt* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemint_on_max_value(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemint_on_max_value(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#maxValue)
 ///
@@ -4067,10 +4067,10 @@ bool k_coreconfigskeleton__itemlonglong_is_equal(const void* self, const void* p
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemLongLong*
+/// @param self KCoreConfigSkeleton__ItemLongLong*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemLongLong* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemlonglong_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemlonglong_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#isEqual)
 ///
@@ -4091,12 +4091,12 @@ QVariant* k_coreconfigskeleton__itemlonglong_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemLongLong*
+/// @param self KCoreConfigSkeleton__ItemLongLong*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemLongLong* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemlonglong_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemlonglong_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#property)
 ///
@@ -4116,12 +4116,12 @@ QVariant* k_coreconfigskeleton__itemlonglong_min_value(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemLongLong*
+/// @param self KCoreConfigSkeleton__ItemLongLong*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemLongLong* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemlonglong_on_min_value(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemlonglong_on_min_value(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#minValue)
 ///
@@ -4141,12 +4141,12 @@ QVariant* k_coreconfigskeleton__itemlonglong_max_value(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemLongLong*
+/// @param self KCoreConfigSkeleton__ItemLongLong*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemLongLong* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemlonglong_on_max_value(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemlonglong_on_max_value(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#maxValue)
 ///
@@ -4437,10 +4437,10 @@ bool k_coreconfigskeleton__itemenum_super_is_equal(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton__ItemEnum*
+/// @param self KCoreConfigSkeleton__ItemEnum*
 /// @param callback bool func(KCoreConfigSkeleton__ItemEnum* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemenum_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemenum_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4468,12 +4468,12 @@ QVariant* k_coreconfigskeleton__itemenum_super_property(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton__ItemEnum*
+/// @param self KCoreConfigSkeleton__ItemEnum*
 /// @param callback QVariant* func(KCoreConfigSkeleton__ItemEnum* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemenum_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemenum_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4501,12 +4501,12 @@ QVariant* k_coreconfigskeleton__itemenum_super_min_value(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton__ItemEnum*
+/// @param self KCoreConfigSkeleton__ItemEnum*
 /// @param callback QVariant* func(KCoreConfigSkeleton__ItemEnum* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemenum_on_min_value(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemenum_on_min_value(void* self, QVariant* (*callback)(const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
 ///
@@ -4534,12 +4534,12 @@ QVariant* k_coreconfigskeleton__itemenum_super_max_value(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton__ItemEnum*
+/// @param self KCoreConfigSkeleton__ItemEnum*
 /// @param callback QVariant* func(KCoreConfigSkeleton__ItemEnum* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemenum_on_max_value(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemenum_on_max_value(void* self, QVariant* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///
@@ -4629,10 +4629,10 @@ bool k_coreconfigskeleton__itemuint_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemUInt*
+/// @param self KCoreConfigSkeleton__ItemUInt*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemUInt* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemuint_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemuint_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#isEqual)
 ///
@@ -4653,12 +4653,12 @@ QVariant* k_coreconfigskeleton__itemuint_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemUInt*
+/// @param self KCoreConfigSkeleton__ItemUInt*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemUInt* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemuint_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemuint_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#property)
 ///
@@ -4678,12 +4678,12 @@ QVariant* k_coreconfigskeleton__itemuint_min_value(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemUInt*
+/// @param self KCoreConfigSkeleton__ItemUInt*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemUInt* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemuint_on_min_value(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemuint_on_min_value(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#minValue)
 ///
@@ -4703,12 +4703,12 @@ QVariant* k_coreconfigskeleton__itemuint_max_value(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemUInt*
+/// @param self KCoreConfigSkeleton__ItemUInt*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemUInt* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemuint_on_max_value(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemuint_on_max_value(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemuint.html#maxValue)
 ///
@@ -4820,10 +4820,10 @@ bool k_coreconfigskeleton__itemulonglong_is_equal(const void* self, const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemULongLong*
+/// @param self KCoreConfigSkeleton__ItemULongLong*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemULongLong* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemulonglong_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemulonglong_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#isEqual)
 ///
@@ -4844,12 +4844,12 @@ QVariant* k_coreconfigskeleton__itemulonglong_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemULongLong*
+/// @param self KCoreConfigSkeleton__ItemULongLong*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemULongLong* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemulonglong_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemulonglong_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#property)
 ///
@@ -4869,12 +4869,12 @@ QVariant* k_coreconfigskeleton__itemulonglong_min_value(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemULongLong*
+/// @param self KCoreConfigSkeleton__ItemULongLong*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemULongLong* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemulonglong_on_min_value(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemulonglong_on_min_value(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#minValue)
 ///
@@ -4894,12 +4894,12 @@ QVariant* k_coreconfigskeleton__itemulonglong_max_value(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemULongLong*
+/// @param self KCoreConfigSkeleton__ItemULongLong*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemULongLong* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemulonglong_on_max_value(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemulonglong_on_max_value(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#maxValue)
 ///
@@ -5011,10 +5011,10 @@ bool k_coreconfigskeleton__itemdouble_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemDouble*
+/// @param self KCoreConfigSkeleton__ItemDouble*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemDouble* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemdouble_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemdouble_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#isEqual)
 ///
@@ -5035,12 +5035,12 @@ QVariant* k_coreconfigskeleton__itemdouble_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemDouble*
+/// @param self KCoreConfigSkeleton__ItemDouble*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemDouble* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemdouble_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemdouble_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#property)
 ///
@@ -5060,12 +5060,12 @@ QVariant* k_coreconfigskeleton__itemdouble_min_value(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemDouble*
+/// @param self KCoreConfigSkeleton__ItemDouble*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemDouble* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemdouble_on_min_value(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemdouble_on_min_value(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#minValue)
 ///
@@ -5085,12 +5085,12 @@ QVariant* k_coreconfigskeleton__itemdouble_max_value(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemDouble*
+/// @param self KCoreConfigSkeleton__ItemDouble*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemDouble* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemdouble_on_max_value(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemdouble_on_max_value(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#maxValue)
 ///
@@ -5202,10 +5202,10 @@ bool k_coreconfigskeleton__itemrect_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemRect*
+/// @param self KCoreConfigSkeleton__ItemRect*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemRect* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemrect_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemrect_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#isEqual)
 ///
@@ -5226,12 +5226,12 @@ QVariant* k_coreconfigskeleton__itemrect_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemRect*
+/// @param self KCoreConfigSkeleton__ItemRect*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemRect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemrect_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemrect_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrect.html#property)
 ///
@@ -5329,10 +5329,10 @@ bool k_coreconfigskeleton__itemrectf_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemRectF*
+/// @param self KCoreConfigSkeleton__ItemRectF*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemRectF* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemrectf_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemrectf_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#isEqual)
 ///
@@ -5353,12 +5353,12 @@ QVariant* k_coreconfigskeleton__itemrectf_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemRectF*
+/// @param self KCoreConfigSkeleton__ItemRectF*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemRectF* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemrectf_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemrectf_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#property)
 ///
@@ -5456,10 +5456,10 @@ bool k_coreconfigskeleton__itempoint_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemPoint*
+/// @param self KCoreConfigSkeleton__ItemPoint*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemPoint* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempoint_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itempoint_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#isEqual)
 ///
@@ -5480,12 +5480,12 @@ QVariant* k_coreconfigskeleton__itempoint_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemPoint*
+/// @param self KCoreConfigSkeleton__ItemPoint*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemPoint* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itempoint_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itempoint_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempoint.html#property)
 ///
@@ -5583,10 +5583,10 @@ bool k_coreconfigskeleton__itempointf_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemPointF*
+/// @param self KCoreConfigSkeleton__ItemPointF*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemPointF* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempointf_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itempointf_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#isEqual)
 ///
@@ -5607,12 +5607,12 @@ QVariant* k_coreconfigskeleton__itempointf_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemPointF*
+/// @param self KCoreConfigSkeleton__ItemPointF*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemPointF* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itempointf_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itempointf_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itempointf.html#property)
 ///
@@ -5710,10 +5710,10 @@ bool k_coreconfigskeleton__itemsize_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemSize*
+/// @param self KCoreConfigSkeleton__ItemSize*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemSize* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemsize_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemsize_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#isEqual)
 ///
@@ -5734,12 +5734,12 @@ QVariant* k_coreconfigskeleton__itemsize_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemSize*
+/// @param self KCoreConfigSkeleton__ItemSize*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemSize* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemsize_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemsize_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsize.html#property)
 ///
@@ -5837,10 +5837,10 @@ bool k_coreconfigskeleton__itemsizef_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemSizeF*
+/// @param self KCoreConfigSkeleton__ItemSizeF*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemSizeF* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemsizef_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemsizef_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#isEqual)
 ///
@@ -5861,12 +5861,12 @@ QVariant* k_coreconfigskeleton__itemsizef_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemSizeF*
+/// @param self KCoreConfigSkeleton__ItemSizeF*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemSizeF* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemsizef_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemsizef_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#property)
 ///
@@ -5964,10 +5964,10 @@ bool k_coreconfigskeleton__itemdatetime_is_equal(const void* self, const void* p
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemDateTime*
+/// @param self KCoreConfigSkeleton__ItemDateTime*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemDateTime* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemdatetime_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemdatetime_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#isEqual)
 ///
@@ -5988,12 +5988,12 @@ QVariant* k_coreconfigskeleton__itemdatetime_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemDateTime*
+/// @param self KCoreConfigSkeleton__ItemDateTime*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemDateTime* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemdatetime_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemdatetime_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#property)
 ///
@@ -6091,10 +6091,10 @@ bool k_coreconfigskeleton__itemstringlist_is_equal(const void* self, const void*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemStringList*
+/// @param self KCoreConfigSkeleton__ItemStringList*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemStringList* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemstringlist_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemstringlist_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#isEqual)
 ///
@@ -6115,12 +6115,12 @@ QVariant* k_coreconfigskeleton__itemstringlist_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemStringList*
+/// @param self KCoreConfigSkeleton__ItemStringList*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemStringList* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemstringlist_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemstringlist_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#property)
 ///
@@ -6268,10 +6268,10 @@ bool k_coreconfigskeleton__itempathlist_super_is_equal(const void* self, const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton__ItemPathList*
+/// @param self KCoreConfigSkeleton__ItemPathList*
 /// @param callback bool func(KCoreConfigSkeleton__ItemPathList* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itempathlist_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itempathlist_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
 ///
@@ -6299,12 +6299,12 @@ QVariant* k_coreconfigskeleton__itempathlist_super_property(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCoreConfigSkeleton__ItemPathList*
+/// @param self KCoreConfigSkeleton__ItemPathList*
 /// @param callback QVariant* func(KCoreConfigSkeleton__ItemPathList* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itempathlist_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itempathlist_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///
@@ -6419,10 +6419,10 @@ bool k_coreconfigskeleton__itemurllist_is_equal(const void* self, const void* p)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemUrlList*
+/// @param self KCoreConfigSkeleton__ItemUrlList*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemUrlList* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemurllist_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemurllist_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#isEqual)
 ///
@@ -6443,12 +6443,12 @@ QVariant* k_coreconfigskeleton__itemurllist_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemUrlList*
+/// @param self KCoreConfigSkeleton__ItemUrlList*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemUrlList* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemurllist_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemurllist_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#property)
 ///
@@ -6546,10 +6546,10 @@ bool k_coreconfigskeleton__itemintlist_is_equal(const void* self, const void* p)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemIntList*
+/// @param self KCoreConfigSkeleton__ItemIntList*
 /// @param callback bool func(const KCoreConfigSkeleton__ItemIntList* self, QVariant* p)
 ///
-void k_coreconfigskeleton__itemintlist_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_coreconfigskeleton__itemintlist_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#isEqual)
 ///
@@ -6570,12 +6570,12 @@ QVariant* k_coreconfigskeleton__itemintlist_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCoreConfigSkeleton__ItemIntList*
+/// @param self KCoreConfigSkeleton__ItemIntList*
 /// @param callback QVariant* func(const KCoreConfigSkeleton__ItemIntList* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_coreconfigskeleton__itemintlist_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_coreconfigskeleton__itemintlist_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#property)
 ///

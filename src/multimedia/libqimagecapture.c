@@ -22,7 +22,7 @@ const QMetaObject* q_imagecapture_meta_object(const void* self) {
     return QImageCapture_MetaObject((QImageCapture*)self);
 }
 
-void q_imagecapture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_imagecapture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QImageCapture_OnMetaObject((QImageCapture*)self, (intptr_t)callback);
 }
 

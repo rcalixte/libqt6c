@@ -35,7 +35,7 @@ const QMetaObject* k_charselect_meta_object(const void* self) {
     return KCharSelect_MetaObject((KCharSelect*)self);
 }
 
-void k_charselect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_charselect_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KCharSelect_OnMetaObject((KCharSelect*)self, (intptr_t)callback);
 }
 
@@ -78,7 +78,7 @@ QSize* k_charselect_size_hint(const void* self) {
     return KCharSelect_SizeHint((KCharSelect*)self);
 }
 
-void k_charselect_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_charselect_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KCharSelect_OnSizeHint((KCharSelect*)self, (intptr_t)callback);
 }
 
@@ -190,11 +190,11 @@ const char* k_charselect_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_charselect_as_q_paint_device(void* self) {
+QPaintDevice* k_charselect_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KCharSelect* k_charselect_from_q_paint_device(void* _qpaintdevice) {
+KCharSelect* k_charselect_from_q_paint_device(const void* _qpaintdevice) {
     return (KCharSelect*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1585,8 +1585,8 @@ int32_t k_charselect_super_dev_type(const void* self) {
     return KCharSelect_SuperDevType((KCharSelect*)self);
 }
 
-void k_charselect_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KCharSelect_OnDevType((const KCharSelect*)self, (intptr_t)callback);
+void k_charselect_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KCharSelect_OnDevType((KCharSelect*)self, (intptr_t)callback);
 }
 
 void k_charselect_set_visible(void* self, bool visible) {
@@ -1609,8 +1609,8 @@ QSize* k_charselect_super_minimum_size_hint(const void* self) {
     return KCharSelect_SuperMinimumSizeHint((KCharSelect*)self);
 }
 
-void k_charselect_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KCharSelect_OnMinimumSizeHint((const KCharSelect*)self, (intptr_t)callback);
+void k_charselect_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KCharSelect_OnMinimumSizeHint((KCharSelect*)self, (intptr_t)callback);
 }
 
 int32_t k_charselect_height_for_width(const void* self, int param1) {
@@ -1621,8 +1621,8 @@ int32_t k_charselect_super_height_for_width(const void* self, int param1) {
     return KCharSelect_SuperHeightForWidth((KCharSelect*)self, param1);
 }
 
-void k_charselect_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KCharSelect_OnHeightForWidth((const KCharSelect*)self, (intptr_t)callback);
+void k_charselect_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KCharSelect_OnHeightForWidth((KCharSelect*)self, (intptr_t)callback);
 }
 
 bool k_charselect_has_height_for_width(const void* self) {
@@ -1633,8 +1633,8 @@ bool k_charselect_super_has_height_for_width(const void* self) {
     return KCharSelect_SuperHasHeightForWidth((KCharSelect*)self);
 }
 
-void k_charselect_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KCharSelect_OnHasHeightForWidth((const KCharSelect*)self, (intptr_t)callback);
+void k_charselect_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KCharSelect_OnHasHeightForWidth((KCharSelect*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_charselect_paint_engine(const void* self) {
@@ -1645,8 +1645,8 @@ QPaintEngine* k_charselect_super_paint_engine(const void* self) {
     return KCharSelect_SuperPaintEngine((KCharSelect*)self);
 }
 
-void k_charselect_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KCharSelect_OnPaintEngine((const KCharSelect*)self, (intptr_t)callback);
+void k_charselect_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KCharSelect_OnPaintEngine((KCharSelect*)self, (intptr_t)callback);
 }
 
 bool k_charselect_event(void* self, void* event) {
@@ -1981,8 +1981,8 @@ int32_t k_charselect_super_metric(const void* self, int32_t param1) {
     return KCharSelect_SuperMetric((KCharSelect*)self, param1);
 }
 
-void k_charselect_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KCharSelect_OnMetric((const KCharSelect*)self, (intptr_t)callback);
+void k_charselect_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KCharSelect_OnMetric((KCharSelect*)self, (intptr_t)callback);
 }
 
 void k_charselect_init_painter(const void* self, void* painter) {
@@ -1993,8 +1993,8 @@ void k_charselect_super_init_painter(const void* self, void* painter) {
     KCharSelect_SuperInitPainter((KCharSelect*)self, (QPainter*)painter);
 }
 
-void k_charselect_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KCharSelect_OnInitPainter((const KCharSelect*)self, (intptr_t)callback);
+void k_charselect_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KCharSelect_OnInitPainter((KCharSelect*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_charselect_redirected(const void* self, void* offset) {
@@ -2005,8 +2005,8 @@ QPaintDevice* k_charselect_super_redirected(const void* self, void* offset) {
     return KCharSelect_SuperRedirected((KCharSelect*)self, (QPoint*)offset);
 }
 
-void k_charselect_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KCharSelect_OnRedirected((const KCharSelect*)self, (intptr_t)callback);
+void k_charselect_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KCharSelect_OnRedirected((KCharSelect*)self, (intptr_t)callback);
 }
 
 QPainter* k_charselect_shared_painter(const void* self) {
@@ -2017,8 +2017,8 @@ QPainter* k_charselect_super_shared_painter(const void* self) {
     return KCharSelect_SuperSharedPainter((KCharSelect*)self);
 }
 
-void k_charselect_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KCharSelect_OnSharedPainter((const KCharSelect*)self, (intptr_t)callback);
+void k_charselect_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KCharSelect_OnSharedPainter((KCharSelect*)self, (intptr_t)callback);
 }
 
 void k_charselect_input_method_event(void* self, void* param1) {
@@ -2041,8 +2041,8 @@ QVariant* k_charselect_super_input_method_query(const void* self, int32_t param1
     return KCharSelect_SuperInputMethodQuery((KCharSelect*)self, param1);
 }
 
-void k_charselect_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KCharSelect_OnInputMethodQuery((const KCharSelect*)self, (intptr_t)callback);
+void k_charselect_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KCharSelect_OnInputMethodQuery((KCharSelect*)self, (intptr_t)callback);
 }
 
 bool k_charselect_focus_next_prev_child(void* self, bool next) {

@@ -21,11 +21,11 @@ QOffscreenSurface* q_offscreensurface_new3(void* screen, void* parent) {
     return QOffscreenSurface_New3((QScreen*)screen, (QObject*)parent);
 }
 
-QSurface* q_offscreensurface_as_q_surface(void* self) {
+QSurface* q_offscreensurface_as_q_surface(const void* self) {
     return QOffscreenSurface_AsQSurface((QOffscreenSurface*)self);
 }
 
-QOffscreenSurface* q_offscreensurface_from_q_surface(void* _qsurface) {
+QOffscreenSurface* q_offscreensurface_from_q_surface(const void* _qsurface) {
     return (QOffscreenSurface*)QOffscreenSurface_FromQSurface((QSurface*)_qsurface);
 }
 
@@ -33,7 +33,7 @@ const QMetaObject* q_offscreensurface_meta_object(const void* self) {
     return QOffscreenSurface_MetaObject((QOffscreenSurface*)self);
 }
 
-void q_offscreensurface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_offscreensurface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QOffscreenSurface_OnMetaObject((QOffscreenSurface*)self, (intptr_t)callback);
 }
 
@@ -76,7 +76,7 @@ int32_t q_offscreensurface_surface_type(const void* self) {
     return QOffscreenSurface_SurfaceType((QOffscreenSurface*)self);
 }
 
-void q_offscreensurface_on_surface_type(const void* self, int32_t (*callback)(const void*)) {
+void q_offscreensurface_on_surface_type(void* self, int32_t (*callback)(const void*)) {
     QOffscreenSurface_OnSurfaceType((QOffscreenSurface*)self, (intptr_t)callback);
 }
 
@@ -104,7 +104,7 @@ QSurfaceFormat* q_offscreensurface_format(const void* self) {
     return QOffscreenSurface_Format((QOffscreenSurface*)self);
 }
 
-void q_offscreensurface_on_format(const void* self, QSurfaceFormat* (*callback)(const void*)) {
+void q_offscreensurface_on_format(void* self, QSurfaceFormat* (*callback)(const void*)) {
     QOffscreenSurface_OnFormat((QOffscreenSurface*)self, (intptr_t)callback);
 }
 
@@ -120,7 +120,7 @@ QSize* q_offscreensurface_size(const void* self) {
     return QOffscreenSurface_Size((QOffscreenSurface*)self);
 }
 
-void q_offscreensurface_on_size(const void* self, QSize* (*callback)(const void*)) {
+void q_offscreensurface_on_size(void* self, QSize* (*callback)(const void*)) {
     QOffscreenSurface_OnSize((QOffscreenSurface*)self, (intptr_t)callback);
 }
 

@@ -44,7 +44,7 @@ const QMetaObject* k_windowshadow_meta_object(const void* self) {
     return KWindowShadow_MetaObject((KWindowShadow*)self);
 }
 
-void k_windowshadow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_windowshadow_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KWindowShadow_OnMetaObject((KWindowShadow*)self, (intptr_t)callback);
 }
 

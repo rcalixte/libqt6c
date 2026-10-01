@@ -26,10 +26,10 @@ const QMetaObject* q_geopositioninfosource_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGeoPositionInfoSource*
+/// @param self QGeoPositionInfoSource*
 /// @param callback const QMetaObject* func(const QGeoPositionInfoSource* self)
 ///
-void q_geopositioninfosource_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_geopositioninfosource_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -166,12 +166,12 @@ QGeoPositionInfo* q_geopositioninfosource_last_known_position(const void* self, 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGeoPositionInfoSource*
+/// @param self QGeoPositionInfoSource*
 /// @param callback QGeoPositionInfo* func(const QGeoPositionInfoSource* self, bool fromSatellitePositioningMethodsOnly)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_geopositioninfosource_on_last_known_position(const void* self, QGeoPositionInfo* (*callback)(const void*, bool));
+void q_geopositioninfosource_on_last_known_position(void* self, QGeoPositionInfo* (*callback)(const void*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#supportedPositioningMethods)
 ///
@@ -187,10 +187,10 @@ int32_t q_geopositioninfosource_supported_positioning_methods(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGeoPositionInfoSource*
+/// @param self QGeoPositionInfoSource*
 /// @param callback int32_t func(const QGeoPositionInfoSource* self)
 ///
-void q_geopositioninfosource_on_supported_positioning_methods(const void* self, int32_t (*callback)(const void*));
+void q_geopositioninfosource_on_supported_positioning_methods(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#minimumUpdateInterval)
 ///
@@ -204,10 +204,10 @@ int32_t q_geopositioninfosource_minimum_update_interval(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGeoPositionInfoSource*
+/// @param self QGeoPositionInfoSource*
 /// @param callback int32_t func(const QGeoPositionInfoSource* self)
 ///
-void q_geopositioninfosource_on_minimum_update_interval(const void* self, int32_t (*callback)(const void*));
+void q_geopositioninfosource_on_minimum_update_interval(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#sourceName)
 ///
@@ -255,12 +255,12 @@ QVariant* q_geopositioninfosource_backend_property(const void* self, const char*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGeoPositionInfoSource*
+/// @param self QGeoPositionInfoSource*
 /// @param callback QVariant* func(const QGeoPositionInfoSource* self, const char* name)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_geopositioninfosource_on_backend_property(const void* self, QVariant* (*callback)(const void*, const char*));
+void q_geopositioninfosource_on_backend_property(void* self, QVariant* (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#backendProperty)
 ///
@@ -319,10 +319,10 @@ int32_t q_geopositioninfosource_error(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGeoPositionInfoSource*
+/// @param self QGeoPositionInfoSource*
 /// @param callback int32_t func(const QGeoPositionInfoSource* self)
 ///
-void q_geopositioninfosource_on_error(const void* self, int32_t (*callback)(const void*));
+void q_geopositioninfosource_on_error(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfosource.html#startUpdates)
 ///
@@ -1142,10 +1142,10 @@ QObject* q_geopositioninfosource_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGeoPositionInfoSource*
+/// @param self QGeoPositionInfoSource*
 /// @param callback QObject* func(QGeoPositionInfoSource* self)
 ///
-void q_geopositioninfosource_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_geopositioninfosource_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1173,10 +1173,10 @@ int32_t q_geopositioninfosource_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGeoPositionInfoSource*
+/// @param self QGeoPositionInfoSource*
 /// @param callback int32_t func(QGeoPositionInfoSource* self)
 ///
-void q_geopositioninfosource_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_geopositioninfosource_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1206,10 +1206,10 @@ int32_t q_geopositioninfosource_super_receivers(const void* self, const char* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGeoPositionInfoSource*
+/// @param self QGeoPositionInfoSource*
 /// @param callback int32_t func(QGeoPositionInfoSource* self, const char* signal)
 ///
-void q_geopositioninfosource_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_geopositioninfosource_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1239,10 +1239,10 @@ bool q_geopositioninfosource_super_is_signal_connected(const void* self, const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGeoPositionInfoSource*
+/// @param self QGeoPositionInfoSource*
 /// @param callback bool func(QGeoPositionInfoSource* self, QMetaMethod* signal)
 ///
-void q_geopositioninfosource_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_geopositioninfosource_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

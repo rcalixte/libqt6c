@@ -17,7 +17,7 @@ const QMetaObject* q_genericplugin_meta_object(const void* self) {
     return QGenericPlugin_MetaObject((QGenericPlugin*)self);
 }
 
-void q_genericplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_genericplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGenericPlugin_OnMetaObject((QGenericPlugin*)self, (intptr_t)callback);
 }
 

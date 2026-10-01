@@ -20,7 +20,7 @@ const QMetaObject* k_toolbarlabelaction_meta_object(const void* self) {
     return KToolBarLabelAction_MetaObject((KToolBarLabelAction*)self);
 }
 
-void k_toolbarlabelaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_toolbarlabelaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KToolBarLabelAction_OnMetaObject((KToolBarLabelAction*)self, (intptr_t)callback);
 }
 

@@ -19,7 +19,7 @@ const QMetaObject* q_horizontalbarseries_meta_object(const void* self) {
     return QHorizontalBarSeries_MetaObject((QHorizontalBarSeries*)self);
 }
 
-void q_horizontalbarseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_horizontalbarseries_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QHorizontalBarSeries_OnMetaObject((QHorizontalBarSeries*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ int32_t q_horizontalbarseries_type(const void* self) {
     return QHorizontalBarSeries_Type((QHorizontalBarSeries*)self);
 }
 
-void q_horizontalbarseries_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_horizontalbarseries_on_type(void* self, int32_t (*callback)(const void*)) {
     QHorizontalBarSeries_OnType((QHorizontalBarSeries*)self, (intptr_t)callback);
 }
 

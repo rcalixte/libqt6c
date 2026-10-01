@@ -20,7 +20,7 @@ const QMetaObject* q_boxplotlegendmarker_meta_object(const void* self) {
     return QBoxPlotLegendMarker_MetaObject((QBoxPlotLegendMarker*)self);
 }
 
-void q_boxplotlegendmarker_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_boxplotlegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QBoxPlotLegendMarker_OnMetaObject((QBoxPlotLegendMarker*)self, (intptr_t)callback);
 }
 

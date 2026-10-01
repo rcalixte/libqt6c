@@ -146,10 +146,10 @@ bool q_sgnode_is_subtree_blocked(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGNode*
+/// @param self QSGNode*
 /// @param callback bool func(const QSGNode* self)
 ///
-void q_sgnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
+void q_sgnode_on_is_subtree_blocked(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#isSubtreeBlocked)
 ///
@@ -869,10 +869,10 @@ bool q_sggeometrynode_super_is_subtree_blocked(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGGeometryNode*
+/// @param self QSGGeometryNode*
 /// @param callback bool func(QSGGeometryNode* self)
 ///
-void q_sggeometrynode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
+void q_sggeometrynode_on_is_subtree_blocked(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///
@@ -1236,10 +1236,10 @@ bool q_sgclipnode_super_is_subtree_blocked(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGClipNode*
+/// @param self QSGClipNode*
 /// @param callback bool func(QSGClipNode* self)
 ///
-void q_sgclipnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
+void q_sgclipnode_on_is_subtree_blocked(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///
@@ -1544,10 +1544,10 @@ bool q_sgtransformnode_super_is_subtree_blocked(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGTransformNode*
+/// @param self QSGTransformNode*
 /// @param callback bool func(QSGTransformNode* self)
 ///
-void q_sgtransformnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
+void q_sgtransformnode_on_is_subtree_blocked(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///
@@ -1826,10 +1826,10 @@ bool q_sgrootnode_super_is_subtree_blocked(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGRootNode*
+/// @param self QSGRootNode*
 /// @param callback bool func(QSGRootNode* self)
 ///
-void q_sgrootnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
+void q_sgrootnode_on_is_subtree_blocked(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///
@@ -1912,10 +1912,10 @@ bool q_sgopacitynode_is_subtree_blocked(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGOpacityNode*
+/// @param self QSGOpacityNode*
 /// @param callback bool func(const QSGOpacityNode* self)
 ///
-void q_sgopacitynode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
+void q_sgopacitynode_on_is_subtree_blocked(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgopacitynode.html#isSubtreeBlocked)
 ///

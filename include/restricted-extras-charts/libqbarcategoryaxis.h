@@ -32,10 +32,10 @@ const QMetaObject* q_barcategoryaxis_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QBarCategoryAxis*
+/// @param self QBarCategoryAxis*
 /// @param callback const QMetaObject* func(const QBarCategoryAxis* self)
 ///
-void q_barcategoryaxis_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_barcategoryaxis_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -107,10 +107,10 @@ int32_t q_barcategoryaxis_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QBarCategoryAxis*
+/// @param self QBarCategoryAxis*
 /// @param callback int32_t func(const QBarCategoryAxis* self)
 ///
-void q_barcategoryaxis_on_type(const void* self, int32_t (*callback)(const void*));
+void q_barcategoryaxis_on_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#type)
 ///
@@ -2116,10 +2116,10 @@ QObject* q_barcategoryaxis_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QBarCategoryAxis*
+/// @param self QBarCategoryAxis*
 /// @param callback QObject* func(QBarCategoryAxis* self)
 ///
-void q_barcategoryaxis_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_barcategoryaxis_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2147,10 +2147,10 @@ int32_t q_barcategoryaxis_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QBarCategoryAxis*
+/// @param self QBarCategoryAxis*
 /// @param callback int32_t func(QBarCategoryAxis* self)
 ///
-void q_barcategoryaxis_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_barcategoryaxis_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2180,10 +2180,10 @@ int32_t q_barcategoryaxis_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QBarCategoryAxis*
+/// @param self QBarCategoryAxis*
 /// @param callback int32_t func(QBarCategoryAxis* self, const char* signal)
 ///
-void q_barcategoryaxis_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_barcategoryaxis_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2213,10 +2213,10 @@ bool q_barcategoryaxis_super_is_signal_connected(const void* self, const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QBarCategoryAxis*
+/// @param self QBarCategoryAxis*
 /// @param callback bool func(QBarCategoryAxis* self, QMetaMethod* signal)
 ///
-void q_barcategoryaxis_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_barcategoryaxis_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

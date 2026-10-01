@@ -32,10 +32,10 @@ const QMetaObject* k_datetimeedit_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback const QMetaObject* func(const KDateTimeEdit* self)
 ///
-void k_datetimeedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_datetimeedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -806,9 +806,9 @@ void k_datetimeedit_set_time_list3(void* self, libqt_list timeList, const char* 
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self KDateTimeEdit*
+/// @param self const KDateTimeEdit*
 ///
-QPaintDevice* k_datetimeedit_as_q_paint_device(void* self);
+QPaintDevice* k_datetimeedit_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -816,7 +816,7 @@ QPaintDevice* k_datetimeedit_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-KDateTimeEdit* k_datetimeedit_from_q_paint_device(void* _qpaintdevice);
+KDateTimeEdit* k_datetimeedit_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3801,10 +3801,10 @@ int32_t k_datetimeedit_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback int32_t func(KDateTimeEdit* self)
 ///
-void k_datetimeedit_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_datetimeedit_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3865,12 +3865,12 @@ QSize* k_datetimeedit_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback QSize* func(KDateTimeEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_datetimeedit_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_datetimeedit_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3898,12 +3898,12 @@ QSize* k_datetimeedit_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback QSize* func(KDateTimeEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_datetimeedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_datetimeedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3933,10 +3933,10 @@ int32_t k_datetimeedit_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback int32_t func(KDateTimeEdit* self, int param1)
 ///
-void k_datetimeedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_datetimeedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3964,10 +3964,10 @@ bool k_datetimeedit_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback bool func(KDateTimeEdit* self)
 ///
-void k_datetimeedit_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_datetimeedit_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3995,10 +3995,10 @@ QPaintEngine* k_datetimeedit_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback QPaintEngine* func(KDateTimeEdit* self)
 ///
-void k_datetimeedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_datetimeedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4824,10 +4824,10 @@ int32_t k_datetimeedit_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback int32_t func(KDateTimeEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_datetimeedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_datetimeedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4857,10 +4857,10 @@ void k_datetimeedit_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QPainter* painter)
 ///
-void k_datetimeedit_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_datetimeedit_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4890,10 +4890,10 @@ QPaintDevice* k_datetimeedit_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback QPaintDevice* func(KDateTimeEdit* self, QPoint* offset)
 ///
-void k_datetimeedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_datetimeedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4921,10 +4921,10 @@ QPainter* k_datetimeedit_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback QPainter* func(KDateTimeEdit* self)
 ///
-void k_datetimeedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_datetimeedit_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4987,12 +4987,12 @@ QVariant* k_datetimeedit_super_input_method_query(const void* self, int32_t para
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback QVariant* func(KDateTimeEdit* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_datetimeedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_datetimeedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5373,10 +5373,10 @@ QObject* k_datetimeedit_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback QObject* func(KDateTimeEdit* self)
 ///
-void k_datetimeedit_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_datetimeedit_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5404,10 +5404,10 @@ int32_t k_datetimeedit_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback int32_t func(KDateTimeEdit* self)
 ///
-void k_datetimeedit_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_datetimeedit_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5437,10 +5437,10 @@ int32_t k_datetimeedit_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback int32_t func(KDateTimeEdit* self, const char* signal)
 ///
-void k_datetimeedit_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_datetimeedit_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5470,10 +5470,10 @@ bool k_datetimeedit_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback bool func(KDateTimeEdit* self, QMetaMethod* signal)
 ///
-void k_datetimeedit_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_datetimeedit_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5505,10 +5505,10 @@ double k_datetimeedit_super_get_decoded_metric_f(const void* self, int32_t metri
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateTimeEdit*
+/// @param self KDateTimeEdit*
 /// @param callback double func(KDateTimeEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_datetimeedit_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_datetimeedit_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

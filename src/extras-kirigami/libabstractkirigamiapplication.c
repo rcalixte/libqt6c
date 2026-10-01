@@ -21,7 +21,7 @@ const QMetaObject* q_abstractkirigamiapplication_meta_object(const void* self) {
     return AbstractKirigamiApplication_MetaObject((AbstractKirigamiApplication*)self);
 }
 
-void q_abstractkirigamiapplication_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstractkirigamiapplication_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     AbstractKirigamiApplication_OnMetaObject((AbstractKirigamiApplication*)self, (intptr_t)callback);
 }
 
@@ -65,7 +65,7 @@ libqt_list /* of KirigamiActionCollection* */ q_abstractkirigamiapplication_acti
     return _arr;
 }
 
-void q_abstractkirigamiapplication_on_action_collections(const void* self, libqt_list /* of KirigamiActionCollection* */ (*callback)(const void*)) {
+void q_abstractkirigamiapplication_on_action_collections(void* self, libqt_list /* of KirigamiActionCollection* */ (*callback)(const void*)) {
     AbstractKirigamiApplication_OnActionCollections((AbstractKirigamiApplication*)self, (intptr_t)callback);
 }
 

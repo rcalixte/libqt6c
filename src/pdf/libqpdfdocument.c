@@ -25,7 +25,7 @@ const QMetaObject* q_pdfdocument_meta_object(const void* self) {
     return QPdfDocument_MetaObject((QPdfDocument*)self);
 }
 
-void q_pdfdocument_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pdfdocument_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPdfDocument_OnMetaObject((QPdfDocument*)self, (intptr_t)callback);
 }
 

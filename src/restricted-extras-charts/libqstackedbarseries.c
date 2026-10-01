@@ -19,7 +19,7 @@ const QMetaObject* q_stackedbarseries_meta_object(const void* self) {
     return QStackedBarSeries_MetaObject((QStackedBarSeries*)self);
 }
 
-void q_stackedbarseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_stackedbarseries_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QStackedBarSeries_OnMetaObject((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ int32_t q_stackedbarseries_type(const void* self) {
     return QStackedBarSeries_Type((QStackedBarSeries*)self);
 }
 
-void q_stackedbarseries_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_stackedbarseries_on_type(void* self, int32_t (*callback)(const void*)) {
     QStackedBarSeries_OnType((QStackedBarSeries*)self, (intptr_t)callback);
 }
 

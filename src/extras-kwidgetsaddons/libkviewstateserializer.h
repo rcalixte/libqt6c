@@ -44,10 +44,10 @@ const QMetaObject* k_viewstateserializer_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KViewStateSerializer*
+/// @param self KViewStateSerializer*
 /// @param callback const QMetaObject* func(const KViewStateSerializer* self)
 ///
-void k_viewstateserializer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_viewstateserializer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -208,12 +208,12 @@ QModelIndex* k_viewstateserializer_index_from_config_string(const void* self, co
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KViewStateSerializer*
+/// @param self KViewStateSerializer*
 /// @param callback QModelIndex* func(const KViewStateSerializer* self, QAbstractItemModel* model, const char* key)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_viewstateserializer_on_index_from_config_string(const void* self, QModelIndex* (*callback)(const void*, const void*, const char*));
+void k_viewstateserializer_on_index_from_config_string(void* self, QModelIndex* (*callback)(const void*, const void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
 ///
@@ -230,10 +230,10 @@ const char* k_viewstateserializer_index_to_config_string(const void* self, const
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KViewStateSerializer*
+/// @param self KViewStateSerializer*
 /// @param callback const char* func(const KViewStateSerializer* self, QModelIndex* index)
 ///
-void k_viewstateserializer_on_index_to_config_string(const void* self, const char* (*callback)(const void*, const void*));
+void k_viewstateserializer_on_index_to_config_string(void* self, const char* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#restoreState)
 ///
@@ -966,10 +966,10 @@ QObject* k_viewstateserializer_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KViewStateSerializer*
+/// @param self KViewStateSerializer*
 /// @param callback QObject* func(KViewStateSerializer* self)
 ///
-void k_viewstateserializer_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_viewstateserializer_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -997,10 +997,10 @@ int32_t k_viewstateserializer_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KViewStateSerializer*
+/// @param self KViewStateSerializer*
 /// @param callback int32_t func(KViewStateSerializer* self)
 ///
-void k_viewstateserializer_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_viewstateserializer_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1030,10 +1030,10 @@ int32_t k_viewstateserializer_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KViewStateSerializer*
+/// @param self KViewStateSerializer*
 /// @param callback int32_t func(KViewStateSerializer* self, const char* signal)
 ///
-void k_viewstateserializer_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_viewstateserializer_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1063,10 +1063,10 @@ bool k_viewstateserializer_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KViewStateSerializer*
+/// @param self KViewStateSerializer*
 /// @param callback bool func(KViewStateSerializer* self, QMetaMethod* signal)
 ///
-void k_viewstateserializer_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_viewstateserializer_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

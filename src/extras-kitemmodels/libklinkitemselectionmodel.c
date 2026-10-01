@@ -27,7 +27,7 @@ const QMetaObject* k_linkitemselectionmodel_meta_object(const void* self) {
     return KLinkItemSelectionModel_MetaObject((KLinkItemSelectionModel*)self);
 }
 
-void k_linkitemselectionmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_linkitemselectionmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KLinkItemSelectionModel_OnMetaObject((KLinkItemSelectionModel*)self, (intptr_t)callback);
 }
 

@@ -100,10 +100,10 @@ char* k_zipfileentry_data(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KZipFileEntry*
+/// @param self KZipFileEntry*
 /// @param callback libqt_string func(const KZipFileEntry* self)
 ///
-void k_zipfileentry_on_data(const void* self, libqt_string (*callback)(const void*));
+void k_zipfileentry_on_data(void* self, libqt_string (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#data)
 ///
@@ -123,10 +123,10 @@ QIODevice* k_zipfileentry_create_device(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KZipFileEntry*
+/// @param self KZipFileEntry*
 /// @param callback QIODevice* func(const KZipFileEntry* self)
 ///
-void k_zipfileentry_on_create_device(const void* self, QIODevice* (*callback)(const void*));
+void k_zipfileentry_on_create_device(void* self, QIODevice* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#createDevice)
 ///
@@ -252,10 +252,10 @@ bool k_zipfileentry_super_is_file(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KZipFileEntry*
+/// @param self KZipFileEntry*
 /// @param callback bool func(KZipFileEntry* self)
 ///
-void k_zipfileentry_on_is_file(const void* self, bool (*callback)(const void*));
+void k_zipfileentry_on_is_file(void* self, bool (*callback)(const void*));
 
 /// Inherited from KArchiveFile
 ///
@@ -318,10 +318,10 @@ bool k_zipfileentry_super_is_directory(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KZipFileEntry*
+/// @param self KZipFileEntry*
 /// @param callback bool func(KZipFileEntry* self)
 ///
-void k_zipfileentry_on_is_directory(const void* self, bool (*callback)(const void*));
+void k_zipfileentry_on_is_directory(void* self, bool (*callback)(const void*));
 
 /// Inherited from KArchiveEntry
 ///
@@ -349,10 +349,10 @@ KArchive* k_zipfileentry_super_archive(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KZipFileEntry*
+/// @param self KZipFileEntry*
 /// @param callback KArchive* func(KZipFileEntry* self)
 ///
-void k_zipfileentry_on_archive(const void* self, KArchive* (*callback)(const void*));
+void k_zipfileentry_on_archive(void* self, KArchive* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#dtor.KZipFileEntry)
 ///

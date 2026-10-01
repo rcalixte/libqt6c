@@ -289,7 +289,7 @@ const QMetaObject* q_openglcontext_meta_object(const void* self) {
     return QOpenGLContext_MetaObject((QOpenGLContext*)self);
 }
 
-void q_openglcontext_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_openglcontext_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QOpenGLContext_OnMetaObject((QOpenGLContext*)self, (intptr_t)callback);
 }
 

@@ -15,7 +15,7 @@ const QMetaObject* q_actiongroup_meta_object(const void* self) {
     return QActionGroup_MetaObject((QActionGroup*)self);
 }
 
-void q_actiongroup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_actiongroup_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QActionGroup_OnMetaObject((QActionGroup*)self, (intptr_t)callback);
 }
 

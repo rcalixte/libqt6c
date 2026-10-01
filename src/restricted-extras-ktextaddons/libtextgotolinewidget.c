@@ -25,7 +25,7 @@ const QMetaObject* k_textcustomeditor__textgotolinewidget_meta_object(const void
     return TextCustomEditor__TextGoToLineWidget_MetaObject((TextCustomEditor__TextGoToLineWidget*)self);
 }
 
-void k_textcustomeditor__textgotolinewidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textcustomeditor__textgotolinewidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextCustomEditor__TextGoToLineWidget_OnMetaObject((TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
 }
 
@@ -142,11 +142,11 @@ const char* k_textcustomeditor__textgotolinewidget_tr3(const char* s, const char
     return _ret;
 }
 
-QPaintDevice* k_textcustomeditor__textgotolinewidget_as_q_paint_device(void* self) {
+QPaintDevice* k_textcustomeditor__textgotolinewidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextCustomEditor__TextGoToLineWidget* k_textcustomeditor__textgotolinewidget_from_q_paint_device(void* _qpaintdevice) {
+TextCustomEditor__TextGoToLineWidget* k_textcustomeditor__textgotolinewidget_from_q_paint_device(const void* _qpaintdevice) {
     return (TextCustomEditor__TextGoToLineWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1537,8 +1537,8 @@ int32_t k_textcustomeditor__textgotolinewidget_super_dev_type(const void* self) 
     return TextCustomEditor__TextGoToLineWidget_SuperDevType((TextCustomEditor__TextGoToLineWidget*)self);
 }
 
-void k_textcustomeditor__textgotolinewidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextCustomEditor__TextGoToLineWidget_OnDevType((const TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
+void k_textcustomeditor__textgotolinewidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextCustomEditor__TextGoToLineWidget_OnDevType((TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__textgotolinewidget_set_visible(void* self, bool visible) {
@@ -1561,8 +1561,8 @@ QSize* k_textcustomeditor__textgotolinewidget_super_size_hint(const void* self) 
     return TextCustomEditor__TextGoToLineWidget_SuperSizeHint((TextCustomEditor__TextGoToLineWidget*)self);
 }
 
-void k_textcustomeditor__textgotolinewidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextCustomEditor__TextGoToLineWidget_OnSizeHint((const TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
+void k_textcustomeditor__textgotolinewidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextCustomEditor__TextGoToLineWidget_OnSizeHint((TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
 }
 
 QSize* k_textcustomeditor__textgotolinewidget_minimum_size_hint(const void* self) {
@@ -1573,8 +1573,8 @@ QSize* k_textcustomeditor__textgotolinewidget_super_minimum_size_hint(const void
     return TextCustomEditor__TextGoToLineWidget_SuperMinimumSizeHint((TextCustomEditor__TextGoToLineWidget*)self);
 }
 
-void k_textcustomeditor__textgotolinewidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextCustomEditor__TextGoToLineWidget_OnMinimumSizeHint((const TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
+void k_textcustomeditor__textgotolinewidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextCustomEditor__TextGoToLineWidget_OnMinimumSizeHint((TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
 }
 
 int32_t k_textcustomeditor__textgotolinewidget_height_for_width(const void* self, int param1) {
@@ -1585,8 +1585,8 @@ int32_t k_textcustomeditor__textgotolinewidget_super_height_for_width(const void
     return TextCustomEditor__TextGoToLineWidget_SuperHeightForWidth((TextCustomEditor__TextGoToLineWidget*)self, param1);
 }
 
-void k_textcustomeditor__textgotolinewidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextCustomEditor__TextGoToLineWidget_OnHeightForWidth((const TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
+void k_textcustomeditor__textgotolinewidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextCustomEditor__TextGoToLineWidget_OnHeightForWidth((TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
 }
 
 bool k_textcustomeditor__textgotolinewidget_has_height_for_width(const void* self) {
@@ -1597,8 +1597,8 @@ bool k_textcustomeditor__textgotolinewidget_super_has_height_for_width(const voi
     return TextCustomEditor__TextGoToLineWidget_SuperHasHeightForWidth((TextCustomEditor__TextGoToLineWidget*)self);
 }
 
-void k_textcustomeditor__textgotolinewidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextCustomEditor__TextGoToLineWidget_OnHasHeightForWidth((const TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
+void k_textcustomeditor__textgotolinewidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextCustomEditor__TextGoToLineWidget_OnHasHeightForWidth((TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textcustomeditor__textgotolinewidget_paint_engine(const void* self) {
@@ -1609,8 +1609,8 @@ QPaintEngine* k_textcustomeditor__textgotolinewidget_super_paint_engine(const vo
     return TextCustomEditor__TextGoToLineWidget_SuperPaintEngine((TextCustomEditor__TextGoToLineWidget*)self);
 }
 
-void k_textcustomeditor__textgotolinewidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextCustomEditor__TextGoToLineWidget_OnPaintEngine((const TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
+void k_textcustomeditor__textgotolinewidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextCustomEditor__TextGoToLineWidget_OnPaintEngine((TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__textgotolinewidget_mouse_press_event(void* self, void* event) {
@@ -1921,8 +1921,8 @@ int32_t k_textcustomeditor__textgotolinewidget_super_metric(const void* self, in
     return TextCustomEditor__TextGoToLineWidget_SuperMetric((TextCustomEditor__TextGoToLineWidget*)self, param1);
 }
 
-void k_textcustomeditor__textgotolinewidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextCustomEditor__TextGoToLineWidget_OnMetric((const TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
+void k_textcustomeditor__textgotolinewidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextCustomEditor__TextGoToLineWidget_OnMetric((TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__textgotolinewidget_init_painter(const void* self, void* painter) {
@@ -1933,8 +1933,8 @@ void k_textcustomeditor__textgotolinewidget_super_init_painter(const void* self,
     TextCustomEditor__TextGoToLineWidget_SuperInitPainter((TextCustomEditor__TextGoToLineWidget*)self, (QPainter*)painter);
 }
 
-void k_textcustomeditor__textgotolinewidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextCustomEditor__TextGoToLineWidget_OnInitPainter((const TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
+void k_textcustomeditor__textgotolinewidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextCustomEditor__TextGoToLineWidget_OnInitPainter((TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textcustomeditor__textgotolinewidget_redirected(const void* self, void* offset) {
@@ -1945,8 +1945,8 @@ QPaintDevice* k_textcustomeditor__textgotolinewidget_super_redirected(const void
     return TextCustomEditor__TextGoToLineWidget_SuperRedirected((TextCustomEditor__TextGoToLineWidget*)self, (QPoint*)offset);
 }
 
-void k_textcustomeditor__textgotolinewidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextCustomEditor__TextGoToLineWidget_OnRedirected((const TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
+void k_textcustomeditor__textgotolinewidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextCustomEditor__TextGoToLineWidget_OnRedirected((TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
 }
 
 QPainter* k_textcustomeditor__textgotolinewidget_shared_painter(const void* self) {
@@ -1957,8 +1957,8 @@ QPainter* k_textcustomeditor__textgotolinewidget_super_shared_painter(const void
     return TextCustomEditor__TextGoToLineWidget_SuperSharedPainter((TextCustomEditor__TextGoToLineWidget*)self);
 }
 
-void k_textcustomeditor__textgotolinewidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextCustomEditor__TextGoToLineWidget_OnSharedPainter((const TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
+void k_textcustomeditor__textgotolinewidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextCustomEditor__TextGoToLineWidget_OnSharedPainter((TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__textgotolinewidget_input_method_event(void* self, void* param1) {
@@ -1981,8 +1981,8 @@ QVariant* k_textcustomeditor__textgotolinewidget_super_input_method_query(const 
     return TextCustomEditor__TextGoToLineWidget_SuperInputMethodQuery((TextCustomEditor__TextGoToLineWidget*)self, param1);
 }
 
-void k_textcustomeditor__textgotolinewidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextCustomEditor__TextGoToLineWidget_OnInputMethodQuery((const TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
+void k_textcustomeditor__textgotolinewidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextCustomEditor__TextGoToLineWidget_OnInputMethodQuery((TextCustomEditor__TextGoToLineWidget*)self, (intptr_t)callback);
 }
 
 bool k_textcustomeditor__textgotolinewidget_focus_next_prev_child(void* self, bool next) {

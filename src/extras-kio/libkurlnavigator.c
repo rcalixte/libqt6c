@@ -32,7 +32,7 @@ const QMetaObject* k_urlnavigator_meta_object(const void* self) {
     return KUrlNavigator_MetaObject((KUrlNavigator*)self);
 }
 
-void k_urlnavigator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_urlnavigator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KUrlNavigator_OnMetaObject((KUrlNavigator*)self, (intptr_t)callback);
 }
 
@@ -466,11 +466,11 @@ char* k_urlnavigator_location_state1(const void* self, int historyIndex) {
     return _ret;
 }
 
-QPaintDevice* k_urlnavigator_as_q_paint_device(void* self) {
+QPaintDevice* k_urlnavigator_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KUrlNavigator* k_urlnavigator_from_q_paint_device(void* _qpaintdevice) {
+KUrlNavigator* k_urlnavigator_from_q_paint_device(const void* _qpaintdevice) {
     return (KUrlNavigator*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1857,8 +1857,8 @@ int32_t k_urlnavigator_super_dev_type(const void* self) {
     return KUrlNavigator_SuperDevType((KUrlNavigator*)self);
 }
 
-void k_urlnavigator_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KUrlNavigator_OnDevType((const KUrlNavigator*)self, (intptr_t)callback);
+void k_urlnavigator_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KUrlNavigator_OnDevType((KUrlNavigator*)self, (intptr_t)callback);
 }
 
 void k_urlnavigator_set_visible(void* self, bool visible) {
@@ -1881,8 +1881,8 @@ QSize* k_urlnavigator_super_size_hint(const void* self) {
     return KUrlNavigator_SuperSizeHint((KUrlNavigator*)self);
 }
 
-void k_urlnavigator_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KUrlNavigator_OnSizeHint((const KUrlNavigator*)self, (intptr_t)callback);
+void k_urlnavigator_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KUrlNavigator_OnSizeHint((KUrlNavigator*)self, (intptr_t)callback);
 }
 
 QSize* k_urlnavigator_minimum_size_hint(const void* self) {
@@ -1893,8 +1893,8 @@ QSize* k_urlnavigator_super_minimum_size_hint(const void* self) {
     return KUrlNavigator_SuperMinimumSizeHint((KUrlNavigator*)self);
 }
 
-void k_urlnavigator_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KUrlNavigator_OnMinimumSizeHint((const KUrlNavigator*)self, (intptr_t)callback);
+void k_urlnavigator_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KUrlNavigator_OnMinimumSizeHint((KUrlNavigator*)self, (intptr_t)callback);
 }
 
 int32_t k_urlnavigator_height_for_width(const void* self, int param1) {
@@ -1905,8 +1905,8 @@ int32_t k_urlnavigator_super_height_for_width(const void* self, int param1) {
     return KUrlNavigator_SuperHeightForWidth((KUrlNavigator*)self, param1);
 }
 
-void k_urlnavigator_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KUrlNavigator_OnHeightForWidth((const KUrlNavigator*)self, (intptr_t)callback);
+void k_urlnavigator_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KUrlNavigator_OnHeightForWidth((KUrlNavigator*)self, (intptr_t)callback);
 }
 
 bool k_urlnavigator_has_height_for_width(const void* self) {
@@ -1917,8 +1917,8 @@ bool k_urlnavigator_super_has_height_for_width(const void* self) {
     return KUrlNavigator_SuperHasHeightForWidth((KUrlNavigator*)self);
 }
 
-void k_urlnavigator_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KUrlNavigator_OnHasHeightForWidth((const KUrlNavigator*)self, (intptr_t)callback);
+void k_urlnavigator_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KUrlNavigator_OnHasHeightForWidth((KUrlNavigator*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_urlnavigator_paint_engine(const void* self) {
@@ -1929,8 +1929,8 @@ QPaintEngine* k_urlnavigator_super_paint_engine(const void* self) {
     return KUrlNavigator_SuperPaintEngine((KUrlNavigator*)self);
 }
 
-void k_urlnavigator_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KUrlNavigator_OnPaintEngine((const KUrlNavigator*)self, (intptr_t)callback);
+void k_urlnavigator_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KUrlNavigator_OnPaintEngine((KUrlNavigator*)self, (intptr_t)callback);
 }
 
 bool k_urlnavigator_event(void* self, void* event) {
@@ -2169,8 +2169,8 @@ int32_t k_urlnavigator_super_metric(const void* self, int32_t param1) {
     return KUrlNavigator_SuperMetric((KUrlNavigator*)self, param1);
 }
 
-void k_urlnavigator_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KUrlNavigator_OnMetric((const KUrlNavigator*)self, (intptr_t)callback);
+void k_urlnavigator_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KUrlNavigator_OnMetric((KUrlNavigator*)self, (intptr_t)callback);
 }
 
 void k_urlnavigator_init_painter(const void* self, void* painter) {
@@ -2181,8 +2181,8 @@ void k_urlnavigator_super_init_painter(const void* self, void* painter) {
     KUrlNavigator_SuperInitPainter((KUrlNavigator*)self, (QPainter*)painter);
 }
 
-void k_urlnavigator_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KUrlNavigator_OnInitPainter((const KUrlNavigator*)self, (intptr_t)callback);
+void k_urlnavigator_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KUrlNavigator_OnInitPainter((KUrlNavigator*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_urlnavigator_redirected(const void* self, void* offset) {
@@ -2193,8 +2193,8 @@ QPaintDevice* k_urlnavigator_super_redirected(const void* self, void* offset) {
     return KUrlNavigator_SuperRedirected((KUrlNavigator*)self, (QPoint*)offset);
 }
 
-void k_urlnavigator_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KUrlNavigator_OnRedirected((const KUrlNavigator*)self, (intptr_t)callback);
+void k_urlnavigator_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KUrlNavigator_OnRedirected((KUrlNavigator*)self, (intptr_t)callback);
 }
 
 QPainter* k_urlnavigator_shared_painter(const void* self) {
@@ -2205,8 +2205,8 @@ QPainter* k_urlnavigator_super_shared_painter(const void* self) {
     return KUrlNavigator_SuperSharedPainter((KUrlNavigator*)self);
 }
 
-void k_urlnavigator_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KUrlNavigator_OnSharedPainter((const KUrlNavigator*)self, (intptr_t)callback);
+void k_urlnavigator_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KUrlNavigator_OnSharedPainter((KUrlNavigator*)self, (intptr_t)callback);
 }
 
 void k_urlnavigator_input_method_event(void* self, void* param1) {
@@ -2229,8 +2229,8 @@ QVariant* k_urlnavigator_super_input_method_query(const void* self, int32_t para
     return KUrlNavigator_SuperInputMethodQuery((KUrlNavigator*)self, param1);
 }
 
-void k_urlnavigator_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KUrlNavigator_OnInputMethodQuery((const KUrlNavigator*)self, (intptr_t)callback);
+void k_urlnavigator_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KUrlNavigator_OnInputMethodQuery((KUrlNavigator*)self, (intptr_t)callback);
 }
 
 bool k_urlnavigator_focus_next_prev_child(void* self, bool next) {

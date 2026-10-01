@@ -36,7 +36,7 @@ const QMetaObject* q_audiosink_meta_object(const void* self) {
     return QAudioSink_MetaObject((QAudioSink*)self);
 }
 
-void q_audiosink_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_audiosink_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAudioSink_OnMetaObject((QAudioSink*)self, (intptr_t)callback);
 }
 

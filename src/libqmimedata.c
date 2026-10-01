@@ -16,7 +16,7 @@ const QMetaObject* q_mimedata_meta_object(const void* self) {
     return QMimeData_MetaObject((QMimeData*)self);
 }
 
-void q_mimedata_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_mimedata_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QMimeData_OnMetaObject((QMimeData*)self, (intptr_t)callback);
 }
 
@@ -141,7 +141,7 @@ bool q_mimedata_has_format(const void* self, const char* mimetype) {
     return QMimeData_HasFormat((QMimeData*)self, qstring(mimetype));
 }
 
-void q_mimedata_on_has_format(const void* self, bool (*callback)(const void*, const char*)) {
+void q_mimedata_on_has_format(void* self, bool (*callback)(const void*, const char*)) {
     QMimeData_OnHasFormat((QMimeData*)self, (intptr_t)callback);
 }
 
@@ -166,7 +166,7 @@ const char** q_mimedata_formats(const void* self) {
     return _ret;
 }
 
-void q_mimedata_on_formats(const void* self, const char** (*callback)(const void*)) {
+void q_mimedata_on_formats(void* self, const char** (*callback)(const void*)) {
     QMimeData_OnFormats((QMimeData*)self, (intptr_t)callback);
 }
 
@@ -195,7 +195,7 @@ QVariant* q_mimedata_retrieve_data(const void* self, const char* mimetype, void*
     return QMimeData_RetrieveData((QMimeData*)self, qstring(mimetype), (QMetaType*)preferredType);
 }
 
-void q_mimedata_on_retrieve_data(const void* self, QVariant* (*callback)(const void*, const char*, void*)) {
+void q_mimedata_on_retrieve_data(void* self, QVariant* (*callback)(const void*, const char*, void*)) {
     QMimeData_OnRetrieveData((QMimeData*)self, (intptr_t)callback);
 }
 

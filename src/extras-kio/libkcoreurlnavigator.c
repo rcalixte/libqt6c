@@ -23,7 +23,7 @@ const QMetaObject* k_coreurlnavigator_meta_object(const void* self) {
     return KCoreUrlNavigator_MetaObject((KCoreUrlNavigator*)self);
 }
 
-void k_coreurlnavigator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_coreurlnavigator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KCoreUrlNavigator_OnMetaObject((KCoreUrlNavigator*)self, (intptr_t)callback);
 }
 

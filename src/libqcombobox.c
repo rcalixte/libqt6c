@@ -33,7 +33,7 @@ const QMetaObject* q_combobox_meta_object(const void* self) {
     return QComboBox_MetaObject((QComboBox*)self);
 }
 
-void q_combobox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_combobox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QComboBox_OnMetaObject((QComboBox*)self, (intptr_t)callback);
 }
 
@@ -337,7 +337,7 @@ QSize* q_combobox_size_hint(const void* self) {
     return QComboBox_SizeHint((QComboBox*)self);
 }
 
-void q_combobox_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_combobox_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QComboBox_OnSizeHint((QComboBox*)self, (intptr_t)callback);
 }
 
@@ -349,7 +349,7 @@ QSize* q_combobox_minimum_size_hint(const void* self) {
     return QComboBox_MinimumSizeHint((QComboBox*)self);
 }
 
-void q_combobox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_combobox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QComboBox_OnMinimumSizeHint((QComboBox*)self, (intptr_t)callback);
 }
 
@@ -397,7 +397,7 @@ QVariant* q_combobox_input_method_query(const void* self, int32_t param1) {
     return QComboBox_InputMethodQuery((QComboBox*)self, param1);
 }
 
-void q_combobox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+void q_combobox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
     QComboBox_OnInputMethodQuery((QComboBox*)self, (intptr_t)callback);
 }
 
@@ -657,7 +657,7 @@ void q_combobox_init_style_option(const void* self, void* option) {
     QComboBox_InitStyleOption((QComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
-void q_combobox_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_combobox_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QComboBox_OnInitStyleOption((QComboBox*)self, (intptr_t)callback);
 }
 
@@ -719,11 +719,11 @@ void q_combobox_set_item_data3(void* self, int index, const void* value, int rol
     QComboBox_SetItemData3((QComboBox*)self, index, (QVariant*)value, role);
 }
 
-QPaintDevice* q_combobox_as_q_paint_device(void* self) {
+QPaintDevice* q_combobox_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QComboBox* q_combobox_from_q_paint_device(void* _qpaintdevice) {
+QComboBox* q_combobox_from_q_paint_device(const void* _qpaintdevice) {
     return (QComboBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2114,8 +2114,8 @@ int32_t q_combobox_super_dev_type(const void* self) {
     return QComboBox_SuperDevType((QComboBox*)self);
 }
 
-void q_combobox_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QComboBox_OnDevType((const QComboBox*)self, (intptr_t)callback);
+void q_combobox_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QComboBox_OnDevType((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_set_visible(void* self, bool visible) {
@@ -2138,8 +2138,8 @@ int32_t q_combobox_super_height_for_width(const void* self, int param1) {
     return QComboBox_SuperHeightForWidth((QComboBox*)self, param1);
 }
 
-void q_combobox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QComboBox_OnHeightForWidth((const QComboBox*)self, (intptr_t)callback);
+void q_combobox_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QComboBox_OnHeightForWidth((QComboBox*)self, (intptr_t)callback);
 }
 
 bool q_combobox_has_height_for_width(const void* self) {
@@ -2150,8 +2150,8 @@ bool q_combobox_super_has_height_for_width(const void* self) {
     return QComboBox_SuperHasHeightForWidth((QComboBox*)self);
 }
 
-void q_combobox_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QComboBox_OnHasHeightForWidth((const QComboBox*)self, (intptr_t)callback);
+void q_combobox_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QComboBox_OnHasHeightForWidth((QComboBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_combobox_paint_engine(const void* self) {
@@ -2162,8 +2162,8 @@ QPaintEngine* q_combobox_super_paint_engine(const void* self) {
     return QComboBox_SuperPaintEngine((QComboBox*)self);
 }
 
-void q_combobox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QComboBox_OnPaintEngine((const QComboBox*)self, (intptr_t)callback);
+void q_combobox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QComboBox_OnPaintEngine((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_mouse_double_click_event(void* self, void* event) {
@@ -2330,8 +2330,8 @@ int32_t q_combobox_super_metric(const void* self, int32_t param1) {
     return QComboBox_SuperMetric((QComboBox*)self, param1);
 }
 
-void q_combobox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QComboBox_OnMetric((const QComboBox*)self, (intptr_t)callback);
+void q_combobox_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QComboBox_OnMetric((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_init_painter(const void* self, void* painter) {
@@ -2342,8 +2342,8 @@ void q_combobox_super_init_painter(const void* self, void* painter) {
     QComboBox_SuperInitPainter((QComboBox*)self, (QPainter*)painter);
 }
 
-void q_combobox_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QComboBox_OnInitPainter((const QComboBox*)self, (intptr_t)callback);
+void q_combobox_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QComboBox_OnInitPainter((QComboBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_combobox_redirected(const void* self, void* offset) {
@@ -2354,8 +2354,8 @@ QPaintDevice* q_combobox_super_redirected(const void* self, void* offset) {
     return QComboBox_SuperRedirected((QComboBox*)self, (QPoint*)offset);
 }
 
-void q_combobox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QComboBox_OnRedirected((const QComboBox*)self, (intptr_t)callback);
+void q_combobox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QComboBox_OnRedirected((QComboBox*)self, (intptr_t)callback);
 }
 
 QPainter* q_combobox_shared_painter(const void* self) {
@@ -2366,8 +2366,8 @@ QPainter* q_combobox_super_shared_painter(const void* self) {
     return QComboBox_SuperSharedPainter((QComboBox*)self);
 }
 
-void q_combobox_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QComboBox_OnSharedPainter((const QComboBox*)self, (intptr_t)callback);
+void q_combobox_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QComboBox_OnSharedPainter((QComboBox*)self, (intptr_t)callback);
 }
 
 bool q_combobox_focus_next_prev_child(void* self, bool next) {

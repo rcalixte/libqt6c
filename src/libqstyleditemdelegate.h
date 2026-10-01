@@ -32,10 +32,10 @@ const QMetaObject* q_styleditemdelegate_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback const QMetaObject* func(const QStyledItemDelegate* self)
 ///
-void q_styleditemdelegate_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_styleditemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -108,10 +108,10 @@ void q_styleditemdelegate_paint(const void* self, void* painter, const void* opt
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback void func(const QStyledItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void q_styleditemdelegate_on_paint(const void* self, void (*callback)(const void*, void*, const void*, const void*));
+void q_styleditemdelegate_on_paint(void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#paint)
 ///
@@ -136,12 +136,12 @@ QSize* q_styleditemdelegate_size_hint(const void* self, const void* option, cons
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback QSize* func(const QStyledItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_styleditemdelegate_on_size_hint(const void* self, QSize* (*callback)(const void*, const void*, const void*));
+void q_styleditemdelegate_on_size_hint(void* self, QSize* (*callback)(const void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#sizeHint)
 ///
@@ -166,10 +166,10 @@ QWidget* q_styleditemdelegate_create_editor(const void* self, void* parent, cons
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback QWidget* func(const QStyledItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void q_styleditemdelegate_on_create_editor(const void* self, QWidget* (*callback)(const void*, void*, const void*, const void*));
+void q_styleditemdelegate_on_create_editor(void* self, QWidget* (*callback)(const void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#createEditor)
 ///
@@ -194,10 +194,10 @@ void q_styleditemdelegate_set_editor_data(const void* self, void* editor, const 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback void func(const QStyledItemDelegate* self, QWidget* editor, QModelIndex* index)
 ///
-void q_styleditemdelegate_on_set_editor_data(const void* self, void (*callback)(const void*, void*, const void*));
+void q_styleditemdelegate_on_set_editor_data(void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#setEditorData)
 ///
@@ -222,10 +222,10 @@ void q_styleditemdelegate_set_model_data(const void* self, void* editor, void* m
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback void func(const QStyledItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index)
 ///
-void q_styleditemdelegate_on_set_model_data(const void* self, void (*callback)(const void*, void*, void*, const void*));
+void q_styleditemdelegate_on_set_model_data(void* self, void (*callback)(const void*, void*, void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#setModelData)
 ///
@@ -251,10 +251,10 @@ void q_styleditemdelegate_update_editor_geometry(const void* self, void* editor,
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback void func(const QStyledItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void q_styleditemdelegate_on_update_editor_geometry(const void* self, void (*callback)(const void*, void*, const void*, const void*));
+void q_styleditemdelegate_on_update_editor_geometry(void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#updateEditorGeometry)
 ///
@@ -294,10 +294,10 @@ const char* q_styleditemdelegate_display_text(const void* self, const void* valu
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback const char* func(const QStyledItemDelegate* self, QVariant* value, QLocale* locale)
 ///
-void q_styleditemdelegate_on_display_text(const void* self, const char* (*callback)(const void*, const void*, const void*));
+void q_styleditemdelegate_on_display_text(void* self, const char* (*callback)(const void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#displayText)
 ///
@@ -321,10 +321,10 @@ void q_styleditemdelegate_init_style_option(const void* self, void* option, cons
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback void func(const QStyledItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void q_styleditemdelegate_on_init_style_option(const void* self, void (*callback)(const void*, void*, const void*));
+void q_styleditemdelegate_on_init_style_option(void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleditemdelegate.html#initStyleOption)
 ///
@@ -963,10 +963,10 @@ void q_styleditemdelegate_super_destroy_editor(const void* self, void* editor, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback void func(QStyledItemDelegate* self, QWidget* editor, QModelIndex* index)
 ///
-void q_styleditemdelegate_on_destroy_editor(const void* self, void (*callback)(const void*, void*, const void*));
+void q_styleditemdelegate_on_destroy_editor(void* self, void (*callback)(const void*, void*, const void*));
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1037,10 +1037,10 @@ libqt_list q_styleditemdelegate_super_painting_roles(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback libqt_list of int func(QStyledItemDelegate* self)
 ///
-void q_styleditemdelegate_on_painting_roles(const void* self, libqt_list (*callback)(const void*));
+void q_styleditemdelegate_on_painting_roles(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1266,10 +1266,10 @@ QObject* q_styleditemdelegate_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback QObject* func(QStyledItemDelegate* self)
 ///
-void q_styleditemdelegate_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_styleditemdelegate_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1297,10 +1297,10 @@ int32_t q_styleditemdelegate_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback int32_t func(QStyledItemDelegate* self)
 ///
-void q_styleditemdelegate_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_styleditemdelegate_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1330,10 +1330,10 @@ int32_t q_styleditemdelegate_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback int32_t func(QStyledItemDelegate* self, const char* signal)
 ///
-void q_styleditemdelegate_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_styleditemdelegate_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1363,10 +1363,10 @@ bool q_styleditemdelegate_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStyledItemDelegate*
+/// @param self QStyledItemDelegate*
 /// @param callback bool func(QStyledItemDelegate* self, QMetaMethod* signal)
 ///
-void q_styleditemdelegate_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_styleditemdelegate_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

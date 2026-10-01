@@ -22,7 +22,7 @@ void q_graphicslayout_get_contents_margins(const void* self, double* left, doubl
     QGraphicsLayout_GetContentsMargins((QGraphicsLayout*)self, left, top, right, bottom);
 }
 
-void q_graphicslayout_on_get_contents_margins(const void* self, void (*callback)(const void*, double*, double*, double*, double*)) {
+void q_graphicslayout_on_get_contents_margins(void* self, void (*callback)(const void*, double*, double*, double*, double*)) {
     QGraphicsLayout_OnGetContentsMargins((QGraphicsLayout*)self, (intptr_t)callback);
 }
 
@@ -78,7 +78,7 @@ int32_t q_graphicslayout_count(const void* self) {
     return QGraphicsLayout_Count((QGraphicsLayout*)self);
 }
 
-void q_graphicslayout_on_count(const void* self, int32_t (*callback)(const void*)) {
+void q_graphicslayout_on_count(void* self, int32_t (*callback)(const void*)) {
     QGraphicsLayout_OnCount((QGraphicsLayout*)self, (intptr_t)callback);
 }
 
@@ -86,7 +86,7 @@ QGraphicsLayoutItem* q_graphicslayout_item_at(const void* self, int i) {
     return QGraphicsLayout_ItemAt((QGraphicsLayout*)self, i);
 }
 
-void q_graphicslayout_on_item_at(const void* self, QGraphicsLayoutItem* (*callback)(const void*, int)) {
+void q_graphicslayout_on_item_at(void* self, QGraphicsLayoutItem* (*callback)(const void*, int)) {
     QGraphicsLayout_OnItemAt((QGraphicsLayout*)self, (intptr_t)callback);
 }
 
@@ -266,16 +266,16 @@ bool q_graphicslayout_super_is_empty(const void* self) {
     return QGraphicsLayout_SuperIsEmpty((QGraphicsLayout*)self);
 }
 
-void q_graphicslayout_on_is_empty(const void* self, bool (*callback)(const void*)) {
-    QGraphicsLayout_OnIsEmpty((const QGraphicsLayout*)self, (intptr_t)callback);
+void q_graphicslayout_on_is_empty(void* self, bool (*callback)(const void*)) {
+    QGraphicsLayout_OnIsEmpty((QGraphicsLayout*)self, (intptr_t)callback);
 }
 
 QSizeF* q_graphicslayout_size_hint(const void* self, int32_t which, const void* constraint) {
     return QGraphicsLayout_SizeHint((QGraphicsLayout*)self, which, (QSizeF*)constraint);
 }
 
-void q_graphicslayout_on_size_hint(const void* self, QSizeF* (*callback)(const void*, int32_t, const void*)) {
-    QGraphicsLayout_OnSizeHint((const QGraphicsLayout*)self, (intptr_t)callback);
+void q_graphicslayout_on_size_hint(void* self, QSizeF* (*callback)(const void*, int32_t, const void*)) {
+    QGraphicsLayout_OnSizeHint((QGraphicsLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicslayout_set_graphics_item(void* self, void* item) {

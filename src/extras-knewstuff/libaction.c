@@ -15,7 +15,7 @@ const QMetaObject* k_nswidgets__action_meta_object(const void* self) {
     return KNSWidgets__Action_MetaObject((KNSWidgets__Action*)self);
 }
 
-void k_nswidgets__action_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_nswidgets__action_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KNSWidgets__Action_OnMetaObject((KNSWidgets__Action*)self, (intptr_t)callback);
 }
 

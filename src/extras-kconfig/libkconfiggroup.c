@@ -67,7 +67,7 @@ int32_t k_configgroup_access_mode(const void* self) {
     return KConfigGroup_AccessMode((KConfigGroup*)self);
 }
 
-void k_configgroup_on_access_mode(const void* self, int32_t (*callback)(const void*)) {
+void k_configgroup_on_access_mode(void* self, int32_t (*callback)(const void*)) {
     KConfigGroup_OnAccessMode((KConfigGroup*)self, (intptr_t)callback);
 }
 
@@ -120,7 +120,7 @@ const char** k_configgroup_group_list(const void* self) {
     return _ret;
 }
 
-void k_configgroup_on_group_list(const void* self, const char** (*callback)(const void*)) {
+void k_configgroup_on_group_list(void* self, const char** (*callback)(const void*)) {
     KConfigGroup_OnGroupList((KConfigGroup*)self, (intptr_t)callback);
 }
 
@@ -530,7 +530,7 @@ bool k_configgroup_is_immutable(const void* self) {
     return KConfigGroup_IsImmutable((KConfigGroup*)self);
 }
 
-void k_configgroup_on_is_immutable(const void* self, bool (*callback)(const void*)) {
+void k_configgroup_on_is_immutable(void* self, bool (*callback)(const void*)) {
     KConfigGroup_OnIsImmutable((KConfigGroup*)self, (intptr_t)callback);
 }
 
@@ -621,7 +621,7 @@ bool k_configgroup_has_group_impl(const void* self, const char* groupName) {
     return KConfigGroup_HasGroupImpl((KConfigGroup*)self, qstring(groupName));
 }
 
-void k_configgroup_on_has_group_impl(const void* self, bool (*callback)(const void*, const char*)) {
+void k_configgroup_on_has_group_impl(void* self, bool (*callback)(const void*, const char*)) {
     KConfigGroup_OnHasGroupImpl((KConfigGroup*)self, (intptr_t)callback);
 }
 
@@ -645,7 +645,7 @@ bool k_configgroup_is_group_immutable_impl(const void* self, const char* groupNa
     return KConfigGroup_IsGroupImmutableImpl((KConfigGroup*)self, qstring(groupName));
 }
 
-void k_configgroup_on_is_group_immutable_impl(const void* self, bool (*callback)(const void*, const char*)) {
+void k_configgroup_on_is_group_immutable_impl(void* self, bool (*callback)(const void*, const char*)) {
     KConfigGroup_OnIsGroupImmutableImpl((KConfigGroup*)self, (intptr_t)callback);
 }
 

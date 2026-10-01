@@ -48,7 +48,7 @@ const QMetaObject* q_textedit_meta_object(const void* self) {
     return QTextEdit_MetaObject((QTextEdit*)self);
 }
 
-void q_textedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_textedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTextEdit_OnMetaObject((QTextEdit*)self, (intptr_t)callback);
 }
 
@@ -369,7 +369,7 @@ QVariant* q_textedit_input_method_query(const void* self, int32_t property) {
     return QTextEdit_InputMethodQuery((QTextEdit*)self, property);
 }
 
-void q_textedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+void q_textedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
     QTextEdit_OnInputMethodQuery((QTextEdit*)self, (intptr_t)callback);
 }
 
@@ -797,7 +797,7 @@ QMimeData* q_textedit_create_mime_data_from_selection(const void* self) {
     return QTextEdit_CreateMimeDataFromSelection((QTextEdit*)self);
 }
 
-void q_textedit_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*)) {
+void q_textedit_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)(const void*)) {
     QTextEdit_OnCreateMimeDataFromSelection((QTextEdit*)self, (intptr_t)callback);
 }
 
@@ -809,7 +809,7 @@ bool q_textedit_can_insert_from_mime_data(const void* self, const void* source) 
     return QTextEdit_CanInsertFromMimeData((QTextEdit*)self, (QMimeData*)source);
 }
 
-void q_textedit_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*)) {
+void q_textedit_on_can_insert_from_mime_data(void* self, bool (*callback)(const void*, const void*)) {
     QTextEdit_OnCanInsertFromMimeData((QTextEdit*)self, (intptr_t)callback);
 }
 
@@ -1031,11 +1031,11 @@ void q_textedit_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_textedit_as_q_paint_device(void* self) {
+QPaintDevice* q_textedit_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QTextEdit* q_textedit_from_q_paint_device(void* _qpaintdevice) {
+QTextEdit* q_textedit_from_q_paint_device(const void* _qpaintdevice) {
     return (QTextEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2422,8 +2422,8 @@ QSize* q_textedit_super_minimum_size_hint(const void* self) {
     return QTextEdit_SuperMinimumSizeHint((QTextEdit*)self);
 }
 
-void q_textedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTextEdit_OnMinimumSizeHint((const QTextEdit*)self, (intptr_t)callback);
+void q_textedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTextEdit_OnMinimumSizeHint((QTextEdit*)self, (intptr_t)callback);
 }
 
 QSize* q_textedit_size_hint(const void* self) {
@@ -2434,8 +2434,8 @@ QSize* q_textedit_super_size_hint(const void* self) {
     return QTextEdit_SuperSizeHint((QTextEdit*)self);
 }
 
-void q_textedit_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTextEdit_OnSizeHint((const QTextEdit*)self, (intptr_t)callback);
+void q_textedit_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTextEdit_OnSizeHint((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_setup_viewport(void* self, void* viewport) {
@@ -2482,8 +2482,8 @@ QSize* q_textedit_super_viewport_size_hint(const void* self) {
     return QTextEdit_SuperViewportSizeHint((QTextEdit*)self);
 }
 
-void q_textedit_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTextEdit_OnViewportSizeHint((const QTextEdit*)self, (intptr_t)callback);
+void q_textedit_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTextEdit_OnViewportSizeHint((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_init_style_option(const void* self, void* option) {
@@ -2494,8 +2494,8 @@ void q_textedit_super_init_style_option(const void* self, void* option) {
     QTextEdit_SuperInitStyleOption((QTextEdit*)self, (QStyleOptionFrame*)option);
 }
 
-void q_textedit_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QTextEdit_OnInitStyleOption((const QTextEdit*)self, (intptr_t)callback);
+void q_textedit_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QTextEdit_OnInitStyleOption((QTextEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_textedit_dev_type(const void* self) {
@@ -2506,8 +2506,8 @@ int32_t q_textedit_super_dev_type(const void* self) {
     return QTextEdit_SuperDevType((QTextEdit*)self);
 }
 
-void q_textedit_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QTextEdit_OnDevType((const QTextEdit*)self, (intptr_t)callback);
+void q_textedit_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QTextEdit_OnDevType((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_set_visible(void* self, bool visible) {
@@ -2530,8 +2530,8 @@ int32_t q_textedit_super_height_for_width(const void* self, int param1) {
     return QTextEdit_SuperHeightForWidth((QTextEdit*)self, param1);
 }
 
-void q_textedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QTextEdit_OnHeightForWidth((const QTextEdit*)self, (intptr_t)callback);
+void q_textedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QTextEdit_OnHeightForWidth((QTextEdit*)self, (intptr_t)callback);
 }
 
 bool q_textedit_has_height_for_width(const void* self) {
@@ -2542,8 +2542,8 @@ bool q_textedit_super_has_height_for_width(const void* self) {
     return QTextEdit_SuperHasHeightForWidth((QTextEdit*)self);
 }
 
-void q_textedit_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QTextEdit_OnHasHeightForWidth((const QTextEdit*)self, (intptr_t)callback);
+void q_textedit_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QTextEdit_OnHasHeightForWidth((QTextEdit*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_textedit_paint_engine(const void* self) {
@@ -2554,8 +2554,8 @@ QPaintEngine* q_textedit_super_paint_engine(const void* self) {
     return QTextEdit_SuperPaintEngine((QTextEdit*)self);
 }
 
-void q_textedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QTextEdit_OnPaintEngine((const QTextEdit*)self, (intptr_t)callback);
+void q_textedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QTextEdit_OnPaintEngine((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_enter_event(void* self, void* event) {
@@ -2662,8 +2662,8 @@ int32_t q_textedit_super_metric(const void* self, int32_t param1) {
     return QTextEdit_SuperMetric((QTextEdit*)self, param1);
 }
 
-void q_textedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QTextEdit_OnMetric((const QTextEdit*)self, (intptr_t)callback);
+void q_textedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QTextEdit_OnMetric((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_init_painter(const void* self, void* painter) {
@@ -2674,8 +2674,8 @@ void q_textedit_super_init_painter(const void* self, void* painter) {
     QTextEdit_SuperInitPainter((QTextEdit*)self, (QPainter*)painter);
 }
 
-void q_textedit_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QTextEdit_OnInitPainter((const QTextEdit*)self, (intptr_t)callback);
+void q_textedit_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QTextEdit_OnInitPainter((QTextEdit*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_textedit_redirected(const void* self, void* offset) {
@@ -2686,8 +2686,8 @@ QPaintDevice* q_textedit_super_redirected(const void* self, void* offset) {
     return QTextEdit_SuperRedirected((QTextEdit*)self, (QPoint*)offset);
 }
 
-void q_textedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QTextEdit_OnRedirected((const QTextEdit*)self, (intptr_t)callback);
+void q_textedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QTextEdit_OnRedirected((QTextEdit*)self, (intptr_t)callback);
 }
 
 QPainter* q_textedit_shared_painter(const void* self) {
@@ -2698,8 +2698,8 @@ QPainter* q_textedit_super_shared_painter(const void* self) {
     return QTextEdit_SuperSharedPainter((QTextEdit*)self);
 }
 
-void q_textedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QTextEdit_OnSharedPainter((const QTextEdit*)self, (intptr_t)callback);
+void q_textedit_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QTextEdit_OnSharedPainter((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_child_event(void* self, void* event) {

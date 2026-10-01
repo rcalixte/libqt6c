@@ -37,7 +37,7 @@ const QMetaObject* k_io__previewjob_meta_object(const void* self) {
     return KIO__PreviewJob_MetaObject((KIO__PreviewJob*)self);
 }
 
-void k_io__previewjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__previewjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__PreviewJob_OnMetaObject((KIO__PreviewJob*)self, (intptr_t)callback);
 }
 
@@ -770,8 +770,8 @@ const char* k_io__previewjob_super_error_string(const void* self) {
     return _ret;
 }
 
-void k_io__previewjob_on_error_string(const void* self, const char* (*callback)(const void*)) {
-    KIO__PreviewJob_OnErrorString((const KIO__PreviewJob*)self, (intptr_t)callback);
+void k_io__previewjob_on_error_string(void* self, const char* (*callback)(const void*)) {
+    KIO__PreviewJob_OnErrorString((KIO__PreviewJob*)self, (intptr_t)callback);
 }
 
 bool k_io__previewjob_add_subjob(void* self, void* job) {

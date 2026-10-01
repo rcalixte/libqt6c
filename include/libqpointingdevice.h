@@ -173,10 +173,10 @@ const QMetaObject* q_pointingdevice_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPointingDevice*
+/// @param self QPointingDevice*
 /// @param callback const QMetaObject* func(const QPointingDevice* self)
 ///
-void q_pointingdevice_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_pointingdevice_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -306,10 +306,10 @@ void q_pointingdevice_grab_changed(const void* self, void* grabber, int32_t tran
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointingdevice.html#grabChanged)
 ///
-/// @param self const QPointingDevice*
+/// @param self QPointingDevice*
 /// @param callback void func(const QPointingDevice* self, QObject* grabber, enum QPointingDevice__GrabTransition transition, QPointerEvent* event, QEventPoint* point)
 ///
-void q_pointingdevice_on_grab_changed(const void* self, void (*callback)(const void*, void*, int32_t, const void*, const void*));
+void q_pointingdevice_on_grab_changed(void* self, void (*callback)(const void*, void*, int32_t, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1155,10 +1155,10 @@ QObject* q_pointingdevice_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPointingDevice*
+/// @param self QPointingDevice*
 /// @param callback QObject* func(QPointingDevice* self)
 ///
-void q_pointingdevice_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_pointingdevice_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1186,10 +1186,10 @@ int32_t q_pointingdevice_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPointingDevice*
+/// @param self QPointingDevice*
 /// @param callback int32_t func(QPointingDevice* self)
 ///
-void q_pointingdevice_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_pointingdevice_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1219,10 +1219,10 @@ int32_t q_pointingdevice_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPointingDevice*
+/// @param self QPointingDevice*
 /// @param callback int32_t func(QPointingDevice* self, const char* signal)
 ///
-void q_pointingdevice_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_pointingdevice_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1252,10 +1252,10 @@ bool q_pointingdevice_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPointingDevice*
+/// @param self QPointingDevice*
 /// @param callback bool func(QPointingDevice* self, QMetaMethod* signal)
 ///
-void q_pointingdevice_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_pointingdevice_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

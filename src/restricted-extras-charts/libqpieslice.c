@@ -30,7 +30,7 @@ const QMetaObject* q_pieslice_meta_object(const void* self) {
     return QPieSlice_MetaObject((QPieSlice*)self);
 }
 
-void q_pieslice_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pieslice_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPieSlice_OnMetaObject((QPieSlice*)self, (intptr_t)callback);
 }
 

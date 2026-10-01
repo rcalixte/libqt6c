@@ -36,19 +36,19 @@ KXmlGuiWindow* k_xmlguiwindow_new3(void* parent, int32_t flags) {
     return KXmlGuiWindow_New3((QWidget*)parent, flags);
 }
 
-KXMLGUIBuilder* k_xmlguiwindow_as_k_x_m_l_g_u_i_builder(void* self) {
+KXMLGUIBuilder* k_xmlguiwindow_as_k_x_m_l_g_u_i_builder(const void* self) {
     return KXmlGuiWindow_AsKXMLGUIBuilder((KXmlGuiWindow*)self);
 }
 
-KXmlGuiWindow* k_xmlguiwindow_from_k_x_m_l_g_u_i_builder(void* _kxmlguibuilder) {
+KXmlGuiWindow* k_xmlguiwindow_from_k_x_m_l_g_u_i_builder(const void* _kxmlguibuilder) {
     return (KXmlGuiWindow*)KXmlGuiWindow_FromKXMLGUIBuilder((KXMLGUIBuilder*)_kxmlguibuilder);
 }
 
-KXMLGUIClient* k_xmlguiwindow_as_k_x_m_l_g_u_i_client(void* self) {
+KXMLGUIClient* k_xmlguiwindow_as_k_x_m_l_g_u_i_client(const void* self) {
     return KXmlGuiWindow_AsKXMLGUIClient((KXmlGuiWindow*)self);
 }
 
-KXmlGuiWindow* k_xmlguiwindow_from_k_x_m_l_g_u_i_client(void* _kxmlguiclient) {
+KXmlGuiWindow* k_xmlguiwindow_from_k_x_m_l_g_u_i_client(const void* _kxmlguiclient) {
     return (KXmlGuiWindow*)KXmlGuiWindow_FromKXMLGUIClient((KXMLGUIClient*)_kxmlguiclient);
 }
 
@@ -56,7 +56,7 @@ const QMetaObject* k_xmlguiwindow_meta_object(const void* self) {
     return KXmlGuiWindow_MetaObject((KXmlGuiWindow*)self);
 }
 
-void k_xmlguiwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_xmlguiwindow_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KXmlGuiWindow_OnMetaObject((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
@@ -656,11 +656,11 @@ bool k_xmlguiwindow_restore_state2(void* self, char* state, int version) {
     return QMainWindow_RestoreState2((QMainWindow*)self, qstring(state), version);
 }
 
-QPaintDevice* k_xmlguiwindow_as_q_paint_device(void* self) {
+QPaintDevice* k_xmlguiwindow_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KXmlGuiWindow* k_xmlguiwindow_from_q_paint_device(void* _qpaintdevice) {
+KXmlGuiWindow* k_xmlguiwindow_from_q_paint_device(const void* _qpaintdevice) {
     return (KXmlGuiWindow*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2308,8 +2308,8 @@ int32_t k_xmlguiwindow_super_dev_type(const void* self) {
     return KXmlGuiWindow_SuperDevType((KXmlGuiWindow*)self);
 }
 
-void k_xmlguiwindow_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KXmlGuiWindow_OnDevType((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KXmlGuiWindow_OnDevType((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 void k_xmlguiwindow_set_visible(void* self, bool visible) {
@@ -2332,8 +2332,8 @@ QSize* k_xmlguiwindow_super_size_hint(const void* self) {
     return KXmlGuiWindow_SuperSizeHint((KXmlGuiWindow*)self);
 }
 
-void k_xmlguiwindow_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KXmlGuiWindow_OnSizeHint((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KXmlGuiWindow_OnSizeHint((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 QSize* k_xmlguiwindow_minimum_size_hint(const void* self) {
@@ -2344,8 +2344,8 @@ QSize* k_xmlguiwindow_super_minimum_size_hint(const void* self) {
     return KXmlGuiWindow_SuperMinimumSizeHint((KXmlGuiWindow*)self);
 }
 
-void k_xmlguiwindow_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KXmlGuiWindow_OnMinimumSizeHint((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KXmlGuiWindow_OnMinimumSizeHint((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 int32_t k_xmlguiwindow_height_for_width(const void* self, int param1) {
@@ -2356,8 +2356,8 @@ int32_t k_xmlguiwindow_super_height_for_width(const void* self, int param1) {
     return KXmlGuiWindow_SuperHeightForWidth((KXmlGuiWindow*)self, param1);
 }
 
-void k_xmlguiwindow_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KXmlGuiWindow_OnHeightForWidth((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KXmlGuiWindow_OnHeightForWidth((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 bool k_xmlguiwindow_has_height_for_width(const void* self) {
@@ -2368,8 +2368,8 @@ bool k_xmlguiwindow_super_has_height_for_width(const void* self) {
     return KXmlGuiWindow_SuperHasHeightForWidth((KXmlGuiWindow*)self);
 }
 
-void k_xmlguiwindow_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KXmlGuiWindow_OnHasHeightForWidth((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KXmlGuiWindow_OnHasHeightForWidth((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_xmlguiwindow_paint_engine(const void* self) {
@@ -2380,8 +2380,8 @@ QPaintEngine* k_xmlguiwindow_super_paint_engine(const void* self) {
     return KXmlGuiWindow_SuperPaintEngine((KXmlGuiWindow*)self);
 }
 
-void k_xmlguiwindow_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KXmlGuiWindow_OnPaintEngine((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KXmlGuiWindow_OnPaintEngine((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 void k_xmlguiwindow_mouse_press_event(void* self, void* event) {
@@ -2668,8 +2668,8 @@ int32_t k_xmlguiwindow_super_metric(const void* self, int32_t param1) {
     return KXmlGuiWindow_SuperMetric((KXmlGuiWindow*)self, param1);
 }
 
-void k_xmlguiwindow_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KXmlGuiWindow_OnMetric((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KXmlGuiWindow_OnMetric((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 void k_xmlguiwindow_init_painter(const void* self, void* painter) {
@@ -2680,8 +2680,8 @@ void k_xmlguiwindow_super_init_painter(const void* self, void* painter) {
     KXmlGuiWindow_SuperInitPainter((KXmlGuiWindow*)self, (QPainter*)painter);
 }
 
-void k_xmlguiwindow_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KXmlGuiWindow_OnInitPainter((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KXmlGuiWindow_OnInitPainter((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_xmlguiwindow_redirected(const void* self, void* offset) {
@@ -2692,8 +2692,8 @@ QPaintDevice* k_xmlguiwindow_super_redirected(const void* self, void* offset) {
     return KXmlGuiWindow_SuperRedirected((KXmlGuiWindow*)self, (QPoint*)offset);
 }
 
-void k_xmlguiwindow_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KXmlGuiWindow_OnRedirected((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KXmlGuiWindow_OnRedirected((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 QPainter* k_xmlguiwindow_shared_painter(const void* self) {
@@ -2704,8 +2704,8 @@ QPainter* k_xmlguiwindow_super_shared_painter(const void* self) {
     return KXmlGuiWindow_SuperSharedPainter((KXmlGuiWindow*)self);
 }
 
-void k_xmlguiwindow_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KXmlGuiWindow_OnSharedPainter((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KXmlGuiWindow_OnSharedPainter((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 void k_xmlguiwindow_input_method_event(void* self, void* param1) {
@@ -2728,8 +2728,8 @@ QVariant* k_xmlguiwindow_super_input_method_query(const void* self, int32_t para
     return KXmlGuiWindow_SuperInputMethodQuery((KXmlGuiWindow*)self, param1);
 }
 
-void k_xmlguiwindow_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KXmlGuiWindow_OnInputMethodQuery((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KXmlGuiWindow_OnInputMethodQuery((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 bool k_xmlguiwindow_focus_next_prev_child(void* self, bool next) {
@@ -2850,8 +2850,8 @@ const char** k_xmlguiwindow_super_container_tags(const void* self) {
     return _ret;
 }
 
-void k_xmlguiwindow_on_container_tags(const void* self, const char** (*callback)(const void*)) {
-    KXmlGuiWindow_OnContainerTags((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_container_tags(void* self, const char** (*callback)(const void*)) {
+    KXmlGuiWindow_OnContainerTags((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 QWidget* k_xmlguiwindow_create_container(void* self, void* parent, int index, const void* element, void** containerAction) {
@@ -2912,8 +2912,8 @@ const char** k_xmlguiwindow_super_custom_tags(const void* self) {
     return _ret;
 }
 
-void k_xmlguiwindow_on_custom_tags(const void* self, const char** (*callback)(const void*)) {
-    KXmlGuiWindow_OnCustomTags((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_custom_tags(void* self, const char** (*callback)(const void*)) {
+    KXmlGuiWindow_OnCustomTags((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 QAction* k_xmlguiwindow_create_custom_element(void* self, void* parent, int index, const void* element) {
@@ -2936,8 +2936,8 @@ QAction* k_xmlguiwindow_super_action2(const void* self, const void* element) {
     return KXmlGuiWindow_SuperAction2((KXmlGuiWindow*)self, (QDomElement*)element);
 }
 
-void k_xmlguiwindow_on_action2(const void* self, QAction* (*callback)(const void*, const void*)) {
-    KXmlGuiWindow_OnAction2((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_action2(void* self, QAction* (*callback)(const void*, const void*)) {
+    KXmlGuiWindow_OnAction2((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 KActionCollection* k_xmlguiwindow_action_collection(const void* self) {
@@ -2948,8 +2948,8 @@ KActionCollection* k_xmlguiwindow_super_action_collection(const void* self) {
     return KXmlGuiWindow_SuperActionCollection((KXmlGuiWindow*)self);
 }
 
-void k_xmlguiwindow_on_action_collection(const void* self, KActionCollection* (*callback)(const void*)) {
-    KXmlGuiWindow_OnActionCollection((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_action_collection(void* self, KActionCollection* (*callback)(const void*)) {
+    KXmlGuiWindow_OnActionCollection((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 const char* k_xmlguiwindow_component_name(const void* self) {
@@ -2966,8 +2966,8 @@ const char* k_xmlguiwindow_super_component_name(const void* self) {
     return _ret;
 }
 
-void k_xmlguiwindow_on_component_name(const void* self, const char* (*callback)(const void*)) {
-    KXmlGuiWindow_OnComponentName((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_component_name(void* self, const char* (*callback)(const void*)) {
+    KXmlGuiWindow_OnComponentName((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 QDomDocument* k_xmlguiwindow_dom_document(const void* self) {
@@ -2978,8 +2978,8 @@ QDomDocument* k_xmlguiwindow_super_dom_document(const void* self) {
     return KXmlGuiWindow_SuperDomDocument((KXmlGuiWindow*)self);
 }
 
-void k_xmlguiwindow_on_dom_document(const void* self, QDomDocument* (*callback)(const void*)) {
-    KXmlGuiWindow_OnDomDocument((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_dom_document(void* self, QDomDocument* (*callback)(const void*)) {
+    KXmlGuiWindow_OnDomDocument((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 const char* k_xmlguiwindow_xml_file(const void* self) {
@@ -2996,8 +2996,8 @@ const char* k_xmlguiwindow_super_xml_file(const void* self) {
     return _ret;
 }
 
-void k_xmlguiwindow_on_xml_file(const void* self, const char* (*callback)(const void*)) {
-    KXmlGuiWindow_OnXmlFile((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_xml_file(void* self, const char* (*callback)(const void*)) {
+    KXmlGuiWindow_OnXmlFile((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 const char* k_xmlguiwindow_local_x_m_l_file(const void* self) {
@@ -3014,8 +3014,8 @@ const char* k_xmlguiwindow_super_local_x_m_l_file(const void* self) {
     return _ret;
 }
 
-void k_xmlguiwindow_on_local_x_m_l_file(const void* self, const char* (*callback)(const void*)) {
-    KXmlGuiWindow_OnLocalXMLFile((const KXmlGuiWindow*)self, (intptr_t)callback);
+void k_xmlguiwindow_on_local_x_m_l_file(void* self, const char* (*callback)(const void*)) {
+    KXmlGuiWindow_OnLocalXMLFile((KXmlGuiWindow*)self, (intptr_t)callback);
 }
 
 void k_xmlguiwindow_set_component_name(void* self, const char* componentName, const char* componentDisplayName) {

@@ -45,7 +45,7 @@ const QMetaObject* k_editlistwidget_meta_object(const void* self) {
     return KEditListWidget_MetaObject((KEditListWidget*)self);
 }
 
-void k_editlistwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_editlistwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KEditListWidget_OnMetaObject((KEditListWidget*)self, (intptr_t)callback);
 }
 
@@ -271,11 +271,11 @@ void k_editlistwidget_insert_item2(void* self, const char* text, int index) {
     KEditListWidget_InsertItem2((KEditListWidget*)self, qstring(text), index);
 }
 
-QPaintDevice* k_editlistwidget_as_q_paint_device(void* self) {
+QPaintDevice* k_editlistwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KEditListWidget* k_editlistwidget_from_q_paint_device(void* _qpaintdevice) {
+KEditListWidget* k_editlistwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (KEditListWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1666,8 +1666,8 @@ int32_t k_editlistwidget_super_dev_type(const void* self) {
     return KEditListWidget_SuperDevType((KEditListWidget*)self);
 }
 
-void k_editlistwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KEditListWidget_OnDevType((const KEditListWidget*)self, (intptr_t)callback);
+void k_editlistwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KEditListWidget_OnDevType((KEditListWidget*)self, (intptr_t)callback);
 }
 
 void k_editlistwidget_set_visible(void* self, bool visible) {
@@ -1690,8 +1690,8 @@ QSize* k_editlistwidget_super_size_hint(const void* self) {
     return KEditListWidget_SuperSizeHint((KEditListWidget*)self);
 }
 
-void k_editlistwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KEditListWidget_OnSizeHint((const KEditListWidget*)self, (intptr_t)callback);
+void k_editlistwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KEditListWidget_OnSizeHint((KEditListWidget*)self, (intptr_t)callback);
 }
 
 QSize* k_editlistwidget_minimum_size_hint(const void* self) {
@@ -1702,8 +1702,8 @@ QSize* k_editlistwidget_super_minimum_size_hint(const void* self) {
     return KEditListWidget_SuperMinimumSizeHint((KEditListWidget*)self);
 }
 
-void k_editlistwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KEditListWidget_OnMinimumSizeHint((const KEditListWidget*)self, (intptr_t)callback);
+void k_editlistwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KEditListWidget_OnMinimumSizeHint((KEditListWidget*)self, (intptr_t)callback);
 }
 
 int32_t k_editlistwidget_height_for_width(const void* self, int param1) {
@@ -1714,8 +1714,8 @@ int32_t k_editlistwidget_super_height_for_width(const void* self, int param1) {
     return KEditListWidget_SuperHeightForWidth((KEditListWidget*)self, param1);
 }
 
-void k_editlistwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KEditListWidget_OnHeightForWidth((const KEditListWidget*)self, (intptr_t)callback);
+void k_editlistwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KEditListWidget_OnHeightForWidth((KEditListWidget*)self, (intptr_t)callback);
 }
 
 bool k_editlistwidget_has_height_for_width(const void* self) {
@@ -1726,8 +1726,8 @@ bool k_editlistwidget_super_has_height_for_width(const void* self) {
     return KEditListWidget_SuperHasHeightForWidth((KEditListWidget*)self);
 }
 
-void k_editlistwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KEditListWidget_OnHasHeightForWidth((const KEditListWidget*)self, (intptr_t)callback);
+void k_editlistwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KEditListWidget_OnHasHeightForWidth((KEditListWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_editlistwidget_paint_engine(const void* self) {
@@ -1738,8 +1738,8 @@ QPaintEngine* k_editlistwidget_super_paint_engine(const void* self) {
     return KEditListWidget_SuperPaintEngine((KEditListWidget*)self);
 }
 
-void k_editlistwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KEditListWidget_OnPaintEngine((const KEditListWidget*)self, (intptr_t)callback);
+void k_editlistwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KEditListWidget_OnPaintEngine((KEditListWidget*)self, (intptr_t)callback);
 }
 
 bool k_editlistwidget_event(void* self, void* event) {
@@ -2074,8 +2074,8 @@ int32_t k_editlistwidget_super_metric(const void* self, int32_t param1) {
     return KEditListWidget_SuperMetric((KEditListWidget*)self, param1);
 }
 
-void k_editlistwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KEditListWidget_OnMetric((const KEditListWidget*)self, (intptr_t)callback);
+void k_editlistwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KEditListWidget_OnMetric((KEditListWidget*)self, (intptr_t)callback);
 }
 
 void k_editlistwidget_init_painter(const void* self, void* painter) {
@@ -2086,8 +2086,8 @@ void k_editlistwidget_super_init_painter(const void* self, void* painter) {
     KEditListWidget_SuperInitPainter((KEditListWidget*)self, (QPainter*)painter);
 }
 
-void k_editlistwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KEditListWidget_OnInitPainter((const KEditListWidget*)self, (intptr_t)callback);
+void k_editlistwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KEditListWidget_OnInitPainter((KEditListWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_editlistwidget_redirected(const void* self, void* offset) {
@@ -2098,8 +2098,8 @@ QPaintDevice* k_editlistwidget_super_redirected(const void* self, void* offset) 
     return KEditListWidget_SuperRedirected((KEditListWidget*)self, (QPoint*)offset);
 }
 
-void k_editlistwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KEditListWidget_OnRedirected((const KEditListWidget*)self, (intptr_t)callback);
+void k_editlistwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KEditListWidget_OnRedirected((KEditListWidget*)self, (intptr_t)callback);
 }
 
 QPainter* k_editlistwidget_shared_painter(const void* self) {
@@ -2110,8 +2110,8 @@ QPainter* k_editlistwidget_super_shared_painter(const void* self) {
     return KEditListWidget_SuperSharedPainter((KEditListWidget*)self);
 }
 
-void k_editlistwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KEditListWidget_OnSharedPainter((const KEditListWidget*)self, (intptr_t)callback);
+void k_editlistwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KEditListWidget_OnSharedPainter((KEditListWidget*)self, (intptr_t)callback);
 }
 
 void k_editlistwidget_input_method_event(void* self, void* param1) {
@@ -2134,8 +2134,8 @@ QVariant* k_editlistwidget_super_input_method_query(const void* self, int32_t pa
     return KEditListWidget_SuperInputMethodQuery((KEditListWidget*)self, param1);
 }
 
-void k_editlistwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KEditListWidget_OnInputMethodQuery((const KEditListWidget*)self, (intptr_t)callback);
+void k_editlistwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KEditListWidget_OnInputMethodQuery((KEditListWidget*)self, (intptr_t)callback);
 }
 
 bool k_editlistwidget_focus_next_prev_child(void* self, bool next) {
@@ -2282,7 +2282,7 @@ QWidget* k_editlistwidget__customeditor_representation_widget(const void* self) 
     return KEditListWidget__CustomEditor_RepresentationWidget((KEditListWidget__CustomEditor*)self);
 }
 
-void k_editlistwidget__customeditor_on_representation_widget(const void* self, QWidget* (*callback)(const void*)) {
+void k_editlistwidget__customeditor_on_representation_widget(void* self, QWidget* (*callback)(const void*)) {
     KEditListWidget__CustomEditor_OnRepresentationWidget((KEditListWidget__CustomEditor*)self, (intptr_t)callback);
 }
 
@@ -2294,7 +2294,7 @@ QLineEdit* k_editlistwidget__customeditor_line_edit(const void* self) {
     return KEditListWidget__CustomEditor_LineEdit((KEditListWidget__CustomEditor*)self);
 }
 
-void k_editlistwidget__customeditor_on_line_edit(const void* self, QLineEdit* (*callback)(const void*)) {
+void k_editlistwidget__customeditor_on_line_edit(void* self, QLineEdit* (*callback)(const void*)) {
     KEditListWidget__CustomEditor_OnLineEdit((KEditListWidget__CustomEditor*)self, (intptr_t)callback);
 }
 

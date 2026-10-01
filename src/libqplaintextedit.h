@@ -49,10 +49,10 @@ const QMetaObject* q_plaintextedit_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback const QMetaObject* func(const QPlainTextEdit* self)
 ///
-void q_plaintextedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_plaintextedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -501,12 +501,12 @@ QVariant* q_plaintextedit_input_method_query(const void* self, int32_t property)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback QVariant* func(const QPlainTextEdit* self, enum Qt__InputMethodQuery property)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_plaintextedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_plaintextedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodQuery)
 ///
@@ -1272,10 +1272,10 @@ QMimeData* q_plaintextedit_create_mime_data_from_selection(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback QMimeData* func(const QPlainTextEdit* self)
 ///
-void q_plaintextedit_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*));
+void q_plaintextedit_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#createMimeDataFromSelection)
 ///
@@ -1296,10 +1296,10 @@ bool q_plaintextedit_can_insert_from_mime_data(const void* self, const void* sou
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback bool func(const QPlainTextEdit* self, QMimeData* source)
 ///
-void q_plaintextedit_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*));
+void q_plaintextedit_on_can_insert_from_mime_data(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextedit.html#canInsertFromMimeData)
 ///
@@ -1780,9 +1780,9 @@ void q_plaintextedit_set_frame_rect(void* self, const void* frameRect);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QPlainTextEdit*
+/// @param self const QPlainTextEdit*
 ///
-QPaintDevice* q_plaintextedit_as_q_paint_device(void* self);
+QPaintDevice* q_plaintextedit_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1790,7 +1790,7 @@ QPaintDevice* q_plaintextedit_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QPlainTextEdit* q_plaintextedit_from_q_paint_device(void* _qpaintdevice);
+QPlainTextEdit* q_plaintextedit_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -4767,12 +4767,12 @@ QSize* q_plaintextedit_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback QSize* func(QPlainTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_plaintextedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_plaintextedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4800,12 +4800,12 @@ QSize* q_plaintextedit_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback QSize* func(QPlainTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_plaintextedit_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_plaintextedit_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4934,12 +4934,12 @@ QSize* q_plaintextedit_super_viewport_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback QSize* func(QPlainTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_plaintextedit_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_plaintextedit_on_viewport_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -4969,10 +4969,10 @@ void q_plaintextedit_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback void func(QPlainTextEdit* self, QStyleOptionFrame* option)
 ///
-void q_plaintextedit_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_plaintextedit_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5000,10 +5000,10 @@ int32_t q_plaintextedit_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback int32_t func(QPlainTextEdit* self)
 ///
-void q_plaintextedit_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_plaintextedit_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5066,10 +5066,10 @@ int32_t q_plaintextedit_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback int32_t func(QPlainTextEdit* self, int param1)
 ///
-void q_plaintextedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_plaintextedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5097,10 +5097,10 @@ bool q_plaintextedit_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback bool func(QPlainTextEdit* self)
 ///
-void q_plaintextedit_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_plaintextedit_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5128,10 +5128,10 @@ QPaintEngine* q_plaintextedit_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback QPaintEngine* func(QPlainTextEdit* self)
 ///
-void q_plaintextedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_plaintextedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5429,10 +5429,10 @@ int32_t q_plaintextedit_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback int32_t func(QPlainTextEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_plaintextedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_plaintextedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5462,10 +5462,10 @@ void q_plaintextedit_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback void func(QPlainTextEdit* self, QPainter* painter)
 ///
-void q_plaintextedit_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_plaintextedit_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5495,10 +5495,10 @@ QPaintDevice* q_plaintextedit_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback QPaintDevice* func(QPlainTextEdit* self, QPoint* offset)
 ///
-void q_plaintextedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_plaintextedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5526,10 +5526,10 @@ QPainter* q_plaintextedit_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback QPainter* func(QPlainTextEdit* self)
 ///
-void q_plaintextedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_plaintextedit_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5728,12 +5728,12 @@ QMargins* q_plaintextedit_super_viewport_margins(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback QMargins* func(QPlainTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_plaintextedit_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
+void q_plaintextedit_on_viewport_margins(void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -5949,10 +5949,10 @@ QObject* q_plaintextedit_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback QObject* func(QPlainTextEdit* self)
 ///
-void q_plaintextedit_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_plaintextedit_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5980,10 +5980,10 @@ int32_t q_plaintextedit_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback int32_t func(QPlainTextEdit* self)
 ///
-void q_plaintextedit_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_plaintextedit_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6013,10 +6013,10 @@ int32_t q_plaintextedit_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback int32_t func(QPlainTextEdit* self, const char* signal)
 ///
-void q_plaintextedit_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_plaintextedit_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6046,10 +6046,10 @@ bool q_plaintextedit_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback bool func(QPlainTextEdit* self, QMetaMethod* signal)
 ///
-void q_plaintextedit_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_plaintextedit_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -6081,10 +6081,10 @@ double q_plaintextedit_super_get_decoded_metric_f(const void* self, int32_t metr
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextEdit*
+/// @param self QPlainTextEdit*
 /// @param callback double func(QPlainTextEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_plaintextedit_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_plaintextedit_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -6123,10 +6123,10 @@ const QMetaObject* q_plaintextdocumentlayout_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPlainTextDocumentLayout*
+/// @param self QPlainTextDocumentLayout*
 /// @param callback const QMetaObject* func(const QPlainTextDocumentLayout* self)
 ///
-void q_plaintextdocumentlayout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_plaintextdocumentlayout_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -6225,10 +6225,10 @@ int32_t q_plaintextdocumentlayout_hit_test(const void* self, const void* param1,
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPlainTextDocumentLayout*
+/// @param self QPlainTextDocumentLayout*
 /// @param callback int32_t func(const QPlainTextDocumentLayout* self, QPointF* param1, enum Qt__HitTestAccuracy param2)
 ///
-void q_plaintextdocumentlayout_on_hit_test(const void* self, int32_t (*callback)(const void*, const void*, int32_t));
+void q_plaintextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(const void*, const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#hitTest)
 ///
@@ -6250,10 +6250,10 @@ int32_t q_plaintextdocumentlayout_page_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPlainTextDocumentLayout*
+/// @param self QPlainTextDocumentLayout*
 /// @param callback int32_t func(const QPlainTextDocumentLayout* self)
 ///
-void q_plaintextdocumentlayout_on_page_count(const void* self, int32_t (*callback)(const void*));
+void q_plaintextdocumentlayout_on_page_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#pageCount)
 ///
@@ -6273,12 +6273,12 @@ QSizeF* q_plaintextdocumentlayout_document_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPlainTextDocumentLayout*
+/// @param self QPlainTextDocumentLayout*
 /// @param callback QSizeF* func(const QPlainTextDocumentLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_plaintextdocumentlayout_on_document_size(const void* self, QSizeF* (*callback)(const void*));
+void q_plaintextdocumentlayout_on_document_size(void* self, QSizeF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#documentSize)
 ///
@@ -6299,12 +6299,12 @@ QRectF* q_plaintextdocumentlayout_frame_bounding_rect(const void* self, void* pa
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPlainTextDocumentLayout*
+/// @param self QPlainTextDocumentLayout*
 /// @param callback QRectF* func(const QPlainTextDocumentLayout* self, QTextFrame* param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_plaintextdocumentlayout_on_frame_bounding_rect(const void* self, QRectF* (*callback)(const void*, void*));
+void q_plaintextdocumentlayout_on_frame_bounding_rect(void* self, QRectF* (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#frameBoundingRect)
 ///
@@ -6326,12 +6326,12 @@ QRectF* q_plaintextdocumentlayout_block_bounding_rect(const void* self, const vo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPlainTextDocumentLayout*
+/// @param self QPlainTextDocumentLayout*
 /// @param callback QRectF* func(const QPlainTextDocumentLayout* self, QTextBlock* block)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_plaintextdocumentlayout_on_block_bounding_rect(const void* self, QRectF* (*callback)(const void*, const void*));
+void q_plaintextdocumentlayout_on_block_bounding_rect(void* self, QRectF* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#blockBoundingRect)
 ///
@@ -7497,10 +7497,10 @@ QObject* q_plaintextdocumentlayout_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextDocumentLayout*
+/// @param self QPlainTextDocumentLayout*
 /// @param callback QObject* func(QPlainTextDocumentLayout* self)
 ///
-void q_plaintextdocumentlayout_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_plaintextdocumentlayout_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7528,10 +7528,10 @@ int32_t q_plaintextdocumentlayout_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextDocumentLayout*
+/// @param self QPlainTextDocumentLayout*
 /// @param callback int32_t func(QPlainTextDocumentLayout* self)
 ///
-void q_plaintextdocumentlayout_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_plaintextdocumentlayout_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7561,10 +7561,10 @@ int32_t q_plaintextdocumentlayout_super_receivers(const void* self, const char* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextDocumentLayout*
+/// @param self QPlainTextDocumentLayout*
 /// @param callback int32_t func(QPlainTextDocumentLayout* self, const char* signal)
 ///
-void q_plaintextdocumentlayout_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_plaintextdocumentlayout_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -7594,10 +7594,10 @@ bool q_plaintextdocumentlayout_super_is_signal_connected(const void* self, const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPlainTextDocumentLayout*
+/// @param self QPlainTextDocumentLayout*
 /// @param callback bool func(QPlainTextDocumentLayout* self, QMetaMethod* signal)
 ///
-void q_plaintextdocumentlayout_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_plaintextdocumentlayout_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

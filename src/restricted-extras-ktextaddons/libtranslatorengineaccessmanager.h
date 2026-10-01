@@ -32,10 +32,10 @@ const QMetaObject* k_texttranslator__translatorengineaccessmanager_meta_object(c
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextTranslator__TranslatorEngineAccessManager*
+/// @param self TextTranslator__TranslatorEngineAccessManager*
 /// @param callback const QMetaObject* func(const TextTranslator__TranslatorEngineAccessManager* self)
 ///
-void k_texttranslator__translatorengineaccessmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_texttranslator__translatorengineaccessmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineAccessManager.html)
 ///
@@ -830,10 +830,10 @@ QObject* k_texttranslator__translatorengineaccessmanager_super_sender(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorEngineAccessManager*
+/// @param self TextTranslator__TranslatorEngineAccessManager*
 /// @param callback QObject* func(TextTranslator__TranslatorEngineAccessManager* self)
 ///
-void k_texttranslator__translatorengineaccessmanager_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_texttranslator__translatorengineaccessmanager_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -861,10 +861,10 @@ int32_t k_texttranslator__translatorengineaccessmanager_super_sender_signal_inde
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorEngineAccessManager*
+/// @param self TextTranslator__TranslatorEngineAccessManager*
 /// @param callback int32_t func(TextTranslator__TranslatorEngineAccessManager* self)
 ///
-void k_texttranslator__translatorengineaccessmanager_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_texttranslator__translatorengineaccessmanager_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -894,10 +894,10 @@ int32_t k_texttranslator__translatorengineaccessmanager_super_receivers(const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorEngineAccessManager*
+/// @param self TextTranslator__TranslatorEngineAccessManager*
 /// @param callback int32_t func(TextTranslator__TranslatorEngineAccessManager* self, const char* signal)
 ///
-void k_texttranslator__translatorengineaccessmanager_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_texttranslator__translatorengineaccessmanager_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -927,10 +927,10 @@ bool k_texttranslator__translatorengineaccessmanager_super_is_signal_connected(c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorEngineAccessManager*
+/// @param self TextTranslator__TranslatorEngineAccessManager*
 /// @param callback bool func(TextTranslator__TranslatorEngineAccessManager* self, QMetaMethod* signal)
 ///
-void k_texttranslator__translatorengineaccessmanager_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_texttranslator__translatorengineaccessmanager_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -26,10 +26,10 @@ const QMetaObject* k_newfilemenu_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KNewFileMenu*
+/// @param self KNewFileMenu*
 /// @param callback const QMetaObject* func(const KNewFileMenu* self)
 ///
-void k_newfilemenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_newfilemenu_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1830,10 +1830,10 @@ libqt_list k_newfilemenu_super_created_widgets(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNewFileMenu*
+/// @param self KNewFileMenu*
 /// @param callback libqt_list of QWidget* func(KNewFileMenu* self)
 ///
-void k_newfilemenu_on_created_widgets(const void* self, libqt_list (*callback)(const void*));
+void k_newfilemenu_on_created_widgets(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1861,10 +1861,10 @@ QObject* k_newfilemenu_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNewFileMenu*
+/// @param self KNewFileMenu*
 /// @param callback QObject* func(KNewFileMenu* self)
 ///
-void k_newfilemenu_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_newfilemenu_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1892,10 +1892,10 @@ int32_t k_newfilemenu_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNewFileMenu*
+/// @param self KNewFileMenu*
 /// @param callback int32_t func(KNewFileMenu* self)
 ///
-void k_newfilemenu_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_newfilemenu_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1925,10 +1925,10 @@ int32_t k_newfilemenu_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNewFileMenu*
+/// @param self KNewFileMenu*
 /// @param callback int32_t func(KNewFileMenu* self, const char* signal)
 ///
-void k_newfilemenu_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_newfilemenu_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1958,10 +1958,10 @@ bool k_newfilemenu_super_is_signal_connected(const void* self, const void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNewFileMenu*
+/// @param self KNewFileMenu*
 /// @param callback bool func(KNewFileMenu* self, QMetaMethod* signal)
 ///
-void k_newfilemenu_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_newfilemenu_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -26,10 +26,10 @@ const char* k_bookmarkowner_current_title(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KBookmarkOwner*
+/// @param self KBookmarkOwner*
 /// @param callback const char* func(const KBookmarkOwner* self)
 ///
-void k_bookmarkowner_on_current_title(const void* self, const char* (*callback)(const void*));
+void k_bookmarkowner_on_current_title(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#currentTitle)
 ///
@@ -49,12 +49,12 @@ QUrl* k_bookmarkowner_current_url(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KBookmarkOwner*
+/// @param self KBookmarkOwner*
 /// @param callback QUrl* func(const KBookmarkOwner* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_bookmarkowner_on_current_url(const void* self, QUrl* (*callback)(const void*));
+void k_bookmarkowner_on_current_url(void* self, QUrl* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#currentUrl)
 ///
@@ -76,10 +76,10 @@ const char* k_bookmarkowner_current_icon(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KBookmarkOwner*
+/// @param self KBookmarkOwner*
 /// @param callback const char* func(const KBookmarkOwner* self)
 ///
-void k_bookmarkowner_on_current_icon(const void* self, const char* (*callback)(const void*));
+void k_bookmarkowner_on_current_icon(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#currentIcon)
 ///
@@ -99,10 +99,10 @@ bool k_bookmarkowner_supports_tabs(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KBookmarkOwner*
+/// @param self KBookmarkOwner*
 /// @param callback bool func(const KBookmarkOwner* self)
 ///
-void k_bookmarkowner_on_supports_tabs(const void* self, bool (*callback)(const void*));
+void k_bookmarkowner_on_supports_tabs(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#supportsTabs)
 ///
@@ -124,10 +124,10 @@ libqt_list k_bookmarkowner_current_bookmark_list(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KBookmarkOwner*
+/// @param self KBookmarkOwner*
 /// @param callback libqt_list of KBookmarkOwner__FutureBookmark* func(const KBookmarkOwner* self)
 ///
-void k_bookmarkowner_on_current_bookmark_list(const void* self, libqt_list (*callback)(const void*));
+void k_bookmarkowner_on_current_bookmark_list(void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#currentBookmarkList)
 ///
@@ -150,10 +150,10 @@ bool k_bookmarkowner_enable_option(const void* self, int32_t option);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KBookmarkOwner*
+/// @param self KBookmarkOwner*
 /// @param callback bool func(const KBookmarkOwner* self, enum KBookmarkOwner__BookmarkOption option)
 ///
-void k_bookmarkowner_on_enable_option(const void* self, bool (*callback)(const void*, int32_t));
+void k_bookmarkowner_on_enable_option(void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#enableOption)
 ///

@@ -34,7 +34,7 @@ const QMetaObject* k_mainwindow_meta_object(const void* self) {
     return KMainWindow_MetaObject((KMainWindow*)self);
 }
 
-void k_mainwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_mainwindow_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KMainWindow_OnMetaObject((KMainWindow*)self, (intptr_t)callback);
 }
 
@@ -601,11 +601,11 @@ bool k_mainwindow_restore_state2(void* self, char* state, int version) {
     return QMainWindow_RestoreState2((QMainWindow*)self, qstring(state), version);
 }
 
-QPaintDevice* k_mainwindow_as_q_paint_device(void* self) {
+QPaintDevice* k_mainwindow_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KMainWindow* k_mainwindow_from_q_paint_device(void* _qpaintdevice) {
+KMainWindow* k_mainwindow_from_q_paint_device(const void* _qpaintdevice) {
     return (KMainWindow*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2020,8 +2020,8 @@ int32_t k_mainwindow_super_dev_type(const void* self) {
     return KMainWindow_SuperDevType((KMainWindow*)self);
 }
 
-void k_mainwindow_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KMainWindow_OnDevType((const KMainWindow*)self, (intptr_t)callback);
+void k_mainwindow_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KMainWindow_OnDevType((KMainWindow*)self, (intptr_t)callback);
 }
 
 void k_mainwindow_set_visible(void* self, bool visible) {
@@ -2044,8 +2044,8 @@ QSize* k_mainwindow_super_size_hint(const void* self) {
     return KMainWindow_SuperSizeHint((KMainWindow*)self);
 }
 
-void k_mainwindow_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KMainWindow_OnSizeHint((const KMainWindow*)self, (intptr_t)callback);
+void k_mainwindow_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KMainWindow_OnSizeHint((KMainWindow*)self, (intptr_t)callback);
 }
 
 QSize* k_mainwindow_minimum_size_hint(const void* self) {
@@ -2056,8 +2056,8 @@ QSize* k_mainwindow_super_minimum_size_hint(const void* self) {
     return KMainWindow_SuperMinimumSizeHint((KMainWindow*)self);
 }
 
-void k_mainwindow_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KMainWindow_OnMinimumSizeHint((const KMainWindow*)self, (intptr_t)callback);
+void k_mainwindow_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KMainWindow_OnMinimumSizeHint((KMainWindow*)self, (intptr_t)callback);
 }
 
 int32_t k_mainwindow_height_for_width(const void* self, int param1) {
@@ -2068,8 +2068,8 @@ int32_t k_mainwindow_super_height_for_width(const void* self, int param1) {
     return KMainWindow_SuperHeightForWidth((KMainWindow*)self, param1);
 }
 
-void k_mainwindow_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KMainWindow_OnHeightForWidth((const KMainWindow*)self, (intptr_t)callback);
+void k_mainwindow_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KMainWindow_OnHeightForWidth((KMainWindow*)self, (intptr_t)callback);
 }
 
 bool k_mainwindow_has_height_for_width(const void* self) {
@@ -2080,8 +2080,8 @@ bool k_mainwindow_super_has_height_for_width(const void* self) {
     return KMainWindow_SuperHasHeightForWidth((KMainWindow*)self);
 }
 
-void k_mainwindow_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KMainWindow_OnHasHeightForWidth((const KMainWindow*)self, (intptr_t)callback);
+void k_mainwindow_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KMainWindow_OnHasHeightForWidth((KMainWindow*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_mainwindow_paint_engine(const void* self) {
@@ -2092,8 +2092,8 @@ QPaintEngine* k_mainwindow_super_paint_engine(const void* self) {
     return KMainWindow_SuperPaintEngine((KMainWindow*)self);
 }
 
-void k_mainwindow_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KMainWindow_OnPaintEngine((const KMainWindow*)self, (intptr_t)callback);
+void k_mainwindow_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KMainWindow_OnPaintEngine((KMainWindow*)self, (intptr_t)callback);
 }
 
 void k_mainwindow_mouse_press_event(void* self, void* event) {
@@ -2380,8 +2380,8 @@ int32_t k_mainwindow_super_metric(const void* self, int32_t param1) {
     return KMainWindow_SuperMetric((KMainWindow*)self, param1);
 }
 
-void k_mainwindow_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KMainWindow_OnMetric((const KMainWindow*)self, (intptr_t)callback);
+void k_mainwindow_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KMainWindow_OnMetric((KMainWindow*)self, (intptr_t)callback);
 }
 
 void k_mainwindow_init_painter(const void* self, void* painter) {
@@ -2392,8 +2392,8 @@ void k_mainwindow_super_init_painter(const void* self, void* painter) {
     KMainWindow_SuperInitPainter((KMainWindow*)self, (QPainter*)painter);
 }
 
-void k_mainwindow_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KMainWindow_OnInitPainter((const KMainWindow*)self, (intptr_t)callback);
+void k_mainwindow_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KMainWindow_OnInitPainter((KMainWindow*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_mainwindow_redirected(const void* self, void* offset) {
@@ -2404,8 +2404,8 @@ QPaintDevice* k_mainwindow_super_redirected(const void* self, void* offset) {
     return KMainWindow_SuperRedirected((KMainWindow*)self, (QPoint*)offset);
 }
 
-void k_mainwindow_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KMainWindow_OnRedirected((const KMainWindow*)self, (intptr_t)callback);
+void k_mainwindow_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KMainWindow_OnRedirected((KMainWindow*)self, (intptr_t)callback);
 }
 
 QPainter* k_mainwindow_shared_painter(const void* self) {
@@ -2416,8 +2416,8 @@ QPainter* k_mainwindow_super_shared_painter(const void* self) {
     return KMainWindow_SuperSharedPainter((KMainWindow*)self);
 }
 
-void k_mainwindow_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KMainWindow_OnSharedPainter((const KMainWindow*)self, (intptr_t)callback);
+void k_mainwindow_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KMainWindow_OnSharedPainter((KMainWindow*)self, (intptr_t)callback);
 }
 
 void k_mainwindow_input_method_event(void* self, void* param1) {
@@ -2440,8 +2440,8 @@ QVariant* k_mainwindow_super_input_method_query(const void* self, int32_t param1
     return KMainWindow_SuperInputMethodQuery((KMainWindow*)self, param1);
 }
 
-void k_mainwindow_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KMainWindow_OnInputMethodQuery((const KMainWindow*)self, (intptr_t)callback);
+void k_mainwindow_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KMainWindow_OnInputMethodQuery((KMainWindow*)self, (intptr_t)callback);
 }
 
 bool k_mainwindow_focus_next_prev_child(void* self, bool next) {

@@ -25,11 +25,11 @@ TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* k_textcustomeditor__p
     return TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_New2((TextCustomEditor__PlainTextEditor*)plainText, (QColor*)misspelledColor);
 }
 
-KSyntaxHighlighting__AbstractHighlighter* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_as_k_syntax_highlighting___abstract_highlighter(void* self) {
+KSyntaxHighlighting__AbstractHighlighter* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_as_k_syntax_highlighting___abstract_highlighter(const void* self) {
     return TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_AsKSyntaxHighlighting__AbstractHighlighter((TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*)self);
 }
 
-TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_from_k_syntax_highlighting___abstract_highlighter(void* _ksyntaxhighlighting__abstracthighlighter) {
+TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_from_k_syntax_highlighting___abstract_highlighter(const void* _ksyntaxhighlighting__abstracthighlighter) {
     return (TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*)TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_FromKSyntaxHighlighting__AbstractHighlighter((KSyntaxHighlighting__AbstractHighlighter*)_ksyntaxhighlighting__abstracthighlighter);
 }
 
@@ -502,8 +502,8 @@ const QMetaObject* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_s
     return TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_SuperMetaObject((TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*)self);
 }
 
-void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_OnMetaObject((const TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_OnMetaObject((TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*)self, (intptr_t)callback);
 }
 
 void* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_metacast(void* self, const char* param1) {

@@ -38,7 +38,7 @@ const QMetaObject* q_action_meta_object(const void* self) {
     return QAction_MetaObject((QAction*)self);
 }
 
-void q_action_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_action_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAction_OnMetaObject((QAction*)self, (intptr_t)callback);
 }
 

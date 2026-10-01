@@ -263,7 +263,7 @@ const char* q_networkreply_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QIODeviceBase* q_networkreply_as_q_i_o_device_base(void* self) {
+QIODeviceBase* q_networkreply_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 

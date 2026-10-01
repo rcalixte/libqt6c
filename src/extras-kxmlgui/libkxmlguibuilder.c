@@ -38,7 +38,7 @@ const char** k_xmlguibuilder_container_tags(const void* self) {
     return _ret;
 }
 
-void k_xmlguibuilder_on_container_tags(const void* self, const char** (*callback)(const void*)) {
+void k_xmlguibuilder_on_container_tags(void* self, const char** (*callback)(const void*)) {
     KXMLGUIBuilder_OnContainerTags((KXMLGUIBuilder*)self, (intptr_t)callback);
 }
 
@@ -100,7 +100,7 @@ const char** k_xmlguibuilder_custom_tags(const void* self) {
     return _ret;
 }
 
-void k_xmlguibuilder_on_custom_tags(const void* self, const char** (*callback)(const void*)) {
+void k_xmlguibuilder_on_custom_tags(void* self, const char** (*callback)(const void*)) {
     KXMLGUIBuilder_OnCustomTags((KXMLGUIBuilder*)self, (intptr_t)callback);
 }
 

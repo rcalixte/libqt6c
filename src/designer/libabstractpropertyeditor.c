@@ -26,7 +26,7 @@ const QMetaObject* q_designerpropertyeditorinterface_meta_object(const void* sel
     return QDesignerPropertyEditorInterface_MetaObject((QDesignerPropertyEditorInterface*)self);
 }
 
-void q_designerpropertyeditorinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_designerpropertyeditorinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerPropertyEditorInterface_OnMetaObject((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
@@ -69,7 +69,7 @@ QDesignerFormEditorInterface* q_designerpropertyeditorinterface_core(const void*
     return QDesignerPropertyEditorInterface_Core((QDesignerPropertyEditorInterface*)self);
 }
 
-void q_designerpropertyeditorinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
+void q_designerpropertyeditorinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
     QDesignerPropertyEditorInterface_OnCore((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
@@ -81,7 +81,7 @@ bool q_designerpropertyeditorinterface_is_read_only(const void* self) {
     return QDesignerPropertyEditorInterface_IsReadOnly((QDesignerPropertyEditorInterface*)self);
 }
 
-void q_designerpropertyeditorinterface_on_is_read_only(const void* self, bool (*callback)(const void*)) {
+void q_designerpropertyeditorinterface_on_is_read_only(void* self, bool (*callback)(const void*)) {
     QDesignerPropertyEditorInterface_OnIsReadOnly((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
@@ -89,7 +89,7 @@ QObject* q_designerpropertyeditorinterface_object(const void* self) {
     return QDesignerPropertyEditorInterface_Object((QDesignerPropertyEditorInterface*)self);
 }
 
-void q_designerpropertyeditorinterface_on_object(const void* self, QObject* (*callback)(const void*)) {
+void q_designerpropertyeditorinterface_on_object(void* self, QObject* (*callback)(const void*)) {
     QDesignerPropertyEditorInterface_OnObject((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
@@ -100,7 +100,7 @@ const char* q_designerpropertyeditorinterface_current_property_name(const void* 
     return _ret;
 }
 
-void q_designerpropertyeditorinterface_on_current_property_name(const void* self, const char* (*callback)(const void*)) {
+void q_designerpropertyeditorinterface_on_current_property_name(void* self, const char* (*callback)(const void*)) {
     QDesignerPropertyEditorInterface_OnCurrentPropertyName((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
@@ -150,11 +150,11 @@ const char* q_designerpropertyeditorinterface_tr3(const char* s, const char* c, 
     return _ret;
 }
 
-QPaintDevice* q_designerpropertyeditorinterface_as_q_paint_device(void* self) {
+QPaintDevice* q_designerpropertyeditorinterface_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QDesignerPropertyEditorInterface* q_designerpropertyeditorinterface_from_q_paint_device(void* _qpaintdevice) {
+QDesignerPropertyEditorInterface* q_designerpropertyeditorinterface_from_q_paint_device(const void* _qpaintdevice) {
     return (QDesignerPropertyEditorInterface*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1545,8 +1545,8 @@ int32_t q_designerpropertyeditorinterface_super_dev_type(const void* self) {
     return QDesignerPropertyEditorInterface_SuperDevType((QDesignerPropertyEditorInterface*)self);
 }
 
-void q_designerpropertyeditorinterface_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QDesignerPropertyEditorInterface_OnDevType((const QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+void q_designerpropertyeditorinterface_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QDesignerPropertyEditorInterface_OnDevType((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
 void q_designerpropertyeditorinterface_set_visible(void* self, bool visible) {
@@ -1569,8 +1569,8 @@ QSize* q_designerpropertyeditorinterface_super_size_hint(const void* self) {
     return QDesignerPropertyEditorInterface_SuperSizeHint((QDesignerPropertyEditorInterface*)self);
 }
 
-void q_designerpropertyeditorinterface_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDesignerPropertyEditorInterface_OnSizeHint((const QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+void q_designerpropertyeditorinterface_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDesignerPropertyEditorInterface_OnSizeHint((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
 QSize* q_designerpropertyeditorinterface_minimum_size_hint(const void* self) {
@@ -1581,8 +1581,8 @@ QSize* q_designerpropertyeditorinterface_super_minimum_size_hint(const void* sel
     return QDesignerPropertyEditorInterface_SuperMinimumSizeHint((QDesignerPropertyEditorInterface*)self);
 }
 
-void q_designerpropertyeditorinterface_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDesignerPropertyEditorInterface_OnMinimumSizeHint((const QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+void q_designerpropertyeditorinterface_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDesignerPropertyEditorInterface_OnMinimumSizeHint((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
 int32_t q_designerpropertyeditorinterface_height_for_width(const void* self, int param1) {
@@ -1593,8 +1593,8 @@ int32_t q_designerpropertyeditorinterface_super_height_for_width(const void* sel
     return QDesignerPropertyEditorInterface_SuperHeightForWidth((QDesignerPropertyEditorInterface*)self, param1);
 }
 
-void q_designerpropertyeditorinterface_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QDesignerPropertyEditorInterface_OnHeightForWidth((const QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+void q_designerpropertyeditorinterface_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QDesignerPropertyEditorInterface_OnHeightForWidth((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
 bool q_designerpropertyeditorinterface_has_height_for_width(const void* self) {
@@ -1605,8 +1605,8 @@ bool q_designerpropertyeditorinterface_super_has_height_for_width(const void* se
     return QDesignerPropertyEditorInterface_SuperHasHeightForWidth((QDesignerPropertyEditorInterface*)self);
 }
 
-void q_designerpropertyeditorinterface_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QDesignerPropertyEditorInterface_OnHasHeightForWidth((const QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+void q_designerpropertyeditorinterface_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QDesignerPropertyEditorInterface_OnHasHeightForWidth((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_designerpropertyeditorinterface_paint_engine(const void* self) {
@@ -1617,8 +1617,8 @@ QPaintEngine* q_designerpropertyeditorinterface_super_paint_engine(const void* s
     return QDesignerPropertyEditorInterface_SuperPaintEngine((QDesignerPropertyEditorInterface*)self);
 }
 
-void q_designerpropertyeditorinterface_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QDesignerPropertyEditorInterface_OnPaintEngine((const QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+void q_designerpropertyeditorinterface_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QDesignerPropertyEditorInterface_OnPaintEngine((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
 bool q_designerpropertyeditorinterface_event(void* self, void* event) {
@@ -1953,8 +1953,8 @@ int32_t q_designerpropertyeditorinterface_super_metric(const void* self, int32_t
     return QDesignerPropertyEditorInterface_SuperMetric((QDesignerPropertyEditorInterface*)self, param1);
 }
 
-void q_designerpropertyeditorinterface_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QDesignerPropertyEditorInterface_OnMetric((const QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+void q_designerpropertyeditorinterface_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QDesignerPropertyEditorInterface_OnMetric((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
 void q_designerpropertyeditorinterface_init_painter(const void* self, void* painter) {
@@ -1965,8 +1965,8 @@ void q_designerpropertyeditorinterface_super_init_painter(const void* self, void
     QDesignerPropertyEditorInterface_SuperInitPainter((QDesignerPropertyEditorInterface*)self, (QPainter*)painter);
 }
 
-void q_designerpropertyeditorinterface_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QDesignerPropertyEditorInterface_OnInitPainter((const QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+void q_designerpropertyeditorinterface_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QDesignerPropertyEditorInterface_OnInitPainter((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_designerpropertyeditorinterface_redirected(const void* self, void* offset) {
@@ -1977,8 +1977,8 @@ QPaintDevice* q_designerpropertyeditorinterface_super_redirected(const void* sel
     return QDesignerPropertyEditorInterface_SuperRedirected((QDesignerPropertyEditorInterface*)self, (QPoint*)offset);
 }
 
-void q_designerpropertyeditorinterface_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QDesignerPropertyEditorInterface_OnRedirected((const QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+void q_designerpropertyeditorinterface_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QDesignerPropertyEditorInterface_OnRedirected((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
 QPainter* q_designerpropertyeditorinterface_shared_painter(const void* self) {
@@ -1989,8 +1989,8 @@ QPainter* q_designerpropertyeditorinterface_super_shared_painter(const void* sel
     return QDesignerPropertyEditorInterface_SuperSharedPainter((QDesignerPropertyEditorInterface*)self);
 }
 
-void q_designerpropertyeditorinterface_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QDesignerPropertyEditorInterface_OnSharedPainter((const QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+void q_designerpropertyeditorinterface_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QDesignerPropertyEditorInterface_OnSharedPainter((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
 void q_designerpropertyeditorinterface_input_method_event(void* self, void* param1) {
@@ -2013,8 +2013,8 @@ QVariant* q_designerpropertyeditorinterface_super_input_method_query(const void*
     return QDesignerPropertyEditorInterface_SuperInputMethodQuery((QDesignerPropertyEditorInterface*)self, param1);
 }
 
-void q_designerpropertyeditorinterface_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QDesignerPropertyEditorInterface_OnInputMethodQuery((const QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
+void q_designerpropertyeditorinterface_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QDesignerPropertyEditorInterface_OnInputMethodQuery((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
 bool q_designerpropertyeditorinterface_focus_next_prev_child(void* self, bool next) {

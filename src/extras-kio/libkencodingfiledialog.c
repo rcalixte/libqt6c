@@ -263,11 +263,11 @@ void k_encodingfiledialog_reject(void* self) {
     QDialog_Reject((QDialog*)self);
 }
 
-QPaintDevice* k_encodingfiledialog_as_q_paint_device(void* self) {
+QPaintDevice* k_encodingfiledialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KEncodingFileDialog* k_encodingfiledialog_from_q_paint_device(void* _qpaintdevice) {
+KEncodingFileDialog* k_encodingfiledialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KEncodingFileDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 

@@ -34,7 +34,7 @@ const QMetaObject* q_accessiblebridgeplugin_meta_object(const void* self) {
     return QAccessibleBridgePlugin_MetaObject((QAccessibleBridgePlugin*)self);
 }
 
-void q_accessiblebridgeplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_accessiblebridgeplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAccessibleBridgePlugin_OnMetaObject((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 

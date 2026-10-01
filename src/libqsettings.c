@@ -70,7 +70,7 @@ const QMetaObject* q_settings_meta_object(const void* self) {
     return QSettings_MetaObject((QSettings*)self);
 }
 
-void q_settings_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_settings_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSettings_OnMetaObject((QSettings*)self, (intptr_t)callback);
 }
 

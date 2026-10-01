@@ -47,7 +47,7 @@ const QMetaObject* q_textdocument_meta_object(const void* self) {
     return QTextDocument_MetaObject((QTextDocument*)self);
 }
 
-void q_textdocument_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_textdocument_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTextDocument_OnMetaObject((QTextDocument*)self, (intptr_t)callback);
 }
 

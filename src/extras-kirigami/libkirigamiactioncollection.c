@@ -21,7 +21,7 @@ const QMetaObject* k_irigamiactioncollection_meta_object(const void* self) {
     return KirigamiActionCollection_MetaObject((KirigamiActionCollection*)self);
 }
 
-void k_irigamiactioncollection_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_irigamiactioncollection_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KirigamiActionCollection_OnMetaObject((KirigamiActionCollection*)self, (intptr_t)callback);
 }
 

@@ -18,7 +18,7 @@ const QMetaObject* q_sqldriverplugin_meta_object(const void* self) {
     return QSqlDriverPlugin_MetaObject((QSqlDriverPlugin*)self);
 }
 
-void q_sqldriverplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_sqldriverplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSqlDriverPlugin_OnMetaObject((QSqlDriverPlugin*)self, (intptr_t)callback);
 }
 

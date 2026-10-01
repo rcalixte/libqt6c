@@ -74,10 +74,10 @@ const QMetaObject* k_finddialog_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback const QMetaObject* func(const KFindDialog* self)
 ///
-void k_finddialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_finddialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -410,9 +410,9 @@ void k_finddialog_on_rejected(void* self, void (*callback)(void*));
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self KFindDialog*
+/// @param self const KFindDialog*
 ///
-QPaintDevice* k_finddialog_as_q_paint_device(void* self);
+QPaintDevice* k_finddialog_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -420,7 +420,7 @@ QPaintDevice* k_finddialog_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-KFindDialog* k_finddialog_from_q_paint_device(void* _qpaintdevice);
+KFindDialog* k_finddialog_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3438,12 +3438,12 @@ QSize* k_finddialog_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback QSize* func(KFindDialog* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_finddialog_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_finddialog_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3471,12 +3471,12 @@ QSize* k_finddialog_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback QSize* func(KFindDialog* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_finddialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_finddialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3828,10 +3828,10 @@ int32_t k_finddialog_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback int32_t func(KFindDialog* self)
 ///
-void k_finddialog_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_finddialog_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3861,10 +3861,10 @@ int32_t k_finddialog_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback int32_t func(KFindDialog* self, int param1)
 ///
-void k_finddialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_finddialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3892,10 +3892,10 @@ bool k_finddialog_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback bool func(KFindDialog* self)
 ///
-void k_finddialog_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_finddialog_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3923,10 +3923,10 @@ QPaintEngine* k_finddialog_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback QPaintEngine* func(KFindDialog* self)
 ///
-void k_finddialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_finddialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4686,10 +4686,10 @@ int32_t k_finddialog_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback int32_t func(KFindDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_finddialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_finddialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4719,10 +4719,10 @@ void k_finddialog_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback void func(KFindDialog* self, QPainter* painter)
 ///
-void k_finddialog_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_finddialog_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4752,10 +4752,10 @@ QPaintDevice* k_finddialog_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback QPaintDevice* func(KFindDialog* self, QPoint* offset)
 ///
-void k_finddialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_finddialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4783,10 +4783,10 @@ QPainter* k_finddialog_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback QPainter* func(KFindDialog* self)
 ///
-void k_finddialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_finddialog_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4849,12 +4849,12 @@ QVariant* k_finddialog_super_input_method_query(const void* self, int32_t param1
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback QVariant* func(KFindDialog* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_finddialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_finddialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5268,10 +5268,10 @@ QObject* k_finddialog_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback QObject* func(KFindDialog* self)
 ///
-void k_finddialog_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_finddialog_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5299,10 +5299,10 @@ int32_t k_finddialog_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback int32_t func(KFindDialog* self)
 ///
-void k_finddialog_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_finddialog_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5332,10 +5332,10 @@ int32_t k_finddialog_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback int32_t func(KFindDialog* self, const char* signal)
 ///
-void k_finddialog_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_finddialog_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5365,10 +5365,10 @@ bool k_finddialog_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback bool func(KFindDialog* self, QMetaMethod* signal)
 ///
-void k_finddialog_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_finddialog_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5400,10 +5400,10 @@ double k_finddialog_super_get_decoded_metric_f(const void* self, int32_t metricA
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFindDialog*
+/// @param self KFindDialog*
 /// @param callback double func(KFindDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_finddialog_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_finddialog_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -18,7 +18,7 @@ const QMetaObject* k_toolbarpopupaction_meta_object(const void* self) {
     return KToolBarPopupAction_MetaObject((KToolBarPopupAction*)self);
 }
 
-void k_toolbarpopupaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_toolbarpopupaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KToolBarPopupAction_OnMetaObject((KToolBarPopupAction*)self, (intptr_t)callback);
 }
 

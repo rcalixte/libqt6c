@@ -27,7 +27,7 @@ const QMetaObject* k_passwordlineedit_meta_object(const void* self) {
     return KPasswordLineEdit_MetaObject((KPasswordLineEdit*)self);
 }
 
-void k_passwordlineedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_passwordlineedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPasswordLineEdit_OnMetaObject((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
@@ -159,11 +159,11 @@ const char* k_passwordlineedit_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_passwordlineedit_as_q_paint_device(void* self) {
+QPaintDevice* k_passwordlineedit_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KPasswordLineEdit* k_passwordlineedit_from_q_paint_device(void* _qpaintdevice) {
+KPasswordLineEdit* k_passwordlineedit_from_q_paint_device(const void* _qpaintdevice) {
     return (KPasswordLineEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1554,8 +1554,8 @@ int32_t k_passwordlineedit_super_dev_type(const void* self) {
     return KPasswordLineEdit_SuperDevType((KPasswordLineEdit*)self);
 }
 
-void k_passwordlineedit_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KPasswordLineEdit_OnDevType((const KPasswordLineEdit*)self, (intptr_t)callback);
+void k_passwordlineedit_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KPasswordLineEdit_OnDevType((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
 void k_passwordlineedit_set_visible(void* self, bool visible) {
@@ -1578,8 +1578,8 @@ QSize* k_passwordlineedit_super_size_hint(const void* self) {
     return KPasswordLineEdit_SuperSizeHint((KPasswordLineEdit*)self);
 }
 
-void k_passwordlineedit_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPasswordLineEdit_OnSizeHint((const KPasswordLineEdit*)self, (intptr_t)callback);
+void k_passwordlineedit_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPasswordLineEdit_OnSizeHint((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
 QSize* k_passwordlineedit_minimum_size_hint(const void* self) {
@@ -1590,8 +1590,8 @@ QSize* k_passwordlineedit_super_minimum_size_hint(const void* self) {
     return KPasswordLineEdit_SuperMinimumSizeHint((KPasswordLineEdit*)self);
 }
 
-void k_passwordlineedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPasswordLineEdit_OnMinimumSizeHint((const KPasswordLineEdit*)self, (intptr_t)callback);
+void k_passwordlineedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPasswordLineEdit_OnMinimumSizeHint((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
 int32_t k_passwordlineedit_height_for_width(const void* self, int param1) {
@@ -1602,8 +1602,8 @@ int32_t k_passwordlineedit_super_height_for_width(const void* self, int param1) 
     return KPasswordLineEdit_SuperHeightForWidth((KPasswordLineEdit*)self, param1);
 }
 
-void k_passwordlineedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KPasswordLineEdit_OnHeightForWidth((const KPasswordLineEdit*)self, (intptr_t)callback);
+void k_passwordlineedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KPasswordLineEdit_OnHeightForWidth((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
 bool k_passwordlineedit_has_height_for_width(const void* self) {
@@ -1614,8 +1614,8 @@ bool k_passwordlineedit_super_has_height_for_width(const void* self) {
     return KPasswordLineEdit_SuperHasHeightForWidth((KPasswordLineEdit*)self);
 }
 
-void k_passwordlineedit_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KPasswordLineEdit_OnHasHeightForWidth((const KPasswordLineEdit*)self, (intptr_t)callback);
+void k_passwordlineedit_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KPasswordLineEdit_OnHasHeightForWidth((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_passwordlineedit_paint_engine(const void* self) {
@@ -1626,8 +1626,8 @@ QPaintEngine* k_passwordlineedit_super_paint_engine(const void* self) {
     return KPasswordLineEdit_SuperPaintEngine((KPasswordLineEdit*)self);
 }
 
-void k_passwordlineedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KPasswordLineEdit_OnPaintEngine((const KPasswordLineEdit*)self, (intptr_t)callback);
+void k_passwordlineedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KPasswordLineEdit_OnPaintEngine((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
 bool k_passwordlineedit_event(void* self, void* event) {
@@ -1962,8 +1962,8 @@ int32_t k_passwordlineedit_super_metric(const void* self, int32_t param1) {
     return KPasswordLineEdit_SuperMetric((KPasswordLineEdit*)self, param1);
 }
 
-void k_passwordlineedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KPasswordLineEdit_OnMetric((const KPasswordLineEdit*)self, (intptr_t)callback);
+void k_passwordlineedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KPasswordLineEdit_OnMetric((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
 void k_passwordlineedit_init_painter(const void* self, void* painter) {
@@ -1974,8 +1974,8 @@ void k_passwordlineedit_super_init_painter(const void* self, void* painter) {
     KPasswordLineEdit_SuperInitPainter((KPasswordLineEdit*)self, (QPainter*)painter);
 }
 
-void k_passwordlineedit_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KPasswordLineEdit_OnInitPainter((const KPasswordLineEdit*)self, (intptr_t)callback);
+void k_passwordlineedit_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KPasswordLineEdit_OnInitPainter((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_passwordlineedit_redirected(const void* self, void* offset) {
@@ -1986,8 +1986,8 @@ QPaintDevice* k_passwordlineedit_super_redirected(const void* self, void* offset
     return KPasswordLineEdit_SuperRedirected((KPasswordLineEdit*)self, (QPoint*)offset);
 }
 
-void k_passwordlineedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KPasswordLineEdit_OnRedirected((const KPasswordLineEdit*)self, (intptr_t)callback);
+void k_passwordlineedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KPasswordLineEdit_OnRedirected((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
 QPainter* k_passwordlineedit_shared_painter(const void* self) {
@@ -1998,8 +1998,8 @@ QPainter* k_passwordlineedit_super_shared_painter(const void* self) {
     return KPasswordLineEdit_SuperSharedPainter((KPasswordLineEdit*)self);
 }
 
-void k_passwordlineedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KPasswordLineEdit_OnSharedPainter((const KPasswordLineEdit*)self, (intptr_t)callback);
+void k_passwordlineedit_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KPasswordLineEdit_OnSharedPainter((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
 void k_passwordlineedit_input_method_event(void* self, void* param1) {
@@ -2022,8 +2022,8 @@ QVariant* k_passwordlineedit_super_input_method_query(const void* self, int32_t 
     return KPasswordLineEdit_SuperInputMethodQuery((KPasswordLineEdit*)self, param1);
 }
 
-void k_passwordlineedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KPasswordLineEdit_OnInputMethodQuery((const KPasswordLineEdit*)self, (intptr_t)callback);
+void k_passwordlineedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KPasswordLineEdit_OnInputMethodQuery((KPasswordLineEdit*)self, (intptr_t)callback);
 }
 
 bool k_passwordlineedit_focus_next_prev_child(void* self, bool next) {

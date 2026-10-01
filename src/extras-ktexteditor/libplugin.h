@@ -26,10 +26,10 @@ const QMetaObject* k_texteditor__plugin_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KTextEditor__Plugin*
+/// @param self KTextEditor__Plugin*
 /// @param callback const QMetaObject* func(const KTextEditor__Plugin* self)
 ///
-void k_texteditor__plugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_texteditor__plugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -117,10 +117,10 @@ int32_t k_texteditor__plugin_config_pages(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KTextEditor__Plugin*
+/// @param self KTextEditor__Plugin*
 /// @param callback int32_t func(const KTextEditor__Plugin* self)
 ///
-void k_texteditor__plugin_on_config_pages(const void* self, int32_t (*callback)(const void*));
+void k_texteditor__plugin_on_config_pages(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-plugin.html#configPages)
 ///
@@ -882,10 +882,10 @@ QObject* k_texteditor__plugin_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KTextEditor__Plugin*
+/// @param self KTextEditor__Plugin*
 /// @param callback QObject* func(KTextEditor__Plugin* self)
 ///
-void k_texteditor__plugin_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_texteditor__plugin_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -913,10 +913,10 @@ int32_t k_texteditor__plugin_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KTextEditor__Plugin*
+/// @param self KTextEditor__Plugin*
 /// @param callback int32_t func(KTextEditor__Plugin* self)
 ///
-void k_texteditor__plugin_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_texteditor__plugin_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -946,10 +946,10 @@ int32_t k_texteditor__plugin_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KTextEditor__Plugin*
+/// @param self KTextEditor__Plugin*
 /// @param callback int32_t func(KTextEditor__Plugin* self, const char* signal)
 ///
-void k_texteditor__plugin_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_texteditor__plugin_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -979,10 +979,10 @@ bool k_texteditor__plugin_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KTextEditor__Plugin*
+/// @param self KTextEditor__Plugin*
 /// @param callback bool func(KTextEditor__Plugin* self, QMetaMethod* signal)
 ///
-void k_texteditor__plugin_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_texteditor__plugin_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

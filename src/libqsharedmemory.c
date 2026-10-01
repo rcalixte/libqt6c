@@ -34,7 +34,7 @@ const QMetaObject* q_sharedmemory_meta_object(const void* self) {
     return QSharedMemory_MetaObject((QSharedMemory*)self);
 }
 
-void q_sharedmemory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_sharedmemory_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSharedMemory_OnMetaObject((QSharedMemory*)self, (intptr_t)callback);
 }
 

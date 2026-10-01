@@ -18,7 +18,7 @@ const QMetaObject* q_logvalueaxis_meta_object(const void* self) {
     return QLogValueAxis_MetaObject((QLogValueAxis*)self);
 }
 
-void q_logvalueaxis_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_logvalueaxis_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QLogValueAxis_OnMetaObject((QLogValueAxis*)self, (intptr_t)callback);
 }
 
@@ -61,7 +61,7 @@ int32_t q_logvalueaxis_type(const void* self) {
     return QLogValueAxis_Type((QLogValueAxis*)self);
 }
 
-void q_logvalueaxis_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_logvalueaxis_on_type(void* self, int32_t (*callback)(const void*)) {
     QLogValueAxis_OnType((QLogValueAxis*)self, (intptr_t)callback);
 }
 

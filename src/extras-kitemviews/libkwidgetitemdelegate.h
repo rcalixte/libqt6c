@@ -35,10 +35,10 @@ const QMetaObject* k_widgetitemdelegate_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback const QMetaObject* func(const KWidgetItemDelegate* self)
 ///
-void k_widgetitemdelegate_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_widgetitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -131,10 +131,10 @@ libqt_list k_widgetitemdelegate_create_item_widgets(const void* self, const void
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback libqt_list of QWidget* func(const KWidgetItemDelegate* self, QModelIndex* index)
 ///
-void k_widgetitemdelegate_on_create_item_widgets(const void* self, libqt_list (*callback)(const void*, const void*));
+void k_widgetitemdelegate_on_create_item_widgets(void* self, libqt_list (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///
@@ -151,10 +151,10 @@ void k_widgetitemdelegate_update_item_widgets(const void* self, libqt_list widge
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback void func(const KWidgetItemDelegate* self, libqt_list of QWidget* widgets, QStyleOptionViewItem* option, QPersistentModelIndex* index)
 ///
-void k_widgetitemdelegate_on_update_item_widgets(const void* self, void (*callback)(const void*, libqt_list, const void*, const void*));
+void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(const void*, libqt_list, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
@@ -733,10 +733,10 @@ void k_widgetitemdelegate_paint(const void* self, void* painter, const void* opt
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback void func(KWidgetItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_widgetitemdelegate_on_paint(const void* self, void (*callback)(const void*, void*, const void*, const void*));
+void k_widgetitemdelegate_on_paint(void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -758,12 +758,12 @@ QSize* k_widgetitemdelegate_size_hint(const void* self, const void* option, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback QSize* func(KWidgetItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_widgetitemdelegate_on_size_hint(const void* self, QSize* (*callback)(const void*, const void*, const void*));
+void k_widgetitemdelegate_on_size_hint(void* self, QSize* (*callback)(const void*, const void*, const void*));
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -797,10 +797,10 @@ QWidget* k_widgetitemdelegate_super_create_editor(const void* self, void* parent
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback QWidget* func(KWidgetItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_widgetitemdelegate_on_create_editor(const void* self, QWidget* (*callback)(const void*, void*, const void*, const void*));
+void k_widgetitemdelegate_on_create_editor(void* self, QWidget* (*callback)(const void*, void*, const void*, const void*));
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -832,10 +832,10 @@ void k_widgetitemdelegate_super_destroy_editor(const void* self, void* editor, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback void func(KWidgetItemDelegate* self, QWidget* editor, QModelIndex* index)
 ///
-void k_widgetitemdelegate_on_destroy_editor(const void* self, void (*callback)(const void*, void*, const void*));
+void k_widgetitemdelegate_on_destroy_editor(void* self, void (*callback)(const void*, void*, const void*));
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -867,10 +867,10 @@ void k_widgetitemdelegate_super_set_editor_data(const void* self, void* editor, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback void func(KWidgetItemDelegate* self, QWidget* editor, QModelIndex* index)
 ///
-void k_widgetitemdelegate_on_set_editor_data(const void* self, void (*callback)(const void*, void*, const void*));
+void k_widgetitemdelegate_on_set_editor_data(void* self, void (*callback)(const void*, void*, const void*));
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -904,10 +904,10 @@ void k_widgetitemdelegate_super_set_model_data(const void* self, void* editor, v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback void func(KWidgetItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index)
 ///
-void k_widgetitemdelegate_on_set_model_data(const void* self, void (*callback)(const void*, void*, void*, const void*));
+void k_widgetitemdelegate_on_set_model_data(void* self, void (*callback)(const void*, void*, void*, const void*));
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -941,10 +941,10 @@ void k_widgetitemdelegate_super_update_editor_geometry(const void* self, void* e
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback void func(KWidgetItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_widgetitemdelegate_on_update_editor_geometry(const void* self, void (*callback)(const void*, void*, const void*, const void*));
+void k_widgetitemdelegate_on_update_editor_geometry(void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1054,10 +1054,10 @@ libqt_list k_widgetitemdelegate_super_painting_roles(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback libqt_list of int func(KWidgetItemDelegate* self)
 ///
-void k_widgetitemdelegate_on_painting_roles(const void* self, libqt_list (*callback)(const void*));
+void k_widgetitemdelegate_on_painting_roles(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1318,10 +1318,10 @@ QObject* k_widgetitemdelegate_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback QObject* func(KWidgetItemDelegate* self)
 ///
-void k_widgetitemdelegate_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_widgetitemdelegate_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1349,10 +1349,10 @@ int32_t k_widgetitemdelegate_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback int32_t func(KWidgetItemDelegate* self)
 ///
-void k_widgetitemdelegate_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_widgetitemdelegate_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1382,10 +1382,10 @@ int32_t k_widgetitemdelegate_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback int32_t func(KWidgetItemDelegate* self, const char* signal)
 ///
-void k_widgetitemdelegate_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_widgetitemdelegate_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1415,10 +1415,10 @@ bool k_widgetitemdelegate_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KWidgetItemDelegate*
+/// @param self KWidgetItemDelegate*
 /// @param callback bool func(KWidgetItemDelegate* self, QMetaMethod* signal)
 ///
-void k_widgetitemdelegate_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_widgetitemdelegate_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

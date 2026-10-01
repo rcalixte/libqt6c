@@ -19,7 +19,7 @@ const QMetaObject* k_textemoticonscore__emojimodelmanager_meta_object(const void
     return TextEmoticonsCore__EmojiModelManager_MetaObject((TextEmoticonsCore__EmojiModelManager*)self);
 }
 
-void k_textemoticonscore__emojimodelmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textemoticonscore__emojimodelmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextEmoticonsCore__EmojiModelManager_OnMetaObject((TextEmoticonsCore__EmojiModelManager*)self, (intptr_t)callback);
 }
 

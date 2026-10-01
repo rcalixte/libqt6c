@@ -12,15 +12,15 @@
 
 /// Upcasts to a Attica::PlatformDependentV2 object
 ///
-/// @param self Attica__PlatformDependentV3*
+/// @param self const Attica__PlatformDependentV3*
 ///
-Attica__PlatformDependentV2* k_attica__platformdependentv3_as_attica___platform_dependent_v2(void* self);
+Attica__PlatformDependentV2* k_attica__platformdependentv3_as_attica___platform_dependent_v2(const void* self);
 
 /// Downcasts to a Attica__PlatformDependentV3 object
 ///
 /// @param _attica__platformdependentv2 Attica__PlatformDependentV2*
 ///
-Attica__PlatformDependentV3* k_attica__platformdependentv3_from_attica___platform_dependent_v2(void* _attica__platformdependentv2);
+Attica__PlatformDependentV3* k_attica__platformdependentv3_from_attica___platform_dependent_v2(const void* _attica__platformdependentv2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///

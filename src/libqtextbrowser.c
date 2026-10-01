@@ -33,7 +33,7 @@ const QMetaObject* q_textbrowser_meta_object(const void* self) {
     return QTextBrowser_MetaObject((QTextBrowser*)self);
 }
 
-void q_textbrowser_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_textbrowser_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTextBrowser_OnMetaObject((QTextBrowser*)self, (intptr_t)callback);
 }
 
@@ -974,11 +974,11 @@ void q_textbrowser_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_textbrowser_as_q_paint_device(void* self) {
+QPaintDevice* q_textbrowser_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QTextBrowser* q_textbrowser_from_q_paint_device(void* _qpaintdevice) {
+QTextBrowser* q_textbrowser_from_q_paint_device(const void* _qpaintdevice) {
     return (QTextBrowser*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2365,8 +2365,8 @@ QVariant* q_textbrowser_super_input_method_query(const void* self, int32_t prope
     return QTextBrowser_SuperInputMethodQuery((QTextBrowser*)self, property);
 }
 
-void q_textbrowser_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QTextBrowser_OnInputMethodQuery((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QTextBrowser_OnInputMethodQuery((QTextBrowser*)self, (intptr_t)callback);
 }
 
 void q_textbrowser_timer_event(void* self, void* e) {
@@ -2533,8 +2533,8 @@ QMimeData* q_textbrowser_super_create_mime_data_from_selection(const void* self)
     return QTextBrowser_SuperCreateMimeDataFromSelection((QTextBrowser*)self);
 }
 
-void q_textbrowser_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*)) {
-    QTextBrowser_OnCreateMimeDataFromSelection((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)(const void*)) {
+    QTextBrowser_OnCreateMimeDataFromSelection((QTextBrowser*)self, (intptr_t)callback);
 }
 
 bool q_textbrowser_can_insert_from_mime_data(const void* self, const void* source) {
@@ -2545,8 +2545,8 @@ bool q_textbrowser_super_can_insert_from_mime_data(const void* self, const void*
     return QTextBrowser_SuperCanInsertFromMimeData((QTextBrowser*)self, (QMimeData*)source);
 }
 
-void q_textbrowser_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*)) {
-    QTextBrowser_OnCanInsertFromMimeData((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_can_insert_from_mime_data(void* self, bool (*callback)(const void*, const void*)) {
+    QTextBrowser_OnCanInsertFromMimeData((QTextBrowser*)self, (intptr_t)callback);
 }
 
 void q_textbrowser_insert_from_mime_data(void* self, const void* source) {
@@ -2605,8 +2605,8 @@ QSize* q_textbrowser_super_minimum_size_hint(const void* self) {
     return QTextBrowser_SuperMinimumSizeHint((QTextBrowser*)self);
 }
 
-void q_textbrowser_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTextBrowser_OnMinimumSizeHint((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTextBrowser_OnMinimumSizeHint((QTextBrowser*)self, (intptr_t)callback);
 }
 
 QSize* q_textbrowser_size_hint(const void* self) {
@@ -2617,8 +2617,8 @@ QSize* q_textbrowser_super_size_hint(const void* self) {
     return QTextBrowser_SuperSizeHint((QTextBrowser*)self);
 }
 
-void q_textbrowser_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTextBrowser_OnSizeHint((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTextBrowser_OnSizeHint((QTextBrowser*)self, (intptr_t)callback);
 }
 
 void q_textbrowser_setup_viewport(void* self, void* viewport) {
@@ -2665,8 +2665,8 @@ QSize* q_textbrowser_super_viewport_size_hint(const void* self) {
     return QTextBrowser_SuperViewportSizeHint((QTextBrowser*)self);
 }
 
-void q_textbrowser_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTextBrowser_OnViewportSizeHint((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTextBrowser_OnViewportSizeHint((QTextBrowser*)self, (intptr_t)callback);
 }
 
 void q_textbrowser_init_style_option(const void* self, void* option) {
@@ -2677,8 +2677,8 @@ void q_textbrowser_super_init_style_option(const void* self, void* option) {
     QTextBrowser_SuperInitStyleOption((QTextBrowser*)self, (QStyleOptionFrame*)option);
 }
 
-void q_textbrowser_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QTextBrowser_OnInitStyleOption((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QTextBrowser_OnInitStyleOption((QTextBrowser*)self, (intptr_t)callback);
 }
 
 int32_t q_textbrowser_dev_type(const void* self) {
@@ -2689,8 +2689,8 @@ int32_t q_textbrowser_super_dev_type(const void* self) {
     return QTextBrowser_SuperDevType((QTextBrowser*)self);
 }
 
-void q_textbrowser_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QTextBrowser_OnDevType((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QTextBrowser_OnDevType((QTextBrowser*)self, (intptr_t)callback);
 }
 
 void q_textbrowser_set_visible(void* self, bool visible) {
@@ -2713,8 +2713,8 @@ int32_t q_textbrowser_super_height_for_width(const void* self, int param1) {
     return QTextBrowser_SuperHeightForWidth((QTextBrowser*)self, param1);
 }
 
-void q_textbrowser_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QTextBrowser_OnHeightForWidth((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QTextBrowser_OnHeightForWidth((QTextBrowser*)self, (intptr_t)callback);
 }
 
 bool q_textbrowser_has_height_for_width(const void* self) {
@@ -2725,8 +2725,8 @@ bool q_textbrowser_super_has_height_for_width(const void* self) {
     return QTextBrowser_SuperHasHeightForWidth((QTextBrowser*)self);
 }
 
-void q_textbrowser_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QTextBrowser_OnHasHeightForWidth((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QTextBrowser_OnHasHeightForWidth((QTextBrowser*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_textbrowser_paint_engine(const void* self) {
@@ -2737,8 +2737,8 @@ QPaintEngine* q_textbrowser_super_paint_engine(const void* self) {
     return QTextBrowser_SuperPaintEngine((QTextBrowser*)self);
 }
 
-void q_textbrowser_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QTextBrowser_OnPaintEngine((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QTextBrowser_OnPaintEngine((QTextBrowser*)self, (intptr_t)callback);
 }
 
 void q_textbrowser_enter_event(void* self, void* event) {
@@ -2845,8 +2845,8 @@ int32_t q_textbrowser_super_metric(const void* self, int32_t param1) {
     return QTextBrowser_SuperMetric((QTextBrowser*)self, param1);
 }
 
-void q_textbrowser_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QTextBrowser_OnMetric((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QTextBrowser_OnMetric((QTextBrowser*)self, (intptr_t)callback);
 }
 
 void q_textbrowser_init_painter(const void* self, void* painter) {
@@ -2857,8 +2857,8 @@ void q_textbrowser_super_init_painter(const void* self, void* painter) {
     QTextBrowser_SuperInitPainter((QTextBrowser*)self, (QPainter*)painter);
 }
 
-void q_textbrowser_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QTextBrowser_OnInitPainter((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QTextBrowser_OnInitPainter((QTextBrowser*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_textbrowser_redirected(const void* self, void* offset) {
@@ -2869,8 +2869,8 @@ QPaintDevice* q_textbrowser_super_redirected(const void* self, void* offset) {
     return QTextBrowser_SuperRedirected((QTextBrowser*)self, (QPoint*)offset);
 }
 
-void q_textbrowser_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QTextBrowser_OnRedirected((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QTextBrowser_OnRedirected((QTextBrowser*)self, (intptr_t)callback);
 }
 
 QPainter* q_textbrowser_shared_painter(const void* self) {
@@ -2881,8 +2881,8 @@ QPainter* q_textbrowser_super_shared_painter(const void* self) {
     return QTextBrowser_SuperSharedPainter((QTextBrowser*)self);
 }
 
-void q_textbrowser_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QTextBrowser_OnSharedPainter((const QTextBrowser*)self, (intptr_t)callback);
+void q_textbrowser_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QTextBrowser_OnSharedPainter((QTextBrowser*)self, (intptr_t)callback);
 }
 
 void q_textbrowser_child_event(void* self, void* event) {

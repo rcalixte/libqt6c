@@ -23,7 +23,7 @@ const QMetaObject* q_sqldriver_meta_object(const void* self) {
     return QSqlDriver_MetaObject((QSqlDriver*)self);
 }
 
-void q_sqldriver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_sqldriver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSqlDriver_OnMetaObject((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -66,7 +66,7 @@ bool q_sqldriver_is_open(const void* self) {
     return QSqlDriver_IsOpen((QSqlDriver*)self);
 }
 
-void q_sqldriver_on_is_open(const void* self, bool (*callback)(const void*)) {
+void q_sqldriver_on_is_open(void* self, bool (*callback)(const void*)) {
     QSqlDriver_OnIsOpen((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -131,7 +131,7 @@ const char** q_sqldriver_tables(const void* self, int32_t tableType) {
     return _ret;
 }
 
-void q_sqldriver_on_tables(const void* self, const char** (*callback)(const void*, int32_t)) {
+void q_sqldriver_on_tables(void* self, const char** (*callback)(const void*, int32_t)) {
     QSqlDriver_OnTables((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -156,7 +156,7 @@ QSqlIndex* q_sqldriver_primary_index(const void* self, const char* tableName) {
     return QSqlDriver_PrimaryIndex((QSqlDriver*)self, qstring(tableName));
 }
 
-void q_sqldriver_on_primary_index(const void* self, QSqlIndex* (*callback)(const void*, const char*)) {
+void q_sqldriver_on_primary_index(void* self, QSqlIndex* (*callback)(const void*, const char*)) {
     QSqlDriver_OnPrimaryIndex((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -168,7 +168,7 @@ QSqlRecord* q_sqldriver_record(const void* self, const char* tableName) {
     return QSqlDriver_Record((QSqlDriver*)self, qstring(tableName));
 }
 
-void q_sqldriver_on_record(const void* self, QSqlRecord* (*callback)(const void*, const char*)) {
+void q_sqldriver_on_record(void* self, QSqlRecord* (*callback)(const void*, const char*)) {
     QSqlDriver_OnRecord((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -183,7 +183,7 @@ const char* q_sqldriver_format_value(const void* self, const void* field, bool t
     return _ret;
 }
 
-void q_sqldriver_on_format_value(const void* self, const char* (*callback)(const void*, const void*, bool)) {
+void q_sqldriver_on_format_value(void* self, const char* (*callback)(const void*, const void*, bool)) {
     QSqlDriver_OnFormatValue((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -201,7 +201,7 @@ const char* q_sqldriver_escape_identifier(const void* self, const char* identifi
     return _ret;
 }
 
-void q_sqldriver_on_escape_identifier(const void* self, const char* (*callback)(const void*, const char*, int32_t)) {
+void q_sqldriver_on_escape_identifier(void* self, const char* (*callback)(const void*, const char*, int32_t)) {
     QSqlDriver_OnEscapeIdentifier((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -219,7 +219,7 @@ const char* q_sqldriver_sql_statement(const void* self, int32_t type, const char
     return _ret;
 }
 
-void q_sqldriver_on_sql_statement(const void* self, const char* (*callback)(const void*, int32_t, const char*, const void*, bool)) {
+void q_sqldriver_on_sql_statement(void* self, const char* (*callback)(const void*, int32_t, const char*, const void*, bool)) {
     QSqlDriver_OnSqlStatement((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -238,7 +238,7 @@ QVariant* q_sqldriver_handle(const void* self) {
     return QSqlDriver_Handle((QSqlDriver*)self);
 }
 
-void q_sqldriver_on_handle(const void* self, QVariant* (*callback)(const void*)) {
+void q_sqldriver_on_handle(void* self, QVariant* (*callback)(const void*)) {
     QSqlDriver_OnHandle((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -250,7 +250,7 @@ bool q_sqldriver_has_feature(const void* self, int32_t f) {
     return QSqlDriver_HasFeature((QSqlDriver*)self, f);
 }
 
-void q_sqldriver_on_has_feature(const void* self, bool (*callback)(const void*, int32_t)) {
+void q_sqldriver_on_has_feature(void* self, bool (*callback)(const void*, int32_t)) {
     QSqlDriver_OnHasFeature((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -266,7 +266,7 @@ QSqlResult* q_sqldriver_create_result(const void* self) {
     return QSqlDriver_CreateResult((QSqlDriver*)self);
 }
 
-void q_sqldriver_on_create_result(const void* self, QSqlResult* (*callback)(const void*)) {
+void q_sqldriver_on_create_result(void* self, QSqlResult* (*callback)(const void*)) {
     QSqlDriver_OnCreateResult((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -319,7 +319,7 @@ const char** q_sqldriver_subscribed_to_notifications(const void* self) {
     return _ret;
 }
 
-void q_sqldriver_on_subscribed_to_notifications(const void* self, const char** (*callback)(const void*)) {
+void q_sqldriver_on_subscribed_to_notifications(void* self, const char** (*callback)(const void*)) {
     QSqlDriver_OnSubscribedToNotifications((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -344,7 +344,7 @@ bool q_sqldriver_is_identifier_escaped(const void* self, const char* identifier,
     return QSqlDriver_IsIdentifierEscaped((QSqlDriver*)self, qstring(identifier), type);
 }
 
-void q_sqldriver_on_is_identifier_escaped(const void* self, bool (*callback)(const void*, const char*, int32_t)) {
+void q_sqldriver_on_is_identifier_escaped(void* self, bool (*callback)(const void*, const char*, int32_t)) {
     QSqlDriver_OnIsIdentifierEscaped((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -359,7 +359,7 @@ const char* q_sqldriver_strip_delimiters(const void* self, const char* identifie
     return _ret;
 }
 
-void q_sqldriver_on_strip_delimiters(const void* self, const char* (*callback)(const void*, const char*, int32_t)) {
+void q_sqldriver_on_strip_delimiters(void* self, const char* (*callback)(const void*, const char*, int32_t)) {
     QSqlDriver_OnStripDelimiters((QSqlDriver*)self, (intptr_t)callback);
 }
 
@@ -386,7 +386,7 @@ int32_t q_sqldriver_maximum_identifier_length(const void* self, int32_t type) {
     return QSqlDriver_MaximumIdentifierLength((QSqlDriver*)self, type);
 }
 
-void q_sqldriver_on_maximum_identifier_length(const void* self, int32_t (*callback)(const void*, int32_t)) {
+void q_sqldriver_on_maximum_identifier_length(void* self, int32_t (*callback)(const void*, int32_t)) {
     QSqlDriver_OnMaximumIdentifierLength((QSqlDriver*)self, (intptr_t)callback);
 }
 

@@ -16,7 +16,7 @@ const QMetaObject* k_toggletoolbaraction_meta_object(const void* self) {
     return KToggleToolBarAction_MetaObject((KToggleToolBarAction*)self);
 }
 
-void k_toggletoolbaraction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_toggletoolbaraction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KToggleToolBarAction_OnMetaObject((KToggleToolBarAction*)self, (intptr_t)callback);
 }
 

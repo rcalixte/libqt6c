@@ -32,7 +32,7 @@ char* k_archivefile_data(const void* self) {
     return _ret;
 }
 
-void k_archivefile_on_data(const void* self, libqt_string (*callback)(const void*)) {
+void k_archivefile_on_data(void* self, libqt_string (*callback)(const void*)) {
     KArchiveFile_OnData((KArchiveFile*)self, (intptr_t)callback);
 }
 
@@ -47,7 +47,7 @@ QIODevice* k_archivefile_create_device(const void* self) {
     return KArchiveFile_CreateDevice((KArchiveFile*)self);
 }
 
-void k_archivefile_on_create_device(const void* self, QIODevice* (*callback)(const void*)) {
+void k_archivefile_on_create_device(void* self, QIODevice* (*callback)(const void*)) {
     KArchiveFile_OnCreateDevice((KArchiveFile*)self, (intptr_t)callback);
 }
 
@@ -59,7 +59,7 @@ bool k_archivefile_is_file(const void* self) {
     return KArchiveFile_IsFile((KArchiveFile*)self);
 }
 
-void k_archivefile_on_is_file(const void* self, bool (*callback)(const void*)) {
+void k_archivefile_on_is_file(void* self, bool (*callback)(const void*)) {
     KArchiveFile_OnIsFile((KArchiveFile*)self, (intptr_t)callback);
 }
 
@@ -127,8 +127,8 @@ bool k_archivefile_super_is_directory(const void* self) {
     return KArchiveFile_SuperIsDirectory((KArchiveFile*)self);
 }
 
-void k_archivefile_on_is_directory(const void* self, bool (*callback)(const void*)) {
-    KArchiveFile_OnIsDirectory((const KArchiveFile*)self, (intptr_t)callback);
+void k_archivefile_on_is_directory(void* self, bool (*callback)(const void*)) {
+    KArchiveFile_OnIsDirectory((KArchiveFile*)self, (intptr_t)callback);
 }
 
 KArchive* k_archivefile_archive(const void* self) {

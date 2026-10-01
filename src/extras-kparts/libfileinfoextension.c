@@ -14,7 +14,7 @@ const QMetaObject* k_parts__fileinfoextension_meta_object(const void* self) {
     return KParts__FileInfoExtension_MetaObject((KParts__FileInfoExtension*)self);
 }
 
-void k_parts__fileinfoextension_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_parts__fileinfoextension_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KParts__FileInfoExtension_OnMetaObject((KParts__FileInfoExtension*)self, (intptr_t)callback);
 }
 
@@ -61,7 +61,7 @@ bool k_parts__fileinfoextension_has_selection(const void* self) {
     return KParts__FileInfoExtension_HasSelection((KParts__FileInfoExtension*)self);
 }
 
-void k_parts__fileinfoextension_on_has_selection(const void* self, bool (*callback)(const void*)) {
+void k_parts__fileinfoextension_on_has_selection(void* self, bool (*callback)(const void*)) {
     KParts__FileInfoExtension_OnHasSelection((KParts__FileInfoExtension*)self, (intptr_t)callback);
 }
 
@@ -73,7 +73,7 @@ int32_t k_parts__fileinfoextension_supported_query_modes(const void* self) {
     return KParts__FileInfoExtension_SupportedQueryModes((KParts__FileInfoExtension*)self);
 }
 
-void k_parts__fileinfoextension_on_supported_query_modes(const void* self, int32_t (*callback)(const void*)) {
+void k_parts__fileinfoextension_on_supported_query_modes(void* self, int32_t (*callback)(const void*)) {
     KParts__FileInfoExtension_OnSupportedQueryModes((KParts__FileInfoExtension*)self, (intptr_t)callback);
 }
 
@@ -85,7 +85,7 @@ KFileItemList* k_parts__fileinfoextension_query_for(const void* self, int32_t mo
     return KParts__FileInfoExtension_QueryFor((KParts__FileInfoExtension*)self, mode);
 }
 
-void k_parts__fileinfoextension_on_query_for(const void* self, KFileItemList* (*callback)(const void*, int32_t)) {
+void k_parts__fileinfoextension_on_query_for(void* self, KFileItemList* (*callback)(const void*, int32_t)) {
     KParts__FileInfoExtension_OnQueryFor((KParts__FileInfoExtension*)self, (intptr_t)callback);
 }
 

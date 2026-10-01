@@ -24,7 +24,7 @@ const QMetaObject* q_restaccessmanager_meta_object(const void* self) {
     return QRestAccessManager_MetaObject((QRestAccessManager*)self);
 }
 
-void q_restaccessmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_restaccessmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QRestAccessManager_OnMetaObject((QRestAccessManager*)self, (intptr_t)callback);
 }
 

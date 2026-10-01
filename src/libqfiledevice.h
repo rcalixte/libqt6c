@@ -191,9 +191,9 @@ unsigned char* q_filedevice_map3(void* self, int64_t offset, int64_t size, int32
 ///
 /// Upcasts to a QIODeviceBase object
 ///
-/// @param self QFileDevice*
+/// @param self const QFileDevice*
 ///
-QIODeviceBase* q_filedevice_as_q_i_o_device_base(void* self);
+QIODeviceBase* q_filedevice_as_q_i_o_device_base(const void* self);
 
 /// Inherited from QIODevice
 ///

@@ -17,7 +17,7 @@ const QMetaObject* k_lineediturldropeventfilter_meta_object(const void* self) {
     return KLineEditUrlDropEventFilter_MetaObject((KLineEditUrlDropEventFilter*)self);
 }
 
-void k_lineediturldropeventfilter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_lineediturldropeventfilter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KLineEditUrlDropEventFilter_OnMetaObject((KLineEditUrlDropEventFilter*)self, (intptr_t)callback);
 }
 

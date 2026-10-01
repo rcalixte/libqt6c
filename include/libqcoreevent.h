@@ -105,10 +105,10 @@ QEvent* q_event_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QEvent*
+/// @param self QEvent*
 /// @param callback QEvent* func(const QEvent* self)
 ///
-void q_event_on_clone(const void* self, QEvent* (*callback)(const void*));
+void q_event_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
 ///
@@ -158,10 +158,10 @@ QTimerEvent* q_timerevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTimerEvent*
+/// @param self QTimerEvent*
 /// @param callback QTimerEvent* func(const QTimerEvent* self)
 ///
-void q_timerevent_on_clone(const void* self, QTimerEvent* (*callback)(const void*));
+void q_timerevent_on_clone(void* self, QTimerEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimerevent.html#clone)
 ///
@@ -325,10 +325,10 @@ QChildEvent* q_childevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QChildEvent*
+/// @param self QChildEvent*
 /// @param callback QChildEvent* func(const QChildEvent* self)
 ///
-void q_childevent_on_clone(const void* self, QChildEvent* (*callback)(const void*));
+void q_childevent_on_clone(void* self, QChildEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchildevent.html#clone)
 ///
@@ -501,10 +501,10 @@ QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_clone(const void* self
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDynamicPropertyChangeEvent*
+/// @param self QDynamicPropertyChangeEvent*
 /// @param callback QDynamicPropertyChangeEvent* func(const QDynamicPropertyChangeEvent* self)
 ///
-void q_dynamicpropertychangeevent_on_clone(const void* self, QDynamicPropertyChangeEvent* (*callback)(const void*));
+void q_dynamicpropertychangeevent_on_clone(void* self, QDynamicPropertyChangeEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html#clone)
 ///

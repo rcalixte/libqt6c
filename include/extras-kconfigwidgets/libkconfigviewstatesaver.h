@@ -32,10 +32,10 @@ const QMetaObject* k_configviewstatesaver_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfigViewStateSaver*
+/// @param self KConfigViewStateSaver*
 /// @param callback const QMetaObject* func(const KConfigViewStateSaver* self)
 ///
-void k_configviewstatesaver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_configviewstatesaver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -706,12 +706,12 @@ QModelIndex* k_configviewstatesaver_index_from_config_string(const void* self, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigViewStateSaver*
+/// @param self KConfigViewStateSaver*
 /// @param callback QModelIndex* func(KConfigViewStateSaver* self, QAbstractItemModel* model, const char* key)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_configviewstatesaver_on_index_from_config_string(const void* self, QModelIndex* (*callback)(const void*, const void*, const char*));
+void k_configviewstatesaver_on_index_from_config_string(void* self, QModelIndex* (*callback)(const void*, const void*, const char*));
 
 /// Inherited from KViewStateSerializer
 ///
@@ -734,10 +734,10 @@ const char* k_configviewstatesaver_index_to_config_string(const void* self, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigViewStateSaver*
+/// @param self KConfigViewStateSaver*
 /// @param callback const char* func(KConfigViewStateSaver* self, QModelIndex* index)
 ///
-void k_configviewstatesaver_on_index_to_config_string(const void* self, const char* (*callback)(const void*, const void*));
+void k_configviewstatesaver_on_index_to_config_string(void* self, const char* (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -998,10 +998,10 @@ QObject* k_configviewstatesaver_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigViewStateSaver*
+/// @param self KConfigViewStateSaver*
 /// @param callback QObject* func(KConfigViewStateSaver* self)
 ///
-void k_configviewstatesaver_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_configviewstatesaver_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1029,10 +1029,10 @@ int32_t k_configviewstatesaver_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigViewStateSaver*
+/// @param self KConfigViewStateSaver*
 /// @param callback int32_t func(KConfigViewStateSaver* self)
 ///
-void k_configviewstatesaver_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_configviewstatesaver_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1062,10 +1062,10 @@ int32_t k_configviewstatesaver_super_receivers(const void* self, const char* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigViewStateSaver*
+/// @param self KConfigViewStateSaver*
 /// @param callback int32_t func(KConfigViewStateSaver* self, const char* signal)
 ///
-void k_configviewstatesaver_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_configviewstatesaver_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1095,10 +1095,10 @@ bool k_configviewstatesaver_super_is_signal_connected(const void* self, const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigViewStateSaver*
+/// @param self KConfigViewStateSaver*
 /// @param callback bool func(KConfigViewStateSaver* self, QMetaMethod* signal)
 ///
-void k_configviewstatesaver_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_configviewstatesaver_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -20,7 +20,7 @@ const QMetaObject* k_twofingerswipe_meta_object(const void* self) {
     return KTwoFingerSwipe_MetaObject((KTwoFingerSwipe*)self);
 }
 
-void k_twofingerswipe_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_twofingerswipe_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KTwoFingerSwipe_OnMetaObject((KTwoFingerSwipe*)self, (intptr_t)callback);
 }
 

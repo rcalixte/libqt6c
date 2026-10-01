@@ -318,7 +318,7 @@ const QMetaObject* q_dnslookup_meta_object(const void* self) {
     return QDnsLookup_MetaObject((QDnsLookup*)self);
 }
 
-void q_dnslookup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_dnslookup_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDnsLookup_OnMetaObject((QDnsLookup*)self, (intptr_t)callback);
 }
 

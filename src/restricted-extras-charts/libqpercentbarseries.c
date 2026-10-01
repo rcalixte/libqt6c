@@ -19,7 +19,7 @@ const QMetaObject* q_percentbarseries_meta_object(const void* self) {
     return QPercentBarSeries_MetaObject((QPercentBarSeries*)self);
 }
 
-void q_percentbarseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_percentbarseries_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPercentBarSeries_OnMetaObject((QPercentBarSeries*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ int32_t q_percentbarseries_type(const void* self) {
     return QPercentBarSeries_Type((QPercentBarSeries*)self);
 }
 
-void q_percentbarseries_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_percentbarseries_on_type(void* self, int32_t (*callback)(const void*)) {
     QPercentBarSeries_OnType((QPercentBarSeries*)self, (intptr_t)callback);
 }
 

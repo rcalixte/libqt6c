@@ -90,10 +90,10 @@ bool k_archivedirectory_is_directory(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KArchiveDirectory*
+/// @param self KArchiveDirectory*
 /// @param callback bool func(const KArchiveDirectory* self)
 ///
-void k_archivedirectory_on_is_directory(const void* self, bool (*callback)(const void*));
+void k_archivedirectory_on_is_directory(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchivedirectory.html#isDirectory)
 ///
@@ -227,10 +227,10 @@ bool k_archivedirectory_super_is_file(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KArchiveDirectory*
+/// @param self KArchiveDirectory*
 /// @param callback bool func(KArchiveDirectory* self)
 ///
-void k_archivedirectory_on_is_file(const void* self, bool (*callback)(const void*));
+void k_archivedirectory_on_is_file(void* self, bool (*callback)(const void*));
 
 /// Inherited from KArchiveEntry
 ///
@@ -258,10 +258,10 @@ KArchive* k_archivedirectory_super_archive(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KArchiveDirectory*
+/// @param self KArchiveDirectory*
 /// @param callback KArchive* func(KArchiveDirectory* self)
 ///
-void k_archivedirectory_on_archive(const void* self, KArchive* (*callback)(const void*));
+void k_archivedirectory_on_archive(void* self, KArchive* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchivedirectory.html#dtor.KArchiveDirectory)
 ///

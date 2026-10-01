@@ -32,10 +32,10 @@ const QMetaObject* k_texttranslator__translatortextedit_meta_object(const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback const QMetaObject* func(const TextTranslator__TranslatorTextEdit* self)
 ///
-void k_texttranslator__translatortextedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorTextEdit.html)
 ///
@@ -1209,9 +1209,9 @@ void k_texttranslator__translatortextedit_set_frame_rect(void* self, const void*
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self TextTranslator__TranslatorTextEdit*
+/// @param self const TextTranslator__TranslatorTextEdit*
 ///
-QPaintDevice* k_texttranslator__translatortextedit_as_q_paint_device(void* self);
+QPaintDevice* k_texttranslator__translatortextedit_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1219,7 +1219,7 @@ QPaintDevice* k_texttranslator__translatortextedit_as_q_paint_device(void* self)
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-TextTranslator__TranslatorTextEdit* k_texttranslator__translatortextedit_from_q_paint_device(void* _qpaintdevice);
+TextTranslator__TranslatorTextEdit* k_texttranslator__translatortextedit_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -4235,12 +4235,12 @@ QVariant* k_texttranslator__translatortextedit_super_input_method_query(const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QVariant* func(TextTranslator__TranslatorTextEdit* self, enum Qt__InputMethodQuery property)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatortextedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_texttranslator__translatortextedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -4928,10 +4928,10 @@ QMimeData* k_texttranslator__translatortextedit_super_create_mime_data_from_sele
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QMimeData* func(TextTranslator__TranslatorTextEdit* self)
 ///
-void k_texttranslator__translatortextedit_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)(const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -4961,10 +4961,10 @@ bool k_texttranslator__translatortextedit_super_can_insert_from_mime_data(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback bool func(TextTranslator__TranslatorTextEdit* self, QMimeData* source)
 ///
-void k_texttranslator__translatortextedit_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*));
+void k_texttranslator__translatortextedit_on_can_insert_from_mime_data(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -5126,12 +5126,12 @@ QSize* k_texttranslator__translatortextedit_super_minimum_size_hint(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QSize* func(TextTranslator__TranslatorTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatortextedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5159,12 +5159,12 @@ QSize* k_texttranslator__translatortextedit_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QSize* func(TextTranslator__TranslatorTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatortextedit_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5293,12 +5293,12 @@ QSize* k_texttranslator__translatortextedit_super_viewport_size_hint(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QSize* func(TextTranslator__TranslatorTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatortextedit_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_viewport_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -5328,10 +5328,10 @@ void k_texttranslator__translatortextedit_super_init_style_option(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback void func(TextTranslator__TranslatorTextEdit* self, QStyleOptionFrame* option)
 ///
-void k_texttranslator__translatortextedit_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void k_texttranslator__translatortextedit_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5359,10 +5359,10 @@ int32_t k_texttranslator__translatortextedit_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback int32_t func(TextTranslator__TranslatorTextEdit* self)
 ///
-void k_texttranslator__translatortextedit_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5425,10 +5425,10 @@ int32_t k_texttranslator__translatortextedit_super_height_for_width(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback int32_t func(TextTranslator__TranslatorTextEdit* self, int param1)
 ///
-void k_texttranslator__translatortextedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_texttranslator__translatortextedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5456,10 +5456,10 @@ bool k_texttranslator__translatortextedit_super_has_height_for_width(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback bool func(TextTranslator__TranslatorTextEdit* self)
 ///
-void k_texttranslator__translatortextedit_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5487,10 +5487,10 @@ QPaintEngine* k_texttranslator__translatortextedit_super_paint_engine(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QPaintEngine* func(TextTranslator__TranslatorTextEdit* self)
 ///
-void k_texttranslator__translatortextedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5788,10 +5788,10 @@ int32_t k_texttranslator__translatortextedit_super_metric(const void* self, int3
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback int32_t func(TextTranslator__TranslatorTextEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_texttranslator__translatortextedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_texttranslator__translatortextedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5821,10 +5821,10 @@ void k_texttranslator__translatortextedit_super_init_painter(const void* self, v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback void func(TextTranslator__TranslatorTextEdit* self, QPainter* painter)
 ///
-void k_texttranslator__translatortextedit_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_texttranslator__translatortextedit_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5854,10 +5854,10 @@ QPaintDevice* k_texttranslator__translatortextedit_super_redirected(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QPaintDevice* func(TextTranslator__TranslatorTextEdit* self, QPoint* offset)
 ///
-void k_texttranslator__translatortextedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_texttranslator__translatortextedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5885,10 +5885,10 @@ QPainter* k_texttranslator__translatortextedit_super_shared_painter(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QPainter* func(TextTranslator__TranslatorTextEdit* self)
 ///
-void k_texttranslator__translatortextedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6048,12 +6048,12 @@ QTextBlock* k_texttranslator__translatortextedit_super_first_visible_block(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QTextBlock* func(TextTranslator__TranslatorTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatortextedit_on_first_visible_block(const void* self, QTextBlock* (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_first_visible_block(void* self, QTextBlock* (*callback)(const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6081,12 +6081,12 @@ QPointF* k_texttranslator__translatortextedit_super_content_offset(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QPointF* func(TextTranslator__TranslatorTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatortextedit_on_content_offset(const void* self, QPointF* (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_content_offset(void* self, QPointF* (*callback)(const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6116,12 +6116,12 @@ QRectF* k_texttranslator__translatortextedit_super_block_bounding_rect(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QRectF* func(TextTranslator__TranslatorTextEdit* self, QTextBlock* block)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatortextedit_on_block_bounding_rect(const void* self, QRectF* (*callback)(const void*, const void*));
+void k_texttranslator__translatortextedit_on_block_bounding_rect(void* self, QRectF* (*callback)(const void*, const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6151,12 +6151,12 @@ QRectF* k_texttranslator__translatortextedit_super_block_bounding_geometry(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QRectF* func(TextTranslator__TranslatorTextEdit* self, QTextBlock* block)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatortextedit_on_block_bounding_geometry(const void* self, QRectF* (*callback)(const void*, const void*));
+void k_texttranslator__translatortextedit_on_block_bounding_geometry(void* self, QRectF* (*callback)(const void*, const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6184,12 +6184,12 @@ QAbstractTextDocumentLayout__PaintContext* k_texttranslator__translatortextedit_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QAbstractTextDocumentLayout__PaintContext* func(TextTranslator__TranslatorTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatortextedit_on_get_paint_context(const void* self, QAbstractTextDocumentLayout__PaintContext* (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_get_paint_context(void* self, QAbstractTextDocumentLayout__PaintContext* (*callback)(const void*));
 
 /// Inherited from QPlainTextEdit
 ///
@@ -6289,12 +6289,12 @@ QMargins* k_texttranslator__translatortextedit_super_viewport_margins(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QMargins* func(TextTranslator__TranslatorTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatortextedit_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_viewport_margins(void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -6510,10 +6510,10 @@ QObject* k_texttranslator__translatortextedit_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QObject* func(TextTranslator__TranslatorTextEdit* self)
 ///
-void k_texttranslator__translatortextedit_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6541,10 +6541,10 @@ int32_t k_texttranslator__translatortextedit_super_sender_signal_index(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback int32_t func(TextTranslator__TranslatorTextEdit* self)
 ///
-void k_texttranslator__translatortextedit_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_texttranslator__translatortextedit_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6574,10 +6574,10 @@ int32_t k_texttranslator__translatortextedit_super_receivers(const void* self, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback int32_t func(TextTranslator__TranslatorTextEdit* self, const char* signal)
 ///
-void k_texttranslator__translatortextedit_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_texttranslator__translatortextedit_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6607,10 +6607,10 @@ bool k_texttranslator__translatortextedit_super_is_signal_connected(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback bool func(TextTranslator__TranslatorTextEdit* self, QMetaMethod* signal)
 ///
-void k_texttranslator__translatortextedit_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_texttranslator__translatortextedit_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -6642,10 +6642,10 @@ double k_texttranslator__translatortextedit_super_get_decoded_metric_f(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorTextEdit*
+/// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback double func(TextTranslator__TranslatorTextEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_texttranslator__translatortextedit_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_texttranslator__translatortextedit_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -6707,10 +6707,10 @@ const QMetaObject* k_texttranslator__translatorwidget_meta_object(const void* se
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback const QMetaObject* func(const TextTranslator__TranslatorWidget* self)
 ///
-void k_texttranslator__translatorwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_texttranslator__translatorwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorWidget.html)
 ///
@@ -6869,9 +6869,9 @@ const char* k_texttranslator__translatorwidget_tr3(const char* s, const char* c,
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self TextTranslator__TranslatorWidget*
+/// @param self const TextTranslator__TranslatorWidget*
 ///
-QPaintDevice* k_texttranslator__translatorwidget_as_q_paint_device(void* self);
+QPaintDevice* k_texttranslator__translatorwidget_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6879,7 +6879,7 @@ QPaintDevice* k_texttranslator__translatorwidget_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-TextTranslator__TranslatorWidget* k_texttranslator__translatorwidget_from_q_paint_device(void* _qpaintdevice);
+TextTranslator__TranslatorWidget* k_texttranslator__translatorwidget_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -9864,10 +9864,10 @@ int32_t k_texttranslator__translatorwidget_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback int32_t func(TextTranslator__TranslatorWidget* self)
 ///
-void k_texttranslator__translatorwidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_texttranslator__translatorwidget_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -9928,12 +9928,12 @@ QSize* k_texttranslator__translatorwidget_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback QSize* func(TextTranslator__TranslatorWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatorwidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_texttranslator__translatorwidget_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -9961,12 +9961,12 @@ QSize* k_texttranslator__translatorwidget_super_minimum_size_hint(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback QSize* func(TextTranslator__TranslatorWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatorwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_texttranslator__translatorwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -9996,10 +9996,10 @@ int32_t k_texttranslator__translatorwidget_super_height_for_width(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback int32_t func(TextTranslator__TranslatorWidget* self, int param1)
 ///
-void k_texttranslator__translatorwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_texttranslator__translatorwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -10027,10 +10027,10 @@ bool k_texttranslator__translatorwidget_super_has_height_for_width(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback bool func(TextTranslator__TranslatorWidget* self)
 ///
-void k_texttranslator__translatorwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_texttranslator__translatorwidget_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10058,10 +10058,10 @@ QPaintEngine* k_texttranslator__translatorwidget_super_paint_engine(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback QPaintEngine* func(TextTranslator__TranslatorWidget* self)
 ///
-void k_texttranslator__translatorwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_texttranslator__translatorwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10953,10 +10953,10 @@ int32_t k_texttranslator__translatorwidget_super_metric(const void* self, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback int32_t func(TextTranslator__TranslatorWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_texttranslator__translatorwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_texttranslator__translatorwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -10986,10 +10986,10 @@ void k_texttranslator__translatorwidget_super_init_painter(const void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback void func(TextTranslator__TranslatorWidget* self, QPainter* painter)
 ///
-void k_texttranslator__translatorwidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_texttranslator__translatorwidget_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -11019,10 +11019,10 @@ QPaintDevice* k_texttranslator__translatorwidget_super_redirected(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback QPaintDevice* func(TextTranslator__TranslatorWidget* self, QPoint* offset)
 ///
-void k_texttranslator__translatorwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_texttranslator__translatorwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -11050,10 +11050,10 @@ QPainter* k_texttranslator__translatorwidget_super_shared_painter(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback QPainter* func(TextTranslator__TranslatorWidget* self)
 ///
-void k_texttranslator__translatorwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_texttranslator__translatorwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -11116,12 +11116,12 @@ QVariant* k_texttranslator__translatorwidget_super_input_method_query(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback QVariant* func(TextTranslator__TranslatorWidget* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatorwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_texttranslator__translatorwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -11537,10 +11537,10 @@ QObject* k_texttranslator__translatorwidget_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback QObject* func(TextTranslator__TranslatorWidget* self)
 ///
-void k_texttranslator__translatorwidget_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_texttranslator__translatorwidget_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -11568,10 +11568,10 @@ int32_t k_texttranslator__translatorwidget_super_sender_signal_index(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback int32_t func(TextTranslator__TranslatorWidget* self)
 ///
-void k_texttranslator__translatorwidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_texttranslator__translatorwidget_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -11601,10 +11601,10 @@ int32_t k_texttranslator__translatorwidget_super_receivers(const void* self, con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback int32_t func(TextTranslator__TranslatorWidget* self, const char* signal)
 ///
-void k_texttranslator__translatorwidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_texttranslator__translatorwidget_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -11634,10 +11634,10 @@ bool k_texttranslator__translatorwidget_super_is_signal_connected(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback bool func(TextTranslator__TranslatorWidget* self, QMetaMethod* signal)
 ///
-void k_texttranslator__translatorwidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_texttranslator__translatorwidget_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -11669,10 +11669,10 @@ double k_texttranslator__translatorwidget_super_get_decoded_metric_f(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorWidget*
+/// @param self TextTranslator__TranslatorWidget*
 /// @param callback double func(TextTranslator__TranslatorWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_texttranslator__translatorwidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_texttranslator__translatorwidget_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

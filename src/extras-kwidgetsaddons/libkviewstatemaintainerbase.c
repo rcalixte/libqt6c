@@ -19,7 +19,7 @@ const QMetaObject* k_viewstatemaintainerbase_meta_object(const void* self) {
     return KViewStateMaintainerBase_MetaObject((KViewStateMaintainerBase*)self);
 }
 
-void k_viewstatemaintainerbase_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_viewstatemaintainerbase_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KViewStateMaintainerBase_OnMetaObject((KViewStateMaintainerBase*)self, (intptr_t)callback);
 }
 

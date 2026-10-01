@@ -19,7 +19,7 @@ const QMetaObject* k_io__openfilemanagerwindowjob_meta_object(const void* self) 
     return KIO__OpenFileManagerWindowJob_MetaObject((KIO__OpenFileManagerWindowJob*)self);
 }
 
-void k_io__openfilemanagerwindowjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__openfilemanagerwindowjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__OpenFileManagerWindowJob_OnMetaObject((KIO__OpenFileManagerWindowJob*)self, (intptr_t)callback);
 }
 
@@ -490,8 +490,8 @@ const char* k_io__openfilemanagerwindowjob_super_error_string(const void* self) 
     return _ret;
 }
 
-void k_io__openfilemanagerwindowjob_on_error_string(const void* self, const char* (*callback)(const void*)) {
-    KIO__OpenFileManagerWindowJob_OnErrorString((const KIO__OpenFileManagerWindowJob*)self, (intptr_t)callback);
+void k_io__openfilemanagerwindowjob_on_error_string(void* self, const char* (*callback)(const void*)) {
+    KIO__OpenFileManagerWindowJob_OnErrorString((KIO__OpenFileManagerWindowJob*)self, (intptr_t)callback);
 }
 
 bool k_io__openfilemanagerwindowjob_event(void* self, void* event) {

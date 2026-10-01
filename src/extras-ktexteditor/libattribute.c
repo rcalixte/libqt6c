@@ -16,7 +16,7 @@ KTextEditor__Attribute* k_texteditor__attribute_new3(const void* a) {
     return KTextEditor__Attribute_New3((KTextEditor__Attribute*)a);
 }
 
-QSharedData* k_texteditor__attribute_as_q_shared_data(void* self) {
+QSharedData* k_texteditor__attribute_as_q_shared_data(const void* self) {
     return KTextEditor__Attribute_AsQSharedData((KTextEditor__Attribute*)self);
 }
 

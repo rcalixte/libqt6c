@@ -247,10 +247,10 @@ bool q_abstractformbuilder_check_property(const void* self, void* obj, const cha
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractFormBuilder*
+/// @param self QAbstractFormBuilder*
 /// @param callback bool func(const QAbstractFormBuilder* self, QObject* obj, const char* prop)
 ///
-void q_abstractformbuilder_on_check_property(const void* self, bool (*callback)(const void*, void*, const char*));
+void q_abstractformbuilder_on_check_property(void* self, bool (*callback)(const void*, void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#checkProperty)
 ///

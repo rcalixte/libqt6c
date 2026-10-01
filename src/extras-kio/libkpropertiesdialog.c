@@ -71,7 +71,7 @@ const QMetaObject* k_propertiesdialog_meta_object(const void* self) {
     return KPropertiesDialog_MetaObject((KPropertiesDialog*)self);
 }
 
-void k_propertiesdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_propertiesdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPropertiesDialog_OnMetaObject((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
@@ -391,11 +391,11 @@ void k_propertiesdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_propertiesdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_propertiesdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KPropertiesDialog* k_propertiesdialog_from_q_paint_device(void* _qpaintdevice) {
+KPropertiesDialog* k_propertiesdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KPropertiesDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1798,8 +1798,8 @@ QSize* k_propertiesdialog_super_size_hint(const void* self) {
     return KPropertiesDialog_SuperSizeHint((KPropertiesDialog*)self);
 }
 
-void k_propertiesdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPropertiesDialog_OnSizeHint((const KPropertiesDialog*)self, (intptr_t)callback);
+void k_propertiesdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPropertiesDialog_OnSizeHint((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_propertiesdialog_minimum_size_hint(const void* self) {
@@ -1810,8 +1810,8 @@ QSize* k_propertiesdialog_super_minimum_size_hint(const void* self) {
     return KPropertiesDialog_SuperMinimumSizeHint((KPropertiesDialog*)self);
 }
 
-void k_propertiesdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPropertiesDialog_OnMinimumSizeHint((const KPropertiesDialog*)self, (intptr_t)callback);
+void k_propertiesdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPropertiesDialog_OnMinimumSizeHint((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
 void k_propertiesdialog_open(void* self) {
@@ -1930,8 +1930,8 @@ int32_t k_propertiesdialog_super_dev_type(const void* self) {
     return KPropertiesDialog_SuperDevType((KPropertiesDialog*)self);
 }
 
-void k_propertiesdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KPropertiesDialog_OnDevType((const KPropertiesDialog*)self, (intptr_t)callback);
+void k_propertiesdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KPropertiesDialog_OnDevType((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_propertiesdialog_height_for_width(const void* self, int param1) {
@@ -1942,8 +1942,8 @@ int32_t k_propertiesdialog_super_height_for_width(const void* self, int param1) 
     return KPropertiesDialog_SuperHeightForWidth((KPropertiesDialog*)self, param1);
 }
 
-void k_propertiesdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KPropertiesDialog_OnHeightForWidth((const KPropertiesDialog*)self, (intptr_t)callback);
+void k_propertiesdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KPropertiesDialog_OnHeightForWidth((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
 bool k_propertiesdialog_has_height_for_width(const void* self) {
@@ -1954,8 +1954,8 @@ bool k_propertiesdialog_super_has_height_for_width(const void* self) {
     return KPropertiesDialog_SuperHasHeightForWidth((KPropertiesDialog*)self);
 }
 
-void k_propertiesdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KPropertiesDialog_OnHasHeightForWidth((const KPropertiesDialog*)self, (intptr_t)callback);
+void k_propertiesdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KPropertiesDialog_OnHasHeightForWidth((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_propertiesdialog_paint_engine(const void* self) {
@@ -1966,8 +1966,8 @@ QPaintEngine* k_propertiesdialog_super_paint_engine(const void* self) {
     return KPropertiesDialog_SuperPaintEngine((KPropertiesDialog*)self);
 }
 
-void k_propertiesdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KPropertiesDialog_OnPaintEngine((const KPropertiesDialog*)self, (intptr_t)callback);
+void k_propertiesdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KPropertiesDialog_OnPaintEngine((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
 bool k_propertiesdialog_event(void* self, void* event) {
@@ -2242,8 +2242,8 @@ int32_t k_propertiesdialog_super_metric(const void* self, int32_t param1) {
     return KPropertiesDialog_SuperMetric((KPropertiesDialog*)self, param1);
 }
 
-void k_propertiesdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KPropertiesDialog_OnMetric((const KPropertiesDialog*)self, (intptr_t)callback);
+void k_propertiesdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KPropertiesDialog_OnMetric((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
 void k_propertiesdialog_init_painter(const void* self, void* painter) {
@@ -2254,8 +2254,8 @@ void k_propertiesdialog_super_init_painter(const void* self, void* painter) {
     KPropertiesDialog_SuperInitPainter((KPropertiesDialog*)self, (QPainter*)painter);
 }
 
-void k_propertiesdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KPropertiesDialog_OnInitPainter((const KPropertiesDialog*)self, (intptr_t)callback);
+void k_propertiesdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KPropertiesDialog_OnInitPainter((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_propertiesdialog_redirected(const void* self, void* offset) {
@@ -2266,8 +2266,8 @@ QPaintDevice* k_propertiesdialog_super_redirected(const void* self, void* offset
     return KPropertiesDialog_SuperRedirected((KPropertiesDialog*)self, (QPoint*)offset);
 }
 
-void k_propertiesdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KPropertiesDialog_OnRedirected((const KPropertiesDialog*)self, (intptr_t)callback);
+void k_propertiesdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KPropertiesDialog_OnRedirected((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_propertiesdialog_shared_painter(const void* self) {
@@ -2278,8 +2278,8 @@ QPainter* k_propertiesdialog_super_shared_painter(const void* self) {
     return KPropertiesDialog_SuperSharedPainter((KPropertiesDialog*)self);
 }
 
-void k_propertiesdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KPropertiesDialog_OnSharedPainter((const KPropertiesDialog*)self, (intptr_t)callback);
+void k_propertiesdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KPropertiesDialog_OnSharedPainter((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
 void k_propertiesdialog_input_method_event(void* self, void* param1) {
@@ -2302,8 +2302,8 @@ QVariant* k_propertiesdialog_super_input_method_query(const void* self, int32_t 
     return KPropertiesDialog_SuperInputMethodQuery((KPropertiesDialog*)self, param1);
 }
 
-void k_propertiesdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KPropertiesDialog_OnInputMethodQuery((const KPropertiesDialog*)self, (intptr_t)callback);
+void k_propertiesdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KPropertiesDialog_OnInputMethodQuery((KPropertiesDialog*)self, (intptr_t)callback);
 }
 
 bool k_propertiesdialog_focus_next_prev_child(void* self, bool next) {

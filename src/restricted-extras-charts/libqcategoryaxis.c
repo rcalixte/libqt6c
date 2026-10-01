@@ -19,7 +19,7 @@ const QMetaObject* q_categoryaxis_meta_object(const void* self) {
     return QCategoryAxis_MetaObject((QCategoryAxis*)self);
 }
 
-void q_categoryaxis_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_categoryaxis_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCategoryAxis_OnMetaObject((QCategoryAxis*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ int32_t q_categoryaxis_type(const void* self) {
     return QCategoryAxis_Type((QCategoryAxis*)self);
 }
 
-void q_categoryaxis_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_categoryaxis_on_type(void* self, int32_t (*callback)(const void*)) {
     QCategoryAxis_OnType((QCategoryAxis*)self, (intptr_t)callback);
 }
 

@@ -19,7 +19,7 @@ const QMetaObject* q_undogroup_meta_object(const void* self) {
     return QUndoGroup_MetaObject((QUndoGroup*)self);
 }
 
-void q_undogroup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_undogroup_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QUndoGroup_OnMetaObject((QUndoGroup*)self, (intptr_t)callback);
 }
 

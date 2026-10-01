@@ -37,10 +37,10 @@ QInputEvent* q_inputevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QInputEvent*
+/// @param self QInputEvent*
 /// @param callback QInputEvent* func(const QInputEvent* self)
 ///
-void q_inputevent_on_clone(const void* self, QInputEvent* (*callback)(const void*));
+void q_inputevent_on_clone(void* self, QInputEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputevent.html#clone)
 ///
@@ -271,10 +271,10 @@ QPointerEvent* q_pointerevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPointerEvent*
+/// @param self QPointerEvent*
 /// @param callback QPointerEvent* func(const QPointerEvent* self)
 ///
-void q_pointerevent_on_clone(const void* self, QPointerEvent* (*callback)(const void*));
+void q_pointerevent_on_clone(void* self, QPointerEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#clone)
 ///
@@ -367,10 +367,10 @@ bool q_pointerevent_is_begin_event(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPointerEvent*
+/// @param self QPointerEvent*
 /// @param callback bool func(const QPointerEvent* self)
 ///
-void q_pointerevent_on_is_begin_event(const void* self, bool (*callback)(const void*));
+void q_pointerevent_on_is_begin_event(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#isBeginEvent)
 ///
@@ -390,10 +390,10 @@ bool q_pointerevent_is_update_event(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPointerEvent*
+/// @param self QPointerEvent*
 /// @param callback bool func(const QPointerEvent* self)
 ///
-void q_pointerevent_on_is_update_event(const void* self, bool (*callback)(const void*));
+void q_pointerevent_on_is_update_event(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#isUpdateEvent)
 ///
@@ -413,10 +413,10 @@ bool q_pointerevent_is_end_event(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPointerEvent*
+/// @param self QPointerEvent*
 /// @param callback bool func(const QPointerEvent* self)
 ///
-void q_pointerevent_on_is_end_event(const void* self, bool (*callback)(const void*));
+void q_pointerevent_on_is_end_event(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#isEndEvent)
 ///
@@ -1001,10 +1001,10 @@ QEnterEvent* q_enterevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QEnterEvent*
+/// @param self QEnterEvent*
 /// @param callback QEnterEvent* func(const QEnterEvent* self)
 ///
-void q_enterevent_on_clone(const void* self, QEnterEvent* (*callback)(const void*));
+void q_enterevent_on_clone(void* self, QEnterEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qenterevent.html#clone)
 ///
@@ -1398,10 +1398,10 @@ bool q_enterevent_super_is_begin_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QEnterEvent*
+/// @param self QEnterEvent*
 /// @param callback bool func(QEnterEvent* self)
 ///
-void q_enterevent_on_is_begin_event(const void* self, bool (*callback)(const void*));
+void q_enterevent_on_is_begin_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSinglePointEvent
 ///
@@ -1429,10 +1429,10 @@ bool q_enterevent_super_is_update_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QEnterEvent*
+/// @param self QEnterEvent*
 /// @param callback bool func(QEnterEvent* self)
 ///
-void q_enterevent_on_is_update_event(const void* self, bool (*callback)(const void*));
+void q_enterevent_on_is_update_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSinglePointEvent
 ///
@@ -1460,10 +1460,10 @@ bool q_enterevent_super_is_end_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QEnterEvent*
+/// @param self QEnterEvent*
 /// @param callback bool func(QEnterEvent* self)
 ///
-void q_enterevent_on_is_end_event(const void* self, bool (*callback)(const void*));
+void q_enterevent_on_is_end_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QPointerEvent
 ///
@@ -1661,10 +1661,10 @@ QMouseEvent* q_mouseevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QMouseEvent*
+/// @param self QMouseEvent*
 /// @param callback QMouseEvent* func(const QMouseEvent* self)
 ///
-void q_mouseevent_on_clone(const void* self, QMouseEvent* (*callback)(const void*));
+void q_mouseevent_on_clone(void* self, QMouseEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmouseevent.html#clone)
 ///
@@ -2074,10 +2074,10 @@ bool q_mouseevent_super_is_begin_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QMouseEvent*
+/// @param self QMouseEvent*
 /// @param callback bool func(QMouseEvent* self)
 ///
-void q_mouseevent_on_is_begin_event(const void* self, bool (*callback)(const void*));
+void q_mouseevent_on_is_begin_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSinglePointEvent
 ///
@@ -2105,10 +2105,10 @@ bool q_mouseevent_super_is_update_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QMouseEvent*
+/// @param self QMouseEvent*
 /// @param callback bool func(QMouseEvent* self)
 ///
-void q_mouseevent_on_is_update_event(const void* self, bool (*callback)(const void*));
+void q_mouseevent_on_is_update_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSinglePointEvent
 ///
@@ -2136,10 +2136,10 @@ bool q_mouseevent_super_is_end_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QMouseEvent*
+/// @param self QMouseEvent*
 /// @param callback bool func(QMouseEvent* self)
 ///
-void q_mouseevent_on_is_end_event(const void* self, bool (*callback)(const void*));
+void q_mouseevent_on_is_end_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QPointerEvent
 ///
@@ -2294,10 +2294,10 @@ QHoverEvent* q_hoverevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QHoverEvent*
+/// @param self QHoverEvent*
 /// @param callback QHoverEvent* func(const QHoverEvent* self)
 ///
-void q_hoverevent_on_clone(const void* self, QHoverEvent* (*callback)(const void*));
+void q_hoverevent_on_clone(void* self, QHoverEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhoverevent.html#clone)
 ///
@@ -2329,10 +2329,10 @@ bool q_hoverevent_is_update_event(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QHoverEvent*
+/// @param self QHoverEvent*
 /// @param callback bool func(const QHoverEvent* self)
 ///
-void q_hoverevent_on_is_update_event(const void* self, bool (*callback)(const void*));
+void q_hoverevent_on_is_update_event(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhoverevent.html#isUpdateEvent)
 ///
@@ -2684,10 +2684,10 @@ bool q_hoverevent_super_is_begin_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHoverEvent*
+/// @param self QHoverEvent*
 /// @param callback bool func(QHoverEvent* self)
 ///
-void q_hoverevent_on_is_begin_event(const void* self, bool (*callback)(const void*));
+void q_hoverevent_on_is_begin_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSinglePointEvent
 ///
@@ -2715,10 +2715,10 @@ bool q_hoverevent_super_is_end_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHoverEvent*
+/// @param self QHoverEvent*
 /// @param callback bool func(QHoverEvent* self)
 ///
-void q_hoverevent_on_is_end_event(const void* self, bool (*callback)(const void*));
+void q_hoverevent_on_is_end_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QPointerEvent
 ///
@@ -2852,10 +2852,10 @@ QWheelEvent* q_wheelevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWheelEvent*
+/// @param self QWheelEvent*
 /// @param callback QWheelEvent* func(const QWheelEvent* self)
 ///
-void q_wheelevent_on_clone(const void* self, QWheelEvent* (*callback)(const void*));
+void q_wheelevent_on_clone(void* self, QWheelEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwheelevent.html#clone)
 ///
@@ -2913,10 +2913,10 @@ bool q_wheelevent_is_begin_event(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWheelEvent*
+/// @param self QWheelEvent*
 /// @param callback bool func(const QWheelEvent* self)
 ///
-void q_wheelevent_on_is_begin_event(const void* self, bool (*callback)(const void*));
+void q_wheelevent_on_is_begin_event(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwheelevent.html#isBeginEvent)
 ///
@@ -2936,10 +2936,10 @@ bool q_wheelevent_is_update_event(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWheelEvent*
+/// @param self QWheelEvent*
 /// @param callback bool func(const QWheelEvent* self)
 ///
-void q_wheelevent_on_is_update_event(const void* self, bool (*callback)(const void*));
+void q_wheelevent_on_is_update_event(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwheelevent.html#isUpdateEvent)
 ///
@@ -2959,10 +2959,10 @@ bool q_wheelevent_is_end_event(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWheelEvent*
+/// @param self QWheelEvent*
 /// @param callback bool func(const QWheelEvent* self)
 ///
-void q_wheelevent_on_is_end_event(const void* self, bool (*callback)(const void*));
+void q_wheelevent_on_is_end_event(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwheelevent.html#isEndEvent)
 ///
@@ -3388,10 +3388,10 @@ QTabletEvent* q_tabletevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTabletEvent*
+/// @param self QTabletEvent*
 /// @param callback QTabletEvent* func(const QTabletEvent* self)
 ///
-void q_tabletevent_on_clone(const void* self, QTabletEvent* (*callback)(const void*));
+void q_tabletevent_on_clone(void* self, QTabletEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabletevent.html#clone)
 ///
@@ -3833,10 +3833,10 @@ bool q_tabletevent_super_is_begin_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTabletEvent*
+/// @param self QTabletEvent*
 /// @param callback bool func(QTabletEvent* self)
 ///
-void q_tabletevent_on_is_begin_event(const void* self, bool (*callback)(const void*));
+void q_tabletevent_on_is_begin_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSinglePointEvent
 ///
@@ -3864,10 +3864,10 @@ bool q_tabletevent_super_is_update_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTabletEvent*
+/// @param self QTabletEvent*
 /// @param callback bool func(QTabletEvent* self)
 ///
-void q_tabletevent_on_is_update_event(const void* self, bool (*callback)(const void*));
+void q_tabletevent_on_is_update_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSinglePointEvent
 ///
@@ -3895,10 +3895,10 @@ bool q_tabletevent_super_is_end_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTabletEvent*
+/// @param self QTabletEvent*
 /// @param callback bool func(QTabletEvent* self)
 ///
-void q_tabletevent_on_is_end_event(const void* self, bool (*callback)(const void*));
+void q_tabletevent_on_is_end_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QPointerEvent
 ///
@@ -4030,10 +4030,10 @@ QNativeGestureEvent* q_nativegestureevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeGestureEvent*
+/// @param self QNativeGestureEvent*
 /// @param callback QNativeGestureEvent* func(const QNativeGestureEvent* self)
 ///
-void q_nativegestureevent_on_clone(const void* self, QNativeGestureEvent* (*callback)(const void*));
+void q_nativegestureevent_on_clone(void* self, QNativeGestureEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativegestureevent.html#clone)
 ///
@@ -4429,10 +4429,10 @@ bool q_nativegestureevent_super_is_begin_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QNativeGestureEvent*
+/// @param self QNativeGestureEvent*
 /// @param callback bool func(QNativeGestureEvent* self)
 ///
-void q_nativegestureevent_on_is_begin_event(const void* self, bool (*callback)(const void*));
+void q_nativegestureevent_on_is_begin_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSinglePointEvent
 ///
@@ -4460,10 +4460,10 @@ bool q_nativegestureevent_super_is_update_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QNativeGestureEvent*
+/// @param self QNativeGestureEvent*
 /// @param callback bool func(QNativeGestureEvent* self)
 ///
-void q_nativegestureevent_on_is_update_event(const void* self, bool (*callback)(const void*));
+void q_nativegestureevent_on_is_update_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSinglePointEvent
 ///
@@ -4491,10 +4491,10 @@ bool q_nativegestureevent_super_is_end_event(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QNativeGestureEvent*
+/// @param self QNativeGestureEvent*
 /// @param callback bool func(QNativeGestureEvent* self)
 ///
-void q_nativegestureevent_on_is_end_event(const void* self, bool (*callback)(const void*));
+void q_nativegestureevent_on_is_end_event(void* self, bool (*callback)(const void*));
 
 /// Inherited from QPointerEvent
 ///
@@ -4701,10 +4701,10 @@ QKeyEvent* q_keyevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QKeyEvent*
+/// @param self QKeyEvent*
 /// @param callback QKeyEvent* func(const QKeyEvent* self)
 ///
-void q_keyevent_on_clone(const void* self, QKeyEvent* (*callback)(const void*));
+void q_keyevent_on_clone(void* self, QKeyEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeyevent.html#clone)
 ///
@@ -4995,10 +4995,10 @@ QFocusEvent* q_focusevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QFocusEvent*
+/// @param self QFocusEvent*
 /// @param callback QFocusEvent* func(const QFocusEvent* self)
 ///
-void q_focusevent_on_clone(const void* self, QFocusEvent* (*callback)(const void*));
+void q_focusevent_on_clone(void* self, QFocusEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfocusevent.html#clone)
 ///
@@ -5175,10 +5175,10 @@ QPaintEvent* q_paintevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPaintEvent*
+/// @param self QPaintEvent*
 /// @param callback QPaintEvent* func(const QPaintEvent* self)
 ///
-void q_paintevent_on_clone(const void* self, QPaintEvent* (*callback)(const void*));
+void q_paintevent_on_clone(void* self, QPaintEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintevent.html#clone)
 ///
@@ -5340,10 +5340,10 @@ QMoveEvent* q_moveevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QMoveEvent*
+/// @param self QMoveEvent*
 /// @param callback QMoveEvent* func(const QMoveEvent* self)
 ///
-void q_moveevent_on_clone(const void* self, QMoveEvent* (*callback)(const void*));
+void q_moveevent_on_clone(void* self, QMoveEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmoveevent.html#clone)
 ///
@@ -5504,10 +5504,10 @@ QExposeEvent* q_exposeevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QExposeEvent*
+/// @param self QExposeEvent*
 /// @param callback QExposeEvent* func(const QExposeEvent* self)
 ///
-void q_exposeevent_on_clone(const void* self, QExposeEvent* (*callback)(const void*));
+void q_exposeevent_on_clone(void* self, QExposeEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qexposeevent.html#clone)
 ///
@@ -5662,10 +5662,10 @@ QPlatformSurfaceEvent* q_platformsurfaceevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPlatformSurfaceEvent*
+/// @param self QPlatformSurfaceEvent*
 /// @param callback QPlatformSurfaceEvent* func(const QPlatformSurfaceEvent* self)
 ///
-void q_platformsurfaceevent_on_clone(const void* self, QPlatformSurfaceEvent* (*callback)(const void*));
+void q_platformsurfaceevent_on_clone(void* self, QPlatformSurfaceEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplatformsurfaceevent.html#clone)
 ///
@@ -5823,10 +5823,10 @@ QResizeEvent* q_resizeevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QResizeEvent*
+/// @param self QResizeEvent*
 /// @param callback QResizeEvent* func(const QResizeEvent* self)
 ///
-void q_resizeevent_on_clone(const void* self, QResizeEvent* (*callback)(const void*));
+void q_resizeevent_on_clone(void* self, QResizeEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresizeevent.html#clone)
 ///
@@ -5985,10 +5985,10 @@ QCloseEvent* q_closeevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCloseEvent*
+/// @param self QCloseEvent*
 /// @param callback QCloseEvent* func(const QCloseEvent* self)
 ///
-void q_closeevent_on_clone(const void* self, QCloseEvent* (*callback)(const void*));
+void q_closeevent_on_clone(void* self, QCloseEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcloseevent.html#clone)
 ///
@@ -6135,10 +6135,10 @@ QIconDragEvent* q_icondragevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QIconDragEvent*
+/// @param self QIconDragEvent*
 /// @param callback QIconDragEvent* func(const QIconDragEvent* self)
 ///
-void q_icondragevent_on_clone(const void* self, QIconDragEvent* (*callback)(const void*));
+void q_icondragevent_on_clone(void* self, QIconDragEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicondragevent.html#clone)
 ///
@@ -6285,10 +6285,10 @@ QShowEvent* q_showevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QShowEvent*
+/// @param self QShowEvent*
 /// @param callback QShowEvent* func(const QShowEvent* self)
 ///
-void q_showevent_on_clone(const void* self, QShowEvent* (*callback)(const void*));
+void q_showevent_on_clone(void* self, QShowEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshowevent.html#clone)
 ///
@@ -6435,10 +6435,10 @@ QHideEvent* q_hideevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QHideEvent*
+/// @param self QHideEvent*
 /// @param callback QHideEvent* func(const QHideEvent* self)
 ///
-void q_hideevent_on_clone(const void* self, QHideEvent* (*callback)(const void*));
+void q_hideevent_on_clone(void* self, QHideEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhideevent.html#clone)
 ///
@@ -6609,10 +6609,10 @@ QContextMenuEvent* q_contextmenuevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QContextMenuEvent*
+/// @param self QContextMenuEvent*
 /// @param callback QContextMenuEvent* func(const QContextMenuEvent* self)
 ///
-void q_contextmenuevent_on_clone(const void* self, QContextMenuEvent* (*callback)(const void*));
+void q_contextmenuevent_on_clone(void* self, QContextMenuEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcontextmenuevent.html#clone)
 ///
@@ -6890,10 +6890,10 @@ QInputMethodEvent* q_inputmethodevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QInputMethodEvent*
+/// @param self QInputMethodEvent*
 /// @param callback QInputMethodEvent* func(const QInputMethodEvent* self)
 ///
-void q_inputmethodevent_on_clone(const void* self, QInputMethodEvent* (*callback)(const void*));
+void q_inputmethodevent_on_clone(void* self, QInputMethodEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethodevent.html#clone)
 ///
@@ -7102,10 +7102,10 @@ QInputMethodQueryEvent* q_inputmethodqueryevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QInputMethodQueryEvent*
+/// @param self QInputMethodQueryEvent*
 /// @param callback QInputMethodQueryEvent* func(const QInputMethodQueryEvent* self)
 ///
-void q_inputmethodqueryevent_on_clone(const void* self, QInputMethodQueryEvent* (*callback)(const void*));
+void q_inputmethodqueryevent_on_clone(void* self, QInputMethodQueryEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethodqueryevent.html#clone)
 ///
@@ -7294,10 +7294,10 @@ QDropEvent* q_dropevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDropEvent*
+/// @param self QDropEvent*
 /// @param callback QDropEvent* func(const QDropEvent* self)
 ///
-void q_dropevent_on_clone(const void* self, QDropEvent* (*callback)(const void*));
+void q_dropevent_on_clone(void* self, QDropEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdropevent.html#clone)
 ///
@@ -7562,10 +7562,10 @@ QDragMoveEvent* q_dragmoveevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDragMoveEvent*
+/// @param self QDragMoveEvent*
 /// @param callback QDragMoveEvent* func(const QDragMoveEvent* self)
 ///
-void q_dragmoveevent_on_clone(const void* self, QDragMoveEvent* (*callback)(const void*));
+void q_dragmoveevent_on_clone(void* self, QDragMoveEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdragmoveevent.html#clone)
 ///
@@ -7861,10 +7861,10 @@ QDragEnterEvent* q_dragenterevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDragEnterEvent*
+/// @param self QDragEnterEvent*
 /// @param callback QDragEnterEvent* func(const QDragEnterEvent* self)
 ///
-void q_dragenterevent_on_clone(const void* self, QDragEnterEvent* (*callback)(const void*));
+void q_dragenterevent_on_clone(void* self, QDragEnterEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdragenterevent.html#clone)
 ///
@@ -8164,10 +8164,10 @@ QDragLeaveEvent* q_dragleaveevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDragLeaveEvent*
+/// @param self QDragLeaveEvent*
 /// @param callback QDragLeaveEvent* func(const QDragLeaveEvent* self)
 ///
-void q_dragleaveevent_on_clone(const void* self, QDragLeaveEvent* (*callback)(const void*));
+void q_dragleaveevent_on_clone(void* self, QDragLeaveEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdragleaveevent.html#clone)
 ///
@@ -8318,10 +8318,10 @@ QHelpEvent* q_helpevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QHelpEvent*
+/// @param self QHelpEvent*
 /// @param callback QHelpEvent* func(const QHelpEvent* self)
 ///
-void q_helpevent_on_clone(const void* self, QHelpEvent* (*callback)(const void*));
+void q_helpevent_on_clone(void* self, QHelpEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhelpevent.html#clone)
 ///
@@ -8506,10 +8506,10 @@ QStatusTipEvent* q_statustipevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStatusTipEvent*
+/// @param self QStatusTipEvent*
 /// @param callback QStatusTipEvent* func(const QStatusTipEvent* self)
 ///
-void q_statustipevent_on_clone(const void* self, QStatusTipEvent* (*callback)(const void*));
+void q_statustipevent_on_clone(void* self, QStatusTipEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatustipevent.html#clone)
 ///
@@ -8666,10 +8666,10 @@ QWhatsThisClickedEvent* q_whatsthisclickedevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWhatsThisClickedEvent*
+/// @param self QWhatsThisClickedEvent*
 /// @param callback QWhatsThisClickedEvent* func(const QWhatsThisClickedEvent* self)
 ///
-void q_whatsthisclickedevent_on_clone(const void* self, QWhatsThisClickedEvent* (*callback)(const void*));
+void q_whatsthisclickedevent_on_clone(void* self, QWhatsThisClickedEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthisclickedevent.html#clone)
 ///
@@ -8837,10 +8837,10 @@ QActionEvent* q_actionevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QActionEvent*
+/// @param self QActionEvent*
 /// @param callback QActionEvent* func(const QActionEvent* self)
 ///
-void q_actionevent_on_clone(const void* self, QActionEvent* (*callback)(const void*));
+void q_actionevent_on_clone(void* self, QActionEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qactionevent.html#clone)
 ///
@@ -9009,10 +9009,10 @@ QFileOpenEvent* q_fileopenevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QFileOpenEvent*
+/// @param self QFileOpenEvent*
 /// @param callback QFileOpenEvent* func(const QFileOpenEvent* self)
 ///
-void q_fileopenevent_on_clone(const void* self, QFileOpenEvent* (*callback)(const void*));
+void q_fileopenevent_on_clone(void* self, QFileOpenEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileopenevent.html#clone)
 ///
@@ -9183,10 +9183,10 @@ QToolBarChangeEvent* q_toolbarchangeevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QToolBarChangeEvent*
+/// @param self QToolBarChangeEvent*
 /// @param callback QToolBarChangeEvent* func(const QToolBarChangeEvent* self)
 ///
-void q_toolbarchangeevent_on_clone(const void* self, QToolBarChangeEvent* (*callback)(const void*));
+void q_toolbarchangeevent_on_clone(void* self, QToolBarChangeEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtoolbarchangeevent.html#clone)
 ///
@@ -9379,10 +9379,10 @@ QShortcutEvent* q_shortcutevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QShortcutEvent*
+/// @param self QShortcutEvent*
 /// @param callback QShortcutEvent* func(const QShortcutEvent* self)
 ///
-void q_shortcutevent_on_clone(const void* self, QShortcutEvent* (*callback)(const void*));
+void q_shortcutevent_on_clone(void* self, QShortcutEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcutevent.html#clone)
 ///
@@ -9558,10 +9558,10 @@ QWindowStateChangeEvent* q_windowstatechangeevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWindowStateChangeEvent*
+/// @param self QWindowStateChangeEvent*
 /// @param callback QWindowStateChangeEvent* func(const QWindowStateChangeEvent* self)
 ///
-void q_windowstatechangeevent_on_clone(const void* self, QWindowStateChangeEvent* (*callback)(const void*));
+void q_windowstatechangeevent_on_clone(void* self, QWindowStateChangeEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#clone)
 ///
@@ -9777,10 +9777,10 @@ QTouchEvent* q_touchevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTouchEvent*
+/// @param self QTouchEvent*
 /// @param callback QTouchEvent* func(const QTouchEvent* self)
 ///
-void q_touchevent_on_clone(const void* self, QTouchEvent* (*callback)(const void*));
+void q_touchevent_on_clone(void* self, QTouchEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtouchevent.html#clone)
 ///
@@ -9822,10 +9822,10 @@ bool q_touchevent_is_begin_event(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTouchEvent*
+/// @param self QTouchEvent*
 /// @param callback bool func(const QTouchEvent* self)
 ///
-void q_touchevent_on_is_begin_event(const void* self, bool (*callback)(const void*));
+void q_touchevent_on_is_begin_event(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtouchevent.html#isBeginEvent)
 ///
@@ -9845,10 +9845,10 @@ bool q_touchevent_is_update_event(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTouchEvent*
+/// @param self QTouchEvent*
 /// @param callback bool func(const QTouchEvent* self)
 ///
-void q_touchevent_on_is_update_event(const void* self, bool (*callback)(const void*));
+void q_touchevent_on_is_update_event(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtouchevent.html#isUpdateEvent)
 ///
@@ -9868,10 +9868,10 @@ bool q_touchevent_is_end_event(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTouchEvent*
+/// @param self QTouchEvent*
 /// @param callback bool func(const QTouchEvent* self)
 ///
-void q_touchevent_on_is_end_event(const void* self, bool (*callback)(const void*));
+void q_touchevent_on_is_end_event(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtouchevent.html#isEndEvent)
 ///
@@ -10216,10 +10216,10 @@ QScrollPrepareEvent* q_scrollprepareevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QScrollPrepareEvent*
+/// @param self QScrollPrepareEvent*
 /// @param callback QScrollPrepareEvent* func(const QScrollPrepareEvent* self)
 ///
-void q_scrollprepareevent_on_clone(const void* self, QScrollPrepareEvent* (*callback)(const void*));
+void q_scrollprepareevent_on_clone(void* self, QScrollPrepareEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollprepareevent.html#clone)
 ///
@@ -10415,10 +10415,10 @@ QScrollEvent* q_scrollevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QScrollEvent*
+/// @param self QScrollEvent*
 /// @param callback QScrollEvent* func(const QScrollEvent* self)
 ///
-void q_scrollevent_on_clone(const void* self, QScrollEvent* (*callback)(const void*));
+void q_scrollevent_on_clone(void* self, QScrollEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollevent.html#clone)
 ///
@@ -10588,10 +10588,10 @@ QScreenOrientationChangeEvent* q_screenorientationchangeevent_clone(const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QScreenOrientationChangeEvent*
+/// @param self QScreenOrientationChangeEvent*
 /// @param callback QScreenOrientationChangeEvent* func(const QScreenOrientationChangeEvent* self)
 ///
-void q_screenorientationchangeevent_on_clone(const void* self, QScreenOrientationChangeEvent* (*callback)(const void*));
+void q_screenorientationchangeevent_on_clone(void* self, QScreenOrientationChangeEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreenorientationchangeevent.html#clone)
 ///
@@ -10754,10 +10754,10 @@ QApplicationStateChangeEvent* q_applicationstatechangeevent_clone(const void* se
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QApplicationStateChangeEvent*
+/// @param self QApplicationStateChangeEvent*
 /// @param callback QApplicationStateChangeEvent* func(const QApplicationStateChangeEvent* self)
 ///
-void q_applicationstatechangeevent_on_clone(const void* self, QApplicationStateChangeEvent* (*callback)(const void*));
+void q_applicationstatechangeevent_on_clone(void* self, QApplicationStateChangeEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qapplicationstatechangeevent.html#clone)
 ///
@@ -10915,10 +10915,10 @@ QChildWindowEvent* q_childwindowevent_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QChildWindowEvent*
+/// @param self QChildWindowEvent*
 /// @param callback QChildWindowEvent* func(const QChildWindowEvent* self)
 ///
-void q_childwindowevent_on_clone(const void* self, QChildWindowEvent* (*callback)(const void*));
+void q_childwindowevent_on_clone(void* self, QChildWindowEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchildwindowevent.html#clone)
 ///

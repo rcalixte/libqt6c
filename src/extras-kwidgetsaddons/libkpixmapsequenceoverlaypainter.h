@@ -49,10 +49,10 @@ const QMetaObject* k_pixmapsequenceoverlaypainter_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPixmapSequenceOverlayPainter*
+/// @param self KPixmapSequenceOverlayPainter*
 /// @param callback const QMetaObject* func(const KPixmapSequenceOverlayPainter* self)
 ///
-void k_pixmapsequenceoverlaypainter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_pixmapsequenceoverlaypainter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -915,10 +915,10 @@ QObject* k_pixmapsequenceoverlaypainter_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPixmapSequenceOverlayPainter*
+/// @param self KPixmapSequenceOverlayPainter*
 /// @param callback QObject* func(KPixmapSequenceOverlayPainter* self)
 ///
-void k_pixmapsequenceoverlaypainter_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_pixmapsequenceoverlaypainter_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -946,10 +946,10 @@ int32_t k_pixmapsequenceoverlaypainter_super_sender_signal_index(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPixmapSequenceOverlayPainter*
+/// @param self KPixmapSequenceOverlayPainter*
 /// @param callback int32_t func(KPixmapSequenceOverlayPainter* self)
 ///
-void k_pixmapsequenceoverlaypainter_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_pixmapsequenceoverlaypainter_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -979,10 +979,10 @@ int32_t k_pixmapsequenceoverlaypainter_super_receivers(const void* self, const c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPixmapSequenceOverlayPainter*
+/// @param self KPixmapSequenceOverlayPainter*
 /// @param callback int32_t func(KPixmapSequenceOverlayPainter* self, const char* signal)
 ///
-void k_pixmapsequenceoverlaypainter_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_pixmapsequenceoverlaypainter_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1012,10 +1012,10 @@ bool k_pixmapsequenceoverlaypainter_super_is_signal_connected(const void* self, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPixmapSequenceOverlayPainter*
+/// @param self KPixmapSequenceOverlayPainter*
 /// @param callback bool func(KPixmapSequenceOverlayPainter* self, QMetaMethod* signal)
 ///
-void k_pixmapsequenceoverlaypainter_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_pixmapsequenceoverlaypainter_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

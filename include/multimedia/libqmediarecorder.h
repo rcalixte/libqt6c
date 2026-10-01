@@ -32,10 +32,10 @@ const QMetaObject* q_mediarecorder_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QMediaRecorder*
+/// @param self QMediaRecorder*
 /// @param callback const QMetaObject* func(const QMediaRecorder* self)
 ///
-void q_mediarecorder_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_mediarecorder_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1300,10 +1300,10 @@ QObject* q_mediarecorder_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QMediaRecorder*
+/// @param self QMediaRecorder*
 /// @param callback QObject* func(QMediaRecorder* self)
 ///
-void q_mediarecorder_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_mediarecorder_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1331,10 +1331,10 @@ int32_t q_mediarecorder_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QMediaRecorder*
+/// @param self QMediaRecorder*
 /// @param callback int32_t func(QMediaRecorder* self)
 ///
-void q_mediarecorder_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_mediarecorder_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1364,10 +1364,10 @@ int32_t q_mediarecorder_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QMediaRecorder*
+/// @param self QMediaRecorder*
 /// @param callback int32_t func(QMediaRecorder* self, const char* signal)
 ///
-void q_mediarecorder_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_mediarecorder_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1397,10 +1397,10 @@ bool q_mediarecorder_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QMediaRecorder*
+/// @param self QMediaRecorder*
 /// @param callback bool func(QMediaRecorder* self, QMetaMethod* signal)
 ///
-void q_mediarecorder_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_mediarecorder_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -58,7 +58,7 @@ bool k_archivedirectory_is_directory(const void* self) {
     return KArchiveDirectory_IsDirectory((KArchiveDirectory*)self);
 }
 
-void k_archivedirectory_on_is_directory(const void* self, bool (*callback)(const void*)) {
+void k_archivedirectory_on_is_directory(void* self, bool (*callback)(const void*)) {
     KArchiveDirectory_OnIsDirectory((KArchiveDirectory*)self, (intptr_t)callback);
 }
 
@@ -130,8 +130,8 @@ bool k_archivedirectory_super_is_file(const void* self) {
     return KArchiveDirectory_SuperIsFile((KArchiveDirectory*)self);
 }
 
-void k_archivedirectory_on_is_file(const void* self, bool (*callback)(const void*)) {
-    KArchiveDirectory_OnIsFile((const KArchiveDirectory*)self, (intptr_t)callback);
+void k_archivedirectory_on_is_file(void* self, bool (*callback)(const void*)) {
+    KArchiveDirectory_OnIsFile((KArchiveDirectory*)self, (intptr_t)callback);
 }
 
 KArchive* k_archivedirectory_archive(const void* self) {

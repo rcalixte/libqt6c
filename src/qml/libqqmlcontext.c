@@ -29,7 +29,7 @@ const QMetaObject* q_qmlcontext_meta_object(const void* self) {
     return QQmlContext_MetaObject((QQmlContext*)self);
 }
 
-void q_qmlcontext_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_qmlcontext_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlContext_OnMetaObject((QQmlContext*)self, (intptr_t)callback);
 }
 

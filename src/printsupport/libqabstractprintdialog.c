@@ -27,7 +27,7 @@ const QMetaObject* q_abstractprintdialog_meta_object(const void* self) {
     return QAbstractPrintDialog_MetaObject((QAbstractPrintDialog*)self);
 }
 
-void q_abstractprintdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstractprintdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractPrintDialog_OnMetaObject((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
@@ -164,11 +164,11 @@ void q_abstractprintdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_abstractprintdialog_as_q_paint_device(void* self) {
+QPaintDevice* q_abstractprintdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QAbstractPrintDialog* q_abstractprintdialog_from_q_paint_device(void* _qpaintdevice) {
+QAbstractPrintDialog* q_abstractprintdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (QAbstractPrintDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1571,8 +1571,8 @@ QSize* q_abstractprintdialog_super_size_hint(const void* self) {
     return QAbstractPrintDialog_SuperSizeHint((QAbstractPrintDialog*)self);
 }
 
-void q_abstractprintdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QAbstractPrintDialog_OnSizeHint((const QAbstractPrintDialog*)self, (intptr_t)callback);
+void q_abstractprintdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QAbstractPrintDialog_OnSizeHint((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
 QSize* q_abstractprintdialog_minimum_size_hint(const void* self) {
@@ -1583,8 +1583,8 @@ QSize* q_abstractprintdialog_super_minimum_size_hint(const void* self) {
     return QAbstractPrintDialog_SuperMinimumSizeHint((QAbstractPrintDialog*)self);
 }
 
-void q_abstractprintdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QAbstractPrintDialog_OnMinimumSizeHint((const QAbstractPrintDialog*)self, (intptr_t)callback);
+void q_abstractprintdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QAbstractPrintDialog_OnMinimumSizeHint((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
 void q_abstractprintdialog_open(void* self) {
@@ -1727,8 +1727,8 @@ int32_t q_abstractprintdialog_super_dev_type(const void* self) {
     return QAbstractPrintDialog_SuperDevType((QAbstractPrintDialog*)self);
 }
 
-void q_abstractprintdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QAbstractPrintDialog_OnDevType((const QAbstractPrintDialog*)self, (intptr_t)callback);
+void q_abstractprintdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QAbstractPrintDialog_OnDevType((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_abstractprintdialog_height_for_width(const void* self, int param1) {
@@ -1739,8 +1739,8 @@ int32_t q_abstractprintdialog_super_height_for_width(const void* self, int param
     return QAbstractPrintDialog_SuperHeightForWidth((QAbstractPrintDialog*)self, param1);
 }
 
-void q_abstractprintdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QAbstractPrintDialog_OnHeightForWidth((const QAbstractPrintDialog*)self, (intptr_t)callback);
+void q_abstractprintdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QAbstractPrintDialog_OnHeightForWidth((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
 bool q_abstractprintdialog_has_height_for_width(const void* self) {
@@ -1751,8 +1751,8 @@ bool q_abstractprintdialog_super_has_height_for_width(const void* self) {
     return QAbstractPrintDialog_SuperHasHeightForWidth((QAbstractPrintDialog*)self);
 }
 
-void q_abstractprintdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QAbstractPrintDialog_OnHasHeightForWidth((const QAbstractPrintDialog*)self, (intptr_t)callback);
+void q_abstractprintdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QAbstractPrintDialog_OnHasHeightForWidth((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_abstractprintdialog_paint_engine(const void* self) {
@@ -1763,8 +1763,8 @@ QPaintEngine* q_abstractprintdialog_super_paint_engine(const void* self) {
     return QAbstractPrintDialog_SuperPaintEngine((QAbstractPrintDialog*)self);
 }
 
-void q_abstractprintdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QAbstractPrintDialog_OnPaintEngine((const QAbstractPrintDialog*)self, (intptr_t)callback);
+void q_abstractprintdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QAbstractPrintDialog_OnPaintEngine((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
 bool q_abstractprintdialog_event(void* self, void* event) {
@@ -2039,8 +2039,8 @@ int32_t q_abstractprintdialog_super_metric(const void* self, int32_t param1) {
     return QAbstractPrintDialog_SuperMetric((QAbstractPrintDialog*)self, param1);
 }
 
-void q_abstractprintdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QAbstractPrintDialog_OnMetric((const QAbstractPrintDialog*)self, (intptr_t)callback);
+void q_abstractprintdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QAbstractPrintDialog_OnMetric((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
 void q_abstractprintdialog_init_painter(const void* self, void* painter) {
@@ -2051,8 +2051,8 @@ void q_abstractprintdialog_super_init_painter(const void* self, void* painter) {
     QAbstractPrintDialog_SuperInitPainter((QAbstractPrintDialog*)self, (QPainter*)painter);
 }
 
-void q_abstractprintdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QAbstractPrintDialog_OnInitPainter((const QAbstractPrintDialog*)self, (intptr_t)callback);
+void q_abstractprintdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QAbstractPrintDialog_OnInitPainter((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_abstractprintdialog_redirected(const void* self, void* offset) {
@@ -2063,8 +2063,8 @@ QPaintDevice* q_abstractprintdialog_super_redirected(const void* self, void* off
     return QAbstractPrintDialog_SuperRedirected((QAbstractPrintDialog*)self, (QPoint*)offset);
 }
 
-void q_abstractprintdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QAbstractPrintDialog_OnRedirected((const QAbstractPrintDialog*)self, (intptr_t)callback);
+void q_abstractprintdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QAbstractPrintDialog_OnRedirected((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
 QPainter* q_abstractprintdialog_shared_painter(const void* self) {
@@ -2075,8 +2075,8 @@ QPainter* q_abstractprintdialog_super_shared_painter(const void* self) {
     return QAbstractPrintDialog_SuperSharedPainter((QAbstractPrintDialog*)self);
 }
 
-void q_abstractprintdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QAbstractPrintDialog_OnSharedPainter((const QAbstractPrintDialog*)self, (intptr_t)callback);
+void q_abstractprintdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QAbstractPrintDialog_OnSharedPainter((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
 void q_abstractprintdialog_input_method_event(void* self, void* param1) {
@@ -2099,8 +2099,8 @@ QVariant* q_abstractprintdialog_super_input_method_query(const void* self, int32
     return QAbstractPrintDialog_SuperInputMethodQuery((QAbstractPrintDialog*)self, param1);
 }
 
-void q_abstractprintdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QAbstractPrintDialog_OnInputMethodQuery((const QAbstractPrintDialog*)self, (intptr_t)callback);
+void q_abstractprintdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QAbstractPrintDialog_OnInputMethodQuery((QAbstractPrintDialog*)self, (intptr_t)callback);
 }
 
 bool q_abstractprintdialog_focus_next_prev_child(void* self, bool next) {

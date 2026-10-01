@@ -30,7 +30,7 @@ const QMetaObject* q_dbusservicewatcher_meta_object(const void* self) {
     return QDBusServiceWatcher_MetaObject((QDBusServiceWatcher*)self);
 }
 
-void q_dbusservicewatcher_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_dbusservicewatcher_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDBusServiceWatcher_OnMetaObject((QDBusServiceWatcher*)self, (intptr_t)callback);
 }
 

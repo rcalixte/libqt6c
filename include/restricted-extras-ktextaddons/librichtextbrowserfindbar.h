@@ -35,10 +35,10 @@ const QMetaObject* k_textcustomeditor__richtextbrowserfindbar_meta_object(const 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback const QMetaObject* func(const TextCustomEditor__RichTextBrowserFindBar* self)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1RichTextBrowserFindBar.html)
 ///
@@ -108,10 +108,10 @@ bool k_textcustomeditor__richtextbrowserfindbar_view_is_read_only(const void* se
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback bool func(const TextCustomEditor__RichTextBrowserFindBar* self)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_view_is_read_only(const void* self, bool (*callback)(const void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_view_is_read_only(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1RichTextBrowserFindBar.html)
 ///
@@ -131,10 +131,10 @@ bool k_textcustomeditor__richtextbrowserfindbar_document_is_empty(const void* se
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback bool func(const TextCustomEditor__RichTextBrowserFindBar* self)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_document_is_empty(const void* self, bool (*callback)(const void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_document_is_empty(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextCustomEditor_1_1RichTextBrowserFindBar.html)
 ///
@@ -391,9 +391,9 @@ void k_textcustomeditor__richtextbrowserfindbar_close_bar(void* self);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self TextCustomEditor__RichTextBrowserFindBar*
+/// @param self const TextCustomEditor__RichTextBrowserFindBar*
 ///
-QPaintDevice* k_textcustomeditor__richtextbrowserfindbar_as_q_paint_device(void* self);
+QPaintDevice* k_textcustomeditor__richtextbrowserfindbar_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -401,7 +401,7 @@ QPaintDevice* k_textcustomeditor__richtextbrowserfindbar_as_q_paint_device(void*
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-TextCustomEditor__RichTextBrowserFindBar* k_textcustomeditor__richtextbrowserfindbar_from_q_paint_device(void* _qpaintdevice);
+TextCustomEditor__RichTextBrowserFindBar* k_textcustomeditor__richtextbrowserfindbar_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3419,10 +3419,10 @@ int32_t k_textcustomeditor__richtextbrowserfindbar_super_dev_type(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback int32_t func(TextCustomEditor__RichTextBrowserFindBar* self)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3483,12 +3483,12 @@ QSize* k_textcustomeditor__richtextbrowserfindbar_super_size_hint(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback QSize* func(TextCustomEditor__RichTextBrowserFindBar* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3516,12 +3516,12 @@ QSize* k_textcustomeditor__richtextbrowserfindbar_super_minimum_size_hint(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback QSize* func(TextCustomEditor__RichTextBrowserFindBar* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3551,10 +3551,10 @@ int32_t k_textcustomeditor__richtextbrowserfindbar_super_height_for_width(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback int32_t func(TextCustomEditor__RichTextBrowserFindBar* self, int param1)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_textcustomeditor__richtextbrowserfindbar_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3582,10 +3582,10 @@ bool k_textcustomeditor__richtextbrowserfindbar_super_has_height_for_width(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback bool func(TextCustomEditor__RichTextBrowserFindBar* self)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3613,10 +3613,10 @@ QPaintEngine* k_textcustomeditor__richtextbrowserfindbar_super_paint_engine(cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback QPaintEngine* func(TextCustomEditor__RichTextBrowserFindBar* self)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4508,10 +4508,10 @@ int32_t k_textcustomeditor__richtextbrowserfindbar_super_metric(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback int32_t func(TextCustomEditor__RichTextBrowserFindBar* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_textcustomeditor__richtextbrowserfindbar_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4541,10 +4541,10 @@ void k_textcustomeditor__richtextbrowserfindbar_super_init_painter(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback void func(TextCustomEditor__RichTextBrowserFindBar* self, QPainter* painter)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4574,10 +4574,10 @@ QPaintDevice* k_textcustomeditor__richtextbrowserfindbar_super_redirected(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback QPaintDevice* func(TextCustomEditor__RichTextBrowserFindBar* self, QPoint* offset)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4605,10 +4605,10 @@ QPainter* k_textcustomeditor__richtextbrowserfindbar_super_shared_painter(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback QPainter* func(TextCustomEditor__RichTextBrowserFindBar* self)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4671,12 +4671,12 @@ QVariant* k_textcustomeditor__richtextbrowserfindbar_super_input_method_query(co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback QVariant* func(TextCustomEditor__RichTextBrowserFindBar* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_textcustomeditor__richtextbrowserfindbar_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5228,10 +5228,10 @@ QObject* k_textcustomeditor__richtextbrowserfindbar_super_sender(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback QObject* func(TextCustomEditor__RichTextBrowserFindBar* self)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5259,10 +5259,10 @@ int32_t k_textcustomeditor__richtextbrowserfindbar_super_sender_signal_index(con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback int32_t func(TextCustomEditor__RichTextBrowserFindBar* self)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5292,10 +5292,10 @@ int32_t k_textcustomeditor__richtextbrowserfindbar_super_receivers(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback int32_t func(TextCustomEditor__RichTextBrowserFindBar* self, const char* signal)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textcustomeditor__richtextbrowserfindbar_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5325,10 +5325,10 @@ bool k_textcustomeditor__richtextbrowserfindbar_super_is_signal_connected(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback bool func(TextCustomEditor__RichTextBrowserFindBar* self, QMetaMethod* signal)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textcustomeditor__richtextbrowserfindbar_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5360,10 +5360,10 @@ double k_textcustomeditor__richtextbrowserfindbar_super_get_decoded_metric_f(con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextCustomEditor__RichTextBrowserFindBar*
+/// @param self TextCustomEditor__RichTextBrowserFindBar*
 /// @param callback double func(TextCustomEditor__RichTextBrowserFindBar* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_textcustomeditor__richtextbrowserfindbar_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_textcustomeditor__richtextbrowserfindbar_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

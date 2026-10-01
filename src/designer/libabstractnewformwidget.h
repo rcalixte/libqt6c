@@ -107,9 +107,9 @@ QDesignerNewFormWidgetInterface* q_designernewformwidgetinterface_create_new_for
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QDesignerNewFormWidgetInterface*
+/// @param self const QDesignerNewFormWidgetInterface*
 ///
-QPaintDevice* q_designernewformwidgetinterface_as_q_paint_device(void* self);
+QPaintDevice* q_designernewformwidgetinterface_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -117,7 +117,7 @@ QPaintDevice* q_designernewformwidgetinterface_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QDesignerNewFormWidgetInterface* q_designernewformwidgetinterface_from_q_paint_device(void* _qpaintdevice);
+QDesignerNewFormWidgetInterface* q_designernewformwidgetinterface_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

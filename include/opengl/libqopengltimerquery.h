@@ -32,10 +32,10 @@ const QMetaObject* q_opengltimerquery_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QOpenGLTimerQuery*
+/// @param self QOpenGLTimerQuery*
 /// @param callback const QMetaObject* func(const QOpenGLTimerQuery* self)
 ///
-void q_opengltimerquery_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_opengltimerquery_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -880,10 +880,10 @@ QObject* q_opengltimerquery_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLTimerQuery*
+/// @param self QOpenGLTimerQuery*
 /// @param callback QObject* func(QOpenGLTimerQuery* self)
 ///
-void q_opengltimerquery_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_opengltimerquery_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -911,10 +911,10 @@ int32_t q_opengltimerquery_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLTimerQuery*
+/// @param self QOpenGLTimerQuery*
 /// @param callback int32_t func(QOpenGLTimerQuery* self)
 ///
-void q_opengltimerquery_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_opengltimerquery_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -944,10 +944,10 @@ int32_t q_opengltimerquery_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLTimerQuery*
+/// @param self QOpenGLTimerQuery*
 /// @param callback int32_t func(QOpenGLTimerQuery* self, const char* signal)
 ///
-void q_opengltimerquery_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_opengltimerquery_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -977,10 +977,10 @@ bool q_opengltimerquery_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLTimerQuery*
+/// @param self QOpenGLTimerQuery*
 /// @param callback bool func(QOpenGLTimerQuery* self, QMetaMethod* signal)
 ///
-void q_opengltimerquery_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_opengltimerquery_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1025,10 +1025,10 @@ const QMetaObject* q_opengltimemonitor_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QOpenGLTimeMonitor*
+/// @param self QOpenGLTimeMonitor*
 /// @param callback const QMetaObject* func(const QOpenGLTimeMonitor* self)
 ///
-void q_opengltimemonitor_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_opengltimemonitor_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1886,10 +1886,10 @@ QObject* q_opengltimemonitor_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLTimeMonitor*
+/// @param self QOpenGLTimeMonitor*
 /// @param callback QObject* func(QOpenGLTimeMonitor* self)
 ///
-void q_opengltimemonitor_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_opengltimemonitor_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1917,10 +1917,10 @@ int32_t q_opengltimemonitor_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLTimeMonitor*
+/// @param self QOpenGLTimeMonitor*
 /// @param callback int32_t func(QOpenGLTimeMonitor* self)
 ///
-void q_opengltimemonitor_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_opengltimemonitor_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1950,10 +1950,10 @@ int32_t q_opengltimemonitor_super_receivers(const void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLTimeMonitor*
+/// @param self QOpenGLTimeMonitor*
 /// @param callback int32_t func(QOpenGLTimeMonitor* self, const char* signal)
 ///
-void q_opengltimemonitor_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_opengltimemonitor_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1983,10 +1983,10 @@ bool q_opengltimemonitor_super_is_signal_connected(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLTimeMonitor*
+/// @param self QOpenGLTimeMonitor*
 /// @param callback bool func(QOpenGLTimeMonitor* self, QMetaMethod* signal)
 ///
-void q_opengltimemonitor_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_opengltimemonitor_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

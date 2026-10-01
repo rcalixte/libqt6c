@@ -51,10 +51,10 @@ const QMetaObject* k_linkitemselectionmodel_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KLinkItemSelectionModel*
+/// @param self KLinkItemSelectionModel*
 /// @param callback const QMetaObject* func(const KLinkItemSelectionModel* self)
 ///
-void k_linkitemselectionmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_linkitemselectionmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1370,10 +1370,10 @@ QObject* k_linkitemselectionmodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLinkItemSelectionModel*
+/// @param self KLinkItemSelectionModel*
 /// @param callback QObject* func(KLinkItemSelectionModel* self)
 ///
-void k_linkitemselectionmodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_linkitemselectionmodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1401,10 +1401,10 @@ int32_t k_linkitemselectionmodel_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLinkItemSelectionModel*
+/// @param self KLinkItemSelectionModel*
 /// @param callback int32_t func(KLinkItemSelectionModel* self)
 ///
-void k_linkitemselectionmodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_linkitemselectionmodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1434,10 +1434,10 @@ int32_t k_linkitemselectionmodel_super_receivers(const void* self, const char* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLinkItemSelectionModel*
+/// @param self KLinkItemSelectionModel*
 /// @param callback int32_t func(KLinkItemSelectionModel* self, const char* signal)
 ///
-void k_linkitemselectionmodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_linkitemselectionmodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1467,10 +1467,10 @@ bool k_linkitemselectionmodel_super_is_signal_connected(const void* self, const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLinkItemSelectionModel*
+/// @param self KLinkItemSelectionModel*
 /// @param callback bool func(KLinkItemSelectionModel* self, QMetaMethod* signal)
 ///
-void k_linkitemselectionmodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_linkitemselectionmodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

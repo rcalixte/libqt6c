@@ -22,7 +22,7 @@ const QMetaObject* k_sonnet__configdialog_meta_object(const void* self) {
     return Sonnet__ConfigDialog_MetaObject((Sonnet__ConfigDialog*)self);
 }
 
-void k_sonnet__configdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_sonnet__configdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Sonnet__ConfigDialog_OnMetaObject((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
@@ -170,11 +170,11 @@ void k_sonnet__configdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_sonnet__configdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_sonnet__configdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-Sonnet__ConfigDialog* k_sonnet__configdialog_from_q_paint_device(void* _qpaintdevice) {
+Sonnet__ConfigDialog* k_sonnet__configdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (Sonnet__ConfigDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1577,8 +1577,8 @@ QSize* k_sonnet__configdialog_super_size_hint(const void* self) {
     return Sonnet__ConfigDialog_SuperSizeHint((Sonnet__ConfigDialog*)self);
 }
 
-void k_sonnet__configdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    Sonnet__ConfigDialog_OnSizeHint((const Sonnet__ConfigDialog*)self, (intptr_t)callback);
+void k_sonnet__configdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    Sonnet__ConfigDialog_OnSizeHint((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_sonnet__configdialog_minimum_size_hint(const void* self) {
@@ -1589,8 +1589,8 @@ QSize* k_sonnet__configdialog_super_minimum_size_hint(const void* self) {
     return Sonnet__ConfigDialog_SuperMinimumSizeHint((Sonnet__ConfigDialog*)self);
 }
 
-void k_sonnet__configdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    Sonnet__ConfigDialog_OnMinimumSizeHint((const Sonnet__ConfigDialog*)self, (intptr_t)callback);
+void k_sonnet__configdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    Sonnet__ConfigDialog_OnMinimumSizeHint((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
 void k_sonnet__configdialog_open(void* self) {
@@ -1733,8 +1733,8 @@ int32_t k_sonnet__configdialog_super_dev_type(const void* self) {
     return Sonnet__ConfigDialog_SuperDevType((Sonnet__ConfigDialog*)self);
 }
 
-void k_sonnet__configdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    Sonnet__ConfigDialog_OnDevType((const Sonnet__ConfigDialog*)self, (intptr_t)callback);
+void k_sonnet__configdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    Sonnet__ConfigDialog_OnDevType((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_sonnet__configdialog_height_for_width(const void* self, int param1) {
@@ -1745,8 +1745,8 @@ int32_t k_sonnet__configdialog_super_height_for_width(const void* self, int para
     return Sonnet__ConfigDialog_SuperHeightForWidth((Sonnet__ConfigDialog*)self, param1);
 }
 
-void k_sonnet__configdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    Sonnet__ConfigDialog_OnHeightForWidth((const Sonnet__ConfigDialog*)self, (intptr_t)callback);
+void k_sonnet__configdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    Sonnet__ConfigDialog_OnHeightForWidth((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
 bool k_sonnet__configdialog_has_height_for_width(const void* self) {
@@ -1757,8 +1757,8 @@ bool k_sonnet__configdialog_super_has_height_for_width(const void* self) {
     return Sonnet__ConfigDialog_SuperHasHeightForWidth((Sonnet__ConfigDialog*)self);
 }
 
-void k_sonnet__configdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    Sonnet__ConfigDialog_OnHasHeightForWidth((const Sonnet__ConfigDialog*)self, (intptr_t)callback);
+void k_sonnet__configdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    Sonnet__ConfigDialog_OnHasHeightForWidth((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_sonnet__configdialog_paint_engine(const void* self) {
@@ -1769,8 +1769,8 @@ QPaintEngine* k_sonnet__configdialog_super_paint_engine(const void* self) {
     return Sonnet__ConfigDialog_SuperPaintEngine((Sonnet__ConfigDialog*)self);
 }
 
-void k_sonnet__configdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    Sonnet__ConfigDialog_OnPaintEngine((const Sonnet__ConfigDialog*)self, (intptr_t)callback);
+void k_sonnet__configdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    Sonnet__ConfigDialog_OnPaintEngine((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
 bool k_sonnet__configdialog_event(void* self, void* event) {
@@ -2045,8 +2045,8 @@ int32_t k_sonnet__configdialog_super_metric(const void* self, int32_t param1) {
     return Sonnet__ConfigDialog_SuperMetric((Sonnet__ConfigDialog*)self, param1);
 }
 
-void k_sonnet__configdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    Sonnet__ConfigDialog_OnMetric((const Sonnet__ConfigDialog*)self, (intptr_t)callback);
+void k_sonnet__configdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    Sonnet__ConfigDialog_OnMetric((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
 void k_sonnet__configdialog_init_painter(const void* self, void* painter) {
@@ -2057,8 +2057,8 @@ void k_sonnet__configdialog_super_init_painter(const void* self, void* painter) 
     Sonnet__ConfigDialog_SuperInitPainter((Sonnet__ConfigDialog*)self, (QPainter*)painter);
 }
 
-void k_sonnet__configdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    Sonnet__ConfigDialog_OnInitPainter((const Sonnet__ConfigDialog*)self, (intptr_t)callback);
+void k_sonnet__configdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    Sonnet__ConfigDialog_OnInitPainter((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_sonnet__configdialog_redirected(const void* self, void* offset) {
@@ -2069,8 +2069,8 @@ QPaintDevice* k_sonnet__configdialog_super_redirected(const void* self, void* of
     return Sonnet__ConfigDialog_SuperRedirected((Sonnet__ConfigDialog*)self, (QPoint*)offset);
 }
 
-void k_sonnet__configdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    Sonnet__ConfigDialog_OnRedirected((const Sonnet__ConfigDialog*)self, (intptr_t)callback);
+void k_sonnet__configdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    Sonnet__ConfigDialog_OnRedirected((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_sonnet__configdialog_shared_painter(const void* self) {
@@ -2081,8 +2081,8 @@ QPainter* k_sonnet__configdialog_super_shared_painter(const void* self) {
     return Sonnet__ConfigDialog_SuperSharedPainter((Sonnet__ConfigDialog*)self);
 }
 
-void k_sonnet__configdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    Sonnet__ConfigDialog_OnSharedPainter((const Sonnet__ConfigDialog*)self, (intptr_t)callback);
+void k_sonnet__configdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    Sonnet__ConfigDialog_OnSharedPainter((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
 void k_sonnet__configdialog_input_method_event(void* self, void* param1) {
@@ -2105,8 +2105,8 @@ QVariant* k_sonnet__configdialog_super_input_method_query(const void* self, int3
     return Sonnet__ConfigDialog_SuperInputMethodQuery((Sonnet__ConfigDialog*)self, param1);
 }
 
-void k_sonnet__configdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    Sonnet__ConfigDialog_OnInputMethodQuery((const Sonnet__ConfigDialog*)self, (intptr_t)callback);
+void k_sonnet__configdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    Sonnet__ConfigDialog_OnInputMethodQuery((Sonnet__ConfigDialog*)self, (intptr_t)callback);
 }
 
 bool k_sonnet__configdialog_focus_next_prev_child(void* self, bool next) {

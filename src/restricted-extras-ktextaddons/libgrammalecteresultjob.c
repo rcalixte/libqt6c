@@ -17,7 +17,7 @@ const QMetaObject* k_textgrammarcheck__grammalecteresultjob_meta_object(const vo
     return TextGrammarCheck__GrammalecteResultJob_MetaObject((TextGrammarCheck__GrammalecteResultJob*)self);
 }
 
-void k_textgrammarcheck__grammalecteresultjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textgrammarcheck__grammalecteresultjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextGrammarCheck__GrammalecteResultJob_OnMetaObject((TextGrammarCheck__GrammalecteResultJob*)self, (intptr_t)callback);
 }
 

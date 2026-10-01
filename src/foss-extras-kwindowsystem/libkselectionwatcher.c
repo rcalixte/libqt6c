@@ -63,7 +63,7 @@ const QMetaObject* k_selectionwatcher_meta_object(const void* self) {
     return KSelectionWatcher_MetaObject((KSelectionWatcher*)self);
 }
 
-void k_selectionwatcher_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_selectionwatcher_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSelectionWatcher_OnMetaObject((KSelectionWatcher*)self, (intptr_t)callback);
 }
 

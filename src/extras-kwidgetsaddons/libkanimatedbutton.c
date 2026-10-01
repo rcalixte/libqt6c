@@ -28,7 +28,7 @@ const QMetaObject* k_animatedbutton_meta_object(const void* self) {
     return KAnimatedButton_MetaObject((KAnimatedButton*)self);
 }
 
-void k_animatedbutton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_animatedbutton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KAnimatedButton_OnMetaObject((KAnimatedButton*)self, (intptr_t)callback);
 }
 
@@ -307,11 +307,11 @@ void k_animatedbutton_on_clicked1(void* self, void (*callback)(void*, bool)) {
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_animatedbutton_as_q_paint_device(void* self) {
+QPaintDevice* k_animatedbutton_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KAnimatedButton* k_animatedbutton_from_q_paint_device(void* _qpaintdevice) {
+KAnimatedButton* k_animatedbutton_from_q_paint_device(const void* _qpaintdevice) {
     return (KAnimatedButton*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1702,8 +1702,8 @@ QSize* k_animatedbutton_super_size_hint(const void* self) {
     return KAnimatedButton_SuperSizeHint((KAnimatedButton*)self);
 }
 
-void k_animatedbutton_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KAnimatedButton_OnSizeHint((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KAnimatedButton_OnSizeHint((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 QSize* k_animatedbutton_minimum_size_hint(const void* self) {
@@ -1714,8 +1714,8 @@ QSize* k_animatedbutton_super_minimum_size_hint(const void* self) {
     return KAnimatedButton_SuperMinimumSizeHint((KAnimatedButton*)self);
 }
 
-void k_animatedbutton_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KAnimatedButton_OnMinimumSizeHint((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KAnimatedButton_OnMinimumSizeHint((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 bool k_animatedbutton_event(void* self, void* e) {
@@ -1834,8 +1834,8 @@ bool k_animatedbutton_super_hit_button(const void* self, const void* pos) {
     return KAnimatedButton_SuperHitButton((KAnimatedButton*)self, (QPoint*)pos);
 }
 
-void k_animatedbutton_on_hit_button(const void* self, bool (*callback)(const void*, const void*)) {
-    KAnimatedButton_OnHitButton((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_hit_button(void* self, bool (*callback)(const void*, const void*)) {
+    KAnimatedButton_OnHitButton((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 void k_animatedbutton_check_state_set(void* self) {
@@ -1870,8 +1870,8 @@ void k_animatedbutton_super_init_style_option(const void* self, void* option) {
     KAnimatedButton_SuperInitStyleOption((KAnimatedButton*)self, (QStyleOptionToolButton*)option);
 }
 
-void k_animatedbutton_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KAnimatedButton_OnInitStyleOption((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KAnimatedButton_OnInitStyleOption((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 void k_animatedbutton_key_press_event(void* self, void* e) {
@@ -1942,8 +1942,8 @@ int32_t k_animatedbutton_super_dev_type(const void* self) {
     return KAnimatedButton_SuperDevType((KAnimatedButton*)self);
 }
 
-void k_animatedbutton_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KAnimatedButton_OnDevType((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KAnimatedButton_OnDevType((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 void k_animatedbutton_set_visible(void* self, bool visible) {
@@ -1966,8 +1966,8 @@ int32_t k_animatedbutton_super_height_for_width(const void* self, int param1) {
     return KAnimatedButton_SuperHeightForWidth((KAnimatedButton*)self, param1);
 }
 
-void k_animatedbutton_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KAnimatedButton_OnHeightForWidth((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KAnimatedButton_OnHeightForWidth((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 bool k_animatedbutton_has_height_for_width(const void* self) {
@@ -1978,8 +1978,8 @@ bool k_animatedbutton_super_has_height_for_width(const void* self) {
     return KAnimatedButton_SuperHasHeightForWidth((KAnimatedButton*)self);
 }
 
-void k_animatedbutton_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KAnimatedButton_OnHasHeightForWidth((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KAnimatedButton_OnHasHeightForWidth((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_animatedbutton_paint_engine(const void* self) {
@@ -1990,8 +1990,8 @@ QPaintEngine* k_animatedbutton_super_paint_engine(const void* self) {
     return KAnimatedButton_SuperPaintEngine((KAnimatedButton*)self);
 }
 
-void k_animatedbutton_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KAnimatedButton_OnPaintEngine((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KAnimatedButton_OnPaintEngine((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 void k_animatedbutton_mouse_double_click_event(void* self, void* event) {
@@ -2170,8 +2170,8 @@ int32_t k_animatedbutton_super_metric(const void* self, int32_t param1) {
     return KAnimatedButton_SuperMetric((KAnimatedButton*)self, param1);
 }
 
-void k_animatedbutton_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KAnimatedButton_OnMetric((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KAnimatedButton_OnMetric((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 void k_animatedbutton_init_painter(const void* self, void* painter) {
@@ -2182,8 +2182,8 @@ void k_animatedbutton_super_init_painter(const void* self, void* painter) {
     KAnimatedButton_SuperInitPainter((KAnimatedButton*)self, (QPainter*)painter);
 }
 
-void k_animatedbutton_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KAnimatedButton_OnInitPainter((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KAnimatedButton_OnInitPainter((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_animatedbutton_redirected(const void* self, void* offset) {
@@ -2194,8 +2194,8 @@ QPaintDevice* k_animatedbutton_super_redirected(const void* self, void* offset) 
     return KAnimatedButton_SuperRedirected((KAnimatedButton*)self, (QPoint*)offset);
 }
 
-void k_animatedbutton_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KAnimatedButton_OnRedirected((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KAnimatedButton_OnRedirected((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 QPainter* k_animatedbutton_shared_painter(const void* self) {
@@ -2206,8 +2206,8 @@ QPainter* k_animatedbutton_super_shared_painter(const void* self) {
     return KAnimatedButton_SuperSharedPainter((KAnimatedButton*)self);
 }
 
-void k_animatedbutton_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KAnimatedButton_OnSharedPainter((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KAnimatedButton_OnSharedPainter((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 void k_animatedbutton_input_method_event(void* self, void* param1) {
@@ -2230,8 +2230,8 @@ QVariant* k_animatedbutton_super_input_method_query(const void* self, int32_t pa
     return KAnimatedButton_SuperInputMethodQuery((KAnimatedButton*)self, param1);
 }
 
-void k_animatedbutton_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KAnimatedButton_OnInputMethodQuery((const KAnimatedButton*)self, (intptr_t)callback);
+void k_animatedbutton_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KAnimatedButton_OnInputMethodQuery((KAnimatedButton*)self, (intptr_t)callback);
 }
 
 bool k_animatedbutton_focus_next_prev_child(void* self, bool next) {

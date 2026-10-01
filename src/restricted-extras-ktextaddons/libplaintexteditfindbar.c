@@ -28,7 +28,7 @@ const QMetaObject* k_textcustomeditor__plaintexteditfindbar_meta_object(const vo
     return TextCustomEditor__PlainTextEditFindBar_MetaObject((TextCustomEditor__PlainTextEditFindBar*)self);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textcustomeditor__plaintexteditfindbar_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextCustomEditor__PlainTextEditFindBar_OnMetaObject((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
@@ -71,7 +71,7 @@ bool k_textcustomeditor__plaintexteditfindbar_view_is_read_only(const void* self
     return TextCustomEditor__PlainTextEditFindBar_ViewIsReadOnly((TextCustomEditor__PlainTextEditFindBar*)self);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_view_is_read_only(const void* self, bool (*callback)(const void*)) {
+void k_textcustomeditor__plaintexteditfindbar_on_view_is_read_only(void* self, bool (*callback)(const void*)) {
     TextCustomEditor__PlainTextEditFindBar_OnViewIsReadOnly((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
@@ -83,7 +83,7 @@ bool k_textcustomeditor__plaintexteditfindbar_document_is_empty(const void* self
     return TextCustomEditor__PlainTextEditFindBar_DocumentIsEmpty((TextCustomEditor__PlainTextEditFindBar*)self);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_document_is_empty(const void* self, bool (*callback)(const void*)) {
+void k_textcustomeditor__plaintexteditfindbar_on_document_is_empty(void* self, bool (*callback)(const void*)) {
     TextCustomEditor__PlainTextEditFindBar_OnDocumentIsEmpty((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
@@ -212,11 +212,11 @@ void k_textcustomeditor__plaintexteditfindbar_close_bar(void* self) {
     TextCustomEditor__TextEditFindBarBase_CloseBar((TextCustomEditor__TextEditFindBarBase*)self);
 }
 
-QPaintDevice* k_textcustomeditor__plaintexteditfindbar_as_q_paint_device(void* self) {
+QPaintDevice* k_textcustomeditor__plaintexteditfindbar_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextCustomEditor__PlainTextEditFindBar* k_textcustomeditor__plaintexteditfindbar_from_q_paint_device(void* _qpaintdevice) {
+TextCustomEditor__PlainTextEditFindBar* k_textcustomeditor__plaintexteditfindbar_from_q_paint_device(const void* _qpaintdevice) {
     return (TextCustomEditor__PlainTextEditFindBar*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1619,8 +1619,8 @@ int32_t k_textcustomeditor__plaintexteditfindbar_super_dev_type(const void* self
     return TextCustomEditor__PlainTextEditFindBar_SuperDevType((TextCustomEditor__PlainTextEditFindBar*)self);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditFindBar_OnDevType((const TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditfindbar_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditFindBar_OnDevType((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintexteditfindbar_set_visible(void* self, bool visible) {
@@ -1643,8 +1643,8 @@ QSize* k_textcustomeditor__plaintexteditfindbar_super_size_hint(const void* self
     return TextCustomEditor__PlainTextEditFindBar_SuperSizeHint((TextCustomEditor__PlainTextEditFindBar*)self);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditFindBar_OnSizeHint((const TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditfindbar_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditFindBar_OnSizeHint((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
 QSize* k_textcustomeditor__plaintexteditfindbar_minimum_size_hint(const void* self) {
@@ -1655,8 +1655,8 @@ QSize* k_textcustomeditor__plaintexteditfindbar_super_minimum_size_hint(const vo
     return TextCustomEditor__PlainTextEditFindBar_SuperMinimumSizeHint((TextCustomEditor__PlainTextEditFindBar*)self);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditFindBar_OnMinimumSizeHint((const TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditfindbar_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditFindBar_OnMinimumSizeHint((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
 int32_t k_textcustomeditor__plaintexteditfindbar_height_for_width(const void* self, int param1) {
@@ -1667,8 +1667,8 @@ int32_t k_textcustomeditor__plaintexteditfindbar_super_height_for_width(const vo
     return TextCustomEditor__PlainTextEditFindBar_SuperHeightForWidth((TextCustomEditor__PlainTextEditFindBar*)self, param1);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextCustomEditor__PlainTextEditFindBar_OnHeightForWidth((const TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditfindbar_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextCustomEditor__PlainTextEditFindBar_OnHeightForWidth((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
 bool k_textcustomeditor__plaintexteditfindbar_has_height_for_width(const void* self) {
@@ -1679,8 +1679,8 @@ bool k_textcustomeditor__plaintexteditfindbar_super_has_height_for_width(const v
     return TextCustomEditor__PlainTextEditFindBar_SuperHasHeightForWidth((TextCustomEditor__PlainTextEditFindBar*)self);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditFindBar_OnHasHeightForWidth((const TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditfindbar_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditFindBar_OnHasHeightForWidth((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textcustomeditor__plaintexteditfindbar_paint_engine(const void* self) {
@@ -1691,8 +1691,8 @@ QPaintEngine* k_textcustomeditor__plaintexteditfindbar_super_paint_engine(const 
     return TextCustomEditor__PlainTextEditFindBar_SuperPaintEngine((TextCustomEditor__PlainTextEditFindBar*)self);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditFindBar_OnPaintEngine((const TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditfindbar_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditFindBar_OnPaintEngine((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintexteditfindbar_mouse_press_event(void* self, void* event) {
@@ -2015,8 +2015,8 @@ int32_t k_textcustomeditor__plaintexteditfindbar_super_metric(const void* self, 
     return TextCustomEditor__PlainTextEditFindBar_SuperMetric((TextCustomEditor__PlainTextEditFindBar*)self, param1);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextCustomEditor__PlainTextEditFindBar_OnMetric((const TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditfindbar_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextCustomEditor__PlainTextEditFindBar_OnMetric((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintexteditfindbar_init_painter(const void* self, void* painter) {
@@ -2027,8 +2027,8 @@ void k_textcustomeditor__plaintexteditfindbar_super_init_painter(const void* sel
     TextCustomEditor__PlainTextEditFindBar_SuperInitPainter((TextCustomEditor__PlainTextEditFindBar*)self, (QPainter*)painter);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextCustomEditor__PlainTextEditFindBar_OnInitPainter((const TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditfindbar_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextCustomEditor__PlainTextEditFindBar_OnInitPainter((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textcustomeditor__plaintexteditfindbar_redirected(const void* self, void* offset) {
@@ -2039,8 +2039,8 @@ QPaintDevice* k_textcustomeditor__plaintexteditfindbar_super_redirected(const vo
     return TextCustomEditor__PlainTextEditFindBar_SuperRedirected((TextCustomEditor__PlainTextEditFindBar*)self, (QPoint*)offset);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextCustomEditor__PlainTextEditFindBar_OnRedirected((const TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditfindbar_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextCustomEditor__PlainTextEditFindBar_OnRedirected((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
 QPainter* k_textcustomeditor__plaintexteditfindbar_shared_painter(const void* self) {
@@ -2051,8 +2051,8 @@ QPainter* k_textcustomeditor__plaintexteditfindbar_super_shared_painter(const vo
     return TextCustomEditor__PlainTextEditFindBar_SuperSharedPainter((TextCustomEditor__PlainTextEditFindBar*)self);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditFindBar_OnSharedPainter((const TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditfindbar_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditFindBar_OnSharedPainter((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintexteditfindbar_input_method_event(void* self, void* param1) {
@@ -2075,8 +2075,8 @@ QVariant* k_textcustomeditor__plaintexteditfindbar_super_input_method_query(cons
     return TextCustomEditor__PlainTextEditFindBar_SuperInputMethodQuery((TextCustomEditor__PlainTextEditFindBar*)self, param1);
 }
 
-void k_textcustomeditor__plaintexteditfindbar_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextCustomEditor__PlainTextEditFindBar_OnInputMethodQuery((const TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditfindbar_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextCustomEditor__PlainTextEditFindBar_OnInputMethodQuery((TextCustomEditor__PlainTextEditFindBar*)self, (intptr_t)callback);
 }
 
 bool k_textcustomeditor__plaintexteditfindbar_focus_next_prev_child(void* self, bool next) {

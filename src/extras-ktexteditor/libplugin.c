@@ -16,7 +16,7 @@ const QMetaObject* k_texteditor__plugin_meta_object(const void* self) {
     return KTextEditor__Plugin_MetaObject((KTextEditor__Plugin*)self);
 }
 
-void k_texteditor__plugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_texteditor__plugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KTextEditor__Plugin_OnMetaObject((KTextEditor__Plugin*)self, (intptr_t)callback);
 }
 
@@ -67,7 +67,7 @@ int32_t k_texteditor__plugin_config_pages(const void* self) {
     return KTextEditor__Plugin_ConfigPages((KTextEditor__Plugin*)self);
 }
 
-void k_texteditor__plugin_on_config_pages(const void* self, int32_t (*callback)(const void*)) {
+void k_texteditor__plugin_on_config_pages(void* self, int32_t (*callback)(const void*)) {
     KTextEditor__Plugin_OnConfigPages((KTextEditor__Plugin*)self, (intptr_t)callback);
 }
 

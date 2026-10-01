@@ -18,7 +18,7 @@ const QMetaObject* k_syntaxhighlighting__definitiondownloader_meta_object(const 
     return KSyntaxHighlighting__DefinitionDownloader_MetaObject((KSyntaxHighlighting__DefinitionDownloader*)self);
 }
 
-void k_syntaxhighlighting__definitiondownloader_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_syntaxhighlighting__definitiondownloader_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSyntaxHighlighting__DefinitionDownloader_OnMetaObject((KSyntaxHighlighting__DefinitionDownloader*)self, (intptr_t)callback);
 }
 

@@ -183,10 +183,10 @@ QEvent* k_kirigami__platform__tabletmodechangedevent_super_clone(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Kirigami__Platform__TabletModeChangedEvent*
+/// @param self Kirigami__Platform__TabletModeChangedEvent*
 /// @param callback QEvent* func(Kirigami__Platform__TabletModeChangedEvent* self)
 ///
-void k_kirigami__platform__tabletmodechangedevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void k_kirigami__platform__tabletmodechangedevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///

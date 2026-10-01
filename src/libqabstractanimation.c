@@ -18,7 +18,7 @@ const QMetaObject* q_abstractanimation_meta_object(const void* self) {
     return QAbstractAnimation_MetaObject((QAbstractAnimation*)self);
 }
 
-void q_abstractanimation_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstractanimation_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractAnimation_OnMetaObject((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
@@ -97,7 +97,7 @@ int32_t q_abstractanimation_duration(const void* self) {
     return QAbstractAnimation_Duration((QAbstractAnimation*)self);
 }
 
-void q_abstractanimation_on_duration(const void* self, int32_t (*callback)(const void*)) {
+void q_abstractanimation_on_duration(void* self, int32_t (*callback)(const void*)) {
     QAbstractAnimation_OnDuration((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
@@ -540,7 +540,7 @@ const QMetaObject* q_animationdriver_meta_object(const void* self) {
     return QAnimationDriver_MetaObject((QAnimationDriver*)self);
 }
 
-void q_animationdriver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_animationdriver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAnimationDriver_OnMetaObject((QAnimationDriver*)self, (intptr_t)callback);
 }
 
@@ -607,7 +607,7 @@ int64_t q_animationdriver_elapsed(const void* self) {
     return QAnimationDriver_Elapsed((QAnimationDriver*)self);
 }
 
-void q_animationdriver_on_elapsed(const void* self, int64_t (*callback)(const void*)) {
+void q_animationdriver_on_elapsed(void* self, int64_t (*callback)(const void*)) {
     QAnimationDriver_OnElapsed((QAnimationDriver*)self, (intptr_t)callback);
 }
 

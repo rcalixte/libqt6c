@@ -30,7 +30,7 @@ const QMetaObject* k_autosavefile_meta_object(const void* self) {
     return KAutoSaveFile_MetaObject((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_autosavefile_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KAutoSaveFile_OnMetaObject((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
@@ -282,7 +282,7 @@ unsigned char* k_autosavefile_map3(void* self, int64_t offset, int64_t size, int
     return (unsigned char*)QFileDevice_Map3((QFileDevice*)self, offset, size, flags);
 }
 
-QIODeviceBase* k_autosavefile_as_q_i_o_device_base(void* self) {
+QIODeviceBase* k_autosavefile_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
@@ -703,8 +703,8 @@ const char* k_autosavefile_super_file_name(const void* self) {
     return _ret;
 }
 
-void k_autosavefile_on_file_name(const void* self, const char* (*callback)(const void*)) {
-    KAutoSaveFile_OnFileName((const KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_file_name(void* self, const char* (*callback)(const void*)) {
+    KAutoSaveFile_OnFileName((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 int64_t k_autosavefile_size(const void* self) {
@@ -715,8 +715,8 @@ int64_t k_autosavefile_super_size(const void* self) {
     return KAutoSaveFile_SuperSize((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_size(const void* self, int64_t (*callback)(const void*)) {
-    KAutoSaveFile_OnSize((const KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_size(void* self, int64_t (*callback)(const void*)) {
+    KAutoSaveFile_OnSize((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 bool k_autosavefile_resize(void* self, int64_t sz) {
@@ -739,8 +739,8 @@ int32_t k_autosavefile_super_permissions(const void* self) {
     return KAutoSaveFile_SuperPermissions((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_permissions(const void* self, int32_t (*callback)(const void*)) {
-    KAutoSaveFile_OnPermissions((const KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_permissions(void* self, int32_t (*callback)(const void*)) {
+    KAutoSaveFile_OnPermissions((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 bool k_autosavefile_set_permissions(void* self, int32_t permissionSpec) {
@@ -775,8 +775,8 @@ bool k_autosavefile_super_is_sequential(const void* self) {
     return KAutoSaveFile_SuperIsSequential((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_is_sequential(const void* self, bool (*callback)(const void*)) {
-    KAutoSaveFile_OnIsSequential((const KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_is_sequential(void* self, bool (*callback)(const void*)) {
+    KAutoSaveFile_OnIsSequential((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 int64_t k_autosavefile_pos(const void* self) {
@@ -787,8 +787,8 @@ int64_t k_autosavefile_super_pos(const void* self) {
     return KAutoSaveFile_SuperPos((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_pos(const void* self, int64_t (*callback)(const void*)) {
-    KAutoSaveFile_OnPos((const KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_pos(void* self, int64_t (*callback)(const void*)) {
+    KAutoSaveFile_OnPos((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 bool k_autosavefile_seek(void* self, int64_t offset) {
@@ -811,8 +811,8 @@ bool k_autosavefile_super_at_end(const void* self) {
     return KAutoSaveFile_SuperAtEnd((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_at_end(const void* self, bool (*callback)(const void*)) {
-    KAutoSaveFile_OnAtEnd((const KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_at_end(void* self, bool (*callback)(const void*)) {
+    KAutoSaveFile_OnAtEnd((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 int64_t k_autosavefile_read_data(void* self, char* data, int64_t maxlen) {
@@ -871,8 +871,8 @@ int64_t k_autosavefile_super_bytes_available(const void* self) {
     return KAutoSaveFile_SuperBytesAvailable((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
-    KAutoSaveFile_OnBytesAvailable((const KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_bytes_available(void* self, int64_t (*callback)(const void*)) {
+    KAutoSaveFile_OnBytesAvailable((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 int64_t k_autosavefile_bytes_to_write(const void* self) {
@@ -883,8 +883,8 @@ int64_t k_autosavefile_super_bytes_to_write(const void* self) {
     return KAutoSaveFile_SuperBytesToWrite((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
-    KAutoSaveFile_OnBytesToWrite((const KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_bytes_to_write(void* self, int64_t (*callback)(const void*)) {
+    KAutoSaveFile_OnBytesToWrite((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 bool k_autosavefile_can_read_line(const void* self) {
@@ -895,8 +895,8 @@ bool k_autosavefile_super_can_read_line(const void* self) {
     return KAutoSaveFile_SuperCanReadLine((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_can_read_line(const void* self, bool (*callback)(const void*)) {
-    KAutoSaveFile_OnCanReadLine((const KAutoSaveFile*)self, (intptr_t)callback);
+void k_autosavefile_on_can_read_line(void* self, bool (*callback)(const void*)) {
+    KAutoSaveFile_OnCanReadLine((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
 bool k_autosavefile_wait_for_ready_read(void* self, int msecs) {

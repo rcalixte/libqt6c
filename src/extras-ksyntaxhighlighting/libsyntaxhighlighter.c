@@ -27,11 +27,11 @@ KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_
     return KSyntaxHighlighting__SyntaxHighlighter_New3((QObject*)parent);
 }
 
-KSyntaxHighlighting__AbstractHighlighter* k_syntaxhighlighting__syntaxhighlighter_as_k_syntax_highlighting___abstract_highlighter(void* self) {
+KSyntaxHighlighting__AbstractHighlighter* k_syntaxhighlighting__syntaxhighlighter_as_k_syntax_highlighting___abstract_highlighter(const void* self) {
     return KSyntaxHighlighting__SyntaxHighlighter_AsKSyntaxHighlighting__AbstractHighlighter((KSyntaxHighlighting__SyntaxHighlighter*)self);
 }
 
-KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_from_k_syntax_highlighting___abstract_highlighter(void* _ksyntaxhighlighting__abstracthighlighter) {
+KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_from_k_syntax_highlighting___abstract_highlighter(const void* _ksyntaxhighlighting__abstracthighlighter) {
     return (KSyntaxHighlighting__SyntaxHighlighter*)KSyntaxHighlighting__SyntaxHighlighter_FromKSyntaxHighlighting__AbstractHighlighter((KSyntaxHighlighting__AbstractHighlighter*)_ksyntaxhighlighting__abstracthighlighter);
 }
 
@@ -39,7 +39,7 @@ const QMetaObject* k_syntaxhighlighting__syntaxhighlighter_meta_object(const voi
     return KSyntaxHighlighting__SyntaxHighlighter_MetaObject((KSyntaxHighlighting__SyntaxHighlighter*)self);
 }
 
-void k_syntaxhighlighting__syntaxhighlighter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_syntaxhighlighting__syntaxhighlighter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSyntaxHighlighting__SyntaxHighlighter_OnMetaObject((KSyntaxHighlighting__SyntaxHighlighter*)self, (intptr_t)callback);
 }
 

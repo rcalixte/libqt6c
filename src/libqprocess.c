@@ -123,7 +123,7 @@ const QMetaObject* q_process_meta_object(const void* self) {
     return QProcess_MetaObject((QProcess*)self);
 }
 
-void q_process_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_process_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QProcess_OnMetaObject((QProcess*)self, (intptr_t)callback);
 }
 
@@ -430,7 +430,7 @@ int64_t q_process_bytes_to_write(const void* self) {
     return QProcess_BytesToWrite((QProcess*)self);
 }
 
-void q_process_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
+void q_process_on_bytes_to_write(void* self, int64_t (*callback)(const void*)) {
     QProcess_OnBytesToWrite((QProcess*)self, (intptr_t)callback);
 }
 
@@ -442,7 +442,7 @@ bool q_process_is_sequential(const void* self) {
     return QProcess_IsSequential((QProcess*)self);
 }
 
-void q_process_on_is_sequential(const void* self, bool (*callback)(const void*)) {
+void q_process_on_is_sequential(void* self, bool (*callback)(const void*)) {
     QProcess_OnIsSequential((QProcess*)self, (intptr_t)callback);
 }
 
@@ -707,7 +707,7 @@ void q_process_on_finished2(void* self, void (*callback)(void*, int, int32_t)) {
     QProcess_Connect_Finished2((QProcess*)self, (intptr_t)callback);
 }
 
-QIODeviceBase* q_process_as_q_i_o_device_base(void* self) {
+QIODeviceBase* q_process_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
@@ -1122,8 +1122,8 @@ int64_t q_process_super_pos(const void* self) {
     return QProcess_SuperPos((QProcess*)self);
 }
 
-void q_process_on_pos(const void* self, int64_t (*callback)(const void*)) {
-    QProcess_OnPos((const QProcess*)self, (intptr_t)callback);
+void q_process_on_pos(void* self, int64_t (*callback)(const void*)) {
+    QProcess_OnPos((QProcess*)self, (intptr_t)callback);
 }
 
 int64_t q_process_size(const void* self) {
@@ -1134,8 +1134,8 @@ int64_t q_process_super_size(const void* self) {
     return QProcess_SuperSize((QProcess*)self);
 }
 
-void q_process_on_size(const void* self, int64_t (*callback)(const void*)) {
-    QProcess_OnSize((const QProcess*)self, (intptr_t)callback);
+void q_process_on_size(void* self, int64_t (*callback)(const void*)) {
+    QProcess_OnSize((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_seek(void* self, int64_t pos) {
@@ -1158,8 +1158,8 @@ bool q_process_super_at_end(const void* self) {
     return QProcess_SuperAtEnd((QProcess*)self);
 }
 
-void q_process_on_at_end(const void* self, bool (*callback)(const void*)) {
-    QProcess_OnAtEnd((const QProcess*)self, (intptr_t)callback);
+void q_process_on_at_end(void* self, bool (*callback)(const void*)) {
+    QProcess_OnAtEnd((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_reset(void* self) {
@@ -1182,8 +1182,8 @@ int64_t q_process_super_bytes_available(const void* self) {
     return QProcess_SuperBytesAvailable((QProcess*)self);
 }
 
-void q_process_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
-    QProcess_OnBytesAvailable((const QProcess*)self, (intptr_t)callback);
+void q_process_on_bytes_available(void* self, int64_t (*callback)(const void*)) {
+    QProcess_OnBytesAvailable((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_can_read_line(const void* self) {
@@ -1194,8 +1194,8 @@ bool q_process_super_can_read_line(const void* self) {
     return QProcess_SuperCanReadLine((QProcess*)self);
 }
 
-void q_process_on_can_read_line(const void* self, bool (*callback)(const void*)) {
-    QProcess_OnCanReadLine((const QProcess*)self, (intptr_t)callback);
+void q_process_on_can_read_line(void* self, bool (*callback)(const void*)) {
+    QProcess_OnCanReadLine((QProcess*)self, (intptr_t)callback);
 }
 
 int64_t q_process_read_line_data(void* self, char* data, int64_t maxlen) {

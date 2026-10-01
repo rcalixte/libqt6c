@@ -33,7 +33,7 @@ const QMetaObject* k_filewidget_meta_object(const void* self) {
     return KFileWidget_MetaObject((KFileWidget*)self);
 }
 
-void k_filewidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_filewidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFileWidget_OnMetaObject((KFileWidget*)self, (intptr_t)callback);
 }
 
@@ -221,7 +221,7 @@ QSize* k_filewidget_size_hint(const void* self) {
     return KFileWidget_SizeHint((KFileWidget*)self);
 }
 
-void k_filewidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_filewidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KFileWidget_OnSizeHint((KFileWidget*)self, (intptr_t)callback);
 }
 
@@ -378,11 +378,11 @@ void k_filewidget_set_filters2(void* self, libqt_list /* of KFileFilter* */ filt
     KFileWidget_SetFilters2((KFileWidget*)self, filters, (KFileFilter*)activeFilter);
 }
 
-QPaintDevice* k_filewidget_as_q_paint_device(void* self) {
+QPaintDevice* k_filewidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KFileWidget* k_filewidget_from_q_paint_device(void* _qpaintdevice) {
+KFileWidget* k_filewidget_from_q_paint_device(const void* _qpaintdevice) {
     return (KFileWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1773,8 +1773,8 @@ int32_t k_filewidget_super_dev_type(const void* self) {
     return KFileWidget_SuperDevType((KFileWidget*)self);
 }
 
-void k_filewidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KFileWidget_OnDevType((const KFileWidget*)self, (intptr_t)callback);
+void k_filewidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KFileWidget_OnDevType((KFileWidget*)self, (intptr_t)callback);
 }
 
 void k_filewidget_set_visible(void* self, bool visible) {
@@ -1797,8 +1797,8 @@ QSize* k_filewidget_super_minimum_size_hint(const void* self) {
     return KFileWidget_SuperMinimumSizeHint((KFileWidget*)self);
 }
 
-void k_filewidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KFileWidget_OnMinimumSizeHint((const KFileWidget*)self, (intptr_t)callback);
+void k_filewidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KFileWidget_OnMinimumSizeHint((KFileWidget*)self, (intptr_t)callback);
 }
 
 int32_t k_filewidget_height_for_width(const void* self, int param1) {
@@ -1809,8 +1809,8 @@ int32_t k_filewidget_super_height_for_width(const void* self, int param1) {
     return KFileWidget_SuperHeightForWidth((KFileWidget*)self, param1);
 }
 
-void k_filewidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KFileWidget_OnHeightForWidth((const KFileWidget*)self, (intptr_t)callback);
+void k_filewidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KFileWidget_OnHeightForWidth((KFileWidget*)self, (intptr_t)callback);
 }
 
 bool k_filewidget_has_height_for_width(const void* self) {
@@ -1821,8 +1821,8 @@ bool k_filewidget_super_has_height_for_width(const void* self) {
     return KFileWidget_SuperHasHeightForWidth((KFileWidget*)self);
 }
 
-void k_filewidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KFileWidget_OnHasHeightForWidth((const KFileWidget*)self, (intptr_t)callback);
+void k_filewidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KFileWidget_OnHasHeightForWidth((KFileWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_filewidget_paint_engine(const void* self) {
@@ -1833,8 +1833,8 @@ QPaintEngine* k_filewidget_super_paint_engine(const void* self) {
     return KFileWidget_SuperPaintEngine((KFileWidget*)self);
 }
 
-void k_filewidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KFileWidget_OnPaintEngine((const KFileWidget*)self, (intptr_t)callback);
+void k_filewidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KFileWidget_OnPaintEngine((KFileWidget*)self, (intptr_t)callback);
 }
 
 bool k_filewidget_event(void* self, void* event) {
@@ -2145,8 +2145,8 @@ int32_t k_filewidget_super_metric(const void* self, int32_t param1) {
     return KFileWidget_SuperMetric((KFileWidget*)self, param1);
 }
 
-void k_filewidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KFileWidget_OnMetric((const KFileWidget*)self, (intptr_t)callback);
+void k_filewidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KFileWidget_OnMetric((KFileWidget*)self, (intptr_t)callback);
 }
 
 void k_filewidget_init_painter(const void* self, void* painter) {
@@ -2157,8 +2157,8 @@ void k_filewidget_super_init_painter(const void* self, void* painter) {
     KFileWidget_SuperInitPainter((KFileWidget*)self, (QPainter*)painter);
 }
 
-void k_filewidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KFileWidget_OnInitPainter((const KFileWidget*)self, (intptr_t)callback);
+void k_filewidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KFileWidget_OnInitPainter((KFileWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_filewidget_redirected(const void* self, void* offset) {
@@ -2169,8 +2169,8 @@ QPaintDevice* k_filewidget_super_redirected(const void* self, void* offset) {
     return KFileWidget_SuperRedirected((KFileWidget*)self, (QPoint*)offset);
 }
 
-void k_filewidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KFileWidget_OnRedirected((const KFileWidget*)self, (intptr_t)callback);
+void k_filewidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KFileWidget_OnRedirected((KFileWidget*)self, (intptr_t)callback);
 }
 
 QPainter* k_filewidget_shared_painter(const void* self) {
@@ -2181,8 +2181,8 @@ QPainter* k_filewidget_super_shared_painter(const void* self) {
     return KFileWidget_SuperSharedPainter((KFileWidget*)self);
 }
 
-void k_filewidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KFileWidget_OnSharedPainter((const KFileWidget*)self, (intptr_t)callback);
+void k_filewidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KFileWidget_OnSharedPainter((KFileWidget*)self, (intptr_t)callback);
 }
 
 void k_filewidget_input_method_event(void* self, void* param1) {
@@ -2205,8 +2205,8 @@ QVariant* k_filewidget_super_input_method_query(const void* self, int32_t param1
     return KFileWidget_SuperInputMethodQuery((KFileWidget*)self, param1);
 }
 
-void k_filewidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KFileWidget_OnInputMethodQuery((const KFileWidget*)self, (intptr_t)callback);
+void k_filewidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KFileWidget_OnInputMethodQuery((KFileWidget*)self, (intptr_t)callback);
 }
 
 bool k_filewidget_focus_next_prev_child(void* self, bool next) {

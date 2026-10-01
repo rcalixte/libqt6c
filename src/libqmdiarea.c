@@ -31,7 +31,7 @@ const QMetaObject* q_mdiarea_meta_object(const void* self) {
     return QMdiArea_MetaObject((QMdiArea*)self);
 }
 
-void q_mdiarea_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_mdiarea_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QMdiArea_OnMetaObject((QMdiArea*)self, (intptr_t)callback);
 }
 
@@ -74,7 +74,7 @@ QSize* q_mdiarea_size_hint(const void* self) {
     return QMdiArea_SizeHint((QMdiArea*)self);
 }
 
-void q_mdiarea_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_mdiarea_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QMdiArea_OnSizeHint((QMdiArea*)self, (intptr_t)callback);
 }
 
@@ -86,7 +86,7 @@ QSize* q_mdiarea_minimum_size_hint(const void* self) {
     return QMdiArea_MinimumSizeHint((QMdiArea*)self);
 }
 
-void q_mdiarea_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_mdiarea_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QMdiArea_OnMinimumSizeHint((QMdiArea*)self, (intptr_t)callback);
 }
 
@@ -491,11 +491,11 @@ void q_mdiarea_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_mdiarea_as_q_paint_device(void* self) {
+QPaintDevice* q_mdiarea_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QMdiArea* q_mdiarea_from_q_paint_device(void* _qpaintdevice) {
+QMdiArea* q_mdiarea_from_q_paint_device(const void* _qpaintdevice) {
     return (QMdiArea*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2018,8 +2018,8 @@ QSize* q_mdiarea_super_viewport_size_hint(const void* self) {
     return QMdiArea_SuperViewportSizeHint((QMdiArea*)self);
 }
 
-void q_mdiarea_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QMdiArea_OnViewportSizeHint((const QMdiArea*)self, (intptr_t)callback);
+void q_mdiarea_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QMdiArea_OnViewportSizeHint((QMdiArea*)self, (intptr_t)callback);
 }
 
 void q_mdiarea_change_event(void* self, void* param1) {
@@ -2042,8 +2042,8 @@ void q_mdiarea_super_init_style_option(const void* self, void* option) {
     QMdiArea_SuperInitStyleOption((QMdiArea*)self, (QStyleOptionFrame*)option);
 }
 
-void q_mdiarea_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QMdiArea_OnInitStyleOption((const QMdiArea*)self, (intptr_t)callback);
+void q_mdiarea_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QMdiArea_OnInitStyleOption((QMdiArea*)self, (intptr_t)callback);
 }
 
 int32_t q_mdiarea_dev_type(const void* self) {
@@ -2054,8 +2054,8 @@ int32_t q_mdiarea_super_dev_type(const void* self) {
     return QMdiArea_SuperDevType((QMdiArea*)self);
 }
 
-void q_mdiarea_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QMdiArea_OnDevType((const QMdiArea*)self, (intptr_t)callback);
+void q_mdiarea_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QMdiArea_OnDevType((QMdiArea*)self, (intptr_t)callback);
 }
 
 void q_mdiarea_set_visible(void* self, bool visible) {
@@ -2078,8 +2078,8 @@ int32_t q_mdiarea_super_height_for_width(const void* self, int param1) {
     return QMdiArea_SuperHeightForWidth((QMdiArea*)self, param1);
 }
 
-void q_mdiarea_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QMdiArea_OnHeightForWidth((const QMdiArea*)self, (intptr_t)callback);
+void q_mdiarea_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QMdiArea_OnHeightForWidth((QMdiArea*)self, (intptr_t)callback);
 }
 
 bool q_mdiarea_has_height_for_width(const void* self) {
@@ -2090,8 +2090,8 @@ bool q_mdiarea_super_has_height_for_width(const void* self) {
     return QMdiArea_SuperHasHeightForWidth((QMdiArea*)self);
 }
 
-void q_mdiarea_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QMdiArea_OnHasHeightForWidth((const QMdiArea*)self, (intptr_t)callback);
+void q_mdiarea_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QMdiArea_OnHasHeightForWidth((QMdiArea*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_mdiarea_paint_engine(const void* self) {
@@ -2102,8 +2102,8 @@ QPaintEngine* q_mdiarea_super_paint_engine(const void* self) {
     return QMdiArea_SuperPaintEngine((QMdiArea*)self);
 }
 
-void q_mdiarea_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QMdiArea_OnPaintEngine((const QMdiArea*)self, (intptr_t)callback);
+void q_mdiarea_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QMdiArea_OnPaintEngine((QMdiArea*)self, (intptr_t)callback);
 }
 
 void q_mdiarea_key_release_event(void* self, void* event) {
@@ -2246,8 +2246,8 @@ int32_t q_mdiarea_super_metric(const void* self, int32_t param1) {
     return QMdiArea_SuperMetric((QMdiArea*)self, param1);
 }
 
-void q_mdiarea_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QMdiArea_OnMetric((const QMdiArea*)self, (intptr_t)callback);
+void q_mdiarea_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QMdiArea_OnMetric((QMdiArea*)self, (intptr_t)callback);
 }
 
 void q_mdiarea_init_painter(const void* self, void* painter) {
@@ -2258,8 +2258,8 @@ void q_mdiarea_super_init_painter(const void* self, void* painter) {
     QMdiArea_SuperInitPainter((QMdiArea*)self, (QPainter*)painter);
 }
 
-void q_mdiarea_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QMdiArea_OnInitPainter((const QMdiArea*)self, (intptr_t)callback);
+void q_mdiarea_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QMdiArea_OnInitPainter((QMdiArea*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_mdiarea_redirected(const void* self, void* offset) {
@@ -2270,8 +2270,8 @@ QPaintDevice* q_mdiarea_super_redirected(const void* self, void* offset) {
     return QMdiArea_SuperRedirected((QMdiArea*)self, (QPoint*)offset);
 }
 
-void q_mdiarea_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QMdiArea_OnRedirected((const QMdiArea*)self, (intptr_t)callback);
+void q_mdiarea_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QMdiArea_OnRedirected((QMdiArea*)self, (intptr_t)callback);
 }
 
 QPainter* q_mdiarea_shared_painter(const void* self) {
@@ -2282,8 +2282,8 @@ QPainter* q_mdiarea_super_shared_painter(const void* self) {
     return QMdiArea_SuperSharedPainter((QMdiArea*)self);
 }
 
-void q_mdiarea_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QMdiArea_OnSharedPainter((const QMdiArea*)self, (intptr_t)callback);
+void q_mdiarea_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QMdiArea_OnSharedPainter((QMdiArea*)self, (intptr_t)callback);
 }
 
 void q_mdiarea_input_method_event(void* self, void* param1) {
@@ -2306,8 +2306,8 @@ QVariant* q_mdiarea_super_input_method_query(const void* self, int32_t param1) {
     return QMdiArea_SuperInputMethodQuery((QMdiArea*)self, param1);
 }
 
-void q_mdiarea_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QMdiArea_OnInputMethodQuery((const QMdiArea*)self, (intptr_t)callback);
+void q_mdiarea_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QMdiArea_OnInputMethodQuery((QMdiArea*)self, (intptr_t)callback);
 }
 
 bool q_mdiarea_focus_next_prev_child(void* self, bool next) {

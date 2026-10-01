@@ -21,7 +21,7 @@ const QMetaObject* q_bluetoothserver_meta_object(const void* self) {
     return QBluetoothServer_MetaObject((QBluetoothServer*)self);
 }
 
-void q_bluetoothserver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_bluetoothserver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QBluetoothServer_OnMetaObject((QBluetoothServer*)self, (intptr_t)callback);
 }
 

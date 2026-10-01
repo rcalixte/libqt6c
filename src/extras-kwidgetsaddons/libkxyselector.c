@@ -27,7 +27,7 @@ const QMetaObject* k_xyselector_meta_object(const void* self) {
     return KXYSelector_MetaObject((KXYSelector*)self);
 }
 
-void k_xyselector_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_xyselector_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KXYSelector_OnMetaObject((KXYSelector*)self, (intptr_t)callback);
 }
 
@@ -102,7 +102,7 @@ QSize* k_xyselector_minimum_size_hint(const void* self) {
     return KXYSelector_MinimumSizeHint((KXYSelector*)self);
 }
 
-void k_xyselector_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_xyselector_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     KXYSelector_OnMinimumSizeHint((KXYSelector*)self, (intptr_t)callback);
 }
 
@@ -208,11 +208,11 @@ const char* k_xyselector_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_xyselector_as_q_paint_device(void* self) {
+QPaintDevice* k_xyselector_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KXYSelector* k_xyselector_from_q_paint_device(void* _qpaintdevice) {
+KXYSelector* k_xyselector_from_q_paint_device(const void* _qpaintdevice) {
     return (KXYSelector*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1599,8 +1599,8 @@ int32_t k_xyselector_super_dev_type(const void* self) {
     return KXYSelector_SuperDevType((KXYSelector*)self);
 }
 
-void k_xyselector_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KXYSelector_OnDevType((const KXYSelector*)self, (intptr_t)callback);
+void k_xyselector_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KXYSelector_OnDevType((KXYSelector*)self, (intptr_t)callback);
 }
 
 void k_xyselector_set_visible(void* self, bool visible) {
@@ -1623,8 +1623,8 @@ QSize* k_xyselector_super_size_hint(const void* self) {
     return KXYSelector_SuperSizeHint((KXYSelector*)self);
 }
 
-void k_xyselector_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KXYSelector_OnSizeHint((const KXYSelector*)self, (intptr_t)callback);
+void k_xyselector_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KXYSelector_OnSizeHint((KXYSelector*)self, (intptr_t)callback);
 }
 
 int32_t k_xyselector_height_for_width(const void* self, int param1) {
@@ -1635,8 +1635,8 @@ int32_t k_xyselector_super_height_for_width(const void* self, int param1) {
     return KXYSelector_SuperHeightForWidth((KXYSelector*)self, param1);
 }
 
-void k_xyselector_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KXYSelector_OnHeightForWidth((const KXYSelector*)self, (intptr_t)callback);
+void k_xyselector_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KXYSelector_OnHeightForWidth((KXYSelector*)self, (intptr_t)callback);
 }
 
 bool k_xyselector_has_height_for_width(const void* self) {
@@ -1647,8 +1647,8 @@ bool k_xyselector_super_has_height_for_width(const void* self) {
     return KXYSelector_SuperHasHeightForWidth((KXYSelector*)self);
 }
 
-void k_xyselector_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KXYSelector_OnHasHeightForWidth((const KXYSelector*)self, (intptr_t)callback);
+void k_xyselector_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KXYSelector_OnHasHeightForWidth((KXYSelector*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_xyselector_paint_engine(const void* self) {
@@ -1659,8 +1659,8 @@ QPaintEngine* k_xyselector_super_paint_engine(const void* self) {
     return KXYSelector_SuperPaintEngine((KXYSelector*)self);
 }
 
-void k_xyselector_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KXYSelector_OnPaintEngine((const KXYSelector*)self, (intptr_t)callback);
+void k_xyselector_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KXYSelector_OnPaintEngine((KXYSelector*)self, (intptr_t)callback);
 }
 
 bool k_xyselector_event(void* self, void* event) {
@@ -1947,8 +1947,8 @@ int32_t k_xyselector_super_metric(const void* self, int32_t param1) {
     return KXYSelector_SuperMetric((KXYSelector*)self, param1);
 }
 
-void k_xyselector_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KXYSelector_OnMetric((const KXYSelector*)self, (intptr_t)callback);
+void k_xyselector_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KXYSelector_OnMetric((KXYSelector*)self, (intptr_t)callback);
 }
 
 void k_xyselector_init_painter(const void* self, void* painter) {
@@ -1959,8 +1959,8 @@ void k_xyselector_super_init_painter(const void* self, void* painter) {
     KXYSelector_SuperInitPainter((KXYSelector*)self, (QPainter*)painter);
 }
 
-void k_xyselector_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KXYSelector_OnInitPainter((const KXYSelector*)self, (intptr_t)callback);
+void k_xyselector_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KXYSelector_OnInitPainter((KXYSelector*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_xyselector_redirected(const void* self, void* offset) {
@@ -1971,8 +1971,8 @@ QPaintDevice* k_xyselector_super_redirected(const void* self, void* offset) {
     return KXYSelector_SuperRedirected((KXYSelector*)self, (QPoint*)offset);
 }
 
-void k_xyselector_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KXYSelector_OnRedirected((const KXYSelector*)self, (intptr_t)callback);
+void k_xyselector_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KXYSelector_OnRedirected((KXYSelector*)self, (intptr_t)callback);
 }
 
 QPainter* k_xyselector_shared_painter(const void* self) {
@@ -1983,8 +1983,8 @@ QPainter* k_xyselector_super_shared_painter(const void* self) {
     return KXYSelector_SuperSharedPainter((KXYSelector*)self);
 }
 
-void k_xyselector_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KXYSelector_OnSharedPainter((const KXYSelector*)self, (intptr_t)callback);
+void k_xyselector_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KXYSelector_OnSharedPainter((KXYSelector*)self, (intptr_t)callback);
 }
 
 void k_xyselector_input_method_event(void* self, void* param1) {
@@ -2007,8 +2007,8 @@ QVariant* k_xyselector_super_input_method_query(const void* self, int32_t param1
     return KXYSelector_SuperInputMethodQuery((KXYSelector*)self, param1);
 }
 
-void k_xyselector_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KXYSelector_OnInputMethodQuery((const KXYSelector*)self, (intptr_t)callback);
+void k_xyselector_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KXYSelector_OnInputMethodQuery((KXYSelector*)self, (intptr_t)callback);
 }
 
 bool k_xyselector_focus_next_prev_child(void* self, bool next) {

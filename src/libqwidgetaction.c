@@ -15,7 +15,7 @@ const QMetaObject* q_widgetaction_meta_object(const void* self) {
     return QWidgetAction_MetaObject((QWidgetAction*)self);
 }
 
-void q_widgetaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_widgetaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QWidgetAction_OnMetaObject((QWidgetAction*)self, (intptr_t)callback);
 }
 

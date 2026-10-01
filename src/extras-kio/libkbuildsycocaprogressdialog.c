@@ -220,11 +220,11 @@ void k_buildsycocaprogressdialog_reject(void* self) {
     QDialog_Reject((QDialog*)self);
 }
 
-QPaintDevice* k_buildsycocaprogressdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_buildsycocaprogressdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KBuildSycocaProgressDialog* k_buildsycocaprogressdialog_from_q_paint_device(void* _qpaintdevice) {
+KBuildSycocaProgressDialog* k_buildsycocaprogressdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KBuildSycocaProgressDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 

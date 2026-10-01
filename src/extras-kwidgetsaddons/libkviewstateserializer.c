@@ -20,7 +20,7 @@ const QMetaObject* k_viewstateserializer_meta_object(const void* self) {
     return KViewStateSerializer_MetaObject((KViewStateSerializer*)self);
 }
 
-void k_viewstateserializer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_viewstateserializer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KViewStateSerializer_OnMetaObject((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
@@ -160,7 +160,7 @@ QModelIndex* k_viewstateserializer_index_from_config_string(const void* self, co
     return KViewStateSerializer_IndexFromConfigString((KViewStateSerializer*)self, (QAbstractItemModel*)model, qstring(key));
 }
 
-void k_viewstateserializer_on_index_from_config_string(const void* self, QModelIndex* (*callback)(const void*, const void*, const char*)) {
+void k_viewstateserializer_on_index_from_config_string(void* self, QModelIndex* (*callback)(const void*, const void*, const char*)) {
     KViewStateSerializer_OnIndexFromConfigString((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
@@ -171,7 +171,7 @@ const char* k_viewstateserializer_index_to_config_string(const void* self, const
     return _ret;
 }
 
-void k_viewstateserializer_on_index_to_config_string(const void* self, const char* (*callback)(const void*, const void*)) {
+void k_viewstateserializer_on_index_to_config_string(void* self, const char* (*callback)(const void*, const void*)) {
     KViewStateSerializer_OnIndexToConfigString((KViewStateSerializer*)self, (intptr_t)callback);
 }
 

@@ -16,7 +16,7 @@ const QMetaObject* q_audioroom_meta_object(const void* self) {
     return QAudioRoom_MetaObject((QAudioRoom*)self);
 }
 
-void q_audioroom_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_audioroom_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAudioRoom_OnMetaObject((QAudioRoom*)self, (intptr_t)callback);
 }
 

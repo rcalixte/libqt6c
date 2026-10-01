@@ -137,10 +137,10 @@ int32_t q_poppler__link_link_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__Link*
+/// @param self Poppler__Link*
 /// @param callback int32_t func(const Poppler__Link* self)
 ///
-void q_poppler__link_on_link_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__link_on_link_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Link.html)
 ///
@@ -216,10 +216,10 @@ int32_t q_poppler__linkgoto_link_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__LinkGoto*
+/// @param self Poppler__LinkGoto*
 /// @param callback int32_t func(const Poppler__LinkGoto* self)
 ///
-void q_poppler__linkgoto_on_link_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__linkgoto_on_link_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkGoto.html)
 ///
@@ -295,10 +295,10 @@ int32_t q_poppler__linkexecute_link_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__LinkExecute*
+/// @param self Poppler__LinkExecute*
 /// @param callback int32_t func(const Poppler__LinkExecute* self)
 ///
-void q_poppler__linkexecute_on_link_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__linkexecute_on_link_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkExecute.html)
 ///
@@ -365,10 +365,10 @@ int32_t q_poppler__linkbrowse_link_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__LinkBrowse*
+/// @param self Poppler__LinkBrowse*
 /// @param callback int32_t func(const Poppler__LinkBrowse* self)
 ///
-void q_poppler__linkbrowse_on_link_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__linkbrowse_on_link_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkBrowse.html)
 ///
@@ -435,10 +435,10 @@ int32_t q_poppler__linkaction_link_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__LinkAction*
+/// @param self Poppler__LinkAction*
 /// @param callback int32_t func(const Poppler__LinkAction* self)
 ///
-void q_poppler__linkaction_on_link_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__linkaction_on_link_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkAction.html)
 ///
@@ -501,10 +501,10 @@ int32_t q_poppler__linksound_link_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__LinkSound*
+/// @param self Poppler__LinkSound*
 /// @param callback int32_t func(const Poppler__LinkSound* self)
 ///
-void q_poppler__linksound_on_link_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__linksound_on_link_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkSound.html)
 ///
@@ -658,10 +658,10 @@ int32_t q_poppler__linkjavascript_link_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__LinkJavaScript*
+/// @param self Poppler__LinkJavaScript*
 /// @param callback int32_t func(const Poppler__LinkJavaScript* self)
 ///
-void q_poppler__linkjavascript_on_link_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__linkjavascript_on_link_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LinkJavaScript.html)
 ///

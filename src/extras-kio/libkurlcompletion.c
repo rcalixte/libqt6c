@@ -20,7 +20,7 @@ const QMetaObject* k_urlcompletion_meta_object(const void* self) {
     return KUrlCompletion_MetaObject((KUrlCompletion*)self);
 }
 
-void k_urlcompletion_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_urlcompletion_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KUrlCompletion_OnMetaObject((KUrlCompletion*)self, (intptr_t)callback);
 }
 
@@ -93,7 +93,7 @@ QUrl* k_urlcompletion_dir(const void* self) {
     return KUrlCompletion_Dir((KUrlCompletion*)self);
 }
 
-void k_urlcompletion_on_dir(const void* self, QUrl* (*callback)(const void*)) {
+void k_urlcompletion_on_dir(void* self, QUrl* (*callback)(const void*)) {
     KUrlCompletion_OnDir((KUrlCompletion*)self, (intptr_t)callback);
 }
 
@@ -105,7 +105,7 @@ bool k_urlcompletion_is_running(const void* self) {
     return KUrlCompletion_IsRunning((KUrlCompletion*)self);
 }
 
-void k_urlcompletion_on_is_running(const void* self, bool (*callback)(const void*)) {
+void k_urlcompletion_on_is_running(void* self, bool (*callback)(const void*)) {
     KUrlCompletion_OnIsRunning((KUrlCompletion*)self, (intptr_t)callback);
 }
 
@@ -129,7 +129,7 @@ int32_t k_urlcompletion_mode(const void* self) {
     return KUrlCompletion_Mode((KUrlCompletion*)self);
 }
 
-void k_urlcompletion_on_mode(const void* self, int32_t (*callback)(const void*)) {
+void k_urlcompletion_on_mode(void* self, int32_t (*callback)(const void*)) {
     KUrlCompletion_OnMode((KUrlCompletion*)self, (intptr_t)callback);
 }
 
@@ -153,7 +153,7 @@ bool k_urlcompletion_replace_env(const void* self) {
     return KUrlCompletion_ReplaceEnv((KUrlCompletion*)self);
 }
 
-void k_urlcompletion_on_replace_env(const void* self, bool (*callback)(const void*)) {
+void k_urlcompletion_on_replace_env(void* self, bool (*callback)(const void*)) {
     KUrlCompletion_OnReplaceEnv((KUrlCompletion*)self, (intptr_t)callback);
 }
 
@@ -177,7 +177,7 @@ bool k_urlcompletion_replace_home(const void* self) {
     return KUrlCompletion_ReplaceHome((KUrlCompletion*)self);
 }
 
-void k_urlcompletion_on_replace_home(const void* self, bool (*callback)(const void*)) {
+void k_urlcompletion_on_replace_home(void* self, bool (*callback)(const void*)) {
     KUrlCompletion_OnReplaceHome((KUrlCompletion*)self, (intptr_t)callback);
 }
 
@@ -256,7 +256,7 @@ void k_urlcompletion_post_process_matches(const void* self, const char* matches[
     free(matches_qstr);
 }
 
-void k_urlcompletion_on_post_process_matches(const void* self, void (*callback)(const void*, const char**)) {
+void k_urlcompletion_on_post_process_matches(void* self, void (*callback)(const void*, const char**)) {
     KUrlCompletion_OnPostProcessMatches((KUrlCompletion*)self, (intptr_t)callback);
 }
 
@@ -277,7 +277,7 @@ void k_urlcompletion_post_process_matches2(const void* self, void* matches) {
     KUrlCompletion_PostProcessMatches2((KUrlCompletion*)self, (KCompletionMatches*)matches);
 }
 
-void k_urlcompletion_on_post_process_matches2(const void* self, void (*callback)(const void*, void*)) {
+void k_urlcompletion_on_post_process_matches2(void* self, void (*callback)(const void*, void*)) {
     KUrlCompletion_OnPostProcessMatches2((KUrlCompletion*)self, (intptr_t)callback);
 }
 
@@ -707,8 +707,8 @@ const char* k_urlcompletion_super_last_match(const void* self) {
     return _ret;
 }
 
-void k_urlcompletion_on_last_match(const void* self, const char* (*callback)(const void*)) {
-    KUrlCompletion_OnLastMatch((const KUrlCompletion*)self, (intptr_t)callback);
+void k_urlcompletion_on_last_match(void* self, const char* (*callback)(const void*)) {
+    KUrlCompletion_OnLastMatch((KUrlCompletion*)self, (intptr_t)callback);
 }
 
 void k_urlcompletion_set_completion_mode(void* self, int32_t mode) {

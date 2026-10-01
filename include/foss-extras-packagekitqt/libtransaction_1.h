@@ -26,10 +26,10 @@ const QMetaObject* q_packagekit__transaction_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const PackageKit__Transaction*
+/// @param self PackageKit__Transaction*
 /// @param callback const QMetaObject* func(const PackageKit__Transaction* self)
 ///
-void q_packagekit__transaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_packagekit__transaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1385,10 +1385,10 @@ QObject* q_packagekit__transaction_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const PackageKit__Transaction*
+/// @param self PackageKit__Transaction*
 /// @param callback QObject* func(PackageKit__Transaction* self)
 ///
-void q_packagekit__transaction_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_packagekit__transaction_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1416,10 +1416,10 @@ int32_t q_packagekit__transaction_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const PackageKit__Transaction*
+/// @param self PackageKit__Transaction*
 /// @param callback int32_t func(PackageKit__Transaction* self)
 ///
-void q_packagekit__transaction_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_packagekit__transaction_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1449,10 +1449,10 @@ int32_t q_packagekit__transaction_super_receivers(const void* self, const char* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const PackageKit__Transaction*
+/// @param self PackageKit__Transaction*
 /// @param callback int32_t func(PackageKit__Transaction* self, const char* signal)
 ///
-void q_packagekit__transaction_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_packagekit__transaction_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1482,10 +1482,10 @@ bool q_packagekit__transaction_super_is_signal_connected(const void* self, const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const PackageKit__Transaction*
+/// @param self PackageKit__Transaction*
 /// @param callback bool func(PackageKit__Transaction* self, QMetaMethod* signal)
 ///
-void q_packagekit__transaction_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_packagekit__transaction_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

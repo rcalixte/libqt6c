@@ -25,7 +25,7 @@ const QMetaObject* k_textemoticonswidgets__emoticontexteditselector_meta_object(
     return TextEmoticonsWidgets__EmoticonTextEditSelector_MetaObject((TextEmoticonsWidgets__EmoticonTextEditSelector*)self);
 }
 
-void k_textemoticonswidgets__emoticontexteditselector_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textemoticonswidgets__emoticontexteditselector_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextEmoticonsWidgets__EmoticonTextEditSelector_OnMetaObject((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
 }
 
@@ -110,11 +110,11 @@ const char* k_textemoticonswidgets__emoticontexteditselector_tr3(const char* s, 
     return _ret;
 }
 
-QPaintDevice* k_textemoticonswidgets__emoticontexteditselector_as_q_paint_device(void* self) {
+QPaintDevice* k_textemoticonswidgets__emoticontexteditselector_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextEmoticonsWidgets__EmoticonTextEditSelector* k_textemoticonswidgets__emoticontexteditselector_from_q_paint_device(void* _qpaintdevice) {
+TextEmoticonsWidgets__EmoticonTextEditSelector* k_textemoticonswidgets__emoticontexteditselector_from_q_paint_device(const void* _qpaintdevice) {
     return (TextEmoticonsWidgets__EmoticonTextEditSelector*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1505,8 +1505,8 @@ int32_t k_textemoticonswidgets__emoticontexteditselector_super_dev_type(const vo
     return TextEmoticonsWidgets__EmoticonTextEditSelector_SuperDevType((TextEmoticonsWidgets__EmoticonTextEditSelector*)self);
 }
 
-void k_textemoticonswidgets__emoticontexteditselector_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextEmoticonsWidgets__EmoticonTextEditSelector_OnDevType((const TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
+void k_textemoticonswidgets__emoticontexteditselector_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextEmoticonsWidgets__EmoticonTextEditSelector_OnDevType((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
 }
 
 void k_textemoticonswidgets__emoticontexteditselector_set_visible(void* self, bool visible) {
@@ -1529,8 +1529,8 @@ QSize* k_textemoticonswidgets__emoticontexteditselector_super_size_hint(const vo
     return TextEmoticonsWidgets__EmoticonTextEditSelector_SuperSizeHint((TextEmoticonsWidgets__EmoticonTextEditSelector*)self);
 }
 
-void k_textemoticonswidgets__emoticontexteditselector_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextEmoticonsWidgets__EmoticonTextEditSelector_OnSizeHint((const TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
+void k_textemoticonswidgets__emoticontexteditselector_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextEmoticonsWidgets__EmoticonTextEditSelector_OnSizeHint((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
 }
 
 QSize* k_textemoticonswidgets__emoticontexteditselector_minimum_size_hint(const void* self) {
@@ -1541,8 +1541,8 @@ QSize* k_textemoticonswidgets__emoticontexteditselector_super_minimum_size_hint(
     return TextEmoticonsWidgets__EmoticonTextEditSelector_SuperMinimumSizeHint((TextEmoticonsWidgets__EmoticonTextEditSelector*)self);
 }
 
-void k_textemoticonswidgets__emoticontexteditselector_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextEmoticonsWidgets__EmoticonTextEditSelector_OnMinimumSizeHint((const TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
+void k_textemoticonswidgets__emoticontexteditselector_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextEmoticonsWidgets__EmoticonTextEditSelector_OnMinimumSizeHint((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
 }
 
 int32_t k_textemoticonswidgets__emoticontexteditselector_height_for_width(const void* self, int param1) {
@@ -1553,8 +1553,8 @@ int32_t k_textemoticonswidgets__emoticontexteditselector_super_height_for_width(
     return TextEmoticonsWidgets__EmoticonTextEditSelector_SuperHeightForWidth((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, param1);
 }
 
-void k_textemoticonswidgets__emoticontexteditselector_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextEmoticonsWidgets__EmoticonTextEditSelector_OnHeightForWidth((const TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
+void k_textemoticonswidgets__emoticontexteditselector_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextEmoticonsWidgets__EmoticonTextEditSelector_OnHeightForWidth((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
 }
 
 bool k_textemoticonswidgets__emoticontexteditselector_has_height_for_width(const void* self) {
@@ -1565,8 +1565,8 @@ bool k_textemoticonswidgets__emoticontexteditselector_super_has_height_for_width
     return TextEmoticonsWidgets__EmoticonTextEditSelector_SuperHasHeightForWidth((TextEmoticonsWidgets__EmoticonTextEditSelector*)self);
 }
 
-void k_textemoticonswidgets__emoticontexteditselector_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextEmoticonsWidgets__EmoticonTextEditSelector_OnHasHeightForWidth((const TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
+void k_textemoticonswidgets__emoticontexteditselector_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextEmoticonsWidgets__EmoticonTextEditSelector_OnHasHeightForWidth((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textemoticonswidgets__emoticontexteditselector_paint_engine(const void* self) {
@@ -1577,8 +1577,8 @@ QPaintEngine* k_textemoticonswidgets__emoticontexteditselector_super_paint_engin
     return TextEmoticonsWidgets__EmoticonTextEditSelector_SuperPaintEngine((TextEmoticonsWidgets__EmoticonTextEditSelector*)self);
 }
 
-void k_textemoticonswidgets__emoticontexteditselector_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextEmoticonsWidgets__EmoticonTextEditSelector_OnPaintEngine((const TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
+void k_textemoticonswidgets__emoticontexteditselector_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextEmoticonsWidgets__EmoticonTextEditSelector_OnPaintEngine((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
 }
 
 bool k_textemoticonswidgets__emoticontexteditselector_event(void* self, void* event) {
@@ -1913,8 +1913,8 @@ int32_t k_textemoticonswidgets__emoticontexteditselector_super_metric(const void
     return TextEmoticonsWidgets__EmoticonTextEditSelector_SuperMetric((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, param1);
 }
 
-void k_textemoticonswidgets__emoticontexteditselector_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextEmoticonsWidgets__EmoticonTextEditSelector_OnMetric((const TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
+void k_textemoticonswidgets__emoticontexteditselector_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextEmoticonsWidgets__EmoticonTextEditSelector_OnMetric((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
 }
 
 void k_textemoticonswidgets__emoticontexteditselector_init_painter(const void* self, void* painter) {
@@ -1925,8 +1925,8 @@ void k_textemoticonswidgets__emoticontexteditselector_super_init_painter(const v
     TextEmoticonsWidgets__EmoticonTextEditSelector_SuperInitPainter((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (QPainter*)painter);
 }
 
-void k_textemoticonswidgets__emoticontexteditselector_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextEmoticonsWidgets__EmoticonTextEditSelector_OnInitPainter((const TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
+void k_textemoticonswidgets__emoticontexteditselector_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextEmoticonsWidgets__EmoticonTextEditSelector_OnInitPainter((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textemoticonswidgets__emoticontexteditselector_redirected(const void* self, void* offset) {
@@ -1937,8 +1937,8 @@ QPaintDevice* k_textemoticonswidgets__emoticontexteditselector_super_redirected(
     return TextEmoticonsWidgets__EmoticonTextEditSelector_SuperRedirected((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (QPoint*)offset);
 }
 
-void k_textemoticonswidgets__emoticontexteditselector_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextEmoticonsWidgets__EmoticonTextEditSelector_OnRedirected((const TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
+void k_textemoticonswidgets__emoticontexteditselector_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextEmoticonsWidgets__EmoticonTextEditSelector_OnRedirected((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
 }
 
 QPainter* k_textemoticonswidgets__emoticontexteditselector_shared_painter(const void* self) {
@@ -1949,8 +1949,8 @@ QPainter* k_textemoticonswidgets__emoticontexteditselector_super_shared_painter(
     return TextEmoticonsWidgets__EmoticonTextEditSelector_SuperSharedPainter((TextEmoticonsWidgets__EmoticonTextEditSelector*)self);
 }
 
-void k_textemoticonswidgets__emoticontexteditselector_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextEmoticonsWidgets__EmoticonTextEditSelector_OnSharedPainter((const TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
+void k_textemoticonswidgets__emoticontexteditselector_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextEmoticonsWidgets__EmoticonTextEditSelector_OnSharedPainter((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
 }
 
 void k_textemoticonswidgets__emoticontexteditselector_input_method_event(void* self, void* param1) {
@@ -1973,8 +1973,8 @@ QVariant* k_textemoticonswidgets__emoticontexteditselector_super_input_method_qu
     return TextEmoticonsWidgets__EmoticonTextEditSelector_SuperInputMethodQuery((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, param1);
 }
 
-void k_textemoticonswidgets__emoticontexteditselector_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextEmoticonsWidgets__EmoticonTextEditSelector_OnInputMethodQuery((const TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
+void k_textemoticonswidgets__emoticontexteditselector_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextEmoticonsWidgets__EmoticonTextEditSelector_OnInputMethodQuery((TextEmoticonsWidgets__EmoticonTextEditSelector*)self, (intptr_t)callback);
 }
 
 bool k_textemoticonswidgets__emoticontexteditselector_focus_next_prev_child(void* self, bool next) {

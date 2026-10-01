@@ -28,7 +28,7 @@ const QMetaObject* k_pageview_meta_object(const void* self) {
     return KPageView_MetaObject((KPageView*)self);
 }
 
-void k_pageview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_pageview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPageView_OnMetaObject((KPageView*)self, (intptr_t)callback);
 }
 
@@ -143,7 +143,7 @@ bool k_pageview_show_page_header(const void* self) {
     return KPageView_ShowPageHeader((KPageView*)self);
 }
 
-void k_pageview_on_show_page_header(const void* self, bool (*callback)(const void*)) {
+void k_pageview_on_show_page_header(void* self, bool (*callback)(const void*)) {
     KPageView_OnShowPageHeader((KPageView*)self, (intptr_t)callback);
 }
 
@@ -155,7 +155,7 @@ int32_t k_pageview_view_position(const void* self) {
     return KPageView_ViewPosition((KPageView*)self);
 }
 
-void k_pageview_on_view_position(const void* self, int32_t (*callback)(const void*)) {
+void k_pageview_on_view_position(void* self, int32_t (*callback)(const void*)) {
     KPageView_OnViewPosition((KPageView*)self, (intptr_t)callback);
 }
 
@@ -177,11 +177,11 @@ const char* k_pageview_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_pageview_as_q_paint_device(void* self) {
+QPaintDevice* k_pageview_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KPageView* k_pageview_from_q_paint_device(void* _qpaintdevice) {
+KPageView* k_pageview_from_q_paint_device(const void* _qpaintdevice) {
     return (KPageView*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1572,8 +1572,8 @@ int32_t k_pageview_super_dev_type(const void* self) {
     return KPageView_SuperDevType((KPageView*)self);
 }
 
-void k_pageview_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KPageView_OnDevType((const KPageView*)self, (intptr_t)callback);
+void k_pageview_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KPageView_OnDevType((KPageView*)self, (intptr_t)callback);
 }
 
 void k_pageview_set_visible(void* self, bool visible) {
@@ -1596,8 +1596,8 @@ QSize* k_pageview_super_size_hint(const void* self) {
     return KPageView_SuperSizeHint((KPageView*)self);
 }
 
-void k_pageview_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPageView_OnSizeHint((const KPageView*)self, (intptr_t)callback);
+void k_pageview_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPageView_OnSizeHint((KPageView*)self, (intptr_t)callback);
 }
 
 QSize* k_pageview_minimum_size_hint(const void* self) {
@@ -1608,8 +1608,8 @@ QSize* k_pageview_super_minimum_size_hint(const void* self) {
     return KPageView_SuperMinimumSizeHint((KPageView*)self);
 }
 
-void k_pageview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPageView_OnMinimumSizeHint((const KPageView*)self, (intptr_t)callback);
+void k_pageview_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPageView_OnMinimumSizeHint((KPageView*)self, (intptr_t)callback);
 }
 
 int32_t k_pageview_height_for_width(const void* self, int param1) {
@@ -1620,8 +1620,8 @@ int32_t k_pageview_super_height_for_width(const void* self, int param1) {
     return KPageView_SuperHeightForWidth((KPageView*)self, param1);
 }
 
-void k_pageview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KPageView_OnHeightForWidth((const KPageView*)self, (intptr_t)callback);
+void k_pageview_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KPageView_OnHeightForWidth((KPageView*)self, (intptr_t)callback);
 }
 
 bool k_pageview_has_height_for_width(const void* self) {
@@ -1632,8 +1632,8 @@ bool k_pageview_super_has_height_for_width(const void* self) {
     return KPageView_SuperHasHeightForWidth((KPageView*)self);
 }
 
-void k_pageview_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KPageView_OnHasHeightForWidth((const KPageView*)self, (intptr_t)callback);
+void k_pageview_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KPageView_OnHasHeightForWidth((KPageView*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_pageview_paint_engine(const void* self) {
@@ -1644,8 +1644,8 @@ QPaintEngine* k_pageview_super_paint_engine(const void* self) {
     return KPageView_SuperPaintEngine((KPageView*)self);
 }
 
-void k_pageview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KPageView_OnPaintEngine((const KPageView*)self, (intptr_t)callback);
+void k_pageview_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KPageView_OnPaintEngine((KPageView*)self, (intptr_t)callback);
 }
 
 bool k_pageview_event(void* self, void* event) {
@@ -1980,8 +1980,8 @@ int32_t k_pageview_super_metric(const void* self, int32_t param1) {
     return KPageView_SuperMetric((KPageView*)self, param1);
 }
 
-void k_pageview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KPageView_OnMetric((const KPageView*)self, (intptr_t)callback);
+void k_pageview_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KPageView_OnMetric((KPageView*)self, (intptr_t)callback);
 }
 
 void k_pageview_init_painter(const void* self, void* painter) {
@@ -1992,8 +1992,8 @@ void k_pageview_super_init_painter(const void* self, void* painter) {
     KPageView_SuperInitPainter((KPageView*)self, (QPainter*)painter);
 }
 
-void k_pageview_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KPageView_OnInitPainter((const KPageView*)self, (intptr_t)callback);
+void k_pageview_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KPageView_OnInitPainter((KPageView*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_pageview_redirected(const void* self, void* offset) {
@@ -2004,8 +2004,8 @@ QPaintDevice* k_pageview_super_redirected(const void* self, void* offset) {
     return KPageView_SuperRedirected((KPageView*)self, (QPoint*)offset);
 }
 
-void k_pageview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KPageView_OnRedirected((const KPageView*)self, (intptr_t)callback);
+void k_pageview_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KPageView_OnRedirected((KPageView*)self, (intptr_t)callback);
 }
 
 QPainter* k_pageview_shared_painter(const void* self) {
@@ -2016,8 +2016,8 @@ QPainter* k_pageview_super_shared_painter(const void* self) {
     return KPageView_SuperSharedPainter((KPageView*)self);
 }
 
-void k_pageview_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KPageView_OnSharedPainter((const KPageView*)self, (intptr_t)callback);
+void k_pageview_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KPageView_OnSharedPainter((KPageView*)self, (intptr_t)callback);
 }
 
 void k_pageview_input_method_event(void* self, void* param1) {
@@ -2040,8 +2040,8 @@ QVariant* k_pageview_super_input_method_query(const void* self, int32_t param1) 
     return KPageView_SuperInputMethodQuery((KPageView*)self, param1);
 }
 
-void k_pageview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KPageView_OnInputMethodQuery((const KPageView*)self, (intptr_t)callback);
+void k_pageview_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KPageView_OnInputMethodQuery((KPageView*)self, (intptr_t)callback);
 }
 
 bool k_pageview_focus_next_prev_child(void* self, bool next) {

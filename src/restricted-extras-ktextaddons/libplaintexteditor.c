@@ -39,7 +39,7 @@ const QMetaObject* k_textcustomeditor__plaintexteditor_meta_object(const void* s
     return TextCustomEditor__PlainTextEditor_MetaObject((TextCustomEditor__PlainTextEditor*)self);
 }
 
-void k_textcustomeditor__plaintexteditor_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textcustomeditor__plaintexteditor_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextCustomEditor__PlainTextEditor_OnMetaObject((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
@@ -890,11 +890,11 @@ void k_textcustomeditor__plaintexteditor_set_frame_rect(void* self, const void* 
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_textcustomeditor__plaintexteditor_as_q_paint_device(void* self) {
+QPaintDevice* k_textcustomeditor__plaintexteditor_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextCustomEditor__PlainTextEditor* k_textcustomeditor__plaintexteditor_from_q_paint_device(void* _qpaintdevice) {
+TextCustomEditor__PlainTextEditor* k_textcustomeditor__plaintexteditor_from_q_paint_device(const void* _qpaintdevice) {
     return (TextCustomEditor__PlainTextEditor*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2293,8 +2293,8 @@ QVariant* k_textcustomeditor__plaintexteditor_super_input_method_query(const voi
     return TextCustomEditor__PlainTextEditor_SuperInputMethodQuery((TextCustomEditor__PlainTextEditor*)self, property);
 }
 
-void k_textcustomeditor__plaintexteditor_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextCustomEditor__PlainTextEditor_OnInputMethodQuery((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextCustomEditor__PlainTextEditor_OnInputMethodQuery((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintexteditor_timer_event(void* self, void* e) {
@@ -2497,8 +2497,8 @@ QMimeData* k_textcustomeditor__plaintexteditor_super_create_mime_data_from_selec
     return TextCustomEditor__PlainTextEditor_SuperCreateMimeDataFromSelection((TextCustomEditor__PlainTextEditor*)self);
 }
 
-void k_textcustomeditor__plaintexteditor_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditor_OnCreateMimeDataFromSelection((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditor_OnCreateMimeDataFromSelection((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 bool k_textcustomeditor__plaintexteditor_can_insert_from_mime_data(const void* self, const void* source) {
@@ -2509,8 +2509,8 @@ bool k_textcustomeditor__plaintexteditor_super_can_insert_from_mime_data(const v
     return TextCustomEditor__PlainTextEditor_SuperCanInsertFromMimeData((TextCustomEditor__PlainTextEditor*)self, (QMimeData*)source);
 }
 
-void k_textcustomeditor__plaintexteditor_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*)) {
-    TextCustomEditor__PlainTextEditor_OnCanInsertFromMimeData((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_can_insert_from_mime_data(void* self, bool (*callback)(const void*, const void*)) {
+    TextCustomEditor__PlainTextEditor_OnCanInsertFromMimeData((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintexteditor_insert_from_mime_data(void* self, const void* source) {
@@ -2569,8 +2569,8 @@ QSize* k_textcustomeditor__plaintexteditor_super_minimum_size_hint(const void* s
     return TextCustomEditor__PlainTextEditor_SuperMinimumSizeHint((TextCustomEditor__PlainTextEditor*)self);
 }
 
-void k_textcustomeditor__plaintexteditor_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditor_OnMinimumSizeHint((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditor_OnMinimumSizeHint((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 QSize* k_textcustomeditor__plaintexteditor_size_hint(const void* self) {
@@ -2581,8 +2581,8 @@ QSize* k_textcustomeditor__plaintexteditor_super_size_hint(const void* self) {
     return TextCustomEditor__PlainTextEditor_SuperSizeHint((TextCustomEditor__PlainTextEditor*)self);
 }
 
-void k_textcustomeditor__plaintexteditor_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditor_OnSizeHint((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditor_OnSizeHint((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintexteditor_setup_viewport(void* self, void* viewport) {
@@ -2629,8 +2629,8 @@ QSize* k_textcustomeditor__plaintexteditor_super_viewport_size_hint(const void* 
     return TextCustomEditor__PlainTextEditor_SuperViewportSizeHint((TextCustomEditor__PlainTextEditor*)self);
 }
 
-void k_textcustomeditor__plaintexteditor_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditor_OnViewportSizeHint((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditor_OnViewportSizeHint((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintexteditor_init_style_option(const void* self, void* option) {
@@ -2641,8 +2641,8 @@ void k_textcustomeditor__plaintexteditor_super_init_style_option(const void* sel
     TextCustomEditor__PlainTextEditor_SuperInitStyleOption((TextCustomEditor__PlainTextEditor*)self, (QStyleOptionFrame*)option);
 }
 
-void k_textcustomeditor__plaintexteditor_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    TextCustomEditor__PlainTextEditor_OnInitStyleOption((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    TextCustomEditor__PlainTextEditor_OnInitStyleOption((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 int32_t k_textcustomeditor__plaintexteditor_dev_type(const void* self) {
@@ -2653,8 +2653,8 @@ int32_t k_textcustomeditor__plaintexteditor_super_dev_type(const void* self) {
     return TextCustomEditor__PlainTextEditor_SuperDevType((TextCustomEditor__PlainTextEditor*)self);
 }
 
-void k_textcustomeditor__plaintexteditor_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditor_OnDevType((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditor_OnDevType((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintexteditor_set_visible(void* self, bool visible) {
@@ -2677,8 +2677,8 @@ int32_t k_textcustomeditor__plaintexteditor_super_height_for_width(const void* s
     return TextCustomEditor__PlainTextEditor_SuperHeightForWidth((TextCustomEditor__PlainTextEditor*)self, param1);
 }
 
-void k_textcustomeditor__plaintexteditor_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextCustomEditor__PlainTextEditor_OnHeightForWidth((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextCustomEditor__PlainTextEditor_OnHeightForWidth((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 bool k_textcustomeditor__plaintexteditor_has_height_for_width(const void* self) {
@@ -2689,8 +2689,8 @@ bool k_textcustomeditor__plaintexteditor_super_has_height_for_width(const void* 
     return TextCustomEditor__PlainTextEditor_SuperHasHeightForWidth((TextCustomEditor__PlainTextEditor*)self);
 }
 
-void k_textcustomeditor__plaintexteditor_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditor_OnHasHeightForWidth((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditor_OnHasHeightForWidth((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textcustomeditor__plaintexteditor_paint_engine(const void* self) {
@@ -2701,8 +2701,8 @@ QPaintEngine* k_textcustomeditor__plaintexteditor_super_paint_engine(const void*
     return TextCustomEditor__PlainTextEditor_SuperPaintEngine((TextCustomEditor__PlainTextEditor*)self);
 }
 
-void k_textcustomeditor__plaintexteditor_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditor_OnPaintEngine((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditor_OnPaintEngine((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintexteditor_enter_event(void* self, void* event) {
@@ -2809,8 +2809,8 @@ int32_t k_textcustomeditor__plaintexteditor_super_metric(const void* self, int32
     return TextCustomEditor__PlainTextEditor_SuperMetric((TextCustomEditor__PlainTextEditor*)self, param1);
 }
 
-void k_textcustomeditor__plaintexteditor_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextCustomEditor__PlainTextEditor_OnMetric((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextCustomEditor__PlainTextEditor_OnMetric((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintexteditor_init_painter(const void* self, void* painter) {
@@ -2821,8 +2821,8 @@ void k_textcustomeditor__plaintexteditor_super_init_painter(const void* self, vo
     TextCustomEditor__PlainTextEditor_SuperInitPainter((TextCustomEditor__PlainTextEditor*)self, (QPainter*)painter);
 }
 
-void k_textcustomeditor__plaintexteditor_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextCustomEditor__PlainTextEditor_OnInitPainter((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextCustomEditor__PlainTextEditor_OnInitPainter((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textcustomeditor__plaintexteditor_redirected(const void* self, void* offset) {
@@ -2833,8 +2833,8 @@ QPaintDevice* k_textcustomeditor__plaintexteditor_super_redirected(const void* s
     return TextCustomEditor__PlainTextEditor_SuperRedirected((TextCustomEditor__PlainTextEditor*)self, (QPoint*)offset);
 }
 
-void k_textcustomeditor__plaintexteditor_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextCustomEditor__PlainTextEditor_OnRedirected((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextCustomEditor__PlainTextEditor_OnRedirected((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 QPainter* k_textcustomeditor__plaintexteditor_shared_painter(const void* self) {
@@ -2845,8 +2845,8 @@ QPainter* k_textcustomeditor__plaintexteditor_super_shared_painter(const void* s
     return TextCustomEditor__PlainTextEditor_SuperSharedPainter((TextCustomEditor__PlainTextEditor*)self);
 }
 
-void k_textcustomeditor__plaintexteditor_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextCustomEditor__PlainTextEditor_OnSharedPainter((const TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__plaintexteditor_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextCustomEditor__PlainTextEditor_OnSharedPainter((TextCustomEditor__PlainTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintexteditor_child_event(void* self, void* event) {

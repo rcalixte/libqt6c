@@ -19,7 +19,7 @@ const QMetaObject* q_eventloop_meta_object(const void* self) {
     return QEventLoop_MetaObject((QEventLoop*)self);
 }
 
-void q_eventloop_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_eventloop_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QEventLoop_OnMetaObject((QEventLoop*)self, (intptr_t)callback);
 }
 

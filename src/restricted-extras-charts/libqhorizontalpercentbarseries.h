@@ -32,10 +32,10 @@ const QMetaObject* q_horizontalpercentbarseries_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QHorizontalPercentBarSeries*
+/// @param self QHorizontalPercentBarSeries*
 /// @param callback const QMetaObject* func(const QHorizontalPercentBarSeries* self)
 ///
-void q_horizontalpercentbarseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_horizontalpercentbarseries_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -107,10 +107,10 @@ int32_t q_horizontalpercentbarseries_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QHorizontalPercentBarSeries*
+/// @param self QHorizontalPercentBarSeries*
 /// @param callback int32_t func(const QHorizontalPercentBarSeries* self)
 ///
-void q_horizontalpercentbarseries_on_type(const void* self, int32_t (*callback)(const void*));
+void q_horizontalpercentbarseries_on_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhorizontalpercentbarseries-qtcharts.html#type)
 ///
@@ -1477,10 +1477,10 @@ QObject* q_horizontalpercentbarseries_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHorizontalPercentBarSeries*
+/// @param self QHorizontalPercentBarSeries*
 /// @param callback QObject* func(QHorizontalPercentBarSeries* self)
 ///
-void q_horizontalpercentbarseries_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_horizontalpercentbarseries_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1508,10 +1508,10 @@ int32_t q_horizontalpercentbarseries_super_sender_signal_index(const void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHorizontalPercentBarSeries*
+/// @param self QHorizontalPercentBarSeries*
 /// @param callback int32_t func(QHorizontalPercentBarSeries* self)
 ///
-void q_horizontalpercentbarseries_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_horizontalpercentbarseries_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1541,10 +1541,10 @@ int32_t q_horizontalpercentbarseries_super_receivers(const void* self, const cha
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHorizontalPercentBarSeries*
+/// @param self QHorizontalPercentBarSeries*
 /// @param callback int32_t func(QHorizontalPercentBarSeries* self, const char* signal)
 ///
-void q_horizontalpercentbarseries_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_horizontalpercentbarseries_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1574,10 +1574,10 @@ bool q_horizontalpercentbarseries_super_is_signal_connected(const void* self, co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHorizontalPercentBarSeries*
+/// @param self QHorizontalPercentBarSeries*
 /// @param callback bool func(QHorizontalPercentBarSeries* self, QMetaMethod* signal)
 ///
-void q_horizontalpercentbarseries_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_horizontalpercentbarseries_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

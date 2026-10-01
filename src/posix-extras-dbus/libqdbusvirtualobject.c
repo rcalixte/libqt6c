@@ -19,7 +19,7 @@ const QMetaObject* q_dbusvirtualobject_meta_object(const void* self) {
     return QDBusVirtualObject_MetaObject((QDBusVirtualObject*)self);
 }
 
-void q_dbusvirtualobject_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_dbusvirtualobject_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDBusVirtualObject_OnMetaObject((QDBusVirtualObject*)self, (intptr_t)callback);
 }
 
@@ -65,7 +65,7 @@ const char* q_dbusvirtualobject_introspect(const void* self, const char* path) {
     return _ret;
 }
 
-void q_dbusvirtualobject_on_introspect(const void* self, const char* (*callback)(const void*, const char*)) {
+void q_dbusvirtualobject_on_introspect(void* self, const char* (*callback)(const void*, const char*)) {
     QDBusVirtualObject_OnIntrospect((QDBusVirtualObject*)self, (intptr_t)callback);
 }
 

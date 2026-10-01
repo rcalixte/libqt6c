@@ -32,10 +32,10 @@ const QMetaObject* k_textgrammarcheck__grammarresulttextedit_meta_object(const v
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback const QMetaObject* func(const TextGrammarCheck__GrammarResultTextEdit* self)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarResultTextEdit.html)
 ///
@@ -1479,9 +1479,9 @@ void k_textgrammarcheck__grammarresulttextedit_set_frame_rect(void* self, const 
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self TextGrammarCheck__GrammarResultTextEdit*
+/// @param self const TextGrammarCheck__GrammarResultTextEdit*
 ///
-QPaintDevice* k_textgrammarcheck__grammarresulttextedit_as_q_paint_device(void* self);
+QPaintDevice* k_textgrammarcheck__grammarresulttextedit_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1489,7 +1489,7 @@ QPaintDevice* k_textgrammarcheck__grammarresulttextedit_as_q_paint_device(void* 
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-TextGrammarCheck__GrammarResultTextEdit* k_textgrammarcheck__grammarresulttextedit_from_q_paint_device(void* _qpaintdevice);
+TextGrammarCheck__GrammarResultTextEdit* k_textgrammarcheck__grammarresulttextedit_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -4505,12 +4505,12 @@ QVariant* k_textgrammarcheck__grammarresulttextedit_super_input_method_query(con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QVariant* func(TextGrammarCheck__GrammarResultTextEdit* self, enum Qt__InputMethodQuery property)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_textgrammarcheck__grammarresulttextedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QTextEdit
 ///
@@ -5132,10 +5132,10 @@ QMimeData* k_textgrammarcheck__grammarresulttextedit_super_create_mime_data_from
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QMimeData* func(TextGrammarCheck__GrammarResultTextEdit* self)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)(const void*));
 
 /// Inherited from QTextEdit
 ///
@@ -5165,10 +5165,10 @@ bool k_textgrammarcheck__grammarresulttextedit_super_can_insert_from_mime_data(c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback bool func(TextGrammarCheck__GrammarResultTextEdit* self, QMimeData* source)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_can_insert_from_mime_data(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QTextEdit
 ///
@@ -5330,12 +5330,12 @@ QSize* k_textgrammarcheck__grammarresulttextedit_super_minimum_size_hint(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QSize* func(TextGrammarCheck__GrammarResultTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5363,12 +5363,12 @@ QSize* k_textgrammarcheck__grammarresulttextedit_super_size_hint(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QSize* func(TextGrammarCheck__GrammarResultTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5497,12 +5497,12 @@ QSize* k_textgrammarcheck__grammarresulttextedit_super_viewport_size_hint(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QSize* func(TextGrammarCheck__GrammarResultTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_viewport_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -5532,10 +5532,10 @@ void k_textgrammarcheck__grammarresulttextedit_super_init_style_option(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback void func(TextGrammarCheck__GrammarResultTextEdit* self, QStyleOptionFrame* option)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void k_textgrammarcheck__grammarresulttextedit_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5563,10 +5563,10 @@ int32_t k_textgrammarcheck__grammarresulttextedit_super_dev_type(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback int32_t func(TextGrammarCheck__GrammarResultTextEdit* self)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5629,10 +5629,10 @@ int32_t k_textgrammarcheck__grammarresulttextedit_super_height_for_width(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback int32_t func(TextGrammarCheck__GrammarResultTextEdit* self, int param1)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_textgrammarcheck__grammarresulttextedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5660,10 +5660,10 @@ bool k_textgrammarcheck__grammarresulttextedit_super_has_height_for_width(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback bool func(TextGrammarCheck__GrammarResultTextEdit* self)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5691,10 +5691,10 @@ QPaintEngine* k_textgrammarcheck__grammarresulttextedit_super_paint_engine(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QPaintEngine* func(TextGrammarCheck__GrammarResultTextEdit* self)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5992,10 +5992,10 @@ int32_t k_textgrammarcheck__grammarresulttextedit_super_metric(const void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback int32_t func(TextGrammarCheck__GrammarResultTextEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_textgrammarcheck__grammarresulttextedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6025,10 +6025,10 @@ void k_textgrammarcheck__grammarresulttextedit_super_init_painter(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback void func(TextGrammarCheck__GrammarResultTextEdit* self, QPainter* painter)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_textgrammarcheck__grammarresulttextedit_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6058,10 +6058,10 @@ QPaintDevice* k_textgrammarcheck__grammarresulttextedit_super_redirected(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QPaintDevice* func(TextGrammarCheck__GrammarResultTextEdit* self, QPoint* offset)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_textgrammarcheck__grammarresulttextedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6089,10 +6089,10 @@ QPainter* k_textgrammarcheck__grammarresulttextedit_super_shared_painter(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QPainter* func(TextGrammarCheck__GrammarResultTextEdit* self)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6324,12 +6324,12 @@ QMargins* k_textgrammarcheck__grammarresulttextedit_super_viewport_margins(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QMargins* func(TextGrammarCheck__GrammarResultTextEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_viewport_margins(void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -6545,10 +6545,10 @@ QObject* k_textgrammarcheck__grammarresulttextedit_super_sender(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QObject* func(TextGrammarCheck__GrammarResultTextEdit* self)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6576,10 +6576,10 @@ int32_t k_textgrammarcheck__grammarresulttextedit_super_sender_signal_index(cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback int32_t func(TextGrammarCheck__GrammarResultTextEdit* self)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6609,10 +6609,10 @@ int32_t k_textgrammarcheck__grammarresulttextedit_super_receivers(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback int32_t func(TextGrammarCheck__GrammarResultTextEdit* self, const char* signal)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textgrammarcheck__grammarresulttextedit_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6642,10 +6642,10 @@ bool k_textgrammarcheck__grammarresulttextedit_super_is_signal_connected(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback bool func(TextGrammarCheck__GrammarResultTextEdit* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textgrammarcheck__grammarresulttextedit_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -6677,10 +6677,10 @@ double k_textgrammarcheck__grammarresulttextedit_super_get_decoded_metric_f(cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammarResultTextEdit*
+/// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback double func(TextGrammarCheck__GrammarResultTextEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_textgrammarcheck__grammarresulttextedit_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_textgrammarcheck__grammarresulttextedit_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

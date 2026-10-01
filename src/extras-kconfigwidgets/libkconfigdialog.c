@@ -27,7 +27,7 @@ const QMetaObject* k_configdialog_meta_object(const void* self) {
     return KConfigDialog_MetaObject((KConfigDialog*)self);
 }
 
-void k_configdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_configdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KConfigDialog_OnMetaObject((KConfigDialog*)self, (intptr_t)callback);
 }
 
@@ -336,11 +336,11 @@ void k_configdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_configdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_configdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KConfigDialog* k_configdialog_from_q_paint_device(void* _qpaintdevice) {
+KConfigDialog* k_configdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KConfigDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1743,8 +1743,8 @@ QSize* k_configdialog_super_size_hint(const void* self) {
     return KConfigDialog_SuperSizeHint((KConfigDialog*)self);
 }
 
-void k_configdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KConfigDialog_OnSizeHint((const KConfigDialog*)self, (intptr_t)callback);
+void k_configdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KConfigDialog_OnSizeHint((KConfigDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_configdialog_minimum_size_hint(const void* self) {
@@ -1755,8 +1755,8 @@ QSize* k_configdialog_super_minimum_size_hint(const void* self) {
     return KConfigDialog_SuperMinimumSizeHint((KConfigDialog*)self);
 }
 
-void k_configdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KConfigDialog_OnMinimumSizeHint((const KConfigDialog*)self, (intptr_t)callback);
+void k_configdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KConfigDialog_OnMinimumSizeHint((KConfigDialog*)self, (intptr_t)callback);
 }
 
 void k_configdialog_open(void* self) {
@@ -1887,8 +1887,8 @@ int32_t k_configdialog_super_dev_type(const void* self) {
     return KConfigDialog_SuperDevType((KConfigDialog*)self);
 }
 
-void k_configdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KConfigDialog_OnDevType((const KConfigDialog*)self, (intptr_t)callback);
+void k_configdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KConfigDialog_OnDevType((KConfigDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_configdialog_height_for_width(const void* self, int param1) {
@@ -1899,8 +1899,8 @@ int32_t k_configdialog_super_height_for_width(const void* self, int param1) {
     return KConfigDialog_SuperHeightForWidth((KConfigDialog*)self, param1);
 }
 
-void k_configdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KConfigDialog_OnHeightForWidth((const KConfigDialog*)self, (intptr_t)callback);
+void k_configdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KConfigDialog_OnHeightForWidth((KConfigDialog*)self, (intptr_t)callback);
 }
 
 bool k_configdialog_has_height_for_width(const void* self) {
@@ -1911,8 +1911,8 @@ bool k_configdialog_super_has_height_for_width(const void* self) {
     return KConfigDialog_SuperHasHeightForWidth((KConfigDialog*)self);
 }
 
-void k_configdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KConfigDialog_OnHasHeightForWidth((const KConfigDialog*)self, (intptr_t)callback);
+void k_configdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KConfigDialog_OnHasHeightForWidth((KConfigDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_configdialog_paint_engine(const void* self) {
@@ -1923,8 +1923,8 @@ QPaintEngine* k_configdialog_super_paint_engine(const void* self) {
     return KConfigDialog_SuperPaintEngine((KConfigDialog*)self);
 }
 
-void k_configdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KConfigDialog_OnPaintEngine((const KConfigDialog*)self, (intptr_t)callback);
+void k_configdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KConfigDialog_OnPaintEngine((KConfigDialog*)self, (intptr_t)callback);
 }
 
 bool k_configdialog_event(void* self, void* event) {
@@ -2199,8 +2199,8 @@ int32_t k_configdialog_super_metric(const void* self, int32_t param1) {
     return KConfigDialog_SuperMetric((KConfigDialog*)self, param1);
 }
 
-void k_configdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KConfigDialog_OnMetric((const KConfigDialog*)self, (intptr_t)callback);
+void k_configdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KConfigDialog_OnMetric((KConfigDialog*)self, (intptr_t)callback);
 }
 
 void k_configdialog_init_painter(const void* self, void* painter) {
@@ -2211,8 +2211,8 @@ void k_configdialog_super_init_painter(const void* self, void* painter) {
     KConfigDialog_SuperInitPainter((KConfigDialog*)self, (QPainter*)painter);
 }
 
-void k_configdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KConfigDialog_OnInitPainter((const KConfigDialog*)self, (intptr_t)callback);
+void k_configdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KConfigDialog_OnInitPainter((KConfigDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_configdialog_redirected(const void* self, void* offset) {
@@ -2223,8 +2223,8 @@ QPaintDevice* k_configdialog_super_redirected(const void* self, void* offset) {
     return KConfigDialog_SuperRedirected((KConfigDialog*)self, (QPoint*)offset);
 }
 
-void k_configdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KConfigDialog_OnRedirected((const KConfigDialog*)self, (intptr_t)callback);
+void k_configdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KConfigDialog_OnRedirected((KConfigDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_configdialog_shared_painter(const void* self) {
@@ -2235,8 +2235,8 @@ QPainter* k_configdialog_super_shared_painter(const void* self) {
     return KConfigDialog_SuperSharedPainter((KConfigDialog*)self);
 }
 
-void k_configdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KConfigDialog_OnSharedPainter((const KConfigDialog*)self, (intptr_t)callback);
+void k_configdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KConfigDialog_OnSharedPainter((KConfigDialog*)self, (intptr_t)callback);
 }
 
 void k_configdialog_input_method_event(void* self, void* param1) {
@@ -2259,8 +2259,8 @@ QVariant* k_configdialog_super_input_method_query(const void* self, int32_t para
     return KConfigDialog_SuperInputMethodQuery((KConfigDialog*)self, param1);
 }
 
-void k_configdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KConfigDialog_OnInputMethodQuery((const KConfigDialog*)self, (intptr_t)callback);
+void k_configdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KConfigDialog_OnInputMethodQuery((KConfigDialog*)self, (intptr_t)callback);
 }
 
 bool k_configdialog_focus_next_prev_child(void* self, bool next) {

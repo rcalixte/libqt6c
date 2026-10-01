@@ -9,7 +9,7 @@ int32_t q_designermembersheetextension_count(const void* self) {
     return QDesignerMemberSheetExtension_Count((QDesignerMemberSheetExtension*)self);
 }
 
-void q_designermembersheetextension_on_count(const void* self, int32_t (*callback)(const void*)) {
+void q_designermembersheetextension_on_count(void* self, int32_t (*callback)(const void*)) {
     QDesignerMemberSheetExtension_OnCount((QDesignerMemberSheetExtension*)self, (intptr_t)callback);
 }
 
@@ -17,7 +17,7 @@ int32_t q_designermembersheetextension_index_of(const void* self, const char* na
     return QDesignerMemberSheetExtension_IndexOf((QDesignerMemberSheetExtension*)self, qstring(name));
 }
 
-void q_designermembersheetextension_on_index_of(const void* self, int32_t (*callback)(const void*, const char*)) {
+void q_designermembersheetextension_on_index_of(void* self, int32_t (*callback)(const void*, const char*)) {
     QDesignerMemberSheetExtension_OnIndexOf((QDesignerMemberSheetExtension*)self, (intptr_t)callback);
 }
 
@@ -28,7 +28,7 @@ const char* q_designermembersheetextension_member_name(const void* self, int ind
     return _ret;
 }
 
-void q_designermembersheetextension_on_member_name(const void* self, const char* (*callback)(const void*, int)) {
+void q_designermembersheetextension_on_member_name(void* self, const char* (*callback)(const void*, int)) {
     QDesignerMemberSheetExtension_OnMemberName((QDesignerMemberSheetExtension*)self, (intptr_t)callback);
 }
 
@@ -39,7 +39,7 @@ const char* q_designermembersheetextension_member_group(const void* self, int in
     return _ret;
 }
 
-void q_designermembersheetextension_on_member_group(const void* self, const char* (*callback)(const void*, int)) {
+void q_designermembersheetextension_on_member_group(void* self, const char* (*callback)(const void*, int)) {
     QDesignerMemberSheetExtension_OnMemberGroup((QDesignerMemberSheetExtension*)self, (intptr_t)callback);
 }
 
@@ -55,7 +55,7 @@ bool q_designermembersheetextension_is_visible(const void* self, int index) {
     return QDesignerMemberSheetExtension_IsVisible((QDesignerMemberSheetExtension*)self, index);
 }
 
-void q_designermembersheetextension_on_is_visible(const void* self, bool (*callback)(const void*, int)) {
+void q_designermembersheetextension_on_is_visible(void* self, bool (*callback)(const void*, int)) {
     QDesignerMemberSheetExtension_OnIsVisible((QDesignerMemberSheetExtension*)self, (intptr_t)callback);
 }
 
@@ -71,7 +71,7 @@ bool q_designermembersheetextension_is_signal(const void* self, int index) {
     return QDesignerMemberSheetExtension_IsSignal((QDesignerMemberSheetExtension*)self, index);
 }
 
-void q_designermembersheetextension_on_is_signal(const void* self, bool (*callback)(const void*, int)) {
+void q_designermembersheetextension_on_is_signal(void* self, bool (*callback)(const void*, int)) {
     QDesignerMemberSheetExtension_OnIsSignal((QDesignerMemberSheetExtension*)self, (intptr_t)callback);
 }
 
@@ -79,7 +79,7 @@ bool q_designermembersheetextension_is_slot(const void* self, int index) {
     return QDesignerMemberSheetExtension_IsSlot((QDesignerMemberSheetExtension*)self, index);
 }
 
-void q_designermembersheetextension_on_is_slot(const void* self, bool (*callback)(const void*, int)) {
+void q_designermembersheetextension_on_is_slot(void* self, bool (*callback)(const void*, int)) {
     QDesignerMemberSheetExtension_OnIsSlot((QDesignerMemberSheetExtension*)self, (intptr_t)callback);
 }
 
@@ -87,7 +87,7 @@ bool q_designermembersheetextension_inherited_from_widget(const void* self, int 
     return QDesignerMemberSheetExtension_InheritedFromWidget((QDesignerMemberSheetExtension*)self, index);
 }
 
-void q_designermembersheetextension_on_inherited_from_widget(const void* self, bool (*callback)(const void*, int)) {
+void q_designermembersheetextension_on_inherited_from_widget(void* self, bool (*callback)(const void*, int)) {
     QDesignerMemberSheetExtension_OnInheritedFromWidget((QDesignerMemberSheetExtension*)self, (intptr_t)callback);
 }
 
@@ -98,7 +98,7 @@ const char* q_designermembersheetextension_declared_in_class(const void* self, i
     return _ret;
 }
 
-void q_designermembersheetextension_on_declared_in_class(const void* self, const char* (*callback)(const void*, int)) {
+void q_designermembersheetextension_on_declared_in_class(void* self, const char* (*callback)(const void*, int)) {
     QDesignerMemberSheetExtension_OnDeclaredInClass((QDesignerMemberSheetExtension*)self, (intptr_t)callback);
 }
 
@@ -109,7 +109,7 @@ const char* q_designermembersheetextension_signature(const void* self, int index
     return _ret;
 }
 
-void q_designermembersheetextension_on_signature(const void* self, const char* (*callback)(const void*, int)) {
+void q_designermembersheetextension_on_signature(void* self, const char* (*callback)(const void*, int)) {
     QDesignerMemberSheetExtension_OnSignature((QDesignerMemberSheetExtension*)self, (intptr_t)callback);
 }
 
@@ -130,7 +130,7 @@ const char** q_designermembersheetextension_parameter_types(const void* self, in
     return _ret;
 }
 
-void q_designermembersheetextension_on_parameter_types(const void* self, const char** (*callback)(const void*, int)) {
+void q_designermembersheetextension_on_parameter_types(void* self, const char** (*callback)(const void*, int)) {
     QDesignerMemberSheetExtension_OnParameterTypes((QDesignerMemberSheetExtension*)self, (intptr_t)callback);
 }
 
@@ -151,7 +151,7 @@ const char** q_designermembersheetextension_parameter_names(const void* self, in
     return _ret;
 }
 
-void q_designermembersheetextension_on_parameter_names(const void* self, const char** (*callback)(const void*, int)) {
+void q_designermembersheetextension_on_parameter_names(void* self, const char** (*callback)(const void*, int)) {
     QDesignerMemberSheetExtension_OnParameterNames((QDesignerMemberSheetExtension*)self, (intptr_t)callback);
 }
 

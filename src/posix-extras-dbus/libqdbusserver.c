@@ -27,7 +27,7 @@ const QMetaObject* q_dbusserver_meta_object(const void* self) {
     return QDBusServer_MetaObject((QDBusServer*)self);
 }
 
-void q_dbusserver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_dbusserver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDBusServer_OnMetaObject((QDBusServer*)self, (intptr_t)callback);
 }
 

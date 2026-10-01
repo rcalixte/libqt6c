@@ -73,7 +73,7 @@ int32_t k_config_access_mode(const void* self) {
     return KConfig_AccessMode((KConfig*)self);
 }
 
-void k_config_on_access_mode(const void* self, int32_t (*callback)(const void*)) {
+void k_config_on_access_mode(void* self, int32_t (*callback)(const void*)) {
     KConfig_OnAccessMode((KConfig*)self, (intptr_t)callback);
 }
 
@@ -151,7 +151,7 @@ bool k_config_is_immutable(const void* self) {
     return KConfig_IsImmutable((KConfig*)self);
 }
 
-void k_config_on_is_immutable(const void* self, bool (*callback)(const void*)) {
+void k_config_on_is_immutable(void* self, bool (*callback)(const void*)) {
     KConfig_OnIsImmutable((KConfig*)self, (intptr_t)callback);
 }
 
@@ -176,7 +176,7 @@ const char** k_config_group_list(const void* self) {
     return _ret;
 }
 
-void k_config_on_group_list(const void* self, const char** (*callback)(const void*)) {
+void k_config_on_group_list(void* self, const char** (*callback)(const void*)) {
     KConfig_OnGroupList((KConfig*)self, (intptr_t)callback);
 }
 
@@ -267,7 +267,7 @@ bool k_config_has_group_impl(const void* self, const char* groupName) {
     return KConfig_HasGroupImpl((KConfig*)self, qstring(groupName));
 }
 
-void k_config_on_has_group_impl(const void* self, bool (*callback)(const void*, const char*)) {
+void k_config_on_has_group_impl(void* self, bool (*callback)(const void*, const char*)) {
     KConfig_OnHasGroupImpl((KConfig*)self, (intptr_t)callback);
 }
 
@@ -291,7 +291,7 @@ bool k_config_is_group_immutable_impl(const void* self, const char* groupName) {
     return KConfig_IsGroupImmutableImpl((KConfig*)self, qstring(groupName));
 }
 
-void k_config_on_is_group_immutable_impl(const void* self, bool (*callback)(const void*, const char*)) {
+void k_config_on_is_group_immutable_impl(void* self, bool (*callback)(const void*, const char*)) {
     KConfig_OnIsGroupImmutableImpl((KConfig*)self, (intptr_t)callback);
 }
 

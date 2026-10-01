@@ -25,7 +25,7 @@ const QMetaObject* k_textemoticonscore__emojiproxymodel_meta_object(const void* 
     return TextEmoticonsCore__EmojiProxyModel_MetaObject((TextEmoticonsCore__EmojiProxyModel*)self);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textemoticonscore__emojiproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextEmoticonsCore__EmojiProxyModel_OnMetaObject((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
@@ -121,7 +121,7 @@ bool k_textemoticonscore__emojiproxymodel_filter_accepts_row(const void* self, i
     return TextEmoticonsCore__EmojiProxyModel_FilterAcceptsRow((TextEmoticonsCore__EmojiProxyModel*)self, source_row, (QModelIndex*)source_parent);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_filter_accepts_row(const void* self, bool (*callback)(const void*, int, const void*)) {
+void k_textemoticonscore__emojiproxymodel_on_filter_accepts_row(void* self, bool (*callback)(const void*, int, const void*)) {
     TextEmoticonsCore__EmojiProxyModel_OnFilterAcceptsRow((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
@@ -133,7 +133,7 @@ bool k_textemoticonscore__emojiproxymodel_less_than(const void* self, const void
     return TextEmoticonsCore__EmojiProxyModel_LessThan((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)left, (QModelIndex*)right);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_less_than(const void* self, bool (*callback)(const void*, const void*, const void*)) {
+void k_textemoticonscore__emojiproxymodel_on_less_than(void* self, bool (*callback)(const void*, const void*, const void*)) {
     TextEmoticonsCore__EmojiProxyModel_OnLessThan((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
@@ -680,8 +680,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_map_to_source(const void
     return TextEmoticonsCore__EmojiProxyModel_SuperMapToSource((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_map_to_source(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnMapToSource((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnMapToSource((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* k_textemoticonscore__emojiproxymodel_map_from_source(const void* self, const void* sourceIndex) {
@@ -692,8 +692,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_map_from_source(const vo
     return TextEmoticonsCore__EmojiProxyModel_SuperMapFromSource((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_map_from_source(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnMapFromSource((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnMapFromSource((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 QItemSelection* k_textemoticonscore__emojiproxymodel_map_selection_to_source(const void* self, const void* proxySelection) {
@@ -704,8 +704,8 @@ QItemSelection* k_textemoticonscore__emojiproxymodel_super_map_selection_to_sour
     return TextEmoticonsCore__EmojiProxyModel_SuperMapSelectionToSource((TextEmoticonsCore__EmojiProxyModel*)self, (QItemSelection*)proxySelection);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_map_selection_to_source(const void* self, QItemSelection* (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnMapSelectionToSource((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnMapSelectionToSource((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 QItemSelection* k_textemoticonscore__emojiproxymodel_map_selection_from_source(const void* self, const void* sourceSelection) {
@@ -716,8 +716,8 @@ QItemSelection* k_textemoticonscore__emojiproxymodel_super_map_selection_from_so
     return TextEmoticonsCore__EmojiProxyModel_SuperMapSelectionFromSource((TextEmoticonsCore__EmojiProxyModel*)self, (QItemSelection*)sourceSelection);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_map_selection_from_source(const void* self, QItemSelection* (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnMapSelectionFromSource((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnMapSelectionFromSource((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_textemoticonscore__emojiproxymodel_filter_accepts_column(const void* self, int source_column, const void* source_parent) {
@@ -728,8 +728,8 @@ bool k_textemoticonscore__emojiproxymodel_super_filter_accepts_column(const void
     return TextEmoticonsCore__EmojiProxyModel_SuperFilterAcceptsColumn((TextEmoticonsCore__EmojiProxyModel*)self, source_column, (QModelIndex*)source_parent);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_filter_accepts_column(const void* self, bool (*callback)(const void*, int, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnFilterAcceptsColumn((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_filter_accepts_column(void* self, bool (*callback)(const void*, int, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnFilterAcceptsColumn((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* k_textemoticonscore__emojiproxymodel_index(const void* self, int row, int column, const void* parent) {
@@ -740,8 +740,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_index(const void* self, 
     return TextEmoticonsCore__EmojiProxyModel_SuperIndex((TextEmoticonsCore__EmojiProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnIndex((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnIndex((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* k_textemoticonscore__emojiproxymodel_parent(const void* self, const void* child) {
@@ -752,8 +752,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_parent(const void* self,
     return TextEmoticonsCore__EmojiProxyModel_SuperParent((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)child);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnParent((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnParent((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* k_textemoticonscore__emojiproxymodel_sibling(const void* self, int row, int column, const void* idx) {
@@ -764,8 +764,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_sibling(const void* self
     return TextEmoticonsCore__EmojiProxyModel_SuperSibling((TextEmoticonsCore__EmojiProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnSibling((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnSibling((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 int32_t k_textemoticonscore__emojiproxymodel_row_count(const void* self, const void* parent) {
@@ -776,8 +776,8 @@ int32_t k_textemoticonscore__emojiproxymodel_super_row_count(const void* self, c
     return TextEmoticonsCore__EmojiProxyModel_SuperRowCount((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnRowCount((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnRowCount((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 int32_t k_textemoticonscore__emojiproxymodel_column_count(const void* self, const void* parent) {
@@ -788,8 +788,8 @@ int32_t k_textemoticonscore__emojiproxymodel_super_column_count(const void* self
     return TextEmoticonsCore__EmojiProxyModel_SuperColumnCount((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnColumnCount((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnColumnCount((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_textemoticonscore__emojiproxymodel_has_children(const void* self, const void* parent) {
@@ -800,8 +800,8 @@ bool k_textemoticonscore__emojiproxymodel_super_has_children(const void* self, c
     return TextEmoticonsCore__EmojiProxyModel_SuperHasChildren((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnHasChildren((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnHasChildren((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 QVariant* k_textemoticonscore__emojiproxymodel_data(const void* self, const void* index, int role) {
@@ -812,8 +812,8 @@ QVariant* k_textemoticonscore__emojiproxymodel_super_data(const void* self, cons
     return TextEmoticonsCore__EmojiProxyModel_SuperData((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)index, role);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
-    TextEmoticonsCore__EmojiProxyModel_OnData((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
+    TextEmoticonsCore__EmojiProxyModel_OnData((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_textemoticonscore__emojiproxymodel_set_data(void* self, const void* index, const void* value, int role) {
@@ -836,8 +836,8 @@ QVariant* k_textemoticonscore__emojiproxymodel_super_header_data(const void* sel
     return TextEmoticonsCore__EmojiProxyModel_SuperHeaderData((TextEmoticonsCore__EmojiProxyModel*)self, section, orientation, role);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
-    TextEmoticonsCore__EmojiProxyModel_OnHeaderData((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+    TextEmoticonsCore__EmojiProxyModel_OnHeaderData((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_textemoticonscore__emojiproxymodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
@@ -860,8 +860,8 @@ QMimeData* k_textemoticonscore__emojiproxymodel_super_mime_data(const void* self
     return TextEmoticonsCore__EmojiProxyModel_SuperMimeData((TextEmoticonsCore__EmojiProxyModel*)self, indexes);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
-    TextEmoticonsCore__EmojiProxyModel_OnMimeData((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    TextEmoticonsCore__EmojiProxyModel_OnMimeData((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_textemoticonscore__emojiproxymodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -944,8 +944,8 @@ bool k_textemoticonscore__emojiproxymodel_super_can_fetch_more(const void* self,
     return TextEmoticonsCore__EmojiProxyModel_SuperCanFetchMore((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnCanFetchMore((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnCanFetchMore((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 int32_t k_textemoticonscore__emojiproxymodel_flags(const void* self, const void* index) {
@@ -956,8 +956,8 @@ int32_t k_textemoticonscore__emojiproxymodel_super_flags(const void* self, const
     return TextEmoticonsCore__EmojiProxyModel_SuperFlags((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnFlags((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnFlags((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* k_textemoticonscore__emojiproxymodel_buddy(const void* self, const void* index) {
@@ -968,8 +968,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_buddy(const void* self, 
     return TextEmoticonsCore__EmojiProxyModel_SuperBuddy((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnBuddy((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnBuddy((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ k_textemoticonscore__emojiproxymodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -982,8 +982,8 @@ libqt_list /* of QModelIndex* */ k_textemoticonscore__emojiproxymodel_super_matc
     return _arr;
 }
 
-void k_textemoticonscore__emojiproxymodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    TextEmoticonsCore__EmojiProxyModel_OnMatch((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    TextEmoticonsCore__EmojiProxyModel_OnMatch((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 QSize* k_textemoticonscore__emojiproxymodel_span(const void* self, const void* index) {
@@ -994,8 +994,8 @@ QSize* k_textemoticonscore__emojiproxymodel_super_span(const void* self, const v
     return TextEmoticonsCore__EmojiProxyModel_SuperSpan((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnSpan((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnSpan((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 void k_textemoticonscore__emojiproxymodel_sort(void* self, int column, int32_t order) {
@@ -1044,8 +1044,8 @@ const char** k_textemoticonscore__emojiproxymodel_super_mime_types(const void* s
     return _ret;
 }
 
-void k_textemoticonscore__emojiproxymodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnMimeTypes((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnMimeTypes((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 int32_t k_textemoticonscore__emojiproxymodel_supported_drop_actions(const void* self) {
@@ -1056,8 +1056,8 @@ int32_t k_textemoticonscore__emojiproxymodel_super_supported_drop_actions(const 
     return TextEmoticonsCore__EmojiProxyModel_SuperSupportedDropActions((TextEmoticonsCore__EmojiProxyModel*)self);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnSupportedDropActions((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnSupportedDropActions((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_textemoticonscore__emojiproxymodel_submit(void* self) {
@@ -1104,8 +1104,8 @@ libqt_map /* of int to QVariant* */ k_textemoticonscore__emojiproxymodel_super_i
     return _ret;
 }
 
-void k_textemoticonscore__emojiproxymodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnItemData((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnItemData((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_textemoticonscore__emojiproxymodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
@@ -1190,8 +1190,8 @@ bool k_textemoticonscore__emojiproxymodel_super_can_drop_mime_data(const void* s
     return TextEmoticonsCore__EmojiProxyModel_SuperCanDropMimeData((TextEmoticonsCore__EmojiProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnCanDropMimeData((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnCanDropMimeData((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 int32_t k_textemoticonscore__emojiproxymodel_supported_drag_actions(const void* self) {
@@ -1202,8 +1202,8 @@ int32_t k_textemoticonscore__emojiproxymodel_super_supported_drag_actions(const 
     return TextEmoticonsCore__EmojiProxyModel_SuperSupportedDragActions((TextEmoticonsCore__EmojiProxyModel*)self);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnSupportedDragActions((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnSupportedDragActions((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 libqt_map /* of int to char* */ k_textemoticonscore__emojiproxymodel_role_names(const void* self) {
@@ -1272,8 +1272,8 @@ libqt_map /* of int to char* */ k_textemoticonscore__emojiproxymodel_super_role_
     return _ret;
 }
 
-void k_textemoticonscore__emojiproxymodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnRoleNames((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnRoleNames((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_textemoticonscore__emojiproxymodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild) {
@@ -1308,8 +1308,8 @@ void k_textemoticonscore__emojiproxymodel_super_multi_data(const void* self, con
     TextEmoticonsCore__EmojiProxyModel_SuperMultiData((TextEmoticonsCore__EmojiProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_textemoticonscore__emojiproxymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    TextEmoticonsCore__EmojiProxyModel_OnMultiData((const TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
+void k_textemoticonscore__emojiproxymodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    TextEmoticonsCore__EmojiProxyModel_OnMultiData((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
 void k_textemoticonscore__emojiproxymodel_reset_internal_data(void* self) {

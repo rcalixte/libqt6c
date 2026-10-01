@@ -28,7 +28,7 @@ const QMetaObject* q_wavedecoder_meta_object(const void* self) {
     return QWaveDecoder_MetaObject((QWaveDecoder*)self);
 }
 
-void q_wavedecoder_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_wavedecoder_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QWaveDecoder_OnMetaObject((QWaveDecoder*)self, (intptr_t)callback);
 }
 
@@ -123,7 +123,7 @@ int64_t q_wavedecoder_pos(const void* self) {
     return QWaveDecoder_Pos((QWaveDecoder*)self);
 }
 
-void q_wavedecoder_on_pos(const void* self, int64_t (*callback)(const void*)) {
+void q_wavedecoder_on_pos(void* self, int64_t (*callback)(const void*)) {
     QWaveDecoder_OnPos((QWaveDecoder*)self, (intptr_t)callback);
 }
 
@@ -139,7 +139,7 @@ int64_t q_wavedecoder_size(const void* self) {
     return QWaveDecoder_Size((QWaveDecoder*)self);
 }
 
-void q_wavedecoder_on_size(const void* self, int64_t (*callback)(const void*)) {
+void q_wavedecoder_on_size(void* self, int64_t (*callback)(const void*)) {
     QWaveDecoder_OnSize((QWaveDecoder*)self, (intptr_t)callback);
 }
 
@@ -151,7 +151,7 @@ bool q_wavedecoder_is_sequential(const void* self) {
     return QWaveDecoder_IsSequential((QWaveDecoder*)self);
 }
 
-void q_wavedecoder_on_is_sequential(const void* self, bool (*callback)(const void*)) {
+void q_wavedecoder_on_is_sequential(void* self, bool (*callback)(const void*)) {
     QWaveDecoder_OnIsSequential((QWaveDecoder*)self, (intptr_t)callback);
 }
 
@@ -163,7 +163,7 @@ int64_t q_wavedecoder_bytes_available(const void* self) {
     return QWaveDecoder_BytesAvailable((QWaveDecoder*)self);
 }
 
-void q_wavedecoder_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
+void q_wavedecoder_on_bytes_available(void* self, int64_t (*callback)(const void*)) {
     QWaveDecoder_OnBytesAvailable((QWaveDecoder*)self, (intptr_t)callback);
 }
 
@@ -201,7 +201,7 @@ const char* q_wavedecoder_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QIODeviceBase* q_wavedecoder_as_q_i_o_device_base(void* self) {
+QIODeviceBase* q_wavedecoder_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
@@ -616,8 +616,8 @@ bool q_wavedecoder_super_at_end(const void* self) {
     return QWaveDecoder_SuperAtEnd((QWaveDecoder*)self);
 }
 
-void q_wavedecoder_on_at_end(const void* self, bool (*callback)(const void*)) {
-    QWaveDecoder_OnAtEnd((const QWaveDecoder*)self, (intptr_t)callback);
+void q_wavedecoder_on_at_end(void* self, bool (*callback)(const void*)) {
+    QWaveDecoder_OnAtEnd((QWaveDecoder*)self, (intptr_t)callback);
 }
 
 bool q_wavedecoder_reset(void* self) {
@@ -640,8 +640,8 @@ int64_t q_wavedecoder_super_bytes_to_write(const void* self) {
     return QWaveDecoder_SuperBytesToWrite((QWaveDecoder*)self);
 }
 
-void q_wavedecoder_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
-    QWaveDecoder_OnBytesToWrite((const QWaveDecoder*)self, (intptr_t)callback);
+void q_wavedecoder_on_bytes_to_write(void* self, int64_t (*callback)(const void*)) {
+    QWaveDecoder_OnBytesToWrite((QWaveDecoder*)self, (intptr_t)callback);
 }
 
 bool q_wavedecoder_can_read_line(const void* self) {
@@ -652,8 +652,8 @@ bool q_wavedecoder_super_can_read_line(const void* self) {
     return QWaveDecoder_SuperCanReadLine((QWaveDecoder*)self);
 }
 
-void q_wavedecoder_on_can_read_line(const void* self, bool (*callback)(const void*)) {
-    QWaveDecoder_OnCanReadLine((const QWaveDecoder*)self, (intptr_t)callback);
+void q_wavedecoder_on_can_read_line(void* self, bool (*callback)(const void*)) {
+    QWaveDecoder_OnCanReadLine((QWaveDecoder*)self, (intptr_t)callback);
 }
 
 bool q_wavedecoder_wait_for_ready_read(void* self, int msecs) {

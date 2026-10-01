@@ -35,7 +35,7 @@ const QMetaObject* k_parts__readwritepart_meta_object(const void* self) {
     return KParts__ReadWritePart_MetaObject((KParts__ReadWritePart*)self);
 }
 
-void k_parts__readwritepart_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_parts__readwritepart_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KParts__ReadWritePart_OnMetaObject((KParts__ReadWritePart*)self, (intptr_t)callback);
 }
 
@@ -292,11 +292,11 @@ void k_parts__readwritepart_on_url_changed(void* self, void (*callback)(void*, c
     KParts__ReadOnlyPart_Connect_UrlChanged((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-KParts__PartBase* k_parts__readwritepart_as_k_parts___part_base(void* self) {
+KParts__PartBase* k_parts__readwritepart_as_k_parts___part_base(const void* self) {
     return KParts__Part_AsKParts__PartBase((KParts__Part*)self);
 }
 
-KParts__ReadWritePart* k_parts__readwritepart_from_k_parts___part_base(void* _kparts__partbase) {
+KParts__ReadWritePart* k_parts__readwritepart_from_k_parts___part_base(const void* _kparts__partbase) {
     return (KParts__ReadWritePart*)KParts__Part_FromKParts__PartBase((KParts__PartBase*)_kparts__partbase);
 }
 
@@ -850,8 +850,8 @@ QAction* k_parts__readwritepart_super_action2(const void* self, const void* elem
     return KParts__ReadWritePart_SuperAction2((KParts__ReadWritePart*)self, (QDomElement*)element);
 }
 
-void k_parts__readwritepart_on_action2(const void* self, QAction* (*callback)(const void*, const void*)) {
-    KParts__ReadWritePart_OnAction2((const KParts__ReadWritePart*)self, (intptr_t)callback);
+void k_parts__readwritepart_on_action2(void* self, QAction* (*callback)(const void*, const void*)) {
+    KParts__ReadWritePart_OnAction2((KParts__ReadWritePart*)self, (intptr_t)callback);
 }
 
 KActionCollection* k_parts__readwritepart_action_collection(const void* self) {
@@ -862,8 +862,8 @@ KActionCollection* k_parts__readwritepart_super_action_collection(const void* se
     return KParts__ReadWritePart_SuperActionCollection((KParts__ReadWritePart*)self);
 }
 
-void k_parts__readwritepart_on_action_collection(const void* self, KActionCollection* (*callback)(const void*)) {
-    KParts__ReadWritePart_OnActionCollection((const KParts__ReadWritePart*)self, (intptr_t)callback);
+void k_parts__readwritepart_on_action_collection(void* self, KActionCollection* (*callback)(const void*)) {
+    KParts__ReadWritePart_OnActionCollection((KParts__ReadWritePart*)self, (intptr_t)callback);
 }
 
 const char* k_parts__readwritepart_component_name(const void* self) {
@@ -880,8 +880,8 @@ const char* k_parts__readwritepart_super_component_name(const void* self) {
     return _ret;
 }
 
-void k_parts__readwritepart_on_component_name(const void* self, const char* (*callback)(const void*)) {
-    KParts__ReadWritePart_OnComponentName((const KParts__ReadWritePart*)self, (intptr_t)callback);
+void k_parts__readwritepart_on_component_name(void* self, const char* (*callback)(const void*)) {
+    KParts__ReadWritePart_OnComponentName((KParts__ReadWritePart*)self, (intptr_t)callback);
 }
 
 QDomDocument* k_parts__readwritepart_dom_document(const void* self) {
@@ -892,8 +892,8 @@ QDomDocument* k_parts__readwritepart_super_dom_document(const void* self) {
     return KParts__ReadWritePart_SuperDomDocument((KParts__ReadWritePart*)self);
 }
 
-void k_parts__readwritepart_on_dom_document(const void* self, QDomDocument* (*callback)(const void*)) {
-    KParts__ReadWritePart_OnDomDocument((const KParts__ReadWritePart*)self, (intptr_t)callback);
+void k_parts__readwritepart_on_dom_document(void* self, QDomDocument* (*callback)(const void*)) {
+    KParts__ReadWritePart_OnDomDocument((KParts__ReadWritePart*)self, (intptr_t)callback);
 }
 
 const char* k_parts__readwritepart_xml_file(const void* self) {
@@ -910,8 +910,8 @@ const char* k_parts__readwritepart_super_xml_file(const void* self) {
     return _ret;
 }
 
-void k_parts__readwritepart_on_xml_file(const void* self, const char* (*callback)(const void*)) {
-    KParts__ReadWritePart_OnXmlFile((const KParts__ReadWritePart*)self, (intptr_t)callback);
+void k_parts__readwritepart_on_xml_file(void* self, const char* (*callback)(const void*)) {
+    KParts__ReadWritePart_OnXmlFile((KParts__ReadWritePart*)self, (intptr_t)callback);
 }
 
 const char* k_parts__readwritepart_local_x_m_l_file(const void* self) {
@@ -928,8 +928,8 @@ const char* k_parts__readwritepart_super_local_x_m_l_file(const void* self) {
     return _ret;
 }
 
-void k_parts__readwritepart_on_local_x_m_l_file(const void* self, const char* (*callback)(const void*)) {
-    KParts__ReadWritePart_OnLocalXMLFile((const KParts__ReadWritePart*)self, (intptr_t)callback);
+void k_parts__readwritepart_on_local_x_m_l_file(void* self, const char* (*callback)(const void*)) {
+    KParts__ReadWritePart_OnLocalXMLFile((KParts__ReadWritePart*)self, (intptr_t)callback);
 }
 
 void k_parts__readwritepart_set_component_name(void* self, const char* componentName, const char* componentDisplayName) {

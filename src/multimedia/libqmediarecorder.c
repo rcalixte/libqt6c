@@ -23,7 +23,7 @@ const QMetaObject* q_mediarecorder_meta_object(const void* self) {
     return QMediaRecorder_MetaObject((QMediaRecorder*)self);
 }
 
-void q_mediarecorder_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_mediarecorder_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QMediaRecorder_OnMetaObject((QMediaRecorder*)self, (intptr_t)callback);
 }
 

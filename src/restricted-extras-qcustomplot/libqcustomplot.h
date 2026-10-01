@@ -2967,10 +2967,10 @@ void q_cpabstractpaintbuffer_draw(const void* self, void* painter);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractPaintBuffer*
+/// @param self QCPAbstractPaintBuffer*
 /// @param callback void func(const QCPAbstractPaintBuffer* self, QCPPainter* painter)
 ///
-void q_cpabstractpaintbuffer_on_draw(const void* self, void (*callback)(const void*, void*));
+void q_cpabstractpaintbuffer_on_draw(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
 ///
@@ -3080,10 +3080,10 @@ void q_cppaintbufferpixmap_draw(const void* self, void* painter);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPaintBufferPixmap*
+/// @param self QCPPaintBufferPixmap*
 /// @param callback void func(const QCPPaintBufferPixmap* self, QCPPainter* painter)
 ///
-void q_cppaintbufferpixmap_on_draw(const void* self, void (*callback)(const void*, void*));
+void q_cppaintbufferpixmap_on_draw(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPaintBufferPixmap.html)
 ///
@@ -3266,10 +3266,10 @@ const QMetaObject* q_cplayer_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayer*
+/// @param self QCPLayer*
 /// @param callback const QMetaObject* func(const QCPLayer* self)
 ///
-void q_cplayer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cplayer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -4134,10 +4134,10 @@ QObject* q_cplayer_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayer*
+/// @param self QCPLayer*
 /// @param callback QObject* func(QCPLayer* self)
 ///
-void q_cplayer_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cplayer_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4165,10 +4165,10 @@ int32_t q_cplayer_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayer*
+/// @param self QCPLayer*
 /// @param callback int32_t func(QCPLayer* self)
 ///
-void q_cplayer_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cplayer_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4198,10 +4198,10 @@ int32_t q_cplayer_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayer*
+/// @param self QCPLayer*
 /// @param callback int32_t func(QCPLayer* self, const char* signal)
 ///
-void q_cplayer_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cplayer_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4231,10 +4231,10 @@ bool q_cplayer_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayer*
+/// @param self QCPLayer*
 /// @param callback bool func(QCPLayer* self, QMetaMethod* signal)
 ///
-void q_cplayer_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cplayer_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4292,10 +4292,10 @@ const QMetaObject* q_cplayerable_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayerable*
+/// @param self QCPLayerable*
 /// @param callback const QMetaObject* func(const QCPLayerable* self)
 ///
-void q_cplayerable_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cplayerable_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -4426,10 +4426,10 @@ double q_cplayerable_select_test(const void* self, const void* pos, bool onlySel
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayerable*
+/// @param self QCPLayerable*
 /// @param callback double func(const QCPLayerable* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cplayerable_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cplayerable_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
@@ -4499,10 +4499,10 @@ int32_t q_cplayerable_selection_category(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayerable*
+/// @param self QCPLayerable*
 /// @param callback int32_t func(const QCPLayerable* self)
 ///
-void q_cplayerable_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cplayerable_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
@@ -4524,12 +4524,12 @@ QRect* q_cplayerable_clip_rect(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayerable*
+/// @param self QCPLayerable*
 /// @param callback QRect* func(const QCPLayerable* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayerable_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cplayerable_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
@@ -4552,10 +4552,10 @@ void q_cplayerable_apply_default_antialiasing_hint(const void* self, void* paint
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayerable*
+/// @param self QCPLayerable*
 /// @param callback void func(const QCPLayerable* self, QCPPainter* painter)
 ///
-void q_cplayerable_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cplayerable_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayerable.html)
 ///
@@ -5520,10 +5520,10 @@ QObject* q_cplayerable_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayerable*
+/// @param self QCPLayerable*
 /// @param callback QObject* func(QCPLayerable* self)
 ///
-void q_cplayerable_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cplayerable_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5551,10 +5551,10 @@ int32_t q_cplayerable_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayerable*
+/// @param self QCPLayerable*
 /// @param callback int32_t func(QCPLayerable* self)
 ///
-void q_cplayerable_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cplayerable_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5584,10 +5584,10 @@ int32_t q_cplayerable_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayerable*
+/// @param self QCPLayerable*
 /// @param callback int32_t func(QCPLayerable* self, const char* signal)
 ///
-void q_cplayerable_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cplayerable_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5617,10 +5617,10 @@ bool q_cplayerable_super_is_signal_connected(const void* self, const void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayerable*
+/// @param self QCPLayerable*
 /// @param callback bool func(QCPLayerable* self, QMetaMethod* signal)
 ///
-void q_cplayerable_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cplayerable_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -6221,10 +6221,10 @@ const QMetaObject* q_cpselectionrect_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPSelectionRect*
+/// @param self QCPSelectionRect*
 /// @param callback const QMetaObject* func(const QCPSelectionRect* self)
 ///
-void q_cpselectionrect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpselectionrect_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -6505,10 +6505,10 @@ void q_cpselectionrect_apply_default_antialiasing_hint(const void* self, void* p
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPSelectionRect*
+/// @param self QCPSelectionRect*
 /// @param callback void func(const QCPSelectionRect* self, QCPPainter* painter)
 ///
-void q_cpselectionrect_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpselectionrect_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionRect.html)
 ///
@@ -7144,10 +7144,10 @@ double q_cpselectionrect_super_select_test(const void* self, const void* pos, bo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPSelectionRect*
+/// @param self QCPSelectionRect*
 /// @param callback double func(QCPSelectionRect* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpselectionrect_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpselectionrect_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -7212,10 +7212,10 @@ int32_t q_cpselectionrect_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPSelectionRect*
+/// @param self QCPSelectionRect*
 /// @param callback int32_t func(QCPSelectionRect* self)
 ///
-void q_cpselectionrect_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpselectionrect_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -7243,12 +7243,12 @@ QRect* q_cpselectionrect_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPSelectionRect*
+/// @param self QCPSelectionRect*
 /// @param callback QRect* func(QCPSelectionRect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpselectionrect_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpselectionrect_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -7861,10 +7861,10 @@ void q_cpselectionrect_super_apply_antialiasing_hint(const void* self, void* pai
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPSelectionRect*
+/// @param self QCPSelectionRect*
 /// @param callback void func(QCPSelectionRect* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpselectionrect_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpselectionrect_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -7892,10 +7892,10 @@ QObject* q_cpselectionrect_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPSelectionRect*
+/// @param self QCPSelectionRect*
 /// @param callback QObject* func(QCPSelectionRect* self)
 ///
-void q_cpselectionrect_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpselectionrect_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7923,10 +7923,10 @@ int32_t q_cpselectionrect_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPSelectionRect*
+/// @param self QCPSelectionRect*
 /// @param callback int32_t func(QCPSelectionRect* self)
 ///
-void q_cpselectionrect_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpselectionrect_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7956,10 +7956,10 @@ int32_t q_cpselectionrect_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPSelectionRect*
+/// @param self QCPSelectionRect*
 /// @param callback int32_t func(QCPSelectionRect* self, const char* signal)
 ///
-void q_cpselectionrect_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpselectionrect_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -7989,10 +7989,10 @@ bool q_cpselectionrect_super_is_signal_connected(const void* self, const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPSelectionRect*
+/// @param self QCPSelectionRect*
 /// @param callback bool func(QCPSelectionRect* self, QMetaMethod* signal)
 ///
-void q_cpselectionrect_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpselectionrect_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -8031,10 +8031,10 @@ const QMetaObject* q_cpmargingroup_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPMarginGroup*
+/// @param self QCPMarginGroup*
 /// @param callback const QMetaObject* func(const QCPMarginGroup* self)
 ///
-void q_cpmargingroup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpmargingroup_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -8126,10 +8126,10 @@ int32_t q_cpmargingroup_common_margin(const void* self, int32_t side);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPMarginGroup*
+/// @param self QCPMarginGroup*
 /// @param callback int32_t func(const QCPMarginGroup* self, enum QCP__MarginSide side)
 ///
-void q_cpmargingroup_on_common_margin(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_cpmargingroup_on_common_margin(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPMarginGroup.html)
 ///
@@ -8881,10 +8881,10 @@ QObject* q_cpmargingroup_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPMarginGroup*
+/// @param self QCPMarginGroup*
 /// @param callback QObject* func(QCPMarginGroup* self)
 ///
-void q_cpmargingroup_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpmargingroup_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -8912,10 +8912,10 @@ int32_t q_cpmargingroup_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPMarginGroup*
+/// @param self QCPMarginGroup*
 /// @param callback int32_t func(QCPMarginGroup* self)
 ///
-void q_cpmargingroup_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpmargingroup_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -8945,10 +8945,10 @@ int32_t q_cpmargingroup_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPMarginGroup*
+/// @param self QCPMarginGroup*
 /// @param callback int32_t func(QCPMarginGroup* self, const char* signal)
 ///
-void q_cpmargingroup_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpmargingroup_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -8978,10 +8978,10 @@ bool q_cpmargingroup_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPMarginGroup*
+/// @param self QCPMarginGroup*
 /// @param callback bool func(QCPMarginGroup* self, QMetaMethod* signal)
 ///
-void q_cpmargingroup_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpmargingroup_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -9026,10 +9026,10 @@ const QMetaObject* q_cplayoutelement_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback const QMetaObject* func(const QCPLayoutElement* self)
 ///
-void q_cplayoutelement_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cplayoutelement_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -9281,12 +9281,12 @@ QSize* q_cplayoutelement_minimum_outer_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback QSize* func(const QCPLayoutElement* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayoutelement_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cplayoutelement_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -9306,12 +9306,12 @@ QSize* q_cplayoutelement_maximum_outer_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback QSize* func(const QCPLayoutElement* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayoutelement_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cplayoutelement_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -9334,10 +9334,10 @@ libqt_list q_cplayoutelement_elements(const void* self, bool recursive);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback libqt_list of QCPLayoutElement* func(const QCPLayoutElement* self, bool recursive)
 ///
-void q_cplayoutelement_on_elements(const void* self, libqt_list (*callback)(const void*, bool));
+void q_cplayoutelement_on_elements(void* self, libqt_list (*callback)(const void*, bool));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -9363,10 +9363,10 @@ double q_cplayoutelement_select_test(const void* self, const void* pos, bool onl
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback double func(const QCPLayoutElement* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cplayoutelement_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cplayoutelement_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -9438,10 +9438,10 @@ void q_cplayoutelement_apply_default_antialiasing_hint(const void* self, void* p
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback void func(const QCPLayoutElement* self, QCPPainter* painter)
 ///
-void q_cplayoutelement_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cplayoutelement_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutElement.html)
 ///
@@ -10100,10 +10100,10 @@ int32_t q_cplayoutelement_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback int32_t func(QCPLayoutElement* self)
 ///
-void q_cplayoutelement_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cplayoutelement_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -10131,12 +10131,12 @@ QRect* q_cplayoutelement_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback QRect* func(QCPLayoutElement* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayoutelement_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cplayoutelement_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -10749,10 +10749,10 @@ void q_cplayoutelement_super_apply_antialiasing_hint(const void* self, void* pai
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback void func(QCPLayoutElement* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cplayoutelement_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cplayoutelement_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -10780,10 +10780,10 @@ QObject* q_cplayoutelement_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback QObject* func(QCPLayoutElement* self)
 ///
-void q_cplayoutelement_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cplayoutelement_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -10811,10 +10811,10 @@ int32_t q_cplayoutelement_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback int32_t func(QCPLayoutElement* self)
 ///
-void q_cplayoutelement_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cplayoutelement_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -10844,10 +10844,10 @@ int32_t q_cplayoutelement_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback int32_t func(QCPLayoutElement* self, const char* signal)
 ///
-void q_cplayoutelement_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cplayoutelement_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -10877,10 +10877,10 @@ bool q_cplayoutelement_super_is_signal_connected(const void* self, const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutElement*
+/// @param self QCPLayoutElement*
 /// @param callback bool func(QCPLayoutElement* self, QMetaMethod* signal)
 ///
-void q_cplayoutelement_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cplayoutelement_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -10917,10 +10917,10 @@ const QMetaObject* q_cplayout_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback const QMetaObject* func(const QCPLayout* self)
 ///
-void q_cplayout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cplayout_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -11018,10 +11018,10 @@ libqt_list q_cplayout_elements(const void* self, bool recursive);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback libqt_list of QCPLayoutElement* func(const QCPLayout* self, bool recursive)
 ///
-void q_cplayout_on_elements(const void* self, libqt_list (*callback)(const void*, bool));
+void q_cplayout_on_elements(void* self, libqt_list (*callback)(const void*, bool));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
@@ -11046,10 +11046,10 @@ int32_t q_cplayout_element_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback int32_t func(const QCPLayout* self)
 ///
-void q_cplayout_on_element_count(const void* self, int32_t (*callback)(const void*));
+void q_cplayout_on_element_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
@@ -11064,10 +11064,10 @@ QCPLayoutElement* q_cplayout_element_at(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback QCPLayoutElement* func(const QCPLayout* self, int index)
 ///
-void q_cplayout_on_element_at(const void* self, QCPLayoutElement* (*callback)(const void*, int));
+void q_cplayout_on_element_at(void* self, QCPLayoutElement* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayout.html)
 ///
@@ -11996,12 +11996,12 @@ QSize* q_cplayout_super_minimum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback QSize* func(QCPLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayout_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cplayout_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -12029,12 +12029,12 @@ QSize* q_cplayout_super_maximum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback QSize* func(QCPLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayout_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cplayout_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -12068,10 +12068,10 @@ double q_cplayout_super_select_test(const void* self, const void* pos, bool only
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback double func(QCPLayout* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cplayout_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cplayout_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -12165,10 +12165,10 @@ void q_cplayout_super_apply_default_antialiasing_hint(const void* self, void* pa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback void func(QCPLayout* self, QCPPainter* painter)
 ///
-void q_cplayout_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cplayout_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -12266,10 +12266,10 @@ int32_t q_cplayout_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback int32_t func(QCPLayout* self)
 ///
-void q_cplayout_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cplayout_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -12297,12 +12297,12 @@ QRect* q_cplayout_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback QRect* func(QCPLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayout_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cplayout_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -12915,10 +12915,10 @@ void q_cplayout_super_apply_antialiasing_hint(const void* self, void* painter, b
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback void func(QCPLayout* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cplayout_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cplayout_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -12946,10 +12946,10 @@ QObject* q_cplayout_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback QObject* func(QCPLayout* self)
 ///
-void q_cplayout_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cplayout_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -12977,10 +12977,10 @@ int32_t q_cplayout_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback int32_t func(QCPLayout* self)
 ///
-void q_cplayout_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cplayout_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -13010,10 +13010,10 @@ int32_t q_cplayout_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback int32_t func(QCPLayout* self, const char* signal)
 ///
-void q_cplayout_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cplayout_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -13043,10 +13043,10 @@ bool q_cplayout_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayout*
+/// @param self QCPLayout*
 /// @param callback bool func(QCPLayout* self, QMetaMethod* signal)
 ///
-void q_cplayout_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cplayout_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -13083,10 +13083,10 @@ const QMetaObject* q_cplayoutgrid_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback const QMetaObject* func(const QCPLayoutGrid* self)
 ///
-void q_cplayoutgrid_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cplayoutgrid_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -13291,10 +13291,10 @@ int32_t q_cplayoutgrid_element_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback int32_t func(const QCPLayoutGrid* self)
 ///
-void q_cplayoutgrid_on_element_count(const void* self, int32_t (*callback)(const void*));
+void q_cplayoutgrid_on_element_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -13315,10 +13315,10 @@ QCPLayoutElement* q_cplayoutgrid_element_at(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback QCPLayoutElement* func(const QCPLayoutGrid* self, int index)
 ///
-void q_cplayoutgrid_on_element_at(const void* self, QCPLayoutElement* (*callback)(const void*, int));
+void q_cplayoutgrid_on_element_at(void* self, QCPLayoutElement* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -13392,10 +13392,10 @@ libqt_list q_cplayoutgrid_elements(const void* self, bool recursive);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback libqt_list of QCPLayoutElement* func(const QCPLayoutGrid* self, bool recursive)
 ///
-void q_cplayoutgrid_on_elements(const void* self, libqt_list (*callback)(const void*, bool));
+void q_cplayoutgrid_on_elements(void* self, libqt_list (*callback)(const void*, bool));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -13441,12 +13441,12 @@ QSize* q_cplayoutgrid_minimum_outer_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback QSize* func(const QCPLayoutGrid* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayoutgrid_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cplayoutgrid_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -13466,12 +13466,12 @@ QSize* q_cplayoutgrid_maximum_outer_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback QSize* func(const QCPLayoutGrid* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayoutgrid_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cplayoutgrid_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutGrid.html)
 ///
@@ -14434,10 +14434,10 @@ double q_cplayoutgrid_super_select_test(const void* self, const void* pos, bool 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback double func(QCPLayoutGrid* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cplayoutgrid_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cplayoutgrid_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -14531,10 +14531,10 @@ void q_cplayoutgrid_super_apply_default_antialiasing_hint(const void* self, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback void func(QCPLayoutGrid* self, QCPPainter* painter)
 ///
-void q_cplayoutgrid_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cplayoutgrid_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -14632,10 +14632,10 @@ int32_t q_cplayoutgrid_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback int32_t func(QCPLayoutGrid* self)
 ///
-void q_cplayoutgrid_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cplayoutgrid_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -14663,12 +14663,12 @@ QRect* q_cplayoutgrid_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback QRect* func(QCPLayoutGrid* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayoutgrid_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cplayoutgrid_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -15174,10 +15174,10 @@ void q_cplayoutgrid_super_size_constraints_changed(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback void func(QCPLayoutGrid* self)
 ///
-void q_cplayoutgrid_on_size_constraints_changed(const void* self, void (*callback)(const void*));
+void q_cplayoutgrid_on_size_constraints_changed(void* self, void (*callback)(const void*));
 
 /// Inherited from QCPLayout
 ///
@@ -15283,10 +15283,10 @@ libqt_list q_cplayoutgrid_super_get_section_sizes(const void* self, libqt_list m
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback libqt_list of int func(QCPLayoutGrid* self, libqt_list of int maxSizes, libqt_list of int minSizes, libqt_list of double stretchFactors, int totalSize)
 ///
-void q_cplayoutgrid_on_get_section_sizes(const void* self, libqt_list (*callback)(const void*, libqt_list, libqt_list, libqt_list, int));
+void q_cplayoutgrid_on_get_section_sizes(void* self, libqt_list (*callback)(const void*, libqt_list, libqt_list, libqt_list, int));
 
 /// Inherited from QCPLayerable
 ///
@@ -15421,10 +15421,10 @@ void q_cplayoutgrid_super_apply_antialiasing_hint(const void* self, void* painte
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback void func(QCPLayoutGrid* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cplayoutgrid_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cplayoutgrid_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -15452,10 +15452,10 @@ QObject* q_cplayoutgrid_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback QObject* func(QCPLayoutGrid* self)
 ///
-void q_cplayoutgrid_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cplayoutgrid_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -15483,10 +15483,10 @@ int32_t q_cplayoutgrid_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback int32_t func(QCPLayoutGrid* self)
 ///
-void q_cplayoutgrid_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cplayoutgrid_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -15516,10 +15516,10 @@ int32_t q_cplayoutgrid_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback int32_t func(QCPLayoutGrid* self, const char* signal)
 ///
-void q_cplayoutgrid_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cplayoutgrid_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -15549,10 +15549,10 @@ bool q_cplayoutgrid_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutGrid*
+/// @param self QCPLayoutGrid*
 /// @param callback bool func(QCPLayoutGrid* self, QMetaMethod* signal)
 ///
-void q_cplayoutgrid_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cplayoutgrid_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -15589,10 +15589,10 @@ const QMetaObject* q_cplayoutinset_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback const QMetaObject* func(const QCPLayoutInset* self)
 ///
-void q_cplayoutinset_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cplayoutinset_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -15734,10 +15734,10 @@ int32_t q_cplayoutinset_element_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback int32_t func(const QCPLayoutInset* self)
 ///
-void q_cplayoutinset_on_element_count(const void* self, int32_t (*callback)(const void*));
+void q_cplayoutinset_on_element_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutInset.html)
 ///
@@ -15758,10 +15758,10 @@ QCPLayoutElement* q_cplayoutinset_element_at(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback QCPLayoutElement* func(const QCPLayoutInset* self, int index)
 ///
-void q_cplayoutinset_on_element_at(const void* self, QCPLayoutElement* (*callback)(const void*, int));
+void q_cplayoutinset_on_element_at(void* self, QCPLayoutElement* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutInset.html)
 ///
@@ -15858,10 +15858,10 @@ double q_cplayoutinset_select_test(const void* self, const void* pos, bool onlyS
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback double func(const QCPLayoutInset* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cplayoutinset_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cplayoutinset_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLayoutInset.html)
 ///
@@ -16748,10 +16748,10 @@ libqt_list q_cplayoutinset_super_elements(const void* self, bool recursive);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback libqt_list of QCPLayoutElement* func(QCPLayoutInset* self, bool recursive)
 ///
-void q_cplayoutinset_on_elements(const void* self, libqt_list (*callback)(const void*, bool));
+void q_cplayoutinset_on_elements(void* self, libqt_list (*callback)(const void*, bool));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -16779,12 +16779,12 @@ QSize* q_cplayoutinset_super_minimum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback QSize* func(QCPLayoutInset* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayoutinset_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cplayoutinset_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -16812,12 +16812,12 @@ QSize* q_cplayoutinset_super_maximum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback QSize* func(QCPLayoutInset* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayoutinset_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cplayoutinset_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -16911,10 +16911,10 @@ void q_cplayoutinset_super_apply_default_antialiasing_hint(const void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback void func(QCPLayoutInset* self, QCPPainter* painter)
 ///
-void q_cplayoutinset_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cplayoutinset_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -17012,10 +17012,10 @@ int32_t q_cplayoutinset_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback int32_t func(QCPLayoutInset* self)
 ///
-void q_cplayoutinset_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cplayoutinset_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -17043,12 +17043,12 @@ QRect* q_cplayoutinset_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback QRect* func(QCPLayoutInset* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplayoutinset_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cplayoutinset_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -17554,10 +17554,10 @@ void q_cplayoutinset_super_size_constraints_changed(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback void func(QCPLayoutInset* self)
 ///
-void q_cplayoutinset_on_size_constraints_changed(const void* self, void (*callback)(const void*));
+void q_cplayoutinset_on_size_constraints_changed(void* self, void (*callback)(const void*));
 
 /// Inherited from QCPLayout
 ///
@@ -17663,10 +17663,10 @@ libqt_list q_cplayoutinset_super_get_section_sizes(const void* self, libqt_list 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback libqt_list of int func(QCPLayoutInset* self, libqt_list of int maxSizes, libqt_list of int minSizes, libqt_list of double stretchFactors, int totalSize)
 ///
-void q_cplayoutinset_on_get_section_sizes(const void* self, libqt_list (*callback)(const void*, libqt_list, libqt_list, libqt_list, int));
+void q_cplayoutinset_on_get_section_sizes(void* self, libqt_list (*callback)(const void*, libqt_list, libqt_list, libqt_list, int));
 
 /// Inherited from QCPLayerable
 ///
@@ -17801,10 +17801,10 @@ void q_cplayoutinset_super_apply_antialiasing_hint(const void* self, void* paint
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback void func(QCPLayoutInset* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cplayoutinset_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cplayoutinset_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -17832,10 +17832,10 @@ QObject* q_cplayoutinset_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback QObject* func(QCPLayoutInset* self)
 ///
-void q_cplayoutinset_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cplayoutinset_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -17863,10 +17863,10 @@ int32_t q_cplayoutinset_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback int32_t func(QCPLayoutInset* self)
 ///
-void q_cplayoutinset_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cplayoutinset_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -17896,10 +17896,10 @@ int32_t q_cplayoutinset_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback int32_t func(QCPLayoutInset* self, const char* signal)
 ///
-void q_cplayoutinset_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cplayoutinset_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -17929,10 +17929,10 @@ bool q_cplayoutinset_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLayoutInset*
+/// @param self QCPLayoutInset*
 /// @param callback bool func(QCPLayoutInset* self, QMetaMethod* signal)
 ///
-void q_cplayoutinset_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cplayoutinset_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -18848,10 +18848,10 @@ void q_cpaxistickerdatetime_super_trim_ticks(const void* self, const void* range
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerDateTime*
+/// @param self QCPAxisTickerDateTime*
 /// @param callback void func(QCPAxisTickerDateTime* self, QCPRange* range, libqt_list of double ticks, bool keepOneOutlier)
 ///
-void q_cpaxistickerdatetime_on_trim_ticks(const void* self, void (*callback)(const void*, const void*, libqt_list, bool));
+void q_cpaxistickerdatetime_on_trim_ticks(void* self, void (*callback)(const void*, const void*, libqt_list, bool));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18883,10 +18883,10 @@ double q_cpaxistickerdatetime_super_pick_closest(const void* self, double target
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerDateTime*
+/// @param self QCPAxisTickerDateTime*
 /// @param callback double func(QCPAxisTickerDateTime* self, double target, libqt_list of double candidates)
 ///
-void q_cpaxistickerdatetime_on_pick_closest(const void* self, double (*callback)(const void*, double, libqt_list));
+void q_cpaxistickerdatetime_on_pick_closest(void* self, double (*callback)(const void*, double, libqt_list));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18916,10 +18916,10 @@ double q_cpaxistickerdatetime_super_get_mantissa(const void* self, double input)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerDateTime*
+/// @param self QCPAxisTickerDateTime*
 /// @param callback double func(QCPAxisTickerDateTime* self, double input)
 ///
-void q_cpaxistickerdatetime_on_get_mantissa(const void* self, double (*callback)(const void*, double));
+void q_cpaxistickerdatetime_on_get_mantissa(void* self, double (*callback)(const void*, double));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18949,10 +18949,10 @@ double q_cpaxistickerdatetime_super_clean_mantissa(const void* self, double inpu
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerDateTime*
+/// @param self QCPAxisTickerDateTime*
 /// @param callback double func(QCPAxisTickerDateTime* self, double input)
 ///
-void q_cpaxistickerdatetime_on_clean_mantissa(const void* self, double (*callback)(const void*, double));
+void q_cpaxistickerdatetime_on_clean_mantissa(void* self, double (*callback)(const void*, double));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerDateTime.html)
 ///
@@ -19341,10 +19341,10 @@ void q_cpaxistickertime_super_trim_ticks(const void* self, const void* range, li
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerTime*
+/// @param self QCPAxisTickerTime*
 /// @param callback void func(QCPAxisTickerTime* self, QCPRange* range, libqt_list of double ticks, bool keepOneOutlier)
 ///
-void q_cpaxistickertime_on_trim_ticks(const void* self, void (*callback)(const void*, const void*, libqt_list, bool));
+void q_cpaxistickertime_on_trim_ticks(void* self, void (*callback)(const void*, const void*, libqt_list, bool));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19376,10 +19376,10 @@ double q_cpaxistickertime_super_pick_closest(const void* self, double target, li
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerTime*
+/// @param self QCPAxisTickerTime*
 /// @param callback double func(QCPAxisTickerTime* self, double target, libqt_list of double candidates)
 ///
-void q_cpaxistickertime_on_pick_closest(const void* self, double (*callback)(const void*, double, libqt_list));
+void q_cpaxistickertime_on_pick_closest(void* self, double (*callback)(const void*, double, libqt_list));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19409,10 +19409,10 @@ double q_cpaxistickertime_super_get_mantissa(const void* self, double input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerTime*
+/// @param self QCPAxisTickerTime*
 /// @param callback double func(QCPAxisTickerTime* self, double input)
 ///
-void q_cpaxistickertime_on_get_mantissa(const void* self, double (*callback)(const void*, double));
+void q_cpaxistickertime_on_get_mantissa(void* self, double (*callback)(const void*, double));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19442,10 +19442,10 @@ double q_cpaxistickertime_super_clean_mantissa(const void* self, double input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerTime*
+/// @param self QCPAxisTickerTime*
 /// @param callback double func(QCPAxisTickerTime* self, double input)
 ///
-void q_cpaxistickertime_on_clean_mantissa(const void* self, double (*callback)(const void*, double));
+void q_cpaxistickertime_on_clean_mantissa(void* self, double (*callback)(const void*, double));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerTime.html)
 ///
@@ -19841,10 +19841,10 @@ void q_cpaxistickerfixed_super_trim_ticks(const void* self, const void* range, l
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerFixed*
+/// @param self QCPAxisTickerFixed*
 /// @param callback void func(QCPAxisTickerFixed* self, QCPRange* range, libqt_list of double ticks, bool keepOneOutlier)
 ///
-void q_cpaxistickerfixed_on_trim_ticks(const void* self, void (*callback)(const void*, const void*, libqt_list, bool));
+void q_cpaxistickerfixed_on_trim_ticks(void* self, void (*callback)(const void*, const void*, libqt_list, bool));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19876,10 +19876,10 @@ double q_cpaxistickerfixed_super_pick_closest(const void* self, double target, l
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerFixed*
+/// @param self QCPAxisTickerFixed*
 /// @param callback double func(QCPAxisTickerFixed* self, double target, libqt_list of double candidates)
 ///
-void q_cpaxistickerfixed_on_pick_closest(const void* self, double (*callback)(const void*, double, libqt_list));
+void q_cpaxistickerfixed_on_pick_closest(void* self, double (*callback)(const void*, double, libqt_list));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19909,10 +19909,10 @@ double q_cpaxistickerfixed_super_get_mantissa(const void* self, double input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerFixed*
+/// @param self QCPAxisTickerFixed*
 /// @param callback double func(QCPAxisTickerFixed* self, double input)
 ///
-void q_cpaxistickerfixed_on_get_mantissa(const void* self, double (*callback)(const void*, double));
+void q_cpaxistickerfixed_on_get_mantissa(void* self, double (*callback)(const void*, double));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -19942,10 +19942,10 @@ double q_cpaxistickerfixed_super_clean_mantissa(const void* self, double input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerFixed*
+/// @param self QCPAxisTickerFixed*
 /// @param callback double func(QCPAxisTickerFixed* self, double input)
 ///
-void q_cpaxistickerfixed_on_clean_mantissa(const void* self, double (*callback)(const void*, double));
+void q_cpaxistickerfixed_on_clean_mantissa(void* self, double (*callback)(const void*, double));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerFixed.html)
 ///
@@ -20363,10 +20363,10 @@ void q_cpaxistickertext_super_trim_ticks(const void* self, const void* range, li
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerText*
+/// @param self QCPAxisTickerText*
 /// @param callback void func(QCPAxisTickerText* self, QCPRange* range, libqt_list of double ticks, bool keepOneOutlier)
 ///
-void q_cpaxistickertext_on_trim_ticks(const void* self, void (*callback)(const void*, const void*, libqt_list, bool));
+void q_cpaxistickertext_on_trim_ticks(void* self, void (*callback)(const void*, const void*, libqt_list, bool));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20398,10 +20398,10 @@ double q_cpaxistickertext_super_pick_closest(const void* self, double target, li
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerText*
+/// @param self QCPAxisTickerText*
 /// @param callback double func(QCPAxisTickerText* self, double target, libqt_list of double candidates)
 ///
-void q_cpaxistickertext_on_pick_closest(const void* self, double (*callback)(const void*, double, libqt_list));
+void q_cpaxistickertext_on_pick_closest(void* self, double (*callback)(const void*, double, libqt_list));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20431,10 +20431,10 @@ double q_cpaxistickertext_super_get_mantissa(const void* self, double input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerText*
+/// @param self QCPAxisTickerText*
 /// @param callback double func(QCPAxisTickerText* self, double input)
 ///
-void q_cpaxistickertext_on_get_mantissa(const void* self, double (*callback)(const void*, double));
+void q_cpaxistickertext_on_get_mantissa(void* self, double (*callback)(const void*, double));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20464,10 +20464,10 @@ double q_cpaxistickertext_super_clean_mantissa(const void* self, double input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerText*
+/// @param self QCPAxisTickerText*
 /// @param callback double func(QCPAxisTickerText* self, double input)
 ///
-void q_cpaxistickertext_on_clean_mantissa(const void* self, double (*callback)(const void*, double));
+void q_cpaxistickertext_on_clean_mantissa(void* self, double (*callback)(const void*, double));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
@@ -20919,10 +20919,10 @@ void q_cpaxistickerpi_super_trim_ticks(const void* self, const void* range, libq
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerPi*
+/// @param self QCPAxisTickerPi*
 /// @param callback void func(QCPAxisTickerPi* self, QCPRange* range, libqt_list of double ticks, bool keepOneOutlier)
 ///
-void q_cpaxistickerpi_on_trim_ticks(const void* self, void (*callback)(const void*, const void*, libqt_list, bool));
+void q_cpaxistickerpi_on_trim_ticks(void* self, void (*callback)(const void*, const void*, libqt_list, bool));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20954,10 +20954,10 @@ double q_cpaxistickerpi_super_pick_closest(const void* self, double target, libq
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerPi*
+/// @param self QCPAxisTickerPi*
 /// @param callback double func(QCPAxisTickerPi* self, double target, libqt_list of double candidates)
 ///
-void q_cpaxistickerpi_on_pick_closest(const void* self, double (*callback)(const void*, double, libqt_list));
+void q_cpaxistickerpi_on_pick_closest(void* self, double (*callback)(const void*, double, libqt_list));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -20987,10 +20987,10 @@ double q_cpaxistickerpi_super_get_mantissa(const void* self, double input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerPi*
+/// @param self QCPAxisTickerPi*
 /// @param callback double func(QCPAxisTickerPi* self, double input)
 ///
-void q_cpaxistickerpi_on_get_mantissa(const void* self, double (*callback)(const void*, double));
+void q_cpaxistickerpi_on_get_mantissa(void* self, double (*callback)(const void*, double));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -21020,10 +21020,10 @@ double q_cpaxistickerpi_super_clean_mantissa(const void* self, double input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerPi*
+/// @param self QCPAxisTickerPi*
 /// @param callback double func(QCPAxisTickerPi* self, double input)
 ///
-void q_cpaxistickerpi_on_clean_mantissa(const void* self, double (*callback)(const void*, double));
+void q_cpaxistickerpi_on_clean_mantissa(void* self, double (*callback)(const void*, double));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerPi.html)
 ///
@@ -21409,10 +21409,10 @@ void q_cpaxistickerlog_super_trim_ticks(const void* self, const void* range, lib
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerLog*
+/// @param self QCPAxisTickerLog*
 /// @param callback void func(QCPAxisTickerLog* self, QCPRange* range, libqt_list of double ticks, bool keepOneOutlier)
 ///
-void q_cpaxistickerlog_on_trim_ticks(const void* self, void (*callback)(const void*, const void*, libqt_list, bool));
+void q_cpaxistickerlog_on_trim_ticks(void* self, void (*callback)(const void*, const void*, libqt_list, bool));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -21444,10 +21444,10 @@ double q_cpaxistickerlog_super_pick_closest(const void* self, double target, lib
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerLog*
+/// @param self QCPAxisTickerLog*
 /// @param callback double func(QCPAxisTickerLog* self, double target, libqt_list of double candidates)
 ///
-void q_cpaxistickerlog_on_pick_closest(const void* self, double (*callback)(const void*, double, libqt_list));
+void q_cpaxistickerlog_on_pick_closest(void* self, double (*callback)(const void*, double, libqt_list));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -21477,10 +21477,10 @@ double q_cpaxistickerlog_super_get_mantissa(const void* self, double input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerLog*
+/// @param self QCPAxisTickerLog*
 /// @param callback double func(QCPAxisTickerLog* self, double input)
 ///
-void q_cpaxistickerlog_on_get_mantissa(const void* self, double (*callback)(const void*, double));
+void q_cpaxistickerlog_on_get_mantissa(void* self, double (*callback)(const void*, double));
 
 /// Inherited from QCPAxisTicker
 ///
@@ -21510,10 +21510,10 @@ double q_cpaxistickerlog_super_clean_mantissa(const void* self, double input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisTickerLog*
+/// @param self QCPAxisTickerLog*
 /// @param callback double func(QCPAxisTickerLog* self, double input)
 ///
-void q_cpaxistickerlog_on_clean_mantissa(const void* self, double (*callback)(const void*, double));
+void q_cpaxistickerlog_on_clean_mantissa(void* self, double (*callback)(const void*, double));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisTickerLog.html)
 ///
@@ -21541,10 +21541,10 @@ const QMetaObject* q_cpgrid_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPGrid*
+/// @param self QCPGrid*
 /// @param callback const QMetaObject* func(const QCPGrid* self)
 ///
-void q_cpgrid_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpgrid_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -21693,10 +21693,10 @@ void q_cpgrid_apply_default_antialiasing_hint(const void* self, void* painter);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPGrid*
+/// @param self QCPGrid*
 /// @param callback void func(const QCPGrid* self, QCPPainter* painter)
 ///
-void q_cpgrid_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpgrid_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGrid.html)
 ///
@@ -22346,10 +22346,10 @@ double q_cpgrid_super_select_test(const void* self, const void* pos, bool onlySe
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGrid*
+/// @param self QCPGrid*
 /// @param callback double func(QCPGrid* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpgrid_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpgrid_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -22414,10 +22414,10 @@ int32_t q_cpgrid_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGrid*
+/// @param self QCPGrid*
 /// @param callback int32_t func(QCPGrid* self)
 ///
-void q_cpgrid_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpgrid_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -22445,12 +22445,12 @@ QRect* q_cpgrid_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGrid*
+/// @param self QCPGrid*
 /// @param callback QRect* func(QCPGrid* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpgrid_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpgrid_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -23063,10 +23063,10 @@ void q_cpgrid_super_apply_antialiasing_hint(const void* self, void* painter, boo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGrid*
+/// @param self QCPGrid*
 /// @param callback void func(QCPGrid* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpgrid_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpgrid_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -23094,10 +23094,10 @@ QObject* q_cpgrid_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGrid*
+/// @param self QCPGrid*
 /// @param callback QObject* func(QCPGrid* self)
 ///
-void q_cpgrid_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpgrid_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -23125,10 +23125,10 @@ int32_t q_cpgrid_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGrid*
+/// @param self QCPGrid*
 /// @param callback int32_t func(QCPGrid* self)
 ///
-void q_cpgrid_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpgrid_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -23158,10 +23158,10 @@ int32_t q_cpgrid_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGrid*
+/// @param self QCPGrid*
 /// @param callback int32_t func(QCPGrid* self, const char* signal)
 ///
-void q_cpgrid_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpgrid_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -23191,10 +23191,10 @@ bool q_cpgrid_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGrid*
+/// @param self QCPGrid*
 /// @param callback bool func(QCPGrid* self, QMetaMethod* signal)
 ///
-void q_cpgrid_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpgrid_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -23234,10 +23234,10 @@ const QMetaObject* q_cpaxis_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAxis*
+/// @param self QCPAxis*
 /// @param callback const QMetaObject* func(const QCPAxis* self)
 ///
-void q_cpaxis_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpaxis_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -23884,10 +23884,10 @@ double q_cpaxis_select_test(const void* self, const void* pos, bool onlySelectab
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAxis*
+/// @param self QCPAxis*
 /// @param callback double func(const QCPAxis* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpaxis_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpaxis_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -24125,10 +24125,10 @@ void q_cpaxis_apply_default_antialiasing_hint(const void* self, void* painter);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAxis*
+/// @param self QCPAxis*
 /// @param callback void func(const QCPAxis* self, QCPPainter* painter)
 ///
-void q_cpaxis_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpaxis_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -24176,10 +24176,10 @@ int32_t q_cpaxis_selection_category(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAxis*
+/// @param self QCPAxis*
 /// @param callback int32_t func(const QCPAxis* self)
 ///
-void q_cpaxis_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpaxis_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
@@ -25059,12 +25059,12 @@ QRect* q_cpaxis_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxis*
+/// @param self QCPAxis*
 /// @param callback QRect* func(QCPAxis* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpaxis_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpaxis_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -25467,10 +25467,10 @@ void q_cpaxis_super_apply_antialiasing_hint(const void* self, void* painter, boo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxis*
+/// @param self QCPAxis*
 /// @param callback void func(QCPAxis* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpaxis_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpaxis_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -25498,10 +25498,10 @@ QObject* q_cpaxis_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxis*
+/// @param self QCPAxis*
 /// @param callback QObject* func(QCPAxis* self)
 ///
-void q_cpaxis_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpaxis_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -25529,10 +25529,10 @@ int32_t q_cpaxis_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxis*
+/// @param self QCPAxis*
 /// @param callback int32_t func(QCPAxis* self)
 ///
-void q_cpaxis_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpaxis_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -25562,10 +25562,10 @@ int32_t q_cpaxis_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxis*
+/// @param self QCPAxis*
 /// @param callback int32_t func(QCPAxis* self, const char* signal)
 ///
-void q_cpaxis_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpaxis_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -25595,10 +25595,10 @@ bool q_cpaxis_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxis*
+/// @param self QCPAxis*
 /// @param callback bool func(QCPAxis* self, QMetaMethod* signal)
 ///
-void q_cpaxis_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpaxis_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -26059,10 +26059,10 @@ const QMetaObject* q_cpabstractplottable_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback const QMetaObject* func(const QCPAbstractPlottable* self)
 ///
-void q_cpabstractplottable_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpabstractplottable_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -26277,10 +26277,10 @@ double q_cpabstractplottable_select_test(const void* self, const void* pos, bool
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback double func(const QCPAbstractPlottable* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpabstractplottable_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpabstractplottable_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -26319,12 +26319,12 @@ QCPRange* q_cpabstractplottable_get_key_range(const void* self, bool* foundRange
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback QCPRange* func(const QCPAbstractPlottable* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpabstractplottable_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
+void q_cpabstractplottable_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -26341,12 +26341,12 @@ QCPRange* q_cpabstractplottable_get_value_range(const void* self, bool* foundRan
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback QCPRange* func(const QCPAbstractPlottable* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpabstractplottable_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
+void q_cpabstractplottable_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -26481,12 +26481,12 @@ QRect* q_cpabstractplottable_clip_rect(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback QRect* func(const QCPAbstractPlottable* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpabstractplottable_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpabstractplottable_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -26526,10 +26526,10 @@ int32_t q_cpabstractplottable_selection_category(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback int32_t func(const QCPAbstractPlottable* self)
 ///
-void q_cpabstractplottable_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpabstractplottable_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -26552,10 +26552,10 @@ void q_cpabstractplottable_apply_default_antialiasing_hint(const void* self, voi
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback void func(const QCPAbstractPlottable* self, QCPPainter* painter)
 ///
-void q_cpabstractplottable_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpabstractplottable_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -26636,10 +26636,10 @@ void q_cpabstractplottable_draw_legend_icon(const void* self, void* painter, con
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback void func(const QCPAbstractPlottable* self, QCPPainter* painter, QRectF* rect)
 ///
-void q_cpabstractplottable_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*));
+void q_cpabstractplottable_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
 ///
@@ -27824,10 +27824,10 @@ void q_cpabstractplottable_super_apply_antialiasing_hint(const void* self, void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback void func(QCPAbstractPlottable* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpabstractplottable_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpabstractplottable_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -27855,10 +27855,10 @@ QObject* q_cpabstractplottable_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback QObject* func(QCPAbstractPlottable* self)
 ///
-void q_cpabstractplottable_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpabstractplottable_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -27886,10 +27886,10 @@ int32_t q_cpabstractplottable_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback int32_t func(QCPAbstractPlottable* self)
 ///
-void q_cpabstractplottable_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpabstractplottable_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -27919,10 +27919,10 @@ int32_t q_cpabstractplottable_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback int32_t func(QCPAbstractPlottable* self, const char* signal)
 ///
-void q_cpabstractplottable_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpabstractplottable_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -27952,10 +27952,10 @@ bool q_cpabstractplottable_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractPlottable*
+/// @param self QCPAbstractPlottable*
 /// @param callback bool func(QCPAbstractPlottable* self, QMetaMethod* signal)
 ///
-void q_cpabstractplottable_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpabstractplottable_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -28015,12 +28015,12 @@ QPointF* q_cpitemanchor_pixel_position(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemAnchor*
+/// @param self QCPItemAnchor*
 /// @param callback QPointF* func(const QCPItemAnchor* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemanchor_on_pixel_position(const void* self, QPointF* (*callback)(const void*));
+void q_cpitemanchor_on_pixel_position(void* self, QPointF* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemAnchor.html)
 ///
@@ -28187,12 +28187,12 @@ QPointF* q_cpitemposition_pixel_position(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemPosition*
+/// @param self QCPItemPosition*
 /// @param callback QPointF* func(const QCPItemPosition* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemposition_on_pixel_position(const void* self, QPointF* (*callback)(const void*));
+void q_cpitemposition_on_pixel_position(void* self, QPointF* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPosition.html)
 ///
@@ -28496,10 +28496,10 @@ const QMetaObject* q_cpabstractitem_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractItem*
+/// @param self QCPAbstractItem*
 /// @param callback const QMetaObject* func(const QCPAbstractItem* self)
 ///
-void q_cpabstractitem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpabstractitem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -28626,10 +28626,10 @@ double q_cpabstractitem_select_test(const void* self, const void* pos, bool only
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractItem*
+/// @param self QCPAbstractItem*
 /// @param callback double func(const QCPAbstractItem* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpabstractitem_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpabstractitem_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
@@ -28708,10 +28708,10 @@ int32_t q_cpabstractitem_selection_category(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractItem*
+/// @param self QCPAbstractItem*
 /// @param callback int32_t func(const QCPAbstractItem* self)
 ///
-void q_cpabstractitem_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpabstractitem_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
@@ -28733,12 +28733,12 @@ QRect* q_cpabstractitem_clip_rect(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractItem*
+/// @param self QCPAbstractItem*
 /// @param callback QRect* func(const QCPAbstractItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpabstractitem_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpabstractitem_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
@@ -28759,10 +28759,10 @@ void q_cpabstractitem_apply_default_antialiasing_hint(const void* self, void* pa
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractItem*
+/// @param self QCPAbstractItem*
 /// @param callback void func(const QCPAbstractItem* self, QCPPainter* painter)
 ///
-void q_cpabstractitem_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpabstractitem_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
@@ -28858,12 +28858,12 @@ QPointF* q_cpabstractitem_anchor_pixel_position(const void* self, int anchorId);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractItem*
+/// @param self QCPAbstractItem*
 /// @param callback QPointF* func(const QCPAbstractItem* self, int anchorId)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpabstractitem_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpabstractitem_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractItem.html)
 ///
@@ -30038,10 +30038,10 @@ void q_cpabstractitem_super_apply_antialiasing_hint(const void* self, void* pain
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractItem*
+/// @param self QCPAbstractItem*
 /// @param callback void func(QCPAbstractItem* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpabstractitem_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpabstractitem_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -30069,10 +30069,10 @@ QObject* q_cpabstractitem_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractItem*
+/// @param self QCPAbstractItem*
 /// @param callback QObject* func(QCPAbstractItem* self)
 ///
-void q_cpabstractitem_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpabstractitem_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -30100,10 +30100,10 @@ int32_t q_cpabstractitem_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractItem*
+/// @param self QCPAbstractItem*
 /// @param callback int32_t func(QCPAbstractItem* self)
 ///
-void q_cpabstractitem_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpabstractitem_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -30133,10 +30133,10 @@ int32_t q_cpabstractitem_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractItem*
+/// @param self QCPAbstractItem*
 /// @param callback int32_t func(QCPAbstractItem* self, const char* signal)
 ///
-void q_cpabstractitem_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpabstractitem_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -30166,10 +30166,10 @@ bool q_cpabstractitem_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractItem*
+/// @param self QCPAbstractItem*
 /// @param callback bool func(QCPAbstractItem* self, QMetaMethod* signal)
 ///
-void q_cpabstractitem_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpabstractitem_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -30214,10 +30214,10 @@ const QMetaObject* q_customplot_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback const QMetaObject* func(const QCustomPlot* self)
 ///
-void q_customplot_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_customplot_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -31234,12 +31234,12 @@ QSize* q_customplot_minimum_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback QSize* func(const QCustomPlot* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_customplot_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_customplot_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -31259,12 +31259,12 @@ QSize* q_customplot_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback QSize* func(const QCustomPlot* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_customplot_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_customplot_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
@@ -32200,9 +32200,9 @@ libqt_list q_customplot_layerable_list_at3(const void* self, const void* pos, bo
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QCustomPlot*
+/// @param self const QCustomPlot*
 ///
-QPaintDevice* q_customplot_as_q_paint_device(void* self);
+QPaintDevice* q_customplot_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -32210,7 +32210,7 @@ QPaintDevice* q_customplot_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QCustomPlot* q_customplot_from_q_paint_device(void* _qpaintdevice);
+QCustomPlot* q_customplot_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -35195,10 +35195,10 @@ int32_t q_customplot_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback int32_t func(QCustomPlot* self)
 ///
-void q_customplot_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_customplot_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -35261,10 +35261,10 @@ int32_t q_customplot_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback int32_t func(QCustomPlot* self, int param1)
 ///
-void q_customplot_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_customplot_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -35292,10 +35292,10 @@ bool q_customplot_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback bool func(QCustomPlot* self)
 ///
-void q_customplot_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_customplot_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -35323,10 +35323,10 @@ QPaintEngine* q_customplot_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback QPaintEngine* func(QCustomPlot* self)
 ///
-void q_customplot_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_customplot_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -36020,10 +36020,10 @@ int32_t q_customplot_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback int32_t func(QCustomPlot* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_customplot_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_customplot_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -36053,10 +36053,10 @@ void q_customplot_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback void func(QCustomPlot* self, QPainter* painter)
 ///
-void q_customplot_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_customplot_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -36086,10 +36086,10 @@ QPaintDevice* q_customplot_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback QPaintDevice* func(QCustomPlot* self, QPoint* offset)
 ///
-void q_customplot_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_customplot_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -36117,10 +36117,10 @@ QPainter* q_customplot_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback QPainter* func(QCustomPlot* self)
 ///
-void q_customplot_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_customplot_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -36183,12 +36183,12 @@ QVariant* q_customplot_super_input_method_query(const void* self, int32_t param1
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback QVariant* func(QCustomPlot* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_customplot_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_customplot_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -36604,10 +36604,10 @@ QObject* q_customplot_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback QObject* func(QCustomPlot* self)
 ///
-void q_customplot_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_customplot_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -36635,10 +36635,10 @@ int32_t q_customplot_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback int32_t func(QCustomPlot* self)
 ///
-void q_customplot_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_customplot_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -36668,10 +36668,10 @@ int32_t q_customplot_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback int32_t func(QCustomPlot* self, const char* signal)
 ///
-void q_customplot_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_customplot_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -36701,10 +36701,10 @@ bool q_customplot_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback bool func(QCustomPlot* self, QMetaMethod* signal)
 ///
-void q_customplot_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_customplot_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -36736,10 +36736,10 @@ double q_customplot_super_get_decoded_metric_f(const void* self, int32_t metricA
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCustomPlot*
+/// @param self QCustomPlot*
 /// @param callback double func(QCustomPlot* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_customplot_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_customplot_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -37231,10 +37231,10 @@ void q_cpselectiondecoratorbracket_draw_bracket(const void* self, void* painter,
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPSelectionDecoratorBracket*
+/// @param self QCPSelectionDecoratorBracket*
 /// @param callback void func(const QCPSelectionDecoratorBracket* self, QCPPainter* painter, int direction)
 ///
-void q_cpselectiondecoratorbracket_on_draw_bracket(const void* self, void (*callback)(const void*, void*, int));
+void q_cpselectiondecoratorbracket_on_draw_bracket(void* self, void (*callback)(const void*, void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionDecoratorBracket.html)
 ///
@@ -37498,10 +37498,10 @@ const QMetaObject* q_cpaxisrect_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback const QMetaObject* func(const QCPAxisRect* self)
 ///
-void q_cpaxisrect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpaxisrect_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -37968,10 +37968,10 @@ libqt_list q_cpaxisrect_elements(const void* self, bool recursive);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback libqt_list of QCPLayoutElement* func(const QCPAxisRect* self, bool recursive)
 ///
-void q_cpaxisrect_on_elements(const void* self, libqt_list (*callback)(const void*, bool));
+void q_cpaxisrect_on_elements(void* self, libqt_list (*callback)(const void*, bool));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -37995,10 +37995,10 @@ void q_cpaxisrect_apply_default_antialiasing_hint(const void* self, void* painte
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback void func(const QCPAxisRect* self, QCPPainter* painter)
 ///
-void q_cpaxisrect_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpaxisrect_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxisRect.html)
 ///
@@ -39027,12 +39027,12 @@ QSize* q_cpaxisrect_super_minimum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback QSize* func(QCPAxisRect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpaxisrect_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cpaxisrect_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -39060,12 +39060,12 @@ QSize* q_cpaxisrect_super_maximum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback QSize* func(QCPAxisRect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpaxisrect_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cpaxisrect_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -39099,10 +39099,10 @@ double q_cpaxisrect_super_select_test(const void* self, const void* pos, bool on
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback double func(QCPAxisRect* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpaxisrect_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpaxisrect_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -39167,10 +39167,10 @@ int32_t q_cpaxisrect_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback int32_t func(QCPAxisRect* self)
 ///
-void q_cpaxisrect_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpaxisrect_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -39198,12 +39198,12 @@ QRect* q_cpaxisrect_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback QRect* func(QCPAxisRect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpaxisrect_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpaxisrect_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -39678,10 +39678,10 @@ void q_cpaxisrect_super_apply_antialiasing_hint(const void* self, void* painter,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback void func(QCPAxisRect* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpaxisrect_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpaxisrect_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -39709,10 +39709,10 @@ QObject* q_cpaxisrect_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback QObject* func(QCPAxisRect* self)
 ///
-void q_cpaxisrect_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpaxisrect_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -39740,10 +39740,10 @@ int32_t q_cpaxisrect_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback int32_t func(QCPAxisRect* self)
 ///
-void q_cpaxisrect_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpaxisrect_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -39773,10 +39773,10 @@ int32_t q_cpaxisrect_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback int32_t func(QCPAxisRect* self, const char* signal)
 ///
-void q_cpaxisrect_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpaxisrect_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -39806,10 +39806,10 @@ bool q_cpaxisrect_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAxisRect*
+/// @param self QCPAxisRect*
 /// @param callback bool func(QCPAxisRect* self, QMetaMethod* signal)
 ///
-void q_cpaxisrect_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpaxisrect_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -39848,10 +39848,10 @@ const QMetaObject* q_cpabstractlegenditem_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback const QMetaObject* func(const QCPAbstractLegendItem* self)
 ///
-void q_cpabstractlegenditem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpabstractlegenditem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -40008,10 +40008,10 @@ double q_cpabstractlegenditem_select_test(const void* self, const void* pos, boo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback double func(const QCPAbstractLegendItem* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpabstractlegenditem_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpabstractlegenditem_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
 ///
@@ -40064,10 +40064,10 @@ int32_t q_cpabstractlegenditem_selection_category(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback int32_t func(const QCPAbstractLegendItem* self)
 ///
-void q_cpabstractlegenditem_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpabstractlegenditem_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
 ///
@@ -40090,10 +40090,10 @@ void q_cpabstractlegenditem_apply_default_antialiasing_hint(const void* self, vo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback void func(const QCPAbstractLegendItem* self, QCPPainter* painter)
 ///
-void q_cpabstractlegenditem_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpabstractlegenditem_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
 ///
@@ -40114,12 +40114,12 @@ QRect* q_cpabstractlegenditem_clip_rect(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback QRect* func(const QCPAbstractLegendItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpabstractlegenditem_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpabstractlegenditem_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractLegendItem.html)
 ///
@@ -41029,12 +41029,12 @@ QSize* q_cpabstractlegenditem_super_minimum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback QSize* func(QCPAbstractLegendItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpabstractlegenditem_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cpabstractlegenditem_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -41062,12 +41062,12 @@ QSize* q_cpabstractlegenditem_super_maximum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback QSize* func(QCPAbstractLegendItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpabstractlegenditem_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cpabstractlegenditem_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -41101,10 +41101,10 @@ libqt_list q_cpabstractlegenditem_super_elements(const void* self, bool recursiv
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback libqt_list of QCPLayoutElement* func(QCPAbstractLegendItem* self, bool recursive)
 ///
-void q_cpabstractlegenditem_on_elements(const void* self, libqt_list (*callback)(const void*, bool));
+void q_cpabstractlegenditem_on_elements(void* self, libqt_list (*callback)(const void*, bool));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -41742,10 +41742,10 @@ void q_cpabstractlegenditem_super_apply_antialiasing_hint(const void* self, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback void func(QCPAbstractLegendItem* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpabstractlegenditem_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpabstractlegenditem_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -41773,10 +41773,10 @@ QObject* q_cpabstractlegenditem_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback QObject* func(QCPAbstractLegendItem* self)
 ///
-void q_cpabstractlegenditem_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpabstractlegenditem_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -41804,10 +41804,10 @@ int32_t q_cpabstractlegenditem_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback int32_t func(QCPAbstractLegendItem* self)
 ///
-void q_cpabstractlegenditem_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpabstractlegenditem_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -41837,10 +41837,10 @@ int32_t q_cpabstractlegenditem_super_receivers(const void* self, const char* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback int32_t func(QCPAbstractLegendItem* self, const char* signal)
 ///
-void q_cpabstractlegenditem_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpabstractlegenditem_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -41870,10 +41870,10 @@ bool q_cpabstractlegenditem_super_is_signal_connected(const void* self, const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPAbstractLegendItem*
+/// @param self QCPAbstractLegendItem*
 /// @param callback bool func(QCPAbstractLegendItem* self, QMetaMethod* signal)
 ///
-void q_cpabstractlegenditem_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpabstractlegenditem_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -41913,10 +41913,10 @@ const QMetaObject* q_cpplottablelegenditem_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback const QMetaObject* func(const QCPPlottableLegendItem* self)
 ///
-void q_cpplottablelegenditem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpplottablelegenditem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -42017,12 +42017,12 @@ QSize* q_cpplottablelegenditem_minimum_outer_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback QSize* func(const QCPPlottableLegendItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpplottablelegenditem_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cpplottablelegenditem_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableLegendItem.html)
 ///
@@ -42995,10 +42995,10 @@ double q_cpplottablelegenditem_super_select_test(const void* self, const void* p
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback double func(QCPPlottableLegendItem* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpplottablelegenditem_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpplottablelegenditem_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// Inherited from QCPAbstractLegendItem
 ///
@@ -43030,10 +43030,10 @@ int32_t q_cpplottablelegenditem_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback int32_t func(QCPPlottableLegendItem* self)
 ///
-void q_cpplottablelegenditem_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpplottablelegenditem_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractLegendItem
 ///
@@ -43063,10 +43063,10 @@ void q_cpplottablelegenditem_super_apply_default_antialiasing_hint(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback void func(QCPPlottableLegendItem* self, QCPPainter* painter)
 ///
-void q_cpplottablelegenditem_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpplottablelegenditem_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractLegendItem
 ///
@@ -43094,12 +43094,12 @@ QRect* q_cpplottablelegenditem_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback QRect* func(QCPPlottableLegendItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpplottablelegenditem_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpplottablelegenditem_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractLegendItem
 ///
@@ -43232,12 +43232,12 @@ QSize* q_cpplottablelegenditem_super_maximum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback QSize* func(QCPPlottableLegendItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpplottablelegenditem_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cpplottablelegenditem_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -43271,10 +43271,10 @@ libqt_list q_cpplottablelegenditem_super_elements(const void* self, bool recursi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback libqt_list of QCPLayoutElement* func(QCPPlottableLegendItem* self, bool recursive)
 ///
-void q_cpplottablelegenditem_on_elements(const void* self, libqt_list (*callback)(const void*, bool));
+void q_cpplottablelegenditem_on_elements(void* self, libqt_list (*callback)(const void*, bool));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -43912,10 +43912,10 @@ void q_cpplottablelegenditem_super_apply_antialiasing_hint(const void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback void func(QCPPlottableLegendItem* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpplottablelegenditem_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpplottablelegenditem_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -43943,10 +43943,10 @@ QObject* q_cpplottablelegenditem_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback QObject* func(QCPPlottableLegendItem* self)
 ///
-void q_cpplottablelegenditem_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpplottablelegenditem_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -43974,10 +43974,10 @@ int32_t q_cpplottablelegenditem_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback int32_t func(QCPPlottableLegendItem* self)
 ///
-void q_cpplottablelegenditem_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpplottablelegenditem_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -44007,10 +44007,10 @@ int32_t q_cpplottablelegenditem_super_receivers(const void* self, const char* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback int32_t func(QCPPlottableLegendItem* self, const char* signal)
 ///
-void q_cpplottablelegenditem_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpplottablelegenditem_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -44040,10 +44040,10 @@ bool q_cpplottablelegenditem_super_is_signal_connected(const void* self, const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPlottableLegendItem*
+/// @param self QCPPlottableLegendItem*
 /// @param callback bool func(QCPPlottableLegendItem* self, QMetaMethod* signal)
 ///
-void q_cpplottablelegenditem_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpplottablelegenditem_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -44080,10 +44080,10 @@ const QMetaObject* q_cplegend_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback const QMetaObject* func(const QCPLegend* self)
 ///
-void q_cplegend_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cplegend_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -44350,10 +44350,10 @@ double q_cplegend_select_test(const void* self, const void* pos, bool onlySelect
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback double func(const QCPLegend* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cplegend_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cplegend_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
@@ -44500,10 +44500,10 @@ int32_t q_cplegend_selection_category(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback int32_t func(const QCPLegend* self)
 ///
-void q_cplegend_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cplegend_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
@@ -44526,10 +44526,10 @@ void q_cplegend_apply_default_antialiasing_hint(const void* self, void* painter)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback void func(const QCPLegend* self, QCPPainter* painter)
 ///
-void q_cplegend_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cplegend_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
@@ -45726,10 +45726,10 @@ int32_t q_cplegend_super_element_count(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback int32_t func(QCPLegend* self)
 ///
-void q_cplegend_on_element_count(const void* self, int32_t (*callback)(const void*));
+void q_cplegend_on_element_count(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -45759,10 +45759,10 @@ QCPLayoutElement* q_cplegend_super_element_at(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback QCPLayoutElement* func(QCPLegend* self, int index)
 ///
-void q_cplegend_on_element_at(const void* self, QCPLayoutElement* (*callback)(const void*, int));
+void q_cplegend_on_element_at(void* self, QCPLayoutElement* (*callback)(const void*, int));
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -45862,10 +45862,10 @@ libqt_list q_cplegend_super_elements(const void* self, bool recursive);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback libqt_list of QCPLayoutElement* func(QCPLegend* self, bool recursive)
 ///
-void q_cplegend_on_elements(const void* self, libqt_list (*callback)(const void*, bool));
+void q_cplegend_on_elements(void* self, libqt_list (*callback)(const void*, bool));
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -45924,12 +45924,12 @@ QSize* q_cplegend_super_minimum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback QSize* func(QCPLegend* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplegend_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cplegend_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -45957,12 +45957,12 @@ QSize* q_cplegend_super_maximum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback QSize* func(QCPLegend* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplegend_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cplegend_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayout
 ///
@@ -46087,12 +46087,12 @@ QRect* q_cplegend_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback QRect* func(QCPLegend* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cplegend_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cplegend_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -46530,10 +46530,10 @@ void q_cplegend_super_get_minimum_row_col_sizes(const void* self, libqt_list min
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback void func(QCPLegend* self, libqt_list of int minColWidths, libqt_list of int minRowHeights)
 ///
-void q_cplegend_on_get_minimum_row_col_sizes(const void* self, void (*callback)(const void*, libqt_list, libqt_list));
+void q_cplegend_on_get_minimum_row_col_sizes(void* self, void (*callback)(const void*, libqt_list, libqt_list));
 
 /// Inherited from QCPLayoutGrid
 ///
@@ -46565,10 +46565,10 @@ void q_cplegend_super_get_maximum_row_col_sizes(const void* self, libqt_list max
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback void func(QCPLegend* self, libqt_list of int maxColWidths, libqt_list of int maxRowHeights)
 ///
-void q_cplegend_on_get_maximum_row_col_sizes(const void* self, void (*callback)(const void*, libqt_list, libqt_list));
+void q_cplegend_on_get_maximum_row_col_sizes(void* self, void (*callback)(const void*, libqt_list, libqt_list));
 
 /// Inherited from QCPLayout
 ///
@@ -46596,10 +46596,10 @@ void q_cplegend_super_size_constraints_changed(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback void func(QCPLegend* self)
 ///
-void q_cplegend_on_size_constraints_changed(const void* self, void (*callback)(const void*));
+void q_cplegend_on_size_constraints_changed(void* self, void (*callback)(const void*));
 
 /// Inherited from QCPLayout
 ///
@@ -46705,10 +46705,10 @@ libqt_list q_cplegend_super_get_section_sizes(const void* self, libqt_list maxSi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback libqt_list of int func(QCPLegend* self, libqt_list of int maxSizes, libqt_list of int minSizes, libqt_list of double stretchFactors, int totalSize)
 ///
-void q_cplegend_on_get_section_sizes(const void* self, libqt_list (*callback)(const void*, libqt_list, libqt_list, libqt_list, int));
+void q_cplegend_on_get_section_sizes(void* self, libqt_list (*callback)(const void*, libqt_list, libqt_list, libqt_list, int));
 
 /// Inherited from QCPLayerable
 ///
@@ -46843,10 +46843,10 @@ void q_cplegend_super_apply_antialiasing_hint(const void* self, void* painter, b
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback void func(QCPLegend* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cplegend_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cplegend_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -46874,10 +46874,10 @@ QObject* q_cplegend_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback QObject* func(QCPLegend* self)
 ///
-void q_cplegend_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cplegend_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -46905,10 +46905,10 @@ int32_t q_cplegend_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback int32_t func(QCPLegend* self)
 ///
-void q_cplegend_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cplegend_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -46938,10 +46938,10 @@ int32_t q_cplegend_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback int32_t func(QCPLegend* self, const char* signal)
 ///
-void q_cplegend_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cplegend_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -46971,10 +46971,10 @@ bool q_cplegend_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPLegend*
+/// @param self QCPLegend*
 /// @param callback bool func(QCPLegend* self, QMetaMethod* signal)
 ///
-void q_cplegend_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cplegend_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -47053,10 +47053,10 @@ const QMetaObject* q_cptextelement_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback const QMetaObject* func(const QCPTextElement* self)
 ///
-void q_cptextelement_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cptextelement_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -47235,10 +47235,10 @@ double q_cptextelement_select_test(const void* self, const void* pos, bool onlyS
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback double func(const QCPTextElement* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cptextelement_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cptextelement_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
@@ -47399,10 +47399,10 @@ void q_cptextelement_apply_default_antialiasing_hint(const void* self, void* pai
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback void func(const QCPTextElement* self, QCPPainter* painter)
 ///
-void q_cptextelement_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cptextelement_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
@@ -47448,12 +47448,12 @@ QSize* q_cptextelement_minimum_outer_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback QSize* func(const QCPTextElement* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cptextelement_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cptextelement_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
@@ -47473,12 +47473,12 @@ QSize* q_cptextelement_maximum_outer_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback QSize* func(const QCPTextElement* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cptextelement_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cptextelement_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPTextElement.html)
 ///
@@ -48388,10 +48388,10 @@ libqt_list q_cptextelement_super_elements(const void* self, bool recursive);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback libqt_list of QCPLayoutElement* func(QCPTextElement* self, bool recursive)
 ///
-void q_cptextelement_on_elements(const void* self, libqt_list (*callback)(const void*, bool));
+void q_cptextelement_on_elements(void* self, libqt_list (*callback)(const void*, bool));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -48520,10 +48520,10 @@ int32_t q_cptextelement_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback int32_t func(QCPTextElement* self)
 ///
-void q_cptextelement_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cptextelement_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -48551,12 +48551,12 @@ QRect* q_cptextelement_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback QRect* func(QCPTextElement* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cptextelement_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cptextelement_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -48992,10 +48992,10 @@ void q_cptextelement_super_apply_antialiasing_hint(const void* self, void* paint
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback void func(QCPTextElement* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cptextelement_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cptextelement_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -49023,10 +49023,10 @@ QObject* q_cptextelement_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback QObject* func(QCPTextElement* self)
 ///
-void q_cptextelement_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cptextelement_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -49054,10 +49054,10 @@ int32_t q_cptextelement_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback int32_t func(QCPTextElement* self)
 ///
-void q_cptextelement_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cptextelement_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -49087,10 +49087,10 @@ int32_t q_cptextelement_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback int32_t func(QCPTextElement* self, const char* signal)
 ///
-void q_cptextelement_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cptextelement_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -49120,10 +49120,10 @@ bool q_cptextelement_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPTextElement*
+/// @param self QCPTextElement*
 /// @param callback bool func(QCPTextElement* self, QMetaMethod* signal)
 ///
-void q_cptextelement_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cptextelement_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -49162,10 +49162,10 @@ const QMetaObject* q_cpcolorscale_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback const QMetaObject* func(const QCPColorScale* self)
 ///
-void q_cpcolorscale_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpcolorscale_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -49434,10 +49434,10 @@ void q_cpcolorscale_apply_default_antialiasing_hint(const void* self, void* pain
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback void func(const QCPColorScale* self, QCPPainter* painter)
 ///
-void q_cpcolorscale_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpcolorscale_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorScale.html)
 ///
@@ -50347,12 +50347,12 @@ QSize* q_cpcolorscale_super_minimum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback QSize* func(QCPColorScale* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpcolorscale_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cpcolorscale_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -50380,12 +50380,12 @@ QSize* q_cpcolorscale_super_maximum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback QSize* func(QCPColorScale* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpcolorscale_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cpcolorscale_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -50419,10 +50419,10 @@ libqt_list q_cpcolorscale_super_elements(const void* self, bool recursive);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback libqt_list of QCPLayoutElement* func(QCPColorScale* self, bool recursive)
 ///
-void q_cpcolorscale_on_elements(const void* self, libqt_list (*callback)(const void*, bool));
+void q_cpcolorscale_on_elements(void* self, libqt_list (*callback)(const void*, bool));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -50456,10 +50456,10 @@ double q_cpcolorscale_super_select_test(const void* self, const void* pos, bool 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback double func(QCPColorScale* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpcolorscale_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpcolorscale_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -50621,10 +50621,10 @@ int32_t q_cpcolorscale_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback int32_t func(QCPColorScale* self)
 ///
-void q_cpcolorscale_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpcolorscale_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -50652,12 +50652,12 @@ QRect* q_cpcolorscale_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback QRect* func(QCPColorScale* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpcolorscale_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpcolorscale_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -51132,10 +51132,10 @@ void q_cpcolorscale_super_apply_antialiasing_hint(const void* self, void* painte
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback void func(QCPColorScale* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpcolorscale_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpcolorscale_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -51163,10 +51163,10 @@ QObject* q_cpcolorscale_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback QObject* func(QCPColorScale* self)
 ///
-void q_cpcolorscale_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpcolorscale_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -51194,10 +51194,10 @@ int32_t q_cpcolorscale_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback int32_t func(QCPColorScale* self)
 ///
-void q_cpcolorscale_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpcolorscale_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -51227,10 +51227,10 @@ int32_t q_cpcolorscale_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback int32_t func(QCPColorScale* self, const char* signal)
 ///
-void q_cpcolorscale_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpcolorscale_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -51260,10 +51260,10 @@ bool q_cpcolorscale_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorScale*
+/// @param self QCPColorScale*
 /// @param callback bool func(QCPColorScale* self, QMetaMethod* signal)
 ///
-void q_cpcolorscale_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpcolorscale_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -51424,10 +51424,10 @@ const QMetaObject* q_cpgraph_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback const QMetaObject* func(const QCPGraph* self)
 ///
-void q_cpgraph_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpgraph_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -51591,10 +51591,10 @@ double q_cpgraph_select_test(const void* self, const void* pos, bool onlySelecta
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback double func(const QCPGraph* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpgraph_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpgraph_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -51619,12 +51619,12 @@ QCPRange* q_cpgraph_get_key_range(const void* self, bool* foundRange, int32_t in
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback QCPRange* func(const QCPGraph* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpgraph_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
+void q_cpgraph_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -51649,12 +51649,12 @@ QCPRange* q_cpgraph_get_value_range(const void* self, bool* foundRange, int32_t 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback QCPRange* func(const QCPGraph* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpgraph_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
+void q_cpgraph_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -51704,10 +51704,10 @@ void q_cpgraph_draw_legend_icon(const void* self, void* painter, const void* rec
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback void func(const QCPGraph* self, QCPPainter* painter, QRectF* rect)
 ///
-void q_cpgraph_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*));
+void q_cpgraph_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -51731,10 +51731,10 @@ void q_cpgraph_draw_fill(const void* self, void* painter, libqt_list lines);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback void func(const QCPGraph* self, QCPPainter* painter, libqt_list of QPointF* lines)
 ///
-void q_cpgraph_on_draw_fill(const void* self, void (*callback)(const void*, void*, libqt_list));
+void q_cpgraph_on_draw_fill(void* self, void (*callback)(const void*, void*, libqt_list));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -51759,10 +51759,10 @@ void q_cpgraph_draw_scatter_plot(const void* self, void* painter, libqt_list sca
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback void func(const QCPGraph* self, QCPPainter* painter, libqt_list of QPointF* scatters, QCPScatterStyle* style)
 ///
-void q_cpgraph_on_draw_scatter_plot(const void* self, void (*callback)(const void*, void*, libqt_list, const void*));
+void q_cpgraph_on_draw_scatter_plot(void* self, void (*callback)(const void*, void*, libqt_list, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -51787,10 +51787,10 @@ void q_cpgraph_draw_line_plot(const void* self, void* painter, libqt_list lines)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback void func(const QCPGraph* self, QCPPainter* painter, libqt_list of QPointF* lines)
 ///
-void q_cpgraph_on_draw_line_plot(const void* self, void (*callback)(const void*, void*, libqt_list));
+void q_cpgraph_on_draw_line_plot(void* self, void (*callback)(const void*, void*, libqt_list));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -51814,10 +51814,10 @@ void q_cpgraph_draw_impulse_plot(const void* self, void* painter, libqt_list lin
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback void func(const QCPGraph* self, QCPPainter* painter, libqt_list of QPointF* lines)
 ///
-void q_cpgraph_on_draw_impulse_plot(const void* self, void (*callback)(const void*, void*, libqt_list));
+void q_cpgraph_on_draw_impulse_plot(void* self, void (*callback)(const void*, void*, libqt_list));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPGraph.html)
 ///
@@ -52969,10 +52969,10 @@ int32_t q_cpgraph_data_count(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback int32_t func(QCPGraph* self)
 ///
-void q_cpgraph_on_data_count(const void* self, int32_t (*callback)(const void*));
+void q_cpgraph_on_data_count(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -52993,10 +52993,10 @@ double q_cpgraph_data_main_key(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback double func(QCPGraph* self, int index)
 ///
-void q_cpgraph_on_data_main_key(const void* self, double (*callback)(const void*, int));
+void q_cpgraph_on_data_main_key(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -53017,10 +53017,10 @@ double q_cpgraph_data_sort_key(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback double func(QCPGraph* self, int index)
 ///
-void q_cpgraph_on_data_sort_key(const void* self, double (*callback)(const void*, int));
+void q_cpgraph_on_data_sort_key(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -53041,10 +53041,10 @@ double q_cpgraph_data_main_value(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback double func(QCPGraph* self, int index)
 ///
-void q_cpgraph_on_data_main_value(const void* self, double (*callback)(const void*, int));
+void q_cpgraph_on_data_main_value(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -53065,12 +53065,12 @@ QCPRange* q_cpgraph_data_value_range(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback QCPRange* func(QCPGraph* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpgraph_on_data_value_range(const void* self, QCPRange* (*callback)(const void*, int));
+void q_cpgraph_on_data_value_range(void* self, QCPRange* (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -53091,12 +53091,12 @@ QPointF* q_cpgraph_data_pixel_position(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback QPointF* func(QCPGraph* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpgraph_on_data_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpgraph_on_data_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -53116,10 +53116,10 @@ bool q_cpgraph_sort_key_is_main_key(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback bool func(QCPGraph* self)
 ///
-void q_cpgraph_on_sort_key_is_main_key(const void* self, bool (*callback)(const void*));
+void q_cpgraph_on_sort_key_is_main_key(void* self, bool (*callback)(const void*));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -53141,12 +53141,12 @@ QCPDataSelection* q_cpgraph_select_test_rect(const void* self, const void* rect,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback QCPDataSelection* func(QCPGraph* self, QRectF* rect, bool onlySelectable)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpgraph_on_select_test_rect(const void* self, QCPDataSelection* (*callback)(const void*, const void*, bool));
+void q_cpgraph_on_select_test_rect(void* self, QCPDataSelection* (*callback)(const void*, const void*, bool));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -53168,10 +53168,10 @@ int32_t q_cpgraph_find_begin(const void* self, double sortKey, bool expandedRang
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback int32_t func(QCPGraph* self, double sortKey, bool expandedRange)
 ///
-void q_cpgraph_on_find_begin(const void* self, int32_t (*callback)(const void*, double, bool));
+void q_cpgraph_on_find_begin(void* self, int32_t (*callback)(const void*, double, bool));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -53193,10 +53193,10 @@ int32_t q_cpgraph_find_end(const void* self, double sortKey, bool expandedRange)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback int32_t func(QCPGraph* self, double sortKey, bool expandedRange)
 ///
-void q_cpgraph_on_find_end(const void* self, int32_t (*callback)(const void*, double, bool));
+void q_cpgraph_on_find_end(void* self, int32_t (*callback)(const void*, double, bool));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -53255,12 +53255,12 @@ QRect* q_cpgraph_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback QRect* func(QCPGraph* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpgraph_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpgraph_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -53292,10 +53292,10 @@ int32_t q_cpgraph_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback int32_t func(QCPGraph* self)
 ///
-void q_cpgraph_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpgraph_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -53325,10 +53325,10 @@ void q_cpgraph_super_apply_default_antialiasing_hint(const void* self, void* pai
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback void func(QCPGraph* self, QCPPainter* painter)
 ///
-void q_cpgraph_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpgraph_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -53869,10 +53869,10 @@ void q_cpgraph_super_apply_fill_antialiasing_hint(const void* self, void* painte
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback void func(QCPGraph* self, QCPPainter* painter)
 ///
-void q_cpgraph_on_apply_fill_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpgraph_on_apply_fill_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -53902,10 +53902,10 @@ void q_cpgraph_super_apply_scatters_antialiasing_hint(const void* self, void* pa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback void func(QCPGraph* self, QCPPainter* painter)
 ///
-void q_cpgraph_on_apply_scatters_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpgraph_on_apply_scatters_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -54040,10 +54040,10 @@ void q_cpgraph_super_apply_antialiasing_hint(const void* self, void* painter, bo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback void func(QCPGraph* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpgraph_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpgraph_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -54071,10 +54071,10 @@ QObject* q_cpgraph_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback QObject* func(QCPGraph* self)
 ///
-void q_cpgraph_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpgraph_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -54102,10 +54102,10 @@ int32_t q_cpgraph_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback int32_t func(QCPGraph* self)
 ///
-void q_cpgraph_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpgraph_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -54135,10 +54135,10 @@ int32_t q_cpgraph_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback int32_t func(QCPGraph* self, const char* signal)
 ///
-void q_cpgraph_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpgraph_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -54168,10 +54168,10 @@ bool q_cpgraph_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPGraph*
+/// @param self QCPGraph*
 /// @param callback bool func(QCPGraph* self, QMetaMethod* signal)
 ///
-void q_cpgraph_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpgraph_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -54346,10 +54346,10 @@ const QMetaObject* q_cpcurve_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback const QMetaObject* func(const QCPCurve* self)
 ///
-void q_cpcurve_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpcurve_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -54514,10 +54514,10 @@ double q_cpcurve_select_test(const void* self, const void* pos, bool onlySelecta
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback double func(const QCPCurve* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpcurve_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpcurve_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -54542,12 +54542,12 @@ QCPRange* q_cpcurve_get_key_range(const void* self, bool* foundRange, int32_t in
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback QCPRange* func(const QCPCurve* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpcurve_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
+void q_cpcurve_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -54572,12 +54572,12 @@ QCPRange* q_cpcurve_get_value_range(const void* self, bool* foundRange, int32_t 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback QCPRange* func(const QCPCurve* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpcurve_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
+void q_cpcurve_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -54627,10 +54627,10 @@ void q_cpcurve_draw_legend_icon(const void* self, void* painter, const void* rec
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback void func(const QCPCurve* self, QCPPainter* painter, QRectF* rect)
 ///
-void q_cpcurve_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*));
+void q_cpcurve_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -54654,10 +54654,10 @@ void q_cpcurve_draw_curve_line(const void* self, void* painter, libqt_list lines
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback void func(const QCPCurve* self, QCPPainter* painter, libqt_list of QPointF* lines)
 ///
-void q_cpcurve_on_draw_curve_line(const void* self, void (*callback)(const void*, void*, libqt_list));
+void q_cpcurve_on_draw_curve_line(void* self, void (*callback)(const void*, void*, libqt_list));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -54682,10 +54682,10 @@ void q_cpcurve_draw_scatter_plot(const void* self, void* painter, libqt_list poi
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback void func(const QCPCurve* self, QCPPainter* painter, libqt_list of QPointF* points, QCPScatterStyle* style)
 ///
-void q_cpcurve_on_draw_scatter_plot(const void* self, void (*callback)(const void*, void*, libqt_list, const void*));
+void q_cpcurve_on_draw_scatter_plot(void* self, void (*callback)(const void*, void*, libqt_list, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPCurve.html)
 ///
@@ -55790,10 +55790,10 @@ int32_t q_cpcurve_data_count(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback int32_t func(QCPCurve* self)
 ///
-void q_cpcurve_on_data_count(const void* self, int32_t (*callback)(const void*));
+void q_cpcurve_on_data_count(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -55814,10 +55814,10 @@ double q_cpcurve_data_main_key(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback double func(QCPCurve* self, int index)
 ///
-void q_cpcurve_on_data_main_key(const void* self, double (*callback)(const void*, int));
+void q_cpcurve_on_data_main_key(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -55838,10 +55838,10 @@ double q_cpcurve_data_sort_key(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback double func(QCPCurve* self, int index)
 ///
-void q_cpcurve_on_data_sort_key(const void* self, double (*callback)(const void*, int));
+void q_cpcurve_on_data_sort_key(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -55862,10 +55862,10 @@ double q_cpcurve_data_main_value(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback double func(QCPCurve* self, int index)
 ///
-void q_cpcurve_on_data_main_value(const void* self, double (*callback)(const void*, int));
+void q_cpcurve_on_data_main_value(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -55886,12 +55886,12 @@ QCPRange* q_cpcurve_data_value_range(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback QCPRange* func(QCPCurve* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpcurve_on_data_value_range(const void* self, QCPRange* (*callback)(const void*, int));
+void q_cpcurve_on_data_value_range(void* self, QCPRange* (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -55912,12 +55912,12 @@ QPointF* q_cpcurve_data_pixel_position(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback QPointF* func(QCPCurve* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpcurve_on_data_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpcurve_on_data_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -55937,10 +55937,10 @@ bool q_cpcurve_sort_key_is_main_key(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback bool func(QCPCurve* self)
 ///
-void q_cpcurve_on_sort_key_is_main_key(const void* self, bool (*callback)(const void*));
+void q_cpcurve_on_sort_key_is_main_key(void* self, bool (*callback)(const void*));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -55962,12 +55962,12 @@ QCPDataSelection* q_cpcurve_select_test_rect(const void* self, const void* rect,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback QCPDataSelection* func(QCPCurve* self, QRectF* rect, bool onlySelectable)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpcurve_on_select_test_rect(const void* self, QCPDataSelection* (*callback)(const void*, const void*, bool));
+void q_cpcurve_on_select_test_rect(void* self, QCPDataSelection* (*callback)(const void*, const void*, bool));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -55989,10 +55989,10 @@ int32_t q_cpcurve_find_begin(const void* self, double sortKey, bool expandedRang
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback int32_t func(QCPCurve* self, double sortKey, bool expandedRange)
 ///
-void q_cpcurve_on_find_begin(const void* self, int32_t (*callback)(const void*, double, bool));
+void q_cpcurve_on_find_begin(void* self, int32_t (*callback)(const void*, double, bool));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -56014,10 +56014,10 @@ int32_t q_cpcurve_find_end(const void* self, double sortKey, bool expandedRange)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback int32_t func(QCPCurve* self, double sortKey, bool expandedRange)
 ///
-void q_cpcurve_on_find_end(const void* self, int32_t (*callback)(const void*, double, bool));
+void q_cpcurve_on_find_end(void* self, int32_t (*callback)(const void*, double, bool));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -56076,12 +56076,12 @@ QRect* q_cpcurve_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback QRect* func(QCPCurve* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpcurve_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpcurve_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -56113,10 +56113,10 @@ int32_t q_cpcurve_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback int32_t func(QCPCurve* self)
 ///
-void q_cpcurve_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpcurve_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -56146,10 +56146,10 @@ void q_cpcurve_super_apply_default_antialiasing_hint(const void* self, void* pai
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback void func(QCPCurve* self, QCPPainter* painter)
 ///
-void q_cpcurve_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpcurve_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -56690,10 +56690,10 @@ void q_cpcurve_super_apply_fill_antialiasing_hint(const void* self, void* painte
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback void func(QCPCurve* self, QCPPainter* painter)
 ///
-void q_cpcurve_on_apply_fill_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpcurve_on_apply_fill_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -56723,10 +56723,10 @@ void q_cpcurve_super_apply_scatters_antialiasing_hint(const void* self, void* pa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback void func(QCPCurve* self, QCPPainter* painter)
 ///
-void q_cpcurve_on_apply_scatters_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpcurve_on_apply_scatters_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -56861,10 +56861,10 @@ void q_cpcurve_super_apply_antialiasing_hint(const void* self, void* painter, bo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback void func(QCPCurve* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpcurve_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpcurve_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -56892,10 +56892,10 @@ QObject* q_cpcurve_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback QObject* func(QCPCurve* self)
 ///
-void q_cpcurve_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpcurve_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -56923,10 +56923,10 @@ int32_t q_cpcurve_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback int32_t func(QCPCurve* self)
 ///
-void q_cpcurve_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpcurve_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -56956,10 +56956,10 @@ int32_t q_cpcurve_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback int32_t func(QCPCurve* self, const char* signal)
 ///
-void q_cpcurve_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpcurve_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -56989,10 +56989,10 @@ bool q_cpcurve_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPCurve*
+/// @param self QCPCurve*
 /// @param callback bool func(QCPCurve* self, QMetaMethod* signal)
 ///
-void q_cpcurve_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpcurve_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -57031,10 +57031,10 @@ const QMetaObject* q_cpbarsgroup_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPBarsGroup*
+/// @param self QCPBarsGroup*
 /// @param callback const QMetaObject* func(const QCPBarsGroup* self)
 ///
-void q_cpbarsgroup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpbarsgroup_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -57939,10 +57939,10 @@ QObject* q_cpbarsgroup_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBarsGroup*
+/// @param self QCPBarsGroup*
 /// @param callback QObject* func(QCPBarsGroup* self)
 ///
-void q_cpbarsgroup_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpbarsgroup_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -57970,10 +57970,10 @@ int32_t q_cpbarsgroup_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBarsGroup*
+/// @param self QCPBarsGroup*
 /// @param callback int32_t func(QCPBarsGroup* self)
 ///
-void q_cpbarsgroup_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpbarsgroup_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -58003,10 +58003,10 @@ int32_t q_cpbarsgroup_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBarsGroup*
+/// @param self QCPBarsGroup*
 /// @param callback int32_t func(QCPBarsGroup* self, const char* signal)
 ///
-void q_cpbarsgroup_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpbarsgroup_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -58036,10 +58036,10 @@ bool q_cpbarsgroup_super_is_signal_connected(const void* self, const void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBarsGroup*
+/// @param self QCPBarsGroup*
 /// @param callback bool func(QCPBarsGroup* self, QMetaMethod* signal)
 ///
-void q_cpbarsgroup_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpbarsgroup_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -58200,10 +58200,10 @@ const QMetaObject* q_cpbars_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback const QMetaObject* func(const QCPBars* self)
 ///
-void q_cpbars_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpbars_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -58392,12 +58392,12 @@ QCPDataSelection* q_cpbars_select_test_rect(const void* self, const void* rect, 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback QCPDataSelection* func(const QCPBars* self, QRectF* rect, bool onlySelectable)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpbars_on_select_test_rect(const void* self, QCPDataSelection* (*callback)(const void*, const void*, bool));
+void q_cpbars_on_select_test_rect(void* self, QCPDataSelection* (*callback)(const void*, const void*, bool));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -58422,10 +58422,10 @@ double q_cpbars_select_test(const void* self, const void* pos, bool onlySelectab
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback double func(const QCPBars* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpbars_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpbars_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -58450,12 +58450,12 @@ QCPRange* q_cpbars_get_key_range(const void* self, bool* foundRange, int32_t inS
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback QCPRange* func(const QCPBars* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpbars_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
+void q_cpbars_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -58480,12 +58480,12 @@ QCPRange* q_cpbars_get_value_range(const void* self, bool* foundRange, int32_t i
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback QCPRange* func(const QCPBars* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpbars_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
+void q_cpbars_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -58509,12 +58509,12 @@ QPointF* q_cpbars_data_pixel_position(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback QPointF* func(const QCPBars* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpbars_on_data_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpbars_on_data_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -58562,10 +58562,10 @@ void q_cpbars_draw_legend_icon(const void* self, void* painter, const void* rect
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback void func(const QCPBars* self, QCPPainter* painter, QRectF* rect)
 ///
-void q_cpbars_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*));
+void q_cpbars_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPBars.html)
 ///
@@ -59599,10 +59599,10 @@ int32_t q_cpbars_data_count(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback int32_t func(QCPBars* self)
 ///
-void q_cpbars_on_data_count(const void* self, int32_t (*callback)(const void*));
+void q_cpbars_on_data_count(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -59623,10 +59623,10 @@ double q_cpbars_data_main_key(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback double func(QCPBars* self, int index)
 ///
-void q_cpbars_on_data_main_key(const void* self, double (*callback)(const void*, int));
+void q_cpbars_on_data_main_key(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -59647,10 +59647,10 @@ double q_cpbars_data_sort_key(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback double func(QCPBars* self, int index)
 ///
-void q_cpbars_on_data_sort_key(const void* self, double (*callback)(const void*, int));
+void q_cpbars_on_data_sort_key(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -59671,10 +59671,10 @@ double q_cpbars_data_main_value(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback double func(QCPBars* self, int index)
 ///
-void q_cpbars_on_data_main_value(const void* self, double (*callback)(const void*, int));
+void q_cpbars_on_data_main_value(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -59695,12 +59695,12 @@ QCPRange* q_cpbars_data_value_range(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback QCPRange* func(QCPBars* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpbars_on_data_value_range(const void* self, QCPRange* (*callback)(const void*, int));
+void q_cpbars_on_data_value_range(void* self, QCPRange* (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -59720,10 +59720,10 @@ bool q_cpbars_sort_key_is_main_key(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback bool func(QCPBars* self)
 ///
-void q_cpbars_on_sort_key_is_main_key(const void* self, bool (*callback)(const void*));
+void q_cpbars_on_sort_key_is_main_key(void* self, bool (*callback)(const void*));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -59745,10 +59745,10 @@ int32_t q_cpbars_find_begin(const void* self, double sortKey, bool expandedRange
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback int32_t func(QCPBars* self, double sortKey, bool expandedRange)
 ///
-void q_cpbars_on_find_begin(const void* self, int32_t (*callback)(const void*, double, bool));
+void q_cpbars_on_find_begin(void* self, int32_t (*callback)(const void*, double, bool));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -59770,10 +59770,10 @@ int32_t q_cpbars_find_end(const void* self, double sortKey, bool expandedRange);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback int32_t func(QCPBars* self, double sortKey, bool expandedRange)
 ///
-void q_cpbars_on_find_end(const void* self, int32_t (*callback)(const void*, double, bool));
+void q_cpbars_on_find_end(void* self, int32_t (*callback)(const void*, double, bool));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -59832,12 +59832,12 @@ QRect* q_cpbars_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback QRect* func(QCPBars* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpbars_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpbars_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -59869,10 +59869,10 @@ int32_t q_cpbars_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback int32_t func(QCPBars* self)
 ///
-void q_cpbars_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpbars_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -59902,10 +59902,10 @@ void q_cpbars_super_apply_default_antialiasing_hint(const void* self, void* pain
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback void func(QCPBars* self, QCPPainter* painter)
 ///
-void q_cpbars_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpbars_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -60446,10 +60446,10 @@ void q_cpbars_super_apply_fill_antialiasing_hint(const void* self, void* painter
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback void func(QCPBars* self, QCPPainter* painter)
 ///
-void q_cpbars_on_apply_fill_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpbars_on_apply_fill_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -60479,10 +60479,10 @@ void q_cpbars_super_apply_scatters_antialiasing_hint(const void* self, void* pai
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback void func(QCPBars* self, QCPPainter* painter)
 ///
-void q_cpbars_on_apply_scatters_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpbars_on_apply_scatters_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -60617,10 +60617,10 @@ void q_cpbars_super_apply_antialiasing_hint(const void* self, void* painter, boo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback void func(QCPBars* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpbars_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpbars_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -60648,10 +60648,10 @@ QObject* q_cpbars_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback QObject* func(QCPBars* self)
 ///
-void q_cpbars_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpbars_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -60679,10 +60679,10 @@ int32_t q_cpbars_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback int32_t func(QCPBars* self)
 ///
-void q_cpbars_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpbars_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -60712,10 +60712,10 @@ int32_t q_cpbars_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback int32_t func(QCPBars* self, const char* signal)
 ///
-void q_cpbars_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpbars_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -60745,10 +60745,10 @@ bool q_cpbars_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPBars*
+/// @param self QCPBars*
 /// @param callback bool func(QCPBars* self, QMetaMethod* signal)
 ///
-void q_cpbars_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpbars_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -60964,10 +60964,10 @@ const QMetaObject* q_cpstatisticalbox_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback const QMetaObject* func(const QCPStatisticalBox* self)
 ///
-void q_cpstatisticalbox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpstatisticalbox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -61166,12 +61166,12 @@ QCPDataSelection* q_cpstatisticalbox_select_test_rect(const void* self, const vo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback QCPDataSelection* func(const QCPStatisticalBox* self, QRectF* rect, bool onlySelectable)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpstatisticalbox_on_select_test_rect(const void* self, QCPDataSelection* (*callback)(const void*, const void*, bool));
+void q_cpstatisticalbox_on_select_test_rect(void* self, QCPDataSelection* (*callback)(const void*, const void*, bool));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
@@ -61196,10 +61196,10 @@ double q_cpstatisticalbox_select_test(const void* self, const void* pos, bool on
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback double func(const QCPStatisticalBox* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpstatisticalbox_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpstatisticalbox_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
@@ -61224,12 +61224,12 @@ QCPRange* q_cpstatisticalbox_get_key_range(const void* self, bool* foundRange, i
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback QCPRange* func(const QCPStatisticalBox* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpstatisticalbox_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
+void q_cpstatisticalbox_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
@@ -61254,12 +61254,12 @@ QCPRange* q_cpstatisticalbox_get_value_range(const void* self, bool* foundRange,
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback QCPRange* func(const QCPStatisticalBox* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpstatisticalbox_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
+void q_cpstatisticalbox_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
@@ -61309,10 +61309,10 @@ void q_cpstatisticalbox_draw_legend_icon(const void* self, void* painter, const 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback void func(const QCPStatisticalBox* self, QCPPainter* painter, QRectF* rect)
 ///
-void q_cpstatisticalbox_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*));
+void q_cpstatisticalbox_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPStatisticalBox.html)
 ///
@@ -62334,10 +62334,10 @@ int32_t q_cpstatisticalbox_data_count(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback int32_t func(QCPStatisticalBox* self)
 ///
-void q_cpstatisticalbox_on_data_count(const void* self, int32_t (*callback)(const void*));
+void q_cpstatisticalbox_on_data_count(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -62358,10 +62358,10 @@ double q_cpstatisticalbox_data_main_key(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback double func(QCPStatisticalBox* self, int index)
 ///
-void q_cpstatisticalbox_on_data_main_key(const void* self, double (*callback)(const void*, int));
+void q_cpstatisticalbox_on_data_main_key(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -62382,10 +62382,10 @@ double q_cpstatisticalbox_data_sort_key(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback double func(QCPStatisticalBox* self, int index)
 ///
-void q_cpstatisticalbox_on_data_sort_key(const void* self, double (*callback)(const void*, int));
+void q_cpstatisticalbox_on_data_sort_key(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -62406,10 +62406,10 @@ double q_cpstatisticalbox_data_main_value(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback double func(QCPStatisticalBox* self, int index)
 ///
-void q_cpstatisticalbox_on_data_main_value(const void* self, double (*callback)(const void*, int));
+void q_cpstatisticalbox_on_data_main_value(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -62430,12 +62430,12 @@ QCPRange* q_cpstatisticalbox_data_value_range(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback QCPRange* func(QCPStatisticalBox* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpstatisticalbox_on_data_value_range(const void* self, QCPRange* (*callback)(const void*, int));
+void q_cpstatisticalbox_on_data_value_range(void* self, QCPRange* (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -62456,12 +62456,12 @@ QPointF* q_cpstatisticalbox_data_pixel_position(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback QPointF* func(QCPStatisticalBox* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpstatisticalbox_on_data_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpstatisticalbox_on_data_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -62481,10 +62481,10 @@ bool q_cpstatisticalbox_sort_key_is_main_key(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback bool func(QCPStatisticalBox* self)
 ///
-void q_cpstatisticalbox_on_sort_key_is_main_key(const void* self, bool (*callback)(const void*));
+void q_cpstatisticalbox_on_sort_key_is_main_key(void* self, bool (*callback)(const void*));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -62506,10 +62506,10 @@ int32_t q_cpstatisticalbox_find_begin(const void* self, double sortKey, bool exp
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback int32_t func(QCPStatisticalBox* self, double sortKey, bool expandedRange)
 ///
-void q_cpstatisticalbox_on_find_begin(const void* self, int32_t (*callback)(const void*, double, bool));
+void q_cpstatisticalbox_on_find_begin(void* self, int32_t (*callback)(const void*, double, bool));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -62531,10 +62531,10 @@ int32_t q_cpstatisticalbox_find_end(const void* self, double sortKey, bool expan
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback int32_t func(QCPStatisticalBox* self, double sortKey, bool expandedRange)
 ///
-void q_cpstatisticalbox_on_find_end(const void* self, int32_t (*callback)(const void*, double, bool));
+void q_cpstatisticalbox_on_find_end(void* self, int32_t (*callback)(const void*, double, bool));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -62593,12 +62593,12 @@ QRect* q_cpstatisticalbox_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback QRect* func(QCPStatisticalBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpstatisticalbox_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpstatisticalbox_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -62630,10 +62630,10 @@ int32_t q_cpstatisticalbox_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback int32_t func(QCPStatisticalBox* self)
 ///
-void q_cpstatisticalbox_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpstatisticalbox_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -62663,10 +62663,10 @@ void q_cpstatisticalbox_super_apply_default_antialiasing_hint(const void* self, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback void func(QCPStatisticalBox* self, QCPPainter* painter)
 ///
-void q_cpstatisticalbox_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpstatisticalbox_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -63207,10 +63207,10 @@ void q_cpstatisticalbox_super_apply_fill_antialiasing_hint(const void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback void func(QCPStatisticalBox* self, QCPPainter* painter)
 ///
-void q_cpstatisticalbox_on_apply_fill_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpstatisticalbox_on_apply_fill_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -63240,10 +63240,10 @@ void q_cpstatisticalbox_super_apply_scatters_antialiasing_hint(const void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback void func(QCPStatisticalBox* self, QCPPainter* painter)
 ///
-void q_cpstatisticalbox_on_apply_scatters_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpstatisticalbox_on_apply_scatters_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -63378,10 +63378,10 @@ void q_cpstatisticalbox_super_apply_antialiasing_hint(const void* self, void* pa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback void func(QCPStatisticalBox* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpstatisticalbox_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpstatisticalbox_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -63409,10 +63409,10 @@ QObject* q_cpstatisticalbox_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback QObject* func(QCPStatisticalBox* self)
 ///
-void q_cpstatisticalbox_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpstatisticalbox_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -63440,10 +63440,10 @@ int32_t q_cpstatisticalbox_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback int32_t func(QCPStatisticalBox* self)
 ///
-void q_cpstatisticalbox_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpstatisticalbox_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -63473,10 +63473,10 @@ int32_t q_cpstatisticalbox_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback int32_t func(QCPStatisticalBox* self, const char* signal)
 ///
-void q_cpstatisticalbox_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpstatisticalbox_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -63506,10 +63506,10 @@ bool q_cpstatisticalbox_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPStatisticalBox*
+/// @param self QCPStatisticalBox*
 /// @param callback bool func(QCPStatisticalBox* self, QMetaMethod* signal)
 ///
-void q_cpstatisticalbox_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpstatisticalbox_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -63766,10 +63766,10 @@ const QMetaObject* q_cpcolormap_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback const QMetaObject* func(const QCPColorMap* self)
 ///
-void q_cpcolormap_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpcolormap_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -63947,10 +63947,10 @@ double q_cpcolormap_select_test(const void* self, const void* pos, bool onlySele
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback double func(const QCPColorMap* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpcolormap_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpcolormap_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorMap.html)
 ///
@@ -63975,12 +63975,12 @@ QCPRange* q_cpcolormap_get_key_range(const void* self, bool* foundRange, int32_t
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback QCPRange* func(const QCPColorMap* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpcolormap_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
+void q_cpcolormap_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorMap.html)
 ///
@@ -64005,12 +64005,12 @@ QCPRange* q_cpcolormap_get_value_range(const void* self, bool* foundRange, int32
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback QCPRange* func(const QCPColorMap* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpcolormap_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
+void q_cpcolormap_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorMap.html)
 ///
@@ -64125,10 +64125,10 @@ void q_cpcolormap_draw_legend_icon(const void* self, void* painter, const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback void func(const QCPColorMap* self, QCPPainter* painter, QRectF* rect)
 ///
-void q_cpcolormap_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*));
+void q_cpcolormap_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPColorMap.html)
 ///
@@ -65171,12 +65171,12 @@ QRect* q_cpcolormap_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback QRect* func(QCPColorMap* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpcolormap_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpcolormap_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -65208,10 +65208,10 @@ int32_t q_cpcolormap_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback int32_t func(QCPColorMap* self)
 ///
-void q_cpcolormap_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpcolormap_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -65241,10 +65241,10 @@ void q_cpcolormap_super_apply_default_antialiasing_hint(const void* self, void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback void func(QCPColorMap* self, QCPPainter* painter)
 ///
-void q_cpcolormap_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpcolormap_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -65785,10 +65785,10 @@ void q_cpcolormap_super_apply_fill_antialiasing_hint(const void* self, void* pai
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback void func(QCPColorMap* self, QCPPainter* painter)
 ///
-void q_cpcolormap_on_apply_fill_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpcolormap_on_apply_fill_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -65818,10 +65818,10 @@ void q_cpcolormap_super_apply_scatters_antialiasing_hint(const void* self, void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback void func(QCPColorMap* self, QCPPainter* painter)
 ///
-void q_cpcolormap_on_apply_scatters_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpcolormap_on_apply_scatters_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -65956,10 +65956,10 @@ void q_cpcolormap_super_apply_antialiasing_hint(const void* self, void* painter,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback void func(QCPColorMap* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpcolormap_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpcolormap_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -65987,10 +65987,10 @@ QObject* q_cpcolormap_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback QObject* func(QCPColorMap* self)
 ///
-void q_cpcolormap_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpcolormap_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -66018,10 +66018,10 @@ int32_t q_cpcolormap_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback int32_t func(QCPColorMap* self)
 ///
-void q_cpcolormap_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpcolormap_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -66051,10 +66051,10 @@ int32_t q_cpcolormap_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback int32_t func(QCPColorMap* self, const char* signal)
 ///
-void q_cpcolormap_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpcolormap_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -66084,10 +66084,10 @@ bool q_cpcolormap_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPColorMap*
+/// @param self QCPColorMap*
 /// @param callback bool func(QCPColorMap* self, QMetaMethod* signal)
 ///
-void q_cpcolormap_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpcolormap_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -66290,10 +66290,10 @@ const QMetaObject* q_cpfinancial_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback const QMetaObject* func(const QCPFinancial* self)
 ///
-void q_cpfinancial_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpfinancial_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -66506,12 +66506,12 @@ QCPDataSelection* q_cpfinancial_select_test_rect(const void* self, const void* r
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback QCPDataSelection* func(const QCPFinancial* self, QRectF* rect, bool onlySelectable)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpfinancial_on_select_test_rect(const void* self, QCPDataSelection* (*callback)(const void*, const void*, bool));
+void q_cpfinancial_on_select_test_rect(void* self, QCPDataSelection* (*callback)(const void*, const void*, bool));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
@@ -66536,10 +66536,10 @@ double q_cpfinancial_select_test(const void* self, const void* pos, bool onlySel
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback double func(const QCPFinancial* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpfinancial_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpfinancial_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
@@ -66564,12 +66564,12 @@ QCPRange* q_cpfinancial_get_key_range(const void* self, bool* foundRange, int32_
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback QCPRange* func(const QCPFinancial* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpfinancial_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
+void q_cpfinancial_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
@@ -66594,12 +66594,12 @@ QCPRange* q_cpfinancial_get_value_range(const void* self, bool* foundRange, int3
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback QCPRange* func(const QCPFinancial* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpfinancial_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
+void q_cpfinancial_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
@@ -66649,10 +66649,10 @@ void q_cpfinancial_draw_legend_icon(const void* self, void* painter, const void*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback void func(const QCPFinancial* self, QCPPainter* painter, QRectF* rect)
 ///
-void q_cpfinancial_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*));
+void q_cpfinancial_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPFinancial.html)
 ///
@@ -67667,10 +67667,10 @@ int32_t q_cpfinancial_data_count(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback int32_t func(QCPFinancial* self)
 ///
-void q_cpfinancial_on_data_count(const void* self, int32_t (*callback)(const void*));
+void q_cpfinancial_on_data_count(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -67691,10 +67691,10 @@ double q_cpfinancial_data_main_key(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback double func(QCPFinancial* self, int index)
 ///
-void q_cpfinancial_on_data_main_key(const void* self, double (*callback)(const void*, int));
+void q_cpfinancial_on_data_main_key(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -67715,10 +67715,10 @@ double q_cpfinancial_data_sort_key(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback double func(QCPFinancial* self, int index)
 ///
-void q_cpfinancial_on_data_sort_key(const void* self, double (*callback)(const void*, int));
+void q_cpfinancial_on_data_sort_key(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -67739,10 +67739,10 @@ double q_cpfinancial_data_main_value(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback double func(QCPFinancial* self, int index)
 ///
-void q_cpfinancial_on_data_main_value(const void* self, double (*callback)(const void*, int));
+void q_cpfinancial_on_data_main_value(void* self, double (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -67763,12 +67763,12 @@ QCPRange* q_cpfinancial_data_value_range(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback QCPRange* func(QCPFinancial* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpfinancial_on_data_value_range(const void* self, QCPRange* (*callback)(const void*, int));
+void q_cpfinancial_on_data_value_range(void* self, QCPRange* (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -67789,12 +67789,12 @@ QPointF* q_cpfinancial_data_pixel_position(const void* self, int index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback QPointF* func(QCPFinancial* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpfinancial_on_data_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpfinancial_on_data_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -67814,10 +67814,10 @@ bool q_cpfinancial_sort_key_is_main_key(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback bool func(QCPFinancial* self)
 ///
-void q_cpfinancial_on_sort_key_is_main_key(const void* self, bool (*callback)(const void*));
+void q_cpfinancial_on_sort_key_is_main_key(void* self, bool (*callback)(const void*));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -67839,10 +67839,10 @@ int32_t q_cpfinancial_find_begin(const void* self, double sortKey, bool expanded
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback int32_t func(QCPFinancial* self, double sortKey, bool expandedRange)
 ///
-void q_cpfinancial_on_find_begin(const void* self, int32_t (*callback)(const void*, double, bool));
+void q_cpfinancial_on_find_begin(void* self, int32_t (*callback)(const void*, double, bool));
 
 /// Inherited from QCPPlottableInterface1D
 ///
@@ -67864,10 +67864,10 @@ int32_t q_cpfinancial_find_end(const void* self, double sortKey, bool expandedRa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback int32_t func(QCPFinancial* self, double sortKey, bool expandedRange)
 ///
-void q_cpfinancial_on_find_end(const void* self, int32_t (*callback)(const void*, double, bool));
+void q_cpfinancial_on_find_end(void* self, int32_t (*callback)(const void*, double, bool));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -67926,12 +67926,12 @@ QRect* q_cpfinancial_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback QRect* func(QCPFinancial* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpfinancial_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpfinancial_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -67963,10 +67963,10 @@ int32_t q_cpfinancial_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback int32_t func(QCPFinancial* self)
 ///
-void q_cpfinancial_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpfinancial_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -67996,10 +67996,10 @@ void q_cpfinancial_super_apply_default_antialiasing_hint(const void* self, void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback void func(QCPFinancial* self, QCPPainter* painter)
 ///
-void q_cpfinancial_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpfinancial_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -68540,10 +68540,10 @@ void q_cpfinancial_super_apply_fill_antialiasing_hint(const void* self, void* pa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback void func(QCPFinancial* self, QCPPainter* painter)
 ///
-void q_cpfinancial_on_apply_fill_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpfinancial_on_apply_fill_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -68573,10 +68573,10 @@ void q_cpfinancial_super_apply_scatters_antialiasing_hint(const void* self, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback void func(QCPFinancial* self, QCPPainter* painter)
 ///
-void q_cpfinancial_on_apply_scatters_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpfinancial_on_apply_scatters_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -68711,10 +68711,10 @@ void q_cpfinancial_super_apply_antialiasing_hint(const void* self, void* painter
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback void func(QCPFinancial* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpfinancial_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpfinancial_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -68742,10 +68742,10 @@ QObject* q_cpfinancial_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback QObject* func(QCPFinancial* self)
 ///
-void q_cpfinancial_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpfinancial_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -68773,10 +68773,10 @@ int32_t q_cpfinancial_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback int32_t func(QCPFinancial* self)
 ///
-void q_cpfinancial_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpfinancial_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -68806,10 +68806,10 @@ int32_t q_cpfinancial_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback int32_t func(QCPFinancial* self, const char* signal)
 ///
-void q_cpfinancial_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpfinancial_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -68839,10 +68839,10 @@ bool q_cpfinancial_super_is_signal_connected(const void* self, const void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPFinancial*
+/// @param self QCPFinancial*
 /// @param callback bool func(QCPFinancial* self, QMetaMethod* signal)
 ///
-void q_cpfinancial_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpfinancial_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -68969,15 +68969,15 @@ QCPErrorBars* q_cperrorbars_new(void* keyAxis, void* valueAxis);
 
 /// Upcasts to a QCPPlottableInterface1D object
 ///
-/// @param self QCPErrorBars*
+/// @param self const QCPErrorBars*
 ///
-QCPPlottableInterface1D* q_cperrorbars_as_q_c_p_plottable_interface1_d(void* self);
+QCPPlottableInterface1D* q_cperrorbars_as_q_c_p_plottable_interface1_d(const void* self);
 
 /// Downcasts to a QCPErrorBars object
 ///
 /// @param _qcpplottableinterface1d QCPPlottableInterface1D*
 ///
-QCPErrorBars* q_cperrorbars_from_q_c_p_plottable_interface1_d(void* _qcpplottableinterface1d);
+QCPErrorBars* q_cperrorbars_from_q_c_p_plottable_interface1_d(const void* _qcpplottableinterface1d);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -68989,10 +68989,10 @@ const QMetaObject* q_cperrorbars_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback const QMetaObject* func(const QCPErrorBars* self)
 ///
-void q_cperrorbars_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cperrorbars_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -69161,10 +69161,10 @@ int32_t q_cperrorbars_data_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback int32_t func(const QCPErrorBars* self)
 ///
-void q_cperrorbars_on_data_count(const void* self, int32_t (*callback)(const void*));
+void q_cperrorbars_on_data_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69185,10 +69185,10 @@ double q_cperrorbars_data_main_key(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback double func(const QCPErrorBars* self, int index)
 ///
-void q_cperrorbars_on_data_main_key(const void* self, double (*callback)(const void*, int));
+void q_cperrorbars_on_data_main_key(void* self, double (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69210,10 +69210,10 @@ double q_cperrorbars_data_sort_key(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback double func(const QCPErrorBars* self, int index)
 ///
-void q_cperrorbars_on_data_sort_key(const void* self, double (*callback)(const void*, int));
+void q_cperrorbars_on_data_sort_key(void* self, double (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69235,10 +69235,10 @@ double q_cperrorbars_data_main_value(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback double func(const QCPErrorBars* self, int index)
 ///
-void q_cperrorbars_on_data_main_value(const void* self, double (*callback)(const void*, int));
+void q_cperrorbars_on_data_main_value(void* self, double (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69260,12 +69260,12 @@ QCPRange* q_cperrorbars_data_value_range(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback QCPRange* func(const QCPErrorBars* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cperrorbars_on_data_value_range(const void* self, QCPRange* (*callback)(const void*, int));
+void q_cperrorbars_on_data_value_range(void* self, QCPRange* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69287,12 +69287,12 @@ QPointF* q_cperrorbars_data_pixel_position(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback QPointF* func(const QCPErrorBars* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cperrorbars_on_data_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cperrorbars_on_data_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69313,10 +69313,10 @@ bool q_cperrorbars_sort_key_is_main_key(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback bool func(const QCPErrorBars* self)
 ///
-void q_cperrorbars_on_sort_key_is_main_key(const void* self, bool (*callback)(const void*));
+void q_cperrorbars_on_sort_key_is_main_key(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69338,12 +69338,12 @@ QCPDataSelection* q_cperrorbars_select_test_rect(const void* self, const void* r
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback QCPDataSelection* func(const QCPErrorBars* self, QRectF* rect, bool onlySelectable)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cperrorbars_on_select_test_rect(const void* self, QCPDataSelection* (*callback)(const void*, const void*, bool));
+void q_cperrorbars_on_select_test_rect(void* self, QCPDataSelection* (*callback)(const void*, const void*, bool));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69367,10 +69367,10 @@ int32_t q_cperrorbars_find_begin(const void* self, double sortKey, bool expanded
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback int32_t func(const QCPErrorBars* self, double sortKey, bool expandedRange)
 ///
-void q_cperrorbars_on_find_begin(const void* self, int32_t (*callback)(const void*, double, bool));
+void q_cperrorbars_on_find_begin(void* self, int32_t (*callback)(const void*, double, bool));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69394,10 +69394,10 @@ int32_t q_cperrorbars_find_end(const void* self, double sortKey, bool expandedRa
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback int32_t func(const QCPErrorBars* self, double sortKey, bool expandedRange)
 ///
-void q_cperrorbars_on_find_end(const void* self, int32_t (*callback)(const void*, double, bool));
+void q_cperrorbars_on_find_end(void* self, int32_t (*callback)(const void*, double, bool));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69422,10 +69422,10 @@ double q_cperrorbars_select_test(const void* self, const void* pos, bool onlySel
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback double func(const QCPErrorBars* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cperrorbars_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cperrorbars_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69498,10 +69498,10 @@ void q_cperrorbars_draw_legend_icon(const void* self, void* painter, const void*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback void func(const QCPErrorBars* self, QCPPainter* painter, QRectF* rect)
 ///
-void q_cperrorbars_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*));
+void q_cperrorbars_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69525,12 +69525,12 @@ QCPRange* q_cperrorbars_get_key_range(const void* self, bool* foundRange, int32_
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback QCPRange* func(const QCPErrorBars* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cperrorbars_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
+void q_cperrorbars_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -69555,12 +69555,12 @@ QCPRange* q_cperrorbars_get_value_range(const void* self, bool* foundRange, int3
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback QCPRange* func(const QCPErrorBars* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cperrorbars_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
+void q_cperrorbars_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPErrorBars.html)
 ///
@@ -70575,12 +70575,12 @@ QRect* q_cperrorbars_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback QRect* func(QCPErrorBars* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cperrorbars_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cperrorbars_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -70612,10 +70612,10 @@ int32_t q_cperrorbars_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback int32_t func(QCPErrorBars* self)
 ///
-void q_cperrorbars_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cperrorbars_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -70645,10 +70645,10 @@ void q_cperrorbars_super_apply_default_antialiasing_hint(const void* self, void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback void func(QCPErrorBars* self, QCPPainter* painter)
 ///
-void q_cperrorbars_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cperrorbars_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -71189,10 +71189,10 @@ void q_cperrorbars_super_apply_fill_antialiasing_hint(const void* self, void* pa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback void func(QCPErrorBars* self, QCPPainter* painter)
 ///
-void q_cperrorbars_on_apply_fill_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cperrorbars_on_apply_fill_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -71222,10 +71222,10 @@ void q_cperrorbars_super_apply_scatters_antialiasing_hint(const void* self, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback void func(QCPErrorBars* self, QCPPainter* painter)
 ///
-void q_cperrorbars_on_apply_scatters_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cperrorbars_on_apply_scatters_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -71360,10 +71360,10 @@ void q_cperrorbars_super_apply_antialiasing_hint(const void* self, void* painter
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback void func(QCPErrorBars* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cperrorbars_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cperrorbars_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -71391,10 +71391,10 @@ QObject* q_cperrorbars_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback QObject* func(QCPErrorBars* self)
 ///
-void q_cperrorbars_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cperrorbars_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -71422,10 +71422,10 @@ int32_t q_cperrorbars_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback int32_t func(QCPErrorBars* self)
 ///
-void q_cperrorbars_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cperrorbars_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -71455,10 +71455,10 @@ int32_t q_cperrorbars_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback int32_t func(QCPErrorBars* self, const char* signal)
 ///
-void q_cperrorbars_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cperrorbars_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -71488,10 +71488,10 @@ bool q_cperrorbars_super_is_signal_connected(const void* self, const void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPErrorBars*
+/// @param self QCPErrorBars*
 /// @param callback bool func(QCPErrorBars* self, QMetaMethod* signal)
 ///
-void q_cperrorbars_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cperrorbars_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -71530,10 +71530,10 @@ const QMetaObject* q_cpitemstraightline_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemStraightLine*
+/// @param self QCPItemStraightLine*
 /// @param callback const QMetaObject* func(const QCPItemStraightLine* self)
 ///
-void q_cpitemstraightline_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpitemstraightline_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -71632,10 +71632,10 @@ double q_cpitemstraightline_select_test(const void* self, const void* pos, bool 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemStraightLine*
+/// @param self QCPItemStraightLine*
 /// @param callback double func(const QCPItemStraightLine* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpitemstraightline_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpitemstraightline_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemStraightLine.html)
 ///
@@ -72449,10 +72449,10 @@ int32_t q_cpitemstraightline_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemStraightLine*
+/// @param self QCPItemStraightLine*
 /// @param callback int32_t func(QCPItemStraightLine* self)
 ///
-void q_cpitemstraightline_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpitemstraightline_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -72480,12 +72480,12 @@ QRect* q_cpitemstraightline_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemStraightLine*
+/// @param self QCPItemStraightLine*
 /// @param callback QRect* func(QCPItemStraightLine* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemstraightline_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpitemstraightline_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -72515,10 +72515,10 @@ void q_cpitemstraightline_super_apply_default_antialiasing_hint(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemStraightLine*
+/// @param self QCPItemStraightLine*
 /// @param callback void func(QCPItemStraightLine* self, QCPPainter* painter)
 ///
-void q_cpitemstraightline_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpitemstraightline_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -72620,12 +72620,12 @@ QPointF* q_cpitemstraightline_super_anchor_pixel_position(const void* self, int 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemStraightLine*
+/// @param self QCPItemStraightLine*
 /// @param callback QPointF* func(QCPItemStraightLine* self, int anchorId)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemstraightline_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpitemstraightline_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// Inherited from QCPLayerable
 ///
@@ -73098,10 +73098,10 @@ double q_cpitemstraightline_super_rect_distance(const void* self, const void* re
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemStraightLine*
+/// @param self QCPItemStraightLine*
 /// @param callback double func(QCPItemStraightLine* self, QRectF* rect, QPointF* pos, bool filledRect)
 ///
-void q_cpitemstraightline_on_rect_distance(const void* self, double (*callback)(const void*, const void*, const void*, bool));
+void q_cpitemstraightline_on_rect_distance(void* self, double (*callback)(const void*, const void*, const void*, bool));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -73304,10 +73304,10 @@ void q_cpitemstraightline_super_apply_antialiasing_hint(const void* self, void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemStraightLine*
+/// @param self QCPItemStraightLine*
 /// @param callback void func(QCPItemStraightLine* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpitemstraightline_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpitemstraightline_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -73335,10 +73335,10 @@ QObject* q_cpitemstraightline_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemStraightLine*
+/// @param self QCPItemStraightLine*
 /// @param callback QObject* func(QCPItemStraightLine* self)
 ///
-void q_cpitemstraightline_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpitemstraightline_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -73366,10 +73366,10 @@ int32_t q_cpitemstraightline_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemStraightLine*
+/// @param self QCPItemStraightLine*
 /// @param callback int32_t func(QCPItemStraightLine* self)
 ///
-void q_cpitemstraightline_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpitemstraightline_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -73399,10 +73399,10 @@ int32_t q_cpitemstraightline_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemStraightLine*
+/// @param self QCPItemStraightLine*
 /// @param callback int32_t func(QCPItemStraightLine* self, const char* signal)
 ///
-void q_cpitemstraightline_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpitemstraightline_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -73432,10 +73432,10 @@ bool q_cpitemstraightline_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemStraightLine*
+/// @param self QCPItemStraightLine*
 /// @param callback bool func(QCPItemStraightLine* self, QMetaMethod* signal)
 ///
-void q_cpitemstraightline_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpitemstraightline_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -73474,10 +73474,10 @@ const QMetaObject* q_cpitemline_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemLine*
+/// @param self QCPItemLine*
 /// @param callback const QMetaObject* func(const QCPItemLine* self)
 ///
-void q_cpitemline_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpitemline_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -73602,10 +73602,10 @@ double q_cpitemline_select_test(const void* self, const void* pos, bool onlySele
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemLine*
+/// @param self QCPItemLine*
 /// @param callback double func(const QCPItemLine* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpitemline_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpitemline_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemLine.html)
 ///
@@ -74419,10 +74419,10 @@ int32_t q_cpitemline_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemLine*
+/// @param self QCPItemLine*
 /// @param callback int32_t func(QCPItemLine* self)
 ///
-void q_cpitemline_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpitemline_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -74450,12 +74450,12 @@ QRect* q_cpitemline_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemLine*
+/// @param self QCPItemLine*
 /// @param callback QRect* func(QCPItemLine* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemline_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpitemline_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -74485,10 +74485,10 @@ void q_cpitemline_super_apply_default_antialiasing_hint(const void* self, void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemLine*
+/// @param self QCPItemLine*
 /// @param callback void func(QCPItemLine* self, QCPPainter* painter)
 ///
-void q_cpitemline_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpitemline_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -74590,12 +74590,12 @@ QPointF* q_cpitemline_super_anchor_pixel_position(const void* self, int anchorId
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemLine*
+/// @param self QCPItemLine*
 /// @param callback QPointF* func(QCPItemLine* self, int anchorId)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemline_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpitemline_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// Inherited from QCPLayerable
 ///
@@ -75068,10 +75068,10 @@ double q_cpitemline_super_rect_distance(const void* self, const void* rect, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemLine*
+/// @param self QCPItemLine*
 /// @param callback double func(QCPItemLine* self, QRectF* rect, QPointF* pos, bool filledRect)
 ///
-void q_cpitemline_on_rect_distance(const void* self, double (*callback)(const void*, const void*, const void*, bool));
+void q_cpitemline_on_rect_distance(void* self, double (*callback)(const void*, const void*, const void*, bool));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -75274,10 +75274,10 @@ void q_cpitemline_super_apply_antialiasing_hint(const void* self, void* painter,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemLine*
+/// @param self QCPItemLine*
 /// @param callback void func(QCPItemLine* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpitemline_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpitemline_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -75305,10 +75305,10 @@ QObject* q_cpitemline_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemLine*
+/// @param self QCPItemLine*
 /// @param callback QObject* func(QCPItemLine* self)
 ///
-void q_cpitemline_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpitemline_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -75336,10 +75336,10 @@ int32_t q_cpitemline_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemLine*
+/// @param self QCPItemLine*
 /// @param callback int32_t func(QCPItemLine* self)
 ///
-void q_cpitemline_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpitemline_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -75369,10 +75369,10 @@ int32_t q_cpitemline_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemLine*
+/// @param self QCPItemLine*
 /// @param callback int32_t func(QCPItemLine* self, const char* signal)
 ///
-void q_cpitemline_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpitemline_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -75402,10 +75402,10 @@ bool q_cpitemline_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemLine*
+/// @param self QCPItemLine*
 /// @param callback bool func(QCPItemLine* self, QMetaMethod* signal)
 ///
-void q_cpitemline_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpitemline_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -75444,10 +75444,10 @@ const QMetaObject* q_cpitemcurve_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemCurve*
+/// @param self QCPItemCurve*
 /// @param callback const QMetaObject* func(const QCPItemCurve* self)
 ///
-void q_cpitemcurve_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpitemcurve_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -75572,10 +75572,10 @@ double q_cpitemcurve_select_test(const void* self, const void* pos, bool onlySel
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemCurve*
+/// @param self QCPItemCurve*
 /// @param callback double func(const QCPItemCurve* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpitemcurve_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpitemcurve_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemCurve.html)
 ///
@@ -76392,10 +76392,10 @@ int32_t q_cpitemcurve_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemCurve*
+/// @param self QCPItemCurve*
 /// @param callback int32_t func(QCPItemCurve* self)
 ///
-void q_cpitemcurve_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpitemcurve_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -76423,12 +76423,12 @@ QRect* q_cpitemcurve_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemCurve*
+/// @param self QCPItemCurve*
 /// @param callback QRect* func(QCPItemCurve* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemcurve_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpitemcurve_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -76458,10 +76458,10 @@ void q_cpitemcurve_super_apply_default_antialiasing_hint(const void* self, void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemCurve*
+/// @param self QCPItemCurve*
 /// @param callback void func(QCPItemCurve* self, QCPPainter* painter)
 ///
-void q_cpitemcurve_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpitemcurve_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -76563,12 +76563,12 @@ QPointF* q_cpitemcurve_super_anchor_pixel_position(const void* self, int anchorI
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemCurve*
+/// @param self QCPItemCurve*
 /// @param callback QPointF* func(QCPItemCurve* self, int anchorId)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemcurve_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpitemcurve_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// Inherited from QCPLayerable
 ///
@@ -77041,10 +77041,10 @@ double q_cpitemcurve_super_rect_distance(const void* self, const void* rect, con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemCurve*
+/// @param self QCPItemCurve*
 /// @param callback double func(QCPItemCurve* self, QRectF* rect, QPointF* pos, bool filledRect)
 ///
-void q_cpitemcurve_on_rect_distance(const void* self, double (*callback)(const void*, const void*, const void*, bool));
+void q_cpitemcurve_on_rect_distance(void* self, double (*callback)(const void*, const void*, const void*, bool));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -77247,10 +77247,10 @@ void q_cpitemcurve_super_apply_antialiasing_hint(const void* self, void* painter
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemCurve*
+/// @param self QCPItemCurve*
 /// @param callback void func(QCPItemCurve* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpitemcurve_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpitemcurve_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -77278,10 +77278,10 @@ QObject* q_cpitemcurve_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemCurve*
+/// @param self QCPItemCurve*
 /// @param callback QObject* func(QCPItemCurve* self)
 ///
-void q_cpitemcurve_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpitemcurve_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -77309,10 +77309,10 @@ int32_t q_cpitemcurve_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemCurve*
+/// @param self QCPItemCurve*
 /// @param callback int32_t func(QCPItemCurve* self)
 ///
-void q_cpitemcurve_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpitemcurve_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -77342,10 +77342,10 @@ int32_t q_cpitemcurve_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemCurve*
+/// @param self QCPItemCurve*
 /// @param callback int32_t func(QCPItemCurve* self, const char* signal)
 ///
-void q_cpitemcurve_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpitemcurve_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -77375,10 +77375,10 @@ bool q_cpitemcurve_super_is_signal_connected(const void* self, const void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemCurve*
+/// @param self QCPItemCurve*
 /// @param callback bool func(QCPItemCurve* self, QMetaMethod* signal)
 ///
-void q_cpitemcurve_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpitemcurve_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -77417,10 +77417,10 @@ const QMetaObject* q_cpitemrect_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemRect*
+/// @param self QCPItemRect*
 /// @param callback const QMetaObject* func(const QCPItemRect* self)
 ///
-void q_cpitemrect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpitemrect_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -77545,10 +77545,10 @@ double q_cpitemrect_select_test(const void* self, const void* pos, bool onlySele
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemRect*
+/// @param self QCPItemRect*
 /// @param callback double func(const QCPItemRect* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpitemrect_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpitemrect_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemRect.html)
 ///
@@ -77645,12 +77645,12 @@ QPointF* q_cpitemrect_anchor_pixel_position(const void* self, int anchorId);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemRect*
+/// @param self QCPItemRect*
 /// @param callback QPointF* func(const QCPItemRect* self, int anchorId)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemrect_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpitemrect_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemRect.html)
 ///
@@ -78422,10 +78422,10 @@ int32_t q_cpitemrect_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemRect*
+/// @param self QCPItemRect*
 /// @param callback int32_t func(QCPItemRect* self)
 ///
-void q_cpitemrect_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpitemrect_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -78453,12 +78453,12 @@ QRect* q_cpitemrect_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemRect*
+/// @param self QCPItemRect*
 /// @param callback QRect* func(QCPItemRect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemrect_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpitemrect_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -78488,10 +78488,10 @@ void q_cpitemrect_super_apply_default_antialiasing_hint(const void* self, void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemRect*
+/// @param self QCPItemRect*
 /// @param callback void func(QCPItemRect* self, QCPPainter* painter)
 ///
-void q_cpitemrect_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpitemrect_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -79036,10 +79036,10 @@ double q_cpitemrect_super_rect_distance(const void* self, const void* rect, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemRect*
+/// @param self QCPItemRect*
 /// @param callback double func(QCPItemRect* self, QRectF* rect, QPointF* pos, bool filledRect)
 ///
-void q_cpitemrect_on_rect_distance(const void* self, double (*callback)(const void*, const void*, const void*, bool));
+void q_cpitemrect_on_rect_distance(void* self, double (*callback)(const void*, const void*, const void*, bool));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -79242,10 +79242,10 @@ void q_cpitemrect_super_apply_antialiasing_hint(const void* self, void* painter,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemRect*
+/// @param self QCPItemRect*
 /// @param callback void func(QCPItemRect* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpitemrect_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpitemrect_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -79273,10 +79273,10 @@ QObject* q_cpitemrect_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemRect*
+/// @param self QCPItemRect*
 /// @param callback QObject* func(QCPItemRect* self)
 ///
-void q_cpitemrect_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpitemrect_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -79304,10 +79304,10 @@ int32_t q_cpitemrect_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemRect*
+/// @param self QCPItemRect*
 /// @param callback int32_t func(QCPItemRect* self)
 ///
-void q_cpitemrect_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpitemrect_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -79337,10 +79337,10 @@ int32_t q_cpitemrect_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemRect*
+/// @param self QCPItemRect*
 /// @param callback int32_t func(QCPItemRect* self, const char* signal)
 ///
-void q_cpitemrect_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpitemrect_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -79370,10 +79370,10 @@ bool q_cpitemrect_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemRect*
+/// @param self QCPItemRect*
 /// @param callback bool func(QCPItemRect* self, QMetaMethod* signal)
 ///
-void q_cpitemrect_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpitemrect_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -79412,10 +79412,10 @@ const QMetaObject* q_cpitemtext_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemText*
+/// @param self QCPItemText*
 /// @param callback const QMetaObject* func(const QCPItemText* self)
 ///
-void q_cpitemtext_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpitemtext_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -79663,10 +79663,10 @@ double q_cpitemtext_select_test(const void* self, const void* pos, bool onlySele
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemText*
+/// @param self QCPItemText*
 /// @param callback double func(const QCPItemText* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpitemtext_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpitemtext_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemText.html)
 ///
@@ -79769,12 +79769,12 @@ QPointF* q_cpitemtext_anchor_pixel_position(const void* self, int anchorId);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemText*
+/// @param self QCPItemText*
 /// @param callback QPointF* func(const QCPItemText* self, int anchorId)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemtext_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpitemtext_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemText.html)
 ///
@@ -80558,10 +80558,10 @@ int32_t q_cpitemtext_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemText*
+/// @param self QCPItemText*
 /// @param callback int32_t func(QCPItemText* self)
 ///
-void q_cpitemtext_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpitemtext_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -80589,12 +80589,12 @@ QRect* q_cpitemtext_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemText*
+/// @param self QCPItemText*
 /// @param callback QRect* func(QCPItemText* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemtext_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpitemtext_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -80624,10 +80624,10 @@ void q_cpitemtext_super_apply_default_antialiasing_hint(const void* self, void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemText*
+/// @param self QCPItemText*
 /// @param callback void func(QCPItemText* self, QCPPainter* painter)
 ///
-void q_cpitemtext_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpitemtext_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -81172,10 +81172,10 @@ double q_cpitemtext_super_rect_distance(const void* self, const void* rect, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemText*
+/// @param self QCPItemText*
 /// @param callback double func(QCPItemText* self, QRectF* rect, QPointF* pos, bool filledRect)
 ///
-void q_cpitemtext_on_rect_distance(const void* self, double (*callback)(const void*, const void*, const void*, bool));
+void q_cpitemtext_on_rect_distance(void* self, double (*callback)(const void*, const void*, const void*, bool));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -81378,10 +81378,10 @@ void q_cpitemtext_super_apply_antialiasing_hint(const void* self, void* painter,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemText*
+/// @param self QCPItemText*
 /// @param callback void func(QCPItemText* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpitemtext_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpitemtext_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -81409,10 +81409,10 @@ QObject* q_cpitemtext_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemText*
+/// @param self QCPItemText*
 /// @param callback QObject* func(QCPItemText* self)
 ///
-void q_cpitemtext_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpitemtext_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -81440,10 +81440,10 @@ int32_t q_cpitemtext_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemText*
+/// @param self QCPItemText*
 /// @param callback int32_t func(QCPItemText* self)
 ///
-void q_cpitemtext_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpitemtext_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -81473,10 +81473,10 @@ int32_t q_cpitemtext_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemText*
+/// @param self QCPItemText*
 /// @param callback int32_t func(QCPItemText* self, const char* signal)
 ///
-void q_cpitemtext_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpitemtext_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -81506,10 +81506,10 @@ bool q_cpitemtext_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemText*
+/// @param self QCPItemText*
 /// @param callback bool func(QCPItemText* self, QMetaMethod* signal)
 ///
-void q_cpitemtext_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpitemtext_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -81548,10 +81548,10 @@ const QMetaObject* q_cpitemellipse_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemEllipse*
+/// @param self QCPItemEllipse*
 /// @param callback const QMetaObject* func(const QCPItemEllipse* self)
 ///
-void q_cpitemellipse_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpitemellipse_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -81676,10 +81676,10 @@ double q_cpitemellipse_select_test(const void* self, const void* pos, bool onlyS
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemEllipse*
+/// @param self QCPItemEllipse*
 /// @param callback double func(const QCPItemEllipse* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpitemellipse_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpitemellipse_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemEllipse.html)
 ///
@@ -81794,12 +81794,12 @@ QPointF* q_cpitemellipse_anchor_pixel_position(const void* self, int anchorId);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemEllipse*
+/// @param self QCPItemEllipse*
 /// @param callback QPointF* func(const QCPItemEllipse* self, int anchorId)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemellipse_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpitemellipse_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemEllipse.html)
 ///
@@ -82571,10 +82571,10 @@ int32_t q_cpitemellipse_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemEllipse*
+/// @param self QCPItemEllipse*
 /// @param callback int32_t func(QCPItemEllipse* self)
 ///
-void q_cpitemellipse_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpitemellipse_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -82602,12 +82602,12 @@ QRect* q_cpitemellipse_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemEllipse*
+/// @param self QCPItemEllipse*
 /// @param callback QRect* func(QCPItemEllipse* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemellipse_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpitemellipse_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -82637,10 +82637,10 @@ void q_cpitemellipse_super_apply_default_antialiasing_hint(const void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemEllipse*
+/// @param self QCPItemEllipse*
 /// @param callback void func(QCPItemEllipse* self, QCPPainter* painter)
 ///
-void q_cpitemellipse_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpitemellipse_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -83185,10 +83185,10 @@ double q_cpitemellipse_super_rect_distance(const void* self, const void* rect, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemEllipse*
+/// @param self QCPItemEllipse*
 /// @param callback double func(QCPItemEllipse* self, QRectF* rect, QPointF* pos, bool filledRect)
 ///
-void q_cpitemellipse_on_rect_distance(const void* self, double (*callback)(const void*, const void*, const void*, bool));
+void q_cpitemellipse_on_rect_distance(void* self, double (*callback)(const void*, const void*, const void*, bool));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -83391,10 +83391,10 @@ void q_cpitemellipse_super_apply_antialiasing_hint(const void* self, void* paint
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemEllipse*
+/// @param self QCPItemEllipse*
 /// @param callback void func(QCPItemEllipse* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpitemellipse_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpitemellipse_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -83422,10 +83422,10 @@ QObject* q_cpitemellipse_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemEllipse*
+/// @param self QCPItemEllipse*
 /// @param callback QObject* func(QCPItemEllipse* self)
 ///
-void q_cpitemellipse_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpitemellipse_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -83453,10 +83453,10 @@ int32_t q_cpitemellipse_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemEllipse*
+/// @param self QCPItemEllipse*
 /// @param callback int32_t func(QCPItemEllipse* self)
 ///
-void q_cpitemellipse_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpitemellipse_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -83486,10 +83486,10 @@ int32_t q_cpitemellipse_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemEllipse*
+/// @param self QCPItemEllipse*
 /// @param callback int32_t func(QCPItemEllipse* self, const char* signal)
 ///
-void q_cpitemellipse_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpitemellipse_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -83519,10 +83519,10 @@ bool q_cpitemellipse_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemEllipse*
+/// @param self QCPItemEllipse*
 /// @param callback bool func(QCPItemEllipse* self, QMetaMethod* signal)
 ///
-void q_cpitemellipse_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpitemellipse_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -83561,10 +83561,10 @@ const QMetaObject* q_cpitempixmap_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemPixmap*
+/// @param self QCPItemPixmap*
 /// @param callback const QMetaObject* func(const QCPItemPixmap* self)
 ///
-void q_cpitempixmap_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpitempixmap_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -83705,10 +83705,10 @@ double q_cpitempixmap_select_test(const void* self, const void* pos, bool onlySe
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemPixmap*
+/// @param self QCPItemPixmap*
 /// @param callback double func(const QCPItemPixmap* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpitempixmap_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpitempixmap_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
@@ -83805,12 +83805,12 @@ QPointF* q_cpitempixmap_anchor_pixel_position(const void* self, int anchorId);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemPixmap*
+/// @param self QCPItemPixmap*
 /// @param callback QPointF* func(const QCPItemPixmap* self, int anchorId)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitempixmap_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpitempixmap_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemPixmap.html)
 ///
@@ -84644,10 +84644,10 @@ int32_t q_cpitempixmap_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemPixmap*
+/// @param self QCPItemPixmap*
 /// @param callback int32_t func(QCPItemPixmap* self)
 ///
-void q_cpitempixmap_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpitempixmap_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -84675,12 +84675,12 @@ QRect* q_cpitempixmap_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemPixmap*
+/// @param self QCPItemPixmap*
 /// @param callback QRect* func(QCPItemPixmap* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitempixmap_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpitempixmap_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -84710,10 +84710,10 @@ void q_cpitempixmap_super_apply_default_antialiasing_hint(const void* self, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemPixmap*
+/// @param self QCPItemPixmap*
 /// @param callback void func(QCPItemPixmap* self, QCPPainter* painter)
 ///
-void q_cpitempixmap_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpitempixmap_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -85258,10 +85258,10 @@ double q_cpitempixmap_super_rect_distance(const void* self, const void* rect, co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemPixmap*
+/// @param self QCPItemPixmap*
 /// @param callback double func(QCPItemPixmap* self, QRectF* rect, QPointF* pos, bool filledRect)
 ///
-void q_cpitempixmap_on_rect_distance(const void* self, double (*callback)(const void*, const void*, const void*, bool));
+void q_cpitempixmap_on_rect_distance(void* self, double (*callback)(const void*, const void*, const void*, bool));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -85464,10 +85464,10 @@ void q_cpitempixmap_super_apply_antialiasing_hint(const void* self, void* painte
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemPixmap*
+/// @param self QCPItemPixmap*
 /// @param callback void func(QCPItemPixmap* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpitempixmap_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpitempixmap_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -85495,10 +85495,10 @@ QObject* q_cpitempixmap_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemPixmap*
+/// @param self QCPItemPixmap*
 /// @param callback QObject* func(QCPItemPixmap* self)
 ///
-void q_cpitempixmap_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpitempixmap_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -85526,10 +85526,10 @@ int32_t q_cpitempixmap_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemPixmap*
+/// @param self QCPItemPixmap*
 /// @param callback int32_t func(QCPItemPixmap* self)
 ///
-void q_cpitempixmap_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpitempixmap_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -85559,10 +85559,10 @@ int32_t q_cpitempixmap_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemPixmap*
+/// @param self QCPItemPixmap*
 /// @param callback int32_t func(QCPItemPixmap* self, const char* signal)
 ///
-void q_cpitempixmap_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpitempixmap_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -85592,10 +85592,10 @@ bool q_cpitempixmap_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemPixmap*
+/// @param self QCPItemPixmap*
 /// @param callback bool func(QCPItemPixmap* self, QMetaMethod* signal)
 ///
-void q_cpitempixmap_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpitempixmap_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -85634,10 +85634,10 @@ const QMetaObject* q_cpitemtracer_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemTracer*
+/// @param self QCPItemTracer*
 /// @param callback const QMetaObject* func(const QCPItemTracer* self)
 ///
-void q_cpitemtracer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpitemtracer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -85829,10 +85829,10 @@ double q_cpitemtracer_select_test(const void* self, const void* pos, bool onlySe
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemTracer*
+/// @param self QCPItemTracer*
 /// @param callback double func(const QCPItemTracer* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpitemtracer_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpitemtracer_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemTracer.html)
 ///
@@ -86634,10 +86634,10 @@ int32_t q_cpitemtracer_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemTracer*
+/// @param self QCPItemTracer*
 /// @param callback int32_t func(QCPItemTracer* self)
 ///
-void q_cpitemtracer_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpitemtracer_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -86665,12 +86665,12 @@ QRect* q_cpitemtracer_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemTracer*
+/// @param self QCPItemTracer*
 /// @param callback QRect* func(QCPItemTracer* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemtracer_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpitemtracer_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -86700,10 +86700,10 @@ void q_cpitemtracer_super_apply_default_antialiasing_hint(const void* self, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemTracer*
+/// @param self QCPItemTracer*
 /// @param callback void func(QCPItemTracer* self, QCPPainter* painter)
 ///
-void q_cpitemtracer_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpitemtracer_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -86805,12 +86805,12 @@ QPointF* q_cpitemtracer_super_anchor_pixel_position(const void* self, int anchor
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemTracer*
+/// @param self QCPItemTracer*
 /// @param callback QPointF* func(QCPItemTracer* self, int anchorId)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitemtracer_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpitemtracer_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// Inherited from QCPLayerable
 ///
@@ -87283,10 +87283,10 @@ double q_cpitemtracer_super_rect_distance(const void* self, const void* rect, co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemTracer*
+/// @param self QCPItemTracer*
 /// @param callback double func(QCPItemTracer* self, QRectF* rect, QPointF* pos, bool filledRect)
 ///
-void q_cpitemtracer_on_rect_distance(const void* self, double (*callback)(const void*, const void*, const void*, bool));
+void q_cpitemtracer_on_rect_distance(void* self, double (*callback)(const void*, const void*, const void*, bool));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -87489,10 +87489,10 @@ void q_cpitemtracer_super_apply_antialiasing_hint(const void* self, void* painte
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemTracer*
+/// @param self QCPItemTracer*
 /// @param callback void func(QCPItemTracer* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpitemtracer_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpitemtracer_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -87520,10 +87520,10 @@ QObject* q_cpitemtracer_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemTracer*
+/// @param self QCPItemTracer*
 /// @param callback QObject* func(QCPItemTracer* self)
 ///
-void q_cpitemtracer_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpitemtracer_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -87551,10 +87551,10 @@ int32_t q_cpitemtracer_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemTracer*
+/// @param self QCPItemTracer*
 /// @param callback int32_t func(QCPItemTracer* self)
 ///
-void q_cpitemtracer_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpitemtracer_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -87584,10 +87584,10 @@ int32_t q_cpitemtracer_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemTracer*
+/// @param self QCPItemTracer*
 /// @param callback int32_t func(QCPItemTracer* self, const char* signal)
 ///
-void q_cpitemtracer_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpitemtracer_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -87617,10 +87617,10 @@ bool q_cpitemtracer_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemTracer*
+/// @param self QCPItemTracer*
 /// @param callback bool func(QCPItemTracer* self, QMetaMethod* signal)
 ///
-void q_cpitemtracer_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpitemtracer_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -87659,10 +87659,10 @@ const QMetaObject* q_cpitembracket_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemBracket*
+/// @param self QCPItemBracket*
 /// @param callback const QMetaObject* func(const QCPItemBracket* self)
 ///
-void q_cpitembracket_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cpitembracket_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -87789,10 +87789,10 @@ double q_cpitembracket_select_test(const void* self, const void* pos, bool onlyS
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemBracket*
+/// @param self QCPItemBracket*
 /// @param callback double func(const QCPItemBracket* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cpitembracket_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cpitembracket_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemBracket.html)
 ///
@@ -87859,12 +87859,12 @@ QPointF* q_cpitembracket_anchor_pixel_position(const void* self, int anchorId);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPItemBracket*
+/// @param self QCPItemBracket*
 /// @param callback QPointF* func(const QCPItemBracket* self, int anchorId)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitembracket_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int));
+void q_cpitembracket_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPItemBracket.html)
 ///
@@ -88630,10 +88630,10 @@ int32_t q_cpitembracket_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemBracket*
+/// @param self QCPItemBracket*
 /// @param callback int32_t func(QCPItemBracket* self)
 ///
-void q_cpitembracket_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cpitembracket_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -88661,12 +88661,12 @@ QRect* q_cpitembracket_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemBracket*
+/// @param self QCPItemBracket*
 /// @param callback QRect* func(QCPItemBracket* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cpitembracket_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cpitembracket_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -88696,10 +88696,10 @@ void q_cpitembracket_super_apply_default_antialiasing_hint(const void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemBracket*
+/// @param self QCPItemBracket*
 /// @param callback void func(QCPItemBracket* self, QCPPainter* painter)
 ///
-void q_cpitembracket_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cpitembracket_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -89244,10 +89244,10 @@ double q_cpitembracket_super_rect_distance(const void* self, const void* rect, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemBracket*
+/// @param self QCPItemBracket*
 /// @param callback double func(QCPItemBracket* self, QRectF* rect, QPointF* pos, bool filledRect)
 ///
-void q_cpitembracket_on_rect_distance(const void* self, double (*callback)(const void*, const void*, const void*, bool));
+void q_cpitembracket_on_rect_distance(void* self, double (*callback)(const void*, const void*, const void*, bool));
 
 /// Inherited from QCPAbstractItem
 ///
@@ -89450,10 +89450,10 @@ void q_cpitembracket_super_apply_antialiasing_hint(const void* self, void* paint
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemBracket*
+/// @param self QCPItemBracket*
 /// @param callback void func(QCPItemBracket* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cpitembracket_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cpitembracket_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -89481,10 +89481,10 @@ QObject* q_cpitembracket_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemBracket*
+/// @param self QCPItemBracket*
 /// @param callback QObject* func(QCPItemBracket* self)
 ///
-void q_cpitembracket_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cpitembracket_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -89512,10 +89512,10 @@ int32_t q_cpitembracket_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemBracket*
+/// @param self QCPItemBracket*
 /// @param callback int32_t func(QCPItemBracket* self)
 ///
-void q_cpitembracket_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cpitembracket_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -89545,10 +89545,10 @@ int32_t q_cpitembracket_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemBracket*
+/// @param self QCPItemBracket*
 /// @param callback int32_t func(QCPItemBracket* self, const char* signal)
 ///
-void q_cpitembracket_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cpitembracket_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -89578,10 +89578,10 @@ bool q_cpitembracket_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPItemBracket*
+/// @param self QCPItemBracket*
 /// @param callback bool func(QCPItemBracket* self, QMetaMethod* signal)
 ///
-void q_cpitembracket_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cpitembracket_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -89620,10 +89620,10 @@ const QMetaObject* q_cppolaraxisradial_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarAxisRadial*
+/// @param self QCPPolarAxisRadial*
 /// @param callback const QMetaObject* func(const QCPPolarAxisRadial* self)
 ///
-void q_cppolaraxisradial_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cppolaraxisradial_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -90279,10 +90279,10 @@ double q_cppolaraxisradial_select_test(const void* self, const void* pos, bool o
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarAxisRadial*
+/// @param self QCPPolarAxisRadial*
 /// @param callback double func(const QCPPolarAxisRadial* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cppolaraxisradial_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cppolaraxisradial_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -90445,10 +90445,10 @@ void q_cppolaraxisradial_apply_default_antialiasing_hint(const void* self, void*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarAxisRadial*
+/// @param self QCPPolarAxisRadial*
 /// @param callback void func(const QCPPolarAxisRadial* self, QCPPainter* painter)
 ///
-void q_cppolaraxisradial_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cppolaraxisradial_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -90496,10 +90496,10 @@ int32_t q_cppolaraxisradial_selection_category(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarAxisRadial*
+/// @param self QCPPolarAxisRadial*
 /// @param callback int32_t func(const QCPPolarAxisRadial* self)
 ///
-void q_cppolaraxisradial_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cppolaraxisradial_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
@@ -91379,12 +91379,12 @@ QRect* q_cppolaraxisradial_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisRadial*
+/// @param self QCPPolarAxisRadial*
 /// @param callback QRect* func(QCPPolarAxisRadial* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cppolaraxisradial_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cppolaraxisradial_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -91787,10 +91787,10 @@ void q_cppolaraxisradial_super_apply_antialiasing_hint(const void* self, void* p
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisRadial*
+/// @param self QCPPolarAxisRadial*
 /// @param callback void func(QCPPolarAxisRadial* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cppolaraxisradial_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cppolaraxisradial_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -91818,10 +91818,10 @@ QObject* q_cppolaraxisradial_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisRadial*
+/// @param self QCPPolarAxisRadial*
 /// @param callback QObject* func(QCPPolarAxisRadial* self)
 ///
-void q_cppolaraxisradial_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cppolaraxisradial_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -91849,10 +91849,10 @@ int32_t q_cppolaraxisradial_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisRadial*
+/// @param self QCPPolarAxisRadial*
 /// @param callback int32_t func(QCPPolarAxisRadial* self)
 ///
-void q_cppolaraxisradial_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cppolaraxisradial_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -91882,10 +91882,10 @@ int32_t q_cppolaraxisradial_super_receivers(const void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisRadial*
+/// @param self QCPPolarAxisRadial*
 /// @param callback int32_t func(QCPPolarAxisRadial* self, const char* signal)
 ///
-void q_cppolaraxisradial_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cppolaraxisradial_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -91915,10 +91915,10 @@ bool q_cppolaraxisradial_super_is_signal_connected(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisRadial*
+/// @param self QCPPolarAxisRadial*
 /// @param callback bool func(QCPPolarAxisRadial* self, QMetaMethod* signal)
 ///
-void q_cppolaraxisradial_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cppolaraxisradial_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -91957,10 +91957,10 @@ const QMetaObject* q_cppolaraxisangular_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback const QMetaObject* func(const QCPPolarAxisAngular* self)
 ///
-void q_cppolaraxisangular_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cppolaraxisangular_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -92640,10 +92640,10 @@ double q_cppolaraxisangular_select_test(const void* self, const void* pos, bool 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback double func(const QCPPolarAxisAngular* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cppolaraxisangular_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cppolaraxisangular_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -92694,10 +92694,10 @@ libqt_list q_cppolaraxisangular_elements(const void* self, bool recursive);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback libqt_list of QCPLayoutElement* func(const QCPPolarAxisAngular* self, bool recursive)
 ///
-void q_cppolaraxisangular_on_elements(const void* self, libqt_list (*callback)(const void*, bool));
+void q_cppolaraxisangular_on_elements(void* self, libqt_list (*callback)(const void*, bool));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -92976,10 +92976,10 @@ void q_cppolaraxisangular_apply_default_antialiasing_hint(const void* self, void
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback void func(const QCPPolarAxisAngular* self, QCPPainter* painter)
 ///
-void q_cppolaraxisangular_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cppolaraxisangular_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -93027,10 +93027,10 @@ int32_t q_cppolaraxisangular_selection_category(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback int32_t func(const QCPPolarAxisAngular* self)
 ///
-void q_cppolaraxisangular_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cppolaraxisangular_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
@@ -94051,12 +94051,12 @@ QSize* q_cppolaraxisangular_super_minimum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback QSize* func(QCPPolarAxisAngular* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cppolaraxisangular_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cppolaraxisangular_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -94084,12 +94084,12 @@ QSize* q_cppolaraxisangular_super_maximum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback QSize* func(QCPPolarAxisAngular* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cppolaraxisangular_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cppolaraxisangular_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -94214,12 +94214,12 @@ QRect* q_cppolaraxisangular_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback QRect* func(QCPPolarAxisAngular* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cppolaraxisangular_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cppolaraxisangular_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -94694,10 +94694,10 @@ void q_cppolaraxisangular_super_apply_antialiasing_hint(const void* self, void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback void func(QCPPolarAxisAngular* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cppolaraxisangular_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cppolaraxisangular_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -94725,10 +94725,10 @@ QObject* q_cppolaraxisangular_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback QObject* func(QCPPolarAxisAngular* self)
 ///
-void q_cppolaraxisangular_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cppolaraxisangular_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -94756,10 +94756,10 @@ int32_t q_cppolaraxisangular_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback int32_t func(QCPPolarAxisAngular* self)
 ///
-void q_cppolaraxisangular_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cppolaraxisangular_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -94789,10 +94789,10 @@ int32_t q_cppolaraxisangular_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback int32_t func(QCPPolarAxisAngular* self, const char* signal)
 ///
-void q_cppolaraxisangular_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cppolaraxisangular_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -94822,10 +94822,10 @@ bool q_cppolaraxisangular_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarAxisAngular*
+/// @param self QCPPolarAxisAngular*
 /// @param callback bool func(QCPPolarAxisAngular* self, QMetaMethod* signal)
 ///
-void q_cppolaraxisangular_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cppolaraxisangular_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -94864,10 +94864,10 @@ const QMetaObject* q_cppolargrid_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGrid*
+/// @param self QCPPolarGrid*
 /// @param callback const QMetaObject* func(const QCPPolarGrid* self)
 ///
-void q_cppolargrid_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cppolargrid_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -95072,10 +95072,10 @@ void q_cppolargrid_apply_default_antialiasing_hint(const void* self, void* paint
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGrid*
+/// @param self QCPPolarGrid*
 /// @param callback void func(const QCPPolarGrid* self, QCPPainter* painter)
 ///
-void q_cppolargrid_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cppolargrid_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGrid.html)
 ///
@@ -95743,10 +95743,10 @@ double q_cppolargrid_super_select_test(const void* self, const void* pos, bool o
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGrid*
+/// @param self QCPPolarGrid*
 /// @param callback double func(QCPPolarGrid* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cppolargrid_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cppolargrid_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -95811,10 +95811,10 @@ int32_t q_cppolargrid_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGrid*
+/// @param self QCPPolarGrid*
 /// @param callback int32_t func(QCPPolarGrid* self)
 ///
-void q_cppolargrid_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cppolargrid_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -95842,12 +95842,12 @@ QRect* q_cppolargrid_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGrid*
+/// @param self QCPPolarGrid*
 /// @param callback QRect* func(QCPPolarGrid* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cppolargrid_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cppolargrid_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPLayerable
 ///
@@ -96460,10 +96460,10 @@ void q_cppolargrid_super_apply_antialiasing_hint(const void* self, void* painter
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGrid*
+/// @param self QCPPolarGrid*
 /// @param callback void func(QCPPolarGrid* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cppolargrid_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cppolargrid_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -96491,10 +96491,10 @@ QObject* q_cppolargrid_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGrid*
+/// @param self QCPPolarGrid*
 /// @param callback QObject* func(QCPPolarGrid* self)
 ///
-void q_cppolargrid_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cppolargrid_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -96522,10 +96522,10 @@ int32_t q_cppolargrid_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGrid*
+/// @param self QCPPolarGrid*
 /// @param callback int32_t func(QCPPolarGrid* self)
 ///
-void q_cppolargrid_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cppolargrid_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -96555,10 +96555,10 @@ int32_t q_cppolargrid_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGrid*
+/// @param self QCPPolarGrid*
 /// @param callback int32_t func(QCPPolarGrid* self, const char* signal)
 ///
-void q_cppolargrid_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cppolargrid_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -96588,10 +96588,10 @@ bool q_cppolargrid_super_is_signal_connected(const void* self, const void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGrid*
+/// @param self QCPPolarGrid*
 /// @param callback bool func(QCPPolarGrid* self, QMetaMethod* signal)
 ///
-void q_cppolargrid_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cppolargrid_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -96631,10 +96631,10 @@ const QMetaObject* q_cppolarlegenditem_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback const QMetaObject* func(const QCPPolarLegendItem* self)
 ///
-void q_cppolarlegenditem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cppolarlegenditem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -96735,12 +96735,12 @@ QSize* q_cppolarlegenditem_minimum_outer_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback QSize* func(const QCPPolarLegendItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cppolarlegenditem_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cppolarlegenditem_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarLegendItem.html)
 ///
@@ -97713,10 +97713,10 @@ double q_cppolarlegenditem_super_select_test(const void* self, const void* pos, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback double func(QCPPolarLegendItem* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cppolarlegenditem_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cppolarlegenditem_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// Inherited from QCPAbstractLegendItem
 ///
@@ -97748,10 +97748,10 @@ int32_t q_cppolarlegenditem_super_selection_category(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback int32_t func(QCPPolarLegendItem* self)
 ///
-void q_cppolarlegenditem_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cppolarlegenditem_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QCPAbstractLegendItem
 ///
@@ -97781,10 +97781,10 @@ void q_cppolarlegenditem_super_apply_default_antialiasing_hint(const void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback void func(QCPPolarLegendItem* self, QCPPainter* painter)
 ///
-void q_cppolarlegenditem_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*));
+void q_cppolarlegenditem_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QCPAbstractLegendItem
 ///
@@ -97812,12 +97812,12 @@ QRect* q_cppolarlegenditem_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback QRect* func(QCPPolarLegendItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cppolarlegenditem_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cppolarlegenditem_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QCPAbstractLegendItem
 ///
@@ -97950,12 +97950,12 @@ QSize* q_cppolarlegenditem_super_maximum_outer_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback QSize* func(QCPPolarLegendItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cppolarlegenditem_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_cppolarlegenditem_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -97989,10 +97989,10 @@ libqt_list q_cppolarlegenditem_super_elements(const void* self, bool recursive);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback libqt_list of QCPLayoutElement* func(QCPPolarLegendItem* self, bool recursive)
 ///
-void q_cppolarlegenditem_on_elements(const void* self, libqt_list (*callback)(const void*, bool));
+void q_cppolarlegenditem_on_elements(void* self, libqt_list (*callback)(const void*, bool));
 
 /// Inherited from QCPLayoutElement
 ///
@@ -98630,10 +98630,10 @@ void q_cppolarlegenditem_super_apply_antialiasing_hint(const void* self, void* p
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback void func(QCPPolarLegendItem* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cppolarlegenditem_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cppolarlegenditem_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -98661,10 +98661,10 @@ QObject* q_cppolarlegenditem_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback QObject* func(QCPPolarLegendItem* self)
 ///
-void q_cppolarlegenditem_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cppolarlegenditem_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -98692,10 +98692,10 @@ int32_t q_cppolarlegenditem_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback int32_t func(QCPPolarLegendItem* self)
 ///
-void q_cppolarlegenditem_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cppolarlegenditem_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -98725,10 +98725,10 @@ int32_t q_cppolarlegenditem_super_receivers(const void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback int32_t func(QCPPolarLegendItem* self, const char* signal)
 ///
-void q_cppolarlegenditem_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cppolarlegenditem_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -98758,10 +98758,10 @@ bool q_cppolarlegenditem_super_is_signal_connected(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarLegendItem*
+/// @param self QCPPolarLegendItem*
 /// @param callback bool func(QCPPolarLegendItem* self, QMetaMethod* signal)
 ///
-void q_cppolarlegenditem_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cppolarlegenditem_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -98801,10 +98801,10 @@ const QMetaObject* q_cppolargraph_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback const QMetaObject* func(const QCPPolarGraph* self)
 ///
-void q_cppolargraph_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_cppolargraph_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -99150,10 +99150,10 @@ double q_cppolargraph_select_test(const void* self, const void* pos, bool onlySe
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback double func(const QCPPolarGraph* self, QPointF* pos, bool onlySelectable, QVariant* details)
 ///
-void q_cppolargraph_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*));
+void q_cppolargraph_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -99201,12 +99201,12 @@ QCPRange* q_cppolargraph_get_key_range(const void* self, bool* foundRange, int32
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback QCPRange* func(const QCPPolarGraph* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cppolargraph_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
+void q_cppolargraph_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -99231,12 +99231,12 @@ QCPRange* q_cppolargraph_get_value_range(const void* self, bool* foundRange, int
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback QCPRange* func(const QCPPolarGraph* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cppolargraph_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
+void q_cppolargraph_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -99301,12 +99301,12 @@ QRect* q_cppolargraph_clip_rect(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback QRect* func(const QCPPolarGraph* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_cppolargraph_on_clip_rect(const void* self, QRect* (*callback)(const void*));
+void q_cppolargraph_on_clip_rect(void* self, QRect* (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -99353,10 +99353,10 @@ int32_t q_cppolargraph_selection_category(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback int32_t func(const QCPPolarGraph* self)
 ///
-void q_cppolargraph_on_selection_category(const void* self, int32_t (*callback)(const void*));
+void q_cppolargraph_on_selection_category(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -99443,10 +99443,10 @@ void q_cppolargraph_draw_line_plot(const void* self, void* painter, libqt_list l
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback void func(const QCPPolarGraph* self, QCPPainter* painter, libqt_list of QPointF* lines)
 ///
-void q_cppolargraph_on_draw_line_plot(const void* self, void (*callback)(const void*, void*, libqt_list));
+void q_cppolargraph_on_draw_line_plot(void* self, void (*callback)(const void*, void*, libqt_list));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -99470,10 +99470,10 @@ void q_cppolargraph_draw_fill(const void* self, void* painter, libqt_list lines)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback void func(const QCPPolarGraph* self, QCPPainter* painter, libqt_list of QPointF* lines)
 ///
-void q_cppolargraph_on_draw_fill(const void* self, void (*callback)(const void*, void*, libqt_list));
+void q_cppolargraph_on_draw_fill(void* self, void (*callback)(const void*, void*, libqt_list));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -99498,10 +99498,10 @@ void q_cppolargraph_draw_scatter_plot(const void* self, void* painter, libqt_lis
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback void func(const QCPPolarGraph* self, QCPPainter* painter, libqt_list of QPointF* scatters, QCPScatterStyle* style)
 ///
-void q_cppolargraph_on_draw_scatter_plot(const void* self, void (*callback)(const void*, void*, libqt_list, const void*));
+void q_cppolargraph_on_draw_scatter_plot(void* self, void (*callback)(const void*, void*, libqt_list, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -99526,10 +99526,10 @@ void q_cppolargraph_draw_legend_icon(const void* self, void* painter, const void
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback void func(const QCPPolarGraph* self, QCPPainter* painter, QRectF* rect)
 ///
-void q_cppolargraph_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*));
+void q_cppolargraph_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -99565,10 +99565,10 @@ int32_t q_cppolargraph_data_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback int32_t func(const QCPPolarGraph* self)
 ///
-void q_cppolargraph_on_data_count(const void* self, int32_t (*callback)(const void*));
+void q_cppolargraph_on_data_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarGraph.html)
 ///
@@ -100806,10 +100806,10 @@ void q_cppolargraph_super_apply_antialiasing_hint(const void* self, void* painte
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback void func(QCPPolarGraph* self, QCPPainter* painter, bool localAntialiased, enum QCP__AntialiasedElement overrideElement)
 ///
-void q_cppolargraph_on_apply_antialiasing_hint(const void* self, void (*callback)(const void*, void*, bool, int32_t));
+void q_cppolargraph_on_apply_antialiasing_hint(void* self, void (*callback)(const void*, void*, bool, int32_t));
 
 /// Inherited from QObject
 ///
@@ -100837,10 +100837,10 @@ QObject* q_cppolargraph_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback QObject* func(QCPPolarGraph* self)
 ///
-void q_cppolargraph_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_cppolargraph_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -100868,10 +100868,10 @@ int32_t q_cppolargraph_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback int32_t func(QCPPolarGraph* self)
 ///
-void q_cppolargraph_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_cppolargraph_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -100901,10 +100901,10 @@ int32_t q_cppolargraph_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback int32_t func(QCPPolarGraph* self, const char* signal)
 ///
-void q_cppolargraph_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_cppolargraph_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -100934,10 +100934,10 @@ bool q_cppolargraph_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCPPolarGraph*
+/// @param self QCPPolarGraph*
 /// @param callback bool func(QCPPolarGraph* self, QMetaMethod* signal)
 ///
-void q_cppolargraph_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_cppolargraph_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

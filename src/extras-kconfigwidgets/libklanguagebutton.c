@@ -33,7 +33,7 @@ const QMetaObject* k_languagebutton_meta_object(const void* self) {
     return KLanguageButton_MetaObject((KLanguageButton*)self);
 }
 
-void k_languagebutton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_languagebutton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KLanguageButton_OnMetaObject((KLanguageButton*)self, (intptr_t)callback);
 }
 
@@ -161,11 +161,11 @@ void k_languagebutton_insert_separator1(void* self, int index) {
     KLanguageButton_InsertSeparator1((KLanguageButton*)self, index);
 }
 
-QPaintDevice* k_languagebutton_as_q_paint_device(void* self) {
+QPaintDevice* k_languagebutton_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KLanguageButton* k_languagebutton_from_q_paint_device(void* _qpaintdevice) {
+KLanguageButton* k_languagebutton_from_q_paint_device(const void* _qpaintdevice) {
     return (KLanguageButton*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1552,8 +1552,8 @@ int32_t k_languagebutton_super_dev_type(const void* self) {
     return KLanguageButton_SuperDevType((KLanguageButton*)self);
 }
 
-void k_languagebutton_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KLanguageButton_OnDevType((const KLanguageButton*)self, (intptr_t)callback);
+void k_languagebutton_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KLanguageButton_OnDevType((KLanguageButton*)self, (intptr_t)callback);
 }
 
 void k_languagebutton_set_visible(void* self, bool visible) {
@@ -1576,8 +1576,8 @@ QSize* k_languagebutton_super_size_hint(const void* self) {
     return KLanguageButton_SuperSizeHint((KLanguageButton*)self);
 }
 
-void k_languagebutton_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KLanguageButton_OnSizeHint((const KLanguageButton*)self, (intptr_t)callback);
+void k_languagebutton_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KLanguageButton_OnSizeHint((KLanguageButton*)self, (intptr_t)callback);
 }
 
 QSize* k_languagebutton_minimum_size_hint(const void* self) {
@@ -1588,8 +1588,8 @@ QSize* k_languagebutton_super_minimum_size_hint(const void* self) {
     return KLanguageButton_SuperMinimumSizeHint((KLanguageButton*)self);
 }
 
-void k_languagebutton_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KLanguageButton_OnMinimumSizeHint((const KLanguageButton*)self, (intptr_t)callback);
+void k_languagebutton_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KLanguageButton_OnMinimumSizeHint((KLanguageButton*)self, (intptr_t)callback);
 }
 
 int32_t k_languagebutton_height_for_width(const void* self, int param1) {
@@ -1600,8 +1600,8 @@ int32_t k_languagebutton_super_height_for_width(const void* self, int param1) {
     return KLanguageButton_SuperHeightForWidth((KLanguageButton*)self, param1);
 }
 
-void k_languagebutton_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KLanguageButton_OnHeightForWidth((const KLanguageButton*)self, (intptr_t)callback);
+void k_languagebutton_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KLanguageButton_OnHeightForWidth((KLanguageButton*)self, (intptr_t)callback);
 }
 
 bool k_languagebutton_has_height_for_width(const void* self) {
@@ -1612,8 +1612,8 @@ bool k_languagebutton_super_has_height_for_width(const void* self) {
     return KLanguageButton_SuperHasHeightForWidth((KLanguageButton*)self);
 }
 
-void k_languagebutton_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KLanguageButton_OnHasHeightForWidth((const KLanguageButton*)self, (intptr_t)callback);
+void k_languagebutton_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KLanguageButton_OnHasHeightForWidth((KLanguageButton*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_languagebutton_paint_engine(const void* self) {
@@ -1624,8 +1624,8 @@ QPaintEngine* k_languagebutton_super_paint_engine(const void* self) {
     return KLanguageButton_SuperPaintEngine((KLanguageButton*)self);
 }
 
-void k_languagebutton_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KLanguageButton_OnPaintEngine((const KLanguageButton*)self, (intptr_t)callback);
+void k_languagebutton_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KLanguageButton_OnPaintEngine((KLanguageButton*)self, (intptr_t)callback);
 }
 
 bool k_languagebutton_event(void* self, void* event) {
@@ -1960,8 +1960,8 @@ int32_t k_languagebutton_super_metric(const void* self, int32_t param1) {
     return KLanguageButton_SuperMetric((KLanguageButton*)self, param1);
 }
 
-void k_languagebutton_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KLanguageButton_OnMetric((const KLanguageButton*)self, (intptr_t)callback);
+void k_languagebutton_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KLanguageButton_OnMetric((KLanguageButton*)self, (intptr_t)callback);
 }
 
 void k_languagebutton_init_painter(const void* self, void* painter) {
@@ -1972,8 +1972,8 @@ void k_languagebutton_super_init_painter(const void* self, void* painter) {
     KLanguageButton_SuperInitPainter((KLanguageButton*)self, (QPainter*)painter);
 }
 
-void k_languagebutton_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KLanguageButton_OnInitPainter((const KLanguageButton*)self, (intptr_t)callback);
+void k_languagebutton_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KLanguageButton_OnInitPainter((KLanguageButton*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_languagebutton_redirected(const void* self, void* offset) {
@@ -1984,8 +1984,8 @@ QPaintDevice* k_languagebutton_super_redirected(const void* self, void* offset) 
     return KLanguageButton_SuperRedirected((KLanguageButton*)self, (QPoint*)offset);
 }
 
-void k_languagebutton_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KLanguageButton_OnRedirected((const KLanguageButton*)self, (intptr_t)callback);
+void k_languagebutton_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KLanguageButton_OnRedirected((KLanguageButton*)self, (intptr_t)callback);
 }
 
 QPainter* k_languagebutton_shared_painter(const void* self) {
@@ -1996,8 +1996,8 @@ QPainter* k_languagebutton_super_shared_painter(const void* self) {
     return KLanguageButton_SuperSharedPainter((KLanguageButton*)self);
 }
 
-void k_languagebutton_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KLanguageButton_OnSharedPainter((const KLanguageButton*)self, (intptr_t)callback);
+void k_languagebutton_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KLanguageButton_OnSharedPainter((KLanguageButton*)self, (intptr_t)callback);
 }
 
 void k_languagebutton_input_method_event(void* self, void* param1) {
@@ -2020,8 +2020,8 @@ QVariant* k_languagebutton_super_input_method_query(const void* self, int32_t pa
     return KLanguageButton_SuperInputMethodQuery((KLanguageButton*)self, param1);
 }
 
-void k_languagebutton_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KLanguageButton_OnInputMethodQuery((const KLanguageButton*)self, (intptr_t)callback);
+void k_languagebutton_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KLanguageButton_OnInputMethodQuery((KLanguageButton*)self, (intptr_t)callback);
 }
 
 bool k_languagebutton_focus_next_prev_child(void* self, bool next) {

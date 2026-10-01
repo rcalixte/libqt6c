@@ -29,7 +29,7 @@ const QMetaObject* q_guiapplication_meta_object(const void* self) {
     return QGuiApplication_MetaObject((QGuiApplication*)self);
 }
 
-void q_guiapplication_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_guiapplication_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGuiApplication_OnMetaObject((QGuiApplication*)self, (intptr_t)callback);
 }
 

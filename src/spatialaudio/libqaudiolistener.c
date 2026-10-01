@@ -270,8 +270,8 @@ const QMetaObject* q_audiolistener_super_meta_object(const void* self) {
     return QAudioListener_SuperMetaObject((QAudioListener*)self);
 }
 
-void q_audiolistener_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    QAudioListener_OnMetaObject((const QAudioListener*)self, (intptr_t)callback);
+void q_audiolistener_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    QAudioListener_OnMetaObject((QAudioListener*)self, (intptr_t)callback);
 }
 
 void* q_audiolistener_metacast(void* self, const char* param1) {

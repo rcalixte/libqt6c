@@ -41,10 +41,10 @@ const QMetaObject* q_designerwidgetboxinterface_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback const QMetaObject* func(const QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_designerwidgetboxinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -116,10 +116,10 @@ int32_t q_designerwidgetboxinterface_category_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback int32_t func(const QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_category_count(const void* self, int32_t (*callback)(const void*));
+void q_designerwidgetboxinterface_on_category_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#category)
 ///
@@ -134,12 +134,12 @@ QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface_category(con
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback QDesignerWidgetBoxInterface__Category* func(const QDesignerWidgetBoxInterface* self, int cat_idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerwidgetboxinterface_on_category(const void* self, QDesignerWidgetBoxInterface__Category* (*callback)(const void*, int));
+void q_designerwidgetboxinterface_on_category(void* self, QDesignerWidgetBoxInterface__Category* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#addCategory)
 ///
@@ -190,10 +190,10 @@ int32_t q_designerwidgetboxinterface_widget_count(const void* self, int cat_idx)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback int32_t func(const QDesignerWidgetBoxInterface* self, int cat_idx)
 ///
-void q_designerwidgetboxinterface_on_widget_count(const void* self, int32_t (*callback)(const void*, int));
+void q_designerwidgetboxinterface_on_widget_count(void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#widget)
 ///
@@ -209,12 +209,12 @@ QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface_widget(const v
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback QDesignerWidgetBoxInterface__Widget* func(const QDesignerWidgetBoxInterface* self, int cat_idx, int wgt_idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerwidgetboxinterface_on_widget(const void* self, QDesignerWidgetBoxInterface__Widget* (*callback)(const void*, int, int));
+void q_designerwidgetboxinterface_on_widget(void* self, QDesignerWidgetBoxInterface__Widget* (*callback)(const void*, int, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#addWidget)
 ///
@@ -312,10 +312,10 @@ const char* q_designerwidgetboxinterface_file_name(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback const char* func(const QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_file_name(const void* self, const char* (*callback)(const void*));
+void q_designerwidgetboxinterface_on_file_name(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetboxinterface.html#load)
 ///
@@ -374,9 +374,9 @@ const char* q_designerwidgetboxinterface_tr3(const char* s, const char* c, int n
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QDesignerWidgetBoxInterface*
+/// @param self const QDesignerWidgetBoxInterface*
 ///
-QPaintDevice* q_designerwidgetboxinterface_as_q_paint_device(void* self);
+QPaintDevice* q_designerwidgetboxinterface_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -384,7 +384,7 @@ QPaintDevice* q_designerwidgetboxinterface_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QDesignerWidgetBoxInterface* q_designerwidgetboxinterface_from_q_paint_device(void* _qpaintdevice);
+QDesignerWidgetBoxInterface* q_designerwidgetboxinterface_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3369,10 +3369,10 @@ int32_t q_designerwidgetboxinterface_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback int32_t func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_designerwidgetboxinterface_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3433,12 +3433,12 @@ QSize* q_designerwidgetboxinterface_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback QSize* func(QDesignerWidgetBoxInterface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerwidgetboxinterface_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_designerwidgetboxinterface_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3466,12 +3466,12 @@ QSize* q_designerwidgetboxinterface_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback QSize* func(QDesignerWidgetBoxInterface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerwidgetboxinterface_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_designerwidgetboxinterface_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3501,10 +3501,10 @@ int32_t q_designerwidgetboxinterface_super_height_for_width(const void* self, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback int32_t func(QDesignerWidgetBoxInterface* self, int param1)
 ///
-void q_designerwidgetboxinterface_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_designerwidgetboxinterface_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3532,10 +3532,10 @@ bool q_designerwidgetboxinterface_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback bool func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_designerwidgetboxinterface_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3563,10 +3563,10 @@ QPaintEngine* q_designerwidgetboxinterface_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback QPaintEngine* func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_designerwidgetboxinterface_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4491,10 +4491,10 @@ int32_t q_designerwidgetboxinterface_super_metric(const void* self, int32_t para
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback int32_t func(QDesignerWidgetBoxInterface* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_designerwidgetboxinterface_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_designerwidgetboxinterface_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4524,10 +4524,10 @@ void q_designerwidgetboxinterface_super_init_painter(const void* self, void* pai
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback void func(QDesignerWidgetBoxInterface* self, QPainter* painter)
 ///
-void q_designerwidgetboxinterface_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_designerwidgetboxinterface_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4557,10 +4557,10 @@ QPaintDevice* q_designerwidgetboxinterface_super_redirected(const void* self, vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback QPaintDevice* func(QDesignerWidgetBoxInterface* self, QPoint* offset)
 ///
-void q_designerwidgetboxinterface_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_designerwidgetboxinterface_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4588,10 +4588,10 @@ QPainter* q_designerwidgetboxinterface_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback QPainter* func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_designerwidgetboxinterface_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4654,12 +4654,12 @@ QVariant* q_designerwidgetboxinterface_super_input_method_query(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback QVariant* func(QDesignerWidgetBoxInterface* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerwidgetboxinterface_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_designerwidgetboxinterface_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5075,10 +5075,10 @@ QObject* q_designerwidgetboxinterface_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback QObject* func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_designerwidgetboxinterface_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5106,10 +5106,10 @@ int32_t q_designerwidgetboxinterface_super_sender_signal_index(const void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback int32_t func(QDesignerWidgetBoxInterface* self)
 ///
-void q_designerwidgetboxinterface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_designerwidgetboxinterface_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5139,10 +5139,10 @@ int32_t q_designerwidgetboxinterface_super_receivers(const void* self, const cha
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback int32_t func(QDesignerWidgetBoxInterface* self, const char* signal)
 ///
-void q_designerwidgetboxinterface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_designerwidgetboxinterface_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5172,10 +5172,10 @@ bool q_designerwidgetboxinterface_super_is_signal_connected(const void* self, co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback bool func(QDesignerWidgetBoxInterface* self, QMetaMethod* signal)
 ///
-void q_designerwidgetboxinterface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_designerwidgetboxinterface_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5207,10 +5207,10 @@ double q_designerwidgetboxinterface_super_get_decoded_metric_f(const void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetBoxInterface*
+/// @param self QDesignerWidgetBoxInterface*
 /// @param callback double func(QDesignerWidgetBoxInterface* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_designerwidgetboxinterface_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_designerwidgetboxinterface_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

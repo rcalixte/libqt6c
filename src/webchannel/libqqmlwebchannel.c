@@ -19,7 +19,7 @@ const QMetaObject* q_qmlwebchannel_meta_object(const void* self) {
     return QQmlWebChannel_MetaObject((QQmlWebChannel*)self);
 }
 
-void q_qmlwebchannel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_qmlwebchannel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlWebChannel_OnMetaObject((QQmlWebChannel*)self, (intptr_t)callback);
 }
 

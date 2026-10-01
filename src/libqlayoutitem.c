@@ -22,7 +22,7 @@ QSize* q_layoutitem_size_hint(const void* self) {
     return QLayoutItem_SizeHint((QLayoutItem*)self);
 }
 
-void q_layoutitem_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_layoutitem_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QLayoutItem_OnSizeHint((QLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -30,7 +30,7 @@ QSize* q_layoutitem_minimum_size(const void* self) {
     return QLayoutItem_MinimumSize((QLayoutItem*)self);
 }
 
-void q_layoutitem_on_minimum_size(const void* self, QSize* (*callback)(const void*)) {
+void q_layoutitem_on_minimum_size(void* self, QSize* (*callback)(const void*)) {
     QLayoutItem_OnMinimumSize((QLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -38,7 +38,7 @@ QSize* q_layoutitem_maximum_size(const void* self) {
     return QLayoutItem_MaximumSize((QLayoutItem*)self);
 }
 
-void q_layoutitem_on_maximum_size(const void* self, QSize* (*callback)(const void*)) {
+void q_layoutitem_on_maximum_size(void* self, QSize* (*callback)(const void*)) {
     QLayoutItem_OnMaximumSize((QLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -46,7 +46,7 @@ int32_t q_layoutitem_expanding_directions(const void* self) {
     return QLayoutItem_ExpandingDirections((QLayoutItem*)self);
 }
 
-void q_layoutitem_on_expanding_directions(const void* self, int32_t (*callback)(const void*)) {
+void q_layoutitem_on_expanding_directions(void* self, int32_t (*callback)(const void*)) {
     QLayoutItem_OnExpandingDirections((QLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ QRect* q_layoutitem_geometry(const void* self) {
     return QLayoutItem_Geometry((QLayoutItem*)self);
 }
 
-void q_layoutitem_on_geometry(const void* self, QRect* (*callback)(const void*)) {
+void q_layoutitem_on_geometry(void* self, QRect* (*callback)(const void*)) {
     QLayoutItem_OnGeometry((QLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -70,7 +70,7 @@ bool q_layoutitem_is_empty(const void* self) {
     return QLayoutItem_IsEmpty((QLayoutItem*)self);
 }
 
-void q_layoutitem_on_is_empty(const void* self, bool (*callback)(const void*)) {
+void q_layoutitem_on_is_empty(void* self, bool (*callback)(const void*)) {
     QLayoutItem_OnIsEmpty((QLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -78,7 +78,7 @@ bool q_layoutitem_has_height_for_width(const void* self) {
     return QLayoutItem_HasHeightForWidth((QLayoutItem*)self);
 }
 
-void q_layoutitem_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
+void q_layoutitem_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
     QLayoutItem_OnHasHeightForWidth((QLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -90,7 +90,7 @@ int32_t q_layoutitem_height_for_width(const void* self, int param1) {
     return QLayoutItem_HeightForWidth((QLayoutItem*)self, param1);
 }
 
-void q_layoutitem_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+void q_layoutitem_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
     QLayoutItem_OnHeightForWidth((QLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -102,7 +102,7 @@ int32_t q_layoutitem_minimum_height_for_width(const void* self, int param1) {
     return QLayoutItem_MinimumHeightForWidth((QLayoutItem*)self, param1);
 }
 
-void q_layoutitem_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+void q_layoutitem_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
     QLayoutItem_OnMinimumHeightForWidth((QLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -126,7 +126,7 @@ QWidget* q_layoutitem_widget(const void* self) {
     return QLayoutItem_Widget((QLayoutItem*)self);
 }
 
-void q_layoutitem_on_widget(const void* self, QWidget* (*callback)(const void*)) {
+void q_layoutitem_on_widget(void* self, QWidget* (*callback)(const void*)) {
     QLayoutItem_OnWidget((QLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -170,7 +170,7 @@ int32_t q_layoutitem_control_types(const void* self) {
     return QLayoutItem_ControlTypes((QLayoutItem*)self);
 }
 
-void q_layoutitem_on_control_types(const void* self, int32_t (*callback)(const void*)) {
+void q_layoutitem_on_control_types(void* self, int32_t (*callback)(const void*)) {
     QLayoutItem_OnControlTypes((QLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -210,7 +210,7 @@ QSize* q_spaceritem_size_hint(const void* self) {
     return QSpacerItem_SizeHint((QSpacerItem*)self);
 }
 
-void q_spaceritem_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_spaceritem_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QSpacerItem_OnSizeHint((QSpacerItem*)self, (intptr_t)callback);
 }
 
@@ -222,7 +222,7 @@ QSize* q_spaceritem_minimum_size(const void* self) {
     return QSpacerItem_MinimumSize((QSpacerItem*)self);
 }
 
-void q_spaceritem_on_minimum_size(const void* self, QSize* (*callback)(const void*)) {
+void q_spaceritem_on_minimum_size(void* self, QSize* (*callback)(const void*)) {
     QSpacerItem_OnMinimumSize((QSpacerItem*)self, (intptr_t)callback);
 }
 
@@ -234,7 +234,7 @@ QSize* q_spaceritem_maximum_size(const void* self) {
     return QSpacerItem_MaximumSize((QSpacerItem*)self);
 }
 
-void q_spaceritem_on_maximum_size(const void* self, QSize* (*callback)(const void*)) {
+void q_spaceritem_on_maximum_size(void* self, QSize* (*callback)(const void*)) {
     QSpacerItem_OnMaximumSize((QSpacerItem*)self, (intptr_t)callback);
 }
 
@@ -246,7 +246,7 @@ int32_t q_spaceritem_expanding_directions(const void* self) {
     return QSpacerItem_ExpandingDirections((QSpacerItem*)self);
 }
 
-void q_spaceritem_on_expanding_directions(const void* self, int32_t (*callback)(const void*)) {
+void q_spaceritem_on_expanding_directions(void* self, int32_t (*callback)(const void*)) {
     QSpacerItem_OnExpandingDirections((QSpacerItem*)self, (intptr_t)callback);
 }
 
@@ -258,7 +258,7 @@ bool q_spaceritem_is_empty(const void* self) {
     return QSpacerItem_IsEmpty((QSpacerItem*)self);
 }
 
-void q_spaceritem_on_is_empty(const void* self, bool (*callback)(const void*)) {
+void q_spaceritem_on_is_empty(void* self, bool (*callback)(const void*)) {
     QSpacerItem_OnIsEmpty((QSpacerItem*)self, (intptr_t)callback);
 }
 
@@ -282,7 +282,7 @@ QRect* q_spaceritem_geometry(const void* self) {
     return QSpacerItem_Geometry((QSpacerItem*)self);
 }
 
-void q_spaceritem_on_geometry(const void* self, QRect* (*callback)(const void*)) {
+void q_spaceritem_on_geometry(void* self, QRect* (*callback)(const void*)) {
     QSpacerItem_OnGeometry((QSpacerItem*)self, (intptr_t)callback);
 }
 
@@ -334,8 +334,8 @@ bool q_spaceritem_super_has_height_for_width(const void* self) {
     return QSpacerItem_SuperHasHeightForWidth((QSpacerItem*)self);
 }
 
-void q_spaceritem_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QSpacerItem_OnHasHeightForWidth((const QSpacerItem*)self, (intptr_t)callback);
+void q_spaceritem_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QSpacerItem_OnHasHeightForWidth((QSpacerItem*)self, (intptr_t)callback);
 }
 
 int32_t q_spaceritem_height_for_width(const void* self, int param1) {
@@ -346,8 +346,8 @@ int32_t q_spaceritem_super_height_for_width(const void* self, int param1) {
     return QSpacerItem_SuperHeightForWidth((QSpacerItem*)self, param1);
 }
 
-void q_spaceritem_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QSpacerItem_OnHeightForWidth((const QSpacerItem*)self, (intptr_t)callback);
+void q_spaceritem_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QSpacerItem_OnHeightForWidth((QSpacerItem*)self, (intptr_t)callback);
 }
 
 int32_t q_spaceritem_minimum_height_for_width(const void* self, int param1) {
@@ -358,8 +358,8 @@ int32_t q_spaceritem_super_minimum_height_for_width(const void* self, int param1
     return QSpacerItem_SuperMinimumHeightForWidth((QSpacerItem*)self, param1);
 }
 
-void q_spaceritem_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QSpacerItem_OnMinimumHeightForWidth((const QSpacerItem*)self, (intptr_t)callback);
+void q_spaceritem_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QSpacerItem_OnMinimumHeightForWidth((QSpacerItem*)self, (intptr_t)callback);
 }
 
 void q_spaceritem_invalidate(void* self) {
@@ -382,8 +382,8 @@ QWidget* q_spaceritem_super_widget(const void* self) {
     return QSpacerItem_SuperWidget((QSpacerItem*)self);
 }
 
-void q_spaceritem_on_widget(const void* self, QWidget* (*callback)(const void*)) {
-    QSpacerItem_OnWidget((const QSpacerItem*)self, (intptr_t)callback);
+void q_spaceritem_on_widget(void* self, QWidget* (*callback)(const void*)) {
+    QSpacerItem_OnWidget((QSpacerItem*)self, (intptr_t)callback);
 }
 
 QLayout* q_spaceritem_layout(void* self) {
@@ -406,8 +406,8 @@ int32_t q_spaceritem_super_control_types(const void* self) {
     return QSpacerItem_SuperControlTypes((QSpacerItem*)self);
 }
 
-void q_spaceritem_on_control_types(const void* self, int32_t (*callback)(const void*)) {
-    QSpacerItem_OnControlTypes((const QSpacerItem*)self, (intptr_t)callback);
+void q_spaceritem_on_control_types(void* self, int32_t (*callback)(const void*)) {
+    QSpacerItem_OnControlTypes((QSpacerItem*)self, (intptr_t)callback);
 }
 
 void q_spaceritem_delete(void* self) {
@@ -422,7 +422,7 @@ QSize* q_widgetitem_size_hint(const void* self) {
     return QWidgetItem_SizeHint((QWidgetItem*)self);
 }
 
-void q_widgetitem_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_widgetitem_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QWidgetItem_OnSizeHint((QWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -434,7 +434,7 @@ QSize* q_widgetitem_minimum_size(const void* self) {
     return QWidgetItem_MinimumSize((QWidgetItem*)self);
 }
 
-void q_widgetitem_on_minimum_size(const void* self, QSize* (*callback)(const void*)) {
+void q_widgetitem_on_minimum_size(void* self, QSize* (*callback)(const void*)) {
     QWidgetItem_OnMinimumSize((QWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -446,7 +446,7 @@ QSize* q_widgetitem_maximum_size(const void* self) {
     return QWidgetItem_MaximumSize((QWidgetItem*)self);
 }
 
-void q_widgetitem_on_maximum_size(const void* self, QSize* (*callback)(const void*)) {
+void q_widgetitem_on_maximum_size(void* self, QSize* (*callback)(const void*)) {
     QWidgetItem_OnMaximumSize((QWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -458,7 +458,7 @@ int32_t q_widgetitem_expanding_directions(const void* self) {
     return QWidgetItem_ExpandingDirections((QWidgetItem*)self);
 }
 
-void q_widgetitem_on_expanding_directions(const void* self, int32_t (*callback)(const void*)) {
+void q_widgetitem_on_expanding_directions(void* self, int32_t (*callback)(const void*)) {
     QWidgetItem_OnExpandingDirections((QWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -470,7 +470,7 @@ bool q_widgetitem_is_empty(const void* self) {
     return QWidgetItem_IsEmpty((QWidgetItem*)self);
 }
 
-void q_widgetitem_on_is_empty(const void* self, bool (*callback)(const void*)) {
+void q_widgetitem_on_is_empty(void* self, bool (*callback)(const void*)) {
     QWidgetItem_OnIsEmpty((QWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -494,7 +494,7 @@ QRect* q_widgetitem_geometry(const void* self) {
     return QWidgetItem_Geometry((QWidgetItem*)self);
 }
 
-void q_widgetitem_on_geometry(const void* self, QRect* (*callback)(const void*)) {
+void q_widgetitem_on_geometry(void* self, QRect* (*callback)(const void*)) {
     QWidgetItem_OnGeometry((QWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -506,7 +506,7 @@ QWidget* q_widgetitem_widget(const void* self) {
     return QWidgetItem_Widget((QWidgetItem*)self);
 }
 
-void q_widgetitem_on_widget(const void* self, QWidget* (*callback)(const void*)) {
+void q_widgetitem_on_widget(void* self, QWidget* (*callback)(const void*)) {
     QWidgetItem_OnWidget((QWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -518,7 +518,7 @@ bool q_widgetitem_has_height_for_width(const void* self) {
     return QWidgetItem_HasHeightForWidth((QWidgetItem*)self);
 }
 
-void q_widgetitem_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
+void q_widgetitem_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
     QWidgetItem_OnHasHeightForWidth((QWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -530,7 +530,7 @@ int32_t q_widgetitem_height_for_width(const void* self, int param1) {
     return QWidgetItem_HeightForWidth((QWidgetItem*)self, param1);
 }
 
-void q_widgetitem_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+void q_widgetitem_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
     QWidgetItem_OnHeightForWidth((QWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -542,7 +542,7 @@ int32_t q_widgetitem_minimum_height_for_width(const void* self, int param1) {
     return QWidgetItem_MinimumHeightForWidth((QWidgetItem*)self, param1);
 }
 
-void q_widgetitem_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+void q_widgetitem_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
     QWidgetItem_OnMinimumHeightForWidth((QWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -554,7 +554,7 @@ int32_t q_widgetitem_control_types(const void* self) {
     return QWidgetItem_ControlTypes((QWidgetItem*)self);
 }
 
-void q_widgetitem_on_control_types(const void* self, int32_t (*callback)(const void*)) {
+void q_widgetitem_on_control_types(void* self, int32_t (*callback)(const void*)) {
     QWidgetItem_OnControlTypes((QWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -622,7 +622,7 @@ QSize* q_widgetitemv2_size_hint(const void* self) {
     return QWidgetItemV2_SizeHint((QWidgetItemV2*)self);
 }
 
-void q_widgetitemv2_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_widgetitemv2_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QWidgetItemV2_OnSizeHint((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
@@ -634,7 +634,7 @@ QSize* q_widgetitemv2_minimum_size(const void* self) {
     return QWidgetItemV2_MinimumSize((QWidgetItemV2*)self);
 }
 
-void q_widgetitemv2_on_minimum_size(const void* self, QSize* (*callback)(const void*)) {
+void q_widgetitemv2_on_minimum_size(void* self, QSize* (*callback)(const void*)) {
     QWidgetItemV2_OnMinimumSize((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
@@ -646,7 +646,7 @@ QSize* q_widgetitemv2_maximum_size(const void* self) {
     return QWidgetItemV2_MaximumSize((QWidgetItemV2*)self);
 }
 
-void q_widgetitemv2_on_maximum_size(const void* self, QSize* (*callback)(const void*)) {
+void q_widgetitemv2_on_maximum_size(void* self, QSize* (*callback)(const void*)) {
     QWidgetItemV2_OnMaximumSize((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
@@ -658,7 +658,7 @@ int32_t q_widgetitemv2_height_for_width(const void* self, int width) {
     return QWidgetItemV2_HeightForWidth((QWidgetItemV2*)self, width);
 }
 
-void q_widgetitemv2_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+void q_widgetitemv2_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
     QWidgetItemV2_OnHeightForWidth((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
@@ -686,8 +686,8 @@ int32_t q_widgetitemv2_super_expanding_directions(const void* self) {
     return QWidgetItemV2_SuperExpandingDirections((QWidgetItemV2*)self);
 }
 
-void q_widgetitemv2_on_expanding_directions(const void* self, int32_t (*callback)(const void*)) {
-    QWidgetItemV2_OnExpandingDirections((const QWidgetItemV2*)self, (intptr_t)callback);
+void q_widgetitemv2_on_expanding_directions(void* self, int32_t (*callback)(const void*)) {
+    QWidgetItemV2_OnExpandingDirections((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
 bool q_widgetitemv2_is_empty(const void* self) {
@@ -698,8 +698,8 @@ bool q_widgetitemv2_super_is_empty(const void* self) {
     return QWidgetItemV2_SuperIsEmpty((QWidgetItemV2*)self);
 }
 
-void q_widgetitemv2_on_is_empty(const void* self, bool (*callback)(const void*)) {
-    QWidgetItemV2_OnIsEmpty((const QWidgetItemV2*)self, (intptr_t)callback);
+void q_widgetitemv2_on_is_empty(void* self, bool (*callback)(const void*)) {
+    QWidgetItemV2_OnIsEmpty((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
 void q_widgetitemv2_set_geometry(void* self, const void* geometry) {
@@ -722,8 +722,8 @@ QRect* q_widgetitemv2_super_geometry(const void* self) {
     return QWidgetItemV2_SuperGeometry((QWidgetItemV2*)self);
 }
 
-void q_widgetitemv2_on_geometry(const void* self, QRect* (*callback)(const void*)) {
-    QWidgetItemV2_OnGeometry((const QWidgetItemV2*)self, (intptr_t)callback);
+void q_widgetitemv2_on_geometry(void* self, QRect* (*callback)(const void*)) {
+    QWidgetItemV2_OnGeometry((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
 QWidget* q_widgetitemv2_widget(const void* self) {
@@ -734,8 +734,8 @@ QWidget* q_widgetitemv2_super_widget(const void* self) {
     return QWidgetItemV2_SuperWidget((QWidgetItemV2*)self);
 }
 
-void q_widgetitemv2_on_widget(const void* self, QWidget* (*callback)(const void*)) {
-    QWidgetItemV2_OnWidget((const QWidgetItemV2*)self, (intptr_t)callback);
+void q_widgetitemv2_on_widget(void* self, QWidget* (*callback)(const void*)) {
+    QWidgetItemV2_OnWidget((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
 bool q_widgetitemv2_has_height_for_width(const void* self) {
@@ -746,8 +746,8 @@ bool q_widgetitemv2_super_has_height_for_width(const void* self) {
     return QWidgetItemV2_SuperHasHeightForWidth((QWidgetItemV2*)self);
 }
 
-void q_widgetitemv2_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QWidgetItemV2_OnHasHeightForWidth((const QWidgetItemV2*)self, (intptr_t)callback);
+void q_widgetitemv2_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QWidgetItemV2_OnHasHeightForWidth((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
 int32_t q_widgetitemv2_minimum_height_for_width(const void* self, int param1) {
@@ -758,8 +758,8 @@ int32_t q_widgetitemv2_super_minimum_height_for_width(const void* self, int para
     return QWidgetItemV2_SuperMinimumHeightForWidth((QWidgetItemV2*)self, param1);
 }
 
-void q_widgetitemv2_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QWidgetItemV2_OnMinimumHeightForWidth((const QWidgetItemV2*)self, (intptr_t)callback);
+void q_widgetitemv2_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QWidgetItemV2_OnMinimumHeightForWidth((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
 int32_t q_widgetitemv2_control_types(const void* self) {
@@ -770,8 +770,8 @@ int32_t q_widgetitemv2_super_control_types(const void* self) {
     return QWidgetItemV2_SuperControlTypes((QWidgetItemV2*)self);
 }
 
-void q_widgetitemv2_on_control_types(const void* self, int32_t (*callback)(const void*)) {
-    QWidgetItemV2_OnControlTypes((const QWidgetItemV2*)self, (intptr_t)callback);
+void q_widgetitemv2_on_control_types(void* self, int32_t (*callback)(const void*)) {
+    QWidgetItemV2_OnControlTypes((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
 void q_widgetitemv2_invalidate(void* self) {

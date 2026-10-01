@@ -30,7 +30,7 @@ const QMetaObject* q_inputdevice_meta_object(const void* self) {
     return QInputDevice_MetaObject((QInputDevice*)self);
 }
 
-void q_inputdevice_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_inputdevice_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QInputDevice_OnMetaObject((QInputDevice*)self, (intptr_t)callback);
 }
 

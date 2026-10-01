@@ -14,7 +14,7 @@ const QMetaObject* k_completion_meta_object(const void* self) {
     return KCompletion_MetaObject((KCompletion*)self);
 }
 
-void k_completion_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_completion_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KCompletion_OnMetaObject((KCompletion*)self, (intptr_t)callback);
 }
 
@@ -77,7 +77,7 @@ const char* k_completion_last_match(const void* self) {
     return _ret;
 }
 
-void k_completion_on_last_match(const void* self, const char* (*callback)(const void*)) {
+void k_completion_on_last_match(void* self, const char* (*callback)(const void*)) {
     KCompletion_OnLastMatch((KCompletion*)self, (intptr_t)callback);
 }
 
@@ -372,7 +372,7 @@ void k_completion_post_process_matches(const void* self, const char* matchList[s
     free(matchList_qstr);
 }
 
-void k_completion_on_post_process_matches(const void* self, void (*callback)(const void*, const char**)) {
+void k_completion_on_post_process_matches(void* self, void (*callback)(const void*, const char**)) {
     KCompletion_OnPostProcessMatches((KCompletion*)self, (intptr_t)callback);
 }
 
@@ -393,7 +393,7 @@ void k_completion_post_process_matches2(const void* self, void* matches) {
     KCompletion_PostProcessMatches2((KCompletion*)self, (KCompletionMatches*)matches);
 }
 
-void k_completion_on_post_process_matches2(const void* self, void (*callback)(const void*, void*)) {
+void k_completion_on_post_process_matches2(void* self, void (*callback)(const void*, void*)) {
     KCompletion_OnPostProcessMatches2((KCompletion*)self, (intptr_t)callback);
 }
 

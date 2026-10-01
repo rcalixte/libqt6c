@@ -35,7 +35,7 @@ const QMetaObject* k_fileplaceeditdialog_meta_object(const void* self) {
     return KFilePlaceEditDialog_MetaObject((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_fileplaceeditdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFilePlaceEditDialog_OnMetaObject((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
@@ -166,11 +166,11 @@ void k_fileplaceeditdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_fileplaceeditdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_fileplaceeditdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KFilePlaceEditDialog* k_fileplaceeditdialog_from_q_paint_device(void* _qpaintdevice) {
+KFilePlaceEditDialog* k_fileplaceeditdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KFilePlaceEditDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1573,8 +1573,8 @@ QSize* k_fileplaceeditdialog_super_size_hint(const void* self) {
     return KFilePlaceEditDialog_SuperSizeHint((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KFilePlaceEditDialog_OnSizeHint((const KFilePlaceEditDialog*)self, (intptr_t)callback);
+void k_fileplaceeditdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KFilePlaceEditDialog_OnSizeHint((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_fileplaceeditdialog_minimum_size_hint(const void* self) {
@@ -1585,8 +1585,8 @@ QSize* k_fileplaceeditdialog_super_minimum_size_hint(const void* self) {
     return KFilePlaceEditDialog_SuperMinimumSizeHint((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KFilePlaceEditDialog_OnMinimumSizeHint((const KFilePlaceEditDialog*)self, (intptr_t)callback);
+void k_fileplaceeditdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KFilePlaceEditDialog_OnMinimumSizeHint((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
 void k_fileplaceeditdialog_open(void* self) {
@@ -1729,8 +1729,8 @@ int32_t k_fileplaceeditdialog_super_dev_type(const void* self) {
     return KFilePlaceEditDialog_SuperDevType((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KFilePlaceEditDialog_OnDevType((const KFilePlaceEditDialog*)self, (intptr_t)callback);
+void k_fileplaceeditdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KFilePlaceEditDialog_OnDevType((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_fileplaceeditdialog_height_for_width(const void* self, int param1) {
@@ -1741,8 +1741,8 @@ int32_t k_fileplaceeditdialog_super_height_for_width(const void* self, int param
     return KFilePlaceEditDialog_SuperHeightForWidth((KFilePlaceEditDialog*)self, param1);
 }
 
-void k_fileplaceeditdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KFilePlaceEditDialog_OnHeightForWidth((const KFilePlaceEditDialog*)self, (intptr_t)callback);
+void k_fileplaceeditdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KFilePlaceEditDialog_OnHeightForWidth((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
 bool k_fileplaceeditdialog_has_height_for_width(const void* self) {
@@ -1753,8 +1753,8 @@ bool k_fileplaceeditdialog_super_has_height_for_width(const void* self) {
     return KFilePlaceEditDialog_SuperHasHeightForWidth((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KFilePlaceEditDialog_OnHasHeightForWidth((const KFilePlaceEditDialog*)self, (intptr_t)callback);
+void k_fileplaceeditdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KFilePlaceEditDialog_OnHasHeightForWidth((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_fileplaceeditdialog_paint_engine(const void* self) {
@@ -1765,8 +1765,8 @@ QPaintEngine* k_fileplaceeditdialog_super_paint_engine(const void* self) {
     return KFilePlaceEditDialog_SuperPaintEngine((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KFilePlaceEditDialog_OnPaintEngine((const KFilePlaceEditDialog*)self, (intptr_t)callback);
+void k_fileplaceeditdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KFilePlaceEditDialog_OnPaintEngine((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
 bool k_fileplaceeditdialog_event(void* self, void* event) {
@@ -2041,8 +2041,8 @@ int32_t k_fileplaceeditdialog_super_metric(const void* self, int32_t param1) {
     return KFilePlaceEditDialog_SuperMetric((KFilePlaceEditDialog*)self, param1);
 }
 
-void k_fileplaceeditdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KFilePlaceEditDialog_OnMetric((const KFilePlaceEditDialog*)self, (intptr_t)callback);
+void k_fileplaceeditdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KFilePlaceEditDialog_OnMetric((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
 void k_fileplaceeditdialog_init_painter(const void* self, void* painter) {
@@ -2053,8 +2053,8 @@ void k_fileplaceeditdialog_super_init_painter(const void* self, void* painter) {
     KFilePlaceEditDialog_SuperInitPainter((KFilePlaceEditDialog*)self, (QPainter*)painter);
 }
 
-void k_fileplaceeditdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KFilePlaceEditDialog_OnInitPainter((const KFilePlaceEditDialog*)self, (intptr_t)callback);
+void k_fileplaceeditdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KFilePlaceEditDialog_OnInitPainter((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_fileplaceeditdialog_redirected(const void* self, void* offset) {
@@ -2065,8 +2065,8 @@ QPaintDevice* k_fileplaceeditdialog_super_redirected(const void* self, void* off
     return KFilePlaceEditDialog_SuperRedirected((KFilePlaceEditDialog*)self, (QPoint*)offset);
 }
 
-void k_fileplaceeditdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KFilePlaceEditDialog_OnRedirected((const KFilePlaceEditDialog*)self, (intptr_t)callback);
+void k_fileplaceeditdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KFilePlaceEditDialog_OnRedirected((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_fileplaceeditdialog_shared_painter(const void* self) {
@@ -2077,8 +2077,8 @@ QPainter* k_fileplaceeditdialog_super_shared_painter(const void* self) {
     return KFilePlaceEditDialog_SuperSharedPainter((KFilePlaceEditDialog*)self);
 }
 
-void k_fileplaceeditdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KFilePlaceEditDialog_OnSharedPainter((const KFilePlaceEditDialog*)self, (intptr_t)callback);
+void k_fileplaceeditdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KFilePlaceEditDialog_OnSharedPainter((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
 void k_fileplaceeditdialog_input_method_event(void* self, void* param1) {
@@ -2101,8 +2101,8 @@ QVariant* k_fileplaceeditdialog_super_input_method_query(const void* self, int32
     return KFilePlaceEditDialog_SuperInputMethodQuery((KFilePlaceEditDialog*)self, param1);
 }
 
-void k_fileplaceeditdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KFilePlaceEditDialog_OnInputMethodQuery((const KFilePlaceEditDialog*)self, (intptr_t)callback);
+void k_fileplaceeditdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KFilePlaceEditDialog_OnInputMethodQuery((KFilePlaceEditDialog*)self, (intptr_t)callback);
 }
 
 bool k_fileplaceeditdialog_focus_next_prev_child(void* self, bool next) {

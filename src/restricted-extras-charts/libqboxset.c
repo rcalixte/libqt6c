@@ -35,7 +35,7 @@ const QMetaObject* q_boxset_meta_object(const void* self) {
     return QBoxSet_MetaObject((QBoxSet*)self);
 }
 
-void q_boxset_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_boxset_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QBoxSet_OnMetaObject((QBoxSet*)self, (intptr_t)callback);
 }
 

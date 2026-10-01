@@ -32,10 +32,10 @@ const QMetaObject* q_texttospeechengine_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback const QMetaObject* func(const QTextToSpeechEngine* self)
 ///
-void q_texttospeechengine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_texttospeechengine_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -107,10 +107,10 @@ int32_t q_texttospeechengine_capabilities(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback int32_t func(const QTextToSpeechEngine* self)
 ///
-void q_texttospeechengine_on_capabilities(const void* self, int32_t (*callback)(const void*));
+void q_texttospeechengine_on_capabilities(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#capabilities)
 ///
@@ -136,10 +136,10 @@ libqt_list q_texttospeechengine_available_locales(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback libqt_list of QLocale* func(const QTextToSpeechEngine* self)
 ///
-void q_texttospeechengine_on_available_locales(const void* self, libqt_list (*callback)(const void*));
+void q_texttospeechengine_on_available_locales(void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#availableVoices)
 ///
@@ -155,10 +155,10 @@ libqt_list q_texttospeechengine_available_voices(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback libqt_list of QVoice* func(const QTextToSpeechEngine* self)
 ///
-void q_texttospeechengine_on_available_voices(const void* self, libqt_list (*callback)(const void*));
+void q_texttospeechengine_on_available_voices(void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#say)
 ///
@@ -261,10 +261,10 @@ double q_texttospeechengine_rate(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback double func(const QTextToSpeechEngine* self)
 ///
-void q_texttospeechengine_on_rate(const void* self, double (*callback)(const void*));
+void q_texttospeechengine_on_rate(void* self, double (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#setRate)
 ///
@@ -296,10 +296,10 @@ double q_texttospeechengine_pitch(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback double func(const QTextToSpeechEngine* self)
 ///
-void q_texttospeechengine_on_pitch(const void* self, double (*callback)(const void*));
+void q_texttospeechengine_on_pitch(void* self, double (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#setPitch)
 ///
@@ -331,12 +331,12 @@ QLocale* q_texttospeechengine_locale(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback QLocale* func(const QTextToSpeechEngine* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_texttospeechengine_on_locale(const void* self, QLocale* (*callback)(const void*));
+void q_texttospeechengine_on_locale(void* self, QLocale* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#setLocale)
 ///
@@ -368,10 +368,10 @@ double q_texttospeechengine_volume(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback double func(const QTextToSpeechEngine* self)
 ///
-void q_texttospeechengine_on_volume(const void* self, double (*callback)(const void*));
+void q_texttospeechengine_on_volume(void* self, double (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#setVolume)
 ///
@@ -403,12 +403,12 @@ QVoice* q_texttospeechengine_voice(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback QVoice* func(const QTextToSpeechEngine* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_texttospeechengine_on_voice(const void* self, QVoice* (*callback)(const void*));
+void q_texttospeechengine_on_voice(void* self, QVoice* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#setVoice)
 ///
@@ -442,10 +442,10 @@ int32_t q_texttospeechengine_state(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback int32_t func(const QTextToSpeechEngine* self)
 ///
-void q_texttospeechengine_on_state(const void* self, int32_t (*callback)(const void*));
+void q_texttospeechengine_on_state(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#errorReason)
 ///
@@ -461,10 +461,10 @@ int32_t q_texttospeechengine_error_reason(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback int32_t func(const QTextToSpeechEngine* self)
 ///
-void q_texttospeechengine_on_error_reason(const void* self, int32_t (*callback)(const void*));
+void q_texttospeechengine_on_error_reason(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#errorString)
 ///
@@ -480,10 +480,10 @@ const char* q_texttospeechengine_error_string(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback const char* func(const QTextToSpeechEngine* self)
 ///
-void q_texttospeechengine_on_error_string(const void* self, const char* (*callback)(const void*));
+void q_texttospeechengine_on_error_string(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#createVoice)
 ///
@@ -1288,10 +1288,10 @@ QObject* q_texttospeechengine_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback QObject* func(QTextToSpeechEngine* self)
 ///
-void q_texttospeechengine_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_texttospeechengine_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1319,10 +1319,10 @@ int32_t q_texttospeechengine_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback int32_t func(QTextToSpeechEngine* self)
 ///
-void q_texttospeechengine_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_texttospeechengine_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1352,10 +1352,10 @@ int32_t q_texttospeechengine_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback int32_t func(QTextToSpeechEngine* self, const char* signal)
 ///
-void q_texttospeechengine_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_texttospeechengine_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1385,10 +1385,10 @@ bool q_texttospeechengine_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTextToSpeechEngine*
+/// @param self QTextToSpeechEngine*
 /// @param callback bool func(QTextToSpeechEngine* self, QMetaMethod* signal)
 ///
-void q_texttospeechengine_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_texttospeechengine_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

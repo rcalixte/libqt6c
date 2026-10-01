@@ -45,10 +45,10 @@ const QMetaObject* k_compressiondevice_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCompressionDevice*
+/// @param self KCompressionDevice*
 /// @param callback const QMetaObject* func(const KCompressionDevice* self)
 ///
-void k_compressiondevice_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_compressiondevice_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -212,10 +212,10 @@ bool k_compressiondevice_at_end(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCompressionDevice*
+/// @param self KCompressionDevice*
 /// @param callback bool func(const KCompressionDevice* self)
 ///
-void k_compressiondevice_on_at_end(const void* self, bool (*callback)(const void*));
+void k_compressiondevice_on_at_end(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#atEnd)
 ///
@@ -330,9 +330,9 @@ const char* k_compressiondevice_tr3(const char* s, const char* c, int n);
 ///
 /// Upcasts to a QIODeviceBase object
 ///
-/// @param self KCompressionDevice*
+/// @param self const KCompressionDevice*
 ///
-QIODeviceBase* k_compressiondevice_as_q_i_o_device_base(void* self);
+QIODeviceBase* k_compressiondevice_as_q_i_o_device_base(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1203,10 +1203,10 @@ bool k_compressiondevice_super_is_sequential(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompressionDevice*
+/// @param self KCompressionDevice*
 /// @param callback bool func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_is_sequential(const void* self, bool (*callback)(const void*));
+void k_compressiondevice_on_is_sequential(void* self, bool (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1234,10 +1234,10 @@ int64_t k_compressiondevice_super_pos(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompressionDevice*
+/// @param self KCompressionDevice*
 /// @param callback int64_t func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_pos(const void* self, int64_t (*callback)(const void*));
+void k_compressiondevice_on_pos(void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1265,10 +1265,10 @@ int64_t k_compressiondevice_super_size(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompressionDevice*
+/// @param self KCompressionDevice*
 /// @param callback int64_t func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_size(const void* self, int64_t (*callback)(const void*));
+void k_compressiondevice_on_size(void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1327,10 +1327,10 @@ int64_t k_compressiondevice_super_bytes_available(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompressionDevice*
+/// @param self KCompressionDevice*
 /// @param callback int64_t func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_bytes_available(const void* self, int64_t (*callback)(const void*));
+void k_compressiondevice_on_bytes_available(void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1358,10 +1358,10 @@ int64_t k_compressiondevice_super_bytes_to_write(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompressionDevice*
+/// @param self KCompressionDevice*
 /// @param callback int64_t func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_bytes_to_write(const void* self, int64_t (*callback)(const void*));
+void k_compressiondevice_on_bytes_to_write(void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1389,10 +1389,10 @@ bool k_compressiondevice_super_can_read_line(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompressionDevice*
+/// @param self KCompressionDevice*
 /// @param callback bool func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_can_read_line(const void* self, bool (*callback)(const void*));
+void k_compressiondevice_on_can_read_line(void* self, bool (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1853,10 +1853,10 @@ QObject* k_compressiondevice_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompressionDevice*
+/// @param self KCompressionDevice*
 /// @param callback QObject* func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_compressiondevice_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1884,10 +1884,10 @@ int32_t k_compressiondevice_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompressionDevice*
+/// @param self KCompressionDevice*
 /// @param callback int32_t func(KCompressionDevice* self)
 ///
-void k_compressiondevice_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_compressiondevice_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1917,10 +1917,10 @@ int32_t k_compressiondevice_super_receivers(const void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompressionDevice*
+/// @param self KCompressionDevice*
 /// @param callback int32_t func(KCompressionDevice* self, const char* signal)
 ///
-void k_compressiondevice_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_compressiondevice_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1950,10 +1950,10 @@ bool k_compressiondevice_super_is_signal_connected(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompressionDevice*
+/// @param self KCompressionDevice*
 /// @param callback bool func(KCompressionDevice* self, QMetaMethod* signal)
 ///
-void k_compressiondevice_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_compressiondevice_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

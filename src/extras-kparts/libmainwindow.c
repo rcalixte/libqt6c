@@ -39,11 +39,11 @@ KParts__MainWindow* k_parts__mainwindow_new3(void* parent, int32_t f) {
     return KParts__MainWindow_New3((QWidget*)parent, f);
 }
 
-KParts__PartBase* k_parts__mainwindow_as_k_parts___part_base(void* self) {
+KParts__PartBase* k_parts__mainwindow_as_k_parts___part_base(const void* self) {
     return KParts__MainWindow_AsKParts__PartBase((KParts__MainWindow*)self);
 }
 
-KParts__MainWindow* k_parts__mainwindow_from_k_parts___part_base(void* _kparts__partbase) {
+KParts__MainWindow* k_parts__mainwindow_from_k_parts___part_base(const void* _kparts__partbase) {
     return (KParts__MainWindow*)KParts__MainWindow_FromKParts__PartBase((KParts__PartBase*)_kparts__partbase);
 }
 
@@ -51,7 +51,7 @@ const QMetaObject* k_parts__mainwindow_meta_object(const void* self) {
     return KParts__MainWindow_MetaObject((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_parts__mainwindow_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KParts__MainWindow_OnMetaObject((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
@@ -160,19 +160,19 @@ const char* k_parts__mainwindow_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-KXMLGUIBuilder* k_parts__mainwindow_as_k_x_m_l_g_u_i_builder(void* self) {
+KXMLGUIBuilder* k_parts__mainwindow_as_k_x_m_l_g_u_i_builder(const void* self) {
     return KXmlGuiWindow_AsKXMLGUIBuilder((KXmlGuiWindow*)self);
 }
 
-KParts__MainWindow* k_parts__mainwindow_from_k_x_m_l_g_u_i_builder(void* _kxmlguibuilder) {
+KParts__MainWindow* k_parts__mainwindow_from_k_x_m_l_g_u_i_builder(const void* _kxmlguibuilder) {
     return (KParts__MainWindow*)KXmlGuiWindow_FromKXMLGUIBuilder((KXMLGUIBuilder*)_kxmlguibuilder);
 }
 
-KXMLGUIClient* k_parts__mainwindow_as_k_x_m_l_g_u_i_client(void* self) {
+KXMLGUIClient* k_parts__mainwindow_as_k_x_m_l_g_u_i_client(const void* self) {
     return KXmlGuiWindow_AsKXMLGUIClient((KXmlGuiWindow*)self);
 }
 
-KParts__MainWindow* k_parts__mainwindow_from_k_x_m_l_g_u_i_client(void* _kxmlguiclient) {
+KParts__MainWindow* k_parts__mainwindow_from_k_x_m_l_g_u_i_client(const void* _kxmlguiclient) {
     return (KParts__MainWindow*)KXmlGuiWindow_FromKXMLGUIClient((KXMLGUIClient*)_kxmlguiclient);
 }
 
@@ -639,11 +639,11 @@ bool k_parts__mainwindow_restore_state2(void* self, char* state, int version) {
     return QMainWindow_RestoreState2((QMainWindow*)self, qstring(state), version);
 }
 
-QPaintDevice* k_parts__mainwindow_as_q_paint_device(void* self) {
+QPaintDevice* k_parts__mainwindow_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KParts__MainWindow* k_parts__mainwindow_from_q_paint_device(void* _qpaintdevice) {
+KParts__MainWindow* k_parts__mainwindow_from_q_paint_device(const void* _qpaintdevice) {
     return (KParts__MainWindow*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2347,8 +2347,8 @@ int32_t k_parts__mainwindow_super_dev_type(const void* self) {
     return KParts__MainWindow_SuperDevType((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KParts__MainWindow_OnDevType((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KParts__MainWindow_OnDevType((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 void k_parts__mainwindow_set_visible(void* self, bool visible) {
@@ -2371,8 +2371,8 @@ QSize* k_parts__mainwindow_super_size_hint(const void* self) {
     return KParts__MainWindow_SuperSizeHint((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KParts__MainWindow_OnSizeHint((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KParts__MainWindow_OnSizeHint((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 QSize* k_parts__mainwindow_minimum_size_hint(const void* self) {
@@ -2383,8 +2383,8 @@ QSize* k_parts__mainwindow_super_minimum_size_hint(const void* self) {
     return KParts__MainWindow_SuperMinimumSizeHint((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KParts__MainWindow_OnMinimumSizeHint((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KParts__MainWindow_OnMinimumSizeHint((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 int32_t k_parts__mainwindow_height_for_width(const void* self, int param1) {
@@ -2395,8 +2395,8 @@ int32_t k_parts__mainwindow_super_height_for_width(const void* self, int param1)
     return KParts__MainWindow_SuperHeightForWidth((KParts__MainWindow*)self, param1);
 }
 
-void k_parts__mainwindow_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KParts__MainWindow_OnHeightForWidth((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KParts__MainWindow_OnHeightForWidth((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 bool k_parts__mainwindow_has_height_for_width(const void* self) {
@@ -2407,8 +2407,8 @@ bool k_parts__mainwindow_super_has_height_for_width(const void* self) {
     return KParts__MainWindow_SuperHasHeightForWidth((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KParts__MainWindow_OnHasHeightForWidth((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KParts__MainWindow_OnHasHeightForWidth((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_parts__mainwindow_paint_engine(const void* self) {
@@ -2419,8 +2419,8 @@ QPaintEngine* k_parts__mainwindow_super_paint_engine(const void* self) {
     return KParts__MainWindow_SuperPaintEngine((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KParts__MainWindow_OnPaintEngine((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KParts__MainWindow_OnPaintEngine((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 void k_parts__mainwindow_mouse_press_event(void* self, void* event) {
@@ -2707,8 +2707,8 @@ int32_t k_parts__mainwindow_super_metric(const void* self, int32_t param1) {
     return KParts__MainWindow_SuperMetric((KParts__MainWindow*)self, param1);
 }
 
-void k_parts__mainwindow_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KParts__MainWindow_OnMetric((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KParts__MainWindow_OnMetric((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 void k_parts__mainwindow_init_painter(const void* self, void* painter) {
@@ -2719,8 +2719,8 @@ void k_parts__mainwindow_super_init_painter(const void* self, void* painter) {
     KParts__MainWindow_SuperInitPainter((KParts__MainWindow*)self, (QPainter*)painter);
 }
 
-void k_parts__mainwindow_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KParts__MainWindow_OnInitPainter((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KParts__MainWindow_OnInitPainter((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_parts__mainwindow_redirected(const void* self, void* offset) {
@@ -2731,8 +2731,8 @@ QPaintDevice* k_parts__mainwindow_super_redirected(const void* self, void* offse
     return KParts__MainWindow_SuperRedirected((KParts__MainWindow*)self, (QPoint*)offset);
 }
 
-void k_parts__mainwindow_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KParts__MainWindow_OnRedirected((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KParts__MainWindow_OnRedirected((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 QPainter* k_parts__mainwindow_shared_painter(const void* self) {
@@ -2743,8 +2743,8 @@ QPainter* k_parts__mainwindow_super_shared_painter(const void* self) {
     return KParts__MainWindow_SuperSharedPainter((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KParts__MainWindow_OnSharedPainter((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KParts__MainWindow_OnSharedPainter((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 void k_parts__mainwindow_input_method_event(void* self, void* param1) {
@@ -2767,8 +2767,8 @@ QVariant* k_parts__mainwindow_super_input_method_query(const void* self, int32_t
     return KParts__MainWindow_SuperInputMethodQuery((KParts__MainWindow*)self, param1);
 }
 
-void k_parts__mainwindow_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KParts__MainWindow_OnInputMethodQuery((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KParts__MainWindow_OnInputMethodQuery((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 bool k_parts__mainwindow_focus_next_prev_child(void* self, bool next) {
@@ -2889,8 +2889,8 @@ const char** k_parts__mainwindow_super_container_tags(const void* self) {
     return _ret;
 }
 
-void k_parts__mainwindow_on_container_tags(const void* self, const char** (*callback)(const void*)) {
-    KParts__MainWindow_OnContainerTags((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_container_tags(void* self, const char** (*callback)(const void*)) {
+    KParts__MainWindow_OnContainerTags((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 QWidget* k_parts__mainwindow_create_container(void* self, void* parent, int index, const void* element, void** containerAction) {
@@ -2951,8 +2951,8 @@ const char** k_parts__mainwindow_super_custom_tags(const void* self) {
     return _ret;
 }
 
-void k_parts__mainwindow_on_custom_tags(const void* self, const char** (*callback)(const void*)) {
-    KParts__MainWindow_OnCustomTags((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_custom_tags(void* self, const char** (*callback)(const void*)) {
+    KParts__MainWindow_OnCustomTags((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 QAction* k_parts__mainwindow_create_custom_element(void* self, void* parent, int index, const void* element) {
@@ -2987,8 +2987,8 @@ QAction* k_parts__mainwindow_super_action2(const void* self, const void* element
     return KParts__MainWindow_SuperAction2((KParts__MainWindow*)self, (QDomElement*)element);
 }
 
-void k_parts__mainwindow_on_action2(const void* self, QAction* (*callback)(const void*, const void*)) {
-    KParts__MainWindow_OnAction2((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_action2(void* self, QAction* (*callback)(const void*, const void*)) {
+    KParts__MainWindow_OnAction2((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 KActionCollection* k_parts__mainwindow_action_collection(const void* self) {
@@ -2999,8 +2999,8 @@ KActionCollection* k_parts__mainwindow_super_action_collection(const void* self)
     return KParts__MainWindow_SuperActionCollection((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_on_action_collection(const void* self, KActionCollection* (*callback)(const void*)) {
-    KParts__MainWindow_OnActionCollection((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_action_collection(void* self, KActionCollection* (*callback)(const void*)) {
+    KParts__MainWindow_OnActionCollection((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 const char* k_parts__mainwindow_component_name(const void* self) {
@@ -3017,8 +3017,8 @@ const char* k_parts__mainwindow_super_component_name(const void* self) {
     return _ret;
 }
 
-void k_parts__mainwindow_on_component_name(const void* self, const char* (*callback)(const void*)) {
-    KParts__MainWindow_OnComponentName((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_component_name(void* self, const char* (*callback)(const void*)) {
+    KParts__MainWindow_OnComponentName((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 QDomDocument* k_parts__mainwindow_dom_document(const void* self) {
@@ -3029,8 +3029,8 @@ QDomDocument* k_parts__mainwindow_super_dom_document(const void* self) {
     return KParts__MainWindow_SuperDomDocument((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_on_dom_document(const void* self, QDomDocument* (*callback)(const void*)) {
-    KParts__MainWindow_OnDomDocument((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_dom_document(void* self, QDomDocument* (*callback)(const void*)) {
+    KParts__MainWindow_OnDomDocument((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 const char* k_parts__mainwindow_xml_file(const void* self) {
@@ -3047,8 +3047,8 @@ const char* k_parts__mainwindow_super_xml_file(const void* self) {
     return _ret;
 }
 
-void k_parts__mainwindow_on_xml_file(const void* self, const char* (*callback)(const void*)) {
-    KParts__MainWindow_OnXmlFile((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_xml_file(void* self, const char* (*callback)(const void*)) {
+    KParts__MainWindow_OnXmlFile((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 const char* k_parts__mainwindow_local_x_m_l_file(const void* self) {
@@ -3065,8 +3065,8 @@ const char* k_parts__mainwindow_super_local_x_m_l_file(const void* self) {
     return _ret;
 }
 
-void k_parts__mainwindow_on_local_x_m_l_file(const void* self, const char* (*callback)(const void*)) {
-    KParts__MainWindow_OnLocalXMLFile((const KParts__MainWindow*)self, (intptr_t)callback);
+void k_parts__mainwindow_on_local_x_m_l_file(void* self, const char* (*callback)(const void*)) {
+    KParts__MainWindow_OnLocalXMLFile((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
 void k_parts__mainwindow_set_component_name(void* self, const char* componentName, const char* componentDisplayName) {

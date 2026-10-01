@@ -20,7 +20,7 @@ const QMetaObject* q_candlesticklegendmarker_meta_object(const void* self) {
     return QCandlestickLegendMarker_MetaObject((QCandlestickLegendMarker*)self);
 }
 
-void q_candlesticklegendmarker_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_candlesticklegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCandlestickLegendMarker_OnMetaObject((QCandlestickLegendMarker*)self, (intptr_t)callback);
 }
 

@@ -19,7 +19,7 @@ const QMetaObject* q_videosink_meta_object(const void* self) {
     return QVideoSink_MetaObject((QVideoSink*)self);
 }
 
-void q_videosink_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_videosink_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVideoSink_OnMetaObject((QVideoSink*)self, (intptr_t)callback);
 }
 
@@ -85,16 +85,16 @@ void q_videosink_video_frame_changed(const void* self, const void* frame) {
     QVideoSink_VideoFrameChanged((QVideoSink*)self, (QVideoFrame*)frame);
 }
 
-void q_videosink_on_video_frame_changed(const void* self, void (*callback)(const void*, const void*)) {
-    QVideoSink_Connect_VideoFrameChanged((const QVideoSink*)self, (intptr_t)callback);
+void q_videosink_on_video_frame_changed(void* self, void (*callback)(const void*, const void*)) {
+    QVideoSink_Connect_VideoFrameChanged((QVideoSink*)self, (intptr_t)callback);
 }
 
 void q_videosink_subtitle_text_changed(const void* self, const char* subtitleText) {
     QVideoSink_SubtitleTextChanged((QVideoSink*)self, qstring(subtitleText));
 }
 
-void q_videosink_on_subtitle_text_changed(const void* self, void (*callback)(const void*, const char*)) {
-    QVideoSink_Connect_SubtitleTextChanged((const QVideoSink*)self, (intptr_t)callback);
+void q_videosink_on_subtitle_text_changed(void* self, void (*callback)(const void*, const char*)) {
+    QVideoSink_Connect_SubtitleTextChanged((QVideoSink*)self, (intptr_t)callback);
 }
 
 void q_videosink_video_size_changed(void* self) {

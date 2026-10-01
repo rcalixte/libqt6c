@@ -40,10 +40,10 @@ const QMetaObject* q_quickwindow_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickWindow*
+/// @param self QQuickWindow*
 /// @param callback const QMetaObject* func(const QQuickWindow* self)
 ///
-void q_quickwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_quickwindow_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -125,10 +125,10 @@ QObject* q_quickwindow_focus_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickWindow*
+/// @param self QQuickWindow*
 /// @param callback QObject* func(const QQuickWindow* self)
 ///
-void q_quickwindow_on_focus_object(const void* self, QObject* (*callback)(const void*));
+void q_quickwindow_on_focus_object(void* self, QObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#focusObject)
 ///
@@ -197,10 +197,10 @@ QAccessibleInterface* q_quickwindow_accessible_root(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickWindow*
+/// @param self QQuickWindow*
 /// @param callback QAccessibleInterface* func(const QQuickWindow* self)
 ///
-void q_quickwindow_on_accessible_root(const void* self, QAccessibleInterface* (*callback)(const void*));
+void q_quickwindow_on_accessible_root(void* self, QAccessibleInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwindow.html#accessibleRoot)
 ///
@@ -1058,9 +1058,9 @@ const char* q_quickwindow_tr3(const char* s, const char* c, int n);
 ///
 /// Upcasts to a QSurface object
 ///
-/// @param self QQuickWindow*
+/// @param self const QQuickWindow*
 ///
-QSurface* q_quickwindow_as_q_surface(void* self);
+QSurface* q_quickwindow_as_q_surface(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1068,7 +1068,7 @@ QSurface* q_quickwindow_as_q_surface(void* self);
 ///
 /// @param _qsurface QSurface*
 ///
-QQuickWindow* q_quickwindow_from_q_surface(void* _qsurface);
+QQuickWindow* q_quickwindow_from_q_surface(const void* _qsurface);
 
 /// Inherited from QWindow
 ///
@@ -2829,10 +2829,10 @@ int32_t q_quickwindow_super_surface_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickWindow*
+/// @param self QQuickWindow*
 /// @param callback int32_t func(QQuickWindow* self)
 ///
-void q_quickwindow_on_surface_type(const void* self, int32_t (*callback)(const void*));
+void q_quickwindow_on_surface_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -2860,12 +2860,12 @@ QSurfaceFormat* q_quickwindow_super_format(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickWindow*
+/// @param self QQuickWindow*
 /// @param callback QSurfaceFormat* func(QQuickWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickwindow_on_format(const void* self, QSurfaceFormat* (*callback)(const void*));
+void q_quickwindow_on_format(void* self, QSurfaceFormat* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -2893,12 +2893,12 @@ QSize* q_quickwindow_super_size(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickWindow*
+/// @param self QQuickWindow*
 /// @param callback QSize* func(QQuickWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickwindow_on_size(const void* self, QSize* (*callback)(const void*));
+void q_quickwindow_on_size(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -3266,10 +3266,10 @@ void* q_quickwindow_super_resolve_interface(const void* self, const char* name, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickWindow*
+/// @param self QQuickWindow*
 /// @param callback void* func(QQuickWindow* self, const char* name, int revision)
 ///
-void q_quickwindow_on_resolve_interface(const void* self, void* (*callback)(const void*, const char*, int));
+void q_quickwindow_on_resolve_interface(void* self, void* (*callback)(const void*, const char*, int));
 
 /// Inherited from QObject
 ///
@@ -3297,10 +3297,10 @@ QObject* q_quickwindow_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickWindow*
+/// @param self QQuickWindow*
 /// @param callback QObject* func(QQuickWindow* self)
 ///
-void q_quickwindow_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_quickwindow_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3328,10 +3328,10 @@ int32_t q_quickwindow_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickWindow*
+/// @param self QQuickWindow*
 /// @param callback int32_t func(QQuickWindow* self)
 ///
-void q_quickwindow_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_quickwindow_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3361,10 +3361,10 @@ int32_t q_quickwindow_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickWindow*
+/// @param self QQuickWindow*
 /// @param callback int32_t func(QQuickWindow* self, const char* signal)
 ///
-void q_quickwindow_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_quickwindow_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3394,10 +3394,10 @@ bool q_quickwindow_super_is_signal_connected(const void* self, const void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickWindow*
+/// @param self QQuickWindow*
 /// @param callback bool func(QQuickWindow* self, QMetaMethod* signal)
 ///
-void q_quickwindow_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_quickwindow_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

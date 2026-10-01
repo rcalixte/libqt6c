@@ -47,7 +47,7 @@ const QMetaObject* q_filedialog_meta_object(const void* self) {
     return QFileDialog_MetaObject((QFileDialog*)self);
 }
 
-void q_filedialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_filedialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QFileDialog_OnMetaObject((QFileDialog*)self, (intptr_t)callback);
 }
 
@@ -898,11 +898,11 @@ void q_filedialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_filedialog_as_q_paint_device(void* self) {
+QPaintDevice* q_filedialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QFileDialog* q_filedialog_from_q_paint_device(void* _qpaintdevice) {
+QFileDialog* q_filedialog_from_q_paint_device(const void* _qpaintdevice) {
     return (QFileDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2293,8 +2293,8 @@ QSize* q_filedialog_super_size_hint(const void* self) {
     return QFileDialog_SuperSizeHint((QFileDialog*)self);
 }
 
-void q_filedialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QFileDialog_OnSizeHint((const QFileDialog*)self, (intptr_t)callback);
+void q_filedialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QFileDialog_OnSizeHint((QFileDialog*)self, (intptr_t)callback);
 }
 
 QSize* q_filedialog_minimum_size_hint(const void* self) {
@@ -2305,8 +2305,8 @@ QSize* q_filedialog_super_minimum_size_hint(const void* self) {
     return QFileDialog_SuperMinimumSizeHint((QFileDialog*)self);
 }
 
-void q_filedialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QFileDialog_OnMinimumSizeHint((const QFileDialog*)self, (intptr_t)callback);
+void q_filedialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QFileDialog_OnMinimumSizeHint((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_open(void* self) {
@@ -2425,8 +2425,8 @@ int32_t q_filedialog_super_dev_type(const void* self) {
     return QFileDialog_SuperDevType((QFileDialog*)self);
 }
 
-void q_filedialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QFileDialog_OnDevType((const QFileDialog*)self, (intptr_t)callback);
+void q_filedialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QFileDialog_OnDevType((QFileDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_filedialog_height_for_width(const void* self, int param1) {
@@ -2437,8 +2437,8 @@ int32_t q_filedialog_super_height_for_width(const void* self, int param1) {
     return QFileDialog_SuperHeightForWidth((QFileDialog*)self, param1);
 }
 
-void q_filedialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QFileDialog_OnHeightForWidth((const QFileDialog*)self, (intptr_t)callback);
+void q_filedialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QFileDialog_OnHeightForWidth((QFileDialog*)self, (intptr_t)callback);
 }
 
 bool q_filedialog_has_height_for_width(const void* self) {
@@ -2449,8 +2449,8 @@ bool q_filedialog_super_has_height_for_width(const void* self) {
     return QFileDialog_SuperHasHeightForWidth((QFileDialog*)self);
 }
 
-void q_filedialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QFileDialog_OnHasHeightForWidth((const QFileDialog*)self, (intptr_t)callback);
+void q_filedialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QFileDialog_OnHasHeightForWidth((QFileDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_filedialog_paint_engine(const void* self) {
@@ -2461,8 +2461,8 @@ QPaintEngine* q_filedialog_super_paint_engine(const void* self) {
     return QFileDialog_SuperPaintEngine((QFileDialog*)self);
 }
 
-void q_filedialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QFileDialog_OnPaintEngine((const QFileDialog*)self, (intptr_t)callback);
+void q_filedialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QFileDialog_OnPaintEngine((QFileDialog*)self, (intptr_t)callback);
 }
 
 bool q_filedialog_event(void* self, void* event) {
@@ -2725,8 +2725,8 @@ int32_t q_filedialog_super_metric(const void* self, int32_t param1) {
     return QFileDialog_SuperMetric((QFileDialog*)self, param1);
 }
 
-void q_filedialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QFileDialog_OnMetric((const QFileDialog*)self, (intptr_t)callback);
+void q_filedialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QFileDialog_OnMetric((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_init_painter(const void* self, void* painter) {
@@ -2737,8 +2737,8 @@ void q_filedialog_super_init_painter(const void* self, void* painter) {
     QFileDialog_SuperInitPainter((QFileDialog*)self, (QPainter*)painter);
 }
 
-void q_filedialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QFileDialog_OnInitPainter((const QFileDialog*)self, (intptr_t)callback);
+void q_filedialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QFileDialog_OnInitPainter((QFileDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_filedialog_redirected(const void* self, void* offset) {
@@ -2749,8 +2749,8 @@ QPaintDevice* q_filedialog_super_redirected(const void* self, void* offset) {
     return QFileDialog_SuperRedirected((QFileDialog*)self, (QPoint*)offset);
 }
 
-void q_filedialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QFileDialog_OnRedirected((const QFileDialog*)self, (intptr_t)callback);
+void q_filedialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QFileDialog_OnRedirected((QFileDialog*)self, (intptr_t)callback);
 }
 
 QPainter* q_filedialog_shared_painter(const void* self) {
@@ -2761,8 +2761,8 @@ QPainter* q_filedialog_super_shared_painter(const void* self) {
     return QFileDialog_SuperSharedPainter((QFileDialog*)self);
 }
 
-void q_filedialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QFileDialog_OnSharedPainter((const QFileDialog*)self, (intptr_t)callback);
+void q_filedialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QFileDialog_OnSharedPainter((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_input_method_event(void* self, void* param1) {
@@ -2785,8 +2785,8 @@ QVariant* q_filedialog_super_input_method_query(const void* self, int32_t param1
     return QFileDialog_SuperInputMethodQuery((QFileDialog*)self, param1);
 }
 
-void q_filedialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QFileDialog_OnInputMethodQuery((const QFileDialog*)self, (intptr_t)callback);
+void q_filedialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QFileDialog_OnInputMethodQuery((QFileDialog*)self, (intptr_t)callback);
 }
 
 bool q_filedialog_focus_next_prev_child(void* self, bool next) {

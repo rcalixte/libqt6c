@@ -19,7 +19,7 @@ const QMetaObject* q_validator_meta_object(const void* self) {
     return QValidator_MetaObject((QValidator*)self);
 }
 
-void q_validator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_validator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QValidator_OnMetaObject((QValidator*)self, (intptr_t)callback);
 }
 
@@ -70,7 +70,7 @@ int32_t q_validator_validate(const void* self, const char* param1, int* param2) 
     return QValidator_Validate((QValidator*)self, qstring(param1), param2);
 }
 
-void q_validator_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*)) {
+void q_validator_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*)) {
     QValidator_OnValidate((QValidator*)self, (intptr_t)callback);
 }
 
@@ -78,7 +78,7 @@ void q_validator_fixup(const void* self, const char* param1) {
     QValidator_Fixup((QValidator*)self, qstring(param1));
 }
 
-void q_validator_on_fixup(const void* self, void (*callback)(const void*, const char*)) {
+void q_validator_on_fixup(void* self, void (*callback)(const void*, const char*)) {
     QValidator_OnFixup((QValidator*)self, (intptr_t)callback);
 }
 
@@ -445,7 +445,7 @@ const QMetaObject* q_intvalidator_meta_object(const void* self) {
     return QIntValidator_MetaObject((QIntValidator*)self);
 }
 
-void q_intvalidator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_intvalidator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QIntValidator_OnMetaObject((QIntValidator*)self, (intptr_t)callback);
 }
 
@@ -488,7 +488,7 @@ int32_t q_intvalidator_validate(const void* self, const char* param1, int* param
     return QIntValidator_Validate((QIntValidator*)self, qstring(param1), param2);
 }
 
-void q_intvalidator_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*)) {
+void q_intvalidator_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*)) {
     QIntValidator_OnValidate((QIntValidator*)self, (intptr_t)callback);
 }
 
@@ -500,7 +500,7 @@ void q_intvalidator_fixup(const void* self, const char* input) {
     QIntValidator_Fixup((QIntValidator*)self, qstring(input));
 }
 
-void q_intvalidator_on_fixup(const void* self, void (*callback)(const void*, const char*)) {
+void q_intvalidator_on_fixup(void* self, void (*callback)(const void*, const char*)) {
     QIntValidator_OnFixup((QIntValidator*)self, (intptr_t)callback);
 }
 
@@ -911,7 +911,7 @@ const QMetaObject* q_doublevalidator_meta_object(const void* self) {
     return QDoubleValidator_MetaObject((QDoubleValidator*)self);
 }
 
-void q_doublevalidator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_doublevalidator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDoubleValidator_OnMetaObject((QDoubleValidator*)self, (intptr_t)callback);
 }
 
@@ -954,7 +954,7 @@ int32_t q_doublevalidator_validate(const void* self, const char* param1, int* pa
     return QDoubleValidator_Validate((QDoubleValidator*)self, qstring(param1), param2);
 }
 
-void q_doublevalidator_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*)) {
+void q_doublevalidator_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*)) {
     QDoubleValidator_OnValidate((QDoubleValidator*)self, (intptr_t)callback);
 }
 
@@ -966,7 +966,7 @@ void q_doublevalidator_fixup(const void* self, const char* input) {
     QDoubleValidator_Fixup((QDoubleValidator*)self, qstring(input));
 }
 
-void q_doublevalidator_on_fixup(const void* self, void (*callback)(const void*, const char*)) {
+void q_doublevalidator_on_fixup(void* self, void (*callback)(const void*, const char*)) {
     QDoubleValidator_OnFixup((QDoubleValidator*)self, (intptr_t)callback);
 }
 
@@ -1413,7 +1413,7 @@ const QMetaObject* q_regularexpressionvalidator_meta_object(const void* self) {
     return QRegularExpressionValidator_MetaObject((QRegularExpressionValidator*)self);
 }
 
-void q_regularexpressionvalidator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_regularexpressionvalidator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QRegularExpressionValidator_OnMetaObject((QRegularExpressionValidator*)self, (intptr_t)callback);
 }
 
@@ -1456,7 +1456,7 @@ int32_t q_regularexpressionvalidator_validate(const void* self, const char* inpu
     return QRegularExpressionValidator_Validate((QRegularExpressionValidator*)self, qstring(input), pos);
 }
 
-void q_regularexpressionvalidator_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*)) {
+void q_regularexpressionvalidator_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*)) {
     QRegularExpressionValidator_OnValidate((QRegularExpressionValidator*)self, (intptr_t)callback);
 }
 
@@ -1727,8 +1727,8 @@ void q_regularexpressionvalidator_super_fixup(const void* self, const char* para
     QRegularExpressionValidator_SuperFixup((QRegularExpressionValidator*)self, qstring(param1));
 }
 
-void q_regularexpressionvalidator_on_fixup(const void* self, void (*callback)(const void*, const char*)) {
-    QRegularExpressionValidator_OnFixup((const QRegularExpressionValidator*)self, (intptr_t)callback);
+void q_regularexpressionvalidator_on_fixup(void* self, void (*callback)(const void*, const char*)) {
+    QRegularExpressionValidator_OnFixup((QRegularExpressionValidator*)self, (intptr_t)callback);
 }
 
 bool q_regularexpressionvalidator_event(void* self, void* event) {

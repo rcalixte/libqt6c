@@ -26,10 +26,10 @@ const QMetaObject* k_parts__fileinfoextension_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KParts__FileInfoExtension*
+/// @param self KParts__FileInfoExtension*
 /// @param callback const QMetaObject* func(const KParts__FileInfoExtension* self)
 ///
-void k_parts__fileinfoextension_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_parts__fileinfoextension_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -105,10 +105,10 @@ bool k_parts__fileinfoextension_has_selection(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KParts__FileInfoExtension*
+/// @param self KParts__FileInfoExtension*
 /// @param callback bool func(const KParts__FileInfoExtension* self)
 ///
-void k_parts__fileinfoextension_on_has_selection(const void* self, bool (*callback)(const void*));
+void k_parts__fileinfoextension_on_has_selection(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-fileinfoextension.html#hasSelection)
 ///
@@ -130,10 +130,10 @@ int32_t k_parts__fileinfoextension_supported_query_modes(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KParts__FileInfoExtension*
+/// @param self KParts__FileInfoExtension*
 /// @param callback int32_t func(const KParts__FileInfoExtension* self)
 ///
-void k_parts__fileinfoextension_on_supported_query_modes(const void* self, int32_t (*callback)(const void*));
+void k_parts__fileinfoextension_on_supported_query_modes(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-fileinfoextension.html#supportedQueryModes)
 ///
@@ -158,12 +158,12 @@ KFileItemList* k_parts__fileinfoextension_query_for(const void* self, int32_t mo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KParts__FileInfoExtension*
+/// @param self KParts__FileInfoExtension*
 /// @param callback KFileItemList* func(const KParts__FileInfoExtension* self, enum KParts__FileInfoExtension__QueryMode mode)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_parts__fileinfoextension_on_query_for(const void* self, KFileItemList* (*callback)(const void*, int32_t));
+void k_parts__fileinfoextension_on_query_for(void* self, KFileItemList* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -890,10 +890,10 @@ QObject* k_parts__fileinfoextension_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__FileInfoExtension*
+/// @param self KParts__FileInfoExtension*
 /// @param callback QObject* func(KParts__FileInfoExtension* self)
 ///
-void k_parts__fileinfoextension_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_parts__fileinfoextension_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -921,10 +921,10 @@ int32_t k_parts__fileinfoextension_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__FileInfoExtension*
+/// @param self KParts__FileInfoExtension*
 /// @param callback int32_t func(KParts__FileInfoExtension* self)
 ///
-void k_parts__fileinfoextension_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_parts__fileinfoextension_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -954,10 +954,10 @@ int32_t k_parts__fileinfoextension_super_receivers(const void* self, const char*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__FileInfoExtension*
+/// @param self KParts__FileInfoExtension*
 /// @param callback int32_t func(KParts__FileInfoExtension* self, const char* signal)
 ///
-void k_parts__fileinfoextension_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_parts__fileinfoextension_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -987,10 +987,10 @@ bool k_parts__fileinfoextension_super_is_signal_connected(const void* self, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__FileInfoExtension*
+/// @param self KParts__FileInfoExtension*
 /// @param callback bool func(KParts__FileInfoExtension* self, QMetaMethod* signal)
 ///
-void k_parts__fileinfoextension_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_parts__fileinfoextension_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -15,7 +15,7 @@ const QMetaObject* k_filemetadata__extractorplugin_meta_object(const void* self)
     return KFileMetaData__ExtractorPlugin_MetaObject((KFileMetaData__ExtractorPlugin*)self);
 }
 
-void k_filemetadata__extractorplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_filemetadata__extractorplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFileMetaData__ExtractorPlugin_OnMetaObject((KFileMetaData__ExtractorPlugin*)self, (intptr_t)callback);
 }
 
@@ -71,7 +71,7 @@ const char** k_filemetadata__extractorplugin_mimetypes(const void* self) {
     return _ret;
 }
 
-void k_filemetadata__extractorplugin_on_mimetypes(const void* self, const char** (*callback)(const void*)) {
+void k_filemetadata__extractorplugin_on_mimetypes(void* self, const char** (*callback)(const void*)) {
     KFileMetaData__ExtractorPlugin_OnMimetypes((KFileMetaData__ExtractorPlugin*)self, (intptr_t)callback);
 }
 

@@ -19,7 +19,7 @@ const QMetaObject* q_mediadevices_meta_object(const void* self) {
     return QMediaDevices_MetaObject((QMediaDevices*)self);
 }
 
-void q_mediadevices_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_mediadevices_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QMediaDevices_OnMetaObject((QMediaDevices*)self, (intptr_t)callback);
 }
 

@@ -32,10 +32,10 @@ const QMetaObject* q_translator_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTranslator*
+/// @param self QTranslator*
 /// @param callback const QMetaObject* func(const QTranslator* self)
 ///
-void q_translator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_translator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -111,10 +111,10 @@ const char* q_translator_translate(const void* self, const char* context, const 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTranslator*
+/// @param self QTranslator*
 /// @param callback const char* func(const QTranslator* self, const char* context, const char* sourceText, const char* disambiguation, int n)
 ///
-void q_translator_on_translate(const void* self, const char* (*callback)(const void*, const char*, const char*, const char*, int));
+void q_translator_on_translate(void* self, const char* (*callback)(const void*, const char*, const char*, const char*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#translate)
 ///
@@ -138,10 +138,10 @@ bool q_translator_is_empty(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTranslator*
+/// @param self QTranslator*
 /// @param callback bool func(const QTranslator* self)
 ///
-void q_translator_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_translator_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#isEmpty)
 ///
@@ -981,10 +981,10 @@ QObject* q_translator_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTranslator*
+/// @param self QTranslator*
 /// @param callback QObject* func(QTranslator* self)
 ///
-void q_translator_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_translator_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1012,10 +1012,10 @@ int32_t q_translator_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTranslator*
+/// @param self QTranslator*
 /// @param callback int32_t func(QTranslator* self)
 ///
-void q_translator_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_translator_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1045,10 +1045,10 @@ int32_t q_translator_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTranslator*
+/// @param self QTranslator*
 /// @param callback int32_t func(QTranslator* self, const char* signal)
 ///
-void q_translator_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_translator_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1078,10 +1078,10 @@ bool q_translator_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTranslator*
+/// @param self QTranslator*
 /// @param callback bool func(QTranslator* self, QMetaMethod* signal)
 ///
-void q_translator_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_translator_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

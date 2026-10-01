@@ -19,7 +19,7 @@ const QMetaObject* q_buffer_meta_object(const void* self) {
     return QBuffer_MetaObject((QBuffer*)self);
 }
 
-void q_buffer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_buffer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QBuffer_OnMetaObject((QBuffer*)self, (intptr_t)callback);
 }
 
@@ -115,7 +115,7 @@ int64_t q_buffer_size(const void* self) {
     return QBuffer_Size((QBuffer*)self);
 }
 
-void q_buffer_on_size(const void* self, int64_t (*callback)(const void*)) {
+void q_buffer_on_size(void* self, int64_t (*callback)(const void*)) {
     QBuffer_OnSize((QBuffer*)self, (intptr_t)callback);
 }
 
@@ -127,7 +127,7 @@ int64_t q_buffer_pos(const void* self) {
     return QBuffer_Pos((QBuffer*)self);
 }
 
-void q_buffer_on_pos(const void* self, int64_t (*callback)(const void*)) {
+void q_buffer_on_pos(void* self, int64_t (*callback)(const void*)) {
     QBuffer_OnPos((QBuffer*)self, (intptr_t)callback);
 }
 
@@ -151,7 +151,7 @@ bool q_buffer_at_end(const void* self) {
     return QBuffer_AtEnd((QBuffer*)self);
 }
 
-void q_buffer_on_at_end(const void* self, bool (*callback)(const void*)) {
+void q_buffer_on_at_end(void* self, bool (*callback)(const void*)) {
     QBuffer_OnAtEnd((QBuffer*)self, (intptr_t)callback);
 }
 
@@ -163,7 +163,7 @@ bool q_buffer_can_read_line(const void* self) {
     return QBuffer_CanReadLine((QBuffer*)self);
 }
 
-void q_buffer_on_can_read_line(const void* self, bool (*callback)(const void*)) {
+void q_buffer_on_can_read_line(void* self, bool (*callback)(const void*)) {
     QBuffer_OnCanReadLine((QBuffer*)self, (intptr_t)callback);
 }
 
@@ -233,7 +233,7 @@ const char* q_buffer_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QIODeviceBase* q_buffer_as_q_i_o_device_base(void* self) {
+QIODeviceBase* q_buffer_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
@@ -648,8 +648,8 @@ bool q_buffer_super_is_sequential(const void* self) {
     return QBuffer_SuperIsSequential((QBuffer*)self);
 }
 
-void q_buffer_on_is_sequential(const void* self, bool (*callback)(const void*)) {
-    QBuffer_OnIsSequential((const QBuffer*)self, (intptr_t)callback);
+void q_buffer_on_is_sequential(void* self, bool (*callback)(const void*)) {
+    QBuffer_OnIsSequential((QBuffer*)self, (intptr_t)callback);
 }
 
 bool q_buffer_reset(void* self) {
@@ -672,8 +672,8 @@ int64_t q_buffer_super_bytes_available(const void* self) {
     return QBuffer_SuperBytesAvailable((QBuffer*)self);
 }
 
-void q_buffer_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
-    QBuffer_OnBytesAvailable((const QBuffer*)self, (intptr_t)callback);
+void q_buffer_on_bytes_available(void* self, int64_t (*callback)(const void*)) {
+    QBuffer_OnBytesAvailable((QBuffer*)self, (intptr_t)callback);
 }
 
 int64_t q_buffer_bytes_to_write(const void* self) {
@@ -684,8 +684,8 @@ int64_t q_buffer_super_bytes_to_write(const void* self) {
     return QBuffer_SuperBytesToWrite((QBuffer*)self);
 }
 
-void q_buffer_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
-    QBuffer_OnBytesToWrite((const QBuffer*)self, (intptr_t)callback);
+void q_buffer_on_bytes_to_write(void* self, int64_t (*callback)(const void*)) {
+    QBuffer_OnBytesToWrite((QBuffer*)self, (intptr_t)callback);
 }
 
 bool q_buffer_wait_for_ready_read(void* self, int msecs) {

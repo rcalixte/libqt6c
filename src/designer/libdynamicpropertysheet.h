@@ -26,10 +26,10 @@ bool q_designerdynamicpropertysheetextension_dynamic_properties_allowed(const vo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerDynamicPropertySheetExtension*
+/// @param self QDesignerDynamicPropertySheetExtension*
 /// @param callback bool func(const QDesignerDynamicPropertySheetExtension* self)
 ///
-void q_designerdynamicpropertysheetextension_on_dynamic_properties_allowed(const void* self, bool (*callback)(const void*));
+void q_designerdynamicpropertysheetextension_on_dynamic_properties_allowed(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#addDynamicProperty)
 ///
@@ -81,10 +81,10 @@ bool q_designerdynamicpropertysheetextension_is_dynamic_property(const void* sel
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerDynamicPropertySheetExtension*
+/// @param self QDesignerDynamicPropertySheetExtension*
 /// @param callback bool func(const QDesignerDynamicPropertySheetExtension* self, int index)
 ///
-void q_designerdynamicpropertysheetextension_on_is_dynamic_property(const void* self, bool (*callback)(const void*, int));
+void q_designerdynamicpropertysheetextension_on_is_dynamic_property(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#canAddDynamicProperty)
 ///
@@ -99,10 +99,10 @@ bool q_designerdynamicpropertysheetextension_can_add_dynamic_property(const void
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerDynamicPropertySheetExtension*
+/// @param self QDesignerDynamicPropertySheetExtension*
 /// @param callback bool func(const QDesignerDynamicPropertySheetExtension* self, const char* propertyName)
 ///
-void q_designerdynamicpropertysheetextension_on_can_add_dynamic_property(const void* self, bool (*callback)(const void*, const char*));
+void q_designerdynamicpropertysheetextension_on_can_add_dynamic_property(void* self, bool (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdynamicpropertysheetextension.html#dtor.QDesignerDynamicPropertySheetExtension)
 ///

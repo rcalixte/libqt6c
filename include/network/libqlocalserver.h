@@ -32,10 +32,10 @@ const QMetaObject* q_localserver_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLocalServer*
+/// @param self QLocalServer*
 /// @param callback const QMetaObject* func(const QLocalServer* self)
 ///
-void q_localserver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_localserver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -132,10 +132,10 @@ bool q_localserver_has_pending_connections(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLocalServer*
+/// @param self QLocalServer*
 /// @param callback bool func(const QLocalServer* self)
 ///
-void q_localserver_on_has_pending_connections(const void* self, bool (*callback)(const void*));
+void q_localserver_on_has_pending_connections(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalserver.html#hasPendingConnections)
 ///
@@ -1043,10 +1043,10 @@ QObject* q_localserver_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLocalServer*
+/// @param self QLocalServer*
 /// @param callback QObject* func(QLocalServer* self)
 ///
-void q_localserver_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_localserver_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1074,10 +1074,10 @@ int32_t q_localserver_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLocalServer*
+/// @param self QLocalServer*
 /// @param callback int32_t func(QLocalServer* self)
 ///
-void q_localserver_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_localserver_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1107,10 +1107,10 @@ int32_t q_localserver_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLocalServer*
+/// @param self QLocalServer*
 /// @param callback int32_t func(QLocalServer* self, const char* signal)
 ///
-void q_localserver_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_localserver_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1140,10 +1140,10 @@ bool q_localserver_super_is_signal_connected(const void* self, const void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QLocalServer*
+/// @param self QLocalServer*
 /// @param callback bool func(QLocalServer* self, QMetaMethod* signal)
 ///
-void q_localserver_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_localserver_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

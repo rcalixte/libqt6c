@@ -28,7 +28,7 @@ const QMetaObject* q_videoframeinput_meta_object(const void* self) {
     return QVideoFrameInput_MetaObject((QVideoFrameInput*)self);
 }
 
-void q_videoframeinput_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_videoframeinput_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVideoFrameInput_OnMetaObject((QVideoFrameInput*)self, (intptr_t)callback);
 }
 

@@ -113,7 +113,7 @@ QTableWidgetItem* q_tablewidgetitem_clone(const void* self) {
     return QTableWidgetItem_Clone((QTableWidgetItem*)self);
 }
 
-void q_tablewidgetitem_on_clone(const void* self, QTableWidgetItem* (*callback)(const void*)) {
+void q_tablewidgetitem_on_clone(void* self, QTableWidgetItem* (*callback)(const void*)) {
     QTableWidgetItem_OnClone((QTableWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -261,7 +261,7 @@ QVariant* q_tablewidgetitem_data(const void* self, int role) {
     return QTableWidgetItem_Data((QTableWidgetItem*)self, role);
 }
 
-void q_tablewidgetitem_on_data(const void* self, QVariant* (*callback)(const void*, int)) {
+void q_tablewidgetitem_on_data(void* self, QVariant* (*callback)(const void*, int)) {
     QTableWidgetItem_OnData((QTableWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -285,7 +285,7 @@ bool q_tablewidgetitem_operator_lesser(const void* self, const void* other) {
     return QTableWidgetItem_OperatorLesser((QTableWidgetItem*)self, (QTableWidgetItem*)other);
 }
 
-void q_tablewidgetitem_on_operator_lesser(const void* self, bool (*callback)(const void*, const void*)) {
+void q_tablewidgetitem_on_operator_lesser(void* self, bool (*callback)(const void*, const void*)) {
     QTableWidgetItem_OnOperatorLesser((QTableWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -309,7 +309,7 @@ void q_tablewidgetitem_write(const void* self, void* out) {
     QTableWidgetItem_Write((QTableWidgetItem*)self, (QDataStream*)out);
 }
 
-void q_tablewidgetitem_on_write(const void* self, void (*callback)(const void*, void*)) {
+void q_tablewidgetitem_on_write(void* self, void (*callback)(const void*, void*)) {
     QTableWidgetItem_OnWrite((QTableWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -349,7 +349,7 @@ const QMetaObject* q_tablewidget_meta_object(const void* self) {
     return QTableWidget_MetaObject((QTableWidget*)self);
 }
 
-void q_tablewidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_tablewidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTableWidget_OnMetaObject((QTableWidget*)self, (intptr_t)callback);
 }
 
@@ -781,7 +781,7 @@ const char** q_tablewidget_mime_types(const void* self) {
     return _ret;
 }
 
-void q_tablewidget_on_mime_types(const void* self, const char** (*callback)(const void*)) {
+void q_tablewidget_on_mime_types(void* self, const char** (*callback)(const void*)) {
     QTableWidget_OnMimeTypes((QTableWidget*)self, (intptr_t)callback);
 }
 
@@ -806,7 +806,7 @@ QMimeData* q_tablewidget_mime_data(const void* self, libqt_list /* of QTableWidg
     return QTableWidget_MimeData((QTableWidget*)self, items);
 }
 
-void q_tablewidget_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QTableWidgetItem* */)) {
+void q_tablewidget_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QTableWidgetItem* */)) {
     QTableWidget_OnMimeData((QTableWidget*)self, (intptr_t)callback);
 }
 
@@ -830,7 +830,7 @@ int32_t q_tablewidget_supported_drop_actions(const void* self) {
     return QTableWidget_SupportedDropActions((QTableWidget*)self);
 }
 
-void q_tablewidget_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
+void q_tablewidget_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
     QTableWidget_OnSupportedDropActions((QTableWidget*)self, (intptr_t)callback);
 }
 
@@ -1433,11 +1433,11 @@ void q_tablewidget_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_tablewidget_as_q_paint_device(void* self) {
+QPaintDevice* q_tablewidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QTableWidget* q_tablewidget_from_q_paint_device(void* _qpaintdevice) {
+QTableWidget* q_tablewidget_from_q_paint_device(const void* _qpaintdevice) {
     return (QTableWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2860,8 +2860,8 @@ QRect* q_tablewidget_super_visual_rect(const void* self, const void* index) {
     return QTableWidget_SuperVisualRect((QTableWidget*)self, (QModelIndex*)index);
 }
 
-void q_tablewidget_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*)) {
-    QTableWidget_OnVisualRect((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*)) {
+    QTableWidget_OnVisualRect((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_scroll_to(void* self, const void* index, int32_t hint) {
@@ -2884,8 +2884,8 @@ QModelIndex* q_tablewidget_super_index_at(const void* self, const void* p) {
     return QTableWidget_SuperIndexAt((QTableWidget*)self, (QPoint*)p);
 }
 
-void q_tablewidget_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    QTableWidget_OnIndexAt((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_index_at(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    QTableWidget_OnIndexAt((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_scroll_contents_by(void* self, int dx, int dy) {
@@ -2908,8 +2908,8 @@ void q_tablewidget_super_init_view_item_option(const void* self, void* option) {
     QTableWidget_SuperInitViewItemOption((QTableWidget*)self, (QStyleOptionViewItem*)option);
 }
 
-void q_tablewidget_on_init_view_item_option(const void* self, void (*callback)(const void*, void*)) {
-    QTableWidget_OnInitViewItemOption((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_init_view_item_option(void* self, void (*callback)(const void*, void*)) {
+    QTableWidget_OnInitViewItemOption((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_paint_event(void* self, void* e) {
@@ -2944,8 +2944,8 @@ int32_t q_tablewidget_super_horizontal_offset(const void* self) {
     return QTableWidget_SuperHorizontalOffset((QTableWidget*)self);
 }
 
-void q_tablewidget_on_horizontal_offset(const void* self, int32_t (*callback)(const void*)) {
-    QTableWidget_OnHorizontalOffset((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_horizontal_offset(void* self, int32_t (*callback)(const void*)) {
+    QTableWidget_OnHorizontalOffset((QTableWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_tablewidget_vertical_offset(const void* self) {
@@ -2956,8 +2956,8 @@ int32_t q_tablewidget_super_vertical_offset(const void* self) {
     return QTableWidget_SuperVerticalOffset((QTableWidget*)self);
 }
 
-void q_tablewidget_on_vertical_offset(const void* self, int32_t (*callback)(const void*)) {
-    QTableWidget_OnVerticalOffset((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_vertical_offset(void* self, int32_t (*callback)(const void*)) {
+    QTableWidget_OnVerticalOffset((QTableWidget*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_tablewidget_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
@@ -2992,8 +2992,8 @@ QRegion* q_tablewidget_super_visual_region_for_selection(const void* self, const
     return QTableWidget_SuperVisualRegionForSelection((QTableWidget*)self, (QItemSelection*)selection);
 }
 
-void q_tablewidget_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*)) {
-    QTableWidget_OnVisualRegionForSelection((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_visual_region_for_selection(void* self, QRegion* (*callback)(const void*, const void*)) {
+    QTableWidget_OnVisualRegionForSelection((QTableWidget*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_tablewidget_selected_indexes(const void* self) {
@@ -3006,8 +3006,8 @@ libqt_list /* of QModelIndex* */ q_tablewidget_super_selected_indexes(const void
     return _arr;
 }
 
-void q_tablewidget_on_selected_indexes(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
-    QTableWidget_OnSelectedIndexes((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
+    QTableWidget_OnSelectedIndexes((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_update_geometries(void* self) {
@@ -3030,8 +3030,8 @@ QSize* q_tablewidget_super_viewport_size_hint(const void* self) {
     return QTableWidget_SuperViewportSizeHint((QTableWidget*)self);
 }
 
-void q_tablewidget_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTableWidget_OnViewportSizeHint((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTableWidget_OnViewportSizeHint((QTableWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_tablewidget_size_hint_for_row(const void* self, int row) {
@@ -3042,8 +3042,8 @@ int32_t q_tablewidget_super_size_hint_for_row(const void* self, int row) {
     return QTableWidget_SuperSizeHintForRow((QTableWidget*)self, row);
 }
 
-void q_tablewidget_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int)) {
-    QTableWidget_OnSizeHintForRow((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_size_hint_for_row(void* self, int32_t (*callback)(const void*, int)) {
+    QTableWidget_OnSizeHintForRow((QTableWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_tablewidget_size_hint_for_column(const void* self, int column) {
@@ -3054,8 +3054,8 @@ int32_t q_tablewidget_super_size_hint_for_column(const void* self, int column) {
     return QTableWidget_SuperSizeHintForColumn((QTableWidget*)self, column);
 }
 
-void q_tablewidget_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int)) {
-    QTableWidget_OnSizeHintForColumn((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_size_hint_for_column(void* self, int32_t (*callback)(const void*, int)) {
+    QTableWidget_OnSizeHintForColumn((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_vertical_scrollbar_action(void* self, int action) {
@@ -3090,8 +3090,8 @@ bool q_tablewidget_super_is_index_hidden(const void* self, const void* index) {
     return QTableWidget_SuperIsIndexHidden((QTableWidget*)self, (QModelIndex*)index);
 }
 
-void q_tablewidget_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*)) {
-    QTableWidget_OnIsIndexHidden((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_is_index_hidden(void* self, bool (*callback)(const void*, const void*)) {
+    QTableWidget_OnIsIndexHidden((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_selection_changed(void* self, const void* selected, const void* deselected) {
@@ -3138,8 +3138,8 @@ QAbstractItemDelegate* q_tablewidget_super_item_delegate_for_index(const void* s
     return QTableWidget_SuperItemDelegateForIndex((QTableWidget*)self, (QModelIndex*)index);
 }
 
-void q_tablewidget_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
-    QTableWidget_OnItemDelegateForIndex((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
+    QTableWidget_OnItemDelegateForIndex((QTableWidget*)self, (intptr_t)callback);
 }
 
 QVariant* q_tablewidget_input_method_query(const void* self, int32_t query) {
@@ -3150,8 +3150,8 @@ QVariant* q_tablewidget_super_input_method_query(const void* self, int32_t query
     return QTableWidget_SuperInputMethodQuery((QTableWidget*)self, query);
 }
 
-void q_tablewidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QTableWidget_OnInputMethodQuery((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QTableWidget_OnInputMethodQuery((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_reset(void* self) {
@@ -3318,8 +3318,8 @@ int32_t q_tablewidget_super_selection_command(const void* self, const void* inde
     return QTableWidget_SuperSelectionCommand((QTableWidget*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_tablewidget_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*)) {
-    QTableWidget_OnSelectionCommand((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_selection_command(void* self, int32_t (*callback)(const void*, const void*, const void*)) {
+    QTableWidget_OnSelectionCommand((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_start_drag(void* self, int32_t supportedActions) {
@@ -3522,8 +3522,8 @@ QSize* q_tablewidget_super_minimum_size_hint(const void* self) {
     return QTableWidget_SuperMinimumSizeHint((QTableWidget*)self);
 }
 
-void q_tablewidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTableWidget_OnMinimumSizeHint((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTableWidget_OnMinimumSizeHint((QTableWidget*)self, (intptr_t)callback);
 }
 
 QSize* q_tablewidget_size_hint(const void* self) {
@@ -3534,8 +3534,8 @@ QSize* q_tablewidget_super_size_hint(const void* self) {
     return QTableWidget_SuperSizeHint((QTableWidget*)self);
 }
 
-void q_tablewidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTableWidget_OnSizeHint((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTableWidget_OnSizeHint((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_setup_viewport(void* self, void* viewport) {
@@ -3594,8 +3594,8 @@ void q_tablewidget_super_init_style_option(const void* self, void* option) {
     QTableWidget_SuperInitStyleOption((QTableWidget*)self, (QStyleOptionFrame*)option);
 }
 
-void q_tablewidget_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QTableWidget_OnInitStyleOption((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QTableWidget_OnInitStyleOption((QTableWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_tablewidget_dev_type(const void* self) {
@@ -3606,8 +3606,8 @@ int32_t q_tablewidget_super_dev_type(const void* self) {
     return QTableWidget_SuperDevType((QTableWidget*)self);
 }
 
-void q_tablewidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QTableWidget_OnDevType((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QTableWidget_OnDevType((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_set_visible(void* self, bool visible) {
@@ -3630,8 +3630,8 @@ int32_t q_tablewidget_super_height_for_width(const void* self, int param1) {
     return QTableWidget_SuperHeightForWidth((QTableWidget*)self, param1);
 }
 
-void q_tablewidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QTableWidget_OnHeightForWidth((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QTableWidget_OnHeightForWidth((QTableWidget*)self, (intptr_t)callback);
 }
 
 bool q_tablewidget_has_height_for_width(const void* self) {
@@ -3642,8 +3642,8 @@ bool q_tablewidget_super_has_height_for_width(const void* self) {
     return QTableWidget_SuperHasHeightForWidth((QTableWidget*)self);
 }
 
-void q_tablewidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QTableWidget_OnHasHeightForWidth((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QTableWidget_OnHasHeightForWidth((QTableWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_tablewidget_paint_engine(const void* self) {
@@ -3654,8 +3654,8 @@ QPaintEngine* q_tablewidget_super_paint_engine(const void* self) {
     return QTableWidget_SuperPaintEngine((QTableWidget*)self);
 }
 
-void q_tablewidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QTableWidget_OnPaintEngine((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QTableWidget_OnPaintEngine((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_key_release_event(void* self, void* event) {
@@ -3786,8 +3786,8 @@ int32_t q_tablewidget_super_metric(const void* self, int32_t param1) {
     return QTableWidget_SuperMetric((QTableWidget*)self, param1);
 }
 
-void q_tablewidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QTableWidget_OnMetric((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QTableWidget_OnMetric((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_init_painter(const void* self, void* painter) {
@@ -3798,8 +3798,8 @@ void q_tablewidget_super_init_painter(const void* self, void* painter) {
     QTableWidget_SuperInitPainter((QTableWidget*)self, (QPainter*)painter);
 }
 
-void q_tablewidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QTableWidget_OnInitPainter((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QTableWidget_OnInitPainter((QTableWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_tablewidget_redirected(const void* self, void* offset) {
@@ -3810,8 +3810,8 @@ QPaintDevice* q_tablewidget_super_redirected(const void* self, void* offset) {
     return QTableWidget_SuperRedirected((QTableWidget*)self, (QPoint*)offset);
 }
 
-void q_tablewidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QTableWidget_OnRedirected((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QTableWidget_OnRedirected((QTableWidget*)self, (intptr_t)callback);
 }
 
 QPainter* q_tablewidget_shared_painter(const void* self) {
@@ -3822,8 +3822,8 @@ QPainter* q_tablewidget_super_shared_painter(const void* self) {
     return QTableWidget_SuperSharedPainter((QTableWidget*)self);
 }
 
-void q_tablewidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QTableWidget_OnSharedPainter((const QTableWidget*)self, (intptr_t)callback);
+void q_tablewidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QTableWidget_OnSharedPainter((QTableWidget*)self, (intptr_t)callback);
 }
 
 void q_tablewidget_child_event(void* self, void* event) {

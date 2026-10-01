@@ -58,7 +58,7 @@ const QMetaObject* q_messagebox_meta_object(const void* self) {
     return QMessageBox_MetaObject((QMessageBox*)self);
 }
 
-void q_messagebox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_messagebox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QMessageBox_OnMetaObject((QMessageBox*)self, (intptr_t)callback);
 }
 
@@ -620,11 +620,11 @@ void q_messagebox_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_messagebox_as_q_paint_device(void* self) {
+QPaintDevice* q_messagebox_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QMessageBox* q_messagebox_from_q_paint_device(void* _qpaintdevice) {
+QMessageBox* q_messagebox_from_q_paint_device(const void* _qpaintdevice) {
     return (QMessageBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2019,8 +2019,8 @@ QSize* q_messagebox_super_size_hint(const void* self) {
     return QMessageBox_SuperSizeHint((QMessageBox*)self);
 }
 
-void q_messagebox_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QMessageBox_OnSizeHint((const QMessageBox*)self, (intptr_t)callback);
+void q_messagebox_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QMessageBox_OnSizeHint((QMessageBox*)self, (intptr_t)callback);
 }
 
 QSize* q_messagebox_minimum_size_hint(const void* self) {
@@ -2031,8 +2031,8 @@ QSize* q_messagebox_super_minimum_size_hint(const void* self) {
     return QMessageBox_SuperMinimumSizeHint((QMessageBox*)self);
 }
 
-void q_messagebox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QMessageBox_OnMinimumSizeHint((const QMessageBox*)self, (intptr_t)callback);
+void q_messagebox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QMessageBox_OnMinimumSizeHint((QMessageBox*)self, (intptr_t)callback);
 }
 
 void q_messagebox_open(void* self) {
@@ -2127,8 +2127,8 @@ int32_t q_messagebox_super_dev_type(const void* self) {
     return QMessageBox_SuperDevType((QMessageBox*)self);
 }
 
-void q_messagebox_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QMessageBox_OnDevType((const QMessageBox*)self, (intptr_t)callback);
+void q_messagebox_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QMessageBox_OnDevType((QMessageBox*)self, (intptr_t)callback);
 }
 
 int32_t q_messagebox_height_for_width(const void* self, int param1) {
@@ -2139,8 +2139,8 @@ int32_t q_messagebox_super_height_for_width(const void* self, int param1) {
     return QMessageBox_SuperHeightForWidth((QMessageBox*)self, param1);
 }
 
-void q_messagebox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QMessageBox_OnHeightForWidth((const QMessageBox*)self, (intptr_t)callback);
+void q_messagebox_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QMessageBox_OnHeightForWidth((QMessageBox*)self, (intptr_t)callback);
 }
 
 bool q_messagebox_has_height_for_width(const void* self) {
@@ -2151,8 +2151,8 @@ bool q_messagebox_super_has_height_for_width(const void* self) {
     return QMessageBox_SuperHasHeightForWidth((QMessageBox*)self);
 }
 
-void q_messagebox_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QMessageBox_OnHasHeightForWidth((const QMessageBox*)self, (intptr_t)callback);
+void q_messagebox_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QMessageBox_OnHasHeightForWidth((QMessageBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_messagebox_paint_engine(const void* self) {
@@ -2163,8 +2163,8 @@ QPaintEngine* q_messagebox_super_paint_engine(const void* self) {
     return QMessageBox_SuperPaintEngine((QMessageBox*)self);
 }
 
-void q_messagebox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QMessageBox_OnPaintEngine((const QMessageBox*)self, (intptr_t)callback);
+void q_messagebox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QMessageBox_OnPaintEngine((QMessageBox*)self, (intptr_t)callback);
 }
 
 void q_messagebox_mouse_press_event(void* self, void* event) {
@@ -2415,8 +2415,8 @@ int32_t q_messagebox_super_metric(const void* self, int32_t param1) {
     return QMessageBox_SuperMetric((QMessageBox*)self, param1);
 }
 
-void q_messagebox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QMessageBox_OnMetric((const QMessageBox*)self, (intptr_t)callback);
+void q_messagebox_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QMessageBox_OnMetric((QMessageBox*)self, (intptr_t)callback);
 }
 
 void q_messagebox_init_painter(const void* self, void* painter) {
@@ -2427,8 +2427,8 @@ void q_messagebox_super_init_painter(const void* self, void* painter) {
     QMessageBox_SuperInitPainter((QMessageBox*)self, (QPainter*)painter);
 }
 
-void q_messagebox_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QMessageBox_OnInitPainter((const QMessageBox*)self, (intptr_t)callback);
+void q_messagebox_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QMessageBox_OnInitPainter((QMessageBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_messagebox_redirected(const void* self, void* offset) {
@@ -2439,8 +2439,8 @@ QPaintDevice* q_messagebox_super_redirected(const void* self, void* offset) {
     return QMessageBox_SuperRedirected((QMessageBox*)self, (QPoint*)offset);
 }
 
-void q_messagebox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QMessageBox_OnRedirected((const QMessageBox*)self, (intptr_t)callback);
+void q_messagebox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QMessageBox_OnRedirected((QMessageBox*)self, (intptr_t)callback);
 }
 
 QPainter* q_messagebox_shared_painter(const void* self) {
@@ -2451,8 +2451,8 @@ QPainter* q_messagebox_super_shared_painter(const void* self) {
     return QMessageBox_SuperSharedPainter((QMessageBox*)self);
 }
 
-void q_messagebox_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QMessageBox_OnSharedPainter((const QMessageBox*)self, (intptr_t)callback);
+void q_messagebox_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QMessageBox_OnSharedPainter((QMessageBox*)self, (intptr_t)callback);
 }
 
 void q_messagebox_input_method_event(void* self, void* param1) {
@@ -2475,8 +2475,8 @@ QVariant* q_messagebox_super_input_method_query(const void* self, int32_t param1
     return QMessageBox_SuperInputMethodQuery((QMessageBox*)self, param1);
 }
 
-void q_messagebox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QMessageBox_OnInputMethodQuery((const QMessageBox*)self, (intptr_t)callback);
+void q_messagebox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QMessageBox_OnInputMethodQuery((QMessageBox*)self, (intptr_t)callback);
 }
 
 bool q_messagebox_focus_next_prev_child(void* self, bool next) {

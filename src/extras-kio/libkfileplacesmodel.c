@@ -27,7 +27,7 @@ const QMetaObject* k_fileplacesmodel_meta_object(const void* self) {
     return KFilePlacesModel_MetaObject((KFilePlacesModel*)self);
 }
 
-void k_fileplacesmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_fileplacesmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFilePlacesModel_OnMetaObject((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -198,7 +198,7 @@ QVariant* k_fileplacesmodel_data(const void* self, const void* index, int role) 
     return KFilePlacesModel_Data((KFilePlacesModel*)self, (QModelIndex*)index, role);
 }
 
-void k_fileplacesmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
+void k_fileplacesmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
     KFilePlacesModel_OnData((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -210,7 +210,7 @@ QModelIndex* k_fileplacesmodel_index(const void* self, int row, int column, cons
     return KFilePlacesModel_Index((KFilePlacesModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void k_fileplacesmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void k_fileplacesmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     KFilePlacesModel_OnIndex((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -222,7 +222,7 @@ QModelIndex* k_fileplacesmodel_parent(const void* self, const void* child) {
     return KFilePlacesModel_Parent((KFilePlacesModel*)self, (QModelIndex*)child);
 }
 
-void k_fileplacesmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void k_fileplacesmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     KFilePlacesModel_OnParent((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -263,7 +263,7 @@ libqt_map /* of int to char* */ k_fileplacesmodel_role_names(const void* self) {
     return _ret;
 }
 
-void k_fileplacesmodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_fileplacesmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
     KFilePlacesModel_OnRoleNames((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -304,7 +304,7 @@ int32_t k_fileplacesmodel_row_count(const void* self, const void* parent) {
     return KFilePlacesModel_RowCount((KFilePlacesModel*)self, (QModelIndex*)parent);
 }
 
-void k_fileplacesmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void k_fileplacesmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
     KFilePlacesModel_OnRowCount((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -316,7 +316,7 @@ int32_t k_fileplacesmodel_column_count(const void* self, const void* parent) {
     return KFilePlacesModel_ColumnCount((KFilePlacesModel*)self, (QModelIndex*)parent);
 }
 
-void k_fileplacesmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void k_fileplacesmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
     KFilePlacesModel_OnColumnCount((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -332,7 +332,7 @@ int32_t k_fileplacesmodel_supported_drop_actions(const void* self) {
     return KFilePlacesModel_SupportedDropActions((KFilePlacesModel*)self);
 }
 
-void k_fileplacesmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
+void k_fileplacesmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
     KFilePlacesModel_OnSupportedDropActions((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -344,7 +344,7 @@ int32_t k_fileplacesmodel_flags(const void* self, const void* index) {
     return KFilePlacesModel_Flags((KFilePlacesModel*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
+void k_fileplacesmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
     KFilePlacesModel_OnFlags((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -369,7 +369,7 @@ const char** k_fileplacesmodel_mime_types(const void* self) {
     return _ret;
 }
 
-void k_fileplacesmodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
+void k_fileplacesmodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
     KFilePlacesModel_OnMimeTypes((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -394,7 +394,7 @@ QMimeData* k_fileplacesmodel_mime_data(const void* self, libqt_list /* of QModel
     return KFilePlacesModel_MimeData((KFilePlacesModel*)self, indexes);
 }
 
-void k_fileplacesmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+void k_fileplacesmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
     KFilePlacesModel_OnMimeData((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
@@ -872,8 +872,8 @@ QModelIndex* k_fileplacesmodel_super_sibling(const void* self, int row, int colu
     return KFilePlacesModel_SuperSibling((KFilePlacesModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void k_fileplacesmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    KFilePlacesModel_OnSibling((const KFilePlacesModel*)self, (intptr_t)callback);
+void k_fileplacesmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    KFilePlacesModel_OnSibling((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
 bool k_fileplacesmodel_has_children(const void* self, const void* parent) {
@@ -884,8 +884,8 @@ bool k_fileplacesmodel_super_has_children(const void* self, const void* parent) 
     return KFilePlacesModel_SuperHasChildren((KFilePlacesModel*)self, (QModelIndex*)parent);
 }
 
-void k_fileplacesmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
-    KFilePlacesModel_OnHasChildren((const KFilePlacesModel*)self, (intptr_t)callback);
+void k_fileplacesmodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
+    KFilePlacesModel_OnHasChildren((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
 bool k_fileplacesmodel_set_data(void* self, const void* index, const void* value, int role) {
@@ -908,8 +908,8 @@ QVariant* k_fileplacesmodel_super_header_data(const void* self, int section, int
     return KFilePlacesModel_SuperHeaderData((KFilePlacesModel*)self, section, orientation, role);
 }
 
-void k_fileplacesmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
-    KFilePlacesModel_OnHeaderData((const KFilePlacesModel*)self, (intptr_t)callback);
+void k_fileplacesmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+    KFilePlacesModel_OnHeaderData((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
 bool k_fileplacesmodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
@@ -944,8 +944,8 @@ libqt_map /* of int to QVariant* */ k_fileplacesmodel_super_item_data(const void
     return _ret;
 }
 
-void k_fileplacesmodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
-    KFilePlacesModel_OnItemData((const KFilePlacesModel*)self, (intptr_t)callback);
+void k_fileplacesmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    KFilePlacesModel_OnItemData((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
 bool k_fileplacesmodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
@@ -1030,8 +1030,8 @@ bool k_fileplacesmodel_super_can_drop_mime_data(const void* self, const void* da
     return KFilePlacesModel_SuperCanDropMimeData((KFilePlacesModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void k_fileplacesmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    KFilePlacesModel_OnCanDropMimeData((const KFilePlacesModel*)self, (intptr_t)callback);
+void k_fileplacesmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    KFilePlacesModel_OnCanDropMimeData((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
 int32_t k_fileplacesmodel_supported_drag_actions(const void* self) {
@@ -1042,8 +1042,8 @@ int32_t k_fileplacesmodel_super_supported_drag_actions(const void* self) {
     return KFilePlacesModel_SuperSupportedDragActions((KFilePlacesModel*)self);
 }
 
-void k_fileplacesmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    KFilePlacesModel_OnSupportedDragActions((const KFilePlacesModel*)self, (intptr_t)callback);
+void k_fileplacesmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    KFilePlacesModel_OnSupportedDragActions((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
 bool k_fileplacesmodel_insert_rows(void* self, int row, int count, const void* parent) {
@@ -1138,8 +1138,8 @@ bool k_fileplacesmodel_super_can_fetch_more(const void* self, const void* parent
     return KFilePlacesModel_SuperCanFetchMore((KFilePlacesModel*)self, (QModelIndex*)parent);
 }
 
-void k_fileplacesmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    KFilePlacesModel_OnCanFetchMore((const KFilePlacesModel*)self, (intptr_t)callback);
+void k_fileplacesmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    KFilePlacesModel_OnCanFetchMore((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
 void k_fileplacesmodel_sort(void* self, int column, int32_t order) {
@@ -1162,8 +1162,8 @@ QModelIndex* k_fileplacesmodel_super_buddy(const void* self, const void* index) 
     return KFilePlacesModel_SuperBuddy((KFilePlacesModel*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    KFilePlacesModel_OnBuddy((const KFilePlacesModel*)self, (intptr_t)callback);
+void k_fileplacesmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KFilePlacesModel_OnBuddy((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ k_fileplacesmodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -1176,8 +1176,8 @@ libqt_list /* of QModelIndex* */ k_fileplacesmodel_super_match(const void* self,
     return _arr;
 }
 
-void k_fileplacesmodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    KFilePlacesModel_OnMatch((const KFilePlacesModel*)self, (intptr_t)callback);
+void k_fileplacesmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    KFilePlacesModel_OnMatch((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
 QSize* k_fileplacesmodel_span(const void* self, const void* index) {
@@ -1188,8 +1188,8 @@ QSize* k_fileplacesmodel_super_span(const void* self, const void* index) {
     return KFilePlacesModel_SuperSpan((KFilePlacesModel*)self, (QModelIndex*)index);
 }
 
-void k_fileplacesmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    KFilePlacesModel_OnSpan((const KFilePlacesModel*)self, (intptr_t)callback);
+void k_fileplacesmodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    KFilePlacesModel_OnSpan((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
 void k_fileplacesmodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
@@ -1200,8 +1200,8 @@ void k_fileplacesmodel_super_multi_data(const void* self, const void* index, voi
     KFilePlacesModel_SuperMultiData((KFilePlacesModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_fileplacesmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    KFilePlacesModel_OnMultiData((const KFilePlacesModel*)self, (intptr_t)callback);
+void k_fileplacesmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    KFilePlacesModel_OnMultiData((KFilePlacesModel*)self, (intptr_t)callback);
 }
 
 bool k_fileplacesmodel_submit(void* self) {

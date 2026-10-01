@@ -45,7 +45,7 @@ const QMetaObject* k_richtextedit_meta_object(const void* self) {
     return KRichTextEdit_MetaObject((KRichTextEdit*)self);
 }
 
-void k_richtextedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_richtextedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KRichTextEdit_OnMetaObject((KRichTextEdit*)self, (intptr_t)callback);
 }
 
@@ -959,11 +959,11 @@ void k_richtextedit_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_richtextedit_as_q_paint_device(void* self) {
+QPaintDevice* k_richtextedit_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KRichTextEdit* k_richtextedit_from_q_paint_device(void* _qpaintdevice) {
+KRichTextEdit* k_richtextedit_from_q_paint_device(const void* _qpaintdevice) {
     return (KRichTextEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2370,8 +2370,8 @@ bool k_richtextedit_super_check_spelling_enabled(const void* self) {
     return KRichTextEdit_SuperCheckSpellingEnabled((KRichTextEdit*)self);
 }
 
-void k_richtextedit_on_check_spelling_enabled(const void* self, bool (*callback)(const void*)) {
-    KRichTextEdit_OnCheckSpellingEnabled((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_check_spelling_enabled(void* self, bool (*callback)(const void*)) {
+    KRichTextEdit_OnCheckSpellingEnabled((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 bool k_richtextedit_should_block_be_spell_checked(const void* self, const char* block) {
@@ -2382,8 +2382,8 @@ bool k_richtextedit_super_should_block_be_spell_checked(const void* self, const 
     return KRichTextEdit_SuperShouldBlockBeSpellChecked((KRichTextEdit*)self, qstring(block));
 }
 
-void k_richtextedit_on_should_block_be_spell_checked(const void* self, bool (*callback)(const void*, const char*)) {
-    KRichTextEdit_OnShouldBlockBeSpellChecked((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_should_block_be_spell_checked(void* self, bool (*callback)(const void*, const char*)) {
+    KRichTextEdit_OnShouldBlockBeSpellChecked((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 void k_richtextedit_create_highlighter(void* self) {
@@ -2490,8 +2490,8 @@ QVariant* k_richtextedit_super_input_method_query(const void* self, int32_t prop
     return KRichTextEdit_SuperInputMethodQuery((KRichTextEdit*)self, property);
 }
 
-void k_richtextedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KRichTextEdit_OnInputMethodQuery((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KRichTextEdit_OnInputMethodQuery((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 void k_richtextedit_timer_event(void* self, void* e) {
@@ -2706,8 +2706,8 @@ QMimeData* k_richtextedit_super_create_mime_data_from_selection(const void* self
     return KRichTextEdit_SuperCreateMimeDataFromSelection((KRichTextEdit*)self);
 }
 
-void k_richtextedit_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*)) {
-    KRichTextEdit_OnCreateMimeDataFromSelection((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)(const void*)) {
+    KRichTextEdit_OnCreateMimeDataFromSelection((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 bool k_richtextedit_can_insert_from_mime_data(const void* self, const void* source) {
@@ -2718,8 +2718,8 @@ bool k_richtextedit_super_can_insert_from_mime_data(const void* self, const void
     return KRichTextEdit_SuperCanInsertFromMimeData((KRichTextEdit*)self, (QMimeData*)source);
 }
 
-void k_richtextedit_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*)) {
-    KRichTextEdit_OnCanInsertFromMimeData((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_can_insert_from_mime_data(void* self, bool (*callback)(const void*, const void*)) {
+    KRichTextEdit_OnCanInsertFromMimeData((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 void k_richtextedit_insert_from_mime_data(void* self, const void* source) {
@@ -2778,8 +2778,8 @@ QSize* k_richtextedit_super_minimum_size_hint(const void* self) {
     return KRichTextEdit_SuperMinimumSizeHint((KRichTextEdit*)self);
 }
 
-void k_richtextedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KRichTextEdit_OnMinimumSizeHint((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KRichTextEdit_OnMinimumSizeHint((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 QSize* k_richtextedit_size_hint(const void* self) {
@@ -2790,8 +2790,8 @@ QSize* k_richtextedit_super_size_hint(const void* self) {
     return KRichTextEdit_SuperSizeHint((KRichTextEdit*)self);
 }
 
-void k_richtextedit_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KRichTextEdit_OnSizeHint((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KRichTextEdit_OnSizeHint((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 void k_richtextedit_setup_viewport(void* self, void* viewport) {
@@ -2838,8 +2838,8 @@ QSize* k_richtextedit_super_viewport_size_hint(const void* self) {
     return KRichTextEdit_SuperViewportSizeHint((KRichTextEdit*)self);
 }
 
-void k_richtextedit_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KRichTextEdit_OnViewportSizeHint((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KRichTextEdit_OnViewportSizeHint((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 void k_richtextedit_init_style_option(const void* self, void* option) {
@@ -2850,8 +2850,8 @@ void k_richtextedit_super_init_style_option(const void* self, void* option) {
     KRichTextEdit_SuperInitStyleOption((KRichTextEdit*)self, (QStyleOptionFrame*)option);
 }
 
-void k_richtextedit_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KRichTextEdit_OnInitStyleOption((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KRichTextEdit_OnInitStyleOption((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 int32_t k_richtextedit_dev_type(const void* self) {
@@ -2862,8 +2862,8 @@ int32_t k_richtextedit_super_dev_type(const void* self) {
     return KRichTextEdit_SuperDevType((KRichTextEdit*)self);
 }
 
-void k_richtextedit_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KRichTextEdit_OnDevType((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KRichTextEdit_OnDevType((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 void k_richtextedit_set_visible(void* self, bool visible) {
@@ -2886,8 +2886,8 @@ int32_t k_richtextedit_super_height_for_width(const void* self, int param1) {
     return KRichTextEdit_SuperHeightForWidth((KRichTextEdit*)self, param1);
 }
 
-void k_richtextedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KRichTextEdit_OnHeightForWidth((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KRichTextEdit_OnHeightForWidth((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 bool k_richtextedit_has_height_for_width(const void* self) {
@@ -2898,8 +2898,8 @@ bool k_richtextedit_super_has_height_for_width(const void* self) {
     return KRichTextEdit_SuperHasHeightForWidth((KRichTextEdit*)self);
 }
 
-void k_richtextedit_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KRichTextEdit_OnHasHeightForWidth((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KRichTextEdit_OnHasHeightForWidth((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_richtextedit_paint_engine(const void* self) {
@@ -2910,8 +2910,8 @@ QPaintEngine* k_richtextedit_super_paint_engine(const void* self) {
     return KRichTextEdit_SuperPaintEngine((KRichTextEdit*)self);
 }
 
-void k_richtextedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KRichTextEdit_OnPaintEngine((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KRichTextEdit_OnPaintEngine((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 void k_richtextedit_enter_event(void* self, void* event) {
@@ -3018,8 +3018,8 @@ int32_t k_richtextedit_super_metric(const void* self, int32_t param1) {
     return KRichTextEdit_SuperMetric((KRichTextEdit*)self, param1);
 }
 
-void k_richtextedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KRichTextEdit_OnMetric((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KRichTextEdit_OnMetric((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 void k_richtextedit_init_painter(const void* self, void* painter) {
@@ -3030,8 +3030,8 @@ void k_richtextedit_super_init_painter(const void* self, void* painter) {
     KRichTextEdit_SuperInitPainter((KRichTextEdit*)self, (QPainter*)painter);
 }
 
-void k_richtextedit_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KRichTextEdit_OnInitPainter((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KRichTextEdit_OnInitPainter((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_richtextedit_redirected(const void* self, void* offset) {
@@ -3042,8 +3042,8 @@ QPaintDevice* k_richtextedit_super_redirected(const void* self, void* offset) {
     return KRichTextEdit_SuperRedirected((KRichTextEdit*)self, (QPoint*)offset);
 }
 
-void k_richtextedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KRichTextEdit_OnRedirected((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KRichTextEdit_OnRedirected((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 QPainter* k_richtextedit_shared_painter(const void* self) {
@@ -3054,8 +3054,8 @@ QPainter* k_richtextedit_super_shared_painter(const void* self) {
     return KRichTextEdit_SuperSharedPainter((KRichTextEdit*)self);
 }
 
-void k_richtextedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KRichTextEdit_OnSharedPainter((const KRichTextEdit*)self, (intptr_t)callback);
+void k_richtextedit_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KRichTextEdit_OnSharedPainter((KRichTextEdit*)self, (intptr_t)callback);
 }
 
 void k_richtextedit_child_event(void* self, void* event) {

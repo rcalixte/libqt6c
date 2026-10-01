@@ -99,7 +99,7 @@ const QMetaObject* k_replacedialog_meta_object(const void* self) {
     return KReplaceDialog_MetaObject((KReplaceDialog*)self);
 }
 
-void k_replacedialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_replacedialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KReplaceDialog_OnMetaObject((KReplaceDialog*)self, (intptr_t)callback);
 }
 
@@ -352,11 +352,11 @@ void k_replacedialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_replacedialog_as_q_paint_device(void* self) {
+QPaintDevice* k_replacedialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KReplaceDialog* k_replacedialog_from_q_paint_device(void* _qpaintdevice) {
+KReplaceDialog* k_replacedialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KReplaceDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1759,8 +1759,8 @@ QSize* k_replacedialog_super_size_hint(const void* self) {
     return KReplaceDialog_SuperSizeHint((KReplaceDialog*)self);
 }
 
-void k_replacedialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KReplaceDialog_OnSizeHint((const KReplaceDialog*)self, (intptr_t)callback);
+void k_replacedialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KReplaceDialog_OnSizeHint((KReplaceDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_replacedialog_minimum_size_hint(const void* self) {
@@ -1771,8 +1771,8 @@ QSize* k_replacedialog_super_minimum_size_hint(const void* self) {
     return KReplaceDialog_SuperMinimumSizeHint((KReplaceDialog*)self);
 }
 
-void k_replacedialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KReplaceDialog_OnMinimumSizeHint((const KReplaceDialog*)self, (intptr_t)callback);
+void k_replacedialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KReplaceDialog_OnMinimumSizeHint((KReplaceDialog*)self, (intptr_t)callback);
 }
 
 void k_replacedialog_open(void* self) {
@@ -1903,8 +1903,8 @@ int32_t k_replacedialog_super_dev_type(const void* self) {
     return KReplaceDialog_SuperDevType((KReplaceDialog*)self);
 }
 
-void k_replacedialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KReplaceDialog_OnDevType((const KReplaceDialog*)self, (intptr_t)callback);
+void k_replacedialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KReplaceDialog_OnDevType((KReplaceDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_replacedialog_height_for_width(const void* self, int param1) {
@@ -1915,8 +1915,8 @@ int32_t k_replacedialog_super_height_for_width(const void* self, int param1) {
     return KReplaceDialog_SuperHeightForWidth((KReplaceDialog*)self, param1);
 }
 
-void k_replacedialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KReplaceDialog_OnHeightForWidth((const KReplaceDialog*)self, (intptr_t)callback);
+void k_replacedialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KReplaceDialog_OnHeightForWidth((KReplaceDialog*)self, (intptr_t)callback);
 }
 
 bool k_replacedialog_has_height_for_width(const void* self) {
@@ -1927,8 +1927,8 @@ bool k_replacedialog_super_has_height_for_width(const void* self) {
     return KReplaceDialog_SuperHasHeightForWidth((KReplaceDialog*)self);
 }
 
-void k_replacedialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KReplaceDialog_OnHasHeightForWidth((const KReplaceDialog*)self, (intptr_t)callback);
+void k_replacedialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KReplaceDialog_OnHasHeightForWidth((KReplaceDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_replacedialog_paint_engine(const void* self) {
@@ -1939,8 +1939,8 @@ QPaintEngine* k_replacedialog_super_paint_engine(const void* self) {
     return KReplaceDialog_SuperPaintEngine((KReplaceDialog*)self);
 }
 
-void k_replacedialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KReplaceDialog_OnPaintEngine((const KReplaceDialog*)self, (intptr_t)callback);
+void k_replacedialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KReplaceDialog_OnPaintEngine((KReplaceDialog*)self, (intptr_t)callback);
 }
 
 bool k_replacedialog_event(void* self, void* event) {
@@ -2215,8 +2215,8 @@ int32_t k_replacedialog_super_metric(const void* self, int32_t param1) {
     return KReplaceDialog_SuperMetric((KReplaceDialog*)self, param1);
 }
 
-void k_replacedialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KReplaceDialog_OnMetric((const KReplaceDialog*)self, (intptr_t)callback);
+void k_replacedialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KReplaceDialog_OnMetric((KReplaceDialog*)self, (intptr_t)callback);
 }
 
 void k_replacedialog_init_painter(const void* self, void* painter) {
@@ -2227,8 +2227,8 @@ void k_replacedialog_super_init_painter(const void* self, void* painter) {
     KReplaceDialog_SuperInitPainter((KReplaceDialog*)self, (QPainter*)painter);
 }
 
-void k_replacedialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KReplaceDialog_OnInitPainter((const KReplaceDialog*)self, (intptr_t)callback);
+void k_replacedialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KReplaceDialog_OnInitPainter((KReplaceDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_replacedialog_redirected(const void* self, void* offset) {
@@ -2239,8 +2239,8 @@ QPaintDevice* k_replacedialog_super_redirected(const void* self, void* offset) {
     return KReplaceDialog_SuperRedirected((KReplaceDialog*)self, (QPoint*)offset);
 }
 
-void k_replacedialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KReplaceDialog_OnRedirected((const KReplaceDialog*)self, (intptr_t)callback);
+void k_replacedialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KReplaceDialog_OnRedirected((KReplaceDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_replacedialog_shared_painter(const void* self) {
@@ -2251,8 +2251,8 @@ QPainter* k_replacedialog_super_shared_painter(const void* self) {
     return KReplaceDialog_SuperSharedPainter((KReplaceDialog*)self);
 }
 
-void k_replacedialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KReplaceDialog_OnSharedPainter((const KReplaceDialog*)self, (intptr_t)callback);
+void k_replacedialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KReplaceDialog_OnSharedPainter((KReplaceDialog*)self, (intptr_t)callback);
 }
 
 void k_replacedialog_input_method_event(void* self, void* param1) {
@@ -2275,8 +2275,8 @@ QVariant* k_replacedialog_super_input_method_query(const void* self, int32_t par
     return KReplaceDialog_SuperInputMethodQuery((KReplaceDialog*)self, param1);
 }
 
-void k_replacedialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KReplaceDialog_OnInputMethodQuery((const KReplaceDialog*)self, (intptr_t)callback);
+void k_replacedialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KReplaceDialog_OnInputMethodQuery((KReplaceDialog*)self, (intptr_t)callback);
 }
 
 bool k_replacedialog_focus_next_prev_child(void* self, bool next) {

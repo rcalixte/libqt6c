@@ -43,7 +43,7 @@ const QMetaObject* q_chart_meta_object(const void* self) {
     return QChart_MetaObject((QChart*)self);
 }
 
-void q_chart_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_chart_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QChart_OnMetaObject((QChart*)self, (intptr_t)callback);
 }
 
@@ -399,11 +399,11 @@ QPointF* q_chart_map_to_position2(void* self, const void* value, void* series) {
     return QChart_MapToPosition2((QChart*)self, (QPointF*)value, (QAbstractSeries*)series);
 }
 
-QGraphicsLayoutItem* q_chart_as_q_graphics_layout_item(void* self) {
+QGraphicsLayoutItem* q_chart_as_q_graphics_layout_item(const void* self) {
     return QGraphicsWidget_AsQGraphicsLayoutItem((QGraphicsWidget*)self);
 }
 
-QChart* q_chart_from_q_graphics_layout_item(void* _qgraphicslayoutitem) {
+QChart* q_chart_from_q_graphics_layout_item(const void* _qgraphicslayoutitem) {
     return (QChart*)QGraphicsWidget_FromQGraphicsLayoutItem((QGraphicsLayoutItem*)_qgraphicslayoutitem);
 }
 
@@ -643,11 +643,11 @@ void q_chart_set_attribute2(void* self, int32_t attribute, bool on) {
     QGraphicsWidget_SetAttribute2((QGraphicsWidget*)self, attribute, on);
 }
 
-QGraphicsItem* q_chart_as_q_graphics_item(void* self) {
+QGraphicsItem* q_chart_as_q_graphics_item(const void* self) {
     return QGraphicsObject_AsQGraphicsItem((QGraphicsObject*)self);
 }
 
-QChart* q_chart_from_q_graphics_item(void* _qgraphicsitem) {
+QChart* q_chart_from_q_graphics_item(const void* _qgraphicsitem) {
     return (QChart*)QGraphicsObject_FromQGraphicsItem((QGraphicsItem*)_qgraphicsitem);
 }
 
@@ -1863,8 +1863,8 @@ void q_chart_super_get_contents_margins(const void* self, double* left, double* 
     QChart_SuperGetContentsMargins((QChart*)self, left, top, right, bottom);
 }
 
-void q_chart_on_get_contents_margins(const void* self, void (*callback)(const void*, double*, double*, double*, double*)) {
-    QChart_OnGetContentsMargins((const QChart*)self, (intptr_t)callback);
+void q_chart_on_get_contents_margins(void* self, void (*callback)(const void*, double*, double*, double*, double*)) {
+    QChart_OnGetContentsMargins((QChart*)self, (intptr_t)callback);
 }
 
 int32_t q_chart_type(const void* self) {
@@ -1875,8 +1875,8 @@ int32_t q_chart_super_type(const void* self) {
     return QChart_SuperType((QChart*)self);
 }
 
-void q_chart_on_type(const void* self, int32_t (*callback)(const void*)) {
-    QChart_OnType((const QChart*)self, (intptr_t)callback);
+void q_chart_on_type(void* self, int32_t (*callback)(const void*)) {
+    QChart_OnType((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_paint(void* self, void* painter, const void* option, void* widget) {
@@ -1911,8 +1911,8 @@ QRectF* q_chart_super_bounding_rect(const void* self) {
     return QChart_SuperBoundingRect((QChart*)self);
 }
 
-void q_chart_on_bounding_rect(const void* self, QRectF* (*callback)(const void*)) {
-    QChart_OnBoundingRect((const QChart*)self, (intptr_t)callback);
+void q_chart_on_bounding_rect(void* self, QRectF* (*callback)(const void*)) {
+    QChart_OnBoundingRect((QChart*)self, (intptr_t)callback);
 }
 
 QPainterPath* q_chart_shape(const void* self) {
@@ -1923,8 +1923,8 @@ QPainterPath* q_chart_super_shape(const void* self) {
     return QChart_SuperShape((QChart*)self);
 }
 
-void q_chart_on_shape(const void* self, QPainterPath* (*callback)(const void*)) {
-    QChart_OnShape((const QChart*)self, (intptr_t)callback);
+void q_chart_on_shape(void* self, QPainterPath* (*callback)(const void*)) {
+    QChart_OnShape((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_init_style_option(const void* self, void* option) {
@@ -1935,8 +1935,8 @@ void q_chart_super_init_style_option(const void* self, void* option) {
     QChart_SuperInitStyleOption((QChart*)self, (QStyleOption*)option);
 }
 
-void q_chart_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QChart_OnInitStyleOption((const QChart*)self, (intptr_t)callback);
+void q_chart_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QChart_OnInitStyleOption((QChart*)self, (intptr_t)callback);
 }
 
 QSizeF* q_chart_size_hint(const void* self, int32_t which, const void* constraint) {
@@ -1947,8 +1947,8 @@ QSizeF* q_chart_super_size_hint(const void* self, int32_t which, const void* con
     return QChart_SuperSizeHint((QChart*)self, which, (QSizeF*)constraint);
 }
 
-void q_chart_on_size_hint(const void* self, QSizeF* (*callback)(const void*, int32_t, const void*)) {
-    QChart_OnSizeHint((const QChart*)self, (intptr_t)callback);
+void q_chart_on_size_hint(void* self, QSizeF* (*callback)(const void*, int32_t, const void*)) {
+    QChart_OnSizeHint((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_update_geometry(void* self) {
@@ -2019,8 +2019,8 @@ int32_t q_chart_super_window_frame_section_at(const void* self, const void* pos)
     return QChart_SuperWindowFrameSectionAt((QChart*)self, (QPointF*)pos);
 }
 
-void q_chart_on_window_frame_section_at(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QChart_OnWindowFrameSectionAt((const QChart*)self, (intptr_t)callback);
+void q_chart_on_window_frame_section_at(void* self, int32_t (*callback)(const void*, const void*)) {
+    QChart_OnWindowFrameSectionAt((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_event(void* self, void* event) {
@@ -2319,8 +2319,8 @@ bool q_chart_super_contains(const void* self, const void* point) {
     return QChart_SuperContains((QChart*)self, (QPointF*)point);
 }
 
-void q_chart_on_contains(const void* self, bool (*callback)(const void*, const void*)) {
-    QChart_OnContains((const QChart*)self, (intptr_t)callback);
+void q_chart_on_contains(void* self, bool (*callback)(const void*, const void*)) {
+    QChart_OnContains((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_collides_with_item(const void* self, const void* other, int32_t mode) {
@@ -2331,8 +2331,8 @@ bool q_chart_super_collides_with_item(const void* self, const void* other, int32
     return QChart_SuperCollidesWithItem((QChart*)self, (QGraphicsItem*)other, mode);
 }
 
-void q_chart_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t)) {
-    QChart_OnCollidesWithItem((const QChart*)self, (intptr_t)callback);
+void q_chart_on_collides_with_item(void* self, bool (*callback)(const void*, const void*, int32_t)) {
+    QChart_OnCollidesWithItem((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_collides_with_path(const void* self, const void* path, int32_t mode) {
@@ -2343,8 +2343,8 @@ bool q_chart_super_collides_with_path(const void* self, const void* path, int32_
     return QChart_SuperCollidesWithPath((QChart*)self, (QPainterPath*)path, mode);
 }
 
-void q_chart_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t)) {
-    QChart_OnCollidesWithPath((const QChart*)self, (intptr_t)callback);
+void q_chart_on_collides_with_path(void* self, bool (*callback)(const void*, const void*, int32_t)) {
+    QChart_OnCollidesWithPath((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_is_obscured_by(const void* self, const void* item) {
@@ -2355,8 +2355,8 @@ bool q_chart_super_is_obscured_by(const void* self, const void* item) {
     return QChart_SuperIsObscuredBy((QChart*)self, (QGraphicsItem*)item);
 }
 
-void q_chart_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*)) {
-    QChart_OnIsObscuredBy((const QChart*)self, (intptr_t)callback);
+void q_chart_on_is_obscured_by(void* self, bool (*callback)(const void*, const void*)) {
+    QChart_OnIsObscuredBy((QChart*)self, (intptr_t)callback);
 }
 
 QPainterPath* q_chart_opaque_area(const void* self) {
@@ -2367,8 +2367,8 @@ QPainterPath* q_chart_super_opaque_area(const void* self) {
     return QChart_SuperOpaqueArea((QChart*)self);
 }
 
-void q_chart_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*)) {
-    QChart_OnOpaqueArea((const QChart*)self, (intptr_t)callback);
+void q_chart_on_opaque_area(void* self, QPainterPath* (*callback)(const void*)) {
+    QChart_OnOpaqueArea((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_scene_event_filter(void* self, void* watched, void* event) {
@@ -2559,8 +2559,8 @@ QVariant* q_chart_super_input_method_query(const void* self, int32_t query) {
     return QChart_SuperInputMethodQuery((QChart*)self, query);
 }
 
-void q_chart_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QChart_OnInputMethodQuery((const QChart*)self, (intptr_t)callback);
+void q_chart_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QChart_OnInputMethodQuery((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_supports_extension(const void* self, int32_t extension) {
@@ -2571,8 +2571,8 @@ bool q_chart_super_supports_extension(const void* self, int32_t extension) {
     return QChart_SuperSupportsExtension((QChart*)self, extension);
 }
 
-void q_chart_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t)) {
-    QChart_OnSupportsExtension((const QChart*)self, (intptr_t)callback);
+void q_chart_on_supports_extension(void* self, bool (*callback)(const void*, int32_t)) {
+    QChart_OnSupportsExtension((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_set_extension(void* self, int32_t extension, const void* variant) {
@@ -2595,8 +2595,8 @@ QVariant* q_chart_super_extension(const void* self, const void* variant) {
     return QChart_SuperExtension((QChart*)self, (QVariant*)variant);
 }
 
-void q_chart_on_extension(const void* self, QVariant* (*callback)(const void*, const void*)) {
-    QChart_OnExtension((const QChart*)self, (intptr_t)callback);
+void q_chart_on_extension(void* self, QVariant* (*callback)(const void*, const void*)) {
+    QChart_OnExtension((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_is_empty(const void* self) {
@@ -2607,8 +2607,8 @@ bool q_chart_super_is_empty(const void* self) {
     return QChart_SuperIsEmpty((QChart*)self);
 }
 
-void q_chart_on_is_empty(const void* self, bool (*callback)(const void*)) {
-    QChart_OnIsEmpty((const QChart*)self, (intptr_t)callback);
+void q_chart_on_is_empty(void* self, bool (*callback)(const void*)) {
+    QChart_OnIsEmpty((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_update_micro_focus(void* self) {

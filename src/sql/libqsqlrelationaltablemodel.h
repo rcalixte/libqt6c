@@ -117,10 +117,10 @@ const QMetaObject* q_sqlrelationaltablemodel_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback const QMetaObject* func(const QSqlRelationalTableModel* self)
 ///
-void q_sqlrelationaltablemodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_sqlrelationaltablemodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -192,12 +192,12 @@ QVariant* q_sqlrelationaltablemodel_data(const void* self, const void* item, int
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QVariant* func(const QSqlRelationalTableModel* self, QModelIndex* item, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqlrelationaltablemodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
+void q_sqlrelationaltablemodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#data)
 ///
@@ -383,10 +383,10 @@ QSqlTableModel* q_sqlrelationaltablemodel_relation_model(const void* self, int c
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QSqlTableModel* func(const QSqlRelationalTableModel* self, int column)
 ///
-void q_sqlrelationaltablemodel_on_relation_model(const void* self, QSqlTableModel* (*callback)(const void*, int));
+void q_sqlrelationaltablemodel_on_relation_model(void* self, QSqlTableModel* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#relationModel)
 ///
@@ -441,10 +441,10 @@ const char* q_sqlrelationaltablemodel_select_statement(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback const char* func(const QSqlRelationalTableModel* self)
 ///
-void q_sqlrelationaltablemodel_on_select_statement(const void* self, const char* (*callback)(const void*));
+void q_sqlrelationaltablemodel_on_select_statement(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#selectStatement)
 ///
@@ -518,10 +518,10 @@ const char* q_sqlrelationaltablemodel_order_by_clause(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback const char* func(const QSqlRelationalTableModel* self)
 ///
-void q_sqlrelationaltablemodel_on_order_by_clause(const void* self, const char* (*callback)(const void*));
+void q_sqlrelationaltablemodel_on_order_by_clause(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlrelationaltablemodel.html#orderByClause)
 ///
@@ -820,12 +820,12 @@ QModelIndex* q_sqlrelationaltablemodel_parent(const void* self, const void* chil
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex* func(const QSqlRelationalTableModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqlrelationaltablemodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_sqlrelationaltablemodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -842,10 +842,10 @@ bool q_sqlrelationaltablemodel_has_children(const void* self, const void* parent
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback bool func(const QSqlRelationalTableModel* self, QModelIndex* parent)
 ///
-void q_sqlrelationaltablemodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
+void q_sqlrelationaltablemodel_on_has_children(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1626,10 +1626,10 @@ int32_t q_sqlrelationaltablemodel_super_flags(const void* self, const void* inde
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func(QSqlRelationalTableModel* self, QModelIndex* index)
 ///
-void q_sqlrelationaltablemodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
+void q_sqlrelationaltablemodel_on_flags(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QSqlTableModel
 ///
@@ -1696,12 +1696,12 @@ QVariant* q_sqlrelationaltablemodel_super_header_data(const void* self, int sect
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QVariant* func(QSqlRelationalTableModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqlrelationaltablemodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
+void q_sqlrelationaltablemodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// Inherited from QSqlTableModel
 ///
@@ -1867,10 +1867,10 @@ int32_t q_sqlrelationaltablemodel_super_row_count(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func(QSqlRelationalTableModel* self, QModelIndex* parent)
 ///
-void q_sqlrelationaltablemodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_sqlrelationaltablemodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QSqlTableModel
 ///
@@ -2102,12 +2102,12 @@ QModelIndex* q_sqlrelationaltablemodel_super_index_in_query(const void* self, co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex* func(QSqlRelationalTableModel* self, QModelIndex* item)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqlrelationaltablemodel_on_index_in_query(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_sqlrelationaltablemodel_on_index_in_query(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QSqlQueryModel
 ///
@@ -2137,10 +2137,10 @@ int32_t q_sqlrelationaltablemodel_super_column_count(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func(QSqlRelationalTableModel* self, QModelIndex* parent)
 ///
-void q_sqlrelationaltablemodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_sqlrelationaltablemodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QSqlQueryModel
 ///
@@ -2279,10 +2279,10 @@ bool q_sqlrelationaltablemodel_super_can_fetch_more(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QModelIndex* parent)
 ///
-void q_sqlrelationaltablemodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
+void q_sqlrelationaltablemodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QSqlQueryModel
 ///
@@ -2336,10 +2336,10 @@ libqt_map q_sqlrelationaltablemodel_super_role_names(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback libqt_map of int to char* func(QSqlRelationalTableModel* self)
 ///
-void q_sqlrelationaltablemodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
+void q_sqlrelationaltablemodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from QSqlQueryModel
 ///
@@ -2404,12 +2404,12 @@ QModelIndex* q_sqlrelationaltablemodel_super_index(const void* self, int row, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex* func(QSqlRelationalTableModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqlrelationaltablemodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_sqlrelationaltablemodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractTableModel
 ///
@@ -2443,12 +2443,12 @@ QModelIndex* q_sqlrelationaltablemodel_super_sibling(const void* self, int row, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex* func(QSqlRelationalTableModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqlrelationaltablemodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_sqlrelationaltablemodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractTableModel
 ///
@@ -2545,10 +2545,10 @@ libqt_map q_sqlrelationaltablemodel_super_item_data(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback libqt_map of int to QVariant* func(QSqlRelationalTableModel* self, QModelIndex* index)
 ///
-void q_sqlrelationaltablemodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
+void q_sqlrelationaltablemodel_on_item_data(void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2615,10 +2615,10 @@ const char** q_sqlrelationaltablemodel_super_mime_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback const char** func(QSqlRelationalTableModel* self)
 ///
-void q_sqlrelationaltablemodel_on_mime_types(const void* self, const char** (*callback)(const void*));
+void q_sqlrelationaltablemodel_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2648,10 +2648,10 @@ QMimeData* q_sqlrelationaltablemodel_super_mime_data(const void* self, libqt_lis
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QMimeData* func(QSqlRelationalTableModel* self, libqt_list of QModelIndex* indexes)
 ///
-void q_sqlrelationaltablemodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void q_sqlrelationaltablemodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2689,10 +2689,10 @@ bool q_sqlrelationaltablemodel_super_can_drop_mime_data(const void* self, const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void q_sqlrelationaltablemodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
+void q_sqlrelationaltablemodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2724,10 +2724,10 @@ int32_t q_sqlrelationaltablemodel_super_supported_drop_actions(const void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func(QSqlRelationalTableModel* self)
 ///
-void q_sqlrelationaltablemodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void q_sqlrelationaltablemodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2759,10 +2759,10 @@ int32_t q_sqlrelationaltablemodel_super_supported_drag_actions(const void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func(QSqlRelationalTableModel* self)
 ///
-void q_sqlrelationaltablemodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
+void q_sqlrelationaltablemodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2874,12 +2874,12 @@ QModelIndex* q_sqlrelationaltablemodel_super_buddy(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex* func(QSqlRelationalTableModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqlrelationaltablemodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_sqlrelationaltablemodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2921,10 +2921,10 @@ libqt_list q_sqlrelationaltablemodel_super_match(const void* self, const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback libqt_list of QModelIndex* func(QSqlRelationalTableModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void q_sqlrelationaltablemodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
+void q_sqlrelationaltablemodel_on_match(void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2954,12 +2954,12 @@ QSize* q_sqlrelationaltablemodel_super_span(const void* self, const void* index)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QSize* func(QSqlRelationalTableModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqlrelationaltablemodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
+void q_sqlrelationaltablemodel_on_span(void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2991,10 +2991,10 @@ void q_sqlrelationaltablemodel_super_multi_data(const void* self, const void* in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void q_sqlrelationaltablemodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
+void q_sqlrelationaltablemodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3321,12 +3321,12 @@ QSqlRecord* q_sqlrelationaltablemodel_super_primary_values(const void* self, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QSqlRecord* func(QSqlRelationalTableModel* self, int row)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqlrelationaltablemodel_on_primary_values(const void* self, QSqlRecord* (*callback)(const void*, int));
+void q_sqlrelationaltablemodel_on_primary_values(void* self, QSqlRecord* (*callback)(const void*, int));
 
 /// Inherited from QSqlQueryModel
 ///
@@ -3725,12 +3725,12 @@ QModelIndex* q_sqlrelationaltablemodel_super_create_index(const void* self, int 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QModelIndex* func(QSqlRelationalTableModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sqlrelationaltablemodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
+void q_sqlrelationaltablemodel_on_create_index(void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3762,10 +3762,10 @@ void q_sqlrelationaltablemodel_super_encode_data(const void* self, libqt_list in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback void func(QSqlRelationalTableModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void q_sqlrelationaltablemodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
+void q_sqlrelationaltablemodel_on_encode_data(void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4050,10 +4050,10 @@ libqt_list q_sqlrelationaltablemodel_super_persistent_index_list(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback libqt_list of QModelIndex* func(QSqlRelationalTableModel* self)
 ///
-void q_sqlrelationaltablemodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
+void q_sqlrelationaltablemodel_on_persistent_index_list(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4081,10 +4081,10 @@ QObject* q_sqlrelationaltablemodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback QObject* func(QSqlRelationalTableModel* self)
 ///
-void q_sqlrelationaltablemodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_sqlrelationaltablemodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4112,10 +4112,10 @@ int32_t q_sqlrelationaltablemodel_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func(QSqlRelationalTableModel* self)
 ///
-void q_sqlrelationaltablemodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_sqlrelationaltablemodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4145,10 +4145,10 @@ int32_t q_sqlrelationaltablemodel_super_receivers(const void* self, const char* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback int32_t func(QSqlRelationalTableModel* self, const char* signal)
 ///
-void q_sqlrelationaltablemodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_sqlrelationaltablemodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4178,10 +4178,10 @@ bool q_sqlrelationaltablemodel_super_is_signal_connected(const void* self, const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSqlRelationalTableModel*
+/// @param self QSqlRelationalTableModel*
 /// @param callback bool func(QSqlRelationalTableModel* self, QMetaMethod* signal)
 ///
-void q_sqlrelationaltablemodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_sqlrelationaltablemodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///

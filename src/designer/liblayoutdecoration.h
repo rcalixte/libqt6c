@@ -41,10 +41,10 @@ libqt_list q_designerlayoutdecorationextension_widgets(const void* self, void* l
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerLayoutDecorationExtension*
+/// @param self QDesignerLayoutDecorationExtension*
 /// @param callback libqt_list of QWidget* func(const QDesignerLayoutDecorationExtension* self, QLayout* layout)
 ///
-void q_designerlayoutdecorationextension_on_widgets(const void* self, libqt_list (*callback)(const void*, void*));
+void q_designerlayoutdecorationextension_on_widgets(void* self, libqt_list (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#itemInfo)
 ///
@@ -59,12 +59,12 @@ QRect* q_designerlayoutdecorationextension_item_info(const void* self, int index
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerLayoutDecorationExtension*
+/// @param self QDesignerLayoutDecorationExtension*
 /// @param callback QRect* func(const QDesignerLayoutDecorationExtension* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerlayoutdecorationextension_on_item_info(const void* self, QRect* (*callback)(const void*, int));
+void q_designerlayoutdecorationextension_on_item_info(void* self, QRect* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#indexOf)
 ///
@@ -79,10 +79,10 @@ int32_t q_designerlayoutdecorationextension_index_of(const void* self, void* wid
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerLayoutDecorationExtension*
+/// @param self QDesignerLayoutDecorationExtension*
 /// @param callback int32_t func(const QDesignerLayoutDecorationExtension* self, QWidget* widget)
 ///
-void q_designerlayoutdecorationextension_on_index_of(const void* self, int32_t (*callback)(const void*, void*));
+void q_designerlayoutdecorationextension_on_index_of(void* self, int32_t (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#indexOf)
 ///
@@ -97,10 +97,10 @@ int32_t q_designerlayoutdecorationextension_index_of2(const void* self, void* it
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerLayoutDecorationExtension*
+/// @param self QDesignerLayoutDecorationExtension*
 /// @param callback int32_t func(const QDesignerLayoutDecorationExtension* self, QLayoutItem* item)
 ///
-void q_designerlayoutdecorationextension_on_index_of2(const void* self, int32_t (*callback)(const void*, void*));
+void q_designerlayoutdecorationextension_on_index_of2(void* self, int32_t (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentInsertMode)
 ///
@@ -116,10 +116,10 @@ int32_t q_designerlayoutdecorationextension_current_insert_mode(const void* self
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerLayoutDecorationExtension*
+/// @param self QDesignerLayoutDecorationExtension*
 /// @param callback int32_t func(const QDesignerLayoutDecorationExtension* self)
 ///
-void q_designerlayoutdecorationextension_on_current_insert_mode(const void* self, int32_t (*callback)(const void*));
+void q_designerlayoutdecorationextension_on_current_insert_mode(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentIndex)
 ///
@@ -133,10 +133,10 @@ int32_t q_designerlayoutdecorationextension_current_index(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerLayoutDecorationExtension*
+/// @param self QDesignerLayoutDecorationExtension*
 /// @param callback int32_t func(const QDesignerLayoutDecorationExtension* self)
 ///
-void q_designerlayoutdecorationextension_on_current_index(const void* self, int32_t (*callback)(const void*));
+void q_designerlayoutdecorationextension_on_current_index(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentCell)
 ///
@@ -152,10 +152,10 @@ pair_int_int q_designerlayoutdecorationextension_current_cell(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerLayoutDecorationExtension*
+/// @param self QDesignerLayoutDecorationExtension*
 /// @param callback pair_int_int tuple of int and int func(const QDesignerLayoutDecorationExtension* self)
 ///
-void q_designerlayoutdecorationextension_on_current_cell(const void* self, pair_int_int (*callback)(const void*));
+void q_designerlayoutdecorationextension_on_current_cell(void* self, pair_int_int (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertWidget)
 ///
@@ -260,10 +260,10 @@ int32_t q_designerlayoutdecorationextension_find_item_at(const void* self, const
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerLayoutDecorationExtension*
+/// @param self QDesignerLayoutDecorationExtension*
 /// @param callback int32_t func(const QDesignerLayoutDecorationExtension* self, QPoint* pos)
 ///
-void q_designerlayoutdecorationextension_on_find_item_at(const void* self, int32_t (*callback)(const void*, const void*));
+void q_designerlayoutdecorationextension_on_find_item_at(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#findItemAt)
 ///
@@ -279,10 +279,10 @@ int32_t q_designerlayoutdecorationextension_find_item_at2(const void* self, int 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerLayoutDecorationExtension*
+/// @param self QDesignerLayoutDecorationExtension*
 /// @param callback int32_t func(const QDesignerLayoutDecorationExtension* self, int row, int column)
 ///
-void q_designerlayoutdecorationextension_on_find_item_at2(const void* self, int32_t (*callback)(const void*, int, int));
+void q_designerlayoutdecorationextension_on_find_item_at2(void* self, int32_t (*callback)(const void*, int, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#adjustIndicator)
 ///

@@ -17,7 +17,7 @@ const QMetaObject* k_texttranslator__translatorengineplugin_meta_object(const vo
     return TextTranslator__TranslatorEnginePlugin_MetaObject((TextTranslator__TranslatorEnginePlugin*)self);
 }
 
-void k_texttranslator__translatorengineplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_texttranslator__translatorengineplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextTranslator__TranslatorEnginePlugin_OnMetaObject((TextTranslator__TranslatorEnginePlugin*)self, (intptr_t)callback);
 }
 

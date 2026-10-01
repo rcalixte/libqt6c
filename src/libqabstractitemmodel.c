@@ -301,7 +301,7 @@ const QMetaObject* q_abstractitemmodel_meta_object(const void* self) {
     return QAbstractItemModel_MetaObject((QAbstractItemModel*)self);
 }
 
-void q_abstractitemmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstractitemmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractItemModel_OnMetaObject((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -348,7 +348,7 @@ QModelIndex* q_abstractitemmodel_index(const void* self, int row, int column, co
     return QAbstractItemModel_Index((QAbstractItemModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void q_abstractitemmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void q_abstractitemmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     QAbstractItemModel_OnIndex((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -356,7 +356,7 @@ QModelIndex* q_abstractitemmodel_parent(const void* self, const void* child) {
     return QAbstractItemModel_Parent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
-void q_abstractitemmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_abstractitemmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -364,7 +364,7 @@ QModelIndex* q_abstractitemmodel_sibling(const void* self, int row, int column, 
     return QAbstractItemModel_Sibling((QAbstractItemModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void q_abstractitemmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void q_abstractitemmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     QAbstractItemModel_OnSibling((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -376,7 +376,7 @@ int32_t q_abstractitemmodel_row_count(const void* self, const void* parent) {
     return QAbstractItemModel_RowCount((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstractitemmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_abstractitemmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnRowCount((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -384,7 +384,7 @@ int32_t q_abstractitemmodel_column_count(const void* self, const void* parent) {
     return QAbstractItemModel_ColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstractitemmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_abstractitemmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnColumnCount((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -392,7 +392,7 @@ bool q_abstractitemmodel_has_children(const void* self, const void* parent) {
     return QAbstractItemModel_HasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstractitemmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
+void q_abstractitemmodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -404,7 +404,7 @@ QVariant* q_abstractitemmodel_data(const void* self, const void* index, int role
     return QAbstractItemModel_Data((QAbstractItemModel*)self, (QModelIndex*)index, role);
 }
 
-void q_abstractitemmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
+void q_abstractitemmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
     QAbstractItemModel_OnData((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -424,7 +424,7 @@ QVariant* q_abstractitemmodel_header_data(const void* self, int section, int32_t
     return QAbstractItemModel_HeaderData((QAbstractItemModel*)self, section, orientation, role);
 }
 
-void q_abstractitemmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+void q_abstractitemmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
     QAbstractItemModel_OnHeaderData((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -454,7 +454,7 @@ libqt_map /* of int to QVariant* */ q_abstractitemmodel_item_data(const void* se
     return _ret;
 }
 
-void q_abstractitemmodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+void q_abstractitemmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnItemData((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -556,7 +556,7 @@ const char** q_abstractitemmodel_mime_types(const void* self) {
     return _ret;
 }
 
-void q_abstractitemmodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
+void q_abstractitemmodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
     QAbstractItemModel_OnMimeTypes((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -581,7 +581,7 @@ QMimeData* q_abstractitemmodel_mime_data(const void* self, libqt_list /* of QMod
     return QAbstractItemModel_MimeData((QAbstractItemModel*)self, indexes);
 }
 
-void q_abstractitemmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+void q_abstractitemmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
     QAbstractItemModel_OnMimeData((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -593,7 +593,7 @@ bool q_abstractitemmodel_can_drop_mime_data(const void* self, const void* data, 
     return QAbstractItemModel_CanDropMimeData((QAbstractItemModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_abstractitemmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+void q_abstractitemmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
     QAbstractItemModel_OnCanDropMimeData((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -617,7 +617,7 @@ int32_t q_abstractitemmodel_supported_drop_actions(const void* self) {
     return QAbstractItemModel_SupportedDropActions((QAbstractItemModel*)self);
 }
 
-void q_abstractitemmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
+void q_abstractitemmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
     QAbstractItemModel_OnSupportedDropActions((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -629,7 +629,7 @@ int32_t q_abstractitemmodel_supported_drag_actions(const void* self) {
     return QAbstractItemModel_SupportedDragActions((QAbstractItemModel*)self);
 }
 
-void q_abstractitemmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
+void q_abstractitemmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
     QAbstractItemModel_OnSupportedDragActions((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -749,7 +749,7 @@ bool q_abstractitemmodel_can_fetch_more(const void* self, const void* parent) {
     return QAbstractItemModel_CanFetchMore((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstractitemmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
+void q_abstractitemmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnCanFetchMore((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -761,7 +761,7 @@ int32_t q_abstractitemmodel_flags(const void* self, const void* index) {
     return QAbstractItemModel_Flags((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-void q_abstractitemmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_abstractitemmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnFlags((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -785,7 +785,7 @@ QModelIndex* q_abstractitemmodel_buddy(const void* self, const void* index) {
     return QAbstractItemModel_Buddy((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-void q_abstractitemmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_abstractitemmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnBuddy((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -798,7 +798,7 @@ libqt_list /* of QModelIndex* */ q_abstractitemmodel_match(const void* self, con
     return _arr;
 }
 
-void q_abstractitemmodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+void q_abstractitemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
     QAbstractItemModel_OnMatch((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -811,7 +811,7 @@ QSize* q_abstractitemmodel_span(const void* self, const void* index) {
     return QAbstractItemModel_Span((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-void q_abstractitemmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
+void q_abstractitemmodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnSpan((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -852,7 +852,7 @@ libqt_map /* of int to char* */ q_abstractitemmodel_role_names(const void* self)
     return _ret;
 }
 
-void q_abstractitemmodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_abstractitemmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
     QAbstractItemModel_OnRoleNames((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -897,7 +897,7 @@ void q_abstractitemmodel_multi_data(const void* self, const void* index, void* r
     QAbstractItemModel_MultiData((QAbstractItemModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_abstractitemmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
+void q_abstractitemmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
     QAbstractItemModel_OnMultiData((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -1521,7 +1521,7 @@ const QMetaObject* q_abstracttablemodel_meta_object(const void* self) {
     return QAbstractTableModel_MetaObject((QAbstractTableModel*)self);
 }
 
-void q_abstracttablemodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstracttablemodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractTableModel_OnMetaObject((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
@@ -1564,7 +1564,7 @@ QModelIndex* q_abstracttablemodel_index(const void* self, int row, int column, c
     return QAbstractTableModel_Index((QAbstractTableModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void q_abstracttablemodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void q_abstracttablemodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     QAbstractTableModel_OnIndex((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
@@ -1576,7 +1576,7 @@ QModelIndex* q_abstracttablemodel_sibling(const void* self, int row, int column,
     return QAbstractTableModel_Sibling((QAbstractTableModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void q_abstracttablemodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void q_abstracttablemodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     QAbstractTableModel_OnSibling((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
@@ -1600,7 +1600,7 @@ int32_t q_abstracttablemodel_flags(const void* self, const void* index) {
     return QAbstractTableModel_Flags((QAbstractTableModel*)self, (QModelIndex*)index);
 }
 
-void q_abstracttablemodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_abstracttablemodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
     QAbstractTableModel_OnFlags((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
@@ -1630,7 +1630,7 @@ QModelIndex* q_abstracttablemodel_parent(const void* self, const void* child) {
     return QAbstractItemModel_Parent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
-void q_abstracttablemodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_abstracttablemodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -1638,7 +1638,7 @@ bool q_abstracttablemodel_has_children(const void* self, const void* parent) {
     return QAbstractItemModel_HasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstracttablemodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
+void q_abstracttablemodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -1979,24 +1979,24 @@ int32_t q_abstracttablemodel_row_count(const void* self, const void* parent) {
     return QAbstractTableModel_RowCount((QAbstractTableModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstracttablemodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QAbstractTableModel_OnRowCount((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
+    QAbstractTableModel_OnRowCount((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 int32_t q_abstracttablemodel_column_count(const void* self, const void* parent) {
     return QAbstractTableModel_ColumnCount((QAbstractTableModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstracttablemodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QAbstractTableModel_OnColumnCount((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
+    QAbstractTableModel_OnColumnCount((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 QVariant* q_abstracttablemodel_data(const void* self, const void* index, int role) {
     return QAbstractTableModel_Data((QAbstractTableModel*)self, (QModelIndex*)index, role);
 }
 
-void q_abstracttablemodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
-    QAbstractTableModel_OnData((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
+    QAbstractTableModel_OnData((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 bool q_abstracttablemodel_set_data(void* self, const void* index, const void* value, int role) {
@@ -2019,8 +2019,8 @@ QVariant* q_abstracttablemodel_super_header_data(const void* self, int section, 
     return QAbstractTableModel_SuperHeaderData((QAbstractTableModel*)self, section, orientation, role);
 }
 
-void q_abstracttablemodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
-    QAbstractTableModel_OnHeaderData((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+    QAbstractTableModel_OnHeaderData((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 bool q_abstracttablemodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
@@ -2055,8 +2055,8 @@ libqt_map /* of int to QVariant* */ q_abstracttablemodel_super_item_data(const v
     return _ret;
 }
 
-void q_abstracttablemodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
-    QAbstractTableModel_OnItemData((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    QAbstractTableModel_OnItemData((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 bool q_abstracttablemodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
@@ -2167,8 +2167,8 @@ const char** q_abstracttablemodel_super_mime_types(const void* self) {
     return _ret;
 }
 
-void q_abstracttablemodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    QAbstractTableModel_OnMimeTypes((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    QAbstractTableModel_OnMimeTypes((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 QMimeData* q_abstracttablemodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -2179,8 +2179,8 @@ QMimeData* q_abstracttablemodel_super_mime_data(const void* self, libqt_list /* 
     return QAbstractTableModel_SuperMimeData((QAbstractTableModel*)self, indexes);
 }
 
-void q_abstracttablemodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
-    QAbstractTableModel_OnMimeData((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    QAbstractTableModel_OnMimeData((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 bool q_abstracttablemodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -2191,8 +2191,8 @@ bool q_abstracttablemodel_super_can_drop_mime_data(const void* self, const void*
     return QAbstractTableModel_SuperCanDropMimeData((QAbstractTableModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_abstracttablemodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    QAbstractTableModel_OnCanDropMimeData((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    QAbstractTableModel_OnCanDropMimeData((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 int32_t q_abstracttablemodel_supported_drop_actions(const void* self) {
@@ -2203,8 +2203,8 @@ int32_t q_abstracttablemodel_super_supported_drop_actions(const void* self) {
     return QAbstractTableModel_SuperSupportedDropActions((QAbstractTableModel*)self);
 }
 
-void q_abstracttablemodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
-    QAbstractTableModel_OnSupportedDropActions((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
+    QAbstractTableModel_OnSupportedDropActions((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 int32_t q_abstracttablemodel_supported_drag_actions(const void* self) {
@@ -2215,8 +2215,8 @@ int32_t q_abstracttablemodel_super_supported_drag_actions(const void* self) {
     return QAbstractTableModel_SuperSupportedDragActions((QAbstractTableModel*)self);
 }
 
-void q_abstracttablemodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    QAbstractTableModel_OnSupportedDragActions((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    QAbstractTableModel_OnSupportedDragActions((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 bool q_abstracttablemodel_insert_rows(void* self, int row, int count, const void* parent) {
@@ -2311,8 +2311,8 @@ bool q_abstracttablemodel_super_can_fetch_more(const void* self, const void* par
     return QAbstractTableModel_SuperCanFetchMore((QAbstractTableModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstracttablemodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    QAbstractTableModel_OnCanFetchMore((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    QAbstractTableModel_OnCanFetchMore((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 void q_abstracttablemodel_sort(void* self, int column, int32_t order) {
@@ -2335,8 +2335,8 @@ QModelIndex* q_abstracttablemodel_super_buddy(const void* self, const void* inde
     return QAbstractTableModel_SuperBuddy((QAbstractTableModel*)self, (QModelIndex*)index);
 }
 
-void q_abstracttablemodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    QAbstractTableModel_OnBuddy((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    QAbstractTableModel_OnBuddy((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_abstracttablemodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -2349,8 +2349,8 @@ libqt_list /* of QModelIndex* */ q_abstracttablemodel_super_match(const void* se
     return _arr;
 }
 
-void q_abstracttablemodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    QAbstractTableModel_OnMatch((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    QAbstractTableModel_OnMatch((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 QSize* q_abstracttablemodel_span(const void* self, const void* index) {
@@ -2361,8 +2361,8 @@ QSize* q_abstracttablemodel_super_span(const void* self, const void* index) {
     return QAbstractTableModel_SuperSpan((QAbstractTableModel*)self, (QModelIndex*)index);
 }
 
-void q_abstracttablemodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    QAbstractTableModel_OnSpan((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    QAbstractTableModel_OnSpan((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 libqt_map /* of int to char* */ q_abstracttablemodel_role_names(const void* self) {
@@ -2431,8 +2431,8 @@ libqt_map /* of int to char* */ q_abstracttablemodel_super_role_names(const void
     return _ret;
 }
 
-void q_abstracttablemodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
-    QAbstractTableModel_OnRoleNames((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+    QAbstractTableModel_OnRoleNames((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 void q_abstracttablemodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
@@ -2443,8 +2443,8 @@ void q_abstracttablemodel_super_multi_data(const void* self, const void* index, 
     QAbstractTableModel_SuperMultiData((QAbstractTableModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_abstracttablemodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    QAbstractTableModel_OnMultiData((const QAbstractTableModel*)self, (intptr_t)callback);
+void q_abstracttablemodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    QAbstractTableModel_OnMultiData((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
 bool q_abstracttablemodel_submit(void* self) {
@@ -2740,7 +2740,7 @@ const QMetaObject* q_abstractlistmodel_meta_object(const void* self) {
     return QAbstractListModel_MetaObject((QAbstractListModel*)self);
 }
 
-void q_abstractlistmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstractlistmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractListModel_OnMetaObject((QAbstractListModel*)self, (intptr_t)callback);
 }
 
@@ -2783,7 +2783,7 @@ QModelIndex* q_abstractlistmodel_index(const void* self, int row, int column, co
     return QAbstractListModel_Index((QAbstractListModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void q_abstractlistmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void q_abstractlistmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     QAbstractListModel_OnIndex((QAbstractListModel*)self, (intptr_t)callback);
 }
 
@@ -2795,7 +2795,7 @@ QModelIndex* q_abstractlistmodel_sibling(const void* self, int row, int column, 
     return QAbstractListModel_Sibling((QAbstractListModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void q_abstractlistmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void q_abstractlistmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     QAbstractListModel_OnSibling((QAbstractListModel*)self, (intptr_t)callback);
 }
 
@@ -2819,7 +2819,7 @@ int32_t q_abstractlistmodel_flags(const void* self, const void* index) {
     return QAbstractListModel_Flags((QAbstractListModel*)self, (QModelIndex*)index);
 }
 
-void q_abstractlistmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_abstractlistmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
     QAbstractListModel_OnFlags((QAbstractListModel*)self, (intptr_t)callback);
 }
 
@@ -2849,7 +2849,7 @@ QModelIndex* q_abstractlistmodel_parent(const void* self, const void* child) {
     return QAbstractItemModel_Parent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
-void q_abstractlistmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_abstractlistmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -2857,7 +2857,7 @@ int32_t q_abstractlistmodel_column_count(const void* self, const void* parent) {
     return QAbstractItemModel_ColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstractlistmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_abstractlistmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnColumnCount((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -2865,7 +2865,7 @@ bool q_abstractlistmodel_has_children(const void* self, const void* parent) {
     return QAbstractItemModel_HasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstractlistmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
+void q_abstractlistmodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -3206,16 +3206,16 @@ int32_t q_abstractlistmodel_row_count(const void* self, const void* parent) {
     return QAbstractListModel_RowCount((QAbstractListModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstractlistmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QAbstractListModel_OnRowCount((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
+    QAbstractListModel_OnRowCount((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 QVariant* q_abstractlistmodel_data(const void* self, const void* index, int role) {
     return QAbstractListModel_Data((QAbstractListModel*)self, (QModelIndex*)index, role);
 }
 
-void q_abstractlistmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
-    QAbstractListModel_OnData((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
+    QAbstractListModel_OnData((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 bool q_abstractlistmodel_set_data(void* self, const void* index, const void* value, int role) {
@@ -3238,8 +3238,8 @@ QVariant* q_abstractlistmodel_super_header_data(const void* self, int section, i
     return QAbstractListModel_SuperHeaderData((QAbstractListModel*)self, section, orientation, role);
 }
 
-void q_abstractlistmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
-    QAbstractListModel_OnHeaderData((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+    QAbstractListModel_OnHeaderData((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 bool q_abstractlistmodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
@@ -3274,8 +3274,8 @@ libqt_map /* of int to QVariant* */ q_abstractlistmodel_super_item_data(const vo
     return _ret;
 }
 
-void q_abstractlistmodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
-    QAbstractListModel_OnItemData((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    QAbstractListModel_OnItemData((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 bool q_abstractlistmodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
@@ -3386,8 +3386,8 @@ const char** q_abstractlistmodel_super_mime_types(const void* self) {
     return _ret;
 }
 
-void q_abstractlistmodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    QAbstractListModel_OnMimeTypes((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    QAbstractListModel_OnMimeTypes((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 QMimeData* q_abstractlistmodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -3398,8 +3398,8 @@ QMimeData* q_abstractlistmodel_super_mime_data(const void* self, libqt_list /* o
     return QAbstractListModel_SuperMimeData((QAbstractListModel*)self, indexes);
 }
 
-void q_abstractlistmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
-    QAbstractListModel_OnMimeData((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    QAbstractListModel_OnMimeData((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 bool q_abstractlistmodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -3410,8 +3410,8 @@ bool q_abstractlistmodel_super_can_drop_mime_data(const void* self, const void* 
     return QAbstractListModel_SuperCanDropMimeData((QAbstractListModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_abstractlistmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    QAbstractListModel_OnCanDropMimeData((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    QAbstractListModel_OnCanDropMimeData((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 int32_t q_abstractlistmodel_supported_drop_actions(const void* self) {
@@ -3422,8 +3422,8 @@ int32_t q_abstractlistmodel_super_supported_drop_actions(const void* self) {
     return QAbstractListModel_SuperSupportedDropActions((QAbstractListModel*)self);
 }
 
-void q_abstractlistmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
-    QAbstractListModel_OnSupportedDropActions((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
+    QAbstractListModel_OnSupportedDropActions((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 int32_t q_abstractlistmodel_supported_drag_actions(const void* self) {
@@ -3434,8 +3434,8 @@ int32_t q_abstractlistmodel_super_supported_drag_actions(const void* self) {
     return QAbstractListModel_SuperSupportedDragActions((QAbstractListModel*)self);
 }
 
-void q_abstractlistmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    QAbstractListModel_OnSupportedDragActions((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    QAbstractListModel_OnSupportedDragActions((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 bool q_abstractlistmodel_insert_rows(void* self, int row, int count, const void* parent) {
@@ -3530,8 +3530,8 @@ bool q_abstractlistmodel_super_can_fetch_more(const void* self, const void* pare
     return QAbstractListModel_SuperCanFetchMore((QAbstractListModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstractlistmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    QAbstractListModel_OnCanFetchMore((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    QAbstractListModel_OnCanFetchMore((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 void q_abstractlistmodel_sort(void* self, int column, int32_t order) {
@@ -3554,8 +3554,8 @@ QModelIndex* q_abstractlistmodel_super_buddy(const void* self, const void* index
     return QAbstractListModel_SuperBuddy((QAbstractListModel*)self, (QModelIndex*)index);
 }
 
-void q_abstractlistmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    QAbstractListModel_OnBuddy((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    QAbstractListModel_OnBuddy((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_abstractlistmodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -3568,8 +3568,8 @@ libqt_list /* of QModelIndex* */ q_abstractlistmodel_super_match(const void* sel
     return _arr;
 }
 
-void q_abstractlistmodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    QAbstractListModel_OnMatch((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    QAbstractListModel_OnMatch((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 QSize* q_abstractlistmodel_span(const void* self, const void* index) {
@@ -3580,8 +3580,8 @@ QSize* q_abstractlistmodel_super_span(const void* self, const void* index) {
     return QAbstractListModel_SuperSpan((QAbstractListModel*)self, (QModelIndex*)index);
 }
 
-void q_abstractlistmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    QAbstractListModel_OnSpan((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    QAbstractListModel_OnSpan((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 libqt_map /* of int to char* */ q_abstractlistmodel_role_names(const void* self) {
@@ -3650,8 +3650,8 @@ libqt_map /* of int to char* */ q_abstractlistmodel_super_role_names(const void*
     return _ret;
 }
 
-void q_abstractlistmodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
-    QAbstractListModel_OnRoleNames((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+    QAbstractListModel_OnRoleNames((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 void q_abstractlistmodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
@@ -3662,8 +3662,8 @@ void q_abstractlistmodel_super_multi_data(const void* self, const void* index, v
     QAbstractListModel_SuperMultiData((QAbstractListModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_abstractlistmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    QAbstractListModel_OnMultiData((const QAbstractListModel*)self, (intptr_t)callback);
+void q_abstractlistmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    QAbstractListModel_OnMultiData((QAbstractListModel*)self, (intptr_t)callback);
 }
 
 bool q_abstractlistmodel_submit(void* self) {

@@ -683,8 +683,8 @@ const QMetaObject* k_configloader_super_meta_object(const void* self) {
     return KConfigLoader_SuperMetaObject((KConfigLoader*)self);
 }
 
-void k_configloader_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    KConfigLoader_OnMetaObject((const KConfigLoader*)self, (intptr_t)callback);
+void k_configloader_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    KConfigLoader_OnMetaObject((KConfigLoader*)self, (intptr_t)callback);
 }
 
 void* k_configloader_metacast(void* self, const char* param1) {

@@ -14,7 +14,7 @@ const QMetaObject* k_sycoca_meta_object(const void* self) {
     return KSycoca_MetaObject((KSycoca*)self);
 }
 
-void k_sycoca_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_sycoca_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSycoca_OnMetaObject((KSycoca*)self, (intptr_t)callback);
 }
 

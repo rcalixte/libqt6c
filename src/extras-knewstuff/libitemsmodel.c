@@ -25,7 +25,7 @@ const QMetaObject* k_nscore__itemsmodel_meta_object(const void* self) {
     return KNSCore__ItemsModel_MetaObject((KNSCore__ItemsModel*)self);
 }
 
-void k_nscore__itemsmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_nscore__itemsmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KNSCore__ItemsModel_OnMetaObject((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
@@ -68,7 +68,7 @@ int32_t k_nscore__itemsmodel_row_count(const void* self, const void* parent) {
     return KNSCore__ItemsModel_RowCount((KNSCore__ItemsModel*)self, (QModelIndex*)parent);
 }
 
-void k_nscore__itemsmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void k_nscore__itemsmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
     KNSCore__ItemsModel_OnRowCount((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
@@ -80,7 +80,7 @@ QVariant* k_nscore__itemsmodel_data(const void* self, const void* index, int rol
     return KNSCore__ItemsModel_Data((KNSCore__ItemsModel*)self, (QModelIndex*)index, role);
 }
 
-void k_nscore__itemsmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
+void k_nscore__itemsmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
     KNSCore__ItemsModel_OnData((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
@@ -158,7 +158,7 @@ QModelIndex* k_nscore__itemsmodel_parent(const void* self, const void* child) {
     return QAbstractItemModel_Parent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
-void k_nscore__itemsmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void k_nscore__itemsmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -166,7 +166,7 @@ int32_t k_nscore__itemsmodel_column_count(const void* self, const void* parent) 
     return QAbstractItemModel_ColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void k_nscore__itemsmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void k_nscore__itemsmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnColumnCount((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -174,7 +174,7 @@ bool k_nscore__itemsmodel_has_children(const void* self, const void* parent) {
     return QAbstractItemModel_HasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void k_nscore__itemsmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
+void k_nscore__itemsmodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -519,8 +519,8 @@ QModelIndex* k_nscore__itemsmodel_super_index(const void* self, int row, int col
     return KNSCore__ItemsModel_SuperIndex((KNSCore__ItemsModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void k_nscore__itemsmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    KNSCore__ItemsModel_OnIndex((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    KNSCore__ItemsModel_OnIndex((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* k_nscore__itemsmodel_sibling(const void* self, int row, int column, const void* idx) {
@@ -531,8 +531,8 @@ QModelIndex* k_nscore__itemsmodel_super_sibling(const void* self, int row, int c
     return KNSCore__ItemsModel_SuperSibling((KNSCore__ItemsModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void k_nscore__itemsmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    KNSCore__ItemsModel_OnSibling((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    KNSCore__ItemsModel_OnSibling((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 bool k_nscore__itemsmodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -555,8 +555,8 @@ int32_t k_nscore__itemsmodel_super_flags(const void* self, const void* index) {
     return KNSCore__ItemsModel_SuperFlags((KNSCore__ItemsModel*)self, (QModelIndex*)index);
 }
 
-void k_nscore__itemsmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
-    KNSCore__ItemsModel_OnFlags((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
+    KNSCore__ItemsModel_OnFlags((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 bool k_nscore__itemsmodel_set_data(void* self, const void* index, const void* value, int role) {
@@ -579,8 +579,8 @@ QVariant* k_nscore__itemsmodel_super_header_data(const void* self, int section, 
     return KNSCore__ItemsModel_SuperHeaderData((KNSCore__ItemsModel*)self, section, orientation, role);
 }
 
-void k_nscore__itemsmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
-    KNSCore__ItemsModel_OnHeaderData((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+    KNSCore__ItemsModel_OnHeaderData((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 bool k_nscore__itemsmodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
@@ -615,8 +615,8 @@ libqt_map /* of int to QVariant* */ k_nscore__itemsmodel_super_item_data(const v
     return _ret;
 }
 
-void k_nscore__itemsmodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
-    KNSCore__ItemsModel_OnItemData((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    KNSCore__ItemsModel_OnItemData((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 bool k_nscore__itemsmodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
@@ -727,8 +727,8 @@ const char** k_nscore__itemsmodel_super_mime_types(const void* self) {
     return _ret;
 }
 
-void k_nscore__itemsmodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    KNSCore__ItemsModel_OnMimeTypes((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    KNSCore__ItemsModel_OnMimeTypes((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 QMimeData* k_nscore__itemsmodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -739,8 +739,8 @@ QMimeData* k_nscore__itemsmodel_super_mime_data(const void* self, libqt_list /* 
     return KNSCore__ItemsModel_SuperMimeData((KNSCore__ItemsModel*)self, indexes);
 }
 
-void k_nscore__itemsmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
-    KNSCore__ItemsModel_OnMimeData((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    KNSCore__ItemsModel_OnMimeData((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 bool k_nscore__itemsmodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -751,8 +751,8 @@ bool k_nscore__itemsmodel_super_can_drop_mime_data(const void* self, const void*
     return KNSCore__ItemsModel_SuperCanDropMimeData((KNSCore__ItemsModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void k_nscore__itemsmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    KNSCore__ItemsModel_OnCanDropMimeData((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    KNSCore__ItemsModel_OnCanDropMimeData((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 int32_t k_nscore__itemsmodel_supported_drop_actions(const void* self) {
@@ -763,8 +763,8 @@ int32_t k_nscore__itemsmodel_super_supported_drop_actions(const void* self) {
     return KNSCore__ItemsModel_SuperSupportedDropActions((KNSCore__ItemsModel*)self);
 }
 
-void k_nscore__itemsmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
-    KNSCore__ItemsModel_OnSupportedDropActions((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
+    KNSCore__ItemsModel_OnSupportedDropActions((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 int32_t k_nscore__itemsmodel_supported_drag_actions(const void* self) {
@@ -775,8 +775,8 @@ int32_t k_nscore__itemsmodel_super_supported_drag_actions(const void* self) {
     return KNSCore__ItemsModel_SuperSupportedDragActions((KNSCore__ItemsModel*)self);
 }
 
-void k_nscore__itemsmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    KNSCore__ItemsModel_OnSupportedDragActions((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    KNSCore__ItemsModel_OnSupportedDragActions((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 bool k_nscore__itemsmodel_insert_rows(void* self, int row, int count, const void* parent) {
@@ -871,8 +871,8 @@ bool k_nscore__itemsmodel_super_can_fetch_more(const void* self, const void* par
     return KNSCore__ItemsModel_SuperCanFetchMore((KNSCore__ItemsModel*)self, (QModelIndex*)parent);
 }
 
-void k_nscore__itemsmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    KNSCore__ItemsModel_OnCanFetchMore((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    KNSCore__ItemsModel_OnCanFetchMore((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 void k_nscore__itemsmodel_sort(void* self, int column, int32_t order) {
@@ -895,8 +895,8 @@ QModelIndex* k_nscore__itemsmodel_super_buddy(const void* self, const void* inde
     return KNSCore__ItemsModel_SuperBuddy((KNSCore__ItemsModel*)self, (QModelIndex*)index);
 }
 
-void k_nscore__itemsmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    KNSCore__ItemsModel_OnBuddy((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KNSCore__ItemsModel_OnBuddy((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ k_nscore__itemsmodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -909,8 +909,8 @@ libqt_list /* of QModelIndex* */ k_nscore__itemsmodel_super_match(const void* se
     return _arr;
 }
 
-void k_nscore__itemsmodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    KNSCore__ItemsModel_OnMatch((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    KNSCore__ItemsModel_OnMatch((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 QSize* k_nscore__itemsmodel_span(const void* self, const void* index) {
@@ -921,8 +921,8 @@ QSize* k_nscore__itemsmodel_super_span(const void* self, const void* index) {
     return KNSCore__ItemsModel_SuperSpan((KNSCore__ItemsModel*)self, (QModelIndex*)index);
 }
 
-void k_nscore__itemsmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    KNSCore__ItemsModel_OnSpan((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    KNSCore__ItemsModel_OnSpan((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 libqt_map /* of int to char* */ k_nscore__itemsmodel_role_names(const void* self) {
@@ -991,8 +991,8 @@ libqt_map /* of int to char* */ k_nscore__itemsmodel_super_role_names(const void
     return _ret;
 }
 
-void k_nscore__itemsmodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
-    KNSCore__ItemsModel_OnRoleNames((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+    KNSCore__ItemsModel_OnRoleNames((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 void k_nscore__itemsmodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
@@ -1003,8 +1003,8 @@ void k_nscore__itemsmodel_super_multi_data(const void* self, const void* index, 
     KNSCore__ItemsModel_SuperMultiData((KNSCore__ItemsModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_nscore__itemsmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    KNSCore__ItemsModel_OnMultiData((const KNSCore__ItemsModel*)self, (intptr_t)callback);
+void k_nscore__itemsmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    KNSCore__ItemsModel_OnMultiData((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
 bool k_nscore__itemsmodel_submit(void* self) {

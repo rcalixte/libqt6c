@@ -54,7 +54,7 @@ const QMetaObject* q_stringlistmodel_meta_object(const void* self) {
     return QStringListModel_MetaObject((QStringListModel*)self);
 }
 
-void q_stringlistmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_stringlistmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QStringListModel_OnMetaObject((QStringListModel*)self, (intptr_t)callback);
 }
 
@@ -97,7 +97,7 @@ int32_t q_stringlistmodel_row_count(const void* self, const void* parent) {
     return QStringListModel_RowCount((QStringListModel*)self, (QModelIndex*)parent);
 }
 
-void q_stringlistmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_stringlistmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QStringListModel_OnRowCount((QStringListModel*)self, (intptr_t)callback);
 }
 
@@ -109,7 +109,7 @@ QModelIndex* q_stringlistmodel_sibling(const void* self, int row, int column, co
     return QStringListModel_Sibling((QStringListModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void q_stringlistmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void q_stringlistmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     QStringListModel_OnSibling((QStringListModel*)self, (intptr_t)callback);
 }
 
@@ -121,7 +121,7 @@ QVariant* q_stringlistmodel_data(const void* self, const void* index, int role) 
     return QStringListModel_Data((QStringListModel*)self, (QModelIndex*)index, role);
 }
 
-void q_stringlistmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
+void q_stringlistmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
     QStringListModel_OnData((QStringListModel*)self, (intptr_t)callback);
 }
 
@@ -157,7 +157,7 @@ int32_t q_stringlistmodel_flags(const void* self, const void* index) {
     return QStringListModel_Flags((QStringListModel*)self, (QModelIndex*)index);
 }
 
-void q_stringlistmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_stringlistmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
     QStringListModel_OnFlags((QStringListModel*)self, (intptr_t)callback);
 }
 
@@ -211,7 +211,7 @@ libqt_map /* of int to QVariant* */ q_stringlistmodel_item_data(const void* self
     return _ret;
 }
 
-void q_stringlistmodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+void q_stringlistmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
     QStringListModel_OnItemData((QStringListModel*)self, (intptr_t)callback);
 }
 
@@ -331,7 +331,7 @@ int32_t q_stringlistmodel_supported_drop_actions(const void* self) {
     return QStringListModel_SupportedDropActions((QStringListModel*)self);
 }
 
-void q_stringlistmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
+void q_stringlistmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
     QStringListModel_OnSupportedDropActions((QStringListModel*)self, (intptr_t)callback);
 }
 
@@ -361,7 +361,7 @@ QModelIndex* q_stringlistmodel_parent(const void* self, const void* child) {
     return QAbstractItemModel_Parent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
-void q_stringlistmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_stringlistmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -369,7 +369,7 @@ int32_t q_stringlistmodel_column_count(const void* self, const void* parent) {
     return QAbstractItemModel_ColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_stringlistmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_stringlistmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnColumnCount((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -377,7 +377,7 @@ bool q_stringlistmodel_has_children(const void* self, const void* parent) {
     return QAbstractItemModel_HasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_stringlistmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
+void q_stringlistmodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -722,8 +722,8 @@ QModelIndex* q_stringlistmodel_super_index(const void* self, int row, int column
     return QStringListModel_SuperIndex((QStringListModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void q_stringlistmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    QStringListModel_OnIndex((const QStringListModel*)self, (intptr_t)callback);
+void q_stringlistmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    QStringListModel_OnIndex((QStringListModel*)self, (intptr_t)callback);
 }
 
 bool q_stringlistmodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -746,8 +746,8 @@ QVariant* q_stringlistmodel_super_header_data(const void* self, int section, int
     return QStringListModel_SuperHeaderData((QStringListModel*)self, section, orientation, role);
 }
 
-void q_stringlistmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
-    QStringListModel_OnHeaderData((const QStringListModel*)self, (intptr_t)callback);
+void q_stringlistmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+    QStringListModel_OnHeaderData((QStringListModel*)self, (intptr_t)callback);
 }
 
 bool q_stringlistmodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
@@ -796,8 +796,8 @@ const char** q_stringlistmodel_super_mime_types(const void* self) {
     return _ret;
 }
 
-void q_stringlistmodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    QStringListModel_OnMimeTypes((const QStringListModel*)self, (intptr_t)callback);
+void q_stringlistmodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    QStringListModel_OnMimeTypes((QStringListModel*)self, (intptr_t)callback);
 }
 
 QMimeData* q_stringlistmodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -808,8 +808,8 @@ QMimeData* q_stringlistmodel_super_mime_data(const void* self, libqt_list /* of 
     return QStringListModel_SuperMimeData((QStringListModel*)self, indexes);
 }
 
-void q_stringlistmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
-    QStringListModel_OnMimeData((const QStringListModel*)self, (intptr_t)callback);
+void q_stringlistmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    QStringListModel_OnMimeData((QStringListModel*)self, (intptr_t)callback);
 }
 
 bool q_stringlistmodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -820,8 +820,8 @@ bool q_stringlistmodel_super_can_drop_mime_data(const void* self, const void* da
     return QStringListModel_SuperCanDropMimeData((QStringListModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_stringlistmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    QStringListModel_OnCanDropMimeData((const QStringListModel*)self, (intptr_t)callback);
+void q_stringlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    QStringListModel_OnCanDropMimeData((QStringListModel*)self, (intptr_t)callback);
 }
 
 int32_t q_stringlistmodel_supported_drag_actions(const void* self) {
@@ -832,8 +832,8 @@ int32_t q_stringlistmodel_super_supported_drag_actions(const void* self) {
     return QStringListModel_SuperSupportedDragActions((QStringListModel*)self);
 }
 
-void q_stringlistmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    QStringListModel_OnSupportedDragActions((const QStringListModel*)self, (intptr_t)callback);
+void q_stringlistmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    QStringListModel_OnSupportedDragActions((QStringListModel*)self, (intptr_t)callback);
 }
 
 bool q_stringlistmodel_insert_columns(void* self, int column, int count, const void* parent) {
@@ -892,8 +892,8 @@ bool q_stringlistmodel_super_can_fetch_more(const void* self, const void* parent
     return QStringListModel_SuperCanFetchMore((QStringListModel*)self, (QModelIndex*)parent);
 }
 
-void q_stringlistmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    QStringListModel_OnCanFetchMore((const QStringListModel*)self, (intptr_t)callback);
+void q_stringlistmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    QStringListModel_OnCanFetchMore((QStringListModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_stringlistmodel_buddy(const void* self, const void* index) {
@@ -904,8 +904,8 @@ QModelIndex* q_stringlistmodel_super_buddy(const void* self, const void* index) 
     return QStringListModel_SuperBuddy((QStringListModel*)self, (QModelIndex*)index);
 }
 
-void q_stringlistmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    QStringListModel_OnBuddy((const QStringListModel*)self, (intptr_t)callback);
+void q_stringlistmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    QStringListModel_OnBuddy((QStringListModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_stringlistmodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -918,8 +918,8 @@ libqt_list /* of QModelIndex* */ q_stringlistmodel_super_match(const void* self,
     return _arr;
 }
 
-void q_stringlistmodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    QStringListModel_OnMatch((const QStringListModel*)self, (intptr_t)callback);
+void q_stringlistmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    QStringListModel_OnMatch((QStringListModel*)self, (intptr_t)callback);
 }
 
 QSize* q_stringlistmodel_span(const void* self, const void* index) {
@@ -930,8 +930,8 @@ QSize* q_stringlistmodel_super_span(const void* self, const void* index) {
     return QStringListModel_SuperSpan((QStringListModel*)self, (QModelIndex*)index);
 }
 
-void q_stringlistmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    QStringListModel_OnSpan((const QStringListModel*)self, (intptr_t)callback);
+void q_stringlistmodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    QStringListModel_OnSpan((QStringListModel*)self, (intptr_t)callback);
 }
 
 libqt_map /* of int to char* */ q_stringlistmodel_role_names(const void* self) {
@@ -1000,8 +1000,8 @@ libqt_map /* of int to char* */ q_stringlistmodel_super_role_names(const void* s
     return _ret;
 }
 
-void q_stringlistmodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
-    QStringListModel_OnRoleNames((const QStringListModel*)self, (intptr_t)callback);
+void q_stringlistmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+    QStringListModel_OnRoleNames((QStringListModel*)self, (intptr_t)callback);
 }
 
 void q_stringlistmodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
@@ -1012,8 +1012,8 @@ void q_stringlistmodel_super_multi_data(const void* self, const void* index, voi
     QStringListModel_SuperMultiData((QStringListModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_stringlistmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    QStringListModel_OnMultiData((const QStringListModel*)self, (intptr_t)callback);
+void q_stringlistmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    QStringListModel_OnMultiData((QStringListModel*)self, (intptr_t)callback);
 }
 
 bool q_stringlistmodel_submit(void* self) {

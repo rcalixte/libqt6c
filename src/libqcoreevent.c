@@ -58,7 +58,7 @@ QEvent* q_event_clone(const void* self) {
     return QEvent_Clone((QEvent*)self);
 }
 
-void q_event_on_clone(const void* self, QEvent* (*callback)(const void*)) {
+void q_event_on_clone(void* self, QEvent* (*callback)(const void*)) {
     QEvent_OnClone((QEvent*)self, (intptr_t)callback);
 }
 
@@ -86,7 +86,7 @@ QTimerEvent* q_timerevent_clone(const void* self) {
     return QTimerEvent_Clone((QTimerEvent*)self);
 }
 
-void q_timerevent_on_clone(const void* self, QTimerEvent* (*callback)(const void*)) {
+void q_timerevent_on_clone(void* self, QTimerEvent* (*callback)(const void*)) {
     QTimerEvent_OnClone((QTimerEvent*)self, (intptr_t)callback);
 }
 
@@ -166,7 +166,7 @@ QChildEvent* q_childevent_clone(const void* self) {
     return QChildEvent_Clone((QChildEvent*)self);
 }
 
-void q_childevent_on_clone(const void* self, QChildEvent* (*callback)(const void*)) {
+void q_childevent_on_clone(void* self, QChildEvent* (*callback)(const void*)) {
     QChildEvent_OnClone((QChildEvent*)self, (intptr_t)callback);
 }
 
@@ -254,7 +254,7 @@ QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_clone(const void* self
     return QDynamicPropertyChangeEvent_Clone((QDynamicPropertyChangeEvent*)self);
 }
 
-void q_dynamicpropertychangeevent_on_clone(const void* self, QDynamicPropertyChangeEvent* (*callback)(const void*)) {
+void q_dynamicpropertychangeevent_on_clone(void* self, QDynamicPropertyChangeEvent* (*callback)(const void*)) {
     QDynamicPropertyChangeEvent_OnClone((QDynamicPropertyChangeEvent*)self, (intptr_t)callback);
 }
 

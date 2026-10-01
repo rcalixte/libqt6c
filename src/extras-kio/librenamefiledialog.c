@@ -24,7 +24,7 @@ const QMetaObject* k_io__renamefiledialog_meta_object(const void* self) {
     return KIO__RenameFileDialog_MetaObject((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__renamefiledialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__RenameFileDialog_OnMetaObject((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
@@ -137,11 +137,11 @@ void k_io__renamefiledialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_io__renamefiledialog_as_q_paint_device(void* self) {
+QPaintDevice* k_io__renamefiledialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KIO__RenameFileDialog* k_io__renamefiledialog_from_q_paint_device(void* _qpaintdevice) {
+KIO__RenameFileDialog* k_io__renamefiledialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KIO__RenameFileDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1544,8 +1544,8 @@ QSize* k_io__renamefiledialog_super_size_hint(const void* self) {
     return KIO__RenameFileDialog_SuperSizeHint((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KIO__RenameFileDialog_OnSizeHint((const KIO__RenameFileDialog*)self, (intptr_t)callback);
+void k_io__renamefiledialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KIO__RenameFileDialog_OnSizeHint((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_io__renamefiledialog_minimum_size_hint(const void* self) {
@@ -1556,8 +1556,8 @@ QSize* k_io__renamefiledialog_super_minimum_size_hint(const void* self) {
     return KIO__RenameFileDialog_SuperMinimumSizeHint((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KIO__RenameFileDialog_OnMinimumSizeHint((const KIO__RenameFileDialog*)self, (intptr_t)callback);
+void k_io__renamefiledialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KIO__RenameFileDialog_OnMinimumSizeHint((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
 void k_io__renamefiledialog_open(void* self) {
@@ -1700,8 +1700,8 @@ int32_t k_io__renamefiledialog_super_dev_type(const void* self) {
     return KIO__RenameFileDialog_SuperDevType((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KIO__RenameFileDialog_OnDevType((const KIO__RenameFileDialog*)self, (intptr_t)callback);
+void k_io__renamefiledialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KIO__RenameFileDialog_OnDevType((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_io__renamefiledialog_height_for_width(const void* self, int param1) {
@@ -1712,8 +1712,8 @@ int32_t k_io__renamefiledialog_super_height_for_width(const void* self, int para
     return KIO__RenameFileDialog_SuperHeightForWidth((KIO__RenameFileDialog*)self, param1);
 }
 
-void k_io__renamefiledialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KIO__RenameFileDialog_OnHeightForWidth((const KIO__RenameFileDialog*)self, (intptr_t)callback);
+void k_io__renamefiledialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KIO__RenameFileDialog_OnHeightForWidth((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
 bool k_io__renamefiledialog_has_height_for_width(const void* self) {
@@ -1724,8 +1724,8 @@ bool k_io__renamefiledialog_super_has_height_for_width(const void* self) {
     return KIO__RenameFileDialog_SuperHasHeightForWidth((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KIO__RenameFileDialog_OnHasHeightForWidth((const KIO__RenameFileDialog*)self, (intptr_t)callback);
+void k_io__renamefiledialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KIO__RenameFileDialog_OnHasHeightForWidth((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_io__renamefiledialog_paint_engine(const void* self) {
@@ -1736,8 +1736,8 @@ QPaintEngine* k_io__renamefiledialog_super_paint_engine(const void* self) {
     return KIO__RenameFileDialog_SuperPaintEngine((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KIO__RenameFileDialog_OnPaintEngine((const KIO__RenameFileDialog*)self, (intptr_t)callback);
+void k_io__renamefiledialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KIO__RenameFileDialog_OnPaintEngine((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
 bool k_io__renamefiledialog_event(void* self, void* event) {
@@ -2012,8 +2012,8 @@ int32_t k_io__renamefiledialog_super_metric(const void* self, int32_t param1) {
     return KIO__RenameFileDialog_SuperMetric((KIO__RenameFileDialog*)self, param1);
 }
 
-void k_io__renamefiledialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KIO__RenameFileDialog_OnMetric((const KIO__RenameFileDialog*)self, (intptr_t)callback);
+void k_io__renamefiledialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KIO__RenameFileDialog_OnMetric((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
 void k_io__renamefiledialog_init_painter(const void* self, void* painter) {
@@ -2024,8 +2024,8 @@ void k_io__renamefiledialog_super_init_painter(const void* self, void* painter) 
     KIO__RenameFileDialog_SuperInitPainter((KIO__RenameFileDialog*)self, (QPainter*)painter);
 }
 
-void k_io__renamefiledialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KIO__RenameFileDialog_OnInitPainter((const KIO__RenameFileDialog*)self, (intptr_t)callback);
+void k_io__renamefiledialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KIO__RenameFileDialog_OnInitPainter((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_io__renamefiledialog_redirected(const void* self, void* offset) {
@@ -2036,8 +2036,8 @@ QPaintDevice* k_io__renamefiledialog_super_redirected(const void* self, void* of
     return KIO__RenameFileDialog_SuperRedirected((KIO__RenameFileDialog*)self, (QPoint*)offset);
 }
 
-void k_io__renamefiledialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KIO__RenameFileDialog_OnRedirected((const KIO__RenameFileDialog*)self, (intptr_t)callback);
+void k_io__renamefiledialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KIO__RenameFileDialog_OnRedirected((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_io__renamefiledialog_shared_painter(const void* self) {
@@ -2048,8 +2048,8 @@ QPainter* k_io__renamefiledialog_super_shared_painter(const void* self) {
     return KIO__RenameFileDialog_SuperSharedPainter((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KIO__RenameFileDialog_OnSharedPainter((const KIO__RenameFileDialog*)self, (intptr_t)callback);
+void k_io__renamefiledialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KIO__RenameFileDialog_OnSharedPainter((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
 void k_io__renamefiledialog_input_method_event(void* self, void* param1) {
@@ -2072,8 +2072,8 @@ QVariant* k_io__renamefiledialog_super_input_method_query(const void* self, int3
     return KIO__RenameFileDialog_SuperInputMethodQuery((KIO__RenameFileDialog*)self, param1);
 }
 
-void k_io__renamefiledialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KIO__RenameFileDialog_OnInputMethodQuery((const KIO__RenameFileDialog*)self, (intptr_t)callback);
+void k_io__renamefiledialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KIO__RenameFileDialog_OnInputMethodQuery((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
 bool k_io__renamefiledialog_focus_next_prev_child(void* self, bool next) {

@@ -27,7 +27,7 @@ const QMetaObject* k_bugreport_meta_object(const void* self) {
     return KBugReport_MetaObject((KBugReport*)self);
 }
 
-void k_bugreport_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_bugreport_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KBugReport_OnMetaObject((KBugReport*)self, (intptr_t)callback);
 }
 
@@ -140,11 +140,11 @@ void k_bugreport_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_bugreport_as_q_paint_device(void* self) {
+QPaintDevice* k_bugreport_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KBugReport* k_bugreport_from_q_paint_device(void* _qpaintdevice) {
+KBugReport* k_bugreport_from_q_paint_device(const void* _qpaintdevice) {
     return (KBugReport*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1547,8 +1547,8 @@ QSize* k_bugreport_super_size_hint(const void* self) {
     return KBugReport_SuperSizeHint((KBugReport*)self);
 }
 
-void k_bugreport_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KBugReport_OnSizeHint((const KBugReport*)self, (intptr_t)callback);
+void k_bugreport_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KBugReport_OnSizeHint((KBugReport*)self, (intptr_t)callback);
 }
 
 QSize* k_bugreport_minimum_size_hint(const void* self) {
@@ -1559,8 +1559,8 @@ QSize* k_bugreport_super_minimum_size_hint(const void* self) {
     return KBugReport_SuperMinimumSizeHint((KBugReport*)self);
 }
 
-void k_bugreport_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KBugReport_OnMinimumSizeHint((const KBugReport*)self, (intptr_t)callback);
+void k_bugreport_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KBugReport_OnMinimumSizeHint((KBugReport*)self, (intptr_t)callback);
 }
 
 void k_bugreport_open(void* self) {
@@ -1691,8 +1691,8 @@ int32_t k_bugreport_super_dev_type(const void* self) {
     return KBugReport_SuperDevType((KBugReport*)self);
 }
 
-void k_bugreport_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KBugReport_OnDevType((const KBugReport*)self, (intptr_t)callback);
+void k_bugreport_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KBugReport_OnDevType((KBugReport*)self, (intptr_t)callback);
 }
 
 int32_t k_bugreport_height_for_width(const void* self, int param1) {
@@ -1703,8 +1703,8 @@ int32_t k_bugreport_super_height_for_width(const void* self, int param1) {
     return KBugReport_SuperHeightForWidth((KBugReport*)self, param1);
 }
 
-void k_bugreport_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KBugReport_OnHeightForWidth((const KBugReport*)self, (intptr_t)callback);
+void k_bugreport_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KBugReport_OnHeightForWidth((KBugReport*)self, (intptr_t)callback);
 }
 
 bool k_bugreport_has_height_for_width(const void* self) {
@@ -1715,8 +1715,8 @@ bool k_bugreport_super_has_height_for_width(const void* self) {
     return KBugReport_SuperHasHeightForWidth((KBugReport*)self);
 }
 
-void k_bugreport_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KBugReport_OnHasHeightForWidth((const KBugReport*)self, (intptr_t)callback);
+void k_bugreport_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KBugReport_OnHasHeightForWidth((KBugReport*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_bugreport_paint_engine(const void* self) {
@@ -1727,8 +1727,8 @@ QPaintEngine* k_bugreport_super_paint_engine(const void* self) {
     return KBugReport_SuperPaintEngine((KBugReport*)self);
 }
 
-void k_bugreport_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KBugReport_OnPaintEngine((const KBugReport*)self, (intptr_t)callback);
+void k_bugreport_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KBugReport_OnPaintEngine((KBugReport*)self, (intptr_t)callback);
 }
 
 bool k_bugreport_event(void* self, void* event) {
@@ -2003,8 +2003,8 @@ int32_t k_bugreport_super_metric(const void* self, int32_t param1) {
     return KBugReport_SuperMetric((KBugReport*)self, param1);
 }
 
-void k_bugreport_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KBugReport_OnMetric((const KBugReport*)self, (intptr_t)callback);
+void k_bugreport_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KBugReport_OnMetric((KBugReport*)self, (intptr_t)callback);
 }
 
 void k_bugreport_init_painter(const void* self, void* painter) {
@@ -2015,8 +2015,8 @@ void k_bugreport_super_init_painter(const void* self, void* painter) {
     KBugReport_SuperInitPainter((KBugReport*)self, (QPainter*)painter);
 }
 
-void k_bugreport_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KBugReport_OnInitPainter((const KBugReport*)self, (intptr_t)callback);
+void k_bugreport_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KBugReport_OnInitPainter((KBugReport*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_bugreport_redirected(const void* self, void* offset) {
@@ -2027,8 +2027,8 @@ QPaintDevice* k_bugreport_super_redirected(const void* self, void* offset) {
     return KBugReport_SuperRedirected((KBugReport*)self, (QPoint*)offset);
 }
 
-void k_bugreport_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KBugReport_OnRedirected((const KBugReport*)self, (intptr_t)callback);
+void k_bugreport_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KBugReport_OnRedirected((KBugReport*)self, (intptr_t)callback);
 }
 
 QPainter* k_bugreport_shared_painter(const void* self) {
@@ -2039,8 +2039,8 @@ QPainter* k_bugreport_super_shared_painter(const void* self) {
     return KBugReport_SuperSharedPainter((KBugReport*)self);
 }
 
-void k_bugreport_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KBugReport_OnSharedPainter((const KBugReport*)self, (intptr_t)callback);
+void k_bugreport_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KBugReport_OnSharedPainter((KBugReport*)self, (intptr_t)callback);
 }
 
 void k_bugreport_input_method_event(void* self, void* param1) {
@@ -2063,8 +2063,8 @@ QVariant* k_bugreport_super_input_method_query(const void* self, int32_t param1)
     return KBugReport_SuperInputMethodQuery((KBugReport*)self, param1);
 }
 
-void k_bugreport_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KBugReport_OnInputMethodQuery((const KBugReport*)self, (intptr_t)callback);
+void k_bugreport_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KBugReport_OnInputMethodQuery((KBugReport*)self, (intptr_t)callback);
 }
 
 bool k_bugreport_focus_next_prev_child(void* self, bool next) {

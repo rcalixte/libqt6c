@@ -43,7 +43,7 @@ const QMetaObject* q_dockwidget_meta_object(const void* self) {
     return QDockWidget_MetaObject((QDockWidget*)self);
 }
 
-void q_dockwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_dockwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDockWidget_OnMetaObject((QDockWidget*)self, (intptr_t)callback);
 }
 
@@ -222,7 +222,7 @@ void q_dockwidget_init_style_option(const void* self, void* option) {
     QDockWidget_InitStyleOption((QDockWidget*)self, (QStyleOptionDockWidget*)option);
 }
 
-void q_dockwidget_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_dockwidget_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QDockWidget_OnInitStyleOption((QDockWidget*)self, (intptr_t)callback);
 }
 
@@ -244,11 +244,11 @@ const char* q_dockwidget_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_dockwidget_as_q_paint_device(void* self) {
+QPaintDevice* q_dockwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QDockWidget* q_dockwidget_from_q_paint_device(void* _qpaintdevice) {
+QDockWidget* q_dockwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (QDockWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1639,8 +1639,8 @@ int32_t q_dockwidget_super_dev_type(const void* self) {
     return QDockWidget_SuperDevType((QDockWidget*)self);
 }
 
-void q_dockwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QDockWidget_OnDevType((const QDockWidget*)self, (intptr_t)callback);
+void q_dockwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QDockWidget_OnDevType((QDockWidget*)self, (intptr_t)callback);
 }
 
 void q_dockwidget_set_visible(void* self, bool visible) {
@@ -1663,8 +1663,8 @@ QSize* q_dockwidget_super_size_hint(const void* self) {
     return QDockWidget_SuperSizeHint((QDockWidget*)self);
 }
 
-void q_dockwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDockWidget_OnSizeHint((const QDockWidget*)self, (intptr_t)callback);
+void q_dockwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDockWidget_OnSizeHint((QDockWidget*)self, (intptr_t)callback);
 }
 
 QSize* q_dockwidget_minimum_size_hint(const void* self) {
@@ -1675,8 +1675,8 @@ QSize* q_dockwidget_super_minimum_size_hint(const void* self) {
     return QDockWidget_SuperMinimumSizeHint((QDockWidget*)self);
 }
 
-void q_dockwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDockWidget_OnMinimumSizeHint((const QDockWidget*)self, (intptr_t)callback);
+void q_dockwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDockWidget_OnMinimumSizeHint((QDockWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_dockwidget_height_for_width(const void* self, int param1) {
@@ -1687,8 +1687,8 @@ int32_t q_dockwidget_super_height_for_width(const void* self, int param1) {
     return QDockWidget_SuperHeightForWidth((QDockWidget*)self, param1);
 }
 
-void q_dockwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QDockWidget_OnHeightForWidth((const QDockWidget*)self, (intptr_t)callback);
+void q_dockwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QDockWidget_OnHeightForWidth((QDockWidget*)self, (intptr_t)callback);
 }
 
 bool q_dockwidget_has_height_for_width(const void* self) {
@@ -1699,8 +1699,8 @@ bool q_dockwidget_super_has_height_for_width(const void* self) {
     return QDockWidget_SuperHasHeightForWidth((QDockWidget*)self);
 }
 
-void q_dockwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QDockWidget_OnHasHeightForWidth((const QDockWidget*)self, (intptr_t)callback);
+void q_dockwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QDockWidget_OnHasHeightForWidth((QDockWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_dockwidget_paint_engine(const void* self) {
@@ -1711,8 +1711,8 @@ QPaintEngine* q_dockwidget_super_paint_engine(const void* self) {
     return QDockWidget_SuperPaintEngine((QDockWidget*)self);
 }
 
-void q_dockwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QDockWidget_OnPaintEngine((const QDockWidget*)self, (intptr_t)callback);
+void q_dockwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QDockWidget_OnPaintEngine((QDockWidget*)self, (intptr_t)callback);
 }
 
 void q_dockwidget_mouse_press_event(void* self, void* event) {
@@ -1999,8 +1999,8 @@ int32_t q_dockwidget_super_metric(const void* self, int32_t param1) {
     return QDockWidget_SuperMetric((QDockWidget*)self, param1);
 }
 
-void q_dockwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QDockWidget_OnMetric((const QDockWidget*)self, (intptr_t)callback);
+void q_dockwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QDockWidget_OnMetric((QDockWidget*)self, (intptr_t)callback);
 }
 
 void q_dockwidget_init_painter(const void* self, void* painter) {
@@ -2011,8 +2011,8 @@ void q_dockwidget_super_init_painter(const void* self, void* painter) {
     QDockWidget_SuperInitPainter((QDockWidget*)self, (QPainter*)painter);
 }
 
-void q_dockwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QDockWidget_OnInitPainter((const QDockWidget*)self, (intptr_t)callback);
+void q_dockwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QDockWidget_OnInitPainter((QDockWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_dockwidget_redirected(const void* self, void* offset) {
@@ -2023,8 +2023,8 @@ QPaintDevice* q_dockwidget_super_redirected(const void* self, void* offset) {
     return QDockWidget_SuperRedirected((QDockWidget*)self, (QPoint*)offset);
 }
 
-void q_dockwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QDockWidget_OnRedirected((const QDockWidget*)self, (intptr_t)callback);
+void q_dockwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QDockWidget_OnRedirected((QDockWidget*)self, (intptr_t)callback);
 }
 
 QPainter* q_dockwidget_shared_painter(const void* self) {
@@ -2035,8 +2035,8 @@ QPainter* q_dockwidget_super_shared_painter(const void* self) {
     return QDockWidget_SuperSharedPainter((QDockWidget*)self);
 }
 
-void q_dockwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QDockWidget_OnSharedPainter((const QDockWidget*)self, (intptr_t)callback);
+void q_dockwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QDockWidget_OnSharedPainter((QDockWidget*)self, (intptr_t)callback);
 }
 
 void q_dockwidget_input_method_event(void* self, void* param1) {
@@ -2059,8 +2059,8 @@ QVariant* q_dockwidget_super_input_method_query(const void* self, int32_t param1
     return QDockWidget_SuperInputMethodQuery((QDockWidget*)self, param1);
 }
 
-void q_dockwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QDockWidget_OnInputMethodQuery((const QDockWidget*)self, (intptr_t)callback);
+void q_dockwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QDockWidget_OnInputMethodQuery((QDockWidget*)self, (intptr_t)callback);
 }
 
 bool q_dockwidget_focus_next_prev_child(void* self, bool next) {

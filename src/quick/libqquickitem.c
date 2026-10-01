@@ -30,7 +30,7 @@ const QMetaObject* q_quicktransform_meta_object(const void* self) {
     return QQuickTransform_MetaObject((QQuickTransform*)self);
 }
 
-void q_quicktransform_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quicktransform_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickTransform_OnMetaObject((QQuickTransform*)self, (intptr_t)callback);
 }
 
@@ -81,7 +81,7 @@ void q_quicktransform_apply_to(const void* self, void* matrix) {
     QQuickTransform_ApplyTo((QQuickTransform*)self, (QMatrix4x4*)matrix);
 }
 
-void q_quicktransform_on_apply_to(const void* self, void (*callback)(const void*, void*)) {
+void q_quicktransform_on_apply_to(void* self, void (*callback)(const void*, void*)) {
     QQuickTransform_OnApplyTo((QQuickTransform*)self, (intptr_t)callback);
 }
 
@@ -428,11 +428,11 @@ QQuickItem* q_quickitem_new2(void* parent) {
     return QQuickItem_New2((QQuickItem*)parent);
 }
 
-QQmlParserStatus* q_quickitem_as_q_qml_parser_status(void* self) {
+QQmlParserStatus* q_quickitem_as_q_qml_parser_status(const void* self) {
     return QQuickItem_AsQQmlParserStatus((QQuickItem*)self);
 }
 
-QQuickItem* q_quickitem_from_q_qml_parser_status(void* _qqmlparserstatus) {
+QQuickItem* q_quickitem_from_q_qml_parser_status(const void* _qqmlparserstatus) {
     return (QQuickItem*)QQuickItem_FromQQmlParserStatus((QQmlParserStatus*)_qqmlparserstatus);
 }
 
@@ -440,7 +440,7 @@ const QMetaObject* q_quickitem_meta_object(const void* self) {
     return QQuickItem_MetaObject((QQuickItem*)self);
 }
 
-void q_quickitem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quickitem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickItem_OnMetaObject((QQuickItem*)self, (intptr_t)callback);
 }
 
@@ -715,7 +715,7 @@ QRectF* q_quickitem_bounding_rect(const void* self) {
     return QQuickItem_BoundingRect((QQuickItem*)self);
 }
 
-void q_quickitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*)) {
+void q_quickitem_on_bounding_rect(void* self, QRectF* (*callback)(const void*)) {
     QQuickItem_OnBoundingRect((QQuickItem*)self, (intptr_t)callback);
 }
 
@@ -727,7 +727,7 @@ QRectF* q_quickitem_clip_rect(const void* self) {
     return QQuickItem_ClipRect((QQuickItem*)self);
 }
 
-void q_quickitem_on_clip_rect(const void* self, QRectF* (*callback)(const void*)) {
+void q_quickitem_on_clip_rect(void* self, QRectF* (*callback)(const void*)) {
     QQuickItem_OnClipRect((QQuickItem*)self, (intptr_t)callback);
 }
 
@@ -863,7 +863,7 @@ bool q_quickitem_contains(const void* self, const void* point) {
     return QQuickItem_Contains((QQuickItem*)self, (QPointF*)point);
 }
 
-void q_quickitem_on_contains(const void* self, bool (*callback)(const void*, const void*)) {
+void q_quickitem_on_contains(void* self, bool (*callback)(const void*, const void*)) {
     QQuickItem_OnContains((QQuickItem*)self, (intptr_t)callback);
 }
 
@@ -987,7 +987,7 @@ QVariant* q_quickitem_input_method_query(const void* self, int32_t query) {
     return QQuickItem_InputMethodQuery((QQuickItem*)self, query);
 }
 
-void q_quickitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+void q_quickitem_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
     QQuickItem_OnInputMethodQuery((QQuickItem*)self, (intptr_t)callback);
 }
 
@@ -999,7 +999,7 @@ bool q_quickitem_is_texture_provider(const void* self) {
     return QQuickItem_IsTextureProvider((QQuickItem*)self);
 }
 
-void q_quickitem_on_is_texture_provider(const void* self, bool (*callback)(const void*)) {
+void q_quickitem_on_is_texture_provider(void* self, bool (*callback)(const void*)) {
     QQuickItem_OnIsTextureProvider((QQuickItem*)self, (intptr_t)callback);
 }
 
@@ -1011,7 +1011,7 @@ QSGTextureProvider* q_quickitem_texture_provider(const void* self) {
     return QQuickItem_TextureProvider((QQuickItem*)self);
 }
 
-void q_quickitem_on_texture_provider(const void* self, QSGTextureProvider* (*callback)(const void*)) {
+void q_quickitem_on_texture_provider(void* self, QSGTextureProvider* (*callback)(const void*)) {
     QQuickItem_OnTextureProvider((QQuickItem*)self, (intptr_t)callback);
 }
 

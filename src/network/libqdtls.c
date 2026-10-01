@@ -23,7 +23,7 @@ const QMetaObject* q_dtlsclientverifier_meta_object(const void* self) {
     return QDtlsClientVerifier_MetaObject((QDtlsClientVerifier*)self);
 }
 
-void q_dtlsclientverifier_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_dtlsclientverifier_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDtlsClientVerifier_OnMetaObject((QDtlsClientVerifier*)self, (intptr_t)callback);
 }
 
@@ -435,7 +435,7 @@ const QMetaObject* q_dtls_meta_object(const void* self) {
     return QDtls_MetaObject((QDtls*)self);
 }
 
-void q_dtls_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_dtls_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDtls_OnMetaObject((QDtls*)self, (intptr_t)callback);
 }
 

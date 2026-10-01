@@ -29,7 +29,7 @@ const QMetaObject* q_statemachine_meta_object(const void* self) {
     return QStateMachine_MetaObject((QStateMachine*)self);
 }
 
-void q_statemachine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_statemachine_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QStateMachine_OnMetaObject((QStateMachine*)self, (intptr_t)callback);
 }
 
@@ -761,8 +761,8 @@ QEvent* q_statemachine__signalevent_super_clone(const void* self) {
     return QStateMachine__SignalEvent_SuperClone((QStateMachine__SignalEvent*)self);
 }
 
-void q_statemachine__signalevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    QStateMachine__SignalEvent_OnClone((const QStateMachine__SignalEvent*)self, (intptr_t)callback);
+void q_statemachine__signalevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    QStateMachine__SignalEvent_OnClone((QStateMachine__SignalEvent*)self, (intptr_t)callback);
 }
 
 void q_statemachine__signalevent_delete(void* self) {
@@ -849,8 +849,8 @@ QEvent* q_statemachine__wrappedevent_super_clone(const void* self) {
     return QStateMachine__WrappedEvent_SuperClone((QStateMachine__WrappedEvent*)self);
 }
 
-void q_statemachine__wrappedevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    QStateMachine__WrappedEvent_OnClone((const QStateMachine__WrappedEvent*)self, (intptr_t)callback);
+void q_statemachine__wrappedevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    QStateMachine__WrappedEvent_OnClone((QStateMachine__WrappedEvent*)self, (intptr_t)callback);
 }
 
 void q_statemachine__wrappedevent_delete(void* self) {

@@ -19,7 +19,7 @@ const QMetaObject* k_keysequencerecorder_meta_object(const void* self) {
     return KKeySequenceRecorder_MetaObject((KKeySequenceRecorder*)self);
 }
 
-void k_keysequencerecorder_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_keysequencerecorder_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KKeySequenceRecorder_OnMetaObject((KKeySequenceRecorder*)self, (intptr_t)callback);
 }
 

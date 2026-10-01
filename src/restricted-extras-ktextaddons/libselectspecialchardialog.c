@@ -23,7 +23,7 @@ const QMetaObject* k_textaddonswidgets__selectspecialchardialog_meta_object(cons
     return TextAddonsWidgets__SelectSpecialCharDialog_MetaObject((TextAddonsWidgets__SelectSpecialCharDialog*)self);
 }
 
-void k_textaddonswidgets__selectspecialchardialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textaddonswidgets__selectspecialchardialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextAddonsWidgets__SelectSpecialCharDialog_OnMetaObject((TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
 }
 
@@ -148,11 +148,11 @@ void k_textaddonswidgets__selectspecialchardialog_on_rejected(void* self, void (
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_textaddonswidgets__selectspecialchardialog_as_q_paint_device(void* self) {
+QPaintDevice* k_textaddonswidgets__selectspecialchardialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextAddonsWidgets__SelectSpecialCharDialog* k_textaddonswidgets__selectspecialchardialog_from_q_paint_device(void* _qpaintdevice) {
+TextAddonsWidgets__SelectSpecialCharDialog* k_textaddonswidgets__selectspecialchardialog_from_q_paint_device(const void* _qpaintdevice) {
     return (TextAddonsWidgets__SelectSpecialCharDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1555,8 +1555,8 @@ QSize* k_textaddonswidgets__selectspecialchardialog_super_size_hint(const void* 
     return TextAddonsWidgets__SelectSpecialCharDialog_SuperSizeHint((TextAddonsWidgets__SelectSpecialCharDialog*)self);
 }
 
-void k_textaddonswidgets__selectspecialchardialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextAddonsWidgets__SelectSpecialCharDialog_OnSizeHint((const TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
+void k_textaddonswidgets__selectspecialchardialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextAddonsWidgets__SelectSpecialCharDialog_OnSizeHint((TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_textaddonswidgets__selectspecialchardialog_minimum_size_hint(const void* self) {
@@ -1567,8 +1567,8 @@ QSize* k_textaddonswidgets__selectspecialchardialog_super_minimum_size_hint(cons
     return TextAddonsWidgets__SelectSpecialCharDialog_SuperMinimumSizeHint((TextAddonsWidgets__SelectSpecialCharDialog*)self);
 }
 
-void k_textaddonswidgets__selectspecialchardialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextAddonsWidgets__SelectSpecialCharDialog_OnMinimumSizeHint((const TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
+void k_textaddonswidgets__selectspecialchardialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextAddonsWidgets__SelectSpecialCharDialog_OnMinimumSizeHint((TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
 }
 
 void k_textaddonswidgets__selectspecialchardialog_open(void* self) {
@@ -1711,8 +1711,8 @@ int32_t k_textaddonswidgets__selectspecialchardialog_super_dev_type(const void* 
     return TextAddonsWidgets__SelectSpecialCharDialog_SuperDevType((TextAddonsWidgets__SelectSpecialCharDialog*)self);
 }
 
-void k_textaddonswidgets__selectspecialchardialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextAddonsWidgets__SelectSpecialCharDialog_OnDevType((const TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
+void k_textaddonswidgets__selectspecialchardialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextAddonsWidgets__SelectSpecialCharDialog_OnDevType((TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_textaddonswidgets__selectspecialchardialog_height_for_width(const void* self, int param1) {
@@ -1723,8 +1723,8 @@ int32_t k_textaddonswidgets__selectspecialchardialog_super_height_for_width(cons
     return TextAddonsWidgets__SelectSpecialCharDialog_SuperHeightForWidth((TextAddonsWidgets__SelectSpecialCharDialog*)self, param1);
 }
 
-void k_textaddonswidgets__selectspecialchardialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextAddonsWidgets__SelectSpecialCharDialog_OnHeightForWidth((const TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
+void k_textaddonswidgets__selectspecialchardialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextAddonsWidgets__SelectSpecialCharDialog_OnHeightForWidth((TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
 }
 
 bool k_textaddonswidgets__selectspecialchardialog_has_height_for_width(const void* self) {
@@ -1735,8 +1735,8 @@ bool k_textaddonswidgets__selectspecialchardialog_super_has_height_for_width(con
     return TextAddonsWidgets__SelectSpecialCharDialog_SuperHasHeightForWidth((TextAddonsWidgets__SelectSpecialCharDialog*)self);
 }
 
-void k_textaddonswidgets__selectspecialchardialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextAddonsWidgets__SelectSpecialCharDialog_OnHasHeightForWidth((const TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
+void k_textaddonswidgets__selectspecialchardialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextAddonsWidgets__SelectSpecialCharDialog_OnHasHeightForWidth((TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textaddonswidgets__selectspecialchardialog_paint_engine(const void* self) {
@@ -1747,8 +1747,8 @@ QPaintEngine* k_textaddonswidgets__selectspecialchardialog_super_paint_engine(co
     return TextAddonsWidgets__SelectSpecialCharDialog_SuperPaintEngine((TextAddonsWidgets__SelectSpecialCharDialog*)self);
 }
 
-void k_textaddonswidgets__selectspecialchardialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextAddonsWidgets__SelectSpecialCharDialog_OnPaintEngine((const TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
+void k_textaddonswidgets__selectspecialchardialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextAddonsWidgets__SelectSpecialCharDialog_OnPaintEngine((TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
 }
 
 bool k_textaddonswidgets__selectspecialchardialog_event(void* self, void* event) {
@@ -2023,8 +2023,8 @@ int32_t k_textaddonswidgets__selectspecialchardialog_super_metric(const void* se
     return TextAddonsWidgets__SelectSpecialCharDialog_SuperMetric((TextAddonsWidgets__SelectSpecialCharDialog*)self, param1);
 }
 
-void k_textaddonswidgets__selectspecialchardialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextAddonsWidgets__SelectSpecialCharDialog_OnMetric((const TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
+void k_textaddonswidgets__selectspecialchardialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextAddonsWidgets__SelectSpecialCharDialog_OnMetric((TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
 }
 
 void k_textaddonswidgets__selectspecialchardialog_init_painter(const void* self, void* painter) {
@@ -2035,8 +2035,8 @@ void k_textaddonswidgets__selectspecialchardialog_super_init_painter(const void*
     TextAddonsWidgets__SelectSpecialCharDialog_SuperInitPainter((TextAddonsWidgets__SelectSpecialCharDialog*)self, (QPainter*)painter);
 }
 
-void k_textaddonswidgets__selectspecialchardialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextAddonsWidgets__SelectSpecialCharDialog_OnInitPainter((const TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
+void k_textaddonswidgets__selectspecialchardialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextAddonsWidgets__SelectSpecialCharDialog_OnInitPainter((TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textaddonswidgets__selectspecialchardialog_redirected(const void* self, void* offset) {
@@ -2047,8 +2047,8 @@ QPaintDevice* k_textaddonswidgets__selectspecialchardialog_super_redirected(cons
     return TextAddonsWidgets__SelectSpecialCharDialog_SuperRedirected((TextAddonsWidgets__SelectSpecialCharDialog*)self, (QPoint*)offset);
 }
 
-void k_textaddonswidgets__selectspecialchardialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextAddonsWidgets__SelectSpecialCharDialog_OnRedirected((const TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
+void k_textaddonswidgets__selectspecialchardialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextAddonsWidgets__SelectSpecialCharDialog_OnRedirected((TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_textaddonswidgets__selectspecialchardialog_shared_painter(const void* self) {
@@ -2059,8 +2059,8 @@ QPainter* k_textaddonswidgets__selectspecialchardialog_super_shared_painter(cons
     return TextAddonsWidgets__SelectSpecialCharDialog_SuperSharedPainter((TextAddonsWidgets__SelectSpecialCharDialog*)self);
 }
 
-void k_textaddonswidgets__selectspecialchardialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextAddonsWidgets__SelectSpecialCharDialog_OnSharedPainter((const TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
+void k_textaddonswidgets__selectspecialchardialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextAddonsWidgets__SelectSpecialCharDialog_OnSharedPainter((TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
 }
 
 void k_textaddonswidgets__selectspecialchardialog_input_method_event(void* self, void* param1) {
@@ -2083,8 +2083,8 @@ QVariant* k_textaddonswidgets__selectspecialchardialog_super_input_method_query(
     return TextAddonsWidgets__SelectSpecialCharDialog_SuperInputMethodQuery((TextAddonsWidgets__SelectSpecialCharDialog*)self, param1);
 }
 
-void k_textaddonswidgets__selectspecialchardialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextAddonsWidgets__SelectSpecialCharDialog_OnInputMethodQuery((const TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
+void k_textaddonswidgets__selectspecialchardialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextAddonsWidgets__SelectSpecialCharDialog_OnInputMethodQuery((TextAddonsWidgets__SelectSpecialCharDialog*)self, (intptr_t)callback);
 }
 
 bool k_textaddonswidgets__selectspecialchardialog_focus_next_prev_child(void* self, bool next) {

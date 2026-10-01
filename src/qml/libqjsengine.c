@@ -18,7 +18,7 @@ const QMetaObject* q_jsengine_meta_object(const void* self) {
     return QJSEngine_MetaObject((QJSEngine*)self);
 }
 
-void q_jsengine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_jsengine_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QJSEngine_OnMetaObject((QJSEngine*)self, (intptr_t)callback);
 }
 

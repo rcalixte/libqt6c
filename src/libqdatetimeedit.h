@@ -83,10 +83,10 @@ const QMetaObject* q_datetimeedit_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback const QMetaObject* func(const QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_datetimeedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -461,12 +461,12 @@ QSize* q_datetimeedit_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback QSize* func(const QDateTimeEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_datetimeedit_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_datetimeedit_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
 ///
@@ -726,10 +726,10 @@ int32_t q_datetimeedit_validate(const void* self, const char* input, int* pos);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback int32_t func(const QDateTimeEdit* self, const char* input, int* pos)
 ///
-void q_datetimeedit_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*));
+void q_datetimeedit_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
 ///
@@ -754,10 +754,10 @@ void q_datetimeedit_fixup(const void* self, const char* input);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback void func(const QDateTimeEdit* self, const char* input)
 ///
-void q_datetimeedit_on_fixup(const void* self, void (*callback)(const void*, const char*));
+void q_datetimeedit_on_fixup(void* self, void (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
 ///
@@ -779,12 +779,12 @@ QDateTime* q_datetimeedit_date_time_from_text(const void* self, const char* text
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback QDateTime* func(const QDateTimeEdit* self, const char* text)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_datetimeedit_on_date_time_from_text(const void* self, QDateTime* (*callback)(const void*, const char*));
+void q_datetimeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
 ///
@@ -808,10 +808,10 @@ const char* q_datetimeedit_text_from_date_time(const void* self, const void* dt)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback const char* func(const QDateTimeEdit* self, QDateTime* dt)
 ///
-void q_datetimeedit_on_text_from_date_time(const void* self, const char* (*callback)(const void*, const void*));
+void q_datetimeedit_on_text_from_date_time(void* self, const char* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
@@ -834,10 +834,10 @@ int32_t q_datetimeedit_step_enabled(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback int32_t func(const QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_step_enabled(const void* self, int32_t (*callback)(const void*));
+void q_datetimeedit_on_step_enabled(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
 ///
@@ -910,10 +910,10 @@ void q_datetimeedit_init_style_option(const void* self, void* option);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback void func(const QDateTimeEdit* self, QStyleOptionSpinBox* option)
 ///
-void q_datetimeedit_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_datetimeedit_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
 ///
@@ -1192,9 +1192,9 @@ void q_datetimeedit_on_editing_finished(void* self, void (*callback)(void*));
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QDateTimeEdit*
+/// @param self const QDateTimeEdit*
 ///
-QPaintDevice* q_datetimeedit_as_q_paint_device(void* self);
+QPaintDevice* q_datetimeedit_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1202,7 +1202,7 @@ QPaintDevice* q_datetimeedit_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QDateTimeEdit* q_datetimeedit_from_q_paint_device(void* _qpaintdevice);
+QDateTimeEdit* q_datetimeedit_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -4187,12 +4187,12 @@ QSize* q_datetimeedit_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback QSize* func(QDateTimeEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_datetimeedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_datetimeedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4222,12 +4222,12 @@ QVariant* q_datetimeedit_super_input_method_query(const void* self, int32_t para
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback QVariant* func(QDateTimeEdit* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_datetimeedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_datetimeedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4618,10 +4618,10 @@ int32_t q_datetimeedit_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback int32_t func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_datetimeedit_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4684,10 +4684,10 @@ int32_t q_datetimeedit_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback int32_t func(QDateTimeEdit* self, int param1)
 ///
-void q_datetimeedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_datetimeedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4715,10 +4715,10 @@ bool q_datetimeedit_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback bool func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_datetimeedit_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4746,10 +4746,10 @@ QPaintEngine* q_datetimeedit_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback QPaintEngine* func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_datetimeedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5146,10 +5146,10 @@ int32_t q_datetimeedit_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback int32_t func(QDateTimeEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_datetimeedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_datetimeedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5179,10 +5179,10 @@ void q_datetimeedit_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback void func(QDateTimeEdit* self, QPainter* painter)
 ///
-void q_datetimeedit_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_datetimeedit_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5212,10 +5212,10 @@ QPaintDevice* q_datetimeedit_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback QPaintDevice* func(QDateTimeEdit* self, QPoint* offset)
 ///
-void q_datetimeedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_datetimeedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5243,10 +5243,10 @@ QPainter* q_datetimeedit_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback QPainter* func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_datetimeedit_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5474,10 +5474,10 @@ QLineEdit* q_datetimeedit_super_line_edit(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback QLineEdit* func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_line_edit(const void* self, QLineEdit* (*callback)(const void*));
+void q_datetimeedit_on_line_edit(void* self, QLineEdit* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5693,10 +5693,10 @@ QObject* q_datetimeedit_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback QObject* func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_datetimeedit_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5724,10 +5724,10 @@ int32_t q_datetimeedit_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback int32_t func(QDateTimeEdit* self)
 ///
-void q_datetimeedit_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_datetimeedit_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5757,10 +5757,10 @@ int32_t q_datetimeedit_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback int32_t func(QDateTimeEdit* self, const char* signal)
 ///
-void q_datetimeedit_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_datetimeedit_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5790,10 +5790,10 @@ bool q_datetimeedit_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback bool func(QDateTimeEdit* self, QMetaMethod* signal)
 ///
-void q_datetimeedit_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_datetimeedit_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5825,10 +5825,10 @@ double q_datetimeedit_super_get_decoded_metric_f(const void* self, int32_t metri
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateTimeEdit*
+/// @param self QDateTimeEdit*
 /// @param callback double func(QDateTimeEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_datetimeedit_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_datetimeedit_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -5890,10 +5890,10 @@ const QMetaObject* q_timeedit_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback const QMetaObject* func(const QTimeEdit* self)
 ///
-void q_timeedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_timeedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -6711,9 +6711,9 @@ void q_timeedit_on_editing_finished(void* self, void (*callback)(void*));
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QTimeEdit*
+/// @param self const QTimeEdit*
 ///
-QPaintDevice* q_timeedit_as_q_paint_device(void* self);
+QPaintDevice* q_timeedit_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6721,7 +6721,7 @@ QPaintDevice* q_timeedit_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QTimeEdit* q_timeedit_from_q_paint_device(void* _qpaintdevice);
+QTimeEdit* q_timeedit_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -9706,12 +9706,12 @@ QSize* q_timeedit_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback QSize* func(QTimeEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_timeedit_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_timeedit_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9976,10 +9976,10 @@ int32_t q_timeedit_super_validate(const void* self, const char* input, int* pos)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback int32_t func(QTimeEdit* self, const char* input, int* pos)
 ///
-void q_timeedit_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*));
+void q_timeedit_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10009,10 +10009,10 @@ void q_timeedit_super_fixup(const void* self, const char* input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback void func(QTimeEdit* self, const char* input)
 ///
-void q_timeedit_on_fixup(const void* self, void (*callback)(const void*, const char*));
+void q_timeedit_on_fixup(void* self, void (*callback)(const void*, const char*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10042,12 +10042,12 @@ QDateTime* q_timeedit_super_date_time_from_text(const void* self, const char* te
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback QDateTime* func(QTimeEdit* self, const char* text)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_timeedit_on_date_time_from_text(const void* self, QDateTime* (*callback)(const void*, const char*));
+void q_timeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(const void*, const char*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10081,10 +10081,10 @@ const char* q_timeedit_super_text_from_date_time(const void* self, const void* d
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback const char* func(QTimeEdit* self, QDateTime* dt)
 ///
-void q_timeedit_on_text_from_date_time(const void* self, const char* (*callback)(const void*, const void*));
+void q_timeedit_on_text_from_date_time(void* self, const char* (*callback)(const void*, const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10116,10 +10116,10 @@ int32_t q_timeedit_super_step_enabled(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback int32_t func(QTimeEdit* self)
 ///
-void q_timeedit_on_step_enabled(const void* self, int32_t (*callback)(const void*));
+void q_timeedit_on_step_enabled(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10215,10 +10215,10 @@ void q_timeedit_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback void func(QTimeEdit* self, QStyleOptionSpinBox* option)
 ///
-void q_timeedit_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_timeedit_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10246,12 +10246,12 @@ QSize* q_timeedit_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback QSize* func(QTimeEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_timeedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_timeedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10281,12 +10281,12 @@ QVariant* q_timeedit_super_input_method_query(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback QVariant* func(QTimeEdit* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_timeedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_timeedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10677,10 +10677,10 @@ int32_t q_timeedit_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback int32_t func(QTimeEdit* self)
 ///
-void q_timeedit_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_timeedit_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10743,10 +10743,10 @@ int32_t q_timeedit_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback int32_t func(QTimeEdit* self, int param1)
 ///
-void q_timeedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_timeedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -10774,10 +10774,10 @@ bool q_timeedit_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback bool func(QTimeEdit* self)
 ///
-void q_timeedit_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_timeedit_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10805,10 +10805,10 @@ QPaintEngine* q_timeedit_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback QPaintEngine* func(QTimeEdit* self)
 ///
-void q_timeedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_timeedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -11205,10 +11205,10 @@ int32_t q_timeedit_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback int32_t func(QTimeEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_timeedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_timeedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -11238,10 +11238,10 @@ void q_timeedit_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback void func(QTimeEdit* self, QPainter* painter)
 ///
-void q_timeedit_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_timeedit_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -11271,10 +11271,10 @@ QPaintDevice* q_timeedit_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback QPaintDevice* func(QTimeEdit* self, QPoint* offset)
 ///
-void q_timeedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_timeedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -11302,10 +11302,10 @@ QPainter* q_timeedit_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback QPainter* func(QTimeEdit* self)
 ///
-void q_timeedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_timeedit_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -11533,10 +11533,10 @@ QLineEdit* q_timeedit_super_line_edit(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback QLineEdit* func(QTimeEdit* self)
 ///
-void q_timeedit_on_line_edit(const void* self, QLineEdit* (*callback)(const void*));
+void q_timeedit_on_line_edit(void* self, QLineEdit* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -11752,10 +11752,10 @@ QObject* q_timeedit_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback QObject* func(QTimeEdit* self)
 ///
-void q_timeedit_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_timeedit_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -11783,10 +11783,10 @@ int32_t q_timeedit_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback int32_t func(QTimeEdit* self)
 ///
-void q_timeedit_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_timeedit_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -11816,10 +11816,10 @@ int32_t q_timeedit_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback int32_t func(QTimeEdit* self, const char* signal)
 ///
-void q_timeedit_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_timeedit_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -11849,10 +11849,10 @@ bool q_timeedit_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback bool func(QTimeEdit* self, QMetaMethod* signal)
 ///
-void q_timeedit_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_timeedit_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -11884,10 +11884,10 @@ double q_timeedit_super_get_decoded_metric_f(const void* self, int32_t metricA, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTimeEdit*
+/// @param self QTimeEdit*
 /// @param callback double func(QTimeEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_timeedit_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_timeedit_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -11949,10 +11949,10 @@ const QMetaObject* q_dateedit_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback const QMetaObject* func(const QDateEdit* self)
 ///
-void q_dateedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_dateedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -12770,9 +12770,9 @@ void q_dateedit_on_editing_finished(void* self, void (*callback)(void*));
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QDateEdit*
+/// @param self const QDateEdit*
 ///
-QPaintDevice* q_dateedit_as_q_paint_device(void* self);
+QPaintDevice* q_dateedit_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -12780,7 +12780,7 @@ QPaintDevice* q_dateedit_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QDateEdit* q_dateedit_from_q_paint_device(void* _qpaintdevice);
+QDateEdit* q_dateedit_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -15765,12 +15765,12 @@ QSize* q_dateedit_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback QSize* func(QDateEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_dateedit_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_dateedit_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16035,10 +16035,10 @@ int32_t q_dateedit_super_validate(const void* self, const char* input, int* pos)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback int32_t func(QDateEdit* self, const char* input, int* pos)
 ///
-void q_dateedit_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*));
+void q_dateedit_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16068,10 +16068,10 @@ void q_dateedit_super_fixup(const void* self, const char* input);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback void func(QDateEdit* self, const char* input)
 ///
-void q_dateedit_on_fixup(const void* self, void (*callback)(const void*, const char*));
+void q_dateedit_on_fixup(void* self, void (*callback)(const void*, const char*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16101,12 +16101,12 @@ QDateTime* q_dateedit_super_date_time_from_text(const void* self, const char* te
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback QDateTime* func(QDateEdit* self, const char* text)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_dateedit_on_date_time_from_text(const void* self, QDateTime* (*callback)(const void*, const char*));
+void q_dateedit_on_date_time_from_text(void* self, QDateTime* (*callback)(const void*, const char*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16140,10 +16140,10 @@ const char* q_dateedit_super_text_from_date_time(const void* self, const void* d
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback const char* func(QDateEdit* self, QDateTime* dt)
 ///
-void q_dateedit_on_text_from_date_time(const void* self, const char* (*callback)(const void*, const void*));
+void q_dateedit_on_text_from_date_time(void* self, const char* (*callback)(const void*, const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16175,10 +16175,10 @@ int32_t q_dateedit_super_step_enabled(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback int32_t func(QDateEdit* self)
 ///
-void q_dateedit_on_step_enabled(const void* self, int32_t (*callback)(const void*));
+void q_dateedit_on_step_enabled(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16274,10 +16274,10 @@ void q_dateedit_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback void func(QDateEdit* self, QStyleOptionSpinBox* option)
 ///
-void q_dateedit_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_dateedit_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16305,12 +16305,12 @@ QSize* q_dateedit_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback QSize* func(QDateEdit* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_dateedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_dateedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16340,12 +16340,12 @@ QVariant* q_dateedit_super_input_method_query(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback QVariant* func(QDateEdit* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_dateedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_dateedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16736,10 +16736,10 @@ int32_t q_dateedit_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback int32_t func(QDateEdit* self)
 ///
-void q_dateedit_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_dateedit_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -16802,10 +16802,10 @@ int32_t q_dateedit_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback int32_t func(QDateEdit* self, int param1)
 ///
-void q_dateedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_dateedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -16833,10 +16833,10 @@ bool q_dateedit_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback bool func(QDateEdit* self)
 ///
-void q_dateedit_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_dateedit_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -16864,10 +16864,10 @@ QPaintEngine* q_dateedit_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback QPaintEngine* func(QDateEdit* self)
 ///
-void q_dateedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_dateedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -17264,10 +17264,10 @@ int32_t q_dateedit_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback int32_t func(QDateEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_dateedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_dateedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -17297,10 +17297,10 @@ void q_dateedit_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback void func(QDateEdit* self, QPainter* painter)
 ///
-void q_dateedit_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_dateedit_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -17330,10 +17330,10 @@ QPaintDevice* q_dateedit_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback QPaintDevice* func(QDateEdit* self, QPoint* offset)
 ///
-void q_dateedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_dateedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -17361,10 +17361,10 @@ QPainter* q_dateedit_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback QPainter* func(QDateEdit* self)
 ///
-void q_dateedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_dateedit_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -17592,10 +17592,10 @@ QLineEdit* q_dateedit_super_line_edit(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback QLineEdit* func(QDateEdit* self)
 ///
-void q_dateedit_on_line_edit(const void* self, QLineEdit* (*callback)(const void*));
+void q_dateedit_on_line_edit(void* self, QLineEdit* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -17811,10 +17811,10 @@ QObject* q_dateedit_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback QObject* func(QDateEdit* self)
 ///
-void q_dateedit_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_dateedit_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -17842,10 +17842,10 @@ int32_t q_dateedit_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback int32_t func(QDateEdit* self)
 ///
-void q_dateedit_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_dateedit_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -17875,10 +17875,10 @@ int32_t q_dateedit_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback int32_t func(QDateEdit* self, const char* signal)
 ///
-void q_dateedit_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_dateedit_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -17908,10 +17908,10 @@ bool q_dateedit_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback bool func(QDateEdit* self, QMetaMethod* signal)
 ///
-void q_dateedit_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_dateedit_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -17943,10 +17943,10 @@ double q_dateedit_super_get_decoded_metric_f(const void* self, int32_t metricA, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDateEdit*
+/// @param self QDateEdit*
 /// @param callback double func(QDateEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_dateedit_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_dateedit_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -32,10 +32,10 @@ const QMetaObject* q_dbusvirtualobject_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDBusVirtualObject*
+/// @param self QDBusVirtualObject*
 /// @param callback const QMetaObject* func(const QDBusVirtualObject* self)
 ///
-void q_dbusvirtualobject_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_dbusvirtualobject_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -110,10 +110,10 @@ const char* q_dbusvirtualobject_introspect(const void* self, const char* path);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDBusVirtualObject*
+/// @param self QDBusVirtualObject*
 /// @param callback const char* func(const QDBusVirtualObject* self, const char* path)
 ///
-void q_dbusvirtualobject_on_introspect(const void* self, const char* (*callback)(const void*, const char*));
+void q_dbusvirtualobject_on_introspect(void* self, const char* (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusvirtualobject.html#handleMessage)
 ///
@@ -859,10 +859,10 @@ QObject* q_dbusvirtualobject_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusVirtualObject*
+/// @param self QDBusVirtualObject*
 /// @param callback QObject* func(QDBusVirtualObject* self)
 ///
-void q_dbusvirtualobject_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_dbusvirtualobject_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -890,10 +890,10 @@ int32_t q_dbusvirtualobject_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusVirtualObject*
+/// @param self QDBusVirtualObject*
 /// @param callback int32_t func(QDBusVirtualObject* self)
 ///
-void q_dbusvirtualobject_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_dbusvirtualobject_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -923,10 +923,10 @@ int32_t q_dbusvirtualobject_super_receivers(const void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusVirtualObject*
+/// @param self QDBusVirtualObject*
 /// @param callback int32_t func(QDBusVirtualObject* self, const char* signal)
 ///
-void q_dbusvirtualobject_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_dbusvirtualobject_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -956,10 +956,10 @@ bool q_dbusvirtualobject_super_is_signal_connected(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusVirtualObject*
+/// @param self QDBusVirtualObject*
 /// @param callback bool func(QDBusVirtualObject* self, QMetaMethod* signal)
 ///
-void q_dbusvirtualobject_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_dbusvirtualobject_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

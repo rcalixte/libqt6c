@@ -32,10 +32,10 @@ const QMetaObject* q_quickpainteditem_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback const QMetaObject* func(const QQuickPaintedItem* self)
 ///
-void q_quickpainteditem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_quickpainteditem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -269,10 +269,10 @@ bool q_quickpainteditem_is_texture_provider(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback bool func(const QQuickPaintedItem* self)
 ///
-void q_quickpainteditem_on_is_texture_provider(const void* self, bool (*callback)(const void*));
+void q_quickpainteditem_on_is_texture_provider(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickpainteditem.html#isTextureProvider)
 ///
@@ -292,10 +292,10 @@ QSGTextureProvider* q_quickpainteditem_texture_provider(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback QSGTextureProvider* func(const QQuickPaintedItem* self)
 ///
-void q_quickpainteditem_on_texture_provider(const void* self, QSGTextureProvider* (*callback)(const void*));
+void q_quickpainteditem_on_texture_provider(void* self, QSGTextureProvider* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickpainteditem.html#textureProvider)
 ///
@@ -485,9 +485,9 @@ void q_quickpainteditem_set_performance_hint2(void* self, int32_t hint, bool ena
 ///
 /// Upcasts to a QQmlParserStatus object
 ///
-/// @param self QQuickPaintedItem*
+/// @param self const QQuickPaintedItem*
 ///
-QQmlParserStatus* q_quickpainteditem_as_q_qml_parser_status(void* self);
+QQmlParserStatus* q_quickpainteditem_as_q_qml_parser_status(const void* self);
 
 /// Inherited from QQuickItem
 ///
@@ -495,7 +495,7 @@ QQmlParserStatus* q_quickpainteditem_as_q_qml_parser_status(void* self);
 ///
 /// @param _qqmlparserstatus QQmlParserStatus*
 ///
-QQuickPaintedItem* q_quickpainteditem_from_q_qml_parser_status(void* _qqmlparserstatus);
+QQuickPaintedItem* q_quickpainteditem_from_q_qml_parser_status(const void* _qqmlparserstatus);
 
 /// Inherited from QQuickItem
 ///
@@ -2539,12 +2539,12 @@ QRectF* q_quickpainteditem_super_bounding_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback QRectF* func(QQuickPaintedItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickpainteditem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
+void q_quickpainteditem_on_bounding_rect(void* self, QRectF* (*callback)(const void*));
 
 /// Inherited from QQuickItem
 ///
@@ -2572,12 +2572,12 @@ QRectF* q_quickpainteditem_super_clip_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback QRectF* func(QQuickPaintedItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickpainteditem_on_clip_rect(const void* self, QRectF* (*callback)(const void*));
+void q_quickpainteditem_on_clip_rect(void* self, QRectF* (*callback)(const void*));
 
 /// Inherited from QQuickItem
 ///
@@ -2607,10 +2607,10 @@ bool q_quickpainteditem_super_contains(const void* self, const void* point);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback bool func(QQuickPaintedItem* self, QPointF* point)
 ///
-void q_quickpainteditem_on_contains(const void* self, bool (*callback)(const void*, const void*));
+void q_quickpainteditem_on_contains(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QQuickItem
 ///
@@ -2640,12 +2640,12 @@ QVariant* q_quickpainteditem_super_input_method_query(const void* self, int32_t 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback QVariant* func(QQuickPaintedItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickpainteditem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_quickpainteditem_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QQuickItem
 ///
@@ -3725,10 +3725,10 @@ bool q_quickpainteditem_super_is_component_complete(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback bool func(QQuickPaintedItem* self)
 ///
-void q_quickpainteditem_on_is_component_complete(const void* self, bool (*callback)(const void*));
+void q_quickpainteditem_on_is_component_complete(void* self, bool (*callback)(const void*));
 
 /// Inherited from QQuickItem
 ///
@@ -3787,10 +3787,10 @@ bool q_quickpainteditem_super_width_valid(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback bool func(QQuickPaintedItem* self)
 ///
-void q_quickpainteditem_on_width_valid(const void* self, bool (*callback)(const void*));
+void q_quickpainteditem_on_width_valid(void* self, bool (*callback)(const void*));
 
 /// Inherited from QQuickItem
 ///
@@ -3818,10 +3818,10 @@ bool q_quickpainteditem_super_height_valid(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback bool func(QQuickPaintedItem* self)
 ///
-void q_quickpainteditem_on_height_valid(const void* self, bool (*callback)(const void*));
+void q_quickpainteditem_on_height_valid(void* self, bool (*callback)(const void*));
 
 /// Inherited from QQuickItem
 ///
@@ -3884,10 +3884,10 @@ QObject* q_quickpainteditem_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback QObject* func(QQuickPaintedItem* self)
 ///
-void q_quickpainteditem_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_quickpainteditem_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3915,10 +3915,10 @@ int32_t q_quickpainteditem_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback int32_t func(QQuickPaintedItem* self)
 ///
-void q_quickpainteditem_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_quickpainteditem_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3948,10 +3948,10 @@ int32_t q_quickpainteditem_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback int32_t func(QQuickPaintedItem* self, const char* signal)
 ///
-void q_quickpainteditem_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_quickpainteditem_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3981,10 +3981,10 @@ bool q_quickpainteditem_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickPaintedItem*
+/// @param self QQuickPaintedItem*
 /// @param callback bool func(QQuickPaintedItem* self, QMetaMethod* signal)
 ///
-void q_quickpainteditem_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_quickpainteditem_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -34,7 +34,7 @@ const QMetaObject* q_proxystyle_meta_object(const void* self) {
     return QProxyStyle_MetaObject((QProxyStyle*)self);
 }
 
-void q_proxystyle_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_proxystyle_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QProxyStyle_OnMetaObject((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -85,7 +85,7 @@ void q_proxystyle_draw_primitive(const void* self, int32_t element, const void* 
     QProxyStyle_DrawPrimitive((QProxyStyle*)self, element, (QStyleOption*)option, (QPainter*)painter, (QWidget*)widget);
 }
 
-void q_proxystyle_on_draw_primitive(const void* self, void (*callback)(const void*, int32_t, const void*, void*, const void*)) {
+void q_proxystyle_on_draw_primitive(void* self, void (*callback)(const void*, int32_t, const void*, void*, const void*)) {
     QProxyStyle_OnDrawPrimitive((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -97,7 +97,7 @@ void q_proxystyle_draw_control(const void* self, int32_t element, const void* op
     QProxyStyle_DrawControl((QProxyStyle*)self, element, (QStyleOption*)option, (QPainter*)painter, (QWidget*)widget);
 }
 
-void q_proxystyle_on_draw_control(const void* self, void (*callback)(const void*, int32_t, const void*, void*, const void*)) {
+void q_proxystyle_on_draw_control(void* self, void (*callback)(const void*, int32_t, const void*, void*, const void*)) {
     QProxyStyle_OnDrawControl((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -109,7 +109,7 @@ void q_proxystyle_draw_complex_control(const void* self, int32_t control, const 
     QProxyStyle_DrawComplexControl((QProxyStyle*)self, control, (QStyleOptionComplex*)option, (QPainter*)painter, (QWidget*)widget);
 }
 
-void q_proxystyle_on_draw_complex_control(const void* self, void (*callback)(const void*, int32_t, const void*, void*, const void*)) {
+void q_proxystyle_on_draw_complex_control(void* self, void (*callback)(const void*, int32_t, const void*, void*, const void*)) {
     QProxyStyle_OnDrawComplexControl((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -121,7 +121,7 @@ void q_proxystyle_draw_item_text(const void* self, void* painter, const void* re
     QProxyStyle_DrawItemText((QProxyStyle*)self, (QPainter*)painter, (QRect*)rect, flags, (QPalette*)pal, enabled, qstring(text), textRole);
 }
 
-void q_proxystyle_on_draw_item_text(const void* self, void (*callback)(const void*, void*, const void*, int, const void*, bool, const char*, int32_t)) {
+void q_proxystyle_on_draw_item_text(void* self, void (*callback)(const void*, void*, const void*, int, const void*, bool, const char*, int32_t)) {
     QProxyStyle_OnDrawItemText((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -133,7 +133,7 @@ void q_proxystyle_draw_item_pixmap(const void* self, void* painter, const void* 
     QProxyStyle_DrawItemPixmap((QProxyStyle*)self, (QPainter*)painter, (QRect*)rect, alignment, (QPixmap*)pixmap);
 }
 
-void q_proxystyle_on_draw_item_pixmap(const void* self, void (*callback)(const void*, void*, const void*, int, const void*)) {
+void q_proxystyle_on_draw_item_pixmap(void* self, void (*callback)(const void*, void*, const void*, int, const void*)) {
     QProxyStyle_OnDrawItemPixmap((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -145,7 +145,7 @@ QSize* q_proxystyle_size_from_contents(const void* self, int32_t type, const voi
     return QProxyStyle_SizeFromContents((QProxyStyle*)self, type, (QStyleOption*)option, (QSize*)size, (QWidget*)widget);
 }
 
-void q_proxystyle_on_size_from_contents(const void* self, QSize* (*callback)(const void*, int32_t, const void*, const void*, const void*)) {
+void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(const void*, int32_t, const void*, const void*, const void*)) {
     QProxyStyle_OnSizeFromContents((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -157,7 +157,7 @@ QRect* q_proxystyle_sub_element_rect(const void* self, int32_t element, const vo
     return QProxyStyle_SubElementRect((QProxyStyle*)self, element, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_proxystyle_on_sub_element_rect(const void* self, QRect* (*callback)(const void*, int32_t, const void*, const void*)) {
+void q_proxystyle_on_sub_element_rect(void* self, QRect* (*callback)(const void*, int32_t, const void*, const void*)) {
     QProxyStyle_OnSubElementRect((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -169,7 +169,7 @@ QRect* q_proxystyle_sub_control_rect(const void* self, int32_t cc, const void* o
     return QProxyStyle_SubControlRect((QProxyStyle*)self, cc, (QStyleOptionComplex*)opt, sc, (QWidget*)widget);
 }
 
-void q_proxystyle_on_sub_control_rect(const void* self, QRect* (*callback)(const void*, int32_t, const void*, int32_t, const void*)) {
+void q_proxystyle_on_sub_control_rect(void* self, QRect* (*callback)(const void*, int32_t, const void*, int32_t, const void*)) {
     QProxyStyle_OnSubControlRect((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -181,7 +181,7 @@ QRect* q_proxystyle_item_text_rect(const void* self, const void* fm, const void*
     return QProxyStyle_ItemTextRect((QProxyStyle*)self, (QFontMetrics*)fm, (QRect*)r, flags, enabled, qstring(text));
 }
 
-void q_proxystyle_on_item_text_rect(const void* self, QRect* (*callback)(const void*, const void*, const void*, int, bool, const char*)) {
+void q_proxystyle_on_item_text_rect(void* self, QRect* (*callback)(const void*, const void*, const void*, int, bool, const char*)) {
     QProxyStyle_OnItemTextRect((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -193,7 +193,7 @@ QRect* q_proxystyle_item_pixmap_rect(const void* self, const void* r, int flags,
     return QProxyStyle_ItemPixmapRect((QProxyStyle*)self, (QRect*)r, flags, (QPixmap*)pixmap);
 }
 
-void q_proxystyle_on_item_pixmap_rect(const void* self, QRect* (*callback)(const void*, const void*, int, const void*)) {
+void q_proxystyle_on_item_pixmap_rect(void* self, QRect* (*callback)(const void*, const void*, int, const void*)) {
     QProxyStyle_OnItemPixmapRect((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -205,7 +205,7 @@ int32_t q_proxystyle_hit_test_complex_control(const void* self, int32_t control,
     return QProxyStyle_HitTestComplexControl((QProxyStyle*)self, control, (QStyleOptionComplex*)option, (QPoint*)pos, (QWidget*)widget);
 }
 
-void q_proxystyle_on_hit_test_complex_control(const void* self, int32_t (*callback)(const void*, int32_t, const void*, const void*, const void*)) {
+void q_proxystyle_on_hit_test_complex_control(void* self, int32_t (*callback)(const void*, int32_t, const void*, const void*, const void*)) {
     QProxyStyle_OnHitTestComplexControl((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -217,7 +217,7 @@ int32_t q_proxystyle_style_hint(const void* self, int32_t hint, const void* opti
     return QProxyStyle_StyleHint((QProxyStyle*)self, hint, (QStyleOption*)option, (QWidget*)widget, (QStyleHintReturn*)returnData);
 }
 
-void q_proxystyle_on_style_hint(const void* self, int32_t (*callback)(const void*, int32_t, const void*, const void*, void*)) {
+void q_proxystyle_on_style_hint(void* self, int32_t (*callback)(const void*, int32_t, const void*, const void*, void*)) {
     QProxyStyle_OnStyleHint((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -229,7 +229,7 @@ int32_t q_proxystyle_pixel_metric(const void* self, int32_t metric, const void* 
     return QProxyStyle_PixelMetric((QProxyStyle*)self, metric, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_proxystyle_on_pixel_metric(const void* self, int32_t (*callback)(const void*, int32_t, const void*, const void*)) {
+void q_proxystyle_on_pixel_metric(void* self, int32_t (*callback)(const void*, int32_t, const void*, const void*)) {
     QProxyStyle_OnPixelMetric((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -241,7 +241,7 @@ int32_t q_proxystyle_layout_spacing(const void* self, int32_t control1, int32_t 
     return QProxyStyle_LayoutSpacing((QProxyStyle*)self, control1, control2, orientation, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_proxystyle_on_layout_spacing(const void* self, int32_t (*callback)(const void*, int32_t, int32_t, int32_t, const void*, const void*)) {
+void q_proxystyle_on_layout_spacing(void* self, int32_t (*callback)(const void*, int32_t, int32_t, int32_t, const void*, const void*)) {
     QProxyStyle_OnLayoutSpacing((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -253,7 +253,7 @@ QIcon* q_proxystyle_standard_icon(const void* self, int32_t standardIcon, const 
     return QProxyStyle_StandardIcon((QProxyStyle*)self, standardIcon, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_proxystyle_on_standard_icon(const void* self, QIcon* (*callback)(const void*, int32_t, const void*, const void*)) {
+void q_proxystyle_on_standard_icon(void* self, QIcon* (*callback)(const void*, int32_t, const void*, const void*)) {
     QProxyStyle_OnStandardIcon((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -265,7 +265,7 @@ QPixmap* q_proxystyle_standard_pixmap(const void* self, int32_t standardPixmap, 
     return QProxyStyle_StandardPixmap((QProxyStyle*)self, standardPixmap, (QStyleOption*)opt, (QWidget*)widget);
 }
 
-void q_proxystyle_on_standard_pixmap(const void* self, QPixmap* (*callback)(const void*, int32_t, const void*, const void*)) {
+void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*callback)(const void*, int32_t, const void*, const void*)) {
     QProxyStyle_OnStandardPixmap((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -277,7 +277,7 @@ QPixmap* q_proxystyle_generated_icon_pixmap(const void* self, int32_t iconMode, 
     return QProxyStyle_GeneratedIconPixmap((QProxyStyle*)self, iconMode, (QPixmap*)pixmap, (QStyleOption*)opt);
 }
 
-void q_proxystyle_on_generated_icon_pixmap(const void* self, QPixmap* (*callback)(const void*, int32_t, const void*, const void*)) {
+void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(const void*, int32_t, const void*, const void*)) {
     QProxyStyle_OnGeneratedIconPixmap((QProxyStyle*)self, (intptr_t)callback);
 }
 
@@ -289,7 +289,7 @@ QPalette* q_proxystyle_standard_palette(const void* self) {
     return QProxyStyle_StandardPalette((QProxyStyle*)self);
 }
 
-void q_proxystyle_on_standard_palette(const void* self, QPalette* (*callback)(const void*)) {
+void q_proxystyle_on_standard_palette(void* self, QPalette* (*callback)(const void*)) {
     QProxyStyle_OnStandardPalette((QProxyStyle*)self, (intptr_t)callback);
 }
 

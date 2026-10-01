@@ -18,7 +18,7 @@ const QMetaObject* q_webengineurlschemehandler_meta_object(const void* self) {
     return QWebEngineUrlSchemeHandler_MetaObject((QWebEngineUrlSchemeHandler*)self);
 }
 
-void q_webengineurlschemehandler_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_webengineurlschemehandler_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QWebEngineUrlSchemeHandler_OnMetaObject((QWebEngineUrlSchemeHandler*)self, (intptr_t)callback);
 }
 

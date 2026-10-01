@@ -27,7 +27,7 @@ const QMetaObject* q_dial_meta_object(const void* self) {
     return QDial_MetaObject((QDial*)self);
 }
 
-void q_dial_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_dial_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDial_OnMetaObject((QDial*)self, (intptr_t)callback);
 }
 
@@ -90,7 +90,7 @@ QSize* q_dial_size_hint(const void* self) {
     return QDial_SizeHint((QDial*)self);
 }
 
-void q_dial_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_dial_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QDial_OnSizeHint((QDial*)self, (intptr_t)callback);
 }
 
@@ -102,7 +102,7 @@ QSize* q_dial_minimum_size_hint(const void* self) {
     return QDial_MinimumSizeHint((QDial*)self);
 }
 
-void q_dial_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_dial_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QDial_OnMinimumSizeHint((QDial*)self, (intptr_t)callback);
 }
 
@@ -206,7 +206,7 @@ void q_dial_init_style_option(const void* self, void* option) {
     QDial_InitStyleOption((QDial*)self, (QStyleOptionSlider*)option);
 }
 
-void q_dial_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_dial_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QDial_OnInitStyleOption((QDial*)self, (intptr_t)callback);
 }
 
@@ -372,11 +372,11 @@ void q_dial_on_action_triggered(void* self, void (*callback)(void*, int)) {
     QAbstractSlider_Connect_ActionTriggered((QAbstractSlider*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_dial_as_q_paint_device(void* self) {
+QPaintDevice* q_dial_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QDial* q_dial_from_q_paint_device(void* _qpaintdevice) {
+QDial* q_dial_from_q_paint_device(const void* _qpaintdevice) {
     return (QDial*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1815,8 +1815,8 @@ int32_t q_dial_super_dev_type(const void* self) {
     return QDial_SuperDevType((QDial*)self);
 }
 
-void q_dial_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QDial_OnDevType((const QDial*)self, (intptr_t)callback);
+void q_dial_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QDial_OnDevType((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_set_visible(void* self, bool visible) {
@@ -1839,8 +1839,8 @@ int32_t q_dial_super_height_for_width(const void* self, int param1) {
     return QDial_SuperHeightForWidth((QDial*)self, param1);
 }
 
-void q_dial_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QDial_OnHeightForWidth((const QDial*)self, (intptr_t)callback);
+void q_dial_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QDial_OnHeightForWidth((QDial*)self, (intptr_t)callback);
 }
 
 bool q_dial_has_height_for_width(const void* self) {
@@ -1851,8 +1851,8 @@ bool q_dial_super_has_height_for_width(const void* self) {
     return QDial_SuperHasHeightForWidth((QDial*)self);
 }
 
-void q_dial_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QDial_OnHasHeightForWidth((const QDial*)self, (intptr_t)callback);
+void q_dial_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QDial_OnHasHeightForWidth((QDial*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_dial_paint_engine(const void* self) {
@@ -1863,8 +1863,8 @@ QPaintEngine* q_dial_super_paint_engine(const void* self) {
     return QDial_SuperPaintEngine((QDial*)self);
 }
 
-void q_dial_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QDial_OnPaintEngine((const QDial*)self, (intptr_t)callback);
+void q_dial_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QDial_OnPaintEngine((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_mouse_double_click_event(void* self, void* event) {
@@ -2091,8 +2091,8 @@ int32_t q_dial_super_metric(const void* self, int32_t param1) {
     return QDial_SuperMetric((QDial*)self, param1);
 }
 
-void q_dial_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QDial_OnMetric((const QDial*)self, (intptr_t)callback);
+void q_dial_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QDial_OnMetric((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_init_painter(const void* self, void* painter) {
@@ -2103,8 +2103,8 @@ void q_dial_super_init_painter(const void* self, void* painter) {
     QDial_SuperInitPainter((QDial*)self, (QPainter*)painter);
 }
 
-void q_dial_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QDial_OnInitPainter((const QDial*)self, (intptr_t)callback);
+void q_dial_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QDial_OnInitPainter((QDial*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_dial_redirected(const void* self, void* offset) {
@@ -2115,8 +2115,8 @@ QPaintDevice* q_dial_super_redirected(const void* self, void* offset) {
     return QDial_SuperRedirected((QDial*)self, (QPoint*)offset);
 }
 
-void q_dial_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QDial_OnRedirected((const QDial*)self, (intptr_t)callback);
+void q_dial_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QDial_OnRedirected((QDial*)self, (intptr_t)callback);
 }
 
 QPainter* q_dial_shared_painter(const void* self) {
@@ -2127,8 +2127,8 @@ QPainter* q_dial_super_shared_painter(const void* self) {
     return QDial_SuperSharedPainter((QDial*)self);
 }
 
-void q_dial_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QDial_OnSharedPainter((const QDial*)self, (intptr_t)callback);
+void q_dial_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QDial_OnSharedPainter((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_input_method_event(void* self, void* param1) {
@@ -2151,8 +2151,8 @@ QVariant* q_dial_super_input_method_query(const void* self, int32_t param1) {
     return QDial_SuperInputMethodQuery((QDial*)self, param1);
 }
 
-void q_dial_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QDial_OnInputMethodQuery((const QDial*)self, (intptr_t)callback);
+void q_dial_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QDial_OnInputMethodQuery((QDial*)self, (intptr_t)callback);
 }
 
 bool q_dial_focus_next_prev_child(void* self, bool next) {

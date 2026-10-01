@@ -15,7 +15,7 @@ libqt_list /* of QWidget* */ q_designerlayoutdecorationextension_widgets(const v
     return _arr;
 }
 
-void q_designerlayoutdecorationextension_on_widgets(const void* self, libqt_list /* of QWidget* */ (*callback)(const void*, void*)) {
+void q_designerlayoutdecorationextension_on_widgets(void* self, libqt_list /* of QWidget* */ (*callback)(const void*, void*)) {
     QDesignerLayoutDecorationExtension_OnWidgets((QDesignerLayoutDecorationExtension*)self, (intptr_t)callback);
 }
 
@@ -23,7 +23,7 @@ QRect* q_designerlayoutdecorationextension_item_info(const void* self, int index
     return QDesignerLayoutDecorationExtension_ItemInfo((QDesignerLayoutDecorationExtension*)self, index);
 }
 
-void q_designerlayoutdecorationextension_on_item_info(const void* self, QRect* (*callback)(const void*, int)) {
+void q_designerlayoutdecorationextension_on_item_info(void* self, QRect* (*callback)(const void*, int)) {
     QDesignerLayoutDecorationExtension_OnItemInfo((QDesignerLayoutDecorationExtension*)self, (intptr_t)callback);
 }
 
@@ -31,7 +31,7 @@ int32_t q_designerlayoutdecorationextension_index_of(const void* self, void* wid
     return QDesignerLayoutDecorationExtension_IndexOf((QDesignerLayoutDecorationExtension*)self, (QWidget*)widget);
 }
 
-void q_designerlayoutdecorationextension_on_index_of(const void* self, int32_t (*callback)(const void*, void*)) {
+void q_designerlayoutdecorationextension_on_index_of(void* self, int32_t (*callback)(const void*, void*)) {
     QDesignerLayoutDecorationExtension_OnIndexOf((QDesignerLayoutDecorationExtension*)self, (intptr_t)callback);
 }
 
@@ -39,7 +39,7 @@ int32_t q_designerlayoutdecorationextension_index_of2(const void* self, void* it
     return QDesignerLayoutDecorationExtension_IndexOf2((QDesignerLayoutDecorationExtension*)self, (QLayoutItem*)item);
 }
 
-void q_designerlayoutdecorationextension_on_index_of2(const void* self, int32_t (*callback)(const void*, void*)) {
+void q_designerlayoutdecorationextension_on_index_of2(void* self, int32_t (*callback)(const void*, void*)) {
     QDesignerLayoutDecorationExtension_OnIndexOf2((QDesignerLayoutDecorationExtension*)self, (intptr_t)callback);
 }
 
@@ -47,7 +47,7 @@ int32_t q_designerlayoutdecorationextension_current_insert_mode(const void* self
     return QDesignerLayoutDecorationExtension_CurrentInsertMode((QDesignerLayoutDecorationExtension*)self);
 }
 
-void q_designerlayoutdecorationextension_on_current_insert_mode(const void* self, int32_t (*callback)(const void*)) {
+void q_designerlayoutdecorationextension_on_current_insert_mode(void* self, int32_t (*callback)(const void*)) {
     QDesignerLayoutDecorationExtension_OnCurrentInsertMode((QDesignerLayoutDecorationExtension*)self, (intptr_t)callback);
 }
 
@@ -55,7 +55,7 @@ int32_t q_designerlayoutdecorationextension_current_index(const void* self) {
     return QDesignerLayoutDecorationExtension_CurrentIndex((QDesignerLayoutDecorationExtension*)self);
 }
 
-void q_designerlayoutdecorationextension_on_current_index(const void* self, int32_t (*callback)(const void*)) {
+void q_designerlayoutdecorationextension_on_current_index(void* self, int32_t (*callback)(const void*)) {
     QDesignerLayoutDecorationExtension_OnCurrentIndex((QDesignerLayoutDecorationExtension*)self, (intptr_t)callback);
 }
 
@@ -63,7 +63,7 @@ pair_int_int /* tuple of int and int */ q_designerlayoutdecorationextension_curr
     return QDesignerLayoutDecorationExtension_CurrentCell((QDesignerLayoutDecorationExtension*)self);
 }
 
-void q_designerlayoutdecorationextension_on_current_cell(const void* self, pair_int_int /* tuple of int and int */ (*callback)(const void*)) {
+void q_designerlayoutdecorationextension_on_current_cell(void* self, pair_int_int /* tuple of int and int */ (*callback)(const void*)) {
     QDesignerLayoutDecorationExtension_OnCurrentCell((QDesignerLayoutDecorationExtension*)self, (intptr_t)callback);
 }
 
@@ -111,7 +111,7 @@ int32_t q_designerlayoutdecorationextension_find_item_at(const void* self, const
     return QDesignerLayoutDecorationExtension_FindItemAt((QDesignerLayoutDecorationExtension*)self, (QPoint*)pos);
 }
 
-void q_designerlayoutdecorationextension_on_find_item_at(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_designerlayoutdecorationextension_on_find_item_at(void* self, int32_t (*callback)(const void*, const void*)) {
     QDesignerLayoutDecorationExtension_OnFindItemAt((QDesignerLayoutDecorationExtension*)self, (intptr_t)callback);
 }
 
@@ -119,7 +119,7 @@ int32_t q_designerlayoutdecorationextension_find_item_at2(const void* self, int 
     return QDesignerLayoutDecorationExtension_FindItemAt2((QDesignerLayoutDecorationExtension*)self, row, column);
 }
 
-void q_designerlayoutdecorationextension_on_find_item_at2(const void* self, int32_t (*callback)(const void*, int, int)) {
+void q_designerlayoutdecorationextension_on_find_item_at2(void* self, int32_t (*callback)(const void*, int, int)) {
     QDesignerLayoutDecorationExtension_OnFindItemAt2((QDesignerLayoutDecorationExtension*)self, (intptr_t)callback);
 }
 

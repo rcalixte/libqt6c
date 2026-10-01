@@ -16,7 +16,7 @@ const QMetaObject* q_textlist_meta_object(const void* self) {
     return QTextList_MetaObject((QTextList*)self);
 }
 
-void q_textlist_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_textlist_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTextList_OnMetaObject((QTextList*)self, (intptr_t)callback);
 }
 

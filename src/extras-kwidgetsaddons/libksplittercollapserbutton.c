@@ -25,7 +25,7 @@ const QMetaObject* k_splittercollapserbutton_meta_object(const void* self) {
     return KSplitterCollapserButton_MetaObject((KSplitterCollapserButton*)self);
 }
 
-void k_splittercollapserbutton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_splittercollapserbutton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSplitterCollapserButton_OnMetaObject((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
@@ -72,7 +72,7 @@ QSize* k_splittercollapserbutton_size_hint(const void* self) {
     return KSplitterCollapserButton_SizeHint((KSplitterCollapserButton*)self);
 }
 
-void k_splittercollapserbutton_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_splittercollapserbutton_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KSplitterCollapserButton_OnSizeHint((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
@@ -373,11 +373,11 @@ void k_splittercollapserbutton_on_clicked1(void* self, void (*callback)(void*, b
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_splittercollapserbutton_as_q_paint_device(void* self) {
+QPaintDevice* k_splittercollapserbutton_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KSplitterCollapserButton* k_splittercollapserbutton_from_q_paint_device(void* _qpaintdevice) {
+KSplitterCollapserButton* k_splittercollapserbutton_from_q_paint_device(const void* _qpaintdevice) {
     return (KSplitterCollapserButton*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1768,8 +1768,8 @@ QSize* k_splittercollapserbutton_super_minimum_size_hint(const void* self) {
     return KSplitterCollapserButton_SuperMinimumSizeHint((KSplitterCollapserButton*)self);
 }
 
-void k_splittercollapserbutton_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KSplitterCollapserButton_OnMinimumSizeHint((const KSplitterCollapserButton*)self, (intptr_t)callback);
+void k_splittercollapserbutton_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KSplitterCollapserButton_OnMinimumSizeHint((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
 bool k_splittercollapserbutton_event(void* self, void* e) {
@@ -1852,8 +1852,8 @@ bool k_splittercollapserbutton_super_hit_button(const void* self, const void* po
     return KSplitterCollapserButton_SuperHitButton((KSplitterCollapserButton*)self, (QPoint*)pos);
 }
 
-void k_splittercollapserbutton_on_hit_button(const void* self, bool (*callback)(const void*, const void*)) {
-    KSplitterCollapserButton_OnHitButton((const KSplitterCollapserButton*)self, (intptr_t)callback);
+void k_splittercollapserbutton_on_hit_button(void* self, bool (*callback)(const void*, const void*)) {
+    KSplitterCollapserButton_OnHitButton((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
 void k_splittercollapserbutton_check_state_set(void* self) {
@@ -1888,8 +1888,8 @@ void k_splittercollapserbutton_super_init_style_option(const void* self, void* o
     KSplitterCollapserButton_SuperInitStyleOption((KSplitterCollapserButton*)self, (QStyleOptionToolButton*)option);
 }
 
-void k_splittercollapserbutton_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KSplitterCollapserButton_OnInitStyleOption((const KSplitterCollapserButton*)self, (intptr_t)callback);
+void k_splittercollapserbutton_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KSplitterCollapserButton_OnInitStyleOption((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
 void k_splittercollapserbutton_key_press_event(void* self, void* e) {
@@ -1960,8 +1960,8 @@ int32_t k_splittercollapserbutton_super_dev_type(const void* self) {
     return KSplitterCollapserButton_SuperDevType((KSplitterCollapserButton*)self);
 }
 
-void k_splittercollapserbutton_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KSplitterCollapserButton_OnDevType((const KSplitterCollapserButton*)self, (intptr_t)callback);
+void k_splittercollapserbutton_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KSplitterCollapserButton_OnDevType((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
 void k_splittercollapserbutton_set_visible(void* self, bool visible) {
@@ -1984,8 +1984,8 @@ int32_t k_splittercollapserbutton_super_height_for_width(const void* self, int p
     return KSplitterCollapserButton_SuperHeightForWidth((KSplitterCollapserButton*)self, param1);
 }
 
-void k_splittercollapserbutton_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KSplitterCollapserButton_OnHeightForWidth((const KSplitterCollapserButton*)self, (intptr_t)callback);
+void k_splittercollapserbutton_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KSplitterCollapserButton_OnHeightForWidth((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
 bool k_splittercollapserbutton_has_height_for_width(const void* self) {
@@ -1996,8 +1996,8 @@ bool k_splittercollapserbutton_super_has_height_for_width(const void* self) {
     return KSplitterCollapserButton_SuperHasHeightForWidth((KSplitterCollapserButton*)self);
 }
 
-void k_splittercollapserbutton_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KSplitterCollapserButton_OnHasHeightForWidth((const KSplitterCollapserButton*)self, (intptr_t)callback);
+void k_splittercollapserbutton_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KSplitterCollapserButton_OnHasHeightForWidth((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_splittercollapserbutton_paint_engine(const void* self) {
@@ -2008,8 +2008,8 @@ QPaintEngine* k_splittercollapserbutton_super_paint_engine(const void* self) {
     return KSplitterCollapserButton_SuperPaintEngine((KSplitterCollapserButton*)self);
 }
 
-void k_splittercollapserbutton_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KSplitterCollapserButton_OnPaintEngine((const KSplitterCollapserButton*)self, (intptr_t)callback);
+void k_splittercollapserbutton_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KSplitterCollapserButton_OnPaintEngine((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
 void k_splittercollapserbutton_mouse_double_click_event(void* self, void* event) {
@@ -2176,8 +2176,8 @@ int32_t k_splittercollapserbutton_super_metric(const void* self, int32_t param1)
     return KSplitterCollapserButton_SuperMetric((KSplitterCollapserButton*)self, param1);
 }
 
-void k_splittercollapserbutton_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KSplitterCollapserButton_OnMetric((const KSplitterCollapserButton*)self, (intptr_t)callback);
+void k_splittercollapserbutton_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KSplitterCollapserButton_OnMetric((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
 void k_splittercollapserbutton_init_painter(const void* self, void* painter) {
@@ -2188,8 +2188,8 @@ void k_splittercollapserbutton_super_init_painter(const void* self, void* painte
     KSplitterCollapserButton_SuperInitPainter((KSplitterCollapserButton*)self, (QPainter*)painter);
 }
 
-void k_splittercollapserbutton_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KSplitterCollapserButton_OnInitPainter((const KSplitterCollapserButton*)self, (intptr_t)callback);
+void k_splittercollapserbutton_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KSplitterCollapserButton_OnInitPainter((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_splittercollapserbutton_redirected(const void* self, void* offset) {
@@ -2200,8 +2200,8 @@ QPaintDevice* k_splittercollapserbutton_super_redirected(const void* self, void*
     return KSplitterCollapserButton_SuperRedirected((KSplitterCollapserButton*)self, (QPoint*)offset);
 }
 
-void k_splittercollapserbutton_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KSplitterCollapserButton_OnRedirected((const KSplitterCollapserButton*)self, (intptr_t)callback);
+void k_splittercollapserbutton_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KSplitterCollapserButton_OnRedirected((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
 QPainter* k_splittercollapserbutton_shared_painter(const void* self) {
@@ -2212,8 +2212,8 @@ QPainter* k_splittercollapserbutton_super_shared_painter(const void* self) {
     return KSplitterCollapserButton_SuperSharedPainter((KSplitterCollapserButton*)self);
 }
 
-void k_splittercollapserbutton_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KSplitterCollapserButton_OnSharedPainter((const KSplitterCollapserButton*)self, (intptr_t)callback);
+void k_splittercollapserbutton_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KSplitterCollapserButton_OnSharedPainter((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
 void k_splittercollapserbutton_input_method_event(void* self, void* param1) {
@@ -2236,8 +2236,8 @@ QVariant* k_splittercollapserbutton_super_input_method_query(const void* self, i
     return KSplitterCollapserButton_SuperInputMethodQuery((KSplitterCollapserButton*)self, param1);
 }
 
-void k_splittercollapserbutton_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KSplitterCollapserButton_OnInputMethodQuery((const KSplitterCollapserButton*)self, (intptr_t)callback);
+void k_splittercollapserbutton_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KSplitterCollapserButton_OnInputMethodQuery((KSplitterCollapserButton*)self, (intptr_t)callback);
 }
 
 bool k_splittercollapserbutton_focus_next_prev_child(void* self, bool next) {

@@ -19,7 +19,7 @@ const QMetaObject* q_networkcookiejar_meta_object(const void* self) {
     return QNetworkCookieJar_MetaObject((QNetworkCookieJar*)self);
 }
 
-void q_networkcookiejar_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_networkcookiejar_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QNetworkCookieJar_OnMetaObject((QNetworkCookieJar*)self, (intptr_t)callback);
 }
 
@@ -63,7 +63,7 @@ libqt_list /* of QNetworkCookie* */ q_networkcookiejar_cookies_for_url(const voi
     return _arr;
 }
 
-void q_networkcookiejar_on_cookies_for_url(const void* self, libqt_list /* of QNetworkCookie* */ (*callback)(const void*, const void*)) {
+void q_networkcookiejar_on_cookies_for_url(void* self, libqt_list /* of QNetworkCookie* */ (*callback)(const void*, const void*)) {
     QNetworkCookieJar_OnCookiesForUrl((QNetworkCookieJar*)self, (intptr_t)callback);
 }
 
@@ -133,7 +133,7 @@ bool q_networkcookiejar_validate_cookie(const void* self, const void* cookie, co
     return QNetworkCookieJar_ValidateCookie((QNetworkCookieJar*)self, (QNetworkCookie*)cookie, (QUrl*)url);
 }
 
-void q_networkcookiejar_on_validate_cookie(const void* self, bool (*callback)(const void*, const void*, const void*)) {
+void q_networkcookiejar_on_validate_cookie(void* self, bool (*callback)(const void*, const void*, const void*)) {
     QNetworkCookieJar_OnValidateCookie((QNetworkCookieJar*)self, (intptr_t)callback);
 }
 

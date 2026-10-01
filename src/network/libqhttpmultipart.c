@@ -71,7 +71,7 @@ const QMetaObject* q_httpmultipart_meta_object(const void* self) {
     return QHttpMultiPart_MetaObject((QHttpMultiPart*)self);
 }
 
-void q_httpmultipart_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_httpmultipart_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QHttpMultiPart_OnMetaObject((QHttpMultiPart*)self, (intptr_t)callback);
 }
 

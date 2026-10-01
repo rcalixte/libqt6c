@@ -13,7 +13,7 @@ const QMetaObject* k_solid__devicenotifier_meta_object(const void* self) {
     return Solid__DeviceNotifier_MetaObject((Solid__DeviceNotifier*)self);
 }
 
-void k_solid__devicenotifier_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_solid__devicenotifier_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Solid__DeviceNotifier_OnMetaObject((Solid__DeviceNotifier*)self, (intptr_t)callback);
 }
 

@@ -59,12 +59,12 @@ QVariant* q_standarditem_data(const void* self, int role);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItem*
+/// @param self QStandardItem*
 /// @param callback QVariant* func(const QStandardItem* self, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_standarditem_on_data(const void* self, QVariant* (*callback)(const void*, int));
+void q_standarditem_on_data(void* self, QVariant* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#data)
 ///
@@ -86,10 +86,10 @@ void q_standarditem_multi_data(const void* self, void* roleDataSpan);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItem*
+/// @param self QStandardItem*
 /// @param callback void func(const QStandardItem* self, QModelRoleDataSpan* roleDataSpan)
 ///
-void q_standarditem_on_multi_data(const void* self, void (*callback)(const void*, void*));
+void q_standarditem_on_multi_data(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#multiData)
 ///
@@ -671,10 +671,10 @@ QStandardItem* q_standarditem_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItem*
+/// @param self QStandardItem*
 /// @param callback QStandardItem* func(const QStandardItem* self)
 ///
-void q_standarditem_on_clone(const void* self, QStandardItem* (*callback)(const void*));
+void q_standarditem_on_clone(void* self, QStandardItem* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#clone)
 ///
@@ -694,10 +694,10 @@ int32_t q_standarditem_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItem*
+/// @param self QStandardItem*
 /// @param callback int32_t func(const QStandardItem* self)
 ///
-void q_standarditem_on_type(const void* self, int32_t (*callback)(const void*));
+void q_standarditem_on_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#type)
 ///
@@ -743,10 +743,10 @@ void q_standarditem_write(const void* self, void* out);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItem*
+/// @param self QStandardItem*
 /// @param callback void func(const QStandardItem* self, QDataStream* out)
 ///
-void q_standarditem_on_write(const void* self, void (*callback)(const void*, void*));
+void q_standarditem_on_write(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#write)
 ///
@@ -768,10 +768,10 @@ bool q_standarditem_operator_lesser(const void* self, const void* other);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItem*
+/// @param self QStandardItem*
 /// @param callback bool func(const QStandardItem* self, QStandardItem* other)
 ///
-void q_standarditem_on_operator_lesser(const void* self, bool (*callback)(const void*, const void*));
+void q_standarditem_on_operator_lesser(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#operator-lt)
 ///
@@ -870,10 +870,10 @@ const QMetaObject* q_standarditemmodel_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback const QMetaObject* func(const QStandardItemModel* self)
 ///
-void q_standarditemmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_standarditemmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -963,10 +963,10 @@ libqt_map q_standarditemmodel_role_names(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback libqt_map of int to char* func(const QStandardItemModel* self)
 ///
-void q_standarditemmodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
+void q_standarditemmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#roleNames)
 ///
@@ -991,12 +991,12 @@ QModelIndex* q_standarditemmodel_index(const void* self, int row, int column, co
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(const QStandardItemModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_standarditemmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_standarditemmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#index)
 ///
@@ -1020,12 +1020,12 @@ QModelIndex* q_standarditemmodel_parent(const void* self, const void* child);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(const QStandardItemModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_standarditemmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_standarditemmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#parent)
 ///
@@ -1047,10 +1047,10 @@ int32_t q_standarditemmodel_row_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback int32_t func(const QStandardItemModel* self, QModelIndex* parent)
 ///
-void q_standarditemmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_standarditemmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#rowCount)
 ///
@@ -1072,10 +1072,10 @@ int32_t q_standarditemmodel_column_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback int32_t func(const QStandardItemModel* self, QModelIndex* parent)
 ///
-void q_standarditemmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_standarditemmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#columnCount)
 ///
@@ -1097,10 +1097,10 @@ bool q_standarditemmodel_has_children(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback bool func(const QStandardItemModel* self, QModelIndex* parent)
 ///
-void q_standarditemmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
+void q_standarditemmodel_on_has_children(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#hasChildren)
 ///
@@ -1123,12 +1123,12 @@ QVariant* q_standarditemmodel_data(const void* self, const void* index, int role
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback QVariant* func(const QStandardItemModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_standarditemmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
+void q_standarditemmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#data)
 ///
@@ -1152,10 +1152,10 @@ void q_standarditemmodel_multi_data(const void* self, const void* index, void* r
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback void func(const QStandardItemModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void q_standarditemmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
+void q_standarditemmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#multiData)
 ///
@@ -1234,12 +1234,12 @@ QVariant* q_standarditemmodel_header_data(const void* self, int section, int32_t
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback QVariant* func(const QStandardItemModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_standarditemmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
+void q_standarditemmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#headerData)
 ///
@@ -1412,10 +1412,10 @@ int32_t q_standarditemmodel_flags(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback int32_t func(const QStandardItemModel* self, QModelIndex* index)
 ///
-void q_standarditemmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
+void q_standarditemmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#flags)
 ///
@@ -1440,10 +1440,10 @@ int32_t q_standarditemmodel_supported_drop_actions(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback int32_t func(const QStandardItemModel* self)
 ///
-void q_standarditemmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void q_standarditemmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#supportedDropActions)
 ///
@@ -1479,10 +1479,10 @@ libqt_map q_standarditemmodel_item_data(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback libqt_map of int to QVariant* func(const QStandardItemModel* self, QModelIndex* index)
 ///
-void q_standarditemmodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
+void q_standarditemmodel_on_item_data(void* self, libqt_map (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemData)
 ///
@@ -1802,10 +1802,10 @@ const char** q_standarditemmodel_mime_types(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback const char** func(const QStandardItemModel* self)
 ///
-void q_standarditemmodel_on_mime_types(const void* self, const char** (*callback)(const void*));
+void q_standarditemmodel_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeTypes)
 ///
@@ -1826,10 +1826,10 @@ QMimeData* q_standarditemmodel_mime_data(const void* self, libqt_list indexes);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback QMimeData* func(const QStandardItemModel* self, libqt_list of QModelIndex* indexes)
 ///
-void q_standarditemmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void q_standarditemmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeData)
 ///
@@ -2699,12 +2699,12 @@ QModelIndex* q_standarditemmodel_super_sibling(const void* self, int row, int co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_standarditemmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_standarditemmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2742,10 +2742,10 @@ bool q_standarditemmodel_super_can_drop_mime_data(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void q_standarditemmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
+void q_standarditemmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2777,10 +2777,10 @@ int32_t q_standarditemmodel_super_supported_drag_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback int32_t func(QStandardItemModel* self)
 ///
-void q_standarditemmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
+void q_standarditemmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2925,10 +2925,10 @@ bool q_standarditemmodel_super_can_fetch_more(const void* self, const void* pare
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QModelIndex* parent)
 ///
-void q_standarditemmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
+void q_standarditemmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2958,12 +2958,12 @@ QModelIndex* q_standarditemmodel_super_buddy(const void* self, const void* index
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_standarditemmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_standarditemmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3005,10 +3005,10 @@ libqt_list q_standarditemmodel_super_match(const void* self, const void* start, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback libqt_list of QModelIndex* func(QStandardItemModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void q_standarditemmodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
+void q_standarditemmodel_on_match(void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3038,12 +3038,12 @@ QSize* q_standarditemmodel_super_span(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback QSize* func(QStandardItemModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_standarditemmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
+void q_standarditemmodel_on_span(void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3401,12 +3401,12 @@ QModelIndex* q_standarditemmodel_super_create_index(const void* self, int row, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_standarditemmodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
+void q_standarditemmodel_on_create_index(void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3438,10 +3438,10 @@ void q_standarditemmodel_super_encode_data(const void* self, libqt_list indexes,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback void func(QStandardItemModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void q_standarditemmodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
+void q_standarditemmodel_on_encode_data(void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4060,10 +4060,10 @@ libqt_list q_standarditemmodel_super_persistent_index_list(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback libqt_list of QModelIndex* func(QStandardItemModel* self)
 ///
-void q_standarditemmodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
+void q_standarditemmodel_on_persistent_index_list(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4091,10 +4091,10 @@ QObject* q_standarditemmodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback QObject* func(QStandardItemModel* self)
 ///
-void q_standarditemmodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_standarditemmodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4122,10 +4122,10 @@ int32_t q_standarditemmodel_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback int32_t func(QStandardItemModel* self)
 ///
-void q_standarditemmodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_standarditemmodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4155,10 +4155,10 @@ int32_t q_standarditemmodel_super_receivers(const void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback int32_t func(QStandardItemModel* self, const char* signal)
 ///
-void q_standarditemmodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_standarditemmodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4188,10 +4188,10 @@ bool q_standarditemmodel_super_is_signal_connected(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStandardItemModel*
+/// @param self QStandardItemModel*
 /// @param callback bool func(QStandardItemModel* self, QMetaMethod* signal)
 ///
-void q_standarditemmodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_standarditemmodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///

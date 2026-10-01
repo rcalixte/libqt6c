@@ -30,7 +30,7 @@ const QMetaObject* q_bluetoothsocket_meta_object(const void* self) {
     return QBluetoothSocket_MetaObject((QBluetoothSocket*)self);
 }
 
-void q_bluetoothsocket_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_bluetoothsocket_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QBluetoothSocket_OnMetaObject((QBluetoothSocket*)self, (intptr_t)callback);
 }
 
@@ -89,7 +89,7 @@ bool q_bluetoothsocket_is_sequential(const void* self) {
     return QBluetoothSocket_IsSequential((QBluetoothSocket*)self);
 }
 
-void q_bluetoothsocket_on_is_sequential(const void* self, bool (*callback)(const void*)) {
+void q_bluetoothsocket_on_is_sequential(void* self, bool (*callback)(const void*)) {
     QBluetoothSocket_OnIsSequential((QBluetoothSocket*)self, (intptr_t)callback);
 }
 
@@ -101,7 +101,7 @@ int64_t q_bluetoothsocket_bytes_available(const void* self) {
     return QBluetoothSocket_BytesAvailable((QBluetoothSocket*)self);
 }
 
-void q_bluetoothsocket_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
+void q_bluetoothsocket_on_bytes_available(void* self, int64_t (*callback)(const void*)) {
     QBluetoothSocket_OnBytesAvailable((QBluetoothSocket*)self, (intptr_t)callback);
 }
 
@@ -113,7 +113,7 @@ int64_t q_bluetoothsocket_bytes_to_write(const void* self) {
     return QBluetoothSocket_BytesToWrite((QBluetoothSocket*)self);
 }
 
-void q_bluetoothsocket_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
+void q_bluetoothsocket_on_bytes_to_write(void* self, int64_t (*callback)(const void*)) {
     QBluetoothSocket_OnBytesToWrite((QBluetoothSocket*)self, (intptr_t)callback);
 }
 
@@ -125,7 +125,7 @@ bool q_bluetoothsocket_can_read_line(const void* self) {
     return QBluetoothSocket_CanReadLine((QBluetoothSocket*)self);
 }
 
-void q_bluetoothsocket_on_can_read_line(const void* self, bool (*callback)(const void*)) {
+void q_bluetoothsocket_on_can_read_line(void* self, bool (*callback)(const void*)) {
     QBluetoothSocket_OnCanReadLine((QBluetoothSocket*)self, (intptr_t)callback);
 }
 
@@ -324,7 +324,7 @@ bool q_bluetoothsocket_set_socket_descriptor4(void* self, int socketDescriptor, 
     return QBluetoothSocket_SetSocketDescriptor4((QBluetoothSocket*)self, socketDescriptor, socketType, socketState, openMode);
 }
 
-QIODeviceBase* q_bluetoothsocket_as_q_i_o_device_base(void* self) {
+QIODeviceBase* q_bluetoothsocket_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
@@ -744,8 +744,8 @@ int64_t q_bluetoothsocket_super_pos(const void* self) {
     return QBluetoothSocket_SuperPos((QBluetoothSocket*)self);
 }
 
-void q_bluetoothsocket_on_pos(const void* self, int64_t (*callback)(const void*)) {
-    QBluetoothSocket_OnPos((const QBluetoothSocket*)self, (intptr_t)callback);
+void q_bluetoothsocket_on_pos(void* self, int64_t (*callback)(const void*)) {
+    QBluetoothSocket_OnPos((QBluetoothSocket*)self, (intptr_t)callback);
 }
 
 int64_t q_bluetoothsocket_size(const void* self) {
@@ -756,8 +756,8 @@ int64_t q_bluetoothsocket_super_size(const void* self) {
     return QBluetoothSocket_SuperSize((QBluetoothSocket*)self);
 }
 
-void q_bluetoothsocket_on_size(const void* self, int64_t (*callback)(const void*)) {
-    QBluetoothSocket_OnSize((const QBluetoothSocket*)self, (intptr_t)callback);
+void q_bluetoothsocket_on_size(void* self, int64_t (*callback)(const void*)) {
+    QBluetoothSocket_OnSize((QBluetoothSocket*)self, (intptr_t)callback);
 }
 
 bool q_bluetoothsocket_seek(void* self, int64_t pos) {
@@ -780,8 +780,8 @@ bool q_bluetoothsocket_super_at_end(const void* self) {
     return QBluetoothSocket_SuperAtEnd((QBluetoothSocket*)self);
 }
 
-void q_bluetoothsocket_on_at_end(const void* self, bool (*callback)(const void*)) {
-    QBluetoothSocket_OnAtEnd((const QBluetoothSocket*)self, (intptr_t)callback);
+void q_bluetoothsocket_on_at_end(void* self, bool (*callback)(const void*)) {
+    QBluetoothSocket_OnAtEnd((QBluetoothSocket*)self, (intptr_t)callback);
 }
 
 bool q_bluetoothsocket_reset(void* self) {

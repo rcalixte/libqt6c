@@ -20,7 +20,7 @@ const QMetaObject* k_twofingertap_meta_object(const void* self) {
     return KTwoFingerTap_MetaObject((KTwoFingerTap*)self);
 }
 
-void k_twofingertap_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_twofingertap_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KTwoFingerTap_OnMetaObject((KTwoFingerTap*)self, (intptr_t)callback);
 }
 

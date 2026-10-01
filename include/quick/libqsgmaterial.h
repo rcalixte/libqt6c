@@ -26,10 +26,10 @@ QSGMaterialType* q_sgmaterial_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGMaterial*
+/// @param self QSGMaterial*
 /// @param callback QSGMaterialType* func(const QSGMaterial* self)
 ///
-void q_sgmaterial_on_type(const void* self, QSGMaterialType* (*callback)(const void*));
+void q_sgmaterial_on_type(void* self, QSGMaterialType* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#createShader)
 ///
@@ -44,10 +44,10 @@ QSGMaterialShader* q_sgmaterial_create_shader(const void* self, int32_t renderMo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGMaterial*
+/// @param self QSGMaterial*
 /// @param callback QSGMaterialShader* func(const QSGMaterial* self, enum QSGRendererInterface__RenderMode renderMode)
 ///
-void q_sgmaterial_on_create_shader(const void* self, QSGMaterialShader* (*callback)(const void*, int32_t));
+void q_sgmaterial_on_create_shader(void* self, QSGMaterialShader* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#compare)
 ///
@@ -60,10 +60,10 @@ int32_t q_sgmaterial_compare(const void* self, const void* other);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGMaterial*
+/// @param self QSGMaterial*
 /// @param callback int32_t func(const QSGMaterial* self, QSGMaterial* other)
 ///
-void q_sgmaterial_on_compare(const void* self, int32_t (*callback)(const void*, const void*));
+void q_sgmaterial_on_compare(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#compare)
 ///

@@ -40,10 +40,10 @@ const QMetaObject* q_stackedlayout_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback const QMetaObject* func(const QStackedLayout* self)
 ///
-void q_stackedlayout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_stackedlayout_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -147,10 +147,10 @@ int32_t q_stackedlayout_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback int32_t func(const QStackedLayout* self)
 ///
-void q_stackedlayout_on_count(const void* self, int32_t (*callback)(const void*));
+void q_stackedlayout_on_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#count)
 ///
@@ -210,12 +210,12 @@ QSize* q_stackedlayout_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback QSize* func(const QStackedLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_stackedlayout_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_stackedlayout_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#sizeHint)
 ///
@@ -235,12 +235,12 @@ QSize* q_stackedlayout_minimum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback QSize* func(const QStackedLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_stackedlayout_on_minimum_size(const void* self, QSize* (*callback)(const void*));
+void q_stackedlayout_on_minimum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#minimumSize)
 ///
@@ -261,10 +261,10 @@ QLayoutItem* q_stackedlayout_item_at(const void* self, int param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback QLayoutItem* func(const QStackedLayout* self, int param1)
 ///
-void q_stackedlayout_on_item_at(const void* self, QLayoutItem* (*callback)(const void*, int));
+void q_stackedlayout_on_item_at(void* self, QLayoutItem* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#itemAt)
 ///
@@ -335,10 +335,10 @@ bool q_stackedlayout_has_height_for_width(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback bool func(const QStackedLayout* self)
 ///
-void q_stackedlayout_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_stackedlayout_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#hasHeightForWidth)
 ///
@@ -359,10 +359,10 @@ int32_t q_stackedlayout_height_for_width(const void* self, int width);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback int32_t func(const QStackedLayout* self, int width)
 ///
-void q_stackedlayout_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_stackedlayout_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#heightForWidth)
 ///
@@ -438,9 +438,9 @@ const char* q_stackedlayout_tr3(const char* s, const char* c, int n);
 ///
 /// Upcasts to a QLayoutItem object
 ///
-/// @param self QStackedLayout*
+/// @param self const QStackedLayout*
 ///
-QLayoutItem* q_stackedlayout_as_q_layout_item(void* self);
+QLayoutItem* q_stackedlayout_as_q_layout_item(const void* self);
 
 /// Inherited from QLayout
 ///
@@ -448,7 +448,7 @@ QLayoutItem* q_stackedlayout_as_q_layout_item(void* self);
 ///
 /// @param _qlayoutitem QLayoutItem*
 ///
-QStackedLayout* q_stackedlayout_from_q_layout_item(void* _qlayoutitem);
+QStackedLayout* q_stackedlayout_from_q_layout_item(const void* _qlayoutitem);
 
 /// Inherited from QLayout
 ///
@@ -620,10 +620,10 @@ int32_t q_stackedlayout_index_of2(const void* self, const void* param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback int32_t func(const QStackedLayout* self, QLayoutItem* param1)
 ///
-void q_stackedlayout_on_index_of2(const void* self, int32_t (*callback)(const void*, const void*));
+void q_stackedlayout_on_index_of2(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QLayout
 ///
@@ -1196,10 +1196,10 @@ int32_t q_stackedlayout_super_spacing(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback int32_t func(QStackedLayout* self)
 ///
-void q_stackedlayout_on_spacing(const void* self, int32_t (*callback)(const void*));
+void q_stackedlayout_on_spacing(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QLayout
 ///
@@ -1291,12 +1291,12 @@ QRect* q_stackedlayout_super_geometry(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback QRect* func(QStackedLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_stackedlayout_on_geometry(const void* self, QRect* (*callback)(const void*));
+void q_stackedlayout_on_geometry(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QLayout
 ///
@@ -1328,10 +1328,10 @@ int32_t q_stackedlayout_super_expanding_directions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback int32_t func(QStackedLayout* self)
 ///
-void q_stackedlayout_on_expanding_directions(const void* self, int32_t (*callback)(const void*));
+void q_stackedlayout_on_expanding_directions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QLayout
 ///
@@ -1359,12 +1359,12 @@ QSize* q_stackedlayout_super_maximum_size(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback QSize* func(QStackedLayout* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_stackedlayout_on_maximum_size(const void* self, QSize* (*callback)(const void*));
+void q_stackedlayout_on_maximum_size(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QLayout
 ///
@@ -1394,10 +1394,10 @@ int32_t q_stackedlayout_super_index_of(const void* self, const void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback int32_t func(QStackedLayout* self, QWidget* param1)
 ///
-void q_stackedlayout_on_index_of(const void* self, int32_t (*callback)(const void*, const void*));
+void q_stackedlayout_on_index_of(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QLayout
 ///
@@ -1425,10 +1425,10 @@ bool q_stackedlayout_super_is_empty(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback bool func(QStackedLayout* self)
 ///
-void q_stackedlayout_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_stackedlayout_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// Inherited from QLayout
 ///
@@ -1460,10 +1460,10 @@ int32_t q_stackedlayout_super_control_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback int32_t func(QStackedLayout* self)
 ///
-void q_stackedlayout_on_control_types(const void* self, int32_t (*callback)(const void*));
+void q_stackedlayout_on_control_types(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QLayout
 ///
@@ -1794,10 +1794,10 @@ int32_t q_stackedlayout_super_minimum_height_for_width(const void* self, int par
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback int32_t func(QStackedLayout* self, int param1)
 ///
-void q_stackedlayout_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_stackedlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QLayoutItem
 ///
@@ -1990,12 +1990,12 @@ QRect* q_stackedlayout_super_alignment_rect(const void* self, const void* param1
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback QRect* func(QStackedLayout* self, QRect* param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_stackedlayout_on_alignment_rect(const void* self, QRect* (*callback)(const void*, const void*));
+void q_stackedlayout_on_alignment_rect(void* self, QRect* (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2023,10 +2023,10 @@ QObject* q_stackedlayout_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback QObject* func(QStackedLayout* self)
 ///
-void q_stackedlayout_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_stackedlayout_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2054,10 +2054,10 @@ int32_t q_stackedlayout_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback int32_t func(QStackedLayout* self)
 ///
-void q_stackedlayout_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_stackedlayout_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2087,10 +2087,10 @@ int32_t q_stackedlayout_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback int32_t func(QStackedLayout* self, const char* signal)
 ///
-void q_stackedlayout_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_stackedlayout_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2120,10 +2120,10 @@ bool q_stackedlayout_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStackedLayout*
+/// @param self QStackedLayout*
 /// @param callback bool func(QStackedLayout* self, QMetaMethod* signal)
 ///
-void q_stackedlayout_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_stackedlayout_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

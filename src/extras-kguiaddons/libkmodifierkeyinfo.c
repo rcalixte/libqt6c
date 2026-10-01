@@ -17,7 +17,7 @@ const QMetaObject* k_modifierkeyinfo_meta_object(const void* self) {
     return KModifierKeyInfo_MetaObject((KModifierKeyInfo*)self);
 }
 
-void k_modifierkeyinfo_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_modifierkeyinfo_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KModifierKeyInfo_OnMetaObject((KModifierKeyInfo*)self, (intptr_t)callback);
 }
 

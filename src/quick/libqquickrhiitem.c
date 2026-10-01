@@ -30,7 +30,7 @@ const QMetaObject* q_quickrhiitem_meta_object(const void* self) {
     return QQuickRhiItem_MetaObject((QQuickRhiItem*)self);
 }
 
-void q_quickrhiitem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quickrhiitem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickRhiItem_OnMetaObject((QQuickRhiItem*)self, (intptr_t)callback);
 }
 
@@ -125,7 +125,7 @@ bool q_quickrhiitem_is_texture_provider(const void* self) {
     return QQuickRhiItem_IsTextureProvider((QQuickRhiItem*)self);
 }
 
-void q_quickrhiitem_on_is_texture_provider(const void* self, bool (*callback)(const void*)) {
+void q_quickrhiitem_on_is_texture_provider(void* self, bool (*callback)(const void*)) {
     QQuickRhiItem_OnIsTextureProvider((QQuickRhiItem*)self, (intptr_t)callback);
 }
 
@@ -137,7 +137,7 @@ QSGTextureProvider* q_quickrhiitem_texture_provider(const void* self) {
     return QQuickRhiItem_TextureProvider((QQuickRhiItem*)self);
 }
 
-void q_quickrhiitem_on_texture_provider(const void* self, QSGTextureProvider* (*callback)(const void*)) {
+void q_quickrhiitem_on_texture_provider(void* self, QSGTextureProvider* (*callback)(const void*)) {
     QQuickRhiItem_OnTextureProvider((QQuickRhiItem*)self, (intptr_t)callback);
 }
 
@@ -287,11 +287,11 @@ const char* q_quickrhiitem_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QQmlParserStatus* q_quickrhiitem_as_q_qml_parser_status(void* self) {
+QQmlParserStatus* q_quickrhiitem_as_q_qml_parser_status(const void* self) {
     return QQuickItem_AsQQmlParserStatus((QQuickItem*)self);
 }
 
-QQuickRhiItem* q_quickrhiitem_from_q_qml_parser_status(void* _qqmlparserstatus) {
+QQuickRhiItem* q_quickrhiitem_from_q_qml_parser_status(const void* _qqmlparserstatus) {
     return (QQuickRhiItem*)QQuickItem_FromQQmlParserStatus((QQmlParserStatus*)_qqmlparserstatus);
 }
 
@@ -1240,8 +1240,8 @@ QRectF* q_quickrhiitem_super_bounding_rect(const void* self) {
     return QQuickRhiItem_SuperBoundingRect((QQuickRhiItem*)self);
 }
 
-void q_quickrhiitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*)) {
-    QQuickRhiItem_OnBoundingRect((const QQuickRhiItem*)self, (intptr_t)callback);
+void q_quickrhiitem_on_bounding_rect(void* self, QRectF* (*callback)(const void*)) {
+    QQuickRhiItem_OnBoundingRect((QQuickRhiItem*)self, (intptr_t)callback);
 }
 
 QRectF* q_quickrhiitem_clip_rect(const void* self) {
@@ -1252,8 +1252,8 @@ QRectF* q_quickrhiitem_super_clip_rect(const void* self) {
     return QQuickRhiItem_SuperClipRect((QQuickRhiItem*)self);
 }
 
-void q_quickrhiitem_on_clip_rect(const void* self, QRectF* (*callback)(const void*)) {
-    QQuickRhiItem_OnClipRect((const QQuickRhiItem*)self, (intptr_t)callback);
+void q_quickrhiitem_on_clip_rect(void* self, QRectF* (*callback)(const void*)) {
+    QQuickRhiItem_OnClipRect((QQuickRhiItem*)self, (intptr_t)callback);
 }
 
 bool q_quickrhiitem_contains(const void* self, const void* point) {
@@ -1264,8 +1264,8 @@ bool q_quickrhiitem_super_contains(const void* self, const void* point) {
     return QQuickRhiItem_SuperContains((QQuickRhiItem*)self, (QPointF*)point);
 }
 
-void q_quickrhiitem_on_contains(const void* self, bool (*callback)(const void*, const void*)) {
-    QQuickRhiItem_OnContains((const QQuickRhiItem*)self, (intptr_t)callback);
+void q_quickrhiitem_on_contains(void* self, bool (*callback)(const void*, const void*)) {
+    QQuickRhiItem_OnContains((QQuickRhiItem*)self, (intptr_t)callback);
 }
 
 QVariant* q_quickrhiitem_input_method_query(const void* self, int32_t query) {
@@ -1276,8 +1276,8 @@ QVariant* q_quickrhiitem_super_input_method_query(const void* self, int32_t quer
     return QQuickRhiItem_SuperInputMethodQuery((QQuickRhiItem*)self, query);
 }
 
-void q_quickrhiitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QQuickRhiItem_OnInputMethodQuery((const QQuickRhiItem*)self, (intptr_t)callback);
+void q_quickrhiitem_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QQuickRhiItem_OnInputMethodQuery((QQuickRhiItem*)self, (intptr_t)callback);
 }
 
 void q_quickrhiitem_item_change(void* self, int32_t param1, const void* param2) {

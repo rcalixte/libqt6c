@@ -25,10 +25,10 @@ int32_t q_sgvertexcolormaterial_compare(const void* self, const void* other);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGVertexColorMaterial*
+/// @param self QSGVertexColorMaterial*
 /// @param callback int32_t func(const QSGVertexColorMaterial* self, QSGMaterial* other)
 ///
-void q_sgvertexcolormaterial_on_compare(const void* self, int32_t (*callback)(const void*, const void*));
+void q_sgvertexcolormaterial_on_compare(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgvertexcolormaterial.html#compare)
 ///
@@ -49,10 +49,10 @@ QSGMaterialType* q_sgvertexcolormaterial_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGVertexColorMaterial*
+/// @param self QSGVertexColorMaterial*
 /// @param callback QSGMaterialType* func(const QSGVertexColorMaterial* self)
 ///
-void q_sgvertexcolormaterial_on_type(const void* self, QSGMaterialType* (*callback)(const void*));
+void q_sgvertexcolormaterial_on_type(void* self, QSGMaterialType* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgvertexcolormaterial.html#type)
 ///
@@ -73,10 +73,10 @@ QSGMaterialShader* q_sgvertexcolormaterial_create_shader(const void* self, int32
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGVertexColorMaterial*
+/// @param self QSGVertexColorMaterial*
 /// @param callback QSGMaterialShader* func(const QSGVertexColorMaterial* self, enum QSGRendererInterface__RenderMode renderMode)
 ///
-void q_sgvertexcolormaterial_on_create_shader(const void* self, QSGMaterialShader* (*callback)(const void*, int32_t));
+void q_sgvertexcolormaterial_on_create_shader(void* self, QSGMaterialShader* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgvertexcolormaterial.html#createShader)
 ///

@@ -63,7 +63,7 @@ const QMetaObject* k_selectionowner_meta_object(const void* self) {
     return KSelectionOwner_MetaObject((KSelectionOwner*)self);
 }
 
-void k_selectionowner_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_selectionowner_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSelectionOwner_OnMetaObject((KSelectionOwner*)self, (intptr_t)callback);
 }
 

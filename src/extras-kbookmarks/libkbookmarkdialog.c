@@ -30,7 +30,7 @@ const QMetaObject* k_bookmarkdialog_meta_object(const void* self) {
     return KBookmarkDialog_MetaObject((KBookmarkDialog*)self);
 }
 
-void k_bookmarkdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_bookmarkdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KBookmarkDialog_OnMetaObject((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
@@ -183,11 +183,11 @@ void k_bookmarkdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_bookmarkdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_bookmarkdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KBookmarkDialog* k_bookmarkdialog_from_q_paint_device(void* _qpaintdevice) {
+KBookmarkDialog* k_bookmarkdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KBookmarkDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1590,8 +1590,8 @@ QSize* k_bookmarkdialog_super_size_hint(const void* self) {
     return KBookmarkDialog_SuperSizeHint((KBookmarkDialog*)self);
 }
 
-void k_bookmarkdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KBookmarkDialog_OnSizeHint((const KBookmarkDialog*)self, (intptr_t)callback);
+void k_bookmarkdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KBookmarkDialog_OnSizeHint((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_bookmarkdialog_minimum_size_hint(const void* self) {
@@ -1602,8 +1602,8 @@ QSize* k_bookmarkdialog_super_minimum_size_hint(const void* self) {
     return KBookmarkDialog_SuperMinimumSizeHint((KBookmarkDialog*)self);
 }
 
-void k_bookmarkdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KBookmarkDialog_OnMinimumSizeHint((const KBookmarkDialog*)self, (intptr_t)callback);
+void k_bookmarkdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KBookmarkDialog_OnMinimumSizeHint((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
 void k_bookmarkdialog_open(void* self) {
@@ -1734,8 +1734,8 @@ int32_t k_bookmarkdialog_super_dev_type(const void* self) {
     return KBookmarkDialog_SuperDevType((KBookmarkDialog*)self);
 }
 
-void k_bookmarkdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KBookmarkDialog_OnDevType((const KBookmarkDialog*)self, (intptr_t)callback);
+void k_bookmarkdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KBookmarkDialog_OnDevType((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_bookmarkdialog_height_for_width(const void* self, int param1) {
@@ -1746,8 +1746,8 @@ int32_t k_bookmarkdialog_super_height_for_width(const void* self, int param1) {
     return KBookmarkDialog_SuperHeightForWidth((KBookmarkDialog*)self, param1);
 }
 
-void k_bookmarkdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KBookmarkDialog_OnHeightForWidth((const KBookmarkDialog*)self, (intptr_t)callback);
+void k_bookmarkdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KBookmarkDialog_OnHeightForWidth((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
 bool k_bookmarkdialog_has_height_for_width(const void* self) {
@@ -1758,8 +1758,8 @@ bool k_bookmarkdialog_super_has_height_for_width(const void* self) {
     return KBookmarkDialog_SuperHasHeightForWidth((KBookmarkDialog*)self);
 }
 
-void k_bookmarkdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KBookmarkDialog_OnHasHeightForWidth((const KBookmarkDialog*)self, (intptr_t)callback);
+void k_bookmarkdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KBookmarkDialog_OnHasHeightForWidth((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_bookmarkdialog_paint_engine(const void* self) {
@@ -1770,8 +1770,8 @@ QPaintEngine* k_bookmarkdialog_super_paint_engine(const void* self) {
     return KBookmarkDialog_SuperPaintEngine((KBookmarkDialog*)self);
 }
 
-void k_bookmarkdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KBookmarkDialog_OnPaintEngine((const KBookmarkDialog*)self, (intptr_t)callback);
+void k_bookmarkdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KBookmarkDialog_OnPaintEngine((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
 bool k_bookmarkdialog_event(void* self, void* event) {
@@ -2046,8 +2046,8 @@ int32_t k_bookmarkdialog_super_metric(const void* self, int32_t param1) {
     return KBookmarkDialog_SuperMetric((KBookmarkDialog*)self, param1);
 }
 
-void k_bookmarkdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KBookmarkDialog_OnMetric((const KBookmarkDialog*)self, (intptr_t)callback);
+void k_bookmarkdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KBookmarkDialog_OnMetric((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
 void k_bookmarkdialog_init_painter(const void* self, void* painter) {
@@ -2058,8 +2058,8 @@ void k_bookmarkdialog_super_init_painter(const void* self, void* painter) {
     KBookmarkDialog_SuperInitPainter((KBookmarkDialog*)self, (QPainter*)painter);
 }
 
-void k_bookmarkdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KBookmarkDialog_OnInitPainter((const KBookmarkDialog*)self, (intptr_t)callback);
+void k_bookmarkdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KBookmarkDialog_OnInitPainter((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_bookmarkdialog_redirected(const void* self, void* offset) {
@@ -2070,8 +2070,8 @@ QPaintDevice* k_bookmarkdialog_super_redirected(const void* self, void* offset) 
     return KBookmarkDialog_SuperRedirected((KBookmarkDialog*)self, (QPoint*)offset);
 }
 
-void k_bookmarkdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KBookmarkDialog_OnRedirected((const KBookmarkDialog*)self, (intptr_t)callback);
+void k_bookmarkdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KBookmarkDialog_OnRedirected((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_bookmarkdialog_shared_painter(const void* self) {
@@ -2082,8 +2082,8 @@ QPainter* k_bookmarkdialog_super_shared_painter(const void* self) {
     return KBookmarkDialog_SuperSharedPainter((KBookmarkDialog*)self);
 }
 
-void k_bookmarkdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KBookmarkDialog_OnSharedPainter((const KBookmarkDialog*)self, (intptr_t)callback);
+void k_bookmarkdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KBookmarkDialog_OnSharedPainter((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
 void k_bookmarkdialog_input_method_event(void* self, void* param1) {
@@ -2106,8 +2106,8 @@ QVariant* k_bookmarkdialog_super_input_method_query(const void* self, int32_t pa
     return KBookmarkDialog_SuperInputMethodQuery((KBookmarkDialog*)self, param1);
 }
 
-void k_bookmarkdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KBookmarkDialog_OnInputMethodQuery((const KBookmarkDialog*)self, (intptr_t)callback);
+void k_bookmarkdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KBookmarkDialog_OnInputMethodQuery((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
 bool k_bookmarkdialog_focus_next_prev_child(void* self, bool next) {

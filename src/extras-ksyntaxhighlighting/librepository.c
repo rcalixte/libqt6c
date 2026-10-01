@@ -16,7 +16,7 @@ const QMetaObject* k_syntaxhighlighting__repository_meta_object(const void* self
     return KSyntaxHighlighting__Repository_MetaObject((KSyntaxHighlighting__Repository*)self);
 }
 
-void k_syntaxhighlighting__repository_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_syntaxhighlighting__repository_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSyntaxHighlighting__Repository_OnMetaObject((KSyntaxHighlighting__Repository*)self, (intptr_t)callback);
 }
 

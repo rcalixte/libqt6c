@@ -24,7 +24,7 @@ const QMetaObject* q_identityproxymodel_meta_object(const void* self) {
     return QIdentityProxyModel_MetaObject((QIdentityProxyModel*)self);
 }
 
-void q_identityproxymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_identityproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QIdentityProxyModel_OnMetaObject((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -67,7 +67,7 @@ int32_t q_identityproxymodel_column_count(const void* self, const void* parent) 
     return QIdentityProxyModel_ColumnCount((QIdentityProxyModel*)self, (QModelIndex*)parent);
 }
 
-void q_identityproxymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_identityproxymodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QIdentityProxyModel_OnColumnCount((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -79,7 +79,7 @@ QModelIndex* q_identityproxymodel_index(const void* self, int row, int column, c
     return QIdentityProxyModel_Index((QIdentityProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void q_identityproxymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void q_identityproxymodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     QIdentityProxyModel_OnIndex((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -91,7 +91,7 @@ QModelIndex* q_identityproxymodel_map_from_source(const void* self, const void* 
     return QIdentityProxyModel_MapFromSource((QIdentityProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-void q_identityproxymodel_on_map_from_source(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_identityproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QIdentityProxyModel_OnMapFromSource((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -103,7 +103,7 @@ QModelIndex* q_identityproxymodel_map_to_source(const void* self, const void* pr
     return QIdentityProxyModel_MapToSource((QIdentityProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
-void q_identityproxymodel_on_map_to_source(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_identityproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QIdentityProxyModel_OnMapToSource((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -115,7 +115,7 @@ QModelIndex* q_identityproxymodel_parent(const void* self, const void* child) {
     return QIdentityProxyModel_Parent((QIdentityProxyModel*)self, (QModelIndex*)child);
 }
 
-void q_identityproxymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_identityproxymodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QIdentityProxyModel_OnParent((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -127,7 +127,7 @@ int32_t q_identityproxymodel_row_count(const void* self, const void* parent) {
     return QIdentityProxyModel_RowCount((QIdentityProxyModel*)self, (QModelIndex*)parent);
 }
 
-void q_identityproxymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_identityproxymodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QIdentityProxyModel_OnRowCount((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -139,7 +139,7 @@ QVariant* q_identityproxymodel_header_data(const void* self, int section, int32_
     return QIdentityProxyModel_HeaderData((QIdentityProxyModel*)self, section, orientation, role);
 }
 
-void q_identityproxymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+void q_identityproxymodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
     QIdentityProxyModel_OnHeaderData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -163,7 +163,7 @@ QModelIndex* q_identityproxymodel_sibling(const void* self, int row, int column,
     return QIdentityProxyModel_Sibling((QIdentityProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void q_identityproxymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void q_identityproxymodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     QIdentityProxyModel_OnSibling((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -175,7 +175,7 @@ QItemSelection* q_identityproxymodel_map_selection_from_source(const void* self,
     return QIdentityProxyModel_MapSelectionFromSource((QIdentityProxyModel*)self, (QItemSelection*)selection);
 }
 
-void q_identityproxymodel_on_map_selection_from_source(const void* self, QItemSelection* (*callback)(const void*, const void*)) {
+void q_identityproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(const void*, const void*)) {
     QIdentityProxyModel_OnMapSelectionFromSource((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -187,7 +187,7 @@ QItemSelection* q_identityproxymodel_map_selection_to_source(const void* self, c
     return QIdentityProxyModel_MapSelectionToSource((QIdentityProxyModel*)self, (QItemSelection*)selection);
 }
 
-void q_identityproxymodel_on_map_selection_to_source(const void* self, QItemSelection* (*callback)(const void*, const void*)) {
+void q_identityproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(const void*, const void*)) {
     QIdentityProxyModel_OnMapSelectionToSource((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -200,7 +200,7 @@ libqt_list /* of QModelIndex* */ q_identityproxymodel_match(const void* self, co
     return _arr;
 }
 
-void q_identityproxymodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+void q_identityproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
     QIdentityProxyModel_OnMatch((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -692,8 +692,8 @@ QVariant* q_identityproxymodel_super_data(const void* self, const void* proxyInd
     return QIdentityProxyModel_SuperData((QIdentityProxyModel*)self, (QModelIndex*)proxyIndex, role);
 }
 
-void q_identityproxymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
-    QIdentityProxyModel_OnData((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
+    QIdentityProxyModel_OnData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 libqt_map /* of int to QVariant* */ q_identityproxymodel_item_data(const void* self, const void* index) {
@@ -716,8 +716,8 @@ libqt_map /* of int to QVariant* */ q_identityproxymodel_super_item_data(const v
     return _ret;
 }
 
-void q_identityproxymodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
-    QIdentityProxyModel_OnItemData((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    QIdentityProxyModel_OnItemData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 int32_t q_identityproxymodel_flags(const void* self, const void* index) {
@@ -728,8 +728,8 @@ int32_t q_identityproxymodel_super_flags(const void* self, const void* index) {
     return QIdentityProxyModel_SuperFlags((QIdentityProxyModel*)self, (QModelIndex*)index);
 }
 
-void q_identityproxymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QIdentityProxyModel_OnFlags((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
+    QIdentityProxyModel_OnFlags((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 bool q_identityproxymodel_set_data(void* self, const void* index, const void* value, int role) {
@@ -838,8 +838,8 @@ QModelIndex* q_identityproxymodel_super_buddy(const void* self, const void* inde
     return QIdentityProxyModel_SuperBuddy((QIdentityProxyModel*)self, (QModelIndex*)index);
 }
 
-void q_identityproxymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    QIdentityProxyModel_OnBuddy((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    QIdentityProxyModel_OnBuddy((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 bool q_identityproxymodel_can_fetch_more(const void* self, const void* parent) {
@@ -850,8 +850,8 @@ bool q_identityproxymodel_super_can_fetch_more(const void* self, const void* par
     return QIdentityProxyModel_SuperCanFetchMore((QIdentityProxyModel*)self, (QModelIndex*)parent);
 }
 
-void q_identityproxymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    QIdentityProxyModel_OnCanFetchMore((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    QIdentityProxyModel_OnCanFetchMore((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 void q_identityproxymodel_fetch_more(void* self, const void* parent) {
@@ -886,8 +886,8 @@ QSize* q_identityproxymodel_super_span(const void* self, const void* index) {
     return QIdentityProxyModel_SuperSpan((QIdentityProxyModel*)self, (QModelIndex*)index);
 }
 
-void q_identityproxymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    QIdentityProxyModel_OnSpan((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    QIdentityProxyModel_OnSpan((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 bool q_identityproxymodel_has_children(const void* self, const void* parent) {
@@ -898,8 +898,8 @@ bool q_identityproxymodel_super_has_children(const void* self, const void* paren
     return QIdentityProxyModel_SuperHasChildren((QIdentityProxyModel*)self, (QModelIndex*)parent);
 }
 
-void q_identityproxymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
-    QIdentityProxyModel_OnHasChildren((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
+    QIdentityProxyModel_OnHasChildren((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 QMimeData* q_identityproxymodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -910,8 +910,8 @@ QMimeData* q_identityproxymodel_super_mime_data(const void* self, libqt_list /* 
     return QIdentityProxyModel_SuperMimeData((QIdentityProxyModel*)self, indexes);
 }
 
-void q_identityproxymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
-    QIdentityProxyModel_OnMimeData((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    QIdentityProxyModel_OnMimeData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 bool q_identityproxymodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -922,8 +922,8 @@ bool q_identityproxymodel_super_can_drop_mime_data(const void* self, const void*
     return QIdentityProxyModel_SuperCanDropMimeData((QIdentityProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_identityproxymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    QIdentityProxyModel_OnCanDropMimeData((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    QIdentityProxyModel_OnCanDropMimeData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 const char** q_identityproxymodel_mime_types(const void* self) {
@@ -960,8 +960,8 @@ const char** q_identityproxymodel_super_mime_types(const void* self) {
     return _ret;
 }
 
-void q_identityproxymodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    QIdentityProxyModel_OnMimeTypes((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    QIdentityProxyModel_OnMimeTypes((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 int32_t q_identityproxymodel_supported_drag_actions(const void* self) {
@@ -972,8 +972,8 @@ int32_t q_identityproxymodel_super_supported_drag_actions(const void* self) {
     return QIdentityProxyModel_SuperSupportedDragActions((QIdentityProxyModel*)self);
 }
 
-void q_identityproxymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    QIdentityProxyModel_OnSupportedDragActions((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    QIdentityProxyModel_OnSupportedDragActions((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 int32_t q_identityproxymodel_supported_drop_actions(const void* self) {
@@ -984,8 +984,8 @@ int32_t q_identityproxymodel_super_supported_drop_actions(const void* self) {
     return QIdentityProxyModel_SuperSupportedDropActions((QIdentityProxyModel*)self);
 }
 
-void q_identityproxymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
-    QIdentityProxyModel_OnSupportedDropActions((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
+    QIdentityProxyModel_OnSupportedDropActions((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 libqt_map /* of int to char* */ q_identityproxymodel_role_names(const void* self) {
@@ -1054,8 +1054,8 @@ libqt_map /* of int to char* */ q_identityproxymodel_super_role_names(const void
     return _ret;
 }
 
-void q_identityproxymodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
-    QIdentityProxyModel_OnRoleNames((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+    QIdentityProxyModel_OnRoleNames((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 void q_identityproxymodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
@@ -1066,8 +1066,8 @@ void q_identityproxymodel_super_multi_data(const void* self, const void* index, 
     QIdentityProxyModel_SuperMultiData((QIdentityProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_identityproxymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    QIdentityProxyModel_OnMultiData((const QIdentityProxyModel*)self, (intptr_t)callback);
+void q_identityproxymodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    QIdentityProxyModel_OnMultiData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
 void q_identityproxymodel_reset_internal_data(void* self) {

@@ -76,7 +76,7 @@ int32_t q_undocommand_id(const void* self) {
     return QUndoCommand_Id((QUndoCommand*)self);
 }
 
-void q_undocommand_on_id(const void* self, int32_t (*callback)(const void*)) {
+void q_undocommand_on_id(void* self, int32_t (*callback)(const void*)) {
     QUndoCommand_OnId((QUndoCommand*)self, (intptr_t)callback);
 }
 
@@ -120,7 +120,7 @@ const QMetaObject* q_undostack_meta_object(const void* self) {
     return QUndoStack_MetaObject((QUndoStack*)self);
 }
 
-void q_undostack_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_undostack_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QUndoStack_OnMetaObject((QUndoStack*)self, (intptr_t)callback);
 }
 

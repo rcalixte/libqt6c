@@ -17,7 +17,7 @@ const QMetaObject* q_signalmapper_meta_object(const void* self) {
     return QSignalMapper_MetaObject((QSignalMapper*)self);
 }
 
-void q_signalmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_signalmapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSignalMapper_OnMetaObject((QSignalMapper*)self, (intptr_t)callback);
 }
 

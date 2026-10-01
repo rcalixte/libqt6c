@@ -466,8 +466,8 @@ const QMetaObject* k_io__commandlauncherjob_super_meta_object(const void* self) 
     return KIO__CommandLauncherJob_SuperMetaObject((KIO__CommandLauncherJob*)self);
 }
 
-void k_io__commandlauncherjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    KIO__CommandLauncherJob_OnMetaObject((const KIO__CommandLauncherJob*)self, (intptr_t)callback);
+void k_io__commandlauncherjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    KIO__CommandLauncherJob_OnMetaObject((KIO__CommandLauncherJob*)self, (intptr_t)callback);
 }
 
 void* k_io__commandlauncherjob_metacast(void* self, const char* param1) {
@@ -544,8 +544,8 @@ const char* k_io__commandlauncherjob_super_error_string(const void* self) {
     return _ret;
 }
 
-void k_io__commandlauncherjob_on_error_string(const void* self, const char* (*callback)(const void*)) {
-    KIO__CommandLauncherJob_OnErrorString((const KIO__CommandLauncherJob*)self, (intptr_t)callback);
+void k_io__commandlauncherjob_on_error_string(void* self, const char* (*callback)(const void*)) {
+    KIO__CommandLauncherJob_OnErrorString((KIO__CommandLauncherJob*)self, (intptr_t)callback);
 }
 
 bool k_io__commandlauncherjob_event(void* self, void* event) {

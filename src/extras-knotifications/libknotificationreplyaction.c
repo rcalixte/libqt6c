@@ -13,7 +13,7 @@ const QMetaObject* k_notificationreplyaction_meta_object(const void* self) {
     return KNotificationReplyAction_MetaObject((KNotificationReplyAction*)self);
 }
 
-void k_notificationreplyaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_notificationreplyaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KNotificationReplyAction_OnMetaObject((KNotificationReplyAction*)self, (intptr_t)callback);
 }
 

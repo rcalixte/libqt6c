@@ -26,7 +26,7 @@ const QMetaObject* k_fontsizeaction_meta_object(const void* self) {
     return KFontSizeAction_MetaObject((KFontSizeAction*)self);
 }
 
-void k_fontsizeaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_fontsizeaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFontSizeAction_OnMetaObject((KFontSizeAction*)self, (intptr_t)callback);
 }
 

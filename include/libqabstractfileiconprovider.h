@@ -25,12 +25,12 @@ QIcon* q_abstractfileiconprovider_icon(const void* self, int32_t param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractFileIconProvider*
+/// @param self QAbstractFileIconProvider*
 /// @param callback QIcon* func(const QAbstractFileIconProvider* self, enum QAbstractFileIconProvider__IconType param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractfileiconprovider_on_icon(const void* self, QIcon* (*callback)(const void*, int32_t));
+void q_abstractfileiconprovider_on_icon(void* self, QIcon* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
 ///
@@ -52,12 +52,12 @@ QIcon* q_abstractfileiconprovider_icon2(const void* self, const void* param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractFileIconProvider*
+/// @param self QAbstractFileIconProvider*
 /// @param callback QIcon* func(const QAbstractFileIconProvider* self, QFileInfo* param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractfileiconprovider_on_icon2(const void* self, QIcon* (*callback)(const void*, const void*));
+void q_abstractfileiconprovider_on_icon2(void* self, QIcon* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
 ///
@@ -81,10 +81,10 @@ const char* q_abstractfileiconprovider_type(const void* self, const void* param1
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractFileIconProvider*
+/// @param self QAbstractFileIconProvider*
 /// @param callback const char* func(const QAbstractFileIconProvider* self, QFileInfo* param1)
 ///
-void q_abstractfileiconprovider_on_type(const void* self, const char* (*callback)(const void*, const void*));
+void q_abstractfileiconprovider_on_type(void* self, const char* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
 ///
@@ -132,10 +132,10 @@ int32_t q_abstractfileiconprovider_options(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractFileIconProvider*
+/// @param self QAbstractFileIconProvider*
 /// @param callback int32_t func(const QAbstractFileIconProvider* self)
 ///
-void q_abstractfileiconprovider_on_options(const void* self, int32_t (*callback)(const void*));
+void q_abstractfileiconprovider_on_options(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
 ///

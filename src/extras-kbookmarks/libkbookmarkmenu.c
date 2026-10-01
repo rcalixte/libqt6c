@@ -22,7 +22,7 @@ const QMetaObject* k_bookmarkmenu_meta_object(const void* self) {
     return KBookmarkMenu_MetaObject((KBookmarkMenu*)self);
 }
 
-void k_bookmarkmenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_bookmarkmenu_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KBookmarkMenu_OnMetaObject((KBookmarkMenu*)self, (intptr_t)callback);
 }
 

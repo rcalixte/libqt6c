@@ -552,10 +552,10 @@ int32_t k_desktopfile_super_access_mode(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDesktopFile*
+/// @param self KDesktopFile*
 /// @param callback int32_t func(KDesktopFile* self)
 ///
-void k_desktopfile_on_access_mode(const void* self, int32_t (*callback)(const void*));
+void k_desktopfile_on_access_mode(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from KConfig
 ///
@@ -583,10 +583,10 @@ bool k_desktopfile_super_is_immutable(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDesktopFile*
+/// @param self KDesktopFile*
 /// @param callback bool func(KDesktopFile* self)
 ///
-void k_desktopfile_on_is_immutable(const void* self, bool (*callback)(const void*));
+void k_desktopfile_on_is_immutable(void* self, bool (*callback)(const void*));
 
 /// Inherited from KConfig
 ///
@@ -618,10 +618,10 @@ const char** k_desktopfile_super_group_list(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDesktopFile*
+/// @param self KDesktopFile*
 /// @param callback const char** func(KDesktopFile* self)
 ///
-void k_desktopfile_on_group_list(const void* self, const char** (*callback)(const void*));
+void k_desktopfile_on_group_list(void* self, const char** (*callback)(const void*));
 
 /// Inherited from KConfig
 ///
@@ -651,10 +651,10 @@ bool k_desktopfile_super_has_group_impl(const void* self, const char* groupName)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDesktopFile*
+/// @param self KDesktopFile*
 /// @param callback bool func(KDesktopFile* self, const char* groupName)
 ///
-void k_desktopfile_on_has_group_impl(const void* self, bool (*callback)(const void*, const char*));
+void k_desktopfile_on_has_group_impl(void* self, bool (*callback)(const void*, const char*));
 
 /// Inherited from KConfig
 ///
@@ -719,10 +719,10 @@ bool k_desktopfile_super_is_group_immutable_impl(const void* self, const char* g
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDesktopFile*
+/// @param self KDesktopFile*
 /// @param callback bool func(KDesktopFile* self, const char* groupName)
 ///
-void k_desktopfile_on_is_group_immutable_impl(const void* self, bool (*callback)(const void*, const char*));
+void k_desktopfile_on_is_group_immutable_impl(void* self, bool (*callback)(const void*, const char*));
 
 /// Inherited from KConfig
 ///

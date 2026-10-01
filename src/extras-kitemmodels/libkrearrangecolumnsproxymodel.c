@@ -25,7 +25,7 @@ const QMetaObject* k_rearrangecolumnsproxymodel_meta_object(const void* self) {
     return KRearrangeColumnsProxyModel_MetaObject((KRearrangeColumnsProxyModel*)self);
 }
 
-void k_rearrangecolumnsproxymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_rearrangecolumnsproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KRearrangeColumnsProxyModel_OnMetaObject((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -72,7 +72,7 @@ int32_t k_rearrangecolumnsproxymodel_column_count(const void* self, const void* 
     return KRearrangeColumnsProxyModel_ColumnCount((KRearrangeColumnsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_rearrangecolumnsproxymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void k_rearrangecolumnsproxymodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
     KRearrangeColumnsProxyModel_OnColumnCount((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -84,7 +84,7 @@ int32_t k_rearrangecolumnsproxymodel_row_count(const void* self, const void* par
     return KRearrangeColumnsProxyModel_RowCount((KRearrangeColumnsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_rearrangecolumnsproxymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void k_rearrangecolumnsproxymodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
     KRearrangeColumnsProxyModel_OnRowCount((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -96,7 +96,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_index(const void* self, int row, int c
     return KRearrangeColumnsProxyModel_Index((KRearrangeColumnsProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void k_rearrangecolumnsproxymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void k_rearrangecolumnsproxymodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     KRearrangeColumnsProxyModel_OnIndex((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -108,7 +108,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_parent(const void* self, const void* c
     return KRearrangeColumnsProxyModel_Parent((KRearrangeColumnsProxyModel*)self, (QModelIndex*)child);
 }
 
-void k_rearrangecolumnsproxymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void k_rearrangecolumnsproxymodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     KRearrangeColumnsProxyModel_OnParent((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -120,7 +120,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_map_from_source(const void* self, cons
     return KRearrangeColumnsProxyModel_MapFromSource((KRearrangeColumnsProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-void k_rearrangecolumnsproxymodel_on_map_from_source(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void k_rearrangecolumnsproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     KRearrangeColumnsProxyModel_OnMapFromSource((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -132,7 +132,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_map_to_source(const void* self, const 
     return KRearrangeColumnsProxyModel_MapToSource((KRearrangeColumnsProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
-void k_rearrangecolumnsproxymodel_on_map_to_source(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void k_rearrangecolumnsproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     KRearrangeColumnsProxyModel_OnMapToSource((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -144,7 +144,7 @@ QVariant* k_rearrangecolumnsproxymodel_header_data(const void* self, int section
     return KRearrangeColumnsProxyModel_HeaderData((KRearrangeColumnsProxyModel*)self, section, orientation, role);
 }
 
-void k_rearrangecolumnsproxymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+void k_rearrangecolumnsproxymodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
     KRearrangeColumnsProxyModel_OnHeaderData((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -156,7 +156,7 @@ bool k_rearrangecolumnsproxymodel_has_children(const void* self, const void* par
     return KRearrangeColumnsProxyModel_HasChildren((KRearrangeColumnsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_rearrangecolumnsproxymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
+void k_rearrangecolumnsproxymodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
     KRearrangeColumnsProxyModel_OnHasChildren((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -168,7 +168,7 @@ QModelIndex* k_rearrangecolumnsproxymodel_sibling(const void* self, int row, int
     return KRearrangeColumnsProxyModel_Sibling((KRearrangeColumnsProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void k_rearrangecolumnsproxymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void k_rearrangecolumnsproxymodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     KRearrangeColumnsProxyModel_OnSibling((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -563,8 +563,8 @@ QItemSelection* k_rearrangecolumnsproxymodel_super_map_selection_from_source(con
     return KRearrangeColumnsProxyModel_SuperMapSelectionFromSource((KRearrangeColumnsProxyModel*)self, (QItemSelection*)selection);
 }
 
-void k_rearrangecolumnsproxymodel_on_map_selection_from_source(const void* self, QItemSelection* (*callback)(const void*, const void*)) {
-    KRearrangeColumnsProxyModel_OnMapSelectionFromSource((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(const void*, const void*)) {
+    KRearrangeColumnsProxyModel_OnMapSelectionFromSource((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 QItemSelection* k_rearrangecolumnsproxymodel_map_selection_to_source(const void* self, const void* selection) {
@@ -575,8 +575,8 @@ QItemSelection* k_rearrangecolumnsproxymodel_super_map_selection_to_source(const
     return KRearrangeColumnsProxyModel_SuperMapSelectionToSource((KRearrangeColumnsProxyModel*)self, (QItemSelection*)selection);
 }
 
-void k_rearrangecolumnsproxymodel_on_map_selection_to_source(const void* self, QItemSelection* (*callback)(const void*, const void*)) {
-    KRearrangeColumnsProxyModel_OnMapSelectionToSource((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(const void*, const void*)) {
+    KRearrangeColumnsProxyModel_OnMapSelectionToSource((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ k_rearrangecolumnsproxymodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -589,8 +589,8 @@ libqt_list /* of QModelIndex* */ k_rearrangecolumnsproxymodel_super_match(const 
     return _arr;
 }
 
-void k_rearrangecolumnsproxymodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    KRearrangeColumnsProxyModel_OnMatch((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    KRearrangeColumnsProxyModel_OnMatch((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_rearrangecolumnsproxymodel_set_source_model(void* self, void* sourceModel) {
@@ -709,8 +709,8 @@ QVariant* k_rearrangecolumnsproxymodel_super_data(const void* self, const void* 
     return KRearrangeColumnsProxyModel_SuperData((KRearrangeColumnsProxyModel*)self, (QModelIndex*)proxyIndex, role);
 }
 
-void k_rearrangecolumnsproxymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
-    KRearrangeColumnsProxyModel_OnData((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
+    KRearrangeColumnsProxyModel_OnData((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 libqt_map /* of int to QVariant* */ k_rearrangecolumnsproxymodel_item_data(const void* self, const void* index) {
@@ -733,8 +733,8 @@ libqt_map /* of int to QVariant* */ k_rearrangecolumnsproxymodel_super_item_data
     return _ret;
 }
 
-void k_rearrangecolumnsproxymodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
-    KRearrangeColumnsProxyModel_OnItemData((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    KRearrangeColumnsProxyModel_OnItemData((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 int32_t k_rearrangecolumnsproxymodel_flags(const void* self, const void* index) {
@@ -745,8 +745,8 @@ int32_t k_rearrangecolumnsproxymodel_super_flags(const void* self, const void* i
     return KRearrangeColumnsProxyModel_SuperFlags((KRearrangeColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_rearrangecolumnsproxymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
-    KRearrangeColumnsProxyModel_OnFlags((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
+    KRearrangeColumnsProxyModel_OnFlags((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_rearrangecolumnsproxymodel_set_data(void* self, const void* index, const void* value, int role) {
@@ -855,8 +855,8 @@ QModelIndex* k_rearrangecolumnsproxymodel_super_buddy(const void* self, const vo
     return KRearrangeColumnsProxyModel_SuperBuddy((KRearrangeColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_rearrangecolumnsproxymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    KRearrangeColumnsProxyModel_OnBuddy((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KRearrangeColumnsProxyModel_OnBuddy((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_rearrangecolumnsproxymodel_can_fetch_more(const void* self, const void* parent) {
@@ -867,8 +867,8 @@ bool k_rearrangecolumnsproxymodel_super_can_fetch_more(const void* self, const v
     return KRearrangeColumnsProxyModel_SuperCanFetchMore((KRearrangeColumnsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_rearrangecolumnsproxymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    KRearrangeColumnsProxyModel_OnCanFetchMore((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    KRearrangeColumnsProxyModel_OnCanFetchMore((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_rearrangecolumnsproxymodel_fetch_more(void* self, const void* parent) {
@@ -903,8 +903,8 @@ QSize* k_rearrangecolumnsproxymodel_super_span(const void* self, const void* ind
     return KRearrangeColumnsProxyModel_SuperSpan((KRearrangeColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_rearrangecolumnsproxymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    KRearrangeColumnsProxyModel_OnSpan((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    KRearrangeColumnsProxyModel_OnSpan((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 QMimeData* k_rearrangecolumnsproxymodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -915,8 +915,8 @@ QMimeData* k_rearrangecolumnsproxymodel_super_mime_data(const void* self, libqt_
     return KRearrangeColumnsProxyModel_SuperMimeData((KRearrangeColumnsProxyModel*)self, indexes);
 }
 
-void k_rearrangecolumnsproxymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
-    KRearrangeColumnsProxyModel_OnMimeData((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    KRearrangeColumnsProxyModel_OnMimeData((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_rearrangecolumnsproxymodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -927,8 +927,8 @@ bool k_rearrangecolumnsproxymodel_super_can_drop_mime_data(const void* self, con
     return KRearrangeColumnsProxyModel_SuperCanDropMimeData((KRearrangeColumnsProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void k_rearrangecolumnsproxymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    KRearrangeColumnsProxyModel_OnCanDropMimeData((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    KRearrangeColumnsProxyModel_OnCanDropMimeData((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 const char** k_rearrangecolumnsproxymodel_mime_types(const void* self) {
@@ -965,8 +965,8 @@ const char** k_rearrangecolumnsproxymodel_super_mime_types(const void* self) {
     return _ret;
 }
 
-void k_rearrangecolumnsproxymodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    KRearrangeColumnsProxyModel_OnMimeTypes((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    KRearrangeColumnsProxyModel_OnMimeTypes((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 int32_t k_rearrangecolumnsproxymodel_supported_drag_actions(const void* self) {
@@ -977,8 +977,8 @@ int32_t k_rearrangecolumnsproxymodel_super_supported_drag_actions(const void* se
     return KRearrangeColumnsProxyModel_SuperSupportedDragActions((KRearrangeColumnsProxyModel*)self);
 }
 
-void k_rearrangecolumnsproxymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    KRearrangeColumnsProxyModel_OnSupportedDragActions((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    KRearrangeColumnsProxyModel_OnSupportedDragActions((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 int32_t k_rearrangecolumnsproxymodel_supported_drop_actions(const void* self) {
@@ -989,8 +989,8 @@ int32_t k_rearrangecolumnsproxymodel_super_supported_drop_actions(const void* se
     return KRearrangeColumnsProxyModel_SuperSupportedDropActions((KRearrangeColumnsProxyModel*)self);
 }
 
-void k_rearrangecolumnsproxymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
-    KRearrangeColumnsProxyModel_OnSupportedDropActions((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
+    KRearrangeColumnsProxyModel_OnSupportedDropActions((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 libqt_map /* of int to char* */ k_rearrangecolumnsproxymodel_role_names(const void* self) {
@@ -1059,8 +1059,8 @@ libqt_map /* of int to char* */ k_rearrangecolumnsproxymodel_super_role_names(co
     return _ret;
 }
 
-void k_rearrangecolumnsproxymodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
-    KRearrangeColumnsProxyModel_OnRoleNames((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+    KRearrangeColumnsProxyModel_OnRoleNames((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_rearrangecolumnsproxymodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
@@ -1071,8 +1071,8 @@ void k_rearrangecolumnsproxymodel_super_multi_data(const void* self, const void*
     KRearrangeColumnsProxyModel_SuperMultiData((KRearrangeColumnsProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_rearrangecolumnsproxymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    KRearrangeColumnsProxyModel_OnMultiData((const KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
+void k_rearrangecolumnsproxymodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    KRearrangeColumnsProxyModel_OnMultiData((KRearrangeColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_rearrangecolumnsproxymodel_reset_internal_data(void* self) {

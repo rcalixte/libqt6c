@@ -27,7 +27,7 @@ const QMetaObject* q_mediacapturesession_meta_object(const void* self) {
     return QMediaCaptureSession_MetaObject((QMediaCaptureSession*)self);
 }
 
-void q_mediacapturesession_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_mediacapturesession_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QMediaCaptureSession_OnMetaObject((QMediaCaptureSession*)self, (intptr_t)callback);
 }
 

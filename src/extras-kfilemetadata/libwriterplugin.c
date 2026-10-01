@@ -14,7 +14,7 @@ const QMetaObject* k_filemetadata__writerplugin_meta_object(const void* self) {
     return KFileMetaData__WriterPlugin_MetaObject((KFileMetaData__WriterPlugin*)self);
 }
 
-void k_filemetadata__writerplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_filemetadata__writerplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFileMetaData__WriterPlugin_OnMetaObject((KFileMetaData__WriterPlugin*)self, (intptr_t)callback);
 }
 
@@ -70,7 +70,7 @@ const char** k_filemetadata__writerplugin_write_mimetypes(const void* self) {
     return _ret;
 }
 
-void k_filemetadata__writerplugin_on_write_mimetypes(const void* self, const char** (*callback)(const void*)) {
+void k_filemetadata__writerplugin_on_write_mimetypes(void* self, const char** (*callback)(const void*)) {
     KFileMetaData__WriterPlugin_OnWriteMimetypes((KFileMetaData__WriterPlugin*)self, (intptr_t)callback);
 }
 

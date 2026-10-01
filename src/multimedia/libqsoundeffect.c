@@ -27,7 +27,7 @@ const QMetaObject* q_soundeffect_meta_object(const void* self) {
     return QSoundEffect_MetaObject((QSoundEffect*)self);
 }
 
-void q_soundeffect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_soundeffect_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSoundEffect_OnMetaObject((QSoundEffect*)self, (intptr_t)callback);
 }
 

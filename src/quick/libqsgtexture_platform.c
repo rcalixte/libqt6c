@@ -12,7 +12,7 @@ uint32_t q_nativeinterface__qsgopengltexture_native_texture(const void* self) {
     return QNativeInterface__QSGOpenGLTexture_NativeTexture((QNativeInterface__QSGOpenGLTexture*)self);
 }
 
-void q_nativeinterface__qsgopengltexture_on_native_texture(const void* self, uint32_t (*callback)(const void*)) {
+void q_nativeinterface__qsgopengltexture_on_native_texture(void* self, uint32_t (*callback)(const void*)) {
     QNativeInterface__QSGOpenGLTexture_OnNativeTexture((QNativeInterface__QSGOpenGLTexture*)self, (intptr_t)callback);
 }
 

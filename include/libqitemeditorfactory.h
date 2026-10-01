@@ -51,10 +51,10 @@ QWidget* q_itemeditorfactory_create_editor(const void* self, int userType, void*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QItemEditorFactory*
+/// @param self QItemEditorFactory*
 /// @param callback QWidget* func(const QItemEditorFactory* self, int userType, QWidget* parent)
 ///
-void q_itemeditorfactory_on_create_editor(const void* self, QWidget* (*callback)(const void*, int, void*));
+void q_itemeditorfactory_on_create_editor(void* self, QWidget* (*callback)(const void*, int, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#createEditor)
 ///
@@ -79,10 +79,10 @@ char* q_itemeditorfactory_value_property_name(const void* self, int userType);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QItemEditorFactory*
+/// @param self QItemEditorFactory*
 /// @param callback libqt_string func(const QItemEditorFactory* self, int userType)
 ///
-void q_itemeditorfactory_on_value_property_name(const void* self, libqt_string (*callback)(const void*, int));
+void q_itemeditorfactory_on_value_property_name(void* self, libqt_string (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#valuePropertyName)
 ///

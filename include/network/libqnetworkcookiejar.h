@@ -32,10 +32,10 @@ const QMetaObject* q_networkcookiejar_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNetworkCookieJar*
+/// @param self QNetworkCookieJar*
 /// @param callback const QMetaObject* func(const QNetworkCookieJar* self)
 ///
-void q_networkcookiejar_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_networkcookiejar_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -108,10 +108,10 @@ libqt_list q_networkcookiejar_cookies_for_url(const void* self, const void* url)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNetworkCookieJar*
+/// @param self QNetworkCookieJar*
 /// @param callback libqt_list of QNetworkCookie* func(const QNetworkCookieJar* self, QUrl* url)
 ///
-void q_networkcookiejar_on_cookies_for_url(const void* self, libqt_list (*callback)(const void*, const void*));
+void q_networkcookiejar_on_cookies_for_url(void* self, libqt_list (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#cookiesForUrl)
 ///
@@ -253,10 +253,10 @@ bool q_networkcookiejar_validate_cookie(const void* self, const void* cookie, co
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNetworkCookieJar*
+/// @param self QNetworkCookieJar*
 /// @param callback bool func(const QNetworkCookieJar* self, QNetworkCookie* cookie, QUrl* url)
 ///
-void q_networkcookiejar_on_validate_cookie(const void* self, bool (*callback)(const void*, const void*, const void*));
+void q_networkcookiejar_on_validate_cookie(void* self, bool (*callback)(const void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookiejar.html#validateCookie)
 ///
@@ -993,10 +993,10 @@ QObject* q_networkcookiejar_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QNetworkCookieJar*
+/// @param self QNetworkCookieJar*
 /// @param callback QObject* func(QNetworkCookieJar* self)
 ///
-void q_networkcookiejar_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_networkcookiejar_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1024,10 +1024,10 @@ int32_t q_networkcookiejar_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QNetworkCookieJar*
+/// @param self QNetworkCookieJar*
 /// @param callback int32_t func(QNetworkCookieJar* self)
 ///
-void q_networkcookiejar_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_networkcookiejar_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1057,10 +1057,10 @@ int32_t q_networkcookiejar_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QNetworkCookieJar*
+/// @param self QNetworkCookieJar*
 /// @param callback int32_t func(QNetworkCookieJar* self, const char* signal)
 ///
-void q_networkcookiejar_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_networkcookiejar_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1090,10 +1090,10 @@ bool q_networkcookiejar_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QNetworkCookieJar*
+/// @param self QNetworkCookieJar*
 /// @param callback bool func(QNetworkCookieJar* self, QMetaMethod* signal)
 ///
-void q_networkcookiejar_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_networkcookiejar_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

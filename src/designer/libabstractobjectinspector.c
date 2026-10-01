@@ -27,7 +27,7 @@ const QMetaObject* q_designerobjectinspectorinterface_meta_object(const void* se
     return QDesignerObjectInspectorInterface_MetaObject((QDesignerObjectInspectorInterface*)self);
 }
 
-void q_designerobjectinspectorinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_designerobjectinspectorinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerObjectInspectorInterface_OnMetaObject((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
@@ -70,7 +70,7 @@ QDesignerFormEditorInterface* q_designerobjectinspectorinterface_core(const void
     return QDesignerObjectInspectorInterface_Core((QDesignerObjectInspectorInterface*)self);
 }
 
-void q_designerobjectinspectorinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
+void q_designerobjectinspectorinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
     QDesignerObjectInspectorInterface_OnCore((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
@@ -100,11 +100,11 @@ const char* q_designerobjectinspectorinterface_tr3(const char* s, const char* c,
     return _ret;
 }
 
-QPaintDevice* q_designerobjectinspectorinterface_as_q_paint_device(void* self) {
+QPaintDevice* q_designerobjectinspectorinterface_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QDesignerObjectInspectorInterface* q_designerobjectinspectorinterface_from_q_paint_device(void* _qpaintdevice) {
+QDesignerObjectInspectorInterface* q_designerobjectinspectorinterface_from_q_paint_device(const void* _qpaintdevice) {
     return (QDesignerObjectInspectorInterface*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1495,8 +1495,8 @@ int32_t q_designerobjectinspectorinterface_super_dev_type(const void* self) {
     return QDesignerObjectInspectorInterface_SuperDevType((QDesignerObjectInspectorInterface*)self);
 }
 
-void q_designerobjectinspectorinterface_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QDesignerObjectInspectorInterface_OnDevType((const QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+void q_designerobjectinspectorinterface_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QDesignerObjectInspectorInterface_OnDevType((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
 void q_designerobjectinspectorinterface_set_visible(void* self, bool visible) {
@@ -1519,8 +1519,8 @@ QSize* q_designerobjectinspectorinterface_super_size_hint(const void* self) {
     return QDesignerObjectInspectorInterface_SuperSizeHint((QDesignerObjectInspectorInterface*)self);
 }
 
-void q_designerobjectinspectorinterface_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDesignerObjectInspectorInterface_OnSizeHint((const QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+void q_designerobjectinspectorinterface_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDesignerObjectInspectorInterface_OnSizeHint((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
 QSize* q_designerobjectinspectorinterface_minimum_size_hint(const void* self) {
@@ -1531,8 +1531,8 @@ QSize* q_designerobjectinspectorinterface_super_minimum_size_hint(const void* se
     return QDesignerObjectInspectorInterface_SuperMinimumSizeHint((QDesignerObjectInspectorInterface*)self);
 }
 
-void q_designerobjectinspectorinterface_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDesignerObjectInspectorInterface_OnMinimumSizeHint((const QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+void q_designerobjectinspectorinterface_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDesignerObjectInspectorInterface_OnMinimumSizeHint((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
 int32_t q_designerobjectinspectorinterface_height_for_width(const void* self, int param1) {
@@ -1543,8 +1543,8 @@ int32_t q_designerobjectinspectorinterface_super_height_for_width(const void* se
     return QDesignerObjectInspectorInterface_SuperHeightForWidth((QDesignerObjectInspectorInterface*)self, param1);
 }
 
-void q_designerobjectinspectorinterface_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QDesignerObjectInspectorInterface_OnHeightForWidth((const QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+void q_designerobjectinspectorinterface_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QDesignerObjectInspectorInterface_OnHeightForWidth((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
 bool q_designerobjectinspectorinterface_has_height_for_width(const void* self) {
@@ -1555,8 +1555,8 @@ bool q_designerobjectinspectorinterface_super_has_height_for_width(const void* s
     return QDesignerObjectInspectorInterface_SuperHasHeightForWidth((QDesignerObjectInspectorInterface*)self);
 }
 
-void q_designerobjectinspectorinterface_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QDesignerObjectInspectorInterface_OnHasHeightForWidth((const QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+void q_designerobjectinspectorinterface_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QDesignerObjectInspectorInterface_OnHasHeightForWidth((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_designerobjectinspectorinterface_paint_engine(const void* self) {
@@ -1567,8 +1567,8 @@ QPaintEngine* q_designerobjectinspectorinterface_super_paint_engine(const void* 
     return QDesignerObjectInspectorInterface_SuperPaintEngine((QDesignerObjectInspectorInterface*)self);
 }
 
-void q_designerobjectinspectorinterface_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QDesignerObjectInspectorInterface_OnPaintEngine((const QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+void q_designerobjectinspectorinterface_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QDesignerObjectInspectorInterface_OnPaintEngine((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
 bool q_designerobjectinspectorinterface_event(void* self, void* event) {
@@ -1903,8 +1903,8 @@ int32_t q_designerobjectinspectorinterface_super_metric(const void* self, int32_
     return QDesignerObjectInspectorInterface_SuperMetric((QDesignerObjectInspectorInterface*)self, param1);
 }
 
-void q_designerobjectinspectorinterface_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QDesignerObjectInspectorInterface_OnMetric((const QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+void q_designerobjectinspectorinterface_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QDesignerObjectInspectorInterface_OnMetric((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
 void q_designerobjectinspectorinterface_init_painter(const void* self, void* painter) {
@@ -1915,8 +1915,8 @@ void q_designerobjectinspectorinterface_super_init_painter(const void* self, voi
     QDesignerObjectInspectorInterface_SuperInitPainter((QDesignerObjectInspectorInterface*)self, (QPainter*)painter);
 }
 
-void q_designerobjectinspectorinterface_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QDesignerObjectInspectorInterface_OnInitPainter((const QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+void q_designerobjectinspectorinterface_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QDesignerObjectInspectorInterface_OnInitPainter((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_designerobjectinspectorinterface_redirected(const void* self, void* offset) {
@@ -1927,8 +1927,8 @@ QPaintDevice* q_designerobjectinspectorinterface_super_redirected(const void* se
     return QDesignerObjectInspectorInterface_SuperRedirected((QDesignerObjectInspectorInterface*)self, (QPoint*)offset);
 }
 
-void q_designerobjectinspectorinterface_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QDesignerObjectInspectorInterface_OnRedirected((const QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+void q_designerobjectinspectorinterface_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QDesignerObjectInspectorInterface_OnRedirected((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
 QPainter* q_designerobjectinspectorinterface_shared_painter(const void* self) {
@@ -1939,8 +1939,8 @@ QPainter* q_designerobjectinspectorinterface_super_shared_painter(const void* se
     return QDesignerObjectInspectorInterface_SuperSharedPainter((QDesignerObjectInspectorInterface*)self);
 }
 
-void q_designerobjectinspectorinterface_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QDesignerObjectInspectorInterface_OnSharedPainter((const QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+void q_designerobjectinspectorinterface_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QDesignerObjectInspectorInterface_OnSharedPainter((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
 void q_designerobjectinspectorinterface_input_method_event(void* self, void* param1) {
@@ -1963,8 +1963,8 @@ QVariant* q_designerobjectinspectorinterface_super_input_method_query(const void
     return QDesignerObjectInspectorInterface_SuperInputMethodQuery((QDesignerObjectInspectorInterface*)self, param1);
 }
 
-void q_designerobjectinspectorinterface_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QDesignerObjectInspectorInterface_OnInputMethodQuery((const QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
+void q_designerobjectinspectorinterface_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QDesignerObjectInspectorInterface_OnInputMethodQuery((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
 bool q_designerobjectinspectorinterface_focus_next_prev_child(void* self, bool next) {

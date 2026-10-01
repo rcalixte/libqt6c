@@ -86,10 +86,10 @@ const QMetaObject* q_quickview_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickView*
+/// @param self QQuickView*
 /// @param callback const QMetaObject* func(const QQuickView* self)
 ///
-void q_quickview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_quickview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1097,9 +1097,9 @@ void q_quickview_release_resources(void* self);
 ///
 /// Upcasts to a QSurface object
 ///
-/// @param self QQuickView*
+/// @param self const QQuickView*
 ///
-QSurface* q_quickview_as_q_surface(void* self);
+QSurface* q_quickview_as_q_surface(const void* self);
 
 /// Inherited from QWindow
 ///
@@ -1107,7 +1107,7 @@ QSurface* q_quickview_as_q_surface(void* self);
 ///
 /// @param _qsurface QSurface*
 ///
-QQuickView* q_quickview_from_q_surface(void* _qsurface);
+QQuickView* q_quickview_from_q_surface(const void* _qsurface);
 
 /// Inherited from QWindow
 ///
@@ -2864,10 +2864,10 @@ QObject* q_quickview_super_focus_object(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickView*
+/// @param self QQuickView*
 /// @param callback QObject* func(QQuickView* self)
 ///
-void q_quickview_on_focus_object(const void* self, QObject* (*callback)(const void*));
+void q_quickview_on_focus_object(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QQuickWindow
 ///
@@ -2895,10 +2895,10 @@ QAccessibleInterface* q_quickview_super_accessible_root(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickView*
+/// @param self QQuickView*
 /// @param callback QAccessibleInterface* func(QQuickView* self)
 ///
-void q_quickview_on_accessible_root(const void* self, QAccessibleInterface* (*callback)(const void*));
+void q_quickview_on_accessible_root(void* self, QAccessibleInterface* (*callback)(const void*));
 
 /// Inherited from QQuickWindow
 ///
@@ -3260,10 +3260,10 @@ int32_t q_quickview_super_surface_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickView*
+/// @param self QQuickView*
 /// @param callback int32_t func(QQuickView* self)
 ///
-void q_quickview_on_surface_type(const void* self, int32_t (*callback)(const void*));
+void q_quickview_on_surface_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -3291,12 +3291,12 @@ QSurfaceFormat* q_quickview_super_format(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickView*
+/// @param self QQuickView*
 /// @param callback QSurfaceFormat* func(QQuickView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickview_on_format(const void* self, QSurfaceFormat* (*callback)(const void*));
+void q_quickview_on_format(void* self, QSurfaceFormat* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -3324,12 +3324,12 @@ QSize* q_quickview_super_size(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickView*
+/// @param self QQuickView*
 /// @param callback QSize* func(QQuickView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickview_on_size(const void* self, QSize* (*callback)(const void*));
+void q_quickview_on_size(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWindow
 ///
@@ -3664,10 +3664,10 @@ void* q_quickview_super_resolve_interface(const void* self, const char* name, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickView*
+/// @param self QQuickView*
 /// @param callback void* func(QQuickView* self, const char* name, int revision)
 ///
-void q_quickview_on_resolve_interface(const void* self, void* (*callback)(const void*, const char*, int));
+void q_quickview_on_resolve_interface(void* self, void* (*callback)(const void*, const char*, int));
 
 /// Inherited from QObject
 ///
@@ -3695,10 +3695,10 @@ QObject* q_quickview_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickView*
+/// @param self QQuickView*
 /// @param callback QObject* func(QQuickView* self)
 ///
-void q_quickview_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_quickview_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3726,10 +3726,10 @@ int32_t q_quickview_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickView*
+/// @param self QQuickView*
 /// @param callback int32_t func(QQuickView* self)
 ///
-void q_quickview_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_quickview_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3759,10 +3759,10 @@ int32_t q_quickview_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickView*
+/// @param self QQuickView*
 /// @param callback int32_t func(QQuickView* self, const char* signal)
 ///
-void q_quickview_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_quickview_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3792,10 +3792,10 @@ bool q_quickview_super_is_signal_connected(const void* self, const void* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickView*
+/// @param self QQuickView*
 /// @param callback bool func(QQuickView* self, QMetaMethod* signal)
 ///
-void q_quickview_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_quickview_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

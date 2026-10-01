@@ -32,10 +32,10 @@ const QMetaObject* q_designerwidgetfactoryinterface_meta_object(const void* self
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetFactoryInterface*
+/// @param self QDesignerWidgetFactoryInterface*
 /// @param callback const QMetaObject* func(const QDesignerWidgetFactoryInterface* self)
 ///
-void q_designerwidgetfactoryinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_designerwidgetfactoryinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -107,10 +107,10 @@ QDesignerFormEditorInterface* q_designerwidgetfactoryinterface_core(const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetFactoryInterface*
+/// @param self QDesignerWidgetFactoryInterface*
 /// @param callback QDesignerFormEditorInterface* func(const QDesignerWidgetFactoryInterface* self)
 ///
-void q_designerwidgetfactoryinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*));
+void q_designerwidgetfactoryinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetfactoryinterface.html#containerOfWidget)
 ///
@@ -125,10 +125,10 @@ QWidget* q_designerwidgetfactoryinterface_container_of_widget(const void* self, 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetFactoryInterface*
+/// @param self QDesignerWidgetFactoryInterface*
 /// @param callback QWidget* func(const QDesignerWidgetFactoryInterface* self, QWidget* w)
 ///
-void q_designerwidgetfactoryinterface_on_container_of_widget(const void* self, QWidget* (*callback)(const void*, void*));
+void q_designerwidgetfactoryinterface_on_container_of_widget(void* self, QWidget* (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetfactoryinterface.html#widgetOfContainer)
 ///
@@ -143,10 +143,10 @@ QWidget* q_designerwidgetfactoryinterface_widget_of_container(const void* self, 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetFactoryInterface*
+/// @param self QDesignerWidgetFactoryInterface*
 /// @param callback QWidget* func(const QDesignerWidgetFactoryInterface* self, QWidget* w)
 ///
-void q_designerwidgetfactoryinterface_on_widget_of_container(const void* self, QWidget* (*callback)(const void*, void*));
+void q_designerwidgetfactoryinterface_on_widget_of_container(void* self, QWidget* (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetfactoryinterface.html#createWidget)
 ///
@@ -162,10 +162,10 @@ QWidget* q_designerwidgetfactoryinterface_create_widget(const void* self, const 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetFactoryInterface*
+/// @param self QDesignerWidgetFactoryInterface*
 /// @param callback QWidget* func(const QDesignerWidgetFactoryInterface* self, const char* name, QWidget* parentWidget)
 ///
-void q_designerwidgetfactoryinterface_on_create_widget(const void* self, QWidget* (*callback)(const void*, const char*, void*));
+void q_designerwidgetfactoryinterface_on_create_widget(void* self, QWidget* (*callback)(const void*, const char*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetfactoryinterface.html#createLayout)
 ///
@@ -182,10 +182,10 @@ QLayout* q_designerwidgetfactoryinterface_create_layout(const void* self, void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetFactoryInterface*
+/// @param self QDesignerWidgetFactoryInterface*
 /// @param callback QLayout* func(const QDesignerWidgetFactoryInterface* self, QWidget* widget, QLayout* layout, int type)
 ///
-void q_designerwidgetfactoryinterface_on_create_layout(const void* self, QLayout* (*callback)(const void*, void*, void*, int));
+void q_designerwidgetfactoryinterface_on_create_layout(void* self, QLayout* (*callback)(const void*, void*, void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetfactoryinterface.html#isPassiveInteractor)
 ///
@@ -218,10 +218,10 @@ void q_designerwidgetfactoryinterface_initialize(const void* self, void* object)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetFactoryInterface*
+/// @param self QDesignerWidgetFactoryInterface*
 /// @param callback void func(const QDesignerWidgetFactoryInterface* self, QObject* object)
 ///
-void q_designerwidgetfactoryinterface_on_initialize(const void* self, void (*callback)(const void*, void*));
+void q_designerwidgetfactoryinterface_on_initialize(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -948,10 +948,10 @@ QObject* q_designerwidgetfactoryinterface_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetFactoryInterface*
+/// @param self QDesignerWidgetFactoryInterface*
 /// @param callback QObject* func(QDesignerWidgetFactoryInterface* self)
 ///
-void q_designerwidgetfactoryinterface_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_designerwidgetfactoryinterface_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -979,10 +979,10 @@ int32_t q_designerwidgetfactoryinterface_super_sender_signal_index(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetFactoryInterface*
+/// @param self QDesignerWidgetFactoryInterface*
 /// @param callback int32_t func(QDesignerWidgetFactoryInterface* self)
 ///
-void q_designerwidgetfactoryinterface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_designerwidgetfactoryinterface_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1012,10 +1012,10 @@ int32_t q_designerwidgetfactoryinterface_super_receivers(const void* self, const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetFactoryInterface*
+/// @param self QDesignerWidgetFactoryInterface*
 /// @param callback int32_t func(QDesignerWidgetFactoryInterface* self, const char* signal)
 ///
-void q_designerwidgetfactoryinterface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_designerwidgetfactoryinterface_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1045,10 +1045,10 @@ bool q_designerwidgetfactoryinterface_super_is_signal_connected(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetFactoryInterface*
+/// @param self QDesignerWidgetFactoryInterface*
 /// @param callback bool func(QDesignerWidgetFactoryInterface* self, QMetaMethod* signal)
 ///
-void q_designerwidgetfactoryinterface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_designerwidgetfactoryinterface_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -32,10 +32,10 @@ const QMetaObject* q_designerresourcebrowserinterface_meta_object(const void* se
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback const QMetaObject* func(const QDesignerResourceBrowserInterface* self)
 ///
-void q_designerresourcebrowserinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_designerresourcebrowserinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -127,10 +127,10 @@ const char* q_designerresourcebrowserinterface_current_path(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback const char* func(const QDesignerResourceBrowserInterface* self)
 ///
-void q_designerresourcebrowserinterface_on_current_path(const void* self, const char* (*callback)(const void*));
+void q_designerresourcebrowserinterface_on_current_path(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerresourcebrowserinterface.html#currentPathChanged)
 ///
@@ -183,9 +183,9 @@ const char* q_designerresourcebrowserinterface_tr3(const char* s, const char* c,
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QDesignerResourceBrowserInterface*
+/// @param self const QDesignerResourceBrowserInterface*
 ///
-QPaintDevice* q_designerresourcebrowserinterface_as_q_paint_device(void* self);
+QPaintDevice* q_designerresourcebrowserinterface_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -193,7 +193,7 @@ QPaintDevice* q_designerresourcebrowserinterface_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QDesignerResourceBrowserInterface* q_designerresourcebrowserinterface_from_q_paint_device(void* _qpaintdevice);
+QDesignerResourceBrowserInterface* q_designerresourcebrowserinterface_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3178,10 +3178,10 @@ int32_t q_designerresourcebrowserinterface_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback int32_t func(QDesignerResourceBrowserInterface* self)
 ///
-void q_designerresourcebrowserinterface_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_designerresourcebrowserinterface_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3242,12 +3242,12 @@ QSize* q_designerresourcebrowserinterface_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback QSize* func(QDesignerResourceBrowserInterface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerresourcebrowserinterface_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_designerresourcebrowserinterface_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3275,12 +3275,12 @@ QSize* q_designerresourcebrowserinterface_super_minimum_size_hint(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback QSize* func(QDesignerResourceBrowserInterface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerresourcebrowserinterface_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_designerresourcebrowserinterface_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3310,10 +3310,10 @@ int32_t q_designerresourcebrowserinterface_super_height_for_width(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback int32_t func(QDesignerResourceBrowserInterface* self, int param1)
 ///
-void q_designerresourcebrowserinterface_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_designerresourcebrowserinterface_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3341,10 +3341,10 @@ bool q_designerresourcebrowserinterface_super_has_height_for_width(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback bool func(QDesignerResourceBrowserInterface* self)
 ///
-void q_designerresourcebrowserinterface_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_designerresourcebrowserinterface_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3372,10 +3372,10 @@ QPaintEngine* q_designerresourcebrowserinterface_super_paint_engine(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback QPaintEngine* func(QDesignerResourceBrowserInterface* self)
 ///
-void q_designerresourcebrowserinterface_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_designerresourcebrowserinterface_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4300,10 +4300,10 @@ int32_t q_designerresourcebrowserinterface_super_metric(const void* self, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback int32_t func(QDesignerResourceBrowserInterface* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_designerresourcebrowserinterface_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_designerresourcebrowserinterface_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4333,10 +4333,10 @@ void q_designerresourcebrowserinterface_super_init_painter(const void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback void func(QDesignerResourceBrowserInterface* self, QPainter* painter)
 ///
-void q_designerresourcebrowserinterface_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_designerresourcebrowserinterface_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4366,10 +4366,10 @@ QPaintDevice* q_designerresourcebrowserinterface_super_redirected(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback QPaintDevice* func(QDesignerResourceBrowserInterface* self, QPoint* offset)
 ///
-void q_designerresourcebrowserinterface_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_designerresourcebrowserinterface_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4397,10 +4397,10 @@ QPainter* q_designerresourcebrowserinterface_super_shared_painter(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback QPainter* func(QDesignerResourceBrowserInterface* self)
 ///
-void q_designerresourcebrowserinterface_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_designerresourcebrowserinterface_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4463,12 +4463,12 @@ QVariant* q_designerresourcebrowserinterface_super_input_method_query(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback QVariant* func(QDesignerResourceBrowserInterface* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerresourcebrowserinterface_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_designerresourcebrowserinterface_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4884,10 +4884,10 @@ QObject* q_designerresourcebrowserinterface_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback QObject* func(QDesignerResourceBrowserInterface* self)
 ///
-void q_designerresourcebrowserinterface_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_designerresourcebrowserinterface_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4915,10 +4915,10 @@ int32_t q_designerresourcebrowserinterface_super_sender_signal_index(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback int32_t func(QDesignerResourceBrowserInterface* self)
 ///
-void q_designerresourcebrowserinterface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_designerresourcebrowserinterface_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4948,10 +4948,10 @@ int32_t q_designerresourcebrowserinterface_super_receivers(const void* self, con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback int32_t func(QDesignerResourceBrowserInterface* self, const char* signal)
 ///
-void q_designerresourcebrowserinterface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_designerresourcebrowserinterface_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4981,10 +4981,10 @@ bool q_designerresourcebrowserinterface_super_is_signal_connected(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback bool func(QDesignerResourceBrowserInterface* self, QMetaMethod* signal)
 ///
-void q_designerresourcebrowserinterface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_designerresourcebrowserinterface_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5016,10 +5016,10 @@ double q_designerresourcebrowserinterface_super_get_decoded_metric_f(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerResourceBrowserInterface*
+/// @param self QDesignerResourceBrowserInterface*
 /// @param callback double func(QDesignerResourceBrowserInterface* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_designerresourcebrowserinterface_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_designerresourcebrowserinterface_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

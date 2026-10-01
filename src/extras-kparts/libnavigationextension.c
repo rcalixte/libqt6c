@@ -20,7 +20,7 @@ const QMetaObject* k_parts__navigationextension_meta_object(const void* self) {
     return KParts__NavigationExtension_MetaObject((KParts__NavigationExtension*)self);
 }
 
-void k_parts__navigationextension_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_parts__navigationextension_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KParts__NavigationExtension_OnMetaObject((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 

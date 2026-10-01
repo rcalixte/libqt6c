@@ -16,7 +16,7 @@ const QMetaObject* k_io__namefinderjob_meta_object(const void* self) {
     return KIO__NameFinderJob_MetaObject((KIO__NameFinderJob*)self);
 }
 
-void k_io__namefinderjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__namefinderjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__NameFinderJob_OnMetaObject((KIO__NameFinderJob*)self, (intptr_t)callback);
 }
 
@@ -530,8 +530,8 @@ const char* k_io__namefinderjob_super_error_string(const void* self) {
     return _ret;
 }
 
-void k_io__namefinderjob_on_error_string(const void* self, const char* (*callback)(const void*)) {
-    KIO__NameFinderJob_OnErrorString((const KIO__NameFinderJob*)self, (intptr_t)callback);
+void k_io__namefinderjob_on_error_string(void* self, const char* (*callback)(const void*)) {
+    KIO__NameFinderJob_OnErrorString((KIO__NameFinderJob*)self, (intptr_t)callback);
 }
 
 bool k_io__namefinderjob_event(void* self, void* event) {

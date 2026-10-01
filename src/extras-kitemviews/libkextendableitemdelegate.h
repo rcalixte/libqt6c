@@ -26,10 +26,10 @@ const QMetaObject* k_extendableitemdelegate_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback const QMetaObject* func(const KExtendableItemDelegate* self)
 ///
-void k_extendableitemdelegate_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_extendableitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -101,12 +101,12 @@ QSize* k_extendableitemdelegate_size_hint(const void* self, const void* option, 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback QSize* func(const KExtendableItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_extendableitemdelegate_on_size_hint(const void* self, QSize* (*callback)(const void*, const void*, const void*));
+void k_extendableitemdelegate_on_size_hint(void* self, QSize* (*callback)(const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kextendableitemdelegate.html#sizeHint)
 ///
@@ -131,10 +131,10 @@ void k_extendableitemdelegate_paint(const void* self, void* painter, const void*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback void func(const KExtendableItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_extendableitemdelegate_on_paint(const void* self, void (*callback)(const void*, void*, const void*, const void*));
+void k_extendableitemdelegate_on_paint(void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kextendableitemdelegate.html#paint)
 ///
@@ -188,10 +188,10 @@ void k_extendableitemdelegate_update_extender_geometry(const void* self, void* e
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback void func(const KExtendableItemDelegate* self, QWidget* extender, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_extendableitemdelegate_on_update_extender_geometry(const void* self, void (*callback)(const void*, void*, const void*, const void*));
+void k_extendableitemdelegate_on_update_extender_geometry(void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kextendableitemdelegate.html#updateExtenderGeometry)
 ///
@@ -857,10 +857,10 @@ QWidget* k_extendableitemdelegate_super_create_editor(const void* self, void* pa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback QWidget* func(KExtendableItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_extendableitemdelegate_on_create_editor(const void* self, QWidget* (*callback)(const void*, void*, const void*, const void*));
+void k_extendableitemdelegate_on_create_editor(void* self, QWidget* (*callback)(const void*, void*, const void*, const void*));
 
 /// Inherited from QStyledItemDelegate
 ///
@@ -892,10 +892,10 @@ void k_extendableitemdelegate_super_set_editor_data(const void* self, void* edit
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback void func(KExtendableItemDelegate* self, QWidget* editor, QModelIndex* index)
 ///
-void k_extendableitemdelegate_on_set_editor_data(const void* self, void (*callback)(const void*, void*, const void*));
+void k_extendableitemdelegate_on_set_editor_data(void* self, void (*callback)(const void*, void*, const void*));
 
 /// Inherited from QStyledItemDelegate
 ///
@@ -929,10 +929,10 @@ void k_extendableitemdelegate_super_set_model_data(const void* self, void* edito
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback void func(KExtendableItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index)
 ///
-void k_extendableitemdelegate_on_set_model_data(const void* self, void (*callback)(const void*, void*, void*, const void*));
+void k_extendableitemdelegate_on_set_model_data(void* self, void (*callback)(const void*, void*, void*, const void*));
 
 /// Inherited from QStyledItemDelegate
 ///
@@ -966,10 +966,10 @@ void k_extendableitemdelegate_super_update_editor_geometry(const void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback void func(KExtendableItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_extendableitemdelegate_on_update_editor_geometry(const void* self, void (*callback)(const void*, void*, const void*, const void*));
+void k_extendableitemdelegate_on_update_editor_geometry(void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// Inherited from QStyledItemDelegate
 ///
@@ -1005,10 +1005,10 @@ const char* k_extendableitemdelegate_super_display_text(const void* self, const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback const char* func(KExtendableItemDelegate* self, QVariant* value, QLocale* locale)
 ///
-void k_extendableitemdelegate_on_display_text(const void* self, const char* (*callback)(const void*, const void*, const void*));
+void k_extendableitemdelegate_on_display_text(void* self, const char* (*callback)(const void*, const void*, const void*));
 
 /// Inherited from QStyledItemDelegate
 ///
@@ -1040,10 +1040,10 @@ void k_extendableitemdelegate_super_init_style_option(const void* self, void* op
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback void func(KExtendableItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void k_extendableitemdelegate_on_init_style_option(const void* self, void (*callback)(const void*, void*, const void*));
+void k_extendableitemdelegate_on_init_style_option(void* self, void (*callback)(const void*, void*, const void*));
 
 /// Inherited from QStyledItemDelegate
 ///
@@ -1149,10 +1149,10 @@ void k_extendableitemdelegate_super_destroy_editor(const void* self, void* edito
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback void func(KExtendableItemDelegate* self, QWidget* editor, QModelIndex* index)
 ///
-void k_extendableitemdelegate_on_destroy_editor(const void* self, void (*callback)(const void*, void*, const void*));
+void k_extendableitemdelegate_on_destroy_editor(void* self, void (*callback)(const void*, void*, const void*));
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -1223,10 +1223,10 @@ libqt_list k_extendableitemdelegate_super_painting_roles(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback libqt_list of int func(KExtendableItemDelegate* self)
 ///
-void k_extendableitemdelegate_on_painting_roles(const void* self, libqt_list (*callback)(const void*));
+void k_extendableitemdelegate_on_painting_roles(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1452,10 +1452,10 @@ QObject* k_extendableitemdelegate_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback QObject* func(KExtendableItemDelegate* self)
 ///
-void k_extendableitemdelegate_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_extendableitemdelegate_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1483,10 +1483,10 @@ int32_t k_extendableitemdelegate_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback int32_t func(KExtendableItemDelegate* self)
 ///
-void k_extendableitemdelegate_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_extendableitemdelegate_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1516,10 +1516,10 @@ int32_t k_extendableitemdelegate_super_receivers(const void* self, const char* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback int32_t func(KExtendableItemDelegate* self, const char* signal)
 ///
-void k_extendableitemdelegate_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_extendableitemdelegate_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1549,10 +1549,10 @@ bool k_extendableitemdelegate_super_is_signal_connected(const void* self, const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KExtendableItemDelegate*
+/// @param self KExtendableItemDelegate*
 /// @param callback bool func(KExtendableItemDelegate* self, QMetaMethod* signal)
 ///
-void k_extendableitemdelegate_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_extendableitemdelegate_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

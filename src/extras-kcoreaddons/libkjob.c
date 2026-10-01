@@ -18,7 +18,7 @@ const QMetaObject* k_job_meta_object(const void* self) {
     return KJob_MetaObject((KJob*)self);
 }
 
-void k_job_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_job_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KJob_OnMetaObject((KJob*)self, (intptr_t)callback);
 }
 
@@ -155,7 +155,7 @@ const char* k_job_error_string(const void* self) {
     return _ret;
 }
 
-void k_job_on_error_string(const void* self, const char* (*callback)(const void*)) {
+void k_job_on_error_string(void* self, const char* (*callback)(const void*)) {
     KJob_OnErrorString((KJob*)self, (intptr_t)callback);
 }
 

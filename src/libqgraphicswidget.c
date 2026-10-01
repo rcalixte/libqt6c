@@ -36,11 +36,11 @@ QGraphicsWidget* q_graphicswidget_new3(void* parent, int32_t wFlags) {
     return QGraphicsWidget_New3((QGraphicsItem*)parent, wFlags);
 }
 
-QGraphicsLayoutItem* q_graphicswidget_as_q_graphics_layout_item(void* self) {
+QGraphicsLayoutItem* q_graphicswidget_as_q_graphics_layout_item(const void* self) {
     return QGraphicsWidget_AsQGraphicsLayoutItem((QGraphicsWidget*)self);
 }
 
-QGraphicsWidget* q_graphicswidget_from_q_graphics_layout_item(void* _qgraphicslayoutitem) {
+QGraphicsWidget* q_graphicswidget_from_q_graphics_layout_item(const void* _qgraphicslayoutitem) {
     return (QGraphicsWidget*)QGraphicsWidget_FromQGraphicsLayoutItem((QGraphicsLayoutItem*)_qgraphicslayoutitem);
 }
 
@@ -48,7 +48,7 @@ const QMetaObject* q_graphicswidget_meta_object(const void* self) {
     return QGraphicsWidget_MetaObject((QGraphicsWidget*)self);
 }
 
-void q_graphicswidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_graphicswidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGraphicsWidget_OnMetaObject((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
@@ -187,7 +187,7 @@ void q_graphicswidget_get_contents_margins(const void* self, double* left, doubl
     QGraphicsWidget_GetContentsMargins((QGraphicsWidget*)self, left, top, right, bottom);
 }
 
-void q_graphicswidget_on_get_contents_margins(const void* self, void (*callback)(const void*, double*, double*, double*, double*)) {
+void q_graphicswidget_on_get_contents_margins(void* self, void (*callback)(const void*, double*, double*, double*, double*)) {
     QGraphicsWidget_OnGetContentsMargins((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
@@ -315,7 +315,7 @@ int32_t q_graphicswidget_type(const void* self) {
     return QGraphicsWidget_Type((QGraphicsWidget*)self);
 }
 
-void q_graphicswidget_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_graphicswidget_on_type(void* self, int32_t (*callback)(const void*)) {
     QGraphicsWidget_OnType((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
@@ -351,7 +351,7 @@ QRectF* q_graphicswidget_bounding_rect(const void* self) {
     return QGraphicsWidget_BoundingRect((QGraphicsWidget*)self);
 }
 
-void q_graphicswidget_on_bounding_rect(const void* self, QRectF* (*callback)(const void*)) {
+void q_graphicswidget_on_bounding_rect(void* self, QRectF* (*callback)(const void*)) {
     QGraphicsWidget_OnBoundingRect((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
@@ -363,7 +363,7 @@ QPainterPath* q_graphicswidget_shape(const void* self) {
     return QGraphicsWidget_Shape((QGraphicsWidget*)self);
 }
 
-void q_graphicswidget_on_shape(const void* self, QPainterPath* (*callback)(const void*)) {
+void q_graphicswidget_on_shape(void* self, QPainterPath* (*callback)(const void*)) {
     QGraphicsWidget_OnShape((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
@@ -395,7 +395,7 @@ void q_graphicswidget_init_style_option(const void* self, void* option) {
     QGraphicsWidget_InitStyleOption((QGraphicsWidget*)self, (QStyleOption*)option);
 }
 
-void q_graphicswidget_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_graphicswidget_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QGraphicsWidget_OnInitStyleOption((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
@@ -407,7 +407,7 @@ QSizeF* q_graphicswidget_size_hint(const void* self, int32_t which, const void* 
     return QGraphicsWidget_SizeHint((QGraphicsWidget*)self, which, (QSizeF*)constraint);
 }
 
-void q_graphicswidget_on_size_hint(const void* self, QSizeF* (*callback)(const void*, int32_t, const void*)) {
+void q_graphicswidget_on_size_hint(void* self, QSizeF* (*callback)(const void*, int32_t, const void*)) {
     QGraphicsWidget_OnSizeHint((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
@@ -479,7 +479,7 @@ int32_t q_graphicswidget_window_frame_section_at(const void* self, const void* p
     return QGraphicsWidget_WindowFrameSectionAt((QGraphicsWidget*)self, (QPointF*)pos);
 }
 
-void q_graphicswidget_on_window_frame_section_at(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_graphicswidget_on_window_frame_section_at(void* self, int32_t (*callback)(const void*, const void*)) {
     QGraphicsWidget_OnWindowFrameSectionAt((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
@@ -721,11 +721,11 @@ void q_graphicswidget_set_attribute2(void* self, int32_t attribute, bool on) {
     QGraphicsWidget_SetAttribute2((QGraphicsWidget*)self, attribute, on);
 }
 
-QGraphicsItem* q_graphicswidget_as_q_graphics_item(void* self) {
+QGraphicsItem* q_graphicswidget_as_q_graphics_item(const void* self) {
     return QGraphicsObject_AsQGraphicsItem((QGraphicsObject*)self);
 }
 
-QGraphicsWidget* q_graphicswidget_from_q_graphics_item(void* _qgraphicsitem) {
+QGraphicsWidget* q_graphicswidget_from_q_graphics_item(const void* _qgraphicsitem) {
     return (QGraphicsWidget*)QGraphicsObject_FromQGraphicsItem((QGraphicsItem*)_qgraphicsitem);
 }
 
@@ -2017,8 +2017,8 @@ bool q_graphicswidget_super_contains(const void* self, const void* point) {
     return QGraphicsWidget_SuperContains((QGraphicsWidget*)self, (QPointF*)point);
 }
 
-void q_graphicswidget_on_contains(const void* self, bool (*callback)(const void*, const void*)) {
-    QGraphicsWidget_OnContains((const QGraphicsWidget*)self, (intptr_t)callback);
+void q_graphicswidget_on_contains(void* self, bool (*callback)(const void*, const void*)) {
+    QGraphicsWidget_OnContains((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
 bool q_graphicswidget_collides_with_item(const void* self, const void* other, int32_t mode) {
@@ -2029,8 +2029,8 @@ bool q_graphicswidget_super_collides_with_item(const void* self, const void* oth
     return QGraphicsWidget_SuperCollidesWithItem((QGraphicsWidget*)self, (QGraphicsItem*)other, mode);
 }
 
-void q_graphicswidget_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t)) {
-    QGraphicsWidget_OnCollidesWithItem((const QGraphicsWidget*)self, (intptr_t)callback);
+void q_graphicswidget_on_collides_with_item(void* self, bool (*callback)(const void*, const void*, int32_t)) {
+    QGraphicsWidget_OnCollidesWithItem((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
 bool q_graphicswidget_collides_with_path(const void* self, const void* path, int32_t mode) {
@@ -2041,8 +2041,8 @@ bool q_graphicswidget_super_collides_with_path(const void* self, const void* pat
     return QGraphicsWidget_SuperCollidesWithPath((QGraphicsWidget*)self, (QPainterPath*)path, mode);
 }
 
-void q_graphicswidget_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t)) {
-    QGraphicsWidget_OnCollidesWithPath((const QGraphicsWidget*)self, (intptr_t)callback);
+void q_graphicswidget_on_collides_with_path(void* self, bool (*callback)(const void*, const void*, int32_t)) {
+    QGraphicsWidget_OnCollidesWithPath((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
 bool q_graphicswidget_is_obscured_by(const void* self, const void* item) {
@@ -2053,8 +2053,8 @@ bool q_graphicswidget_super_is_obscured_by(const void* self, const void* item) {
     return QGraphicsWidget_SuperIsObscuredBy((QGraphicsWidget*)self, (QGraphicsItem*)item);
 }
 
-void q_graphicswidget_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*)) {
-    QGraphicsWidget_OnIsObscuredBy((const QGraphicsWidget*)self, (intptr_t)callback);
+void q_graphicswidget_on_is_obscured_by(void* self, bool (*callback)(const void*, const void*)) {
+    QGraphicsWidget_OnIsObscuredBy((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
 QPainterPath* q_graphicswidget_opaque_area(const void* self) {
@@ -2065,8 +2065,8 @@ QPainterPath* q_graphicswidget_super_opaque_area(const void* self) {
     return QGraphicsWidget_SuperOpaqueArea((QGraphicsWidget*)self);
 }
 
-void q_graphicswidget_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*)) {
-    QGraphicsWidget_OnOpaqueArea((const QGraphicsWidget*)self, (intptr_t)callback);
+void q_graphicswidget_on_opaque_area(void* self, QPainterPath* (*callback)(const void*)) {
+    QGraphicsWidget_OnOpaqueArea((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
 bool q_graphicswidget_scene_event_filter(void* self, void* watched, void* event) {
@@ -2257,8 +2257,8 @@ QVariant* q_graphicswidget_super_input_method_query(const void* self, int32_t qu
     return QGraphicsWidget_SuperInputMethodQuery((QGraphicsWidget*)self, query);
 }
 
-void q_graphicswidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QGraphicsWidget_OnInputMethodQuery((const QGraphicsWidget*)self, (intptr_t)callback);
+void q_graphicswidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QGraphicsWidget_OnInputMethodQuery((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
 bool q_graphicswidget_supports_extension(const void* self, int32_t extension) {
@@ -2269,8 +2269,8 @@ bool q_graphicswidget_super_supports_extension(const void* self, int32_t extensi
     return QGraphicsWidget_SuperSupportsExtension((QGraphicsWidget*)self, extension);
 }
 
-void q_graphicswidget_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t)) {
-    QGraphicsWidget_OnSupportsExtension((const QGraphicsWidget*)self, (intptr_t)callback);
+void q_graphicswidget_on_supports_extension(void* self, bool (*callback)(const void*, int32_t)) {
+    QGraphicsWidget_OnSupportsExtension((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
 void q_graphicswidget_set_extension(void* self, int32_t extension, const void* variant) {
@@ -2293,8 +2293,8 @@ QVariant* q_graphicswidget_super_extension(const void* self, const void* variant
     return QGraphicsWidget_SuperExtension((QGraphicsWidget*)self, (QVariant*)variant);
 }
 
-void q_graphicswidget_on_extension(const void* self, QVariant* (*callback)(const void*, const void*)) {
-    QGraphicsWidget_OnExtension((const QGraphicsWidget*)self, (intptr_t)callback);
+void q_graphicswidget_on_extension(void* self, QVariant* (*callback)(const void*, const void*)) {
+    QGraphicsWidget_OnExtension((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
 bool q_graphicswidget_is_empty(const void* self) {
@@ -2305,8 +2305,8 @@ bool q_graphicswidget_super_is_empty(const void* self) {
     return QGraphicsWidget_SuperIsEmpty((QGraphicsWidget*)self);
 }
 
-void q_graphicswidget_on_is_empty(const void* self, bool (*callback)(const void*)) {
-    QGraphicsWidget_OnIsEmpty((const QGraphicsWidget*)self, (intptr_t)callback);
+void q_graphicswidget_on_is_empty(void* self, bool (*callback)(const void*)) {
+    QGraphicsWidget_OnIsEmpty((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
 void q_graphicswidget_update_micro_focus(void* self) {

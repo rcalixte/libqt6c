@@ -49,10 +49,10 @@ const QMetaObject* q_graphicsview_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback const QMetaObject* func(const QGraphicsView* self)
 ///
-void q_graphicsview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_graphicsview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -122,12 +122,12 @@ QSize* q_graphicsview_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback QSize* func(const QGraphicsView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsview_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_graphicsview_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#sizeHint)
 ///
@@ -670,12 +670,12 @@ QVariant* q_graphicsview_input_method_query(const void* self, int32_t query);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback QVariant* func(const QGraphicsView* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_graphicsview_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsview.html#inputMethodQuery)
 ///
@@ -1894,9 +1894,9 @@ void q_graphicsview_set_frame_rect(void* self, const void* frameRect);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QGraphicsView*
+/// @param self const QGraphicsView*
 ///
-QPaintDevice* q_graphicsview_as_q_paint_device(void* self);
+QPaintDevice* q_graphicsview_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1904,7 +1904,7 @@ QPaintDevice* q_graphicsview_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QGraphicsView* q_graphicsview_from_q_paint_device(void* _qpaintdevice);
+QGraphicsView* q_graphicsview_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -4848,12 +4848,12 @@ QSize* q_graphicsview_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback QSize* func(QGraphicsView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_graphicsview_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4916,12 +4916,12 @@ QSize* q_graphicsview_super_viewport_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback QSize* func(QGraphicsView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_graphicsview_on_viewport_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -4984,10 +4984,10 @@ void q_graphicsview_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback void func(QGraphicsView* self, QStyleOptionFrame* option)
 ///
-void q_graphicsview_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_graphicsview_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5015,10 +5015,10 @@ int32_t q_graphicsview_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback int32_t func(QGraphicsView* self)
 ///
-void q_graphicsview_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_graphicsview_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5081,10 +5081,10 @@ int32_t q_graphicsview_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback int32_t func(QGraphicsView* self, int param1)
 ///
-void q_graphicsview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_graphicsview_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5112,10 +5112,10 @@ bool q_graphicsview_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback bool func(QGraphicsView* self)
 ///
-void q_graphicsview_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_graphicsview_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5143,10 +5143,10 @@ QPaintEngine* q_graphicsview_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback QPaintEngine* func(QGraphicsView* self)
 ///
-void q_graphicsview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_graphicsview_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5444,10 +5444,10 @@ int32_t q_graphicsview_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback int32_t func(QGraphicsView* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_graphicsview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_graphicsview_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5477,10 +5477,10 @@ void q_graphicsview_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback void func(QGraphicsView* self, QPainter* painter)
 ///
-void q_graphicsview_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_graphicsview_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5510,10 +5510,10 @@ QPaintDevice* q_graphicsview_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback QPaintDevice* func(QGraphicsView* self, QPoint* offset)
 ///
-void q_graphicsview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_graphicsview_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5541,10 +5541,10 @@ QPainter* q_graphicsview_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback QPainter* func(QGraphicsView* self)
 ///
-void q_graphicsview_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_graphicsview_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5776,12 +5776,12 @@ QMargins* q_graphicsview_super_viewport_margins(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback QMargins* func(QGraphicsView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsview_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
+void q_graphicsview_on_viewport_margins(void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -5997,10 +5997,10 @@ QObject* q_graphicsview_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback QObject* func(QGraphicsView* self)
 ///
-void q_graphicsview_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_graphicsview_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6028,10 +6028,10 @@ int32_t q_graphicsview_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback int32_t func(QGraphicsView* self)
 ///
-void q_graphicsview_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_graphicsview_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6061,10 +6061,10 @@ int32_t q_graphicsview_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback int32_t func(QGraphicsView* self, const char* signal)
 ///
-void q_graphicsview_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_graphicsview_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6094,10 +6094,10 @@ bool q_graphicsview_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback bool func(QGraphicsView* self, QMetaMethod* signal)
 ///
-void q_graphicsview_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_graphicsview_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -6129,10 +6129,10 @@ double q_graphicsview_super_get_decoded_metric_f(const void* self, int32_t metri
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsView*
+/// @param self QGraphicsView*
 /// @param callback double func(QGraphicsView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_graphicsview_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_graphicsview_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

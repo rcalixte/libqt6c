@@ -26,7 +26,7 @@ const QMetaObject* q_sqlquerymodel_meta_object(const void* self) {
     return QSqlQueryModel_MetaObject((QSqlQueryModel*)self);
 }
 
-void q_sqlquerymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_sqlquerymodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSqlQueryModel_OnMetaObject((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -69,7 +69,7 @@ int32_t q_sqlquerymodel_row_count(const void* self, const void* parent) {
     return QSqlQueryModel_RowCount((QSqlQueryModel*)self, (QModelIndex*)parent);
 }
 
-void q_sqlquerymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_sqlquerymodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QSqlQueryModel_OnRowCount((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -81,7 +81,7 @@ int32_t q_sqlquerymodel_column_count(const void* self, const void* parent) {
     return QSqlQueryModel_ColumnCount((QSqlQueryModel*)self, (QModelIndex*)parent);
 }
 
-void q_sqlquerymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_sqlquerymodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QSqlQueryModel_OnColumnCount((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -101,7 +101,7 @@ QVariant* q_sqlquerymodel_data(const void* self, const void* item, int role) {
     return QSqlQueryModel_Data((QSqlQueryModel*)self, (QModelIndex*)item, role);
 }
 
-void q_sqlquerymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
+void q_sqlquerymodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
     QSqlQueryModel_OnData((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -113,7 +113,7 @@ QVariant* q_sqlquerymodel_header_data(const void* self, int section, int32_t ori
     return QSqlQueryModel_HeaderData((QSqlQueryModel*)self, section, orientation, role);
 }
 
-void q_sqlquerymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+void q_sqlquerymodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
     QSqlQueryModel_OnHeaderData((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -201,7 +201,7 @@ bool q_sqlquerymodel_can_fetch_more(const void* self, const void* parent) {
     return QSqlQueryModel_CanFetchMore((QSqlQueryModel*)self, (QModelIndex*)parent);
 }
 
-void q_sqlquerymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
+void q_sqlquerymodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
     QSqlQueryModel_OnCanFetchMore((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -242,7 +242,7 @@ libqt_map /* of int to char* */ q_sqlquerymodel_role_names(const void* self) {
     return _ret;
 }
 
-void q_sqlquerymodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_sqlquerymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
     QSqlQueryModel_OnRoleNames((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -335,7 +335,7 @@ QModelIndex* q_sqlquerymodel_index_in_query(const void* self, const void* item) 
     return QSqlQueryModel_IndexInQuery((QSqlQueryModel*)self, (QModelIndex*)item);
 }
 
-void q_sqlquerymodel_on_index_in_query(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_sqlquerymodel_on_index_in_query(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QSqlQueryModel_OnIndexInQuery((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -373,7 +373,7 @@ QModelIndex* q_sqlquerymodel_parent(const void* self, const void* child) {
     return QAbstractItemModel_Parent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
-void q_sqlquerymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_sqlquerymodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -381,7 +381,7 @@ bool q_sqlquerymodel_has_children(const void* self, const void* parent) {
     return QAbstractItemModel_HasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_sqlquerymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
+void q_sqlquerymodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -726,8 +726,8 @@ QModelIndex* q_sqlquerymodel_super_index(const void* self, int row, int column, 
     return QSqlQueryModel_SuperIndex((QSqlQueryModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void q_sqlquerymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    QSqlQueryModel_OnIndex((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    QSqlQueryModel_OnIndex((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_sqlquerymodel_sibling(const void* self, int row, int column, const void* idx) {
@@ -738,8 +738,8 @@ QModelIndex* q_sqlquerymodel_super_sibling(const void* self, int row, int column
     return QSqlQueryModel_SuperSibling((QSqlQueryModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void q_sqlquerymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    QSqlQueryModel_OnSibling((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    QSqlQueryModel_OnSibling((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 bool q_sqlquerymodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -762,8 +762,8 @@ int32_t q_sqlquerymodel_super_flags(const void* self, const void* index) {
     return QSqlQueryModel_SuperFlags((QSqlQueryModel*)self, (QModelIndex*)index);
 }
 
-void q_sqlquerymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QSqlQueryModel_OnFlags((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
+    QSqlQueryModel_OnFlags((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 bool q_sqlquerymodel_set_data(void* self, const void* index, const void* value, int role) {
@@ -798,8 +798,8 @@ libqt_map /* of int to QVariant* */ q_sqlquerymodel_super_item_data(const void* 
     return _ret;
 }
 
-void q_sqlquerymodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
-    QSqlQueryModel_OnItemData((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    QSqlQueryModel_OnItemData((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 bool q_sqlquerymodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
@@ -910,8 +910,8 @@ const char** q_sqlquerymodel_super_mime_types(const void* self) {
     return _ret;
 }
 
-void q_sqlquerymodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    QSqlQueryModel_OnMimeTypes((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    QSqlQueryModel_OnMimeTypes((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 QMimeData* q_sqlquerymodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -922,8 +922,8 @@ QMimeData* q_sqlquerymodel_super_mime_data(const void* self, libqt_list /* of QM
     return QSqlQueryModel_SuperMimeData((QSqlQueryModel*)self, indexes);
 }
 
-void q_sqlquerymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
-    QSqlQueryModel_OnMimeData((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    QSqlQueryModel_OnMimeData((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 bool q_sqlquerymodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -934,8 +934,8 @@ bool q_sqlquerymodel_super_can_drop_mime_data(const void* self, const void* data
     return QSqlQueryModel_SuperCanDropMimeData((QSqlQueryModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_sqlquerymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    QSqlQueryModel_OnCanDropMimeData((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    QSqlQueryModel_OnCanDropMimeData((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 int32_t q_sqlquerymodel_supported_drop_actions(const void* self) {
@@ -946,8 +946,8 @@ int32_t q_sqlquerymodel_super_supported_drop_actions(const void* self) {
     return QSqlQueryModel_SuperSupportedDropActions((QSqlQueryModel*)self);
 }
 
-void q_sqlquerymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
-    QSqlQueryModel_OnSupportedDropActions((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
+    QSqlQueryModel_OnSupportedDropActions((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 int32_t q_sqlquerymodel_supported_drag_actions(const void* self) {
@@ -958,8 +958,8 @@ int32_t q_sqlquerymodel_super_supported_drag_actions(const void* self) {
     return QSqlQueryModel_SuperSupportedDragActions((QSqlQueryModel*)self);
 }
 
-void q_sqlquerymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    QSqlQueryModel_OnSupportedDragActions((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    QSqlQueryModel_OnSupportedDragActions((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 bool q_sqlquerymodel_insert_rows(void* self, int row, int count, const void* parent) {
@@ -1030,8 +1030,8 @@ QModelIndex* q_sqlquerymodel_super_buddy(const void* self, const void* index) {
     return QSqlQueryModel_SuperBuddy((QSqlQueryModel*)self, (QModelIndex*)index);
 }
 
-void q_sqlquerymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    QSqlQueryModel_OnBuddy((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    QSqlQueryModel_OnBuddy((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_sqlquerymodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -1044,8 +1044,8 @@ libqt_list /* of QModelIndex* */ q_sqlquerymodel_super_match(const void* self, c
     return _arr;
 }
 
-void q_sqlquerymodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    QSqlQueryModel_OnMatch((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    QSqlQueryModel_OnMatch((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 QSize* q_sqlquerymodel_span(const void* self, const void* index) {
@@ -1056,8 +1056,8 @@ QSize* q_sqlquerymodel_super_span(const void* self, const void* index) {
     return QSqlQueryModel_SuperSpan((QSqlQueryModel*)self, (QModelIndex*)index);
 }
 
-void q_sqlquerymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    QSqlQueryModel_OnSpan((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    QSqlQueryModel_OnSpan((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 void q_sqlquerymodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
@@ -1068,8 +1068,8 @@ void q_sqlquerymodel_super_multi_data(const void* self, const void* index, void*
     QSqlQueryModel_SuperMultiData((QSqlQueryModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_sqlquerymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    QSqlQueryModel_OnMultiData((const QSqlQueryModel*)self, (intptr_t)callback);
+void q_sqlquerymodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    QSqlQueryModel_OnMultiData((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
 bool q_sqlquerymodel_submit(void* self) {

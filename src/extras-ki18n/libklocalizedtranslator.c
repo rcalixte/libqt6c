@@ -18,7 +18,7 @@ const QMetaObject* k_localizedtranslator_meta_object(const void* self) {
     return KLocalizedTranslator_MetaObject((KLocalizedTranslator*)self);
 }
 
-void k_localizedtranslator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_localizedtranslator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KLocalizedTranslator_OnMetaObject((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
@@ -64,7 +64,7 @@ const char* k_localizedtranslator_translate(const void* self, const char* contex
     return _ret;
 }
 
-void k_localizedtranslator_on_translate(const void* self, const char* (*callback)(const void*, const char*, const char*, const char*, int)) {
+void k_localizedtranslator_on_translate(void* self, const char* (*callback)(const void*, const char*, const char*, const char*, int)) {
     KLocalizedTranslator_OnTranslate((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
@@ -372,8 +372,8 @@ bool k_localizedtranslator_super_is_empty(const void* self) {
     return KLocalizedTranslator_SuperIsEmpty((KLocalizedTranslator*)self);
 }
 
-void k_localizedtranslator_on_is_empty(const void* self, bool (*callback)(const void*)) {
-    KLocalizedTranslator_OnIsEmpty((const KLocalizedTranslator*)self, (intptr_t)callback);
+void k_localizedtranslator_on_is_empty(void* self, bool (*callback)(const void*)) {
+    KLocalizedTranslator_OnIsEmpty((KLocalizedTranslator*)self, (intptr_t)callback);
 }
 
 bool k_localizedtranslator_event(void* self, void* event) {

@@ -33,27 +33,27 @@ KXmlGuiWindow* k_xmlguiwindow_new3(void* parent, int32_t flags);
 
 /// Upcasts to a KXMLGUIBuilder object
 ///
-/// @param self KXmlGuiWindow*
+/// @param self const KXmlGuiWindow*
 ///
-KXMLGUIBuilder* k_xmlguiwindow_as_k_x_m_l_g_u_i_builder(void* self);
+KXMLGUIBuilder* k_xmlguiwindow_as_k_x_m_l_g_u_i_builder(const void* self);
 
 /// Downcasts to a KXmlGuiWindow object
 ///
 /// @param _kxmlguibuilder KXMLGUIBuilder*
 ///
-KXmlGuiWindow* k_xmlguiwindow_from_k_x_m_l_g_u_i_builder(void* _kxmlguibuilder);
+KXmlGuiWindow* k_xmlguiwindow_from_k_x_m_l_g_u_i_builder(const void* _kxmlguibuilder);
 
 /// Upcasts to a KXMLGUIClient object
 ///
-/// @param self KXmlGuiWindow*
+/// @param self const KXmlGuiWindow*
 ///
-KXMLGUIClient* k_xmlguiwindow_as_k_x_m_l_g_u_i_client(void* self);
+KXMLGUIClient* k_xmlguiwindow_as_k_x_m_l_g_u_i_client(const void* self);
 
 /// Downcasts to a KXmlGuiWindow object
 ///
 /// @param _kxmlguiclient KXMLGUIClient*
 ///
-KXmlGuiWindow* k_xmlguiwindow_from_k_x_m_l_g_u_i_client(void* _kxmlguiclient);
+KXmlGuiWindow* k_xmlguiwindow_from_k_x_m_l_g_u_i_client(const void* _kxmlguiclient);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -65,10 +65,10 @@ const QMetaObject* k_xmlguiwindow_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback const QMetaObject* func(const KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_xmlguiwindow_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1263,9 +1263,9 @@ bool k_xmlguiwindow_restore_state2(void* self, char* state, int version);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self KXmlGuiWindow*
+/// @param self const KXmlGuiWindow*
 ///
-QPaintDevice* k_xmlguiwindow_as_q_paint_device(void* self);
+QPaintDevice* k_xmlguiwindow_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1273,7 +1273,7 @@ QPaintDevice* k_xmlguiwindow_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-KXmlGuiWindow* k_xmlguiwindow_from_q_paint_device(void* _qpaintdevice);
+KXmlGuiWindow* k_xmlguiwindow_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -4862,10 +4862,10 @@ int32_t k_xmlguiwindow_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback int32_t func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_xmlguiwindow_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4926,12 +4926,12 @@ QSize* k_xmlguiwindow_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback QSize* func(KXmlGuiWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_xmlguiwindow_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_xmlguiwindow_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4959,12 +4959,12 @@ QSize* k_xmlguiwindow_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback QSize* func(KXmlGuiWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_xmlguiwindow_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_xmlguiwindow_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4994,10 +4994,10 @@ int32_t k_xmlguiwindow_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback int32_t func(KXmlGuiWindow* self, int param1)
 ///
-void k_xmlguiwindow_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_xmlguiwindow_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5025,10 +5025,10 @@ bool k_xmlguiwindow_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback bool func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_xmlguiwindow_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5056,10 +5056,10 @@ QPaintEngine* k_xmlguiwindow_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback QPaintEngine* func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_xmlguiwindow_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5852,10 +5852,10 @@ int32_t k_xmlguiwindow_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback int32_t func(KXmlGuiWindow* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_xmlguiwindow_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_xmlguiwindow_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5885,10 +5885,10 @@ void k_xmlguiwindow_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback void func(KXmlGuiWindow* self, QPainter* painter)
 ///
-void k_xmlguiwindow_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_xmlguiwindow_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5918,10 +5918,10 @@ QPaintDevice* k_xmlguiwindow_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback QPaintDevice* func(KXmlGuiWindow* self, QPoint* offset)
 ///
-void k_xmlguiwindow_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_xmlguiwindow_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5949,10 +5949,10 @@ QPainter* k_xmlguiwindow_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback QPainter* func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_xmlguiwindow_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6015,12 +6015,12 @@ QVariant* k_xmlguiwindow_super_input_method_query(const void* self, int32_t para
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback QVariant* func(KXmlGuiWindow* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_xmlguiwindow_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_xmlguiwindow_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6285,10 +6285,10 @@ const char** k_xmlguiwindow_super_container_tags(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback const char** func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_container_tags(const void* self, const char** (*callback)(const void*));
+void k_xmlguiwindow_on_container_tags(void* self, const char** (*callback)(const void*));
 
 /// Inherited from KXMLGUIBuilder
 ///
@@ -6398,10 +6398,10 @@ const char** k_xmlguiwindow_super_custom_tags(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback const char** func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_custom_tags(const void* self, const char** (*callback)(const void*));
+void k_xmlguiwindow_on_custom_tags(void* self, const char** (*callback)(const void*));
 
 /// Inherited from KXMLGUIBuilder
 ///
@@ -6468,10 +6468,10 @@ QAction* k_xmlguiwindow_super_action2(const void* self, const void* element);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback QAction* func(KXmlGuiWindow* self, QDomElement* element)
 ///
-void k_xmlguiwindow_on_action2(const void* self, QAction* (*callback)(const void*, const void*));
+void k_xmlguiwindow_on_action2(void* self, QAction* (*callback)(const void*, const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6499,10 +6499,10 @@ KActionCollection* k_xmlguiwindow_super_action_collection(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback KActionCollection* func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_action_collection(const void* self, KActionCollection* (*callback)(const void*));
+void k_xmlguiwindow_on_action_collection(void* self, KActionCollection* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6534,10 +6534,10 @@ const char* k_xmlguiwindow_super_component_name(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback const char* func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_component_name(const void* self, const char* (*callback)(const void*));
+void k_xmlguiwindow_on_component_name(void* self, const char* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6565,12 +6565,12 @@ QDomDocument* k_xmlguiwindow_super_dom_document(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback QDomDocument* func(KXmlGuiWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_xmlguiwindow_on_dom_document(const void* self, QDomDocument* (*callback)(const void*));
+void k_xmlguiwindow_on_dom_document(void* self, QDomDocument* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6602,10 +6602,10 @@ const char* k_xmlguiwindow_super_xml_file(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback const char* func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_xml_file(const void* self, const char* (*callback)(const void*));
+void k_xmlguiwindow_on_xml_file(void* self, const char* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6637,10 +6637,10 @@ const char* k_xmlguiwindow_super_local_x_m_l_file(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback const char* func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_local_x_m_l_file(const void* self, const char* (*callback)(const void*));
+void k_xmlguiwindow_on_local_x_m_l_file(void* self, const char* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6948,10 +6948,10 @@ bool k_xmlguiwindow_super_settings_dirty(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback bool func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_settings_dirty(const void* self, bool (*callback)(const void*));
+void k_xmlguiwindow_on_settings_dirty(void* self, bool (*callback)(const void*));
 
 /// Inherited from KMainWindow
 ///
@@ -7165,10 +7165,10 @@ QObject* k_xmlguiwindow_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback QObject* func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_xmlguiwindow_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7196,10 +7196,10 @@ int32_t k_xmlguiwindow_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback int32_t func(KXmlGuiWindow* self)
 ///
-void k_xmlguiwindow_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_xmlguiwindow_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7229,10 +7229,10 @@ int32_t k_xmlguiwindow_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback int32_t func(KXmlGuiWindow* self, const char* signal)
 ///
-void k_xmlguiwindow_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_xmlguiwindow_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -7262,10 +7262,10 @@ bool k_xmlguiwindow_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback bool func(KXmlGuiWindow* self, QMetaMethod* signal)
 ///
-void k_xmlguiwindow_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_xmlguiwindow_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -7297,10 +7297,10 @@ double k_xmlguiwindow_super_get_decoded_metric_f(const void* self, int32_t metri
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KXmlGuiWindow*
+/// @param self KXmlGuiWindow*
 /// @param callback double func(KXmlGuiWindow* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_xmlguiwindow_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_xmlguiwindow_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from KXMLGUIClient
 ///

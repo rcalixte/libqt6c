@@ -32,10 +32,10 @@ const QMetaObject* k_dirsortfilterproxymodel_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback const QMetaObject* func(const KDirSortFilterProxyModel* self)
 ///
-void k_dirsortfilterproxymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_dirsortfilterproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -106,10 +106,10 @@ bool k_dirsortfilterproxymodel_has_children(const void* self, const void* parent
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback bool func(const KDirSortFilterProxyModel* self, QModelIndex* parent)
 ///
-void k_dirsortfilterproxymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_has_children(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#hasChildren)
 ///
@@ -131,10 +131,10 @@ bool k_dirsortfilterproxymodel_can_fetch_more(const void* self, const void* pare
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback bool func(const KDirSortFilterProxyModel* self, QModelIndex* parent)
 ///
-void k_dirsortfilterproxymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#canFetchMore)
 ///
@@ -197,10 +197,10 @@ bool k_dirsortfilterproxymodel_sub_sort_less_than(const void* self, const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback bool func(const KDirSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 ///
-void k_dirsortfilterproxymodel_on_sub_sort_less_than(const void* self, bool (*callback)(const void*, const void*, const void*));
+void k_dirsortfilterproxymodel_on_sub_sort_less_than(void* self, bool (*callback)(const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kdirsortfilterproxymodel.html#subSortLessThan)
 ///
@@ -1455,10 +1455,10 @@ bool k_dirsortfilterproxymodel_super_less_than(const void* self, const void* lef
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback bool func(KDirSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 ///
-void k_dirsortfilterproxymodel_on_less_than(const void* self, bool (*callback)(const void*, const void*, const void*));
+void k_dirsortfilterproxymodel_on_less_than(void* self, bool (*callback)(const void*, const void*, const void*));
 
 /// Inherited from KCategorizedSortFilterProxyModel
 ///
@@ -1490,10 +1490,10 @@ int32_t k_dirsortfilterproxymodel_super_compare_categories(const void* self, con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback int32_t func(KDirSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 ///
-void k_dirsortfilterproxymodel_on_compare_categories(const void* self, int32_t (*callback)(const void*, const void*, const void*));
+void k_dirsortfilterproxymodel_on_compare_categories(void* self, int32_t (*callback)(const void*, const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1556,12 +1556,12 @@ QModelIndex* k_dirsortfilterproxymodel_super_map_to_source(const void* self, con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, QModelIndex* proxyIndex)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_map_to_source(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1591,12 +1591,12 @@ QModelIndex* k_dirsortfilterproxymodel_super_map_from_source(const void* self, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, QModelIndex* sourceIndex)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_map_from_source(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1626,12 +1626,12 @@ QItemSelection* k_dirsortfilterproxymodel_super_map_selection_to_source(const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QItemSelection* func(KDirSortFilterProxyModel* self, QItemSelection* proxySelection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_map_selection_to_source(const void* self, QItemSelection* (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1661,12 +1661,12 @@ QItemSelection* k_dirsortfilterproxymodel_super_map_selection_from_source(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QItemSelection* func(KDirSortFilterProxyModel* self, QItemSelection* sourceSelection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_map_selection_from_source(const void* self, QItemSelection* (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1698,10 +1698,10 @@ bool k_dirsortfilterproxymodel_super_filter_accepts_row(const void* self, int so
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback bool func(KDirSortFilterProxyModel* self, int source_row, QModelIndex* source_parent)
 ///
-void k_dirsortfilterproxymodel_on_filter_accepts_row(const void* self, bool (*callback)(const void*, int, const void*));
+void k_dirsortfilterproxymodel_on_filter_accepts_row(void* self, bool (*callback)(const void*, int, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1733,10 +1733,10 @@ bool k_dirsortfilterproxymodel_super_filter_accepts_column(const void* self, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback bool func(KDirSortFilterProxyModel* self, int source_column, QModelIndex* source_parent)
 ///
-void k_dirsortfilterproxymodel_on_filter_accepts_column(const void* self, bool (*callback)(const void*, int, const void*));
+void k_dirsortfilterproxymodel_on_filter_accepts_column(void* self, bool (*callback)(const void*, int, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1770,12 +1770,12 @@ QModelIndex* k_dirsortfilterproxymodel_super_index(const void* self, int row, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void k_dirsortfilterproxymodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1805,12 +1805,12 @@ QModelIndex* k_dirsortfilterproxymodel_super_parent(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1844,12 +1844,12 @@ QModelIndex* k_dirsortfilterproxymodel_super_sibling(const void* self, int row, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void k_dirsortfilterproxymodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1879,10 +1879,10 @@ int32_t k_dirsortfilterproxymodel_super_row_count(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback int32_t func(KDirSortFilterProxyModel* self, QModelIndex* parent)
 ///
-void k_dirsortfilterproxymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1912,10 +1912,10 @@ int32_t k_dirsortfilterproxymodel_super_column_count(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback int32_t func(KDirSortFilterProxyModel* self, QModelIndex* parent)
 ///
-void k_dirsortfilterproxymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1947,12 +1947,12 @@ QVariant* k_dirsortfilterproxymodel_super_data(const void* self, const void* ind
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QVariant* func(KDirSortFilterProxyModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
+void k_dirsortfilterproxymodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2023,12 +2023,12 @@ QVariant* k_dirsortfilterproxymodel_super_header_data(const void* self, int sect
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QVariant* func(KDirSortFilterProxyModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
+void k_dirsortfilterproxymodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2097,10 +2097,10 @@ QMimeData* k_dirsortfilterproxymodel_super_mime_data(const void* self, libqt_lis
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QMimeData* func(KDirSortFilterProxyModel* self, libqt_list of QModelIndex* indexes)
 ///
-void k_dirsortfilterproxymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void k_dirsortfilterproxymodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2356,10 +2356,10 @@ int32_t k_dirsortfilterproxymodel_super_flags(const void* self, const void* inde
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback int32_t func(KDirSortFilterProxyModel* self, QModelIndex* index)
 ///
-void k_dirsortfilterproxymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_flags(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2389,12 +2389,12 @@ QModelIndex* k_dirsortfilterproxymodel_super_buddy(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2436,10 +2436,10 @@ libqt_list k_dirsortfilterproxymodel_super_match(const void* self, const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback libqt_list of QModelIndex* func(KDirSortFilterProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void k_dirsortfilterproxymodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
+void k_dirsortfilterproxymodel_on_match(void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2469,12 +2469,12 @@ QSize* k_dirsortfilterproxymodel_super_span(const void* self, const void* index)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QSize* func(KDirSortFilterProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_span(void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2506,10 +2506,10 @@ const char** k_dirsortfilterproxymodel_super_mime_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback const char** func(KDirSortFilterProxyModel* self)
 ///
-void k_dirsortfilterproxymodel_on_mime_types(const void* self, const char** (*callback)(const void*));
+void k_dirsortfilterproxymodel_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2541,10 +2541,10 @@ int32_t k_dirsortfilterproxymodel_super_supported_drop_actions(const void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback int32_t func(KDirSortFilterProxyModel* self)
 ///
-void k_dirsortfilterproxymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void k_dirsortfilterproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2662,10 +2662,10 @@ libqt_map k_dirsortfilterproxymodel_super_item_data(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback libqt_map of int to QVariant* func(KDirSortFilterProxyModel* self, QModelIndex* index)
 ///
-void k_dirsortfilterproxymodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_item_data(void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2771,10 +2771,10 @@ bool k_dirsortfilterproxymodel_super_can_drop_mime_data(const void* self, const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback bool func(KDirSortFilterProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void k_dirsortfilterproxymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
+void k_dirsortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2806,10 +2806,10 @@ int32_t k_dirsortfilterproxymodel_super_supported_drag_actions(const void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback int32_t func(KDirSortFilterProxyModel* self)
 ///
-void k_dirsortfilterproxymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
+void k_dirsortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2863,10 +2863,10 @@ libqt_map k_dirsortfilterproxymodel_super_role_names(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback libqt_map of int to char* func(KDirSortFilterProxyModel* self)
 ///
-void k_dirsortfilterproxymodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
+void k_dirsortfilterproxymodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2980,10 +2980,10 @@ void k_dirsortfilterproxymodel_super_multi_data(const void* self, const void* in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void k_dirsortfilterproxymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
+void k_dirsortfilterproxymodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3374,12 +3374,12 @@ QModelIndex* k_dirsortfilterproxymodel_super_create_source_index(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, int row, int col, void* internalPtr)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_create_source_index(const void* self, QModelIndex* (*callback)(const void*, int, int, void*));
+void k_dirsortfilterproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(const void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3411,12 +3411,12 @@ QModelIndex* k_dirsortfilterproxymodel_super_create_index(const void* self, int 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_dirsortfilterproxymodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
+void k_dirsortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3448,10 +3448,10 @@ void k_dirsortfilterproxymodel_super_encode_data(const void* self, libqt_list in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback void func(KDirSortFilterProxyModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void k_dirsortfilterproxymodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
+void k_dirsortfilterproxymodel_on_encode_data(void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4070,10 +4070,10 @@ libqt_list k_dirsortfilterproxymodel_super_persistent_index_list(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback libqt_list of QModelIndex* func(KDirSortFilterProxyModel* self)
 ///
-void k_dirsortfilterproxymodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
+void k_dirsortfilterproxymodel_on_persistent_index_list(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4101,10 +4101,10 @@ QObject* k_dirsortfilterproxymodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback QObject* func(KDirSortFilterProxyModel* self)
 ///
-void k_dirsortfilterproxymodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_dirsortfilterproxymodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4132,10 +4132,10 @@ int32_t k_dirsortfilterproxymodel_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback int32_t func(KDirSortFilterProxyModel* self)
 ///
-void k_dirsortfilterproxymodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_dirsortfilterproxymodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4165,10 +4165,10 @@ int32_t k_dirsortfilterproxymodel_super_receivers(const void* self, const char* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback int32_t func(KDirSortFilterProxyModel* self, const char* signal)
 ///
-void k_dirsortfilterproxymodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_dirsortfilterproxymodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4198,10 +4198,10 @@ bool k_dirsortfilterproxymodel_super_is_signal_connected(const void* self, const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDirSortFilterProxyModel*
+/// @param self KDirSortFilterProxyModel*
 /// @param callback bool func(KDirSortFilterProxyModel* self, QMetaMethod* signal)
 ///
-void k_dirsortfilterproxymodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_dirsortfilterproxymodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///

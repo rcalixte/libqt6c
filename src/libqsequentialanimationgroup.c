@@ -20,7 +20,7 @@ const QMetaObject* q_sequentialanimationgroup_meta_object(const void* self) {
     return QSequentialAnimationGroup_MetaObject((QSequentialAnimationGroup*)self);
 }
 
-void q_sequentialanimationgroup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_sequentialanimationgroup_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSequentialAnimationGroup_OnMetaObject((QSequentialAnimationGroup*)self, (intptr_t)callback);
 }
 
@@ -75,7 +75,7 @@ int32_t q_sequentialanimationgroup_duration(const void* self) {
     return QSequentialAnimationGroup_Duration((QSequentialAnimationGroup*)self);
 }
 
-void q_sequentialanimationgroup_on_duration(const void* self, int32_t (*callback)(const void*)) {
+void q_sequentialanimationgroup_on_duration(void* self, int32_t (*callback)(const void*)) {
     QSequentialAnimationGroup_OnDuration((QSequentialAnimationGroup*)self, (intptr_t)callback);
 }
 

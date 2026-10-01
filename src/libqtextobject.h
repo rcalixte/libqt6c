@@ -1130,10 +1130,10 @@ const QMetaObject* q_textframe_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTextFrame*
+/// @param self QTextFrame*
 /// @param callback const QMetaObject* func(const QTextFrame* self)
 ///
-void q_textframe_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_textframe_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -2046,10 +2046,10 @@ QObject* q_textframe_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTextFrame*
+/// @param self QTextFrame*
 /// @param callback QObject* func(QTextFrame* self)
 ///
-void q_textframe_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_textframe_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2077,10 +2077,10 @@ int32_t q_textframe_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTextFrame*
+/// @param self QTextFrame*
 /// @param callback int32_t func(QTextFrame* self)
 ///
-void q_textframe_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_textframe_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2110,10 +2110,10 @@ int32_t q_textframe_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTextFrame*
+/// @param self QTextFrame*
 /// @param callback int32_t func(QTextFrame* self, const char* signal)
 ///
-void q_textframe_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_textframe_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2143,10 +2143,10 @@ bool q_textframe_super_is_signal_connected(const void* self, const void* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTextFrame*
+/// @param self QTextFrame*
 /// @param callback bool func(QTextFrame* self, QMetaMethod* signal)
 ///
-void q_textframe_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_textframe_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

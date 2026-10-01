@@ -76,10 +76,10 @@ bool k_archiveentry_is_file(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KArchiveEntry*
+/// @param self KArchiveEntry*
 /// @param callback bool func(const KArchiveEntry* self)
 ///
-void k_archiveentry_on_is_file(const void* self, bool (*callback)(const void*));
+void k_archiveentry_on_is_file(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isFile)
 ///
@@ -99,10 +99,10 @@ bool k_archiveentry_is_directory(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KArchiveEntry*
+/// @param self KArchiveEntry*
 /// @param callback bool func(const KArchiveEntry* self)
 ///
-void k_archiveentry_on_is_directory(const void* self, bool (*callback)(const void*));
+void k_archiveentry_on_is_directory(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isDirectory)
 ///

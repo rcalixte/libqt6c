@@ -196,8 +196,8 @@ bool q_sgsimplerectnode_super_is_subtree_blocked(const void* self) {
     return QSGSimpleRectNode_SuperIsSubtreeBlocked((QSGSimpleRectNode*)self);
 }
 
-void q_sgsimplerectnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
-    QSGSimpleRectNode_OnIsSubtreeBlocked((const QSGSimpleRectNode*)self, (intptr_t)callback);
+void q_sgsimplerectnode_on_is_subtree_blocked(void* self, bool (*callback)(const void*)) {
+    QSGSimpleRectNode_OnIsSubtreeBlocked((QSGSimpleRectNode*)self, (intptr_t)callback);
 }
 
 void q_sgsimplerectnode_preprocess(void* self) {

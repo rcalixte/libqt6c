@@ -32,10 +32,10 @@ const QMetaObject* k_urlcompletion_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback const QMetaObject* func(const KUrlCompletion* self)
 ///
-void k_urlcompletion_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_urlcompletion_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -157,12 +157,12 @@ QUrl* k_urlcompletion_dir(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback QUrl* func(const KUrlCompletion* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_urlcompletion_on_dir(const void* self, QUrl* (*callback)(const void*));
+void k_urlcompletion_on_dir(void* self, QUrl* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#dir)
 ///
@@ -182,10 +182,10 @@ bool k_urlcompletion_is_running(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback bool func(const KUrlCompletion* self)
 ///
-void k_urlcompletion_on_is_running(const void* self, bool (*callback)(const void*));
+void k_urlcompletion_on_is_running(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#isRunning)
 ///
@@ -230,10 +230,10 @@ int32_t k_urlcompletion_mode(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback int32_t func(const KUrlCompletion* self)
 ///
-void k_urlcompletion_on_mode(const void* self, int32_t (*callback)(const void*));
+void k_urlcompletion_on_mode(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#mode)
 ///
@@ -280,10 +280,10 @@ bool k_urlcompletion_replace_env(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback bool func(const KUrlCompletion* self)
 ///
-void k_urlcompletion_on_replace_env(const void* self, bool (*callback)(const void*));
+void k_urlcompletion_on_replace_env(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#replaceEnv)
 ///
@@ -328,10 +328,10 @@ bool k_urlcompletion_replace_home(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback bool func(const KUrlCompletion* self)
 ///
-void k_urlcompletion_on_replace_home(const void* self, bool (*callback)(const void*));
+void k_urlcompletion_on_replace_home(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#replaceHome)
 ///
@@ -410,10 +410,10 @@ void k_urlcompletion_post_process_matches(const void* self, const char* matches[
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback void func(const KUrlCompletion* self, const char** matches)
 ///
-void k_urlcompletion_on_post_process_matches(const void* self, void (*callback)(const void*, const char**));
+void k_urlcompletion_on_post_process_matches(void* self, void (*callback)(const void*, const char**));
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#postProcessMatches)
 ///
@@ -435,10 +435,10 @@ void k_urlcompletion_post_process_matches2(const void* self, void* matches);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback void func(const KUrlCompletion* self, KCompletionMatches* matches)
 ///
-void k_urlcompletion_on_post_process_matches2(const void* self, void (*callback)(const void*, void*));
+void k_urlcompletion_on_post_process_matches2(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kurlcompletion.html#postProcessMatches)
 ///
@@ -1184,10 +1184,10 @@ const char* k_urlcompletion_super_last_match(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback const char* func(KUrlCompletion* self)
 ///
-void k_urlcompletion_on_last_match(const void* self, const char* (*callback)(const void*));
+void k_urlcompletion_on_last_match(void* self, const char* (*callback)(const void*));
 
 /// Inherited from KCompletion
 ///
@@ -1677,10 +1677,10 @@ QObject* k_urlcompletion_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback QObject* func(KUrlCompletion* self)
 ///
-void k_urlcompletion_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_urlcompletion_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1708,10 +1708,10 @@ int32_t k_urlcompletion_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback int32_t func(KUrlCompletion* self)
 ///
-void k_urlcompletion_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_urlcompletion_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1741,10 +1741,10 @@ int32_t k_urlcompletion_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback int32_t func(KUrlCompletion* self, const char* signal)
 ///
-void k_urlcompletion_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_urlcompletion_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1774,10 +1774,10 @@ bool k_urlcompletion_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KUrlCompletion*
+/// @param self KUrlCompletion*
 /// @param callback bool func(KUrlCompletion* self, QMetaMethod* signal)
 ///
-void k_urlcompletion_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_urlcompletion_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

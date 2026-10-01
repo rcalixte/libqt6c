@@ -20,15 +20,15 @@ KBookmarkAction* k_bookmarkaction_new(const void* bk, void* owner, void* parent)
 
 /// Upcasts to a KBookmarkActionInterface object
 ///
-/// @param self KBookmarkAction*
+/// @param self const KBookmarkAction*
 ///
-KBookmarkActionInterface* k_bookmarkaction_as_k_bookmark_action_interface(void* self);
+KBookmarkActionInterface* k_bookmarkaction_as_k_bookmark_action_interface(const void* self);
 
 /// Downcasts to a KBookmarkAction object
 ///
 /// @param _kbookmarkactioninterface KBookmarkActionInterface*
 ///
-KBookmarkAction* k_bookmarkaction_from_k_bookmark_action_interface(void* _kbookmarkactioninterface);
+KBookmarkAction* k_bookmarkaction_from_k_bookmark_action_interface(const void* _kbookmarkactioninterface);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -40,10 +40,10 @@ const QMetaObject* k_bookmarkaction_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KBookmarkAction*
+/// @param self KBookmarkAction*
 /// @param callback const QMetaObject* func(const KBookmarkAction* self)
 ///
-void k_bookmarkaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_bookmarkaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1462,10 +1462,10 @@ QObject* k_bookmarkaction_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KBookmarkAction*
+/// @param self KBookmarkAction*
 /// @param callback QObject* func(KBookmarkAction* self)
 ///
-void k_bookmarkaction_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_bookmarkaction_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1493,10 +1493,10 @@ int32_t k_bookmarkaction_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KBookmarkAction*
+/// @param self KBookmarkAction*
 /// @param callback int32_t func(KBookmarkAction* self)
 ///
-void k_bookmarkaction_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_bookmarkaction_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1526,10 +1526,10 @@ int32_t k_bookmarkaction_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KBookmarkAction*
+/// @param self KBookmarkAction*
 /// @param callback int32_t func(KBookmarkAction* self, const char* signal)
 ///
-void k_bookmarkaction_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_bookmarkaction_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1559,10 +1559,10 @@ bool k_bookmarkaction_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KBookmarkAction*
+/// @param self KBookmarkAction*
 /// @param callback bool func(KBookmarkAction* self, QMetaMethod* signal)
 ///
-void k_bookmarkaction_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_bookmarkaction_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

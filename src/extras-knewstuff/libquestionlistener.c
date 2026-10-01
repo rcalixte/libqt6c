@@ -18,7 +18,7 @@ const QMetaObject* k_nscore__questionlistener_meta_object(const void* self) {
     return KNSCore__QuestionListener_MetaObject((KNSCore__QuestionListener*)self);
 }
 
-void k_nscore__questionlistener_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_nscore__questionlistener_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KNSCore__QuestionListener_OnMetaObject((KNSCore__QuestionListener*)self, (intptr_t)callback);
 }
 

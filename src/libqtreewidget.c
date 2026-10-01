@@ -173,7 +173,7 @@ QTreeWidgetItem* q_treewidgetitem_clone(const void* self) {
     return QTreeWidgetItem_Clone((QTreeWidgetItem*)self);
 }
 
-void q_treewidgetitem_on_clone(const void* self, QTreeWidgetItem* (*callback)(const void*)) {
+void q_treewidgetitem_on_clone(void* self, QTreeWidgetItem* (*callback)(const void*)) {
     QTreeWidgetItem_OnClone((QTreeWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -353,7 +353,7 @@ QVariant* q_treewidgetitem_data(const void* self, int column, int role) {
     return QTreeWidgetItem_Data((QTreeWidgetItem*)self, column, role);
 }
 
-void q_treewidgetitem_on_data(const void* self, QVariant* (*callback)(const void*, int, int)) {
+void q_treewidgetitem_on_data(void* self, QVariant* (*callback)(const void*, int, int)) {
     QTreeWidgetItem_OnData((QTreeWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -377,7 +377,7 @@ bool q_treewidgetitem_operator_lesser(const void* self, const void* other) {
     return QTreeWidgetItem_OperatorLesser((QTreeWidgetItem*)self, (QTreeWidgetItem*)other);
 }
 
-void q_treewidgetitem_on_operator_lesser(const void* self, bool (*callback)(const void*, const void*)) {
+void q_treewidgetitem_on_operator_lesser(void* self, bool (*callback)(const void*, const void*)) {
     QTreeWidgetItem_OnOperatorLesser((QTreeWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -401,7 +401,7 @@ void q_treewidgetitem_write(const void* self, void* out) {
     QTreeWidgetItem_Write((QTreeWidgetItem*)self, (QDataStream*)out);
 }
 
-void q_treewidgetitem_on_write(const void* self, void (*callback)(const void*, void*)) {
+void q_treewidgetitem_on_write(void* self, void (*callback)(const void*, void*)) {
     QTreeWidgetItem_OnWrite((QTreeWidgetItem*)self, (intptr_t)callback);
 }
 
@@ -490,7 +490,7 @@ const QMetaObject* q_treewidget_meta_object(const void* self) {
     return QTreeWidget_MetaObject((QTreeWidget*)self);
 }
 
-void q_treewidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_treewidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTreeWidget_OnMetaObject((QTreeWidget*)self, (intptr_t)callback);
 }
 
@@ -830,7 +830,7 @@ const char** q_treewidget_mime_types(const void* self) {
     return _ret;
 }
 
-void q_treewidget_on_mime_types(const void* self, const char** (*callback)(const void*)) {
+void q_treewidget_on_mime_types(void* self, const char** (*callback)(const void*)) {
     QTreeWidget_OnMimeTypes((QTreeWidget*)self, (intptr_t)callback);
 }
 
@@ -855,7 +855,7 @@ QMimeData* q_treewidget_mime_data(const void* self, libqt_list /* of QTreeWidget
     return QTreeWidget_MimeData((QTreeWidget*)self, items);
 }
 
-void q_treewidget_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QTreeWidgetItem* */)) {
+void q_treewidget_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QTreeWidgetItem* */)) {
     QTreeWidget_OnMimeData((QTreeWidget*)self, (intptr_t)callback);
 }
 
@@ -879,7 +879,7 @@ int32_t q_treewidget_supported_drop_actions(const void* self) {
     return QTreeWidget_SupportedDropActions((QTreeWidget*)self);
 }
 
-void q_treewidget_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
+void q_treewidget_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
     QTreeWidget_OnSupportedDropActions((QTreeWidget*)self, (intptr_t)callback);
 }
 
@@ -1571,11 +1571,11 @@ void q_treewidget_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_treewidget_as_q_paint_device(void* self) {
+QPaintDevice* q_treewidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QTreeWidget* q_treewidget_from_q_paint_device(void* _qpaintdevice) {
+QTreeWidget* q_treewidget_from_q_paint_device(const void* _qpaintdevice) {
     return (QTreeWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2986,8 +2986,8 @@ QRect* q_treewidget_super_visual_rect(const void* self, const void* index) {
     return QTreeWidget_SuperVisualRect((QTreeWidget*)self, (QModelIndex*)index);
 }
 
-void q_treewidget_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*)) {
-    QTreeWidget_OnVisualRect((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*)) {
+    QTreeWidget_OnVisualRect((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_scroll_to(void* self, const void* index, int32_t hint) {
@@ -3010,8 +3010,8 @@ QModelIndex* q_treewidget_super_index_at(const void* self, const void* p) {
     return QTreeWidget_SuperIndexAt((QTreeWidget*)self, (QPoint*)p);
 }
 
-void q_treewidget_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    QTreeWidget_OnIndexAt((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_index_at(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    QTreeWidget_OnIndexAt((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_do_items_layout(void* self) {
@@ -3130,8 +3130,8 @@ int32_t q_treewidget_super_horizontal_offset(const void* self) {
     return QTreeWidget_SuperHorizontalOffset((QTreeWidget*)self);
 }
 
-void q_treewidget_on_horizontal_offset(const void* self, int32_t (*callback)(const void*)) {
-    QTreeWidget_OnHorizontalOffset((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_horizontal_offset(void* self, int32_t (*callback)(const void*)) {
+    QTreeWidget_OnHorizontalOffset((QTreeWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_treewidget_vertical_offset(const void* self) {
@@ -3142,8 +3142,8 @@ int32_t q_treewidget_super_vertical_offset(const void* self) {
     return QTreeWidget_SuperVerticalOffset((QTreeWidget*)self);
 }
 
-void q_treewidget_on_vertical_offset(const void* self, int32_t (*callback)(const void*)) {
-    QTreeWidget_OnVerticalOffset((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_vertical_offset(void* self, int32_t (*callback)(const void*)) {
+    QTreeWidget_OnVerticalOffset((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_set_selection(void* self, const void* rect, int32_t command) {
@@ -3166,8 +3166,8 @@ QRegion* q_treewidget_super_visual_region_for_selection(const void* self, const 
     return QTreeWidget_SuperVisualRegionForSelection((QTreeWidget*)self, (QItemSelection*)selection);
 }
 
-void q_treewidget_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*)) {
-    QTreeWidget_OnVisualRegionForSelection((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_visual_region_for_selection(void* self, QRegion* (*callback)(const void*, const void*)) {
+    QTreeWidget_OnVisualRegionForSelection((QTreeWidget*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_treewidget_selected_indexes(const void* self) {
@@ -3180,8 +3180,8 @@ libqt_list /* of QModelIndex* */ q_treewidget_super_selected_indexes(const void*
     return _arr;
 }
 
-void q_treewidget_on_selected_indexes(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
-    QTreeWidget_OnSelectedIndexes((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
+    QTreeWidget_OnSelectedIndexes((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_change_event(void* self, void* event) {
@@ -3228,8 +3228,8 @@ void q_treewidget_super_draw_row(const void* self, void* painter, const void* op
     QTreeWidget_SuperDrawRow((QTreeWidget*)self, (QPainter*)painter, (QStyleOptionViewItem*)options, (QModelIndex*)index);
 }
 
-void q_treewidget_on_draw_row(const void* self, void (*callback)(const void*, void*, const void*, const void*)) {
-    QTreeWidget_OnDrawRow((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_draw_row(void* self, void (*callback)(const void*, void*, const void*, const void*)) {
+    QTreeWidget_OnDrawRow((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_draw_branches(const void* self, void* painter, const void* rect, const void* index) {
@@ -3240,8 +3240,8 @@ void q_treewidget_super_draw_branches(const void* self, void* painter, const voi
     QTreeWidget_SuperDrawBranches((QTreeWidget*)self, (QPainter*)painter, (QRect*)rect, (QModelIndex*)index);
 }
 
-void q_treewidget_on_draw_branches(const void* self, void (*callback)(const void*, void*, const void*, const void*)) {
-    QTreeWidget_OnDrawBranches((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_draw_branches(void* self, void (*callback)(const void*, void*, const void*, const void*)) {
+    QTreeWidget_OnDrawBranches((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_mouse_press_event(void* self, void* event) {
@@ -3348,8 +3348,8 @@ QSize* q_treewidget_super_viewport_size_hint(const void* self) {
     return QTreeWidget_SuperViewportSizeHint((QTreeWidget*)self);
 }
 
-void q_treewidget_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTreeWidget_OnViewportSizeHint((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTreeWidget_OnViewportSizeHint((QTreeWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_treewidget_size_hint_for_column(const void* self, int column) {
@@ -3360,8 +3360,8 @@ int32_t q_treewidget_super_size_hint_for_column(const void* self, int column) {
     return QTreeWidget_SuperSizeHintForColumn((QTreeWidget*)self, column);
 }
 
-void q_treewidget_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int)) {
-    QTreeWidget_OnSizeHintForColumn((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_size_hint_for_column(void* self, int32_t (*callback)(const void*, int)) {
+    QTreeWidget_OnSizeHintForColumn((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_horizontal_scrollbar_action(void* self, int action) {
@@ -3384,8 +3384,8 @@ bool q_treewidget_super_is_index_hidden(const void* self, const void* index) {
     return QTreeWidget_SuperIsIndexHidden((QTreeWidget*)self, (QModelIndex*)index);
 }
 
-void q_treewidget_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*)) {
-    QTreeWidget_OnIsIndexHidden((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_is_index_hidden(void* self, bool (*callback)(const void*, const void*)) {
+    QTreeWidget_OnIsIndexHidden((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_selection_changed(void* self, const void* selected, const void* deselected) {
@@ -3420,8 +3420,8 @@ int32_t q_treewidget_super_size_hint_for_row(const void* self, int row) {
     return QTreeWidget_SuperSizeHintForRow((QTreeWidget*)self, row);
 }
 
-void q_treewidget_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int)) {
-    QTreeWidget_OnSizeHintForRow((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_size_hint_for_row(void* self, int32_t (*callback)(const void*, int)) {
+    QTreeWidget_OnSizeHintForRow((QTreeWidget*)self, (intptr_t)callback);
 }
 
 QAbstractItemDelegate* q_treewidget_item_delegate_for_index(const void* self, const void* index) {
@@ -3432,8 +3432,8 @@ QAbstractItemDelegate* q_treewidget_super_item_delegate_for_index(const void* se
     return QTreeWidget_SuperItemDelegateForIndex((QTreeWidget*)self, (QModelIndex*)index);
 }
 
-void q_treewidget_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
-    QTreeWidget_OnItemDelegateForIndex((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
+    QTreeWidget_OnItemDelegateForIndex((QTreeWidget*)self, (intptr_t)callback);
 }
 
 QVariant* q_treewidget_input_method_query(const void* self, int32_t query) {
@@ -3444,8 +3444,8 @@ QVariant* q_treewidget_super_input_method_query(const void* self, int32_t query)
     return QTreeWidget_SuperInputMethodQuery((QTreeWidget*)self, query);
 }
 
-void q_treewidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QTreeWidget_OnInputMethodQuery((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QTreeWidget_OnInputMethodQuery((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_update_editor_data(void* self) {
@@ -3552,8 +3552,8 @@ int32_t q_treewidget_super_selection_command(const void* self, const void* index
     return QTreeWidget_SuperSelectionCommand((QTreeWidget*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_treewidget_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*)) {
-    QTreeWidget_OnSelectionCommand((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_selection_command(void* self, int32_t (*callback)(const void*, const void*, const void*)) {
+    QTreeWidget_OnSelectionCommand((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_start_drag(void* self, int32_t supportedActions) {
@@ -3576,8 +3576,8 @@ void q_treewidget_super_init_view_item_option(const void* self, void* option) {
     QTreeWidget_SuperInitViewItemOption((QTreeWidget*)self, (QStyleOptionViewItem*)option);
 }
 
-void q_treewidget_on_init_view_item_option(const void* self, void (*callback)(const void*, void*)) {
-    QTreeWidget_OnInitViewItemOption((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_init_view_item_option(void* self, void (*callback)(const void*, void*)) {
+    QTreeWidget_OnInitViewItemOption((QTreeWidget*)self, (intptr_t)callback);
 }
 
 bool q_treewidget_focus_next_prev_child(void* self, bool next) {
@@ -3684,8 +3684,8 @@ QSize* q_treewidget_super_minimum_size_hint(const void* self) {
     return QTreeWidget_SuperMinimumSizeHint((QTreeWidget*)self);
 }
 
-void q_treewidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTreeWidget_OnMinimumSizeHint((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTreeWidget_OnMinimumSizeHint((QTreeWidget*)self, (intptr_t)callback);
 }
 
 QSize* q_treewidget_size_hint(const void* self) {
@@ -3696,8 +3696,8 @@ QSize* q_treewidget_super_size_hint(const void* self) {
     return QTreeWidget_SuperSizeHint((QTreeWidget*)self);
 }
 
-void q_treewidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTreeWidget_OnSizeHint((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTreeWidget_OnSizeHint((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_setup_viewport(void* self, void* viewport) {
@@ -3744,8 +3744,8 @@ void q_treewidget_super_init_style_option(const void* self, void* option) {
     QTreeWidget_SuperInitStyleOption((QTreeWidget*)self, (QStyleOptionFrame*)option);
 }
 
-void q_treewidget_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QTreeWidget_OnInitStyleOption((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QTreeWidget_OnInitStyleOption((QTreeWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_treewidget_dev_type(const void* self) {
@@ -3756,8 +3756,8 @@ int32_t q_treewidget_super_dev_type(const void* self) {
     return QTreeWidget_SuperDevType((QTreeWidget*)self);
 }
 
-void q_treewidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QTreeWidget_OnDevType((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QTreeWidget_OnDevType((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_set_visible(void* self, bool visible) {
@@ -3780,8 +3780,8 @@ int32_t q_treewidget_super_height_for_width(const void* self, int param1) {
     return QTreeWidget_SuperHeightForWidth((QTreeWidget*)self, param1);
 }
 
-void q_treewidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QTreeWidget_OnHeightForWidth((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QTreeWidget_OnHeightForWidth((QTreeWidget*)self, (intptr_t)callback);
 }
 
 bool q_treewidget_has_height_for_width(const void* self) {
@@ -3792,8 +3792,8 @@ bool q_treewidget_super_has_height_for_width(const void* self) {
     return QTreeWidget_SuperHasHeightForWidth((QTreeWidget*)self);
 }
 
-void q_treewidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QTreeWidget_OnHasHeightForWidth((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QTreeWidget_OnHasHeightForWidth((QTreeWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_treewidget_paint_engine(const void* self) {
@@ -3804,8 +3804,8 @@ QPaintEngine* q_treewidget_super_paint_engine(const void* self) {
     return QTreeWidget_SuperPaintEngine((QTreeWidget*)self);
 }
 
-void q_treewidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QTreeWidget_OnPaintEngine((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QTreeWidget_OnPaintEngine((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_key_release_event(void* self, void* event) {
@@ -3936,8 +3936,8 @@ int32_t q_treewidget_super_metric(const void* self, int32_t param1) {
     return QTreeWidget_SuperMetric((QTreeWidget*)self, param1);
 }
 
-void q_treewidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QTreeWidget_OnMetric((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QTreeWidget_OnMetric((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_init_painter(const void* self, void* painter) {
@@ -3948,8 +3948,8 @@ void q_treewidget_super_init_painter(const void* self, void* painter) {
     QTreeWidget_SuperInitPainter((QTreeWidget*)self, (QPainter*)painter);
 }
 
-void q_treewidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QTreeWidget_OnInitPainter((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QTreeWidget_OnInitPainter((QTreeWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_treewidget_redirected(const void* self, void* offset) {
@@ -3960,8 +3960,8 @@ QPaintDevice* q_treewidget_super_redirected(const void* self, void* offset) {
     return QTreeWidget_SuperRedirected((QTreeWidget*)self, (QPoint*)offset);
 }
 
-void q_treewidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QTreeWidget_OnRedirected((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QTreeWidget_OnRedirected((QTreeWidget*)self, (intptr_t)callback);
 }
 
 QPainter* q_treewidget_shared_painter(const void* self) {
@@ -3972,8 +3972,8 @@ QPainter* q_treewidget_super_shared_painter(const void* self) {
     return QTreeWidget_SuperSharedPainter((QTreeWidget*)self);
 }
 
-void q_treewidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QTreeWidget_OnSharedPainter((const QTreeWidget*)self, (intptr_t)callback);
+void q_treewidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QTreeWidget_OnSharedPainter((QTreeWidget*)self, (intptr_t)callback);
 }
 
 void q_treewidget_child_event(void* self, void* event) {

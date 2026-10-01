@@ -238,10 +238,10 @@ void q_graphicslayoutitem_get_contents_margins(const void* self, double* left, d
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsLayoutItem*
+/// @param self QGraphicsLayoutItem*
 /// @param callback void func(const QGraphicsLayoutItem* self, double* left, double* top, double* right, double* bottom)
 ///
-void q_graphicslayoutitem_on_get_contents_margins(const void* self, void (*callback)(const void*, double*, double*, double*, double*));
+void q_graphicslayoutitem_on_get_contents_margins(void* self, void (*callback)(const void*, double*, double*, double*, double*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#getContentsMargins)
 ///
@@ -301,10 +301,10 @@ bool q_graphicslayoutitem_is_empty(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsLayoutItem*
+/// @param self QGraphicsLayoutItem*
 /// @param callback bool func(const QGraphicsLayoutItem* self)
 ///
-void q_graphicslayoutitem_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_graphicslayoutitem_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
 ///
@@ -373,12 +373,12 @@ QSizeF* q_graphicslayoutitem_size_hint(const void* self, int32_t which, const vo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsLayoutItem*
+/// @param self QGraphicsLayoutItem*
 /// @param callback QSizeF* func(const QGraphicsLayoutItem* self, enum Qt__SizeHint which, QSizeF* constraint)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicslayoutitem_on_size_hint(const void* self, QSizeF* (*callback)(const void*, int32_t, const void*));
+void q_graphicslayoutitem_on_size_hint(void* self, QSizeF* (*callback)(const void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
 ///

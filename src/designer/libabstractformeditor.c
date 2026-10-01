@@ -32,7 +32,7 @@ const QMetaObject* q_designerformeditorinterface_meta_object(const void* self) {
     return QDesignerFormEditorInterface_MetaObject((QDesignerFormEditorInterface*)self);
 }
 
-void q_designerformeditorinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_designerformeditorinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerFormEditorInterface_OnMetaObject((QDesignerFormEditorInterface*)self, (intptr_t)callback);
 }
 

@@ -190,10 +190,10 @@ QEvent* k_parts__openurlevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__OpenUrlEvent*
+/// @param self KParts__OpenUrlEvent*
 /// @param callback QEvent* func(KParts__OpenUrlEvent* self)
 ///
-void k_parts__openurlevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void k_parts__openurlevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///

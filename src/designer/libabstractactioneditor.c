@@ -28,7 +28,7 @@ const QMetaObject* q_designeractioneditorinterface_meta_object(const void* self)
     return QDesignerActionEditorInterface_MetaObject((QDesignerActionEditorInterface*)self);
 }
 
-void q_designeractioneditorinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_designeractioneditorinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerActionEditorInterface_OnMetaObject((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
@@ -71,7 +71,7 @@ QDesignerFormEditorInterface* q_designeractioneditorinterface_core(const void* s
     return QDesignerActionEditorInterface_Core((QDesignerActionEditorInterface*)self);
 }
 
-void q_designeractioneditorinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
+void q_designeractioneditorinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
     QDesignerActionEditorInterface_OnCore((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
@@ -117,11 +117,11 @@ const char* q_designeractioneditorinterface_tr3(const char* s, const char* c, in
     return _ret;
 }
 
-QPaintDevice* q_designeractioneditorinterface_as_q_paint_device(void* self) {
+QPaintDevice* q_designeractioneditorinterface_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QDesignerActionEditorInterface* q_designeractioneditorinterface_from_q_paint_device(void* _qpaintdevice) {
+QDesignerActionEditorInterface* q_designeractioneditorinterface_from_q_paint_device(const void* _qpaintdevice) {
     return (QDesignerActionEditorInterface*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1512,8 +1512,8 @@ int32_t q_designeractioneditorinterface_super_dev_type(const void* self) {
     return QDesignerActionEditorInterface_SuperDevType((QDesignerActionEditorInterface*)self);
 }
 
-void q_designeractioneditorinterface_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QDesignerActionEditorInterface_OnDevType((const QDesignerActionEditorInterface*)self, (intptr_t)callback);
+void q_designeractioneditorinterface_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QDesignerActionEditorInterface_OnDevType((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
 void q_designeractioneditorinterface_set_visible(void* self, bool visible) {
@@ -1536,8 +1536,8 @@ QSize* q_designeractioneditorinterface_super_size_hint(const void* self) {
     return QDesignerActionEditorInterface_SuperSizeHint((QDesignerActionEditorInterface*)self);
 }
 
-void q_designeractioneditorinterface_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDesignerActionEditorInterface_OnSizeHint((const QDesignerActionEditorInterface*)self, (intptr_t)callback);
+void q_designeractioneditorinterface_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDesignerActionEditorInterface_OnSizeHint((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
 QSize* q_designeractioneditorinterface_minimum_size_hint(const void* self) {
@@ -1548,8 +1548,8 @@ QSize* q_designeractioneditorinterface_super_minimum_size_hint(const void* self)
     return QDesignerActionEditorInterface_SuperMinimumSizeHint((QDesignerActionEditorInterface*)self);
 }
 
-void q_designeractioneditorinterface_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDesignerActionEditorInterface_OnMinimumSizeHint((const QDesignerActionEditorInterface*)self, (intptr_t)callback);
+void q_designeractioneditorinterface_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDesignerActionEditorInterface_OnMinimumSizeHint((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
 int32_t q_designeractioneditorinterface_height_for_width(const void* self, int param1) {
@@ -1560,8 +1560,8 @@ int32_t q_designeractioneditorinterface_super_height_for_width(const void* self,
     return QDesignerActionEditorInterface_SuperHeightForWidth((QDesignerActionEditorInterface*)self, param1);
 }
 
-void q_designeractioneditorinterface_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QDesignerActionEditorInterface_OnHeightForWidth((const QDesignerActionEditorInterface*)self, (intptr_t)callback);
+void q_designeractioneditorinterface_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QDesignerActionEditorInterface_OnHeightForWidth((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
 bool q_designeractioneditorinterface_has_height_for_width(const void* self) {
@@ -1572,8 +1572,8 @@ bool q_designeractioneditorinterface_super_has_height_for_width(const void* self
     return QDesignerActionEditorInterface_SuperHasHeightForWidth((QDesignerActionEditorInterface*)self);
 }
 
-void q_designeractioneditorinterface_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QDesignerActionEditorInterface_OnHasHeightForWidth((const QDesignerActionEditorInterface*)self, (intptr_t)callback);
+void q_designeractioneditorinterface_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QDesignerActionEditorInterface_OnHasHeightForWidth((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_designeractioneditorinterface_paint_engine(const void* self) {
@@ -1584,8 +1584,8 @@ QPaintEngine* q_designeractioneditorinterface_super_paint_engine(const void* sel
     return QDesignerActionEditorInterface_SuperPaintEngine((QDesignerActionEditorInterface*)self);
 }
 
-void q_designeractioneditorinterface_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QDesignerActionEditorInterface_OnPaintEngine((const QDesignerActionEditorInterface*)self, (intptr_t)callback);
+void q_designeractioneditorinterface_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QDesignerActionEditorInterface_OnPaintEngine((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
 bool q_designeractioneditorinterface_event(void* self, void* event) {
@@ -1920,8 +1920,8 @@ int32_t q_designeractioneditorinterface_super_metric(const void* self, int32_t p
     return QDesignerActionEditorInterface_SuperMetric((QDesignerActionEditorInterface*)self, param1);
 }
 
-void q_designeractioneditorinterface_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QDesignerActionEditorInterface_OnMetric((const QDesignerActionEditorInterface*)self, (intptr_t)callback);
+void q_designeractioneditorinterface_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QDesignerActionEditorInterface_OnMetric((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
 void q_designeractioneditorinterface_init_painter(const void* self, void* painter) {
@@ -1932,8 +1932,8 @@ void q_designeractioneditorinterface_super_init_painter(const void* self, void* 
     QDesignerActionEditorInterface_SuperInitPainter((QDesignerActionEditorInterface*)self, (QPainter*)painter);
 }
 
-void q_designeractioneditorinterface_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QDesignerActionEditorInterface_OnInitPainter((const QDesignerActionEditorInterface*)self, (intptr_t)callback);
+void q_designeractioneditorinterface_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QDesignerActionEditorInterface_OnInitPainter((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_designeractioneditorinterface_redirected(const void* self, void* offset) {
@@ -1944,8 +1944,8 @@ QPaintDevice* q_designeractioneditorinterface_super_redirected(const void* self,
     return QDesignerActionEditorInterface_SuperRedirected((QDesignerActionEditorInterface*)self, (QPoint*)offset);
 }
 
-void q_designeractioneditorinterface_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QDesignerActionEditorInterface_OnRedirected((const QDesignerActionEditorInterface*)self, (intptr_t)callback);
+void q_designeractioneditorinterface_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QDesignerActionEditorInterface_OnRedirected((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
 QPainter* q_designeractioneditorinterface_shared_painter(const void* self) {
@@ -1956,8 +1956,8 @@ QPainter* q_designeractioneditorinterface_super_shared_painter(const void* self)
     return QDesignerActionEditorInterface_SuperSharedPainter((QDesignerActionEditorInterface*)self);
 }
 
-void q_designeractioneditorinterface_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QDesignerActionEditorInterface_OnSharedPainter((const QDesignerActionEditorInterface*)self, (intptr_t)callback);
+void q_designeractioneditorinterface_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QDesignerActionEditorInterface_OnSharedPainter((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
 void q_designeractioneditorinterface_input_method_event(void* self, void* param1) {
@@ -1980,8 +1980,8 @@ QVariant* q_designeractioneditorinterface_super_input_method_query(const void* s
     return QDesignerActionEditorInterface_SuperInputMethodQuery((QDesignerActionEditorInterface*)self, param1);
 }
 
-void q_designeractioneditorinterface_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QDesignerActionEditorInterface_OnInputMethodQuery((const QDesignerActionEditorInterface*)self, (intptr_t)callback);
+void q_designeractioneditorinterface_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QDesignerActionEditorInterface_OnInputMethodQuery((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
 bool q_designeractioneditorinterface_focus_next_prev_child(void* self, bool next) {

@@ -17,7 +17,7 @@ const QMetaObject* k_texteditor__inlinenoteprovider_meta_object(const void* self
     return KTextEditor__InlineNoteProvider_MetaObject((KTextEditor__InlineNoteProvider*)self);
 }
 
-void k_texteditor__inlinenoteprovider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_texteditor__inlinenoteprovider_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KTextEditor__InlineNoteProvider_OnMetaObject((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
@@ -61,7 +61,7 @@ libqt_list /* of int */ k_texteditor__inlinenoteprovider_inline_notes(const void
     return _arr;
 }
 
-void k_texteditor__inlinenoteprovider_on_inline_notes(const void* self, libqt_list /* of int */ (*callback)(const void*, int)) {
+void k_texteditor__inlinenoteprovider_on_inline_notes(void* self, libqt_list /* of int */ (*callback)(const void*, int)) {
     KTextEditor__InlineNoteProvider_OnInlineNotes((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
@@ -69,7 +69,7 @@ QSize* k_texteditor__inlinenoteprovider_inline_note_size(const void* self, const
     return KTextEditor__InlineNoteProvider_InlineNoteSize((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note);
 }
 
-void k_texteditor__inlinenoteprovider_on_inline_note_size(const void* self, QSize* (*callback)(const void*, const void*)) {
+void k_texteditor__inlinenoteprovider_on_inline_note_size(void* self, QSize* (*callback)(const void*, const void*)) {
     KTextEditor__InlineNoteProvider_OnInlineNoteSize((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
@@ -77,7 +77,7 @@ void k_texteditor__inlinenoteprovider_paint_inline_note(const void* self, const 
     KTextEditor__InlineNoteProvider_PaintInlineNote((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note, (QPainter*)painter, direction);
 }
 
-void k_texteditor__inlinenoteprovider_on_paint_inline_note(const void* self, void (*callback)(const void*, const void*, void*, int32_t)) {
+void k_texteditor__inlinenoteprovider_on_paint_inline_note(void* self, void (*callback)(const void*, const void*, void*, int32_t)) {
     KTextEditor__InlineNoteProvider_OnPaintInlineNote((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 

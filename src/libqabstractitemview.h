@@ -32,10 +32,10 @@ const QMetaObject* q_abstractitemview_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback const QMetaObject* func(const QAbstractItemView* self)
 ///
-void q_abstractitemview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_abstractitemview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -456,12 +456,12 @@ QRect* q_abstractitemview_visual_rect(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QRect* func(const QAbstractItemView* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemview_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*));
+void q_abstractitemview_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scrollTo)
 ///
@@ -495,12 +495,12 @@ QModelIndex* q_abstractitemview_index_at(const void* self, const void* point);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QModelIndex* func(const QAbstractItemView* self, QPoint* point)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemview_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_abstractitemview_on_index_at(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForIndex)
 ///
@@ -520,10 +520,10 @@ int32_t q_abstractitemview_size_hint_for_row(const void* self, int row);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback int32_t func(const QAbstractItemView* self, int row)
 ///
-void q_abstractitemview_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int));
+void q_abstractitemview_on_size_hint_for_row(void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForRow)
 ///
@@ -545,10 +545,10 @@ int32_t q_abstractitemview_size_hint_for_column(const void* self, int column);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback int32_t func(const QAbstractItemView* self, int column)
 ///
-void q_abstractitemview_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int));
+void q_abstractitemview_on_size_hint_for_column(void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForColumn)
 ///
@@ -643,10 +643,10 @@ QAbstractItemDelegate* q_abstractitemview_item_delegate_for_index(const void* se
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QAbstractItemDelegate* func(const QAbstractItemView* self, QModelIndex* index)
 ///
-void q_abstractitemview_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
+void q_abstractitemview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
 ///
@@ -668,12 +668,12 @@ QVariant* q_abstractitemview_input_method_query(const void* self, int32_t query)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QVariant* func(const QAbstractItemView* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_abstractitemview_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodQuery)
 ///
@@ -1334,10 +1334,10 @@ int32_t q_abstractitemview_horizontal_offset(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback int32_t func(const QAbstractItemView* self)
 ///
-void q_abstractitemview_on_horizontal_offset(const void* self, int32_t (*callback)(const void*));
+void q_abstractitemview_on_horizontal_offset(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#verticalOffset)
 ///
@@ -1351,10 +1351,10 @@ int32_t q_abstractitemview_vertical_offset(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback int32_t func(const QAbstractItemView* self)
 ///
-void q_abstractitemview_on_vertical_offset(const void* self, int32_t (*callback)(const void*));
+void q_abstractitemview_on_vertical_offset(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#isIndexHidden)
 ///
@@ -1369,10 +1369,10 @@ bool q_abstractitemview_is_index_hidden(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback bool func(const QAbstractItemView* self, QModelIndex* index)
 ///
-void q_abstractitemview_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*));
+void q_abstractitemview_on_is_index_hidden(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#setSelection)
 ///
@@ -1406,12 +1406,12 @@ QRegion* q_abstractitemview_visual_region_for_selection(const void* self, const 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QRegion* func(const QAbstractItemView* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemview_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*));
+void q_abstractitemview_on_visual_region_for_selection(void* self, QRegion* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectedIndexes)
 ///
@@ -1425,10 +1425,10 @@ libqt_list q_abstractitemview_selected_indexes(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback libqt_list of QModelIndex* func(const QAbstractItemView* self)
 ///
-void q_abstractitemview_on_selected_indexes(const void* self, libqt_list (*callback)(const void*));
+void q_abstractitemview_on_selected_indexes(void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectedIndexes)
 ///
@@ -1483,10 +1483,10 @@ int32_t q_abstractitemview_selection_command(const void* self, const void* index
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback int32_t func(const QAbstractItemView* self, QModelIndex* index, QEvent* event)
 ///
-void q_abstractitemview_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*));
+void q_abstractitemview_on_selection_command(void* self, int32_t (*callback)(const void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
 ///
@@ -1536,10 +1536,10 @@ void q_abstractitemview_init_view_item_option(const void* self, void* option);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback void func(const QAbstractItemView* self, QStyleOptionViewItem* option)
 ///
-void q_abstractitemview_on_init_view_item_option(const void* self, void (*callback)(const void*, void*));
+void q_abstractitemview_on_init_view_item_option(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#initViewItemOption)
 ///
@@ -2086,12 +2086,12 @@ QSize* q_abstractitemview_viewport_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QSize* func(const QAbstractItemView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_abstractitemview_on_viewport_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#viewportSizeHint)
 ///
@@ -2392,9 +2392,9 @@ void q_abstractitemview_set_frame_rect(void* self, const void* frameRect);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QAbstractItemView*
+/// @param self const QAbstractItemView*
 ///
-QPaintDevice* q_abstractitemview_as_q_paint_device(void* self);
+QPaintDevice* q_abstractitemview_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2402,7 +2402,7 @@ QPaintDevice* q_abstractitemview_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QAbstractItemView* q_abstractitemview_from_q_paint_device(void* _qpaintdevice);
+QAbstractItemView* q_abstractitemview_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -5379,12 +5379,12 @@ QSize* q_abstractitemview_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QSize* func(QAbstractItemView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_abstractitemview_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5412,12 +5412,12 @@ QSize* q_abstractitemview_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QSize* func(QAbstractItemView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemview_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_abstractitemview_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5647,10 +5647,10 @@ void q_abstractitemview_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback void func(QAbstractItemView* self, QStyleOptionFrame* option)
 ///
-void q_abstractitemview_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_abstractitemview_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5678,10 +5678,10 @@ int32_t q_abstractitemview_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback int32_t func(QAbstractItemView* self)
 ///
-void q_abstractitemview_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_abstractitemview_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5744,10 +5744,10 @@ int32_t q_abstractitemview_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback int32_t func(QAbstractItemView* self, int param1)
 ///
-void q_abstractitemview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_abstractitemview_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5775,10 +5775,10 @@ bool q_abstractitemview_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback bool func(QAbstractItemView* self)
 ///
-void q_abstractitemview_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_abstractitemview_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5806,10 +5806,10 @@ QPaintEngine* q_abstractitemview_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QPaintEngine* func(QAbstractItemView* self)
 ///
-void q_abstractitemview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_abstractitemview_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6173,10 +6173,10 @@ int32_t q_abstractitemview_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback int32_t func(QAbstractItemView* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_abstractitemview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_abstractitemview_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6206,10 +6206,10 @@ void q_abstractitemview_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback void func(QAbstractItemView* self, QPainter* painter)
 ///
-void q_abstractitemview_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_abstractitemview_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6239,10 +6239,10 @@ QPaintDevice* q_abstractitemview_super_redirected(const void* self, void* offset
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QPaintDevice* func(QAbstractItemView* self, QPoint* offset)
 ///
-void q_abstractitemview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_abstractitemview_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6270,10 +6270,10 @@ QPainter* q_abstractitemview_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QPainter* func(QAbstractItemView* self)
 ///
-void q_abstractitemview_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_abstractitemview_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6472,12 +6472,12 @@ QMargins* q_abstractitemview_super_viewport_margins(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QMargins* func(QAbstractItemView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemview_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
+void q_abstractitemview_on_viewport_margins(void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -6693,10 +6693,10 @@ QObject* q_abstractitemview_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback QObject* func(QAbstractItemView* self)
 ///
-void q_abstractitemview_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_abstractitemview_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6724,10 +6724,10 @@ int32_t q_abstractitemview_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback int32_t func(QAbstractItemView* self)
 ///
-void q_abstractitemview_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_abstractitemview_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6757,10 +6757,10 @@ int32_t q_abstractitemview_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback int32_t func(QAbstractItemView* self, const char* signal)
 ///
-void q_abstractitemview_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_abstractitemview_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6790,10 +6790,10 @@ bool q_abstractitemview_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback bool func(QAbstractItemView* self, QMetaMethod* signal)
 ///
-void q_abstractitemview_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_abstractitemview_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -6825,10 +6825,10 @@ double q_abstractitemview_super_get_decoded_metric_f(const void* self, int32_t m
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QAbstractItemView*
+/// @param self QAbstractItemView*
 /// @param callback double func(QAbstractItemView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_abstractitemview_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_abstractitemview_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

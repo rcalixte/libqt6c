@@ -26,10 +26,10 @@ QDesignerFormWindowInterface* q_designerformwindowcursorinterface_form_window(co
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowCursorInterface*
+/// @param self QDesignerFormWindowCursorInterface*
 /// @param callback QDesignerFormWindowInterface* func(const QDesignerFormWindowCursorInterface* self)
 ///
-void q_designerformwindowcursorinterface_on_form_window(const void* self, QDesignerFormWindowInterface* (*callback)(const void*));
+void q_designerformwindowcursorinterface_on_form_window(void* self, QDesignerFormWindowInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#movePosition)
 ///
@@ -62,10 +62,10 @@ int32_t q_designerformwindowcursorinterface_position(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowCursorInterface*
+/// @param self QDesignerFormWindowCursorInterface*
 /// @param callback int32_t func(const QDesignerFormWindowCursorInterface* self)
 ///
-void q_designerformwindowcursorinterface_on_position(const void* self, int32_t (*callback)(const void*));
+void q_designerformwindowcursorinterface_on_position(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#setPosition)
 ///
@@ -98,10 +98,10 @@ QWidget* q_designerformwindowcursorinterface_current(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowCursorInterface*
+/// @param self QDesignerFormWindowCursorInterface*
 /// @param callback QWidget* func(const QDesignerFormWindowCursorInterface* self)
 ///
-void q_designerformwindowcursorinterface_on_current(const void* self, QWidget* (*callback)(const void*));
+void q_designerformwindowcursorinterface_on_current(void* self, QWidget* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#widgetCount)
 ///
@@ -115,10 +115,10 @@ int32_t q_designerformwindowcursorinterface_widget_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowCursorInterface*
+/// @param self QDesignerFormWindowCursorInterface*
 /// @param callback int32_t func(const QDesignerFormWindowCursorInterface* self)
 ///
-void q_designerformwindowcursorinterface_on_widget_count(const void* self, int32_t (*callback)(const void*));
+void q_designerformwindowcursorinterface_on_widget_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#widget)
 ///
@@ -133,10 +133,10 @@ QWidget* q_designerformwindowcursorinterface_widget(const void* self, int index)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowCursorInterface*
+/// @param self QDesignerFormWindowCursorInterface*
 /// @param callback QWidget* func(const QDesignerFormWindowCursorInterface* self, int index)
 ///
-void q_designerformwindowcursorinterface_on_widget(const void* self, QWidget* (*callback)(const void*, int));
+void q_designerformwindowcursorinterface_on_widget(void* self, QWidget* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#hasSelection)
 ///
@@ -150,10 +150,10 @@ bool q_designerformwindowcursorinterface_has_selection(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowCursorInterface*
+/// @param self QDesignerFormWindowCursorInterface*
 /// @param callback bool func(const QDesignerFormWindowCursorInterface* self)
 ///
-void q_designerformwindowcursorinterface_on_has_selection(const void* self, bool (*callback)(const void*));
+void q_designerformwindowcursorinterface_on_has_selection(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#selectedWidgetCount)
 ///
@@ -167,10 +167,10 @@ int32_t q_designerformwindowcursorinterface_selected_widget_count(const void* se
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowCursorInterface*
+/// @param self QDesignerFormWindowCursorInterface*
 /// @param callback int32_t func(const QDesignerFormWindowCursorInterface* self)
 ///
-void q_designerformwindowcursorinterface_on_selected_widget_count(const void* self, int32_t (*callback)(const void*));
+void q_designerformwindowcursorinterface_on_selected_widget_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#selectedWidget)
 ///
@@ -185,10 +185,10 @@ QWidget* q_designerformwindowcursorinterface_selected_widget(const void* self, i
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowCursorInterface*
+/// @param self QDesignerFormWindowCursorInterface*
 /// @param callback QWidget* func(const QDesignerFormWindowCursorInterface* self, int index)
 ///
-void q_designerformwindowcursorinterface_on_selected_widget(const void* self, QWidget* (*callback)(const void*, int));
+void q_designerformwindowcursorinterface_on_selected_widget(void* self, QWidget* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowcursorinterface.html#setProperty)
 ///

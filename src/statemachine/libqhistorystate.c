@@ -28,7 +28,7 @@ const QMetaObject* q_historystate_meta_object(const void* self) {
     return QHistoryState_MetaObject((QHistoryState*)self);
 }
 
-void q_historystate_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_historystate_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QHistoryState_OnMetaObject((QHistoryState*)self, (intptr_t)callback);
 }
 

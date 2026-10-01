@@ -17,7 +17,7 @@ const QMetaObject* q_quickattachedpropertypropagator_meta_object(const void* sel
     return QQuickAttachedPropertyPropagator_MetaObject((QQuickAttachedPropertyPropagator*)self);
 }
 
-void q_quickattachedpropertypropagator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quickattachedpropertypropagator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickAttachedPropertyPropagator_OnMetaObject((QQuickAttachedPropertyPropagator*)self, (intptr_t)callback);
 }
 

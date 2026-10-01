@@ -32,10 +32,10 @@ const QMetaObject* k_textemoticonscore__unicodeemoticonmanager_meta_object(const
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextEmoticonsCore__UnicodeEmoticonManager*
+/// @param self TextEmoticonsCore__UnicodeEmoticonManager*
 /// @param callback const QMetaObject* func(const TextEmoticonsCore__UnicodeEmoticonManager* self)
 ///
-void k_textemoticonscore__unicodeemoticonmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textemoticonscore__unicodeemoticonmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1UnicodeEmoticonManager.html)
 ///
@@ -862,10 +862,10 @@ QObject* k_textemoticonscore__unicodeemoticonmanager_super_sender(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__UnicodeEmoticonManager*
+/// @param self TextEmoticonsCore__UnicodeEmoticonManager*
 /// @param callback QObject* func(TextEmoticonsCore__UnicodeEmoticonManager* self)
 ///
-void k_textemoticonscore__unicodeemoticonmanager_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textemoticonscore__unicodeemoticonmanager_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -893,10 +893,10 @@ int32_t k_textemoticonscore__unicodeemoticonmanager_super_sender_signal_index(co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__UnicodeEmoticonManager*
+/// @param self TextEmoticonsCore__UnicodeEmoticonManager*
 /// @param callback int32_t func(TextEmoticonsCore__UnicodeEmoticonManager* self)
 ///
-void k_textemoticonscore__unicodeemoticonmanager_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textemoticonscore__unicodeemoticonmanager_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -926,10 +926,10 @@ int32_t k_textemoticonscore__unicodeemoticonmanager_super_receivers(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__UnicodeEmoticonManager*
+/// @param self TextEmoticonsCore__UnicodeEmoticonManager*
 /// @param callback int32_t func(TextEmoticonsCore__UnicodeEmoticonManager* self, const char* signal)
 ///
-void k_textemoticonscore__unicodeemoticonmanager_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textemoticonscore__unicodeemoticonmanager_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -959,10 +959,10 @@ bool k_textemoticonscore__unicodeemoticonmanager_super_is_signal_connected(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__UnicodeEmoticonManager*
+/// @param self TextEmoticonsCore__UnicodeEmoticonManager*
 /// @param callback bool func(TextEmoticonsCore__UnicodeEmoticonManager* self, QMetaMethod* signal)
 ///
-void k_textemoticonscore__unicodeemoticonmanager_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textemoticonscore__unicodeemoticonmanager_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

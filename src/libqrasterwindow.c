@@ -27,7 +27,7 @@ const QMetaObject* q_rasterwindow_meta_object(const void* self) {
     return QRasterWindow_MetaObject((QRasterWindow*)self);
 }
 
-void q_rasterwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_rasterwindow_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QRasterWindow_OnMetaObject((QRasterWindow*)self, (intptr_t)callback);
 }
 
@@ -70,7 +70,7 @@ int32_t q_rasterwindow_metric(const void* self, int32_t metric) {
     return QRasterWindow_Metric((QRasterWindow*)self, metric);
 }
 
-void q_rasterwindow_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
+void q_rasterwindow_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
     QRasterWindow_OnMetric((QRasterWindow*)self, (intptr_t)callback);
 }
 
@@ -82,7 +82,7 @@ QPaintDevice* q_rasterwindow_redirected(const void* self, void* param1) {
     return QRasterWindow_Redirected((QRasterWindow*)self, (QPoint*)param1);
 }
 
-void q_rasterwindow_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
+void q_rasterwindow_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
     QRasterWindow_OnRedirected((QRasterWindow*)self, (intptr_t)callback);
 }
 
@@ -116,11 +116,11 @@ const char* q_rasterwindow_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_rasterwindow_as_q_paint_device(void* self) {
+QPaintDevice* q_rasterwindow_as_q_paint_device(const void* self) {
     return QPaintDeviceWindow_AsQPaintDevice((QPaintDeviceWindow*)self);
 }
 
-QRasterWindow* q_rasterwindow_from_q_paint_device(void* _qpaintdevice) {
+QRasterWindow* q_rasterwindow_from_q_paint_device(const void* _qpaintdevice) {
     return (QRasterWindow*)QPaintDeviceWindow_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -136,11 +136,11 @@ void q_rasterwindow_update3(void* self) {
     QPaintDeviceWindow_Update3((QPaintDeviceWindow*)self);
 }
 
-QSurface* q_rasterwindow_as_q_surface(void* self) {
+QSurface* q_rasterwindow_as_q_surface(const void* self) {
     return QWindow_AsQSurface((QWindow*)self);
 }
 
-QRasterWindow* q_rasterwindow_from_q_surface(void* _qsurface) {
+QRasterWindow* q_rasterwindow_from_q_surface(const void* _qsurface) {
     return (QRasterWindow*)QWindow_FromQSurface((QSurface*)_qsurface);
 }
 
@@ -1039,8 +1039,8 @@ int32_t q_rasterwindow_super_surface_type(const void* self) {
     return QRasterWindow_SuperSurfaceType((QRasterWindow*)self);
 }
 
-void q_rasterwindow_on_surface_type(const void* self, int32_t (*callback)(const void*)) {
-    QRasterWindow_OnSurfaceType((const QRasterWindow*)self, (intptr_t)callback);
+void q_rasterwindow_on_surface_type(void* self, int32_t (*callback)(const void*)) {
+    QRasterWindow_OnSurfaceType((QRasterWindow*)self, (intptr_t)callback);
 }
 
 QSurfaceFormat* q_rasterwindow_format(const void* self) {
@@ -1051,8 +1051,8 @@ QSurfaceFormat* q_rasterwindow_super_format(const void* self) {
     return QRasterWindow_SuperFormat((QRasterWindow*)self);
 }
 
-void q_rasterwindow_on_format(const void* self, QSurfaceFormat* (*callback)(const void*)) {
-    QRasterWindow_OnFormat((const QRasterWindow*)self, (intptr_t)callback);
+void q_rasterwindow_on_format(void* self, QSurfaceFormat* (*callback)(const void*)) {
+    QRasterWindow_OnFormat((QRasterWindow*)self, (intptr_t)callback);
 }
 
 QSize* q_rasterwindow_size(const void* self) {
@@ -1063,8 +1063,8 @@ QSize* q_rasterwindow_super_size(const void* self) {
     return QRasterWindow_SuperSize((QRasterWindow*)self);
 }
 
-void q_rasterwindow_on_size(const void* self, QSize* (*callback)(const void*)) {
-    QRasterWindow_OnSize((const QRasterWindow*)self, (intptr_t)callback);
+void q_rasterwindow_on_size(void* self, QSize* (*callback)(const void*)) {
+    QRasterWindow_OnSize((QRasterWindow*)self, (intptr_t)callback);
 }
 
 QAccessibleInterface* q_rasterwindow_accessible_root(const void* self) {
@@ -1075,8 +1075,8 @@ QAccessibleInterface* q_rasterwindow_super_accessible_root(const void* self) {
     return QRasterWindow_SuperAccessibleRoot((QRasterWindow*)self);
 }
 
-void q_rasterwindow_on_accessible_root(const void* self, QAccessibleInterface* (*callback)(const void*)) {
-    QRasterWindow_OnAccessibleRoot((const QRasterWindow*)self, (intptr_t)callback);
+void q_rasterwindow_on_accessible_root(void* self, QAccessibleInterface* (*callback)(const void*)) {
+    QRasterWindow_OnAccessibleRoot((QRasterWindow*)self, (intptr_t)callback);
 }
 
 QObject* q_rasterwindow_focus_object(const void* self) {
@@ -1087,8 +1087,8 @@ QObject* q_rasterwindow_super_focus_object(const void* self) {
     return QRasterWindow_SuperFocusObject((QRasterWindow*)self);
 }
 
-void q_rasterwindow_on_focus_object(const void* self, QObject* (*callback)(const void*)) {
-    QRasterWindow_OnFocusObject((const QRasterWindow*)self, (intptr_t)callback);
+void q_rasterwindow_on_focus_object(void* self, QObject* (*callback)(const void*)) {
+    QRasterWindow_OnFocusObject((QRasterWindow*)self, (intptr_t)callback);
 }
 
 void q_rasterwindow_move_event(void* self, void* param1) {
@@ -1363,8 +1363,8 @@ int32_t q_rasterwindow_super_dev_type(const void* self) {
     return QRasterWindow_SuperDevType((QRasterWindow*)self);
 }
 
-void q_rasterwindow_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QRasterWindow_OnDevType((const QRasterWindow*)self, (intptr_t)callback);
+void q_rasterwindow_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QRasterWindow_OnDevType((QRasterWindow*)self, (intptr_t)callback);
 }
 
 void q_rasterwindow_init_painter(const void* self, void* painter) {
@@ -1375,8 +1375,8 @@ void q_rasterwindow_super_init_painter(const void* self, void* painter) {
     QRasterWindow_SuperInitPainter((QRasterWindow*)self, (QPainter*)painter);
 }
 
-void q_rasterwindow_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QRasterWindow_OnInitPainter((const QRasterWindow*)self, (intptr_t)callback);
+void q_rasterwindow_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QRasterWindow_OnInitPainter((QRasterWindow*)self, (intptr_t)callback);
 }
 
 QPainter* q_rasterwindow_shared_painter(const void* self) {
@@ -1387,8 +1387,8 @@ QPainter* q_rasterwindow_super_shared_painter(const void* self) {
     return QRasterWindow_SuperSharedPainter((QRasterWindow*)self);
 }
 
-void q_rasterwindow_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QRasterWindow_OnSharedPainter((const QRasterWindow*)self, (intptr_t)callback);
+void q_rasterwindow_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QRasterWindow_OnSharedPainter((QRasterWindow*)self, (intptr_t)callback);
 }
 
 void* q_rasterwindow_resolve_interface(const void* self, const char* name, int revision) {

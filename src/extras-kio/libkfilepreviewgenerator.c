@@ -20,7 +20,7 @@ const QMetaObject* k_filepreviewgenerator_meta_object(const void* self) {
     return KFilePreviewGenerator_MetaObject((KFilePreviewGenerator*)self);
 }
 
-void k_filepreviewgenerator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_filepreviewgenerator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFilePreviewGenerator_OnMetaObject((KFilePreviewGenerator*)self, (intptr_t)callback);
 }
 

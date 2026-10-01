@@ -969,11 +969,11 @@ void k_texteditor__document_on_url_changed(void* self, void (*callback)(void*, c
     KParts__ReadOnlyPart_Connect_UrlChanged((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-KParts__PartBase* k_texteditor__document_as_k_parts___part_base(void* self) {
+KParts__PartBase* k_texteditor__document_as_k_parts___part_base(const void* self) {
     return KParts__Part_AsKParts__PartBase((KParts__Part*)self);
 }
 
-KTextEditor__Document* k_texteditor__document_from_k_parts___part_base(void* _kparts__partbase) {
+KTextEditor__Document* k_texteditor__document_from_k_parts___part_base(const void* _kparts__partbase) {
     return (KTextEditor__Document*)KParts__Part_FromKParts__PartBase((KParts__PartBase*)_kparts__partbase);
 }
 

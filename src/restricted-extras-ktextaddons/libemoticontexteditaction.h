@@ -26,10 +26,10 @@ const QMetaObject* k_textemoticonswidgets__emoticontexteditaction_meta_object(co
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextEmoticonsWidgets__EmoticonTextEditAction*
+/// @param self TextEmoticonsWidgets__EmoticonTextEditAction*
 /// @param callback const QMetaObject* func(const TextEmoticonsWidgets__EmoticonTextEditAction* self)
 ///
-void k_textemoticonswidgets__emoticontexteditaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textemoticonswidgets__emoticontexteditaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsWidgets_1_1EmoticonTextEditAction.html)
 ///
@@ -1628,10 +1628,10 @@ libqt_list k_textemoticonswidgets__emoticontexteditaction_super_created_widgets(
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsWidgets__EmoticonTextEditAction*
+/// @param self TextEmoticonsWidgets__EmoticonTextEditAction*
 /// @param callback libqt_list of QWidget* func(TextEmoticonsWidgets__EmoticonTextEditAction* self)
 ///
-void k_textemoticonswidgets__emoticontexteditaction_on_created_widgets(const void* self, libqt_list (*callback)(const void*));
+void k_textemoticonswidgets__emoticontexteditaction_on_created_widgets(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1659,10 +1659,10 @@ QObject* k_textemoticonswidgets__emoticontexteditaction_super_sender(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsWidgets__EmoticonTextEditAction*
+/// @param self TextEmoticonsWidgets__EmoticonTextEditAction*
 /// @param callback QObject* func(TextEmoticonsWidgets__EmoticonTextEditAction* self)
 ///
-void k_textemoticonswidgets__emoticontexteditaction_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textemoticonswidgets__emoticontexteditaction_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1690,10 +1690,10 @@ int32_t k_textemoticonswidgets__emoticontexteditaction_super_sender_signal_index
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsWidgets__EmoticonTextEditAction*
+/// @param self TextEmoticonsWidgets__EmoticonTextEditAction*
 /// @param callback int32_t func(TextEmoticonsWidgets__EmoticonTextEditAction* self)
 ///
-void k_textemoticonswidgets__emoticontexteditaction_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textemoticonswidgets__emoticontexteditaction_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1723,10 +1723,10 @@ int32_t k_textemoticonswidgets__emoticontexteditaction_super_receivers(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsWidgets__EmoticonTextEditAction*
+/// @param self TextEmoticonsWidgets__EmoticonTextEditAction*
 /// @param callback int32_t func(TextEmoticonsWidgets__EmoticonTextEditAction* self, const char* signal)
 ///
-void k_textemoticonswidgets__emoticontexteditaction_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textemoticonswidgets__emoticontexteditaction_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1756,10 +1756,10 @@ bool k_textemoticonswidgets__emoticontexteditaction_super_is_signal_connected(co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsWidgets__EmoticonTextEditAction*
+/// @param self TextEmoticonsWidgets__EmoticonTextEditAction*
 /// @param callback bool func(TextEmoticonsWidgets__EmoticonTextEditAction* self, QMetaMethod* signal)
 ///
-void k_textemoticonswidgets__emoticontexteditaction_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textemoticonswidgets__emoticontexteditaction_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

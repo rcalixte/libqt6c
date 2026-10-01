@@ -26,10 +26,10 @@ const QMetaObject* k_toolbarspaceraction_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KToolBarSpacerAction*
+/// @param self KToolBarSpacerAction*
 /// @param callback const QMetaObject* func(const KToolBarSpacerAction* self)
 ///
-void k_toolbarspaceraction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_toolbarspaceraction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1529,10 +1529,10 @@ libqt_list k_toolbarspaceraction_super_created_widgets(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KToolBarSpacerAction*
+/// @param self KToolBarSpacerAction*
 /// @param callback libqt_list of QWidget* func(KToolBarSpacerAction* self)
 ///
-void k_toolbarspaceraction_on_created_widgets(const void* self, libqt_list (*callback)(const void*));
+void k_toolbarspaceraction_on_created_widgets(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1560,10 +1560,10 @@ QObject* k_toolbarspaceraction_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KToolBarSpacerAction*
+/// @param self KToolBarSpacerAction*
 /// @param callback QObject* func(KToolBarSpacerAction* self)
 ///
-void k_toolbarspaceraction_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_toolbarspaceraction_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1591,10 +1591,10 @@ int32_t k_toolbarspaceraction_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KToolBarSpacerAction*
+/// @param self KToolBarSpacerAction*
 /// @param callback int32_t func(KToolBarSpacerAction* self)
 ///
-void k_toolbarspaceraction_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_toolbarspaceraction_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1624,10 +1624,10 @@ int32_t k_toolbarspaceraction_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KToolBarSpacerAction*
+/// @param self KToolBarSpacerAction*
 /// @param callback int32_t func(KToolBarSpacerAction* self, const char* signal)
 ///
-void k_toolbarspaceraction_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_toolbarspaceraction_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1657,10 +1657,10 @@ bool k_toolbarspaceraction_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KToolBarSpacerAction*
+/// @param self KToolBarSpacerAction*
 /// @param callback bool func(KToolBarSpacerAction* self, QMetaMethod* signal)
 ///
-void k_toolbarspaceraction_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_toolbarspaceraction_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

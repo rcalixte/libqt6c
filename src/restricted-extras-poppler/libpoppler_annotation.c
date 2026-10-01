@@ -124,7 +124,7 @@ int32_t q_poppler__textannotation_sub_type(const void* self) {
     return Poppler__TextAnnotation_SubType((Poppler__TextAnnotation*)self);
 }
 
-void q_poppler__textannotation_on_sub_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__textannotation_on_sub_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__TextAnnotation_OnSubType((Poppler__TextAnnotation*)self, (intptr_t)callback);
 }
 
@@ -306,7 +306,7 @@ int32_t q_poppler__lineannotation_sub_type(const void* self) {
     return Poppler__LineAnnotation_SubType((Poppler__LineAnnotation*)self);
 }
 
-void q_poppler__lineannotation_on_sub_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__lineannotation_on_sub_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__LineAnnotation_OnSubType((Poppler__LineAnnotation*)self, (intptr_t)callback);
 }
 
@@ -505,7 +505,7 @@ int32_t q_poppler__geomannotation_sub_type(const void* self) {
     return Poppler__GeomAnnotation_SubType((Poppler__GeomAnnotation*)self);
 }
 
-void q_poppler__geomannotation_on_sub_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__geomannotation_on_sub_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__GeomAnnotation_OnSubType((Poppler__GeomAnnotation*)self, (intptr_t)callback);
 }
 
@@ -643,7 +643,7 @@ int32_t q_poppler__highlightannotation_sub_type(const void* self) {
     return Poppler__HighlightAnnotation_SubType((Poppler__HighlightAnnotation*)self);
 }
 
-void q_poppler__highlightannotation_on_sub_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__highlightannotation_on_sub_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__HighlightAnnotation_OnSubType((Poppler__HighlightAnnotation*)self, (intptr_t)callback);
 }
 
@@ -782,7 +782,7 @@ int32_t q_poppler__stampannotation_sub_type(const void* self) {
     return Poppler__StampAnnotation_SubType((Poppler__StampAnnotation*)self);
 }
 
-void q_poppler__stampannotation_on_sub_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__stampannotation_on_sub_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__StampAnnotation_OnSubType((Poppler__StampAnnotation*)self, (intptr_t)callback);
 }
 
@@ -919,7 +919,7 @@ int32_t q_poppler__signatureannotation_sub_type(const void* self) {
     return Poppler__SignatureAnnotation_SubType((Poppler__SignatureAnnotation*)self);
 }
 
-void q_poppler__signatureannotation_on_sub_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__signatureannotation_on_sub_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__SignatureAnnotation_OnSubType((Poppler__SignatureAnnotation*)self, (intptr_t)callback);
 }
 
@@ -1123,7 +1123,7 @@ int32_t q_poppler__inkannotation_sub_type(const void* self) {
     return Poppler__InkAnnotation_SubType((Poppler__InkAnnotation*)self);
 }
 
-void q_poppler__inkannotation_on_sub_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__inkannotation_on_sub_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__InkAnnotation_OnSubType((Poppler__InkAnnotation*)self, (intptr_t)callback);
 }
 
@@ -1383,7 +1383,7 @@ int32_t q_poppler__caretannotation_sub_type(const void* self) {
     return Poppler__CaretAnnotation_SubType((Poppler__CaretAnnotation*)self);
 }
 
-void q_poppler__caretannotation_on_sub_type(const void* self, int32_t (*callback)(const void*)) {
+void q_poppler__caretannotation_on_sub_type(void* self, int32_t (*callback)(const void*)) {
     Poppler__CaretAnnotation_OnSubType((Poppler__CaretAnnotation*)self, (intptr_t)callback);
 }
 

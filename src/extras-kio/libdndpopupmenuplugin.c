@@ -16,7 +16,7 @@ const QMetaObject* k_io__dndpopupmenuplugin_meta_object(const void* self) {
     return KIO__DndPopupMenuPlugin_MetaObject((KIO__DndPopupMenuPlugin*)self);
 }
 
-void k_io__dndpopupmenuplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__dndpopupmenuplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__DndPopupMenuPlugin_OnMetaObject((KIO__DndPopupMenuPlugin*)self, (intptr_t)callback);
 }
 

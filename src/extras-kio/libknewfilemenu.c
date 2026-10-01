@@ -19,7 +19,7 @@ const QMetaObject* k_newfilemenu_meta_object(const void* self) {
     return KNewFileMenu_MetaObject((KNewFileMenu*)self);
 }
 
-void k_newfilemenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_newfilemenu_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KNewFileMenu_OnMetaObject((KNewFileMenu*)self, (intptr_t)callback);
 }
 

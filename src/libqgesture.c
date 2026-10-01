@@ -19,7 +19,7 @@ const QMetaObject* q_gesture_meta_object(const void* self) {
     return QGesture_MetaObject((QGesture*)self);
 }
 
-void q_gesture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_gesture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGesture_OnMetaObject((QGesture*)self, (intptr_t)callback);
 }
 
@@ -433,7 +433,7 @@ const QMetaObject* q_pangesture_meta_object(const void* self) {
     return QPanGesture_MetaObject((QPanGesture*)self);
 }
 
-void q_pangesture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pangesture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPanGesture_OnMetaObject((QPanGesture*)self, (intptr_t)callback);
 }
 
@@ -875,7 +875,7 @@ const QMetaObject* q_pinchgesture_meta_object(const void* self) {
     return QPinchGesture_MetaObject((QPinchGesture*)self);
 }
 
-void q_pinchgesture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pinchgesture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPinchGesture_OnMetaObject((QPinchGesture*)self, (intptr_t)callback);
 }
 
@@ -1377,7 +1377,7 @@ const QMetaObject* q_swipegesture_meta_object(const void* self) {
     return QSwipeGesture_MetaObject((QSwipeGesture*)self);
 }
 
-void q_swipegesture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_swipegesture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSwipeGesture_OnMetaObject((QSwipeGesture*)self, (intptr_t)callback);
 }
 
@@ -1807,7 +1807,7 @@ const QMetaObject* q_tapgesture_meta_object(const void* self) {
     return QTapGesture_MetaObject((QTapGesture*)self);
 }
 
-void q_tapgesture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_tapgesture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTapGesture_OnMetaObject((QTapGesture*)self, (intptr_t)callback);
 }
 
@@ -2229,7 +2229,7 @@ const QMetaObject* q_tapandholdgesture_meta_object(const void* self) {
     return QTapAndHoldGesture_MetaObject((QTapAndHoldGesture*)self);
 }
 
-void q_tapandholdgesture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_tapandholdgesture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTapAndHoldGesture_OnMetaObject((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
@@ -2758,8 +2758,8 @@ QEvent* q_gestureevent_super_clone(const void* self) {
     return QGestureEvent_SuperClone((QGestureEvent*)self);
 }
 
-void q_gestureevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    QGestureEvent_OnClone((const QGestureEvent*)self, (intptr_t)callback);
+void q_gestureevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    QGestureEvent_OnClone((QGestureEvent*)self, (intptr_t)callback);
 }
 
 void q_gestureevent_delete(void* self) {

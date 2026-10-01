@@ -23,7 +23,7 @@ const QMetaObject* q_scilexerjava_meta_object(const void* self) {
     return QsciLexerJava_MetaObject((QsciLexerJava*)self);
 }
 
-void q_scilexerjava_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_scilexerjava_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QsciLexerJava_OnMetaObject((QsciLexerJava*)self, (intptr_t)callback);
 }
 
@@ -537,8 +537,8 @@ const char* q_scilexerjava_super_lexer(const void* self) {
     return QsciLexerJava_SuperLexer((QsciLexerJava*)self);
 }
 
-void q_scilexerjava_on_lexer(const void* self, const char* (*callback)(const void*)) {
-    QsciLexerJava_OnLexer((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_lexer(void* self, const char* (*callback)(const void*)) {
+    QsciLexerJava_OnLexer((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerjava_lexer_id(const void* self) {
@@ -549,8 +549,8 @@ int32_t q_scilexerjava_super_lexer_id(const void* self) {
     return QsciLexerJava_SuperLexerId((QsciLexerJava*)self);
 }
 
-void q_scilexerjava_on_lexer_id(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerJava_OnLexerId((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_lexer_id(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerJava_OnLexerId((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerjava_auto_completion_fillups(const void* self) {
@@ -561,8 +561,8 @@ const char* q_scilexerjava_super_auto_completion_fillups(const void* self) {
     return QsciLexerJava_SuperAutoCompletionFillups((QsciLexerJava*)self);
 }
 
-void q_scilexerjava_on_auto_completion_fillups(const void* self, const char* (*callback)(const void*)) {
-    QsciLexerJava_OnAutoCompletionFillups((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_auto_completion_fillups(void* self, const char* (*callback)(const void*)) {
+    QsciLexerJava_OnAutoCompletionFillups((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 const char** q_scilexerjava_auto_completion_word_separators(const void* self) {
@@ -599,8 +599,8 @@ const char** q_scilexerjava_super_auto_completion_word_separators(const void* se
     return _ret;
 }
 
-void q_scilexerjava_on_auto_completion_word_separators(const void* self, const char** (*callback)(const void*)) {
-    QsciLexerJava_OnAutoCompletionWordSeparators((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_auto_completion_word_separators(void* self, const char** (*callback)(const void*)) {
+    QsciLexerJava_OnAutoCompletionWordSeparators((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerjava_block_end(const void* self, int* style) {
@@ -611,8 +611,8 @@ const char* q_scilexerjava_super_block_end(const void* self, int* style) {
     return QsciLexerJava_SuperBlockEnd((QsciLexerJava*)self, style);
 }
 
-void q_scilexerjava_on_block_end(const void* self, const char* (*callback)(const void*, int*)) {
-    QsciLexerJava_OnBlockEnd((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_block_end(void* self, const char* (*callback)(const void*, int*)) {
+    QsciLexerJava_OnBlockEnd((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerjava_block_lookback(const void* self) {
@@ -623,8 +623,8 @@ int32_t q_scilexerjava_super_block_lookback(const void* self) {
     return QsciLexerJava_SuperBlockLookback((QsciLexerJava*)self);
 }
 
-void q_scilexerjava_on_block_lookback(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerJava_OnBlockLookback((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_block_lookback(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerJava_OnBlockLookback((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerjava_block_start(const void* self, int* style) {
@@ -635,8 +635,8 @@ const char* q_scilexerjava_super_block_start(const void* self, int* style) {
     return QsciLexerJava_SuperBlockStart((QsciLexerJava*)self, style);
 }
 
-void q_scilexerjava_on_block_start(const void* self, const char* (*callback)(const void*, int*)) {
-    QsciLexerJava_OnBlockStart((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_block_start(void* self, const char* (*callback)(const void*, int*)) {
+    QsciLexerJava_OnBlockStart((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerjava_block_start_keyword(const void* self, int* style) {
@@ -647,8 +647,8 @@ const char* q_scilexerjava_super_block_start_keyword(const void* self, int* styl
     return QsciLexerJava_SuperBlockStartKeyword((QsciLexerJava*)self, style);
 }
 
-void q_scilexerjava_on_block_start_keyword(const void* self, const char* (*callback)(const void*, int*)) {
-    QsciLexerJava_OnBlockStartKeyword((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_block_start_keyword(void* self, const char* (*callback)(const void*, int*)) {
+    QsciLexerJava_OnBlockStartKeyword((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerjava_brace_style(const void* self) {
@@ -659,8 +659,8 @@ int32_t q_scilexerjava_super_brace_style(const void* self) {
     return QsciLexerJava_SuperBraceStyle((QsciLexerJava*)self);
 }
 
-void q_scilexerjava_on_brace_style(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerJava_OnBraceStyle((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_brace_style(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerJava_OnBraceStyle((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 bool q_scilexerjava_case_sensitive(const void* self) {
@@ -671,8 +671,8 @@ bool q_scilexerjava_super_case_sensitive(const void* self) {
     return QsciLexerJava_SuperCaseSensitive((QsciLexerJava*)self);
 }
 
-void q_scilexerjava_on_case_sensitive(const void* self, bool (*callback)(const void*)) {
-    QsciLexerJava_OnCaseSensitive((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_case_sensitive(void* self, bool (*callback)(const void*)) {
+    QsciLexerJava_OnCaseSensitive((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerjava_color(const void* self, int style) {
@@ -683,8 +683,8 @@ QColor* q_scilexerjava_super_color(const void* self, int style) {
     return QsciLexerJava_SuperColor((QsciLexerJava*)self, style);
 }
 
-void q_scilexerjava_on_color(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerJava_OnColor((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_color(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerJava_OnColor((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 bool q_scilexerjava_eol_fill(const void* self, int style) {
@@ -695,8 +695,8 @@ bool q_scilexerjava_super_eol_fill(const void* self, int style) {
     return QsciLexerJava_SuperEolFill((QsciLexerJava*)self, style);
 }
 
-void q_scilexerjava_on_eol_fill(const void* self, bool (*callback)(const void*, int)) {
-    QsciLexerJava_OnEolFill((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_eol_fill(void* self, bool (*callback)(const void*, int)) {
+    QsciLexerJava_OnEolFill((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 QFont* q_scilexerjava_font(const void* self, int style) {
@@ -707,8 +707,8 @@ QFont* q_scilexerjava_super_font(const void* self, int style) {
     return QsciLexerJava_SuperFont((QsciLexerJava*)self, style);
 }
 
-void q_scilexerjava_on_font(const void* self, QFont* (*callback)(const void*, int)) {
-    QsciLexerJava_OnFont((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_font(void* self, QFont* (*callback)(const void*, int)) {
+    QsciLexerJava_OnFont((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerjava_indentation_guide_view(const void* self) {
@@ -719,8 +719,8 @@ int32_t q_scilexerjava_super_indentation_guide_view(const void* self) {
     return QsciLexerJava_SuperIndentationGuideView((QsciLexerJava*)self);
 }
 
-void q_scilexerjava_on_indentation_guide_view(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerJava_OnIndentationGuideView((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_indentation_guide_view(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerJava_OnIndentationGuideView((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerjava_default_style(const void* self) {
@@ -731,8 +731,8 @@ int32_t q_scilexerjava_super_default_style(const void* self) {
     return QsciLexerJava_SuperDefaultStyle((QsciLexerJava*)self);
 }
 
-void q_scilexerjava_on_default_style(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerJava_OnDefaultStyle((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_default_style(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerJava_OnDefaultStyle((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerjava_description(const void* self, int style) {
@@ -742,8 +742,8 @@ const char* q_scilexerjava_description(const void* self, int style) {
     return _ret;
 }
 
-void q_scilexerjava_on_description(const void* self, const char* (*callback)(const void*, int)) {
-    QsciLexerJava_OnDescription((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_description(void* self, const char* (*callback)(const void*, int)) {
+    QsciLexerJava_OnDescription((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerjava_paper(const void* self, int style) {
@@ -754,8 +754,8 @@ QColor* q_scilexerjava_super_paper(const void* self, int style) {
     return QsciLexerJava_SuperPaper((QsciLexerJava*)self, style);
 }
 
-void q_scilexerjava_on_paper(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerJava_OnPaper((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_paper(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerJava_OnPaper((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerjava_default_color2(const void* self, int style) {
@@ -766,8 +766,8 @@ QColor* q_scilexerjava_super_default_color2(const void* self, int style) {
     return QsciLexerJava_SuperDefaultColor2((QsciLexerJava*)self, style);
 }
 
-void q_scilexerjava_on_default_color2(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerJava_OnDefaultColor2((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_default_color2(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerJava_OnDefaultColor2((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 bool q_scilexerjava_default_eol_fill(const void* self, int style) {
@@ -778,8 +778,8 @@ bool q_scilexerjava_super_default_eol_fill(const void* self, int style) {
     return QsciLexerJava_SuperDefaultEolFill((QsciLexerJava*)self, style);
 }
 
-void q_scilexerjava_on_default_eol_fill(const void* self, bool (*callback)(const void*, int)) {
-    QsciLexerJava_OnDefaultEolFill((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_default_eol_fill(void* self, bool (*callback)(const void*, int)) {
+    QsciLexerJava_OnDefaultEolFill((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 QFont* q_scilexerjava_default_font2(const void* self, int style) {
@@ -790,8 +790,8 @@ QFont* q_scilexerjava_super_default_font2(const void* self, int style) {
     return QsciLexerJava_SuperDefaultFont2((QsciLexerJava*)self, style);
 }
 
-void q_scilexerjava_on_default_font2(const void* self, QFont* (*callback)(const void*, int)) {
-    QsciLexerJava_OnDefaultFont2((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_default_font2(void* self, QFont* (*callback)(const void*, int)) {
+    QsciLexerJava_OnDefaultFont2((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerjava_default_paper2(const void* self, int style) {
@@ -802,8 +802,8 @@ QColor* q_scilexerjava_super_default_paper2(const void* self, int style) {
     return QsciLexerJava_SuperDefaultPaper2((QsciLexerJava*)self, style);
 }
 
-void q_scilexerjava_on_default_paper2(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerJava_OnDefaultPaper2((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_default_paper2(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerJava_OnDefaultPaper2((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 void q_scilexerjava_set_editor(void* self, void* editor) {
@@ -838,8 +838,8 @@ int32_t q_scilexerjava_super_style_bits_needed(const void* self) {
     return QsciLexerJava_SuperStyleBitsNeeded((QsciLexerJava*)self);
 }
 
-void q_scilexerjava_on_style_bits_needed(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerJava_OnStyleBitsNeeded((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_style_bits_needed(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerJava_OnStyleBitsNeeded((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerjava_word_characters(const void* self) {
@@ -850,8 +850,8 @@ const char* q_scilexerjava_super_word_characters(const void* self) {
     return QsciLexerJava_SuperWordCharacters((QsciLexerJava*)self);
 }
 
-void q_scilexerjava_on_word_characters(const void* self, const char* (*callback)(const void*)) {
-    QsciLexerJava_OnWordCharacters((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_word_characters(void* self, const char* (*callback)(const void*)) {
+    QsciLexerJava_OnWordCharacters((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 void q_scilexerjava_set_auto_indent_style(void* self, int autoindentstyle) {
@@ -934,8 +934,8 @@ bool q_scilexerjava_super_write_properties(const void* self, void* qs, const cha
     return QsciLexerJava_SuperWriteProperties((QsciLexerJava*)self, (QSettings*)qs, qstring(prefix));
 }
 
-void q_scilexerjava_on_write_properties(const void* self, bool (*callback)(const void*, void*, const char*)) {
-    QsciLexerJava_OnWriteProperties((const QsciLexerJava*)self, (intptr_t)callback);
+void q_scilexerjava_on_write_properties(void* self, bool (*callback)(const void*, void*, const char*)) {
+    QsciLexerJava_OnWriteProperties((QsciLexerJava*)self, (intptr_t)callback);
 }
 
 bool q_scilexerjava_event(void* self, void* event) {

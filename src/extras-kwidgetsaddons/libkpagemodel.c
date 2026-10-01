@@ -22,7 +22,7 @@ const QMetaObject* k_pagemodel_meta_object(const void* self) {
     return KPageModel_MetaObject((KPageModel*)self);
 }
 
-void k_pagemodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_pagemodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPageModel_OnMetaObject((KPageModel*)self, (intptr_t)callback);
 }
 
@@ -412,16 +412,16 @@ QModelIndex* k_pagemodel_index(const void* self, int row, int column, const void
     return KPageModel_Index((KPageModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void k_pagemodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    KPageModel_OnIndex((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    KPageModel_OnIndex((KPageModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* k_pagemodel_parent(const void* self, const void* child) {
     return KPageModel_Parent((KPageModel*)self, (QModelIndex*)child);
 }
 
-void k_pagemodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    KPageModel_OnParent((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KPageModel_OnParent((KPageModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* k_pagemodel_sibling(const void* self, int row, int column, const void* idx) {
@@ -432,24 +432,24 @@ QModelIndex* k_pagemodel_super_sibling(const void* self, int row, int column, co
     return KPageModel_SuperSibling((KPageModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void k_pagemodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    KPageModel_OnSibling((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    KPageModel_OnSibling((KPageModel*)self, (intptr_t)callback);
 }
 
 int32_t k_pagemodel_row_count(const void* self, const void* parent) {
     return KPageModel_RowCount((KPageModel*)self, (QModelIndex*)parent);
 }
 
-void k_pagemodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
-    KPageModel_OnRowCount((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
+    KPageModel_OnRowCount((KPageModel*)self, (intptr_t)callback);
 }
 
 int32_t k_pagemodel_column_count(const void* self, const void* parent) {
     return KPageModel_ColumnCount((KPageModel*)self, (QModelIndex*)parent);
 }
 
-void k_pagemodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
-    KPageModel_OnColumnCount((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
+    KPageModel_OnColumnCount((KPageModel*)self, (intptr_t)callback);
 }
 
 bool k_pagemodel_has_children(const void* self, const void* parent) {
@@ -460,16 +460,16 @@ bool k_pagemodel_super_has_children(const void* self, const void* parent) {
     return KPageModel_SuperHasChildren((KPageModel*)self, (QModelIndex*)parent);
 }
 
-void k_pagemodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
-    KPageModel_OnHasChildren((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
+    KPageModel_OnHasChildren((KPageModel*)self, (intptr_t)callback);
 }
 
 QVariant* k_pagemodel_data(const void* self, const void* index, int role) {
     return KPageModel_Data((KPageModel*)self, (QModelIndex*)index, role);
 }
 
-void k_pagemodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
-    KPageModel_OnData((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
+    KPageModel_OnData((KPageModel*)self, (intptr_t)callback);
 }
 
 bool k_pagemodel_set_data(void* self, const void* index, const void* value, int role) {
@@ -492,8 +492,8 @@ QVariant* k_pagemodel_super_header_data(const void* self, int section, int32_t o
     return KPageModel_SuperHeaderData((KPageModel*)self, section, orientation, role);
 }
 
-void k_pagemodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
-    KPageModel_OnHeaderData((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+    KPageModel_OnHeaderData((KPageModel*)self, (intptr_t)callback);
 }
 
 bool k_pagemodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
@@ -528,8 +528,8 @@ libqt_map /* of int to QVariant* */ k_pagemodel_super_item_data(const void* self
     return _ret;
 }
 
-void k_pagemodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
-    KPageModel_OnItemData((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    KPageModel_OnItemData((KPageModel*)self, (intptr_t)callback);
 }
 
 bool k_pagemodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
@@ -640,8 +640,8 @@ const char** k_pagemodel_super_mime_types(const void* self) {
     return _ret;
 }
 
-void k_pagemodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    KPageModel_OnMimeTypes((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    KPageModel_OnMimeTypes((KPageModel*)self, (intptr_t)callback);
 }
 
 QMimeData* k_pagemodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -652,8 +652,8 @@ QMimeData* k_pagemodel_super_mime_data(const void* self, libqt_list /* of QModel
     return KPageModel_SuperMimeData((KPageModel*)self, indexes);
 }
 
-void k_pagemodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
-    KPageModel_OnMimeData((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    KPageModel_OnMimeData((KPageModel*)self, (intptr_t)callback);
 }
 
 bool k_pagemodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -664,8 +664,8 @@ bool k_pagemodel_super_can_drop_mime_data(const void* self, const void* data, in
     return KPageModel_SuperCanDropMimeData((KPageModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void k_pagemodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    KPageModel_OnCanDropMimeData((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    KPageModel_OnCanDropMimeData((KPageModel*)self, (intptr_t)callback);
 }
 
 bool k_pagemodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -688,8 +688,8 @@ int32_t k_pagemodel_super_supported_drop_actions(const void* self) {
     return KPageModel_SuperSupportedDropActions((KPageModel*)self);
 }
 
-void k_pagemodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
-    KPageModel_OnSupportedDropActions((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
+    KPageModel_OnSupportedDropActions((KPageModel*)self, (intptr_t)callback);
 }
 
 int32_t k_pagemodel_supported_drag_actions(const void* self) {
@@ -700,8 +700,8 @@ int32_t k_pagemodel_super_supported_drag_actions(const void* self) {
     return KPageModel_SuperSupportedDragActions((KPageModel*)self);
 }
 
-void k_pagemodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    KPageModel_OnSupportedDragActions((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    KPageModel_OnSupportedDragActions((KPageModel*)self, (intptr_t)callback);
 }
 
 bool k_pagemodel_insert_rows(void* self, int row, int count, const void* parent) {
@@ -796,8 +796,8 @@ bool k_pagemodel_super_can_fetch_more(const void* self, const void* parent) {
     return KPageModel_SuperCanFetchMore((KPageModel*)self, (QModelIndex*)parent);
 }
 
-void k_pagemodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    KPageModel_OnCanFetchMore((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    KPageModel_OnCanFetchMore((KPageModel*)self, (intptr_t)callback);
 }
 
 int32_t k_pagemodel_flags(const void* self, const void* index) {
@@ -808,8 +808,8 @@ int32_t k_pagemodel_super_flags(const void* self, const void* index) {
     return KPageModel_SuperFlags((KPageModel*)self, (QModelIndex*)index);
 }
 
-void k_pagemodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
-    KPageModel_OnFlags((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
+    KPageModel_OnFlags((KPageModel*)self, (intptr_t)callback);
 }
 
 void k_pagemodel_sort(void* self, int column, int32_t order) {
@@ -832,8 +832,8 @@ QModelIndex* k_pagemodel_super_buddy(const void* self, const void* index) {
     return KPageModel_SuperBuddy((KPageModel*)self, (QModelIndex*)index);
 }
 
-void k_pagemodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    KPageModel_OnBuddy((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KPageModel_OnBuddy((KPageModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ k_pagemodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -846,8 +846,8 @@ libqt_list /* of QModelIndex* */ k_pagemodel_super_match(const void* self, const
     return _arr;
 }
 
-void k_pagemodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    KPageModel_OnMatch((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    KPageModel_OnMatch((KPageModel*)self, (intptr_t)callback);
 }
 
 QSize* k_pagemodel_span(const void* self, const void* index) {
@@ -858,8 +858,8 @@ QSize* k_pagemodel_super_span(const void* self, const void* index) {
     return KPageModel_SuperSpan((KPageModel*)self, (QModelIndex*)index);
 }
 
-void k_pagemodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    KPageModel_OnSpan((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    KPageModel_OnSpan((KPageModel*)self, (intptr_t)callback);
 }
 
 libqt_map /* of int to char* */ k_pagemodel_role_names(const void* self) {
@@ -928,8 +928,8 @@ libqt_map /* of int to char* */ k_pagemodel_super_role_names(const void* self) {
     return _ret;
 }
 
-void k_pagemodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
-    KPageModel_OnRoleNames((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+    KPageModel_OnRoleNames((KPageModel*)self, (intptr_t)callback);
 }
 
 void k_pagemodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
@@ -940,8 +940,8 @@ void k_pagemodel_super_multi_data(const void* self, const void* index, void* rol
     KPageModel_SuperMultiData((KPageModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_pagemodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    KPageModel_OnMultiData((const KPageModel*)self, (intptr_t)callback);
+void k_pagemodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    KPageModel_OnMultiData((KPageModel*)self, (intptr_t)callback);
 }
 
 bool k_pagemodel_submit(void* self) {

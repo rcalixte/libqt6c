@@ -26,10 +26,10 @@ const QMetaObject* k_filemetadata__extractorplugin_meta_object(const void* self)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KFileMetaData__ExtractorPlugin*
+/// @param self KFileMetaData__ExtractorPlugin*
 /// @param callback const QMetaObject* func(const KFileMetaData__ExtractorPlugin* self)
 ///
-void k_filemetadata__extractorplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_filemetadata__extractorplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -103,10 +103,10 @@ const char** k_filemetadata__extractorplugin_mimetypes(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KFileMetaData__ExtractorPlugin*
+/// @param self KFileMetaData__ExtractorPlugin*
 /// @param callback const char** func(const KFileMetaData__ExtractorPlugin* self)
 ///
-void k_filemetadata__extractorplugin_on_mimetypes(const void* self, const char** (*callback)(const void*));
+void k_filemetadata__extractorplugin_on_mimetypes(void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractorplugin.html#extract)
 ///
@@ -874,10 +874,10 @@ QObject* k_filemetadata__extractorplugin_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileMetaData__ExtractorPlugin*
+/// @param self KFileMetaData__ExtractorPlugin*
 /// @param callback QObject* func(KFileMetaData__ExtractorPlugin* self)
 ///
-void k_filemetadata__extractorplugin_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_filemetadata__extractorplugin_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -905,10 +905,10 @@ int32_t k_filemetadata__extractorplugin_super_sender_signal_index(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileMetaData__ExtractorPlugin*
+/// @param self KFileMetaData__ExtractorPlugin*
 /// @param callback int32_t func(KFileMetaData__ExtractorPlugin* self)
 ///
-void k_filemetadata__extractorplugin_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_filemetadata__extractorplugin_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -938,10 +938,10 @@ int32_t k_filemetadata__extractorplugin_super_receivers(const void* self, const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileMetaData__ExtractorPlugin*
+/// @param self KFileMetaData__ExtractorPlugin*
 /// @param callback int32_t func(KFileMetaData__ExtractorPlugin* self, const char* signal)
 ///
-void k_filemetadata__extractorplugin_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_filemetadata__extractorplugin_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -971,10 +971,10 @@ bool k_filemetadata__extractorplugin_super_is_signal_connected(const void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFileMetaData__ExtractorPlugin*
+/// @param self KFileMetaData__ExtractorPlugin*
 /// @param callback bool func(KFileMetaData__ExtractorPlugin* self, QMetaMethod* signal)
 ///
-void k_filemetadata__extractorplugin_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_filemetadata__extractorplugin_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

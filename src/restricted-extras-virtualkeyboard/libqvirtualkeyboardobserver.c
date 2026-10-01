@@ -18,7 +18,7 @@ const QMetaObject* q_virtualkeyboardobserver_meta_object(const void* self) {
     return QVirtualKeyboardObserver_MetaObject((QVirtualKeyboardObserver*)self);
 }
 
-void q_virtualkeyboardobserver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_virtualkeyboardobserver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVirtualKeyboardObserver_OnMetaObject((QVirtualKeyboardObserver*)self, (intptr_t)callback);
 }
 

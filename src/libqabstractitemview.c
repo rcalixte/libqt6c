@@ -34,7 +34,7 @@ const QMetaObject* q_abstractitemview_meta_object(const void* self) {
     return QAbstractItemView_MetaObject((QAbstractItemView*)self);
 }
 
-void q_abstractitemview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstractitemview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractItemView_OnMetaObject((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -273,7 +273,7 @@ QRect* q_abstractitemview_visual_rect(const void* self, const void* index) {
     return QAbstractItemView_VisualRect((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_abstractitemview_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*)) {
+void q_abstractitemview_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*)) {
     QAbstractItemView_OnVisualRect((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -289,7 +289,7 @@ QModelIndex* q_abstractitemview_index_at(const void* self, const void* point) {
     return QAbstractItemView_IndexAt((QAbstractItemView*)self, (QPoint*)point);
 }
 
-void q_abstractitemview_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_abstractitemview_on_index_at(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QAbstractItemView_OnIndexAt((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -301,7 +301,7 @@ int32_t q_abstractitemview_size_hint_for_row(const void* self, int row) {
     return QAbstractItemView_SizeHintForRow((QAbstractItemView*)self, row);
 }
 
-void q_abstractitemview_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int)) {
+void q_abstractitemview_on_size_hint_for_row(void* self, int32_t (*callback)(const void*, int)) {
     QAbstractItemView_OnSizeHintForRow((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -313,7 +313,7 @@ int32_t q_abstractitemview_size_hint_for_column(const void* self, int column) {
     return QAbstractItemView_SizeHintForColumn((QAbstractItemView*)self, column);
 }
 
-void q_abstractitemview_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int)) {
+void q_abstractitemview_on_size_hint_for_column(void* self, int32_t (*callback)(const void*, int)) {
     QAbstractItemView_OnSizeHintForColumn((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -365,7 +365,7 @@ QAbstractItemDelegate* q_abstractitemview_item_delegate_for_index(const void* se
     return QAbstractItemView_ItemDelegateForIndex((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_abstractitemview_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
+void q_abstractitemview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
     QAbstractItemView_OnItemDelegateForIndex((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -377,7 +377,7 @@ QVariant* q_abstractitemview_input_method_query(const void* self, int32_t query)
     return QAbstractItemView_InputMethodQuery((QAbstractItemView*)self, query);
 }
 
-void q_abstractitemview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+void q_abstractitemview_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
     QAbstractItemView_OnInputMethodQuery((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -705,7 +705,7 @@ int32_t q_abstractitemview_horizontal_offset(const void* self) {
     return QAbstractItemView_HorizontalOffset((QAbstractItemView*)self);
 }
 
-void q_abstractitemview_on_horizontal_offset(const void* self, int32_t (*callback)(const void*)) {
+void q_abstractitemview_on_horizontal_offset(void* self, int32_t (*callback)(const void*)) {
     QAbstractItemView_OnHorizontalOffset((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -713,7 +713,7 @@ int32_t q_abstractitemview_vertical_offset(const void* self) {
     return QAbstractItemView_VerticalOffset((QAbstractItemView*)self);
 }
 
-void q_abstractitemview_on_vertical_offset(const void* self, int32_t (*callback)(const void*)) {
+void q_abstractitemview_on_vertical_offset(void* self, int32_t (*callback)(const void*)) {
     QAbstractItemView_OnVerticalOffset((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -721,7 +721,7 @@ bool q_abstractitemview_is_index_hidden(const void* self, const void* index) {
     return QAbstractItemView_IsIndexHidden((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_abstractitemview_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*)) {
+void q_abstractitemview_on_is_index_hidden(void* self, bool (*callback)(const void*, const void*)) {
     QAbstractItemView_OnIsIndexHidden((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -737,7 +737,7 @@ QRegion* q_abstractitemview_visual_region_for_selection(const void* self, const 
     return QAbstractItemView_VisualRegionForSelection((QAbstractItemView*)self, (QItemSelection*)selection);
 }
 
-void q_abstractitemview_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*)) {
+void q_abstractitemview_on_visual_region_for_selection(void* self, QRegion* (*callback)(const void*, const void*)) {
     QAbstractItemView_OnVisualRegionForSelection((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -746,7 +746,7 @@ libqt_list /* of QModelIndex* */ q_abstractitemview_selected_indexes(const void*
     return _arr;
 }
 
-void q_abstractitemview_on_selected_indexes(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
+void q_abstractitemview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
     QAbstractItemView_OnSelectedIndexes((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -771,7 +771,7 @@ int32_t q_abstractitemview_selection_command(const void* self, const void* index
     return QAbstractItemView_SelectionCommand((QAbstractItemView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_abstractitemview_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*)) {
+void q_abstractitemview_on_selection_command(void* self, int32_t (*callback)(const void*, const void*, const void*)) {
     QAbstractItemView_OnSelectionCommand((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -795,7 +795,7 @@ void q_abstractitemview_init_view_item_option(const void* self, void* option) {
     QAbstractItemView_InitViewItemOption((QAbstractItemView*)self, (QStyleOptionViewItem*)option);
 }
 
-void q_abstractitemview_on_init_view_item_option(const void* self, void (*callback)(const void*, void*)) {
+void q_abstractitemview_on_init_view_item_option(void* self, void (*callback)(const void*, void*)) {
     QAbstractItemView_OnInitViewItemOption((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -1067,7 +1067,7 @@ QSize* q_abstractitemview_viewport_size_hint(const void* self) {
     return QAbstractItemView_ViewportSizeHint((QAbstractItemView*)self);
 }
 
-void q_abstractitemview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_abstractitemview_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
     QAbstractItemView_OnViewportSizeHint((QAbstractItemView*)self, (intptr_t)callback);
 }
 
@@ -1210,11 +1210,11 @@ void q_abstractitemview_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_abstractitemview_as_q_paint_device(void* self) {
+QPaintDevice* q_abstractitemview_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QAbstractItemView* q_abstractitemview_from_q_paint_device(void* _qpaintdevice) {
+QAbstractItemView* q_abstractitemview_from_q_paint_device(const void* _qpaintdevice) {
     return (QAbstractItemView*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2601,8 +2601,8 @@ QSize* q_abstractitemview_super_minimum_size_hint(const void* self) {
     return QAbstractItemView_SuperMinimumSizeHint((QAbstractItemView*)self);
 }
 
-void q_abstractitemview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QAbstractItemView_OnMinimumSizeHint((const QAbstractItemView*)self, (intptr_t)callback);
+void q_abstractitemview_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QAbstractItemView_OnMinimumSizeHint((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 QSize* q_abstractitemview_size_hint(const void* self) {
@@ -2613,8 +2613,8 @@ QSize* q_abstractitemview_super_size_hint(const void* self) {
     return QAbstractItemView_SuperSizeHint((QAbstractItemView*)self);
 }
 
-void q_abstractitemview_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QAbstractItemView_OnSizeHint((const QAbstractItemView*)self, (intptr_t)callback);
+void q_abstractitemview_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QAbstractItemView_OnSizeHint((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_abstractitemview_setup_viewport(void* self, void* viewport) {
@@ -2697,8 +2697,8 @@ void q_abstractitemview_super_init_style_option(const void* self, void* option) 
     QAbstractItemView_SuperInitStyleOption((QAbstractItemView*)self, (QStyleOptionFrame*)option);
 }
 
-void q_abstractitemview_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QAbstractItemView_OnInitStyleOption((const QAbstractItemView*)self, (intptr_t)callback);
+void q_abstractitemview_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QAbstractItemView_OnInitStyleOption((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 int32_t q_abstractitemview_dev_type(const void* self) {
@@ -2709,8 +2709,8 @@ int32_t q_abstractitemview_super_dev_type(const void* self) {
     return QAbstractItemView_SuperDevType((QAbstractItemView*)self);
 }
 
-void q_abstractitemview_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QAbstractItemView_OnDevType((const QAbstractItemView*)self, (intptr_t)callback);
+void q_abstractitemview_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QAbstractItemView_OnDevType((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_abstractitemview_set_visible(void* self, bool visible) {
@@ -2733,8 +2733,8 @@ int32_t q_abstractitemview_super_height_for_width(const void* self, int param1) 
     return QAbstractItemView_SuperHeightForWidth((QAbstractItemView*)self, param1);
 }
 
-void q_abstractitemview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QAbstractItemView_OnHeightForWidth((const QAbstractItemView*)self, (intptr_t)callback);
+void q_abstractitemview_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QAbstractItemView_OnHeightForWidth((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 bool q_abstractitemview_has_height_for_width(const void* self) {
@@ -2745,8 +2745,8 @@ bool q_abstractitemview_super_has_height_for_width(const void* self) {
     return QAbstractItemView_SuperHasHeightForWidth((QAbstractItemView*)self);
 }
 
-void q_abstractitemview_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QAbstractItemView_OnHasHeightForWidth((const QAbstractItemView*)self, (intptr_t)callback);
+void q_abstractitemview_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QAbstractItemView_OnHasHeightForWidth((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_abstractitemview_paint_engine(const void* self) {
@@ -2757,8 +2757,8 @@ QPaintEngine* q_abstractitemview_super_paint_engine(const void* self) {
     return QAbstractItemView_SuperPaintEngine((QAbstractItemView*)self);
 }
 
-void q_abstractitemview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QAbstractItemView_OnPaintEngine((const QAbstractItemView*)self, (intptr_t)callback);
+void q_abstractitemview_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QAbstractItemView_OnPaintEngine((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_abstractitemview_key_release_event(void* self, void* event) {
@@ -2889,8 +2889,8 @@ int32_t q_abstractitemview_super_metric(const void* self, int32_t param1) {
     return QAbstractItemView_SuperMetric((QAbstractItemView*)self, param1);
 }
 
-void q_abstractitemview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QAbstractItemView_OnMetric((const QAbstractItemView*)self, (intptr_t)callback);
+void q_abstractitemview_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QAbstractItemView_OnMetric((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_abstractitemview_init_painter(const void* self, void* painter) {
@@ -2901,8 +2901,8 @@ void q_abstractitemview_super_init_painter(const void* self, void* painter) {
     QAbstractItemView_SuperInitPainter((QAbstractItemView*)self, (QPainter*)painter);
 }
 
-void q_abstractitemview_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QAbstractItemView_OnInitPainter((const QAbstractItemView*)self, (intptr_t)callback);
+void q_abstractitemview_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QAbstractItemView_OnInitPainter((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_abstractitemview_redirected(const void* self, void* offset) {
@@ -2913,8 +2913,8 @@ QPaintDevice* q_abstractitemview_super_redirected(const void* self, void* offset
     return QAbstractItemView_SuperRedirected((QAbstractItemView*)self, (QPoint*)offset);
 }
 
-void q_abstractitemview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QAbstractItemView_OnRedirected((const QAbstractItemView*)self, (intptr_t)callback);
+void q_abstractitemview_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QAbstractItemView_OnRedirected((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 QPainter* q_abstractitemview_shared_painter(const void* self) {
@@ -2925,8 +2925,8 @@ QPainter* q_abstractitemview_super_shared_painter(const void* self) {
     return QAbstractItemView_SuperSharedPainter((QAbstractItemView*)self);
 }
 
-void q_abstractitemview_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QAbstractItemView_OnSharedPainter((const QAbstractItemView*)self, (intptr_t)callback);
+void q_abstractitemview_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QAbstractItemView_OnSharedPainter((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_abstractitemview_child_event(void* self, void* event) {

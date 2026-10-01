@@ -35,7 +35,7 @@ const QMetaObject* q_candlestickset_meta_object(const void* self) {
     return QCandlestickSet_MetaObject((QCandlestickSet*)self);
 }
 
-void q_candlestickset_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_candlestickset_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCandlestickSet_OnMetaObject((QCandlestickSet*)self, (intptr_t)callback);
 }
 

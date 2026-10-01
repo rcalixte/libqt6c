@@ -169,10 +169,10 @@ const char* q_iconengine_key(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QIconEngine*
+/// @param self QIconEngine*
 /// @param callback const char* func(const QIconEngine* self)
 ///
-void q_iconengine_on_key(const void* self, const char* (*callback)(const void*));
+void q_iconengine_on_key(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#key)
 ///
@@ -194,10 +194,10 @@ QIconEngine* q_iconengine_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QIconEngine*
+/// @param self QIconEngine*
 /// @param callback QIconEngine* func(const QIconEngine* self)
 ///
-void q_iconengine_on_clone(const void* self, QIconEngine* (*callback)(const void*));
+void q_iconengine_on_clone(void* self, QIconEngine* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#read)
 ///
@@ -235,10 +235,10 @@ bool q_iconengine_write(const void* self, void* out);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QIconEngine*
+/// @param self QIconEngine*
 /// @param callback bool func(const QIconEngine* self, QDataStream* out)
 ///
-void q_iconengine_on_write(const void* self, bool (*callback)(const void*, void*));
+void q_iconengine_on_write(void* self, bool (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiconengine.html#write)
 ///

@@ -26,10 +26,10 @@ int32_t q_designercontainerextension_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerContainerExtension*
+/// @param self QDesignerContainerExtension*
 /// @param callback int32_t func(const QDesignerContainerExtension* self)
 ///
-void q_designercontainerextension_on_count(const void* self, int32_t (*callback)(const void*));
+void q_designercontainerextension_on_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#widget)
 ///
@@ -44,10 +44,10 @@ QWidget* q_designercontainerextension_widget(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerContainerExtension*
+/// @param self QDesignerContainerExtension*
 /// @param callback QWidget* func(const QDesignerContainerExtension* self, int index)
 ///
-void q_designercontainerextension_on_widget(const void* self, QWidget* (*callback)(const void*, int));
+void q_designercontainerextension_on_widget(void* self, QWidget* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#currentIndex)
 ///
@@ -61,10 +61,10 @@ int32_t q_designercontainerextension_current_index(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerContainerExtension*
+/// @param self QDesignerContainerExtension*
 /// @param callback int32_t func(const QDesignerContainerExtension* self)
 ///
-void q_designercontainerextension_on_current_index(const void* self, int32_t (*callback)(const void*));
+void q_designercontainerextension_on_current_index(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#setCurrentIndex)
 ///
@@ -96,10 +96,10 @@ bool q_designercontainerextension_can_add_widget(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerContainerExtension*
+/// @param self QDesignerContainerExtension*
 /// @param callback bool func(const QDesignerContainerExtension* self)
 ///
-void q_designercontainerextension_on_can_add_widget(const void* self, bool (*callback)(const void*));
+void q_designercontainerextension_on_can_add_widget(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#addWidget)
 ///
@@ -151,10 +151,10 @@ bool q_designercontainerextension_can_remove(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerContainerExtension*
+/// @param self QDesignerContainerExtension*
 /// @param callback bool func(const QDesignerContainerExtension* self, int index)
 ///
-void q_designercontainerextension_on_can_remove(const void* self, bool (*callback)(const void*, int));
+void q_designercontainerextension_on_can_remove(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercontainerextension.html#remove)
 ///

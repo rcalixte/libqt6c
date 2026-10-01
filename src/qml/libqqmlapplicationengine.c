@@ -45,7 +45,7 @@ const QMetaObject* q_qmlapplicationengine_meta_object(const void* self) {
     return QQmlApplicationEngine_MetaObject((QQmlApplicationEngine*)self);
 }
 
-void q_qmlapplicationengine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_qmlapplicationengine_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlApplicationEngine_OnMetaObject((QQmlApplicationEngine*)self, (intptr_t)callback);
 }
 

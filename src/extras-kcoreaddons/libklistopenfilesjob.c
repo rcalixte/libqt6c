@@ -15,7 +15,7 @@ const QMetaObject* k_listopenfilesjob_meta_object(const void* self) {
     return KListOpenFilesJob_MetaObject((KListOpenFilesJob*)self);
 }
 
-void k_listopenfilesjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_listopenfilesjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KListOpenFilesJob_OnMetaObject((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
@@ -471,8 +471,8 @@ const char* k_listopenfilesjob_super_error_string(const void* self) {
     return _ret;
 }
 
-void k_listopenfilesjob_on_error_string(const void* self, const char* (*callback)(const void*)) {
-    KListOpenFilesJob_OnErrorString((const KListOpenFilesJob*)self, (intptr_t)callback);
+void k_listopenfilesjob_on_error_string(void* self, const char* (*callback)(const void*)) {
+    KListOpenFilesJob_OnErrorString((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
 bool k_listopenfilesjob_event(void* self, void* event) {

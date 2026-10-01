@@ -17,7 +17,7 @@ const QMetaObject* q_spatialsound_meta_object(const void* self) {
     return QSpatialSound_MetaObject((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_spatialsound_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSpatialSound_OnMetaObject((QSpatialSound*)self, (intptr_t)callback);
 }
 

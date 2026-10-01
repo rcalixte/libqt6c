@@ -30,7 +30,7 @@ const QMetaObject* k_imageannotator__kimageannotator_meta_object(const void* sel
     return kImageAnnotator__KImageAnnotator_MetaObject((kImageAnnotator__KImageAnnotator*)self);
 }
 
-void k_imageannotator__kimageannotator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_imageannotator__kimageannotator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     kImageAnnotator__KImageAnnotator_OnMetaObject((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
@@ -89,7 +89,7 @@ QSize* k_imageannotator__kimageannotator_size_hint(const void* self) {
     return kImageAnnotator__KImageAnnotator_SizeHint((kImageAnnotator__KImageAnnotator*)self);
 }
 
-void k_imageannotator__kimageannotator_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_imageannotator__kimageannotator_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     kImageAnnotator__KImageAnnotator_OnSizeHint((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
@@ -215,24 +215,24 @@ void k_imageannotator__kimageannotator_image_changed(const void* self) {
     kImageAnnotator__KImageAnnotator_ImageChanged((kImageAnnotator__KImageAnnotator*)self);
 }
 
-void k_imageannotator__kimageannotator_on_image_changed(const void* self, void (*callback)(const void*)) {
-    kImageAnnotator__KImageAnnotator_Connect_ImageChanged((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_image_changed(void* self, void (*callback)(const void*)) {
+    kImageAnnotator__KImageAnnotator_Connect_ImageChanged((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 void k_imageannotator__kimageannotator_current_tab_changed(const void* self, int index) {
     kImageAnnotator__KImageAnnotator_CurrentTabChanged((kImageAnnotator__KImageAnnotator*)self, index);
 }
 
-void k_imageannotator__kimageannotator_on_current_tab_changed(const void* self, void (*callback)(const void*, int)) {
-    kImageAnnotator__KImageAnnotator_Connect_CurrentTabChanged((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_current_tab_changed(void* self, void (*callback)(const void*, int)) {
+    kImageAnnotator__KImageAnnotator_Connect_CurrentTabChanged((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 void k_imageannotator__kimageannotator_tab_close_requested(const void* self, int index) {
     kImageAnnotator__KImageAnnotator_TabCloseRequested((kImageAnnotator__KImageAnnotator*)self, index);
 }
 
-void k_imageannotator__kimageannotator_on_tab_close_requested(const void* self, void (*callback)(const void*, int)) {
-    kImageAnnotator__KImageAnnotator_Connect_TabCloseRequested((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_tab_close_requested(void* self, void (*callback)(const void*, int)) {
+    kImageAnnotator__KImageAnnotator_Connect_TabCloseRequested((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 void k_imageannotator__kimageannotator_tab_moved(void* self, int fromIndex, int toIndex) {
@@ -247,8 +247,8 @@ void k_imageannotator__kimageannotator_tab_context_menu_opened(const void* self,
     kImageAnnotator__KImageAnnotator_TabContextMenuOpened((kImageAnnotator__KImageAnnotator*)self, index);
 }
 
-void k_imageannotator__kimageannotator_on_tab_context_menu_opened(const void* self, void (*callback)(const void*, int)) {
-    kImageAnnotator__KImageAnnotator_Connect_TabContextMenuOpened((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_tab_context_menu_opened(void* self, void (*callback)(const void*, int)) {
+    kImageAnnotator__KImageAnnotator_Connect_TabContextMenuOpened((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 const char* k_imageannotator__kimageannotator_tr2(const char* s, const char* c) {
@@ -265,11 +265,11 @@ const char* k_imageannotator__kimageannotator_tr3(const char* s, const char* c, 
     return _ret;
 }
 
-QPaintDevice* k_imageannotator__kimageannotator_as_q_paint_device(void* self) {
+QPaintDevice* k_imageannotator__kimageannotator_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-kImageAnnotator__KImageAnnotator* k_imageannotator__kimageannotator_from_q_paint_device(void* _qpaintdevice) {
+kImageAnnotator__KImageAnnotator* k_imageannotator__kimageannotator_from_q_paint_device(const void* _qpaintdevice) {
     return (kImageAnnotator__KImageAnnotator*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1660,8 +1660,8 @@ int32_t k_imageannotator__kimageannotator_super_dev_type(const void* self) {
     return kImageAnnotator__KImageAnnotator_SuperDevType((kImageAnnotator__KImageAnnotator*)self);
 }
 
-void k_imageannotator__kimageannotator_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    kImageAnnotator__KImageAnnotator_OnDevType((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    kImageAnnotator__KImageAnnotator_OnDevType((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 void k_imageannotator__kimageannotator_set_visible(void* self, bool visible) {
@@ -1684,8 +1684,8 @@ QSize* k_imageannotator__kimageannotator_super_minimum_size_hint(const void* sel
     return kImageAnnotator__KImageAnnotator_SuperMinimumSizeHint((kImageAnnotator__KImageAnnotator*)self);
 }
 
-void k_imageannotator__kimageannotator_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    kImageAnnotator__KImageAnnotator_OnMinimumSizeHint((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    kImageAnnotator__KImageAnnotator_OnMinimumSizeHint((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 int32_t k_imageannotator__kimageannotator_height_for_width(const void* self, int param1) {
@@ -1696,8 +1696,8 @@ int32_t k_imageannotator__kimageannotator_super_height_for_width(const void* sel
     return kImageAnnotator__KImageAnnotator_SuperHeightForWidth((kImageAnnotator__KImageAnnotator*)self, param1);
 }
 
-void k_imageannotator__kimageannotator_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    kImageAnnotator__KImageAnnotator_OnHeightForWidth((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    kImageAnnotator__KImageAnnotator_OnHeightForWidth((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 bool k_imageannotator__kimageannotator_has_height_for_width(const void* self) {
@@ -1708,8 +1708,8 @@ bool k_imageannotator__kimageannotator_super_has_height_for_width(const void* se
     return kImageAnnotator__KImageAnnotator_SuperHasHeightForWidth((kImageAnnotator__KImageAnnotator*)self);
 }
 
-void k_imageannotator__kimageannotator_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    kImageAnnotator__KImageAnnotator_OnHasHeightForWidth((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    kImageAnnotator__KImageAnnotator_OnHasHeightForWidth((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_imageannotator__kimageannotator_paint_engine(const void* self) {
@@ -1720,8 +1720,8 @@ QPaintEngine* k_imageannotator__kimageannotator_super_paint_engine(const void* s
     return kImageAnnotator__KImageAnnotator_SuperPaintEngine((kImageAnnotator__KImageAnnotator*)self);
 }
 
-void k_imageannotator__kimageannotator_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    kImageAnnotator__KImageAnnotator_OnPaintEngine((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    kImageAnnotator__KImageAnnotator_OnPaintEngine((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 bool k_imageannotator__kimageannotator_event(void* self, void* event) {
@@ -2056,8 +2056,8 @@ int32_t k_imageannotator__kimageannotator_super_metric(const void* self, int32_t
     return kImageAnnotator__KImageAnnotator_SuperMetric((kImageAnnotator__KImageAnnotator*)self, param1);
 }
 
-void k_imageannotator__kimageannotator_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    kImageAnnotator__KImageAnnotator_OnMetric((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    kImageAnnotator__KImageAnnotator_OnMetric((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 void k_imageannotator__kimageannotator_init_painter(const void* self, void* painter) {
@@ -2068,8 +2068,8 @@ void k_imageannotator__kimageannotator_super_init_painter(const void* self, void
     kImageAnnotator__KImageAnnotator_SuperInitPainter((kImageAnnotator__KImageAnnotator*)self, (QPainter*)painter);
 }
 
-void k_imageannotator__kimageannotator_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    kImageAnnotator__KImageAnnotator_OnInitPainter((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    kImageAnnotator__KImageAnnotator_OnInitPainter((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_imageannotator__kimageannotator_redirected(const void* self, void* offset) {
@@ -2080,8 +2080,8 @@ QPaintDevice* k_imageannotator__kimageannotator_super_redirected(const void* sel
     return kImageAnnotator__KImageAnnotator_SuperRedirected((kImageAnnotator__KImageAnnotator*)self, (QPoint*)offset);
 }
 
-void k_imageannotator__kimageannotator_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    kImageAnnotator__KImageAnnotator_OnRedirected((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    kImageAnnotator__KImageAnnotator_OnRedirected((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 QPainter* k_imageannotator__kimageannotator_shared_painter(const void* self) {
@@ -2092,8 +2092,8 @@ QPainter* k_imageannotator__kimageannotator_super_shared_painter(const void* sel
     return kImageAnnotator__KImageAnnotator_SuperSharedPainter((kImageAnnotator__KImageAnnotator*)self);
 }
 
-void k_imageannotator__kimageannotator_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    kImageAnnotator__KImageAnnotator_OnSharedPainter((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    kImageAnnotator__KImageAnnotator_OnSharedPainter((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 void k_imageannotator__kimageannotator_input_method_event(void* self, void* param1) {
@@ -2116,8 +2116,8 @@ QVariant* k_imageannotator__kimageannotator_super_input_method_query(const void*
     return kImageAnnotator__KImageAnnotator_SuperInputMethodQuery((kImageAnnotator__KImageAnnotator*)self, param1);
 }
 
-void k_imageannotator__kimageannotator_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    kImageAnnotator__KImageAnnotator_OnInputMethodQuery((const kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
+void k_imageannotator__kimageannotator_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    kImageAnnotator__KImageAnnotator_OnInputMethodQuery((kImageAnnotator__KImageAnnotator*)self, (intptr_t)callback);
 }
 
 bool k_imageannotator__kimageannotator_focus_next_prev_child(void* self, bool next) {

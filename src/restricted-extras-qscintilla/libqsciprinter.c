@@ -369,8 +369,8 @@ int32_t q_sciprinter_super_dev_type(const void* self) {
     return QsciPrinter_SuperDevType((QsciPrinter*)self);
 }
 
-void q_sciprinter_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QsciPrinter_OnDevType((const QsciPrinter*)self, (intptr_t)callback);
+void q_sciprinter_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QsciPrinter_OnDevType((QsciPrinter*)self, (intptr_t)callback);
 }
 
 bool q_sciprinter_new_page(void* self) {
@@ -393,8 +393,8 @@ QPaintEngine* q_sciprinter_super_paint_engine(const void* self) {
     return QsciPrinter_SuperPaintEngine((QsciPrinter*)self);
 }
 
-void q_sciprinter_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QsciPrinter_OnPaintEngine((const QsciPrinter*)self, (intptr_t)callback);
+void q_sciprinter_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QsciPrinter_OnPaintEngine((QsciPrinter*)self, (intptr_t)callback);
 }
 
 int32_t q_sciprinter_metric(const void* self, int32_t param1) {
@@ -405,8 +405,8 @@ int32_t q_sciprinter_super_metric(const void* self, int32_t param1) {
     return QsciPrinter_SuperMetric((QsciPrinter*)self, param1);
 }
 
-void q_sciprinter_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QsciPrinter_OnMetric((const QsciPrinter*)self, (intptr_t)callback);
+void q_sciprinter_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QsciPrinter_OnMetric((QsciPrinter*)self, (intptr_t)callback);
 }
 
 bool q_sciprinter_set_page_layout(void* self, const void* pageLayout) {
@@ -477,8 +477,8 @@ void q_sciprinter_super_init_painter(const void* self, void* painter) {
     QsciPrinter_SuperInitPainter((QsciPrinter*)self, (QPainter*)painter);
 }
 
-void q_sciprinter_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QsciPrinter_OnInitPainter((const QsciPrinter*)self, (intptr_t)callback);
+void q_sciprinter_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QsciPrinter_OnInitPainter((QsciPrinter*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_sciprinter_redirected(const void* self, void* offset) {
@@ -489,8 +489,8 @@ QPaintDevice* q_sciprinter_super_redirected(const void* self, void* offset) {
     return QsciPrinter_SuperRedirected((QsciPrinter*)self, (QPoint*)offset);
 }
 
-void q_sciprinter_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QsciPrinter_OnRedirected((const QsciPrinter*)self, (intptr_t)callback);
+void q_sciprinter_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QsciPrinter_OnRedirected((QsciPrinter*)self, (intptr_t)callback);
 }
 
 QPainter* q_sciprinter_shared_painter(const void* self) {
@@ -501,8 +501,8 @@ QPainter* q_sciprinter_super_shared_painter(const void* self) {
     return QsciPrinter_SuperSharedPainter((QsciPrinter*)self);
 }
 
-void q_sciprinter_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QsciPrinter_OnSharedPainter((const QsciPrinter*)self, (intptr_t)callback);
+void q_sciprinter_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QsciPrinter_OnSharedPainter((QsciPrinter*)self, (intptr_t)callback);
 }
 
 void q_sciprinter_set_engines(void* self, void* printEngine, void* paintEngine) {

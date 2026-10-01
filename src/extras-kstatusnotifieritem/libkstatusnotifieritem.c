@@ -30,7 +30,7 @@ const QMetaObject* k_statusnotifieritem_meta_object(const void* self) {
     return KStatusNotifierItem_MetaObject((KStatusNotifierItem*)self);
 }
 
-void k_statusnotifieritem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_statusnotifieritem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KStatusNotifierItem_OnMetaObject((KStatusNotifierItem*)self, (intptr_t)callback);
 }
 

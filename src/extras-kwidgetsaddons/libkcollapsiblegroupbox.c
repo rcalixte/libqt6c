@@ -25,7 +25,7 @@ const QMetaObject* k_collapsiblegroupbox_meta_object(const void* self) {
     return KCollapsibleGroupBox_MetaObject((KCollapsibleGroupBox*)self);
 }
 
-void k_collapsiblegroupbox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_collapsiblegroupbox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KCollapsibleGroupBox_OnMetaObject((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
@@ -87,7 +87,7 @@ QSize* k_collapsiblegroupbox_size_hint(const void* self) {
     return KCollapsibleGroupBox_SizeHint((KCollapsibleGroupBox*)self);
 }
 
-void k_collapsiblegroupbox_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_collapsiblegroupbox_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KCollapsibleGroupBox_OnSizeHint((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
@@ -99,7 +99,7 @@ QSize* k_collapsiblegroupbox_minimum_size_hint(const void* self) {
     return KCollapsibleGroupBox_MinimumSizeHint((KCollapsibleGroupBox*)self);
 }
 
-void k_collapsiblegroupbox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_collapsiblegroupbox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     KCollapsibleGroupBox_OnMinimumSizeHint((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
@@ -233,11 +233,11 @@ const char* k_collapsiblegroupbox_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_collapsiblegroupbox_as_q_paint_device(void* self) {
+QPaintDevice* k_collapsiblegroupbox_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KCollapsibleGroupBox* k_collapsiblegroupbox_from_q_paint_device(void* _qpaintdevice) {
+KCollapsibleGroupBox* k_collapsiblegroupbox_from_q_paint_device(const void* _qpaintdevice) {
     return (KCollapsibleGroupBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1628,8 +1628,8 @@ int32_t k_collapsiblegroupbox_super_dev_type(const void* self) {
     return KCollapsibleGroupBox_SuperDevType((KCollapsibleGroupBox*)self);
 }
 
-void k_collapsiblegroupbox_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KCollapsibleGroupBox_OnDevType((const KCollapsibleGroupBox*)self, (intptr_t)callback);
+void k_collapsiblegroupbox_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KCollapsibleGroupBox_OnDevType((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
 void k_collapsiblegroupbox_set_visible(void* self, bool visible) {
@@ -1652,8 +1652,8 @@ int32_t k_collapsiblegroupbox_super_height_for_width(const void* self, int param
     return KCollapsibleGroupBox_SuperHeightForWidth((KCollapsibleGroupBox*)self, param1);
 }
 
-void k_collapsiblegroupbox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KCollapsibleGroupBox_OnHeightForWidth((const KCollapsibleGroupBox*)self, (intptr_t)callback);
+void k_collapsiblegroupbox_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KCollapsibleGroupBox_OnHeightForWidth((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
 bool k_collapsiblegroupbox_has_height_for_width(const void* self) {
@@ -1664,8 +1664,8 @@ bool k_collapsiblegroupbox_super_has_height_for_width(const void* self) {
     return KCollapsibleGroupBox_SuperHasHeightForWidth((KCollapsibleGroupBox*)self);
 }
 
-void k_collapsiblegroupbox_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KCollapsibleGroupBox_OnHasHeightForWidth((const KCollapsibleGroupBox*)self, (intptr_t)callback);
+void k_collapsiblegroupbox_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KCollapsibleGroupBox_OnHasHeightForWidth((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_collapsiblegroupbox_paint_engine(const void* self) {
@@ -1676,8 +1676,8 @@ QPaintEngine* k_collapsiblegroupbox_super_paint_engine(const void* self) {
     return KCollapsibleGroupBox_SuperPaintEngine((KCollapsibleGroupBox*)self);
 }
 
-void k_collapsiblegroupbox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KCollapsibleGroupBox_OnPaintEngine((const KCollapsibleGroupBox*)self, (intptr_t)callback);
+void k_collapsiblegroupbox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KCollapsibleGroupBox_OnPaintEngine((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
 void k_collapsiblegroupbox_mouse_release_event(void* self, void* event) {
@@ -1928,8 +1928,8 @@ int32_t k_collapsiblegroupbox_super_metric(const void* self, int32_t param1) {
     return KCollapsibleGroupBox_SuperMetric((KCollapsibleGroupBox*)self, param1);
 }
 
-void k_collapsiblegroupbox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KCollapsibleGroupBox_OnMetric((const KCollapsibleGroupBox*)self, (intptr_t)callback);
+void k_collapsiblegroupbox_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KCollapsibleGroupBox_OnMetric((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
 void k_collapsiblegroupbox_init_painter(const void* self, void* painter) {
@@ -1940,8 +1940,8 @@ void k_collapsiblegroupbox_super_init_painter(const void* self, void* painter) {
     KCollapsibleGroupBox_SuperInitPainter((KCollapsibleGroupBox*)self, (QPainter*)painter);
 }
 
-void k_collapsiblegroupbox_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KCollapsibleGroupBox_OnInitPainter((const KCollapsibleGroupBox*)self, (intptr_t)callback);
+void k_collapsiblegroupbox_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KCollapsibleGroupBox_OnInitPainter((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_collapsiblegroupbox_redirected(const void* self, void* offset) {
@@ -1952,8 +1952,8 @@ QPaintDevice* k_collapsiblegroupbox_super_redirected(const void* self, void* off
     return KCollapsibleGroupBox_SuperRedirected((KCollapsibleGroupBox*)self, (QPoint*)offset);
 }
 
-void k_collapsiblegroupbox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KCollapsibleGroupBox_OnRedirected((const KCollapsibleGroupBox*)self, (intptr_t)callback);
+void k_collapsiblegroupbox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KCollapsibleGroupBox_OnRedirected((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
 QPainter* k_collapsiblegroupbox_shared_painter(const void* self) {
@@ -1964,8 +1964,8 @@ QPainter* k_collapsiblegroupbox_super_shared_painter(const void* self) {
     return KCollapsibleGroupBox_SuperSharedPainter((KCollapsibleGroupBox*)self);
 }
 
-void k_collapsiblegroupbox_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KCollapsibleGroupBox_OnSharedPainter((const KCollapsibleGroupBox*)self, (intptr_t)callback);
+void k_collapsiblegroupbox_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KCollapsibleGroupBox_OnSharedPainter((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
 void k_collapsiblegroupbox_input_method_event(void* self, void* param1) {
@@ -1988,8 +1988,8 @@ QVariant* k_collapsiblegroupbox_super_input_method_query(const void* self, int32
     return KCollapsibleGroupBox_SuperInputMethodQuery((KCollapsibleGroupBox*)self, param1);
 }
 
-void k_collapsiblegroupbox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KCollapsibleGroupBox_OnInputMethodQuery((const KCollapsibleGroupBox*)self, (intptr_t)callback);
+void k_collapsiblegroupbox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KCollapsibleGroupBox_OnInputMethodQuery((KCollapsibleGroupBox*)self, (intptr_t)callback);
 }
 
 bool k_collapsiblegroupbox_focus_next_prev_child(void* self, bool next) {

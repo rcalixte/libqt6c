@@ -19,7 +19,7 @@ const QMetaObject* k_terminallauncherjob_meta_object(const void* self) {
     return KTerminalLauncherJob_MetaObject((KTerminalLauncherJob*)self);
 }
 
-void k_terminallauncherjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_terminallauncherjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KTerminalLauncherJob_OnMetaObject((KTerminalLauncherJob*)self, (intptr_t)callback);
 }
 
@@ -482,8 +482,8 @@ const char* k_terminallauncherjob_super_error_string(const void* self) {
     return _ret;
 }
 
-void k_terminallauncherjob_on_error_string(const void* self, const char* (*callback)(const void*)) {
-    KTerminalLauncherJob_OnErrorString((const KTerminalLauncherJob*)self, (intptr_t)callback);
+void k_terminallauncherjob_on_error_string(void* self, const char* (*callback)(const void*)) {
+    KTerminalLauncherJob_OnErrorString((KTerminalLauncherJob*)self, (intptr_t)callback);
 }
 
 bool k_terminallauncherjob_event(void* self, void* event) {
