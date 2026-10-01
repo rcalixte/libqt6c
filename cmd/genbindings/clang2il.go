@@ -1132,6 +1132,7 @@ func parseMethod(node map[string]any, mm *CppMethod, className string) error {
 			// Add resolution for return type if it's a struct
 			if _, ok := KnownClassnames[fullClassName]; ok {
 				mm.ReturnType.ParameterType = fullClassName
+				KnownReturnClassnames[fullClassName] = struct{}{}
 			}
 
 			// Add resolution for return type if it's an enum
