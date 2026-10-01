@@ -33,15 +33,15 @@ QWidget* q_widget_new3(void* parent, int32_t f);
 
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QWidget*
+/// @param self const QWidget*
 ///
-QPaintDevice* q_widget_as_q_paint_device(void* self);
+QPaintDevice* q_widget_as_q_paint_device(const void* self);
 
 /// Downcasts to a QWidget object
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QWidget* q_widget_from_q_paint_device(void* _qpaintdevice);
+QWidget* q_widget_from_q_paint_device(const void* _qpaintdevice);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -53,10 +53,10 @@ const QMetaObject* q_widget_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback const QMetaObject* func(const QWidget* self)
 ///
-void q_widget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_widget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -126,10 +126,10 @@ int32_t q_widget_dev_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback int32_t func(const QWidget* self)
 ///
-void q_widget_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_widget_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
@@ -1494,12 +1494,12 @@ QSize* q_widget_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback QSize* func(const QWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_widget_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_widget_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
 ///
@@ -1519,12 +1519,12 @@ QSize* q_widget_minimum_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback QSize* func(const QWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_widget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_widget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
 ///
@@ -1566,10 +1566,10 @@ int32_t q_widget_height_for_width(const void* self, int param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback int32_t func(const QWidget* self, int param1)
 ///
-void q_widget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_widget_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
@@ -1590,10 +1590,10 @@ bool q_widget_has_height_for_width(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback bool func(const QWidget* self)
 ///
-void q_widget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_widget_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
@@ -1892,10 +1892,10 @@ QPaintEngine* q_widget_paint_engine(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback QPaintEngine* func(const QWidget* self)
 ///
-void q_widget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_widget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
@@ -2708,10 +2708,10 @@ int32_t q_widget_metric(const void* self, int32_t param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback int32_t func(const QWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_widget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_widget_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
@@ -2733,10 +2733,10 @@ void q_widget_init_painter(const void* self, void* painter);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback void func(const QWidget* self, QPainter* painter)
 ///
-void q_widget_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_widget_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
@@ -2758,10 +2758,10 @@ QPaintDevice* q_widget_redirected(const void* self, void* offset);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback QPaintDevice* func(const QWidget* self, QPoint* offset)
 ///
-void q_widget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_widget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
@@ -2782,10 +2782,10 @@ QPainter* q_widget_shared_painter(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback QPainter* func(const QWidget* self)
 ///
-void q_widget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_widget_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
@@ -2831,12 +2831,12 @@ QVariant* q_widget_input_method_query(const void* self, int32_t param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback QVariant* func(const QWidget* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_widget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_widget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
@@ -3873,10 +3873,10 @@ QObject* q_widget_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback QObject* func(QWidget* self)
 ///
-void q_widget_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_widget_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3904,10 +3904,10 @@ int32_t q_widget_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback int32_t func(QWidget* self)
 ///
-void q_widget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_widget_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3937,10 +3937,10 @@ int32_t q_widget_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback int32_t func(QWidget* self, const char* signal)
 ///
-void q_widget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_widget_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3970,10 +3970,10 @@ bool q_widget_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback bool func(QWidget* self, QMetaMethod* signal)
 ///
-void q_widget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_widget_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4005,10 +4005,10 @@ double q_widget_super_get_decoded_metric_f(const void* self, int32_t metricA, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWidget*
+/// @param self QWidget*
 /// @param callback double func(QWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_widget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_widget_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -18,7 +18,7 @@ const QMetaObject* q_qmlpropertymap_meta_object(const void* self) {
     return QQmlPropertyMap_MetaObject((QQmlPropertyMap*)self);
 }
 
-void q_qmlpropertymap_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_qmlpropertymap_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlPropertyMap_OnMetaObject((QQmlPropertyMap*)self, (intptr_t)callback);
 }
 

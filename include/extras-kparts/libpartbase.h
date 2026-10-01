@@ -275,10 +275,10 @@ QAction* k_parts__partbase_super_action2(const void* self, const void* element);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__PartBase*
+/// @param self KParts__PartBase*
 /// @param callback QAction* func(KParts__PartBase* self, QDomElement* element)
 ///
-void k_parts__partbase_on_action2(const void* self, QAction* (*callback)(const void*, const void*));
+void k_parts__partbase_on_action2(void* self, QAction* (*callback)(const void*, const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -306,10 +306,10 @@ KActionCollection* k_parts__partbase_super_action_collection(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__PartBase*
+/// @param self KParts__PartBase*
 /// @param callback KActionCollection* func(KParts__PartBase* self)
 ///
-void k_parts__partbase_on_action_collection(const void* self, KActionCollection* (*callback)(const void*));
+void k_parts__partbase_on_action_collection(void* self, KActionCollection* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -341,10 +341,10 @@ const char* k_parts__partbase_super_component_name(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__PartBase*
+/// @param self KParts__PartBase*
 /// @param callback const char* func(KParts__PartBase* self)
 ///
-void k_parts__partbase_on_component_name(const void* self, const char* (*callback)(const void*));
+void k_parts__partbase_on_component_name(void* self, const char* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -372,12 +372,12 @@ QDomDocument* k_parts__partbase_super_dom_document(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__PartBase*
+/// @param self KParts__PartBase*
 /// @param callback QDomDocument* func(KParts__PartBase* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_parts__partbase_on_dom_document(const void* self, QDomDocument* (*callback)(const void*));
+void k_parts__partbase_on_dom_document(void* self, QDomDocument* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -409,10 +409,10 @@ const char* k_parts__partbase_super_xml_file(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__PartBase*
+/// @param self KParts__PartBase*
 /// @param callback const char* func(KParts__PartBase* self)
 ///
-void k_parts__partbase_on_xml_file(const void* self, const char* (*callback)(const void*));
+void k_parts__partbase_on_xml_file(void* self, const char* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -444,10 +444,10 @@ const char* k_parts__partbase_super_local_x_m_l_file(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__PartBase*
+/// @param self KParts__PartBase*
 /// @param callback const char* func(KParts__PartBase* self)
 ///
-void k_parts__partbase_on_local_x_m_l_file(const void* self, const char* (*callback)(const void*));
+void k_parts__partbase_on_local_x_m_l_file(void* self, const char* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///

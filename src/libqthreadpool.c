@@ -20,7 +20,7 @@ const QMetaObject* q_threadpool_meta_object(const void* self) {
     return QThreadPool_MetaObject((QThreadPool*)self);
 }
 
-void q_threadpool_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_threadpool_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QThreadPool_OnMetaObject((QThreadPool*)self, (intptr_t)callback);
 }
 

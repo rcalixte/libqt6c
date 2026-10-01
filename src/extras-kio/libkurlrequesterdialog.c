@@ -32,7 +32,7 @@ const QMetaObject* k_urlrequesterdialog_meta_object(const void* self) {
     return KUrlRequesterDialog_MetaObject((KUrlRequesterDialog*)self);
 }
 
-void k_urlrequesterdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_urlrequesterdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KUrlRequesterDialog_OnMetaObject((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
@@ -153,11 +153,11 @@ void k_urlrequesterdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_urlrequesterdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_urlrequesterdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KUrlRequesterDialog* k_urlrequesterdialog_from_q_paint_device(void* _qpaintdevice) {
+KUrlRequesterDialog* k_urlrequesterdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KUrlRequesterDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1560,8 +1560,8 @@ QSize* k_urlrequesterdialog_super_size_hint(const void* self) {
     return KUrlRequesterDialog_SuperSizeHint((KUrlRequesterDialog*)self);
 }
 
-void k_urlrequesterdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KUrlRequesterDialog_OnSizeHint((const KUrlRequesterDialog*)self, (intptr_t)callback);
+void k_urlrequesterdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KUrlRequesterDialog_OnSizeHint((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_urlrequesterdialog_minimum_size_hint(const void* self) {
@@ -1572,8 +1572,8 @@ QSize* k_urlrequesterdialog_super_minimum_size_hint(const void* self) {
     return KUrlRequesterDialog_SuperMinimumSizeHint((KUrlRequesterDialog*)self);
 }
 
-void k_urlrequesterdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KUrlRequesterDialog_OnMinimumSizeHint((const KUrlRequesterDialog*)self, (intptr_t)callback);
+void k_urlrequesterdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KUrlRequesterDialog_OnMinimumSizeHint((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
 void k_urlrequesterdialog_open(void* self) {
@@ -1716,8 +1716,8 @@ int32_t k_urlrequesterdialog_super_dev_type(const void* self) {
     return KUrlRequesterDialog_SuperDevType((KUrlRequesterDialog*)self);
 }
 
-void k_urlrequesterdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KUrlRequesterDialog_OnDevType((const KUrlRequesterDialog*)self, (intptr_t)callback);
+void k_urlrequesterdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KUrlRequesterDialog_OnDevType((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_urlrequesterdialog_height_for_width(const void* self, int param1) {
@@ -1728,8 +1728,8 @@ int32_t k_urlrequesterdialog_super_height_for_width(const void* self, int param1
     return KUrlRequesterDialog_SuperHeightForWidth((KUrlRequesterDialog*)self, param1);
 }
 
-void k_urlrequesterdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KUrlRequesterDialog_OnHeightForWidth((const KUrlRequesterDialog*)self, (intptr_t)callback);
+void k_urlrequesterdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KUrlRequesterDialog_OnHeightForWidth((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
 bool k_urlrequesterdialog_has_height_for_width(const void* self) {
@@ -1740,8 +1740,8 @@ bool k_urlrequesterdialog_super_has_height_for_width(const void* self) {
     return KUrlRequesterDialog_SuperHasHeightForWidth((KUrlRequesterDialog*)self);
 }
 
-void k_urlrequesterdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KUrlRequesterDialog_OnHasHeightForWidth((const KUrlRequesterDialog*)self, (intptr_t)callback);
+void k_urlrequesterdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KUrlRequesterDialog_OnHasHeightForWidth((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_urlrequesterdialog_paint_engine(const void* self) {
@@ -1752,8 +1752,8 @@ QPaintEngine* k_urlrequesterdialog_super_paint_engine(const void* self) {
     return KUrlRequesterDialog_SuperPaintEngine((KUrlRequesterDialog*)self);
 }
 
-void k_urlrequesterdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KUrlRequesterDialog_OnPaintEngine((const KUrlRequesterDialog*)self, (intptr_t)callback);
+void k_urlrequesterdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KUrlRequesterDialog_OnPaintEngine((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
 bool k_urlrequesterdialog_event(void* self, void* event) {
@@ -2028,8 +2028,8 @@ int32_t k_urlrequesterdialog_super_metric(const void* self, int32_t param1) {
     return KUrlRequesterDialog_SuperMetric((KUrlRequesterDialog*)self, param1);
 }
 
-void k_urlrequesterdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KUrlRequesterDialog_OnMetric((const KUrlRequesterDialog*)self, (intptr_t)callback);
+void k_urlrequesterdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KUrlRequesterDialog_OnMetric((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
 void k_urlrequesterdialog_init_painter(const void* self, void* painter) {
@@ -2040,8 +2040,8 @@ void k_urlrequesterdialog_super_init_painter(const void* self, void* painter) {
     KUrlRequesterDialog_SuperInitPainter((KUrlRequesterDialog*)self, (QPainter*)painter);
 }
 
-void k_urlrequesterdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KUrlRequesterDialog_OnInitPainter((const KUrlRequesterDialog*)self, (intptr_t)callback);
+void k_urlrequesterdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KUrlRequesterDialog_OnInitPainter((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_urlrequesterdialog_redirected(const void* self, void* offset) {
@@ -2052,8 +2052,8 @@ QPaintDevice* k_urlrequesterdialog_super_redirected(const void* self, void* offs
     return KUrlRequesterDialog_SuperRedirected((KUrlRequesterDialog*)self, (QPoint*)offset);
 }
 
-void k_urlrequesterdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KUrlRequesterDialog_OnRedirected((const KUrlRequesterDialog*)self, (intptr_t)callback);
+void k_urlrequesterdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KUrlRequesterDialog_OnRedirected((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_urlrequesterdialog_shared_painter(const void* self) {
@@ -2064,8 +2064,8 @@ QPainter* k_urlrequesterdialog_super_shared_painter(const void* self) {
     return KUrlRequesterDialog_SuperSharedPainter((KUrlRequesterDialog*)self);
 }
 
-void k_urlrequesterdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KUrlRequesterDialog_OnSharedPainter((const KUrlRequesterDialog*)self, (intptr_t)callback);
+void k_urlrequesterdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KUrlRequesterDialog_OnSharedPainter((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
 void k_urlrequesterdialog_input_method_event(void* self, void* param1) {
@@ -2088,8 +2088,8 @@ QVariant* k_urlrequesterdialog_super_input_method_query(const void* self, int32_
     return KUrlRequesterDialog_SuperInputMethodQuery((KUrlRequesterDialog*)self, param1);
 }
 
-void k_urlrequesterdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KUrlRequesterDialog_OnInputMethodQuery((const KUrlRequesterDialog*)self, (intptr_t)callback);
+void k_urlrequesterdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KUrlRequesterDialog_OnInputMethodQuery((KUrlRequesterDialog*)self, (intptr_t)callback);
 }
 
 bool k_urlrequesterdialog_focus_next_prev_child(void* self, bool next) {

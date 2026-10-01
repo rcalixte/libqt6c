@@ -85,8 +85,8 @@ QEvent* k_irigami__platform__tabletmodechangedevent_super_clone(const void* self
     return Kirigami__Platform__TabletModeChangedEvent_SuperClone((Kirigami__Platform__TabletModeChangedEvent*)self);
 }
 
-void k_irigami__platform__tabletmodechangedevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    Kirigami__Platform__TabletModeChangedEvent_OnClone((const Kirigami__Platform__TabletModeChangedEvent*)self, (intptr_t)callback);
+void k_irigami__platform__tabletmodechangedevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    Kirigami__Platform__TabletModeChangedEvent_OnClone((Kirigami__Platform__TabletModeChangedEvent*)self, (intptr_t)callback);
 }
 
 void k_irigami__platform__tabletmodechangedevent_delete(void* self) {

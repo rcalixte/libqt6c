@@ -44,7 +44,7 @@ const QMetaObject* q_commandlinkbutton_meta_object(const void* self) {
     return QCommandLinkButton_MetaObject((QCommandLinkButton*)self);
 }
 
-void q_commandlinkbutton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_commandlinkbutton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCommandLinkButton_OnMetaObject((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
@@ -98,7 +98,7 @@ QSize* q_commandlinkbutton_size_hint(const void* self) {
     return QCommandLinkButton_SizeHint((QCommandLinkButton*)self);
 }
 
-void q_commandlinkbutton_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_commandlinkbutton_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCommandLinkButton_OnSizeHint((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
@@ -110,7 +110,7 @@ int32_t q_commandlinkbutton_height_for_width(const void* self, int param1) {
     return QCommandLinkButton_HeightForWidth((QCommandLinkButton*)self, param1);
 }
 
-void q_commandlinkbutton_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+void q_commandlinkbutton_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
     QCommandLinkButton_OnHeightForWidth((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
@@ -122,7 +122,7 @@ QSize* q_commandlinkbutton_minimum_size_hint(const void* self) {
     return QCommandLinkButton_MinimumSizeHint((QCommandLinkButton*)self);
 }
 
-void q_commandlinkbutton_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_commandlinkbutton_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCommandLinkButton_OnMinimumSizeHint((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
@@ -134,7 +134,7 @@ void q_commandlinkbutton_init_style_option(const void* self, void* option) {
     QCommandLinkButton_InitStyleOption((QCommandLinkButton*)self, (QStyleOptionButton*)option);
 }
 
-void q_commandlinkbutton_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_commandlinkbutton_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QCommandLinkButton_OnInitStyleOption((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
@@ -363,11 +363,11 @@ void q_commandlinkbutton_on_clicked1(void* self, void (*callback)(void*, bool)) 
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_commandlinkbutton_as_q_paint_device(void* self) {
+QPaintDevice* q_commandlinkbutton_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QCommandLinkButton* q_commandlinkbutton_from_q_paint_device(void* _qpaintdevice) {
+QCommandLinkButton* q_commandlinkbutton_from_q_paint_device(const void* _qpaintdevice) {
     return (QCommandLinkButton*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1806,8 +1806,8 @@ bool q_commandlinkbutton_super_hit_button(const void* self, const void* pos) {
     return QCommandLinkButton_SuperHitButton((QCommandLinkButton*)self, (QPoint*)pos);
 }
 
-void q_commandlinkbutton_on_hit_button(const void* self, bool (*callback)(const void*, const void*)) {
-    QCommandLinkButton_OnHitButton((const QCommandLinkButton*)self, (intptr_t)callback);
+void q_commandlinkbutton_on_hit_button(void* self, bool (*callback)(const void*, const void*)) {
+    QCommandLinkButton_OnHitButton((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
 void q_commandlinkbutton_check_state_set(void* self) {
@@ -1902,8 +1902,8 @@ int32_t q_commandlinkbutton_super_dev_type(const void* self) {
     return QCommandLinkButton_SuperDevType((QCommandLinkButton*)self);
 }
 
-void q_commandlinkbutton_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QCommandLinkButton_OnDevType((const QCommandLinkButton*)self, (intptr_t)callback);
+void q_commandlinkbutton_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QCommandLinkButton_OnDevType((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
 void q_commandlinkbutton_set_visible(void* self, bool visible) {
@@ -1926,8 +1926,8 @@ bool q_commandlinkbutton_super_has_height_for_width(const void* self) {
     return QCommandLinkButton_SuperHasHeightForWidth((QCommandLinkButton*)self);
 }
 
-void q_commandlinkbutton_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QCommandLinkButton_OnHasHeightForWidth((const QCommandLinkButton*)self, (intptr_t)callback);
+void q_commandlinkbutton_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QCommandLinkButton_OnHasHeightForWidth((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_commandlinkbutton_paint_engine(const void* self) {
@@ -1938,8 +1938,8 @@ QPaintEngine* q_commandlinkbutton_super_paint_engine(const void* self) {
     return QCommandLinkButton_SuperPaintEngine((QCommandLinkButton*)self);
 }
 
-void q_commandlinkbutton_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QCommandLinkButton_OnPaintEngine((const QCommandLinkButton*)self, (intptr_t)callback);
+void q_commandlinkbutton_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QCommandLinkButton_OnPaintEngine((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
 void q_commandlinkbutton_mouse_double_click_event(void* self, void* event) {
@@ -2154,8 +2154,8 @@ int32_t q_commandlinkbutton_super_metric(const void* self, int32_t param1) {
     return QCommandLinkButton_SuperMetric((QCommandLinkButton*)self, param1);
 }
 
-void q_commandlinkbutton_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QCommandLinkButton_OnMetric((const QCommandLinkButton*)self, (intptr_t)callback);
+void q_commandlinkbutton_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QCommandLinkButton_OnMetric((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
 void q_commandlinkbutton_init_painter(const void* self, void* painter) {
@@ -2166,8 +2166,8 @@ void q_commandlinkbutton_super_init_painter(const void* self, void* painter) {
     QCommandLinkButton_SuperInitPainter((QCommandLinkButton*)self, (QPainter*)painter);
 }
 
-void q_commandlinkbutton_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QCommandLinkButton_OnInitPainter((const QCommandLinkButton*)self, (intptr_t)callback);
+void q_commandlinkbutton_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QCommandLinkButton_OnInitPainter((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_commandlinkbutton_redirected(const void* self, void* offset) {
@@ -2178,8 +2178,8 @@ QPaintDevice* q_commandlinkbutton_super_redirected(const void* self, void* offse
     return QCommandLinkButton_SuperRedirected((QCommandLinkButton*)self, (QPoint*)offset);
 }
 
-void q_commandlinkbutton_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QCommandLinkButton_OnRedirected((const QCommandLinkButton*)self, (intptr_t)callback);
+void q_commandlinkbutton_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QCommandLinkButton_OnRedirected((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
 QPainter* q_commandlinkbutton_shared_painter(const void* self) {
@@ -2190,8 +2190,8 @@ QPainter* q_commandlinkbutton_super_shared_painter(const void* self) {
     return QCommandLinkButton_SuperSharedPainter((QCommandLinkButton*)self);
 }
 
-void q_commandlinkbutton_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QCommandLinkButton_OnSharedPainter((const QCommandLinkButton*)self, (intptr_t)callback);
+void q_commandlinkbutton_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QCommandLinkButton_OnSharedPainter((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
 void q_commandlinkbutton_input_method_event(void* self, void* param1) {
@@ -2214,8 +2214,8 @@ QVariant* q_commandlinkbutton_super_input_method_query(const void* self, int32_t
     return QCommandLinkButton_SuperInputMethodQuery((QCommandLinkButton*)self, param1);
 }
 
-void q_commandlinkbutton_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QCommandLinkButton_OnInputMethodQuery((const QCommandLinkButton*)self, (intptr_t)callback);
+void q_commandlinkbutton_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QCommandLinkButton_OnInputMethodQuery((QCommandLinkButton*)self, (intptr_t)callback);
 }
 
 bool q_commandlinkbutton_focus_next_prev_child(void* self, bool next) {

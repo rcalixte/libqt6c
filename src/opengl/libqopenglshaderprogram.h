@@ -35,10 +35,10 @@ const QMetaObject* q_openglshader_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QOpenGLShader*
+/// @param self QOpenGLShader*
 /// @param callback const QMetaObject* func(const QOpenGLShader* self)
 ///
-void q_openglshader_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_openglshader_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -900,10 +900,10 @@ QObject* q_openglshader_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLShader*
+/// @param self QOpenGLShader*
 /// @param callback QObject* func(QOpenGLShader* self)
 ///
-void q_openglshader_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_openglshader_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -931,10 +931,10 @@ int32_t q_openglshader_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLShader*
+/// @param self QOpenGLShader*
 /// @param callback int32_t func(QOpenGLShader* self)
 ///
-void q_openglshader_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_openglshader_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -964,10 +964,10 @@ int32_t q_openglshader_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLShader*
+/// @param self QOpenGLShader*
 /// @param callback int32_t func(QOpenGLShader* self, const char* signal)
 ///
-void q_openglshader_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_openglshader_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -997,10 +997,10 @@ bool q_openglshader_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLShader*
+/// @param self QOpenGLShader*
 /// @param callback bool func(QOpenGLShader* self, QMetaMethod* signal)
 ///
-void q_openglshader_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_openglshader_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1045,10 +1045,10 @@ const QMetaObject* q_openglshaderprogram_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QOpenGLShaderProgram*
+/// @param self QOpenGLShaderProgram*
 /// @param callback const QMetaObject* func(const QOpenGLShaderProgram* self)
 ///
-void q_openglshaderprogram_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_openglshaderprogram_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -2919,10 +2919,10 @@ QObject* q_openglshaderprogram_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLShaderProgram*
+/// @param self QOpenGLShaderProgram*
 /// @param callback QObject* func(QOpenGLShaderProgram* self)
 ///
-void q_openglshaderprogram_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_openglshaderprogram_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2950,10 +2950,10 @@ int32_t q_openglshaderprogram_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLShaderProgram*
+/// @param self QOpenGLShaderProgram*
 /// @param callback int32_t func(QOpenGLShaderProgram* self)
 ///
-void q_openglshaderprogram_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_openglshaderprogram_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2983,10 +2983,10 @@ int32_t q_openglshaderprogram_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLShaderProgram*
+/// @param self QOpenGLShaderProgram*
 /// @param callback int32_t func(QOpenGLShaderProgram* self, const char* signal)
 ///
-void q_openglshaderprogram_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_openglshaderprogram_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3016,10 +3016,10 @@ bool q_openglshaderprogram_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLShaderProgram*
+/// @param self QOpenGLShaderProgram*
 /// @param callback bool func(QOpenGLShaderProgram* self, QMetaMethod* signal)
 ///
-void q_openglshaderprogram_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_openglshaderprogram_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

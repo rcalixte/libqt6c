@@ -45,7 +45,7 @@ const QMetaObject* q_progressdialog_meta_object(const void* self) {
     return QProgressDialog_MetaObject((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_progressdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QProgressDialog_OnMetaObject((QProgressDialog*)self, (intptr_t)callback);
 }
 
@@ -116,7 +116,7 @@ QSize* q_progressdialog_size_hint(const void* self) {
     return QProgressDialog_SizeHint((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_progressdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QProgressDialog_OnSizeHint((QProgressDialog*)self, (intptr_t)callback);
 }
 
@@ -305,11 +305,11 @@ void q_progressdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_progressdialog_as_q_paint_device(void* self) {
+QPaintDevice* q_progressdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QProgressDialog* q_progressdialog_from_q_paint_device(void* _qpaintdevice) {
+QProgressDialog* q_progressdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (QProgressDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1712,8 +1712,8 @@ QSize* q_progressdialog_super_minimum_size_hint(const void* self) {
     return QProgressDialog_SuperMinimumSizeHint((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QProgressDialog_OnMinimumSizeHint((const QProgressDialog*)self, (intptr_t)callback);
+void q_progressdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QProgressDialog_OnMinimumSizeHint((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_open(void* self) {
@@ -1820,8 +1820,8 @@ int32_t q_progressdialog_super_dev_type(const void* self) {
     return QProgressDialog_SuperDevType((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QProgressDialog_OnDevType((const QProgressDialog*)self, (intptr_t)callback);
+void q_progressdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QProgressDialog_OnDevType((QProgressDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_progressdialog_height_for_width(const void* self, int param1) {
@@ -1832,8 +1832,8 @@ int32_t q_progressdialog_super_height_for_width(const void* self, int param1) {
     return QProgressDialog_SuperHeightForWidth((QProgressDialog*)self, param1);
 }
 
-void q_progressdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QProgressDialog_OnHeightForWidth((const QProgressDialog*)self, (intptr_t)callback);
+void q_progressdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QProgressDialog_OnHeightForWidth((QProgressDialog*)self, (intptr_t)callback);
 }
 
 bool q_progressdialog_has_height_for_width(const void* self) {
@@ -1844,8 +1844,8 @@ bool q_progressdialog_super_has_height_for_width(const void* self) {
     return QProgressDialog_SuperHasHeightForWidth((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QProgressDialog_OnHasHeightForWidth((const QProgressDialog*)self, (intptr_t)callback);
+void q_progressdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QProgressDialog_OnHasHeightForWidth((QProgressDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_progressdialog_paint_engine(const void* self) {
@@ -1856,8 +1856,8 @@ QPaintEngine* q_progressdialog_super_paint_engine(const void* self) {
     return QProgressDialog_SuperPaintEngine((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QProgressDialog_OnPaintEngine((const QProgressDialog*)self, (intptr_t)callback);
+void q_progressdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QProgressDialog_OnPaintEngine((QProgressDialog*)self, (intptr_t)callback);
 }
 
 bool q_progressdialog_event(void* self, void* event) {
@@ -2120,8 +2120,8 @@ int32_t q_progressdialog_super_metric(const void* self, int32_t param1) {
     return QProgressDialog_SuperMetric((QProgressDialog*)self, param1);
 }
 
-void q_progressdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QProgressDialog_OnMetric((const QProgressDialog*)self, (intptr_t)callback);
+void q_progressdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QProgressDialog_OnMetric((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_init_painter(const void* self, void* painter) {
@@ -2132,8 +2132,8 @@ void q_progressdialog_super_init_painter(const void* self, void* painter) {
     QProgressDialog_SuperInitPainter((QProgressDialog*)self, (QPainter*)painter);
 }
 
-void q_progressdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QProgressDialog_OnInitPainter((const QProgressDialog*)self, (intptr_t)callback);
+void q_progressdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QProgressDialog_OnInitPainter((QProgressDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_progressdialog_redirected(const void* self, void* offset) {
@@ -2144,8 +2144,8 @@ QPaintDevice* q_progressdialog_super_redirected(const void* self, void* offset) 
     return QProgressDialog_SuperRedirected((QProgressDialog*)self, (QPoint*)offset);
 }
 
-void q_progressdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QProgressDialog_OnRedirected((const QProgressDialog*)self, (intptr_t)callback);
+void q_progressdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QProgressDialog_OnRedirected((QProgressDialog*)self, (intptr_t)callback);
 }
 
 QPainter* q_progressdialog_shared_painter(const void* self) {
@@ -2156,8 +2156,8 @@ QPainter* q_progressdialog_super_shared_painter(const void* self) {
     return QProgressDialog_SuperSharedPainter((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QProgressDialog_OnSharedPainter((const QProgressDialog*)self, (intptr_t)callback);
+void q_progressdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QProgressDialog_OnSharedPainter((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_input_method_event(void* self, void* param1) {
@@ -2180,8 +2180,8 @@ QVariant* q_progressdialog_super_input_method_query(const void* self, int32_t pa
     return QProgressDialog_SuperInputMethodQuery((QProgressDialog*)self, param1);
 }
 
-void q_progressdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QProgressDialog_OnInputMethodQuery((const QProgressDialog*)self, (intptr_t)callback);
+void q_progressdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QProgressDialog_OnInputMethodQuery((QProgressDialog*)self, (intptr_t)callback);
 }
 
 bool q_progressdialog_focus_next_prev_child(void* self, bool next) {

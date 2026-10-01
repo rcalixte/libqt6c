@@ -32,7 +32,7 @@ const QMetaObject* k_plotwidget_meta_object(const void* self) {
     return KPlotWidget_MetaObject((KPlotWidget*)self);
 }
 
-void k_plotwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_plotwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPlotWidget_OnMetaObject((KPlotWidget*)self, (intptr_t)callback);
 }
 
@@ -75,7 +75,7 @@ QSize* k_plotwidget_minimum_size_hint(const void* self) {
     return KPlotWidget_MinimumSizeHint((KPlotWidget*)self);
 }
 
-void k_plotwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_plotwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     KPlotWidget_OnMinimumSizeHint((KPlotWidget*)self, (intptr_t)callback);
 }
 
@@ -87,7 +87,7 @@ QSize* k_plotwidget_size_hint(const void* self) {
     return KPlotWidget_SizeHint((KPlotWidget*)self);
 }
 
-void k_plotwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_plotwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KPlotWidget_OnSizeHint((KPlotWidget*)self, (intptr_t)callback);
 }
 
@@ -391,11 +391,11 @@ void k_plotwidget_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_plotwidget_as_q_paint_device(void* self) {
+QPaintDevice* k_plotwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KPlotWidget* k_plotwidget_from_q_paint_device(void* _qpaintdevice) {
+KPlotWidget* k_plotwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (KPlotWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1798,8 +1798,8 @@ void k_plotwidget_super_init_style_option(const void* self, void* option) {
     KPlotWidget_SuperInitStyleOption((KPlotWidget*)self, (QStyleOptionFrame*)option);
 }
 
-void k_plotwidget_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KPlotWidget_OnInitStyleOption((const KPlotWidget*)self, (intptr_t)callback);
+void k_plotwidget_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KPlotWidget_OnInitStyleOption((KPlotWidget*)self, (intptr_t)callback);
 }
 
 int32_t k_plotwidget_dev_type(const void* self) {
@@ -1810,8 +1810,8 @@ int32_t k_plotwidget_super_dev_type(const void* self) {
     return KPlotWidget_SuperDevType((KPlotWidget*)self);
 }
 
-void k_plotwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KPlotWidget_OnDevType((const KPlotWidget*)self, (intptr_t)callback);
+void k_plotwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KPlotWidget_OnDevType((KPlotWidget*)self, (intptr_t)callback);
 }
 
 void k_plotwidget_set_visible(void* self, bool visible) {
@@ -1834,8 +1834,8 @@ int32_t k_plotwidget_super_height_for_width(const void* self, int param1) {
     return KPlotWidget_SuperHeightForWidth((KPlotWidget*)self, param1);
 }
 
-void k_plotwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KPlotWidget_OnHeightForWidth((const KPlotWidget*)self, (intptr_t)callback);
+void k_plotwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KPlotWidget_OnHeightForWidth((KPlotWidget*)self, (intptr_t)callback);
 }
 
 bool k_plotwidget_has_height_for_width(const void* self) {
@@ -1846,8 +1846,8 @@ bool k_plotwidget_super_has_height_for_width(const void* self) {
     return KPlotWidget_SuperHasHeightForWidth((KPlotWidget*)self);
 }
 
-void k_plotwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KPlotWidget_OnHasHeightForWidth((const KPlotWidget*)self, (intptr_t)callback);
+void k_plotwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KPlotWidget_OnHasHeightForWidth((KPlotWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_plotwidget_paint_engine(const void* self) {
@@ -1858,8 +1858,8 @@ QPaintEngine* k_plotwidget_super_paint_engine(const void* self) {
     return KPlotWidget_SuperPaintEngine((KPlotWidget*)self);
 }
 
-void k_plotwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KPlotWidget_OnPaintEngine((const KPlotWidget*)self, (intptr_t)callback);
+void k_plotwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KPlotWidget_OnPaintEngine((KPlotWidget*)self, (intptr_t)callback);
 }
 
 void k_plotwidget_mouse_press_event(void* self, void* event) {
@@ -2146,8 +2146,8 @@ int32_t k_plotwidget_super_metric(const void* self, int32_t param1) {
     return KPlotWidget_SuperMetric((KPlotWidget*)self, param1);
 }
 
-void k_plotwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KPlotWidget_OnMetric((const KPlotWidget*)self, (intptr_t)callback);
+void k_plotwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KPlotWidget_OnMetric((KPlotWidget*)self, (intptr_t)callback);
 }
 
 void k_plotwidget_init_painter(const void* self, void* painter) {
@@ -2158,8 +2158,8 @@ void k_plotwidget_super_init_painter(const void* self, void* painter) {
     KPlotWidget_SuperInitPainter((KPlotWidget*)self, (QPainter*)painter);
 }
 
-void k_plotwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KPlotWidget_OnInitPainter((const KPlotWidget*)self, (intptr_t)callback);
+void k_plotwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KPlotWidget_OnInitPainter((KPlotWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_plotwidget_redirected(const void* self, void* offset) {
@@ -2170,8 +2170,8 @@ QPaintDevice* k_plotwidget_super_redirected(const void* self, void* offset) {
     return KPlotWidget_SuperRedirected((KPlotWidget*)self, (QPoint*)offset);
 }
 
-void k_plotwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KPlotWidget_OnRedirected((const KPlotWidget*)self, (intptr_t)callback);
+void k_plotwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KPlotWidget_OnRedirected((KPlotWidget*)self, (intptr_t)callback);
 }
 
 QPainter* k_plotwidget_shared_painter(const void* self) {
@@ -2182,8 +2182,8 @@ QPainter* k_plotwidget_super_shared_painter(const void* self) {
     return KPlotWidget_SuperSharedPainter((KPlotWidget*)self);
 }
 
-void k_plotwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KPlotWidget_OnSharedPainter((const KPlotWidget*)self, (intptr_t)callback);
+void k_plotwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KPlotWidget_OnSharedPainter((KPlotWidget*)self, (intptr_t)callback);
 }
 
 void k_plotwidget_input_method_event(void* self, void* param1) {
@@ -2206,8 +2206,8 @@ QVariant* k_plotwidget_super_input_method_query(const void* self, int32_t param1
     return KPlotWidget_SuperInputMethodQuery((KPlotWidget*)self, param1);
 }
 
-void k_plotwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KPlotWidget_OnInputMethodQuery((const KPlotWidget*)self, (intptr_t)callback);
+void k_plotwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KPlotWidget_OnInputMethodQuery((KPlotWidget*)self, (intptr_t)callback);
 }
 
 bool k_plotwidget_focus_next_prev_child(void* self, bool next) {

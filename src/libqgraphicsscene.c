@@ -55,7 +55,7 @@ const QMetaObject* q_graphicsscene_meta_object(const void* self) {
     return QGraphicsScene_MetaObject((QGraphicsScene*)self);
 }
 
-void q_graphicsscene_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_graphicsscene_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGraphicsScene_OnMetaObject((QGraphicsScene*)self, (intptr_t)callback);
 }
 
@@ -314,7 +314,7 @@ QVariant* q_graphicsscene_input_method_query(const void* self, int32_t query) {
     return QGraphicsScene_InputMethodQuery((QGraphicsScene*)self, query);
 }
 
-void q_graphicsscene_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+void q_graphicsscene_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
     QGraphicsScene_OnInputMethodQuery((QGraphicsScene*)self, (intptr_t)callback);
 }
 

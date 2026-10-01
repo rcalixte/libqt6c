@@ -18,7 +18,7 @@ const QMetaObject* k_textgrammarcheck__languagetoolgetlistoflanguagejob_meta_obj
     return TextGrammarCheck__LanguageToolGetListOfLanguageJob_MetaObject((TextGrammarCheck__LanguageToolGetListOfLanguageJob*)self);
 }
 
-void k_textgrammarcheck__languagetoolgetlistoflanguagejob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textgrammarcheck__languagetoolgetlistoflanguagejob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextGrammarCheck__LanguageToolGetListOfLanguageJob_OnMetaObject((TextGrammarCheck__LanguageToolGetListOfLanguageJob*)self, (intptr_t)callback);
 }
 

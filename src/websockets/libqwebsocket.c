@@ -35,7 +35,7 @@ const QMetaObject* q_websocket_meta_object(const void* self) {
     return QWebSocket_MetaObject((QWebSocket*)self);
 }
 
-void q_websocket_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_websocket_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QWebSocket_OnMetaObject((QWebSocket*)self, (intptr_t)callback);
 }
 

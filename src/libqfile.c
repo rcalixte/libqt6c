@@ -28,7 +28,7 @@ const QMetaObject* q_file_meta_object(const void* self) {
     return QFile_MetaObject((QFile*)self);
 }
 
-void q_file_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_file_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QFile_OnMetaObject((QFile*)self, (intptr_t)callback);
 }
 
@@ -74,7 +74,7 @@ const char* q_file_file_name(const void* self) {
     return _ret;
 }
 
-void q_file_on_file_name(const void* self, const char* (*callback)(const void*)) {
+void q_file_on_file_name(void* self, const char* (*callback)(const void*)) {
     QFile_OnFileName((QFile*)self, (intptr_t)callback);
 }
 
@@ -196,7 +196,7 @@ int64_t q_file_size(const void* self) {
     return QFile_Size((QFile*)self);
 }
 
-void q_file_on_size(const void* self, int64_t (*callback)(const void*)) {
+void q_file_on_size(void* self, int64_t (*callback)(const void*)) {
     QFile_OnSize((QFile*)self, (intptr_t)callback);
 }
 
@@ -224,7 +224,7 @@ int32_t q_file_permissions(const void* self) {
     return QFile_Permissions((QFile*)self);
 }
 
-void q_file_on_permissions(const void* self, int32_t (*callback)(const void*)) {
+void q_file_on_permissions(void* self, int32_t (*callback)(const void*)) {
     QFile_OnPermissions((QFile*)self, (intptr_t)callback);
 }
 
@@ -306,7 +306,7 @@ unsigned char* q_file_map3(void* self, int64_t offset, int64_t size, int32_t fla
     return (unsigned char*)QFileDevice_Map3((QFileDevice*)self, offset, size, flags);
 }
 
-QIODeviceBase* q_file_as_q_i_o_device_base(void* self) {
+QIODeviceBase* q_file_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
@@ -733,8 +733,8 @@ bool q_file_super_is_sequential(const void* self) {
     return QFile_SuperIsSequential((QFile*)self);
 }
 
-void q_file_on_is_sequential(const void* self, bool (*callback)(const void*)) {
-    QFile_OnIsSequential((const QFile*)self, (intptr_t)callback);
+void q_file_on_is_sequential(void* self, bool (*callback)(const void*)) {
+    QFile_OnIsSequential((QFile*)self, (intptr_t)callback);
 }
 
 int64_t q_file_pos(const void* self) {
@@ -745,8 +745,8 @@ int64_t q_file_super_pos(const void* self) {
     return QFile_SuperPos((QFile*)self);
 }
 
-void q_file_on_pos(const void* self, int64_t (*callback)(const void*)) {
-    QFile_OnPos((const QFile*)self, (intptr_t)callback);
+void q_file_on_pos(void* self, int64_t (*callback)(const void*)) {
+    QFile_OnPos((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_seek(void* self, int64_t offset) {
@@ -769,8 +769,8 @@ bool q_file_super_at_end(const void* self) {
     return QFile_SuperAtEnd((QFile*)self);
 }
 
-void q_file_on_at_end(const void* self, bool (*callback)(const void*)) {
-    QFile_OnAtEnd((const QFile*)self, (intptr_t)callback);
+void q_file_on_at_end(void* self, bool (*callback)(const void*)) {
+    QFile_OnAtEnd((QFile*)self, (intptr_t)callback);
 }
 
 int64_t q_file_read_data(void* self, char* data, int64_t maxlen) {
@@ -829,8 +829,8 @@ int64_t q_file_super_bytes_available(const void* self) {
     return QFile_SuperBytesAvailable((QFile*)self);
 }
 
-void q_file_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
-    QFile_OnBytesAvailable((const QFile*)self, (intptr_t)callback);
+void q_file_on_bytes_available(void* self, int64_t (*callback)(const void*)) {
+    QFile_OnBytesAvailable((QFile*)self, (intptr_t)callback);
 }
 
 int64_t q_file_bytes_to_write(const void* self) {
@@ -841,8 +841,8 @@ int64_t q_file_super_bytes_to_write(const void* self) {
     return QFile_SuperBytesToWrite((QFile*)self);
 }
 
-void q_file_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
-    QFile_OnBytesToWrite((const QFile*)self, (intptr_t)callback);
+void q_file_on_bytes_to_write(void* self, int64_t (*callback)(const void*)) {
+    QFile_OnBytesToWrite((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_can_read_line(const void* self) {
@@ -853,8 +853,8 @@ bool q_file_super_can_read_line(const void* self) {
     return QFile_SuperCanReadLine((QFile*)self);
 }
 
-void q_file_on_can_read_line(const void* self, bool (*callback)(const void*)) {
-    QFile_OnCanReadLine((const QFile*)self, (intptr_t)callback);
+void q_file_on_can_read_line(void* self, bool (*callback)(const void*)) {
+    QFile_OnCanReadLine((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_wait_for_ready_read(void* self, int msecs) {

@@ -32,8 +32,8 @@ typedef struct QUrl QUrl;
 
 QQmlExtensionPlugin* QQmlExtensionPlugin_New();
 QQmlExtensionPlugin* QQmlExtensionPlugin_New2(QObject* parent);
-QQmlExtensionInterface* QQmlExtensionPlugin_AsQQmlExtensionInterface(QQmlExtensionPlugin* self);
-QQmlExtensionPlugin* QQmlExtensionPlugin_FromQQmlExtensionInterface(QQmlExtensionInterface* _qqmlextensioninterface);
+QQmlExtensionInterface* QQmlExtensionPlugin_AsQQmlExtensionInterface(const QQmlExtensionPlugin* self);
+QQmlExtensionPlugin* QQmlExtensionPlugin_FromQQmlExtensionInterface(const QQmlExtensionInterface* _qqmlextensioninterface);
 QMetaObject* QQmlExtensionPlugin_MetaObject(const QQmlExtensionPlugin* self);
 void* QQmlExtensionPlugin_Metacast(QQmlExtensionPlugin* self, const char* param1);
 int QQmlExtensionPlugin_Metacall(QQmlExtensionPlugin* self, int param1, int param2, void** param3);
@@ -81,8 +81,8 @@ void QQmlExtensionPlugin_Delete(QQmlExtensionPlugin* self);
 
 QQmlEngineExtensionPlugin* QQmlEngineExtensionPlugin_New();
 QQmlEngineExtensionPlugin* QQmlEngineExtensionPlugin_New2(QObject* parent);
-QQmlEngineExtensionInterface* QQmlEngineExtensionPlugin_AsQQmlEngineExtensionInterface(QQmlEngineExtensionPlugin* self);
-QQmlEngineExtensionPlugin* QQmlEngineExtensionPlugin_FromQQmlEngineExtensionInterface(QQmlEngineExtensionInterface* _qqmlengineextensioninterface);
+QQmlEngineExtensionInterface* QQmlEngineExtensionPlugin_AsQQmlEngineExtensionInterface(const QQmlEngineExtensionPlugin* self);
+QQmlEngineExtensionPlugin* QQmlEngineExtensionPlugin_FromQQmlEngineExtensionInterface(const QQmlEngineExtensionInterface* _qqmlengineextensioninterface);
 QMetaObject* QQmlEngineExtensionPlugin_MetaObject(const QQmlEngineExtensionPlugin* self);
 void* QQmlEngineExtensionPlugin_Metacast(QQmlEngineExtensionPlugin* self, const char* param1);
 int QQmlEngineExtensionPlugin_Metacall(QQmlEngineExtensionPlugin* self, int param1, int param2, void** param3);

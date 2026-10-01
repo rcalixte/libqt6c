@@ -42,7 +42,7 @@ const QMetaObject* k_diroperator_meta_object(const void* self) {
     return KDirOperator_MetaObject((KDirOperator*)self);
 }
 
-void k_diroperator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_diroperator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KDirOperator_OnMetaObject((KDirOperator*)self, (intptr_t)callback);
 }
 
@@ -922,11 +922,11 @@ const char* k_diroperator_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_diroperator_as_q_paint_device(void* self) {
+QPaintDevice* k_diroperator_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KDirOperator* k_diroperator_from_q_paint_device(void* _qpaintdevice) {
+KDirOperator* k_diroperator_from_q_paint_device(const void* _qpaintdevice) {
     return (KDirOperator*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2309,8 +2309,8 @@ int32_t k_diroperator_super_dev_type(const void* self) {
     return KDirOperator_SuperDevType((KDirOperator*)self);
 }
 
-void k_diroperator_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KDirOperator_OnDevType((const KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KDirOperator_OnDevType((KDirOperator*)self, (intptr_t)callback);
 }
 
 void k_diroperator_set_visible(void* self, bool visible) {
@@ -2333,8 +2333,8 @@ QSize* k_diroperator_super_size_hint(const void* self) {
     return KDirOperator_SuperSizeHint((KDirOperator*)self);
 }
 
-void k_diroperator_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KDirOperator_OnSizeHint((const KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KDirOperator_OnSizeHint((KDirOperator*)self, (intptr_t)callback);
 }
 
 QSize* k_diroperator_minimum_size_hint(const void* self) {
@@ -2345,8 +2345,8 @@ QSize* k_diroperator_super_minimum_size_hint(const void* self) {
     return KDirOperator_SuperMinimumSizeHint((KDirOperator*)self);
 }
 
-void k_diroperator_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KDirOperator_OnMinimumSizeHint((const KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KDirOperator_OnMinimumSizeHint((KDirOperator*)self, (intptr_t)callback);
 }
 
 int32_t k_diroperator_height_for_width(const void* self, int param1) {
@@ -2357,8 +2357,8 @@ int32_t k_diroperator_super_height_for_width(const void* self, int param1) {
     return KDirOperator_SuperHeightForWidth((KDirOperator*)self, param1);
 }
 
-void k_diroperator_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KDirOperator_OnHeightForWidth((const KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KDirOperator_OnHeightForWidth((KDirOperator*)self, (intptr_t)callback);
 }
 
 bool k_diroperator_has_height_for_width(const void* self) {
@@ -2369,8 +2369,8 @@ bool k_diroperator_super_has_height_for_width(const void* self) {
     return KDirOperator_SuperHasHeightForWidth((KDirOperator*)self);
 }
 
-void k_diroperator_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KDirOperator_OnHasHeightForWidth((const KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KDirOperator_OnHasHeightForWidth((KDirOperator*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_diroperator_paint_engine(const void* self) {
@@ -2381,8 +2381,8 @@ QPaintEngine* k_diroperator_super_paint_engine(const void* self) {
     return KDirOperator_SuperPaintEngine((KDirOperator*)self);
 }
 
-void k_diroperator_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KDirOperator_OnPaintEngine((const KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KDirOperator_OnPaintEngine((KDirOperator*)self, (intptr_t)callback);
 }
 
 bool k_diroperator_event(void* self, void* event) {
@@ -2693,8 +2693,8 @@ int32_t k_diroperator_super_metric(const void* self, int32_t param1) {
     return KDirOperator_SuperMetric((KDirOperator*)self, param1);
 }
 
-void k_diroperator_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KDirOperator_OnMetric((const KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KDirOperator_OnMetric((KDirOperator*)self, (intptr_t)callback);
 }
 
 void k_diroperator_init_painter(const void* self, void* painter) {
@@ -2705,8 +2705,8 @@ void k_diroperator_super_init_painter(const void* self, void* painter) {
     KDirOperator_SuperInitPainter((KDirOperator*)self, (QPainter*)painter);
 }
 
-void k_diroperator_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KDirOperator_OnInitPainter((const KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KDirOperator_OnInitPainter((KDirOperator*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_diroperator_redirected(const void* self, void* offset) {
@@ -2717,8 +2717,8 @@ QPaintDevice* k_diroperator_super_redirected(const void* self, void* offset) {
     return KDirOperator_SuperRedirected((KDirOperator*)self, (QPoint*)offset);
 }
 
-void k_diroperator_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KDirOperator_OnRedirected((const KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KDirOperator_OnRedirected((KDirOperator*)self, (intptr_t)callback);
 }
 
 QPainter* k_diroperator_shared_painter(const void* self) {
@@ -2729,8 +2729,8 @@ QPainter* k_diroperator_super_shared_painter(const void* self) {
     return KDirOperator_SuperSharedPainter((KDirOperator*)self);
 }
 
-void k_diroperator_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KDirOperator_OnSharedPainter((const KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KDirOperator_OnSharedPainter((KDirOperator*)self, (intptr_t)callback);
 }
 
 void k_diroperator_input_method_event(void* self, void* param1) {
@@ -2753,8 +2753,8 @@ QVariant* k_diroperator_super_input_method_query(const void* self, int32_t param
     return KDirOperator_SuperInputMethodQuery((KDirOperator*)self, param1);
 }
 
-void k_diroperator_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KDirOperator_OnInputMethodQuery((const KDirOperator*)self, (intptr_t)callback);
+void k_diroperator_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KDirOperator_OnInputMethodQuery((KDirOperator*)self, (intptr_t)callback);
 }
 
 bool k_diroperator_focus_next_prev_child(void* self, bool next) {

@@ -30,7 +30,7 @@ const QMetaObject* k_pluralhandlingspinbox_meta_object(const void* self) {
     return KPluralHandlingSpinBox_MetaObject((KPluralHandlingSpinBox*)self);
 }
 
-void k_pluralhandlingspinbox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_pluralhandlingspinbox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPluralHandlingSpinBox_OnMetaObject((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
@@ -298,11 +298,11 @@ void k_pluralhandlingspinbox_on_editing_finished(void* self, void (*callback)(vo
     QAbstractSpinBox_Connect_EditingFinished((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_pluralhandlingspinbox_as_q_paint_device(void* self) {
+QPaintDevice* k_pluralhandlingspinbox_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KPluralHandlingSpinBox* k_pluralhandlingspinbox_from_q_paint_device(void* _qpaintdevice) {
+KPluralHandlingSpinBox* k_pluralhandlingspinbox_from_q_paint_device(const void* _qpaintdevice) {
     return (KPluralHandlingSpinBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1705,8 +1705,8 @@ int32_t k_pluralhandlingspinbox_super_validate(const void* self, const char* inp
     return KPluralHandlingSpinBox_SuperValidate((KPluralHandlingSpinBox*)self, qstring(input), pos);
 }
 
-void k_pluralhandlingspinbox_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*)) {
-    KPluralHandlingSpinBox_OnValidate((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*)) {
+    KPluralHandlingSpinBox_OnValidate((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t k_pluralhandlingspinbox_value_from_text(const void* self, const char* text) {
@@ -1717,8 +1717,8 @@ int32_t k_pluralhandlingspinbox_super_value_from_text(const void* self, const ch
     return KPluralHandlingSpinBox_SuperValueFromText((KPluralHandlingSpinBox*)self, qstring(text));
 }
 
-void k_pluralhandlingspinbox_on_value_from_text(const void* self, int32_t (*callback)(const void*, const char*)) {
-    KPluralHandlingSpinBox_OnValueFromText((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_value_from_text(void* self, int32_t (*callback)(const void*, const char*)) {
+    KPluralHandlingSpinBox_OnValueFromText((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 const char* k_pluralhandlingspinbox_text_from_value(const void* self, int val) {
@@ -1735,8 +1735,8 @@ const char* k_pluralhandlingspinbox_super_text_from_value(const void* self, int 
     return _ret;
 }
 
-void k_pluralhandlingspinbox_on_text_from_value(const void* self, const char* (*callback)(const void*, int)) {
-    KPluralHandlingSpinBox_OnTextFromValue((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_text_from_value(void* self, const char* (*callback)(const void*, int)) {
+    KPluralHandlingSpinBox_OnTextFromValue((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 void k_pluralhandlingspinbox_fixup(const void* self, const char* str) {
@@ -1747,8 +1747,8 @@ void k_pluralhandlingspinbox_super_fixup(const void* self, const char* str) {
     KPluralHandlingSpinBox_SuperFixup((KPluralHandlingSpinBox*)self, qstring(str));
 }
 
-void k_pluralhandlingspinbox_on_fixup(const void* self, void (*callback)(const void*, const char*)) {
-    KPluralHandlingSpinBox_OnFixup((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_fixup(void* self, void (*callback)(const void*, const char*)) {
+    KPluralHandlingSpinBox_OnFixup((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 QSize* k_pluralhandlingspinbox_size_hint(const void* self) {
@@ -1759,8 +1759,8 @@ QSize* k_pluralhandlingspinbox_super_size_hint(const void* self) {
     return KPluralHandlingSpinBox_SuperSizeHint((KPluralHandlingSpinBox*)self);
 }
 
-void k_pluralhandlingspinbox_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPluralHandlingSpinBox_OnSizeHint((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPluralHandlingSpinBox_OnSizeHint((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 QSize* k_pluralhandlingspinbox_minimum_size_hint(const void* self) {
@@ -1771,8 +1771,8 @@ QSize* k_pluralhandlingspinbox_super_minimum_size_hint(const void* self) {
     return KPluralHandlingSpinBox_SuperMinimumSizeHint((KPluralHandlingSpinBox*)self);
 }
 
-void k_pluralhandlingspinbox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPluralHandlingSpinBox_OnMinimumSizeHint((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPluralHandlingSpinBox_OnMinimumSizeHint((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 QVariant* k_pluralhandlingspinbox_input_method_query(const void* self, int32_t param1) {
@@ -1783,8 +1783,8 @@ QVariant* k_pluralhandlingspinbox_super_input_method_query(const void* self, int
     return KPluralHandlingSpinBox_SuperInputMethodQuery((KPluralHandlingSpinBox*)self, param1);
 }
 
-void k_pluralhandlingspinbox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KPluralHandlingSpinBox_OnInputMethodQuery((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KPluralHandlingSpinBox_OnInputMethodQuery((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 void k_pluralhandlingspinbox_step_by(void* self, int steps) {
@@ -2011,8 +2011,8 @@ void k_pluralhandlingspinbox_super_init_style_option(const void* self, void* opt
     KPluralHandlingSpinBox_SuperInitStyleOption((KPluralHandlingSpinBox*)self, (QStyleOptionSpinBox*)option);
 }
 
-void k_pluralhandlingspinbox_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KPluralHandlingSpinBox_OnInitStyleOption((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KPluralHandlingSpinBox_OnInitStyleOption((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t k_pluralhandlingspinbox_step_enabled(const void* self) {
@@ -2023,8 +2023,8 @@ int32_t k_pluralhandlingspinbox_super_step_enabled(const void* self) {
     return KPluralHandlingSpinBox_SuperStepEnabled((KPluralHandlingSpinBox*)self);
 }
 
-void k_pluralhandlingspinbox_on_step_enabled(const void* self, int32_t (*callback)(const void*)) {
-    KPluralHandlingSpinBox_OnStepEnabled((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_step_enabled(void* self, int32_t (*callback)(const void*)) {
+    KPluralHandlingSpinBox_OnStepEnabled((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t k_pluralhandlingspinbox_dev_type(const void* self) {
@@ -2035,8 +2035,8 @@ int32_t k_pluralhandlingspinbox_super_dev_type(const void* self) {
     return KPluralHandlingSpinBox_SuperDevType((KPluralHandlingSpinBox*)self);
 }
 
-void k_pluralhandlingspinbox_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KPluralHandlingSpinBox_OnDevType((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KPluralHandlingSpinBox_OnDevType((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 void k_pluralhandlingspinbox_set_visible(void* self, bool visible) {
@@ -2059,8 +2059,8 @@ int32_t k_pluralhandlingspinbox_super_height_for_width(const void* self, int par
     return KPluralHandlingSpinBox_SuperHeightForWidth((KPluralHandlingSpinBox*)self, param1);
 }
 
-void k_pluralhandlingspinbox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KPluralHandlingSpinBox_OnHeightForWidth((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KPluralHandlingSpinBox_OnHeightForWidth((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 bool k_pluralhandlingspinbox_has_height_for_width(const void* self) {
@@ -2071,8 +2071,8 @@ bool k_pluralhandlingspinbox_super_has_height_for_width(const void* self) {
     return KPluralHandlingSpinBox_SuperHasHeightForWidth((KPluralHandlingSpinBox*)self);
 }
 
-void k_pluralhandlingspinbox_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KPluralHandlingSpinBox_OnHasHeightForWidth((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KPluralHandlingSpinBox_OnHasHeightForWidth((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_pluralhandlingspinbox_paint_engine(const void* self) {
@@ -2083,8 +2083,8 @@ QPaintEngine* k_pluralhandlingspinbox_super_paint_engine(const void* self) {
     return KPluralHandlingSpinBox_SuperPaintEngine((KPluralHandlingSpinBox*)self);
 }
 
-void k_pluralhandlingspinbox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KPluralHandlingSpinBox_OnPaintEngine((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KPluralHandlingSpinBox_OnPaintEngine((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 void k_pluralhandlingspinbox_mouse_double_click_event(void* self, void* event) {
@@ -2227,8 +2227,8 @@ int32_t k_pluralhandlingspinbox_super_metric(const void* self, int32_t param1) {
     return KPluralHandlingSpinBox_SuperMetric((KPluralHandlingSpinBox*)self, param1);
 }
 
-void k_pluralhandlingspinbox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KPluralHandlingSpinBox_OnMetric((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KPluralHandlingSpinBox_OnMetric((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 void k_pluralhandlingspinbox_init_painter(const void* self, void* painter) {
@@ -2239,8 +2239,8 @@ void k_pluralhandlingspinbox_super_init_painter(const void* self, void* painter)
     KPluralHandlingSpinBox_SuperInitPainter((KPluralHandlingSpinBox*)self, (QPainter*)painter);
 }
 
-void k_pluralhandlingspinbox_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KPluralHandlingSpinBox_OnInitPainter((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KPluralHandlingSpinBox_OnInitPainter((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_pluralhandlingspinbox_redirected(const void* self, void* offset) {
@@ -2251,8 +2251,8 @@ QPaintDevice* k_pluralhandlingspinbox_super_redirected(const void* self, void* o
     return KPluralHandlingSpinBox_SuperRedirected((KPluralHandlingSpinBox*)self, (QPoint*)offset);
 }
 
-void k_pluralhandlingspinbox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KPluralHandlingSpinBox_OnRedirected((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KPluralHandlingSpinBox_OnRedirected((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 QPainter* k_pluralhandlingspinbox_shared_painter(const void* self) {
@@ -2263,8 +2263,8 @@ QPainter* k_pluralhandlingspinbox_super_shared_painter(const void* self) {
     return KPluralHandlingSpinBox_SuperSharedPainter((KPluralHandlingSpinBox*)self);
 }
 
-void k_pluralhandlingspinbox_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KPluralHandlingSpinBox_OnSharedPainter((const KPluralHandlingSpinBox*)self, (intptr_t)callback);
+void k_pluralhandlingspinbox_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KPluralHandlingSpinBox_OnSharedPainter((KPluralHandlingSpinBox*)self, (intptr_t)callback);
 }
 
 void k_pluralhandlingspinbox_input_method_event(void* self, void* param1) {

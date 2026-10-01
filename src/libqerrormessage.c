@@ -26,7 +26,7 @@ const QMetaObject* q_errormessage_meta_object(const void* self) {
     return QErrorMessage_MetaObject((QErrorMessage*)self);
 }
 
-void q_errormessage_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_errormessage_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QErrorMessage_OnMetaObject((QErrorMessage*)self, (intptr_t)callback);
 }
 
@@ -159,11 +159,11 @@ void q_errormessage_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_errormessage_as_q_paint_device(void* self) {
+QPaintDevice* q_errormessage_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QErrorMessage* q_errormessage_from_q_paint_device(void* _qpaintdevice) {
+QErrorMessage* q_errormessage_from_q_paint_device(const void* _qpaintdevice) {
     return (QErrorMessage*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1566,8 +1566,8 @@ QSize* q_errormessage_super_size_hint(const void* self) {
     return QErrorMessage_SuperSizeHint((QErrorMessage*)self);
 }
 
-void q_errormessage_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QErrorMessage_OnSizeHint((const QErrorMessage*)self, (intptr_t)callback);
+void q_errormessage_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QErrorMessage_OnSizeHint((QErrorMessage*)self, (intptr_t)callback);
 }
 
 QSize* q_errormessage_minimum_size_hint(const void* self) {
@@ -1578,8 +1578,8 @@ QSize* q_errormessage_super_minimum_size_hint(const void* self) {
     return QErrorMessage_SuperMinimumSizeHint((QErrorMessage*)self);
 }
 
-void q_errormessage_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QErrorMessage_OnMinimumSizeHint((const QErrorMessage*)self, (intptr_t)callback);
+void q_errormessage_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QErrorMessage_OnMinimumSizeHint((QErrorMessage*)self, (intptr_t)callback);
 }
 
 void q_errormessage_open(void* self) {
@@ -1710,8 +1710,8 @@ int32_t q_errormessage_super_dev_type(const void* self) {
     return QErrorMessage_SuperDevType((QErrorMessage*)self);
 }
 
-void q_errormessage_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QErrorMessage_OnDevType((const QErrorMessage*)self, (intptr_t)callback);
+void q_errormessage_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QErrorMessage_OnDevType((QErrorMessage*)self, (intptr_t)callback);
 }
 
 int32_t q_errormessage_height_for_width(const void* self, int param1) {
@@ -1722,8 +1722,8 @@ int32_t q_errormessage_super_height_for_width(const void* self, int param1) {
     return QErrorMessage_SuperHeightForWidth((QErrorMessage*)self, param1);
 }
 
-void q_errormessage_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QErrorMessage_OnHeightForWidth((const QErrorMessage*)self, (intptr_t)callback);
+void q_errormessage_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QErrorMessage_OnHeightForWidth((QErrorMessage*)self, (intptr_t)callback);
 }
 
 bool q_errormessage_has_height_for_width(const void* self) {
@@ -1734,8 +1734,8 @@ bool q_errormessage_super_has_height_for_width(const void* self) {
     return QErrorMessage_SuperHasHeightForWidth((QErrorMessage*)self);
 }
 
-void q_errormessage_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QErrorMessage_OnHasHeightForWidth((const QErrorMessage*)self, (intptr_t)callback);
+void q_errormessage_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QErrorMessage_OnHasHeightForWidth((QErrorMessage*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_errormessage_paint_engine(const void* self) {
@@ -1746,8 +1746,8 @@ QPaintEngine* q_errormessage_super_paint_engine(const void* self) {
     return QErrorMessage_SuperPaintEngine((QErrorMessage*)self);
 }
 
-void q_errormessage_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QErrorMessage_OnPaintEngine((const QErrorMessage*)self, (intptr_t)callback);
+void q_errormessage_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QErrorMessage_OnPaintEngine((QErrorMessage*)self, (intptr_t)callback);
 }
 
 bool q_errormessage_event(void* self, void* event) {
@@ -2010,8 +2010,8 @@ int32_t q_errormessage_super_metric(const void* self, int32_t param1) {
     return QErrorMessage_SuperMetric((QErrorMessage*)self, param1);
 }
 
-void q_errormessage_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QErrorMessage_OnMetric((const QErrorMessage*)self, (intptr_t)callback);
+void q_errormessage_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QErrorMessage_OnMetric((QErrorMessage*)self, (intptr_t)callback);
 }
 
 void q_errormessage_init_painter(const void* self, void* painter) {
@@ -2022,8 +2022,8 @@ void q_errormessage_super_init_painter(const void* self, void* painter) {
     QErrorMessage_SuperInitPainter((QErrorMessage*)self, (QPainter*)painter);
 }
 
-void q_errormessage_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QErrorMessage_OnInitPainter((const QErrorMessage*)self, (intptr_t)callback);
+void q_errormessage_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QErrorMessage_OnInitPainter((QErrorMessage*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_errormessage_redirected(const void* self, void* offset) {
@@ -2034,8 +2034,8 @@ QPaintDevice* q_errormessage_super_redirected(const void* self, void* offset) {
     return QErrorMessage_SuperRedirected((QErrorMessage*)self, (QPoint*)offset);
 }
 
-void q_errormessage_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QErrorMessage_OnRedirected((const QErrorMessage*)self, (intptr_t)callback);
+void q_errormessage_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QErrorMessage_OnRedirected((QErrorMessage*)self, (intptr_t)callback);
 }
 
 QPainter* q_errormessage_shared_painter(const void* self) {
@@ -2046,8 +2046,8 @@ QPainter* q_errormessage_super_shared_painter(const void* self) {
     return QErrorMessage_SuperSharedPainter((QErrorMessage*)self);
 }
 
-void q_errormessage_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QErrorMessage_OnSharedPainter((const QErrorMessage*)self, (intptr_t)callback);
+void q_errormessage_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QErrorMessage_OnSharedPainter((QErrorMessage*)self, (intptr_t)callback);
 }
 
 void q_errormessage_input_method_event(void* self, void* param1) {
@@ -2070,8 +2070,8 @@ QVariant* q_errormessage_super_input_method_query(const void* self, int32_t para
     return QErrorMessage_SuperInputMethodQuery((QErrorMessage*)self, param1);
 }
 
-void q_errormessage_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QErrorMessage_OnInputMethodQuery((const QErrorMessage*)self, (intptr_t)callback);
+void q_errormessage_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QErrorMessage_OnInputMethodQuery((QErrorMessage*)self, (intptr_t)callback);
 }
 
 bool q_errormessage_focus_next_prev_child(void* self, bool next) {

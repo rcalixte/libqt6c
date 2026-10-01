@@ -26,7 +26,7 @@ const QMetaObject* k_textcustomeditor__texteditfindbarbase_meta_object(const voi
     return TextCustomEditor__TextEditFindBarBase_MetaObject((TextCustomEditor__TextEditFindBarBase*)self);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textcustomeditor__texteditfindbarbase_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextCustomEditor__TextEditFindBarBase_OnMetaObject((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
@@ -112,7 +112,7 @@ bool k_textcustomeditor__texteditfindbarbase_view_is_read_only(const void* self)
     return TextCustomEditor__TextEditFindBarBase_ViewIsReadOnly((TextCustomEditor__TextEditFindBarBase*)self);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_view_is_read_only(const void* self, bool (*callback)(const void*)) {
+void k_textcustomeditor__texteditfindbarbase_on_view_is_read_only(void* self, bool (*callback)(const void*)) {
     TextCustomEditor__TextEditFindBarBase_OnViewIsReadOnly((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
@@ -120,7 +120,7 @@ bool k_textcustomeditor__texteditfindbarbase_document_is_empty(const void* self)
     return TextCustomEditor__TextEditFindBarBase_DocumentIsEmpty((TextCustomEditor__TextEditFindBarBase*)self);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_document_is_empty(const void* self, bool (*callback)(const void*)) {
+void k_textcustomeditor__texteditfindbarbase_on_document_is_empty(void* self, bool (*callback)(const void*)) {
     TextCustomEditor__TextEditFindBarBase_OnDocumentIsEmpty((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
@@ -214,11 +214,11 @@ const char* k_textcustomeditor__texteditfindbarbase_tr3(const char* s, const cha
     return _ret;
 }
 
-QPaintDevice* k_textcustomeditor__texteditfindbarbase_as_q_paint_device(void* self) {
+QPaintDevice* k_textcustomeditor__texteditfindbarbase_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextCustomEditor__TextEditFindBarBase* k_textcustomeditor__texteditfindbarbase_from_q_paint_device(void* _qpaintdevice) {
+TextCustomEditor__TextEditFindBarBase* k_textcustomeditor__texteditfindbarbase_from_q_paint_device(const void* _qpaintdevice) {
     return (TextCustomEditor__TextEditFindBarBase*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1609,8 +1609,8 @@ int32_t k_textcustomeditor__texteditfindbarbase_super_dev_type(const void* self)
     return TextCustomEditor__TextEditFindBarBase_SuperDevType((TextCustomEditor__TextEditFindBarBase*)self);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextCustomEditor__TextEditFindBarBase_OnDevType((const TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
+void k_textcustomeditor__texteditfindbarbase_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextCustomEditor__TextEditFindBarBase_OnDevType((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__texteditfindbarbase_set_visible(void* self, bool visible) {
@@ -1633,8 +1633,8 @@ QSize* k_textcustomeditor__texteditfindbarbase_super_size_hint(const void* self)
     return TextCustomEditor__TextEditFindBarBase_SuperSizeHint((TextCustomEditor__TextEditFindBarBase*)self);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextCustomEditor__TextEditFindBarBase_OnSizeHint((const TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
+void k_textcustomeditor__texteditfindbarbase_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextCustomEditor__TextEditFindBarBase_OnSizeHint((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
 QSize* k_textcustomeditor__texteditfindbarbase_minimum_size_hint(const void* self) {
@@ -1645,8 +1645,8 @@ QSize* k_textcustomeditor__texteditfindbarbase_super_minimum_size_hint(const voi
     return TextCustomEditor__TextEditFindBarBase_SuperMinimumSizeHint((TextCustomEditor__TextEditFindBarBase*)self);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextCustomEditor__TextEditFindBarBase_OnMinimumSizeHint((const TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
+void k_textcustomeditor__texteditfindbarbase_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextCustomEditor__TextEditFindBarBase_OnMinimumSizeHint((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
 int32_t k_textcustomeditor__texteditfindbarbase_height_for_width(const void* self, int param1) {
@@ -1657,8 +1657,8 @@ int32_t k_textcustomeditor__texteditfindbarbase_super_height_for_width(const voi
     return TextCustomEditor__TextEditFindBarBase_SuperHeightForWidth((TextCustomEditor__TextEditFindBarBase*)self, param1);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextCustomEditor__TextEditFindBarBase_OnHeightForWidth((const TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
+void k_textcustomeditor__texteditfindbarbase_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextCustomEditor__TextEditFindBarBase_OnHeightForWidth((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
 bool k_textcustomeditor__texteditfindbarbase_has_height_for_width(const void* self) {
@@ -1669,8 +1669,8 @@ bool k_textcustomeditor__texteditfindbarbase_super_has_height_for_width(const vo
     return TextCustomEditor__TextEditFindBarBase_SuperHasHeightForWidth((TextCustomEditor__TextEditFindBarBase*)self);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextCustomEditor__TextEditFindBarBase_OnHasHeightForWidth((const TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
+void k_textcustomeditor__texteditfindbarbase_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextCustomEditor__TextEditFindBarBase_OnHasHeightForWidth((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textcustomeditor__texteditfindbarbase_paint_engine(const void* self) {
@@ -1681,8 +1681,8 @@ QPaintEngine* k_textcustomeditor__texteditfindbarbase_super_paint_engine(const v
     return TextCustomEditor__TextEditFindBarBase_SuperPaintEngine((TextCustomEditor__TextEditFindBarBase*)self);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextCustomEditor__TextEditFindBarBase_OnPaintEngine((const TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
+void k_textcustomeditor__texteditfindbarbase_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextCustomEditor__TextEditFindBarBase_OnPaintEngine((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__texteditfindbarbase_mouse_press_event(void* self, void* event) {
@@ -2005,8 +2005,8 @@ int32_t k_textcustomeditor__texteditfindbarbase_super_metric(const void* self, i
     return TextCustomEditor__TextEditFindBarBase_SuperMetric((TextCustomEditor__TextEditFindBarBase*)self, param1);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextCustomEditor__TextEditFindBarBase_OnMetric((const TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
+void k_textcustomeditor__texteditfindbarbase_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextCustomEditor__TextEditFindBarBase_OnMetric((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__texteditfindbarbase_init_painter(const void* self, void* painter) {
@@ -2017,8 +2017,8 @@ void k_textcustomeditor__texteditfindbarbase_super_init_painter(const void* self
     TextCustomEditor__TextEditFindBarBase_SuperInitPainter((TextCustomEditor__TextEditFindBarBase*)self, (QPainter*)painter);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextCustomEditor__TextEditFindBarBase_OnInitPainter((const TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
+void k_textcustomeditor__texteditfindbarbase_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextCustomEditor__TextEditFindBarBase_OnInitPainter((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textcustomeditor__texteditfindbarbase_redirected(const void* self, void* offset) {
@@ -2029,8 +2029,8 @@ QPaintDevice* k_textcustomeditor__texteditfindbarbase_super_redirected(const voi
     return TextCustomEditor__TextEditFindBarBase_SuperRedirected((TextCustomEditor__TextEditFindBarBase*)self, (QPoint*)offset);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextCustomEditor__TextEditFindBarBase_OnRedirected((const TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
+void k_textcustomeditor__texteditfindbarbase_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextCustomEditor__TextEditFindBarBase_OnRedirected((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
 QPainter* k_textcustomeditor__texteditfindbarbase_shared_painter(const void* self) {
@@ -2041,8 +2041,8 @@ QPainter* k_textcustomeditor__texteditfindbarbase_super_shared_painter(const voi
     return TextCustomEditor__TextEditFindBarBase_SuperSharedPainter((TextCustomEditor__TextEditFindBarBase*)self);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextCustomEditor__TextEditFindBarBase_OnSharedPainter((const TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
+void k_textcustomeditor__texteditfindbarbase_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextCustomEditor__TextEditFindBarBase_OnSharedPainter((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__texteditfindbarbase_input_method_event(void* self, void* param1) {
@@ -2065,8 +2065,8 @@ QVariant* k_textcustomeditor__texteditfindbarbase_super_input_method_query(const
     return TextCustomEditor__TextEditFindBarBase_SuperInputMethodQuery((TextCustomEditor__TextEditFindBarBase*)self, param1);
 }
 
-void k_textcustomeditor__texteditfindbarbase_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextCustomEditor__TextEditFindBarBase_OnInputMethodQuery((const TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
+void k_textcustomeditor__texteditfindbarbase_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextCustomEditor__TextEditFindBarBase_OnInputMethodQuery((TextCustomEditor__TextEditFindBarBase*)self, (intptr_t)callback);
 }
 
 bool k_textcustomeditor__texteditfindbarbase_focus_next_prev_child(void* self, bool next) {

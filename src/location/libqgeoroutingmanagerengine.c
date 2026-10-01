@@ -74,7 +74,7 @@ const QMetaObject* q_georoutingmanagerengine_meta_object(const void* self) {
     return QGeoRoutingManagerEngine_MetaObject((QGeoRoutingManagerEngine*)self);
 }
 
-void q_georoutingmanagerengine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_georoutingmanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGeoRoutingManagerEngine_OnMetaObject((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 

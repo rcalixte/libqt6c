@@ -32,10 +32,10 @@ const QMetaObject* q_hbarmodelmapper_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QHBarModelMapper*
+/// @param self QHBarModelMapper*
 /// @param callback const QMetaObject* func(const QHBarModelMapper* self)
 ///
-void q_hbarmodelmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_hbarmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -976,10 +976,10 @@ int32_t q_hbarmodelmapper_super_first(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHBarModelMapper*
+/// @param self QHBarModelMapper*
 /// @param callback int32_t func(QHBarModelMapper* self)
 ///
-void q_hbarmodelmapper_on_first(const void* self, int32_t (*callback)(const void*));
+void q_hbarmodelmapper_on_first(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QBarModelMapper
 ///
@@ -1040,10 +1040,10 @@ int32_t q_hbarmodelmapper_super_count(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHBarModelMapper*
+/// @param self QHBarModelMapper*
 /// @param callback int32_t func(QHBarModelMapper* self)
 ///
-void q_hbarmodelmapper_on_count(const void* self, int32_t (*callback)(const void*));
+void q_hbarmodelmapper_on_count(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QBarModelMapper
 ///
@@ -1104,10 +1104,10 @@ int32_t q_hbarmodelmapper_super_first_bar_set_section(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHBarModelMapper*
+/// @param self QHBarModelMapper*
 /// @param callback int32_t func(QHBarModelMapper* self)
 ///
-void q_hbarmodelmapper_on_first_bar_set_section(const void* self, int32_t (*callback)(const void*));
+void q_hbarmodelmapper_on_first_bar_set_section(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QBarModelMapper
 ///
@@ -1168,10 +1168,10 @@ int32_t q_hbarmodelmapper_super_last_bar_set_section(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHBarModelMapper*
+/// @param self QHBarModelMapper*
 /// @param callback int32_t func(QHBarModelMapper* self)
 ///
-void q_hbarmodelmapper_on_last_bar_set_section(const void* self, int32_t (*callback)(const void*));
+void q_hbarmodelmapper_on_last_bar_set_section(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QBarModelMapper
 ///
@@ -1236,10 +1236,10 @@ int32_t q_hbarmodelmapper_super_orientation(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHBarModelMapper*
+/// @param self QHBarModelMapper*
 /// @param callback int32_t func(QHBarModelMapper* self)
 ///
-void q_hbarmodelmapper_on_orientation(const void* self, int32_t (*callback)(const void*));
+void q_hbarmodelmapper_on_orientation(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QBarModelMapper
 ///
@@ -1300,10 +1300,10 @@ QObject* q_hbarmodelmapper_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHBarModelMapper*
+/// @param self QHBarModelMapper*
 /// @param callback QObject* func(QHBarModelMapper* self)
 ///
-void q_hbarmodelmapper_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_hbarmodelmapper_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1331,10 +1331,10 @@ int32_t q_hbarmodelmapper_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHBarModelMapper*
+/// @param self QHBarModelMapper*
 /// @param callback int32_t func(QHBarModelMapper* self)
 ///
-void q_hbarmodelmapper_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_hbarmodelmapper_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1364,10 +1364,10 @@ int32_t q_hbarmodelmapper_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHBarModelMapper*
+/// @param self QHBarModelMapper*
 /// @param callback int32_t func(QHBarModelMapper* self, const char* signal)
 ///
-void q_hbarmodelmapper_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_hbarmodelmapper_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1397,10 +1397,10 @@ bool q_hbarmodelmapper_super_is_signal_connected(const void* self, const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QHBarModelMapper*
+/// @param self QHBarModelMapper*
 /// @param callback bool func(QHBarModelMapper* self, QMetaMethod* signal)
 ///
-void q_hbarmodelmapper_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_hbarmodelmapper_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

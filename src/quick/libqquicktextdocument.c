@@ -16,7 +16,7 @@ const QMetaObject* q_quicktextdocument_meta_object(const void* self) {
     return QQuickTextDocument_MetaObject((QQuickTextDocument*)self);
 }
 
-void q_quicktextdocument_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quicktextdocument_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickTextDocument_OnMetaObject((QQuickTextDocument*)self, (intptr_t)callback);
 }
 

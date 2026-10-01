@@ -25,7 +25,7 @@ const QMetaObject* k_nscore__enginebase_meta_object(const void* self) {
     return KNSCore__EngineBase_MetaObject((KNSCore__EngineBase*)self);
 }
 
-void k_nscore__enginebase_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_nscore__enginebase_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KNSCore__EngineBase_OnMetaObject((KNSCore__EngineBase*)self, (intptr_t)callback);
 }
 

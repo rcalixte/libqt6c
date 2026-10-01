@@ -32,10 +32,10 @@ const QMetaObject* k_textemoticonscore__emojimodel_meta_object(const void* self)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback const QMetaObject* func(const TextEmoticonsCore__EmojiModel* self)
 ///
-void k_textemoticonscore__emojimodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textemoticonscore__emojimodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiModel.html)
 ///
@@ -106,10 +106,10 @@ int32_t k_textemoticonscore__emojimodel_row_count(const void* self, const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback int32_t func(const TextEmoticonsCore__EmojiModel* self, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojimodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
+void k_textemoticonscore__emojimodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiModel.html)
 ///
@@ -132,12 +132,12 @@ QVariant* k_textemoticonscore__emojimodel_data(const void* self, const void* ind
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback QVariant* func(const TextEmoticonsCore__EmojiModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojimodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
+void k_textemoticonscore__emojimodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiModel.html)
 ///
@@ -245,12 +245,12 @@ QModelIndex* k_textemoticonscore__emojimodel_parent(const void* self, const void
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback QModelIndex* func(const TextEmoticonsCore__EmojiModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojimodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_textemoticonscore__emojimodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -269,10 +269,10 @@ int32_t k_textemoticonscore__emojimodel_column_count(const void* self, const voi
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback int32_t func(const TextEmoticonsCore__EmojiModel* self, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojimodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
+void k_textemoticonscore__emojimodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -289,10 +289,10 @@ bool k_textemoticonscore__emojimodel_has_children(const void* self, const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback bool func(const TextEmoticonsCore__EmojiModel* self, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojimodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
+void k_textemoticonscore__emojimodel_on_has_children(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1073,12 +1073,12 @@ QModelIndex* k_textemoticonscore__emojimodel_super_index(const void* self, int r
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojimodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void k_textemoticonscore__emojimodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractListModel
 ///
@@ -1112,12 +1112,12 @@ QModelIndex* k_textemoticonscore__emojimodel_super_sibling(const void* self, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojimodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void k_textemoticonscore__emojimodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractListModel
 ///
@@ -1192,10 +1192,10 @@ int32_t k_textemoticonscore__emojimodel_super_flags(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback int32_t func(TextEmoticonsCore__EmojiModel* self, QModelIndex* index)
 ///
-void k_textemoticonscore__emojimodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
+void k_textemoticonscore__emojimodel_on_flags(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1266,12 +1266,12 @@ QVariant* k_textemoticonscore__emojimodel_super_header_data(const void* self, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback QVariant* func(TextEmoticonsCore__EmojiModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojimodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
+void k_textemoticonscore__emojimodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1366,10 +1366,10 @@ libqt_map k_textemoticonscore__emojimodel_super_item_data(const void* self, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback libqt_map of int to QVariant* func(TextEmoticonsCore__EmojiModel* self, QModelIndex* index)
 ///
-void k_textemoticonscore__emojimodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
+void k_textemoticonscore__emojimodel_on_item_data(void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1469,10 +1469,10 @@ const char** k_textemoticonscore__emojimodel_super_mime_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback const char** func(TextEmoticonsCore__EmojiModel* self)
 ///
-void k_textemoticonscore__emojimodel_on_mime_types(const void* self, const char** (*callback)(const void*));
+void k_textemoticonscore__emojimodel_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1502,10 +1502,10 @@ QMimeData* k_textemoticonscore__emojimodel_super_mime_data(const void* self, lib
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback QMimeData* func(TextEmoticonsCore__EmojiModel* self, libqt_list of QModelIndex* indexes)
 ///
-void k_textemoticonscore__emojimodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void k_textemoticonscore__emojimodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1543,10 +1543,10 @@ bool k_textemoticonscore__emojimodel_super_can_drop_mime_data(const void* self, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojimodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
+void k_textemoticonscore__emojimodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1578,10 +1578,10 @@ int32_t k_textemoticonscore__emojimodel_super_supported_drop_actions(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback int32_t func(TextEmoticonsCore__EmojiModel* self)
 ///
-void k_textemoticonscore__emojimodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void k_textemoticonscore__emojimodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1613,10 +1613,10 @@ int32_t k_textemoticonscore__emojimodel_super_supported_drag_actions(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback int32_t func(TextEmoticonsCore__EmojiModel* self)
 ///
-void k_textemoticonscore__emojimodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
+void k_textemoticonscore__emojimodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1909,10 +1909,10 @@ bool k_textemoticonscore__emojimodel_super_can_fetch_more(const void* self, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiModel* self, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojimodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
+void k_textemoticonscore__emojimodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1977,12 +1977,12 @@ QModelIndex* k_textemoticonscore__emojimodel_super_buddy(const void* self, const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojimodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_textemoticonscore__emojimodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2024,10 +2024,10 @@ libqt_list k_textemoticonscore__emojimodel_super_match(const void* self, const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback libqt_list of QModelIndex* func(TextEmoticonsCore__EmojiModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void k_textemoticonscore__emojimodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
+void k_textemoticonscore__emojimodel_on_match(void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2057,12 +2057,12 @@ QSize* k_textemoticonscore__emojimodel_super_span(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback QSize* func(TextEmoticonsCore__EmojiModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojimodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
+void k_textemoticonscore__emojimodel_on_span(void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2116,10 +2116,10 @@ libqt_map k_textemoticonscore__emojimodel_super_role_names(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback libqt_map of int to char* func(TextEmoticonsCore__EmojiModel* self)
 ///
-void k_textemoticonscore__emojimodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
+void k_textemoticonscore__emojimodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2151,10 +2151,10 @@ void k_textemoticonscore__emojimodel_super_multi_data(const void* self, const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback void func(TextEmoticonsCore__EmojiModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void k_textemoticonscore__emojimodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
+void k_textemoticonscore__emojimodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2512,12 +2512,12 @@ QModelIndex* k_textemoticonscore__emojimodel_super_create_index(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojimodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
+void k_textemoticonscore__emojimodel_on_create_index(void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2549,10 +2549,10 @@ void k_textemoticonscore__emojimodel_super_encode_data(const void* self, libqt_l
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback void func(TextEmoticonsCore__EmojiModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void k_textemoticonscore__emojimodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
+void k_textemoticonscore__emojimodel_on_encode_data(void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3171,10 +3171,10 @@ libqt_list k_textemoticonscore__emojimodel_super_persistent_index_list(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback libqt_list of QModelIndex* func(TextEmoticonsCore__EmojiModel* self)
 ///
-void k_textemoticonscore__emojimodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
+void k_textemoticonscore__emojimodel_on_persistent_index_list(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3202,10 +3202,10 @@ QObject* k_textemoticonscore__emojimodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback QObject* func(TextEmoticonsCore__EmojiModel* self)
 ///
-void k_textemoticonscore__emojimodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textemoticonscore__emojimodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3233,10 +3233,10 @@ int32_t k_textemoticonscore__emojimodel_super_sender_signal_index(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback int32_t func(TextEmoticonsCore__EmojiModel* self)
 ///
-void k_textemoticonscore__emojimodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textemoticonscore__emojimodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3266,10 +3266,10 @@ int32_t k_textemoticonscore__emojimodel_super_receivers(const void* self, const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback int32_t func(TextEmoticonsCore__EmojiModel* self, const char* signal)
 ///
-void k_textemoticonscore__emojimodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textemoticonscore__emojimodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3299,10 +3299,10 @@ bool k_textemoticonscore__emojimodel_super_is_signal_connected(const void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEmoticonsCore__EmojiModel*
+/// @param self TextEmoticonsCore__EmojiModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiModel* self, QMetaMethod* signal)
 ///
-void k_textemoticonscore__emojimodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textemoticonscore__emojimodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///

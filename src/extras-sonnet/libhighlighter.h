@@ -52,10 +52,10 @@ const QMetaObject* k_sonnet__highlighter_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Sonnet__Highlighter*
+/// @param self Sonnet__Highlighter*
 /// @param callback const QMetaObject* func(const Sonnet__Highlighter* self)
 ///
-void k_sonnet__highlighter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_sonnet__highlighter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1155,12 +1155,12 @@ QTextCharFormat* k_sonnet__highlighter_super_format(const void* self, int pos);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__Highlighter*
+/// @param self Sonnet__Highlighter*
 /// @param callback QTextCharFormat* func(Sonnet__Highlighter* self, int pos)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_sonnet__highlighter_on_format(const void* self, QTextCharFormat* (*callback)(const void*, int));
+void k_sonnet__highlighter_on_format(void* self, QTextCharFormat* (*callback)(const void*, int));
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1188,10 +1188,10 @@ int32_t k_sonnet__highlighter_super_previous_block_state(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__Highlighter*
+/// @param self Sonnet__Highlighter*
 /// @param callback int32_t func(Sonnet__Highlighter* self)
 ///
-void k_sonnet__highlighter_on_previous_block_state(const void* self, int32_t (*callback)(const void*));
+void k_sonnet__highlighter_on_previous_block_state(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1219,10 +1219,10 @@ int32_t k_sonnet__highlighter_super_current_block_state(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__Highlighter*
+/// @param self Sonnet__Highlighter*
 /// @param callback int32_t func(Sonnet__Highlighter* self)
 ///
-void k_sonnet__highlighter_on_current_block_state(const void* self, int32_t (*callback)(const void*));
+void k_sonnet__highlighter_on_current_block_state(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1316,10 +1316,10 @@ QTextBlockUserData* k_sonnet__highlighter_super_current_block_user_data(const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__Highlighter*
+/// @param self Sonnet__Highlighter*
 /// @param callback QTextBlockUserData* func(Sonnet__Highlighter* self)
 ///
-void k_sonnet__highlighter_on_current_block_user_data(const void* self, QTextBlockUserData* (*callback)(const void*));
+void k_sonnet__highlighter_on_current_block_user_data(void* self, QTextBlockUserData* (*callback)(const void*));
 
 /// Inherited from QSyntaxHighlighter
 ///
@@ -1347,12 +1347,12 @@ QTextBlock* k_sonnet__highlighter_super_current_block(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__Highlighter*
+/// @param self Sonnet__Highlighter*
 /// @param callback QTextBlock* func(Sonnet__Highlighter* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_sonnet__highlighter_on_current_block(const void* self, QTextBlock* (*callback)(const void*));
+void k_sonnet__highlighter_on_current_block(void* self, QTextBlock* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1380,10 +1380,10 @@ QObject* k_sonnet__highlighter_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__Highlighter*
+/// @param self Sonnet__Highlighter*
 /// @param callback QObject* func(Sonnet__Highlighter* self)
 ///
-void k_sonnet__highlighter_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_sonnet__highlighter_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1411,10 +1411,10 @@ int32_t k_sonnet__highlighter_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__Highlighter*
+/// @param self Sonnet__Highlighter*
 /// @param callback int32_t func(Sonnet__Highlighter* self)
 ///
-void k_sonnet__highlighter_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_sonnet__highlighter_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1444,10 +1444,10 @@ int32_t k_sonnet__highlighter_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__Highlighter*
+/// @param self Sonnet__Highlighter*
 /// @param callback int32_t func(Sonnet__Highlighter* self, const char* signal)
 ///
-void k_sonnet__highlighter_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_sonnet__highlighter_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1477,10 +1477,10 @@ bool k_sonnet__highlighter_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__Highlighter*
+/// @param self Sonnet__Highlighter*
 /// @param callback bool func(Sonnet__Highlighter* self, QMetaMethod* signal)
 ///
-void k_sonnet__highlighter_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_sonnet__highlighter_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -10,7 +10,7 @@ bool q_designerdynamicpropertysheetextension_dynamic_properties_allowed(const vo
     return QDesignerDynamicPropertySheetExtension_DynamicPropertiesAllowed((QDesignerDynamicPropertySheetExtension*)self);
 }
 
-void q_designerdynamicpropertysheetextension_on_dynamic_properties_allowed(const void* self, bool (*callback)(const void*)) {
+void q_designerdynamicpropertysheetextension_on_dynamic_properties_allowed(void* self, bool (*callback)(const void*)) {
     QDesignerDynamicPropertySheetExtension_OnDynamicPropertiesAllowed((QDesignerDynamicPropertySheetExtension*)self, (intptr_t)callback);
 }
 
@@ -34,7 +34,7 @@ bool q_designerdynamicpropertysheetextension_is_dynamic_property(const void* sel
     return QDesignerDynamicPropertySheetExtension_IsDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, index);
 }
 
-void q_designerdynamicpropertysheetextension_on_is_dynamic_property(const void* self, bool (*callback)(const void*, int)) {
+void q_designerdynamicpropertysheetextension_on_is_dynamic_property(void* self, bool (*callback)(const void*, int)) {
     QDesignerDynamicPropertySheetExtension_OnIsDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, (intptr_t)callback);
 }
 
@@ -42,7 +42,7 @@ bool q_designerdynamicpropertysheetextension_can_add_dynamic_property(const void
     return QDesignerDynamicPropertySheetExtension_CanAddDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, qstring(propertyName));
 }
 
-void q_designerdynamicpropertysheetextension_on_can_add_dynamic_property(const void* self, bool (*callback)(const void*, const char*)) {
+void q_designerdynamicpropertysheetextension_on_can_add_dynamic_property(void* self, bool (*callback)(const void*, const char*)) {
     QDesignerDynamicPropertySheetExtension_OnCanAddDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, (intptr_t)callback);
 }
 

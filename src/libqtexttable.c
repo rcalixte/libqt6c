@@ -97,7 +97,7 @@ const QMetaObject* q_texttable_meta_object(const void* self) {
     return QTextTable_MetaObject((QTextTable*)self);
 }
 
-void q_texttable_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_texttable_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTextTable_OnMetaObject((QTextTable*)self, (intptr_t)callback);
 }
 

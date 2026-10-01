@@ -41,7 +41,7 @@ const QMetaObject* q_chartview_meta_object(const void* self) {
     return QChartView_MetaObject((QChartView*)self);
 }
 
-void q_chartview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_chartview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QChartView_OnMetaObject((QChartView*)self, (intptr_t)callback);
 }
 
@@ -686,11 +686,11 @@ void q_chartview_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_chartview_as_q_paint_device(void* self) {
+QPaintDevice* q_chartview_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QChartView* q_chartview_from_q_paint_device(void* _qpaintdevice) {
+QChartView* q_chartview_from_q_paint_device(const void* _qpaintdevice) {
     return (QChartView*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2065,8 +2065,8 @@ QSize* q_chartview_super_size_hint(const void* self) {
     return QChartView_SuperSizeHint((QChartView*)self);
 }
 
-void q_chartview_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QChartView_OnSizeHint((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QChartView_OnSizeHint((QChartView*)self, (intptr_t)callback);
 }
 
 QVariant* q_chartview_input_method_query(const void* self, int32_t query) {
@@ -2077,8 +2077,8 @@ QVariant* q_chartview_super_input_method_query(const void* self, int32_t query) 
     return QChartView_SuperInputMethodQuery((QChartView*)self, query);
 }
 
-void q_chartview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QChartView_OnInputMethodQuery((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QChartView_OnInputMethodQuery((QChartView*)self, (intptr_t)callback);
 }
 
 void q_chartview_setup_viewport(void* self, void* widget) {
@@ -2353,8 +2353,8 @@ QSize* q_chartview_super_minimum_size_hint(const void* self) {
     return QChartView_SuperMinimumSizeHint((QChartView*)self);
 }
 
-void q_chartview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QChartView_OnMinimumSizeHint((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QChartView_OnMinimumSizeHint((QChartView*)self, (intptr_t)callback);
 }
 
 bool q_chartview_event_filter(void* self, void* param1, void* param2) {
@@ -2377,8 +2377,8 @@ QSize* q_chartview_super_viewport_size_hint(const void* self) {
     return QChartView_SuperViewportSizeHint((QChartView*)self);
 }
 
-void q_chartview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QChartView_OnViewportSizeHint((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QChartView_OnViewportSizeHint((QChartView*)self, (intptr_t)callback);
 }
 
 void q_chartview_change_event(void* self, void* param1) {
@@ -2401,8 +2401,8 @@ void q_chartview_super_init_style_option(const void* self, void* option) {
     QChartView_SuperInitStyleOption((QChartView*)self, (QStyleOptionFrame*)option);
 }
 
-void q_chartview_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QChartView_OnInitStyleOption((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QChartView_OnInitStyleOption((QChartView*)self, (intptr_t)callback);
 }
 
 int32_t q_chartview_dev_type(const void* self) {
@@ -2413,8 +2413,8 @@ int32_t q_chartview_super_dev_type(const void* self) {
     return QChartView_SuperDevType((QChartView*)self);
 }
 
-void q_chartview_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QChartView_OnDevType((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QChartView_OnDevType((QChartView*)self, (intptr_t)callback);
 }
 
 void q_chartview_set_visible(void* self, bool visible) {
@@ -2437,8 +2437,8 @@ int32_t q_chartview_super_height_for_width(const void* self, int param1) {
     return QChartView_SuperHeightForWidth((QChartView*)self, param1);
 }
 
-void q_chartview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QChartView_OnHeightForWidth((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QChartView_OnHeightForWidth((QChartView*)self, (intptr_t)callback);
 }
 
 bool q_chartview_has_height_for_width(const void* self) {
@@ -2449,8 +2449,8 @@ bool q_chartview_super_has_height_for_width(const void* self) {
     return QChartView_SuperHasHeightForWidth((QChartView*)self);
 }
 
-void q_chartview_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QChartView_OnHasHeightForWidth((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QChartView_OnHasHeightForWidth((QChartView*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_chartview_paint_engine(const void* self) {
@@ -2461,8 +2461,8 @@ QPaintEngine* q_chartview_super_paint_engine(const void* self) {
     return QChartView_SuperPaintEngine((QChartView*)self);
 }
 
-void q_chartview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QChartView_OnPaintEngine((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QChartView_OnPaintEngine((QChartView*)self, (intptr_t)callback);
 }
 
 void q_chartview_enter_event(void* self, void* event) {
@@ -2569,8 +2569,8 @@ int32_t q_chartview_super_metric(const void* self, int32_t param1) {
     return QChartView_SuperMetric((QChartView*)self, param1);
 }
 
-void q_chartview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QChartView_OnMetric((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QChartView_OnMetric((QChartView*)self, (intptr_t)callback);
 }
 
 void q_chartview_init_painter(const void* self, void* painter) {
@@ -2581,8 +2581,8 @@ void q_chartview_super_init_painter(const void* self, void* painter) {
     QChartView_SuperInitPainter((QChartView*)self, (QPainter*)painter);
 }
 
-void q_chartview_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QChartView_OnInitPainter((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QChartView_OnInitPainter((QChartView*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_chartview_redirected(const void* self, void* offset) {
@@ -2593,8 +2593,8 @@ QPaintDevice* q_chartview_super_redirected(const void* self, void* offset) {
     return QChartView_SuperRedirected((QChartView*)self, (QPoint*)offset);
 }
 
-void q_chartview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QChartView_OnRedirected((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QChartView_OnRedirected((QChartView*)self, (intptr_t)callback);
 }
 
 QPainter* q_chartview_shared_painter(const void* self) {
@@ -2605,8 +2605,8 @@ QPainter* q_chartview_super_shared_painter(const void* self) {
     return QChartView_SuperSharedPainter((QChartView*)self);
 }
 
-void q_chartview_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QChartView_OnSharedPainter((const QChartView*)self, (intptr_t)callback);
+void q_chartview_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QChartView_OnSharedPainter((QChartView*)self, (intptr_t)callback);
 }
 
 void q_chartview_timer_event(void* self, void* event) {

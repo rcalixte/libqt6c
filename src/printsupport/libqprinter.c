@@ -33,7 +33,7 @@ int32_t q_printer_dev_type(const void* self) {
     return QPrinter_DevType((QPrinter*)self);
 }
 
-void q_printer_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
+void q_printer_on_dev_type(void* self, int32_t (*callback)(const void*)) {
     QPrinter_OnDevType((QPrinter*)self, (intptr_t)callback);
 }
 
@@ -240,7 +240,7 @@ QPaintEngine* q_printer_paint_engine(const void* self) {
     return QPrinter_PaintEngine((QPrinter*)self);
 }
 
-void q_printer_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
+void q_printer_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
     QPrinter_OnPaintEngine((QPrinter*)self, (intptr_t)callback);
 }
 
@@ -276,7 +276,7 @@ int32_t q_printer_metric(const void* self, int32_t param1) {
     return QPrinter_Metric((QPrinter*)self, param1);
 }
 
-void q_printer_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
+void q_printer_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
     QPrinter_OnMetric((QPrinter*)self, (intptr_t)callback);
 }
 
@@ -424,8 +424,8 @@ void q_printer_super_init_painter(const void* self, void* painter) {
     QPrinter_SuperInitPainter((QPrinter*)self, (QPainter*)painter);
 }
 
-void q_printer_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QPrinter_OnInitPainter((const QPrinter*)self, (intptr_t)callback);
+void q_printer_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QPrinter_OnInitPainter((QPrinter*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_printer_redirected(const void* self, void* offset) {
@@ -436,8 +436,8 @@ QPaintDevice* q_printer_super_redirected(const void* self, void* offset) {
     return QPrinter_SuperRedirected((QPrinter*)self, (QPoint*)offset);
 }
 
-void q_printer_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QPrinter_OnRedirected((const QPrinter*)self, (intptr_t)callback);
+void q_printer_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QPrinter_OnRedirected((QPrinter*)self, (intptr_t)callback);
 }
 
 QPainter* q_printer_shared_painter(const void* self) {
@@ -448,8 +448,8 @@ QPainter* q_printer_super_shared_painter(const void* self) {
     return QPrinter_SuperSharedPainter((QPrinter*)self);
 }
 
-void q_printer_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QPrinter_OnSharedPainter((const QPrinter*)self, (intptr_t)callback);
+void q_printer_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QPrinter_OnSharedPainter((QPrinter*)self, (intptr_t)callback);
 }
 
 double q_printer_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB) {

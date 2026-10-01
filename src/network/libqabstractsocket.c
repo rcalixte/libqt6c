@@ -19,7 +19,7 @@ const QMetaObject* q_abstractsocket_meta_object(const void* self) {
     return QAbstractSocket_MetaObject((QAbstractSocket*)self);
 }
 
-void q_abstractsocket_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstractsocket_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractSocket_OnMetaObject((QAbstractSocket*)self, (intptr_t)callback);
 }
 
@@ -130,7 +130,7 @@ int64_t q_abstractsocket_bytes_available(const void* self) {
     return QAbstractSocket_BytesAvailable((QAbstractSocket*)self);
 }
 
-void q_abstractsocket_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
+void q_abstractsocket_on_bytes_available(void* self, int64_t (*callback)(const void*)) {
     QAbstractSocket_OnBytesAvailable((QAbstractSocket*)self, (intptr_t)callback);
 }
 
@@ -142,7 +142,7 @@ int64_t q_abstractsocket_bytes_to_write(const void* self) {
     return QAbstractSocket_BytesToWrite((QAbstractSocket*)self);
 }
 
-void q_abstractsocket_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
+void q_abstractsocket_on_bytes_to_write(void* self, int64_t (*callback)(const void*)) {
     QAbstractSocket_OnBytesToWrite((QAbstractSocket*)self, (intptr_t)callback);
 }
 
@@ -197,7 +197,7 @@ intptr_t q_abstractsocket_socket_descriptor(const void* self) {
     return QAbstractSocket_SocketDescriptor((QAbstractSocket*)self);
 }
 
-void q_abstractsocket_on_socket_descriptor(const void* self, intptr_t (*callback)(const void*)) {
+void q_abstractsocket_on_socket_descriptor(void* self, intptr_t (*callback)(const void*)) {
     QAbstractSocket_OnSocketDescriptor((QAbstractSocket*)self, (intptr_t)callback);
 }
 
@@ -269,7 +269,7 @@ bool q_abstractsocket_is_sequential(const void* self) {
     return QAbstractSocket_IsSequential((QAbstractSocket*)self);
 }
 
-void q_abstractsocket_on_is_sequential(const void* self, bool (*callback)(const void*)) {
+void q_abstractsocket_on_is_sequential(void* self, bool (*callback)(const void*)) {
     QAbstractSocket_OnIsSequential((QAbstractSocket*)self, (intptr_t)callback);
 }
 
@@ -498,7 +498,7 @@ void q_abstractsocket_connect_to_host3(void* self, const void* address, uint16_t
     QAbstractSocket_ConnectToHost3((QAbstractSocket*)self, (QHostAddress*)address, port, mode);
 }
 
-QIODeviceBase* q_abstractsocket_as_q_i_o_device_base(void* self) {
+QIODeviceBase* q_abstractsocket_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
@@ -925,8 +925,8 @@ int64_t q_abstractsocket_super_pos(const void* self) {
     return QAbstractSocket_SuperPos((QAbstractSocket*)self);
 }
 
-void q_abstractsocket_on_pos(const void* self, int64_t (*callback)(const void*)) {
-    QAbstractSocket_OnPos((const QAbstractSocket*)self, (intptr_t)callback);
+void q_abstractsocket_on_pos(void* self, int64_t (*callback)(const void*)) {
+    QAbstractSocket_OnPos((QAbstractSocket*)self, (intptr_t)callback);
 }
 
 int64_t q_abstractsocket_size(const void* self) {
@@ -937,8 +937,8 @@ int64_t q_abstractsocket_super_size(const void* self) {
     return QAbstractSocket_SuperSize((QAbstractSocket*)self);
 }
 
-void q_abstractsocket_on_size(const void* self, int64_t (*callback)(const void*)) {
-    QAbstractSocket_OnSize((const QAbstractSocket*)self, (intptr_t)callback);
+void q_abstractsocket_on_size(void* self, int64_t (*callback)(const void*)) {
+    QAbstractSocket_OnSize((QAbstractSocket*)self, (intptr_t)callback);
 }
 
 bool q_abstractsocket_seek(void* self, int64_t pos) {
@@ -961,8 +961,8 @@ bool q_abstractsocket_super_at_end(const void* self) {
     return QAbstractSocket_SuperAtEnd((QAbstractSocket*)self);
 }
 
-void q_abstractsocket_on_at_end(const void* self, bool (*callback)(const void*)) {
-    QAbstractSocket_OnAtEnd((const QAbstractSocket*)self, (intptr_t)callback);
+void q_abstractsocket_on_at_end(void* self, bool (*callback)(const void*)) {
+    QAbstractSocket_OnAtEnd((QAbstractSocket*)self, (intptr_t)callback);
 }
 
 bool q_abstractsocket_reset(void* self) {
@@ -985,8 +985,8 @@ bool q_abstractsocket_super_can_read_line(const void* self) {
     return QAbstractSocket_SuperCanReadLine((QAbstractSocket*)self);
 }
 
-void q_abstractsocket_on_can_read_line(const void* self, bool (*callback)(const void*)) {
-    QAbstractSocket_OnCanReadLine((const QAbstractSocket*)self, (intptr_t)callback);
+void q_abstractsocket_on_can_read_line(void* self, bool (*callback)(const void*)) {
+    QAbstractSocket_OnCanReadLine((QAbstractSocket*)self, (intptr_t)callback);
 }
 
 bool q_abstractsocket_event(void* self, void* event) {

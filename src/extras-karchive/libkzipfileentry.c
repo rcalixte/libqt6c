@@ -57,7 +57,7 @@ char* k_zipfileentry_data(const void* self) {
     return _ret;
 }
 
-void k_zipfileentry_on_data(const void* self, libqt_string (*callback)(const void*)) {
+void k_zipfileentry_on_data(void* self, libqt_string (*callback)(const void*)) {
     KZipFileEntry_OnData((KZipFileEntry*)self, (intptr_t)callback);
 }
 
@@ -72,7 +72,7 @@ QIODevice* k_zipfileentry_create_device(const void* self) {
     return KZipFileEntry_CreateDevice((KZipFileEntry*)self);
 }
 
-void k_zipfileentry_on_create_device(const void* self, QIODevice* (*callback)(const void*)) {
+void k_zipfileentry_on_create_device(void* self, QIODevice* (*callback)(const void*)) {
     KZipFileEntry_OnCreateDevice((KZipFileEntry*)self, (intptr_t)callback);
 }
 
@@ -140,8 +140,8 @@ bool k_zipfileentry_super_is_file(const void* self) {
     return KZipFileEntry_SuperIsFile((KZipFileEntry*)self);
 }
 
-void k_zipfileentry_on_is_file(const void* self, bool (*callback)(const void*)) {
-    KZipFileEntry_OnIsFile((const KZipFileEntry*)self, (intptr_t)callback);
+void k_zipfileentry_on_is_file(void* self, bool (*callback)(const void*)) {
+    KZipFileEntry_OnIsFile((KZipFileEntry*)self, (intptr_t)callback);
 }
 
 void k_zipfileentry_virtual_hook(void* self, int id, void* data) {
@@ -164,8 +164,8 @@ bool k_zipfileentry_super_is_directory(const void* self) {
     return KZipFileEntry_SuperIsDirectory((KZipFileEntry*)self);
 }
 
-void k_zipfileentry_on_is_directory(const void* self, bool (*callback)(const void*)) {
-    KZipFileEntry_OnIsDirectory((const KZipFileEntry*)self, (intptr_t)callback);
+void k_zipfileentry_on_is_directory(void* self, bool (*callback)(const void*)) {
+    KZipFileEntry_OnIsDirectory((KZipFileEntry*)self, (intptr_t)callback);
 }
 
 KArchive* k_zipfileentry_archive(const void* self) {

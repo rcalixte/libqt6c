@@ -19,7 +19,7 @@ const QMetaObject* q_screencapture_meta_object(const void* self) {
     return QScreenCapture_MetaObject((QScreenCapture*)self);
 }
 
-void q_screencapture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_screencapture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QScreenCapture_OnMetaObject((QScreenCapture*)self, (intptr_t)callback);
 }
 

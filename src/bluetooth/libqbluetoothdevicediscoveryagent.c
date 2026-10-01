@@ -27,7 +27,7 @@ const QMetaObject* q_bluetoothdevicediscoveryagent_meta_object(const void* self)
     return QBluetoothDeviceDiscoveryAgent_MetaObject((QBluetoothDeviceDiscoveryAgent*)self);
 }
 
-void q_bluetoothdevicediscoveryagent_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_bluetoothdevicediscoveryagent_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QBluetoothDeviceDiscoveryAgent_OnMetaObject((QBluetoothDeviceDiscoveryAgent*)self, (intptr_t)callback);
 }
 

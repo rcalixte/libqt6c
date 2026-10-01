@@ -18,7 +18,7 @@ const QMetaObject* k_jobuidelegate_meta_object(const void* self) {
     return KJobUiDelegate_MetaObject((KJobUiDelegate*)self);
 }
 
-void k_jobuidelegate_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_jobuidelegate_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KJobUiDelegate_OnMetaObject((KJobUiDelegate*)self, (intptr_t)callback);
 }
 

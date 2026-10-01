@@ -68,11 +68,11 @@ QDesignerNewFormWidgetInterface* q_designernewformwidgetinterface_create_new_for
     return QDesignerNewFormWidgetInterface_CreateNewFormWidget2((QDesignerFormEditorInterface*)core, (QWidget*)parent);
 }
 
-QPaintDevice* q_designernewformwidgetinterface_as_q_paint_device(void* self) {
+QPaintDevice* q_designernewformwidgetinterface_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QDesignerNewFormWidgetInterface* q_designernewformwidgetinterface_from_q_paint_device(void* _qpaintdevice) {
+QDesignerNewFormWidgetInterface* q_designernewformwidgetinterface_from_q_paint_device(const void* _qpaintdevice) {
     return (QDesignerNewFormWidgetInterface*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 

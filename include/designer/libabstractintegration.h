@@ -35,10 +35,10 @@ const QMetaObject* q_designerintegrationinterface_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegrationInterface*
+/// @param self QDesignerIntegrationInterface*
 /// @param callback const QMetaObject* func(const QDesignerIntegrationInterface* self)
 ///
-void q_designerintegrationinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_designerintegrationinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -117,10 +117,10 @@ QWidget* q_designerintegrationinterface_container_window(const void* self, void*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegrationInterface*
+/// @param self QDesignerIntegrationInterface*
 /// @param callback QWidget* func(const QDesignerIntegrationInterface* self, QWidget* widget)
 ///
-void q_designerintegrationinterface_on_container_window(const void* self, QWidget* (*callback)(const void*, void*));
+void q_designerintegrationinterface_on_container_window(void* self, QWidget* (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#createResourceBrowser)
 ///
@@ -154,10 +154,10 @@ const char* q_designerintegrationinterface_header_suffix(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegrationInterface*
+/// @param self QDesignerIntegrationInterface*
 /// @param callback const char* func(const QDesignerIntegrationInterface* self)
 ///
-void q_designerintegrationinterface_on_header_suffix(const void* self, const char* (*callback)(const void*));
+void q_designerintegrationinterface_on_header_suffix(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#setHeaderSuffix)
 ///
@@ -189,10 +189,10 @@ bool q_designerintegrationinterface_is_header_lowercase(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegrationInterface*
+/// @param self QDesignerIntegrationInterface*
 /// @param callback bool func(const QDesignerIntegrationInterface* self)
 ///
-void q_designerintegrationinterface_on_is_header_lowercase(const void* self, bool (*callback)(const void*));
+void q_designerintegrationinterface_on_is_header_lowercase(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#setHeaderLowercase)
 ///
@@ -226,10 +226,10 @@ int32_t q_designerintegrationinterface_features(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegrationInterface*
+/// @param self QDesignerIntegrationInterface*
 /// @param callback int32_t func(const QDesignerIntegrationInterface* self)
 ///
-void q_designerintegrationinterface_on_features(const void* self, int32_t (*callback)(const void*));
+void q_designerintegrationinterface_on_features(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#hasFeature)
 ///
@@ -252,10 +252,10 @@ int32_t q_designerintegrationinterface_resource_file_watcher_behaviour(const voi
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegrationInterface*
+/// @param self QDesignerIntegrationInterface*
 /// @param callback int32_t func(const QDesignerIntegrationInterface* self)
 ///
-void q_designerintegrationinterface_on_resource_file_watcher_behaviour(const void* self, int32_t (*callback)(const void*));
+void q_designerintegrationinterface_on_resource_file_watcher_behaviour(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#setResourceFileWatcherBehaviour)
 ///
@@ -289,10 +289,10 @@ const char* q_designerintegrationinterface_context_help_id(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegrationInterface*
+/// @param self QDesignerIntegrationInterface*
 /// @param callback const char* func(const QDesignerIntegrationInterface* self)
 ///
-void q_designerintegrationinterface_on_context_help_id(const void* self, const char* (*callback)(const void*));
+void q_designerintegrationinterface_on_context_help_id(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#emitObjectNameChanged)
 ///
@@ -1313,10 +1313,10 @@ QObject* q_designerintegrationinterface_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerIntegrationInterface*
+/// @param self QDesignerIntegrationInterface*
 /// @param callback QObject* func(QDesignerIntegrationInterface* self)
 ///
-void q_designerintegrationinterface_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_designerintegrationinterface_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1344,10 +1344,10 @@ int32_t q_designerintegrationinterface_super_sender_signal_index(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerIntegrationInterface*
+/// @param self QDesignerIntegrationInterface*
 /// @param callback int32_t func(QDesignerIntegrationInterface* self)
 ///
-void q_designerintegrationinterface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_designerintegrationinterface_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1377,10 +1377,10 @@ int32_t q_designerintegrationinterface_super_receivers(const void* self, const c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerIntegrationInterface*
+/// @param self QDesignerIntegrationInterface*
 /// @param callback int32_t func(QDesignerIntegrationInterface* self, const char* signal)
 ///
-void q_designerintegrationinterface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_designerintegrationinterface_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1410,10 +1410,10 @@ bool q_designerintegrationinterface_super_is_signal_connected(const void* self, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerIntegrationInterface*
+/// @param self QDesignerIntegrationInterface*
 /// @param callback bool func(QDesignerIntegrationInterface* self, QMetaMethod* signal)
 ///
-void q_designerintegrationinterface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_designerintegrationinterface_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegrationinterface.html#dtor.QDesignerIntegrationInterface)
 ///
@@ -1450,10 +1450,10 @@ const QMetaObject* q_designerintegration_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegration*
+/// @param self QDesignerIntegration*
 /// @param callback const QMetaObject* func(const QDesignerIntegration* self)
 ///
-void q_designerintegration_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_designerintegration_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1525,10 +1525,10 @@ const char* q_designerintegration_header_suffix(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegration*
+/// @param self QDesignerIntegration*
 /// @param callback const char* func(const QDesignerIntegration* self)
 ///
-void q_designerintegration_on_header_suffix(const void* self, const char* (*callback)(const void*));
+void q_designerintegration_on_header_suffix(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegration.html#headerSuffix)
 ///
@@ -1573,10 +1573,10 @@ bool q_designerintegration_is_header_lowercase(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegration*
+/// @param self QDesignerIntegration*
 /// @param callback bool func(const QDesignerIntegration* self)
 ///
-void q_designerintegration_on_is_header_lowercase(const void* self, bool (*callback)(const void*));
+void q_designerintegration_on_is_header_lowercase(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegration.html#isHeaderLowercase)
 ///
@@ -1623,10 +1623,10 @@ int32_t q_designerintegration_features(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegration*
+/// @param self QDesignerIntegration*
 /// @param callback int32_t func(const QDesignerIntegration* self)
 ///
-void q_designerintegration_on_features(const void* self, int32_t (*callback)(const void*));
+void q_designerintegration_on_features(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegration.html#features)
 ///
@@ -1675,10 +1675,10 @@ int32_t q_designerintegration_resource_file_watcher_behaviour(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegration*
+/// @param self QDesignerIntegration*
 /// @param callback int32_t func(const QDesignerIntegration* self)
 ///
-void q_designerintegration_on_resource_file_watcher_behaviour(const void* self, int32_t (*callback)(const void*));
+void q_designerintegration_on_resource_file_watcher_behaviour(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegration.html#resourceFileWatcherBehaviour)
 ///
@@ -1726,10 +1726,10 @@ QWidget* q_designerintegration_container_window(const void* self, void* widget);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegration*
+/// @param self QDesignerIntegration*
 /// @param callback QWidget* func(const QDesignerIntegration* self, QWidget* widget)
 ///
-void q_designerintegration_on_container_window(const void* self, QWidget* (*callback)(const void*, void*));
+void q_designerintegration_on_container_window(void* self, QWidget* (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegration.html#containerWindow)
 ///
@@ -1783,10 +1783,10 @@ const char* q_designerintegration_context_help_id(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerIntegration*
+/// @param self QDesignerIntegration*
 /// @param callback const char* func(const QDesignerIntegration* self)
 ///
-void q_designerintegration_on_context_help_id(const void* self, const char* (*callback)(const void*));
+void q_designerintegration_on_context_help_id(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegration.html#contextHelpId)
 ///
@@ -2907,10 +2907,10 @@ QObject* q_designerintegration_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerIntegration*
+/// @param self QDesignerIntegration*
 /// @param callback QObject* func(QDesignerIntegration* self)
 ///
-void q_designerintegration_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_designerintegration_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2938,10 +2938,10 @@ int32_t q_designerintegration_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerIntegration*
+/// @param self QDesignerIntegration*
 /// @param callback int32_t func(QDesignerIntegration* self)
 ///
-void q_designerintegration_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_designerintegration_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2971,10 +2971,10 @@ int32_t q_designerintegration_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerIntegration*
+/// @param self QDesignerIntegration*
 /// @param callback int32_t func(QDesignerIntegration* self, const char* signal)
 ///
-void q_designerintegration_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_designerintegration_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3004,10 +3004,10 @@ bool q_designerintegration_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerIntegration*
+/// @param self QDesignerIntegration*
 /// @param callback bool func(QDesignerIntegration* self, QMetaMethod* signal)
 ///
-void q_designerintegration_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_designerintegration_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerintegration.html#dtor.QDesignerIntegration)
 ///

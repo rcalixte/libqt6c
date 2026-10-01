@@ -30,7 +30,7 @@ const QMetaObject* k_imagefilepreview_meta_object(const void* self) {
     return KImageFilePreview_MetaObject((KImageFilePreview*)self);
 }
 
-void k_imagefilepreview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_imagefilepreview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KImageFilePreview_OnMetaObject((KImageFilePreview*)self, (intptr_t)callback);
 }
 
@@ -73,7 +73,7 @@ QSize* k_imagefilepreview_size_hint(const void* self) {
     return KImageFilePreview_SizeHint((KImageFilePreview*)self);
 }
 
-void k_imagefilepreview_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_imagefilepreview_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KImageFilePreview_OnSizeHint((KImageFilePreview*)self, (intptr_t)callback);
 }
 
@@ -180,11 +180,11 @@ const char** k_imagefilepreview_supported_mime_types(const void* self) {
     return _ret;
 }
 
-QPaintDevice* k_imagefilepreview_as_q_paint_device(void* self) {
+QPaintDevice* k_imagefilepreview_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KImageFilePreview* k_imagefilepreview_from_q_paint_device(void* _qpaintdevice) {
+KImageFilePreview* k_imagefilepreview_from_q_paint_device(const void* _qpaintdevice) {
     return (KImageFilePreview*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1575,8 +1575,8 @@ int32_t k_imagefilepreview_super_dev_type(const void* self) {
     return KImageFilePreview_SuperDevType((KImageFilePreview*)self);
 }
 
-void k_imagefilepreview_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KImageFilePreview_OnDevType((const KImageFilePreview*)self, (intptr_t)callback);
+void k_imagefilepreview_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KImageFilePreview_OnDevType((KImageFilePreview*)self, (intptr_t)callback);
 }
 
 void k_imagefilepreview_set_visible(void* self, bool visible) {
@@ -1599,8 +1599,8 @@ QSize* k_imagefilepreview_super_minimum_size_hint(const void* self) {
     return KImageFilePreview_SuperMinimumSizeHint((KImageFilePreview*)self);
 }
 
-void k_imagefilepreview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KImageFilePreview_OnMinimumSizeHint((const KImageFilePreview*)self, (intptr_t)callback);
+void k_imagefilepreview_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KImageFilePreview_OnMinimumSizeHint((KImageFilePreview*)self, (intptr_t)callback);
 }
 
 int32_t k_imagefilepreview_height_for_width(const void* self, int param1) {
@@ -1611,8 +1611,8 @@ int32_t k_imagefilepreview_super_height_for_width(const void* self, int param1) 
     return KImageFilePreview_SuperHeightForWidth((KImageFilePreview*)self, param1);
 }
 
-void k_imagefilepreview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KImageFilePreview_OnHeightForWidth((const KImageFilePreview*)self, (intptr_t)callback);
+void k_imagefilepreview_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KImageFilePreview_OnHeightForWidth((KImageFilePreview*)self, (intptr_t)callback);
 }
 
 bool k_imagefilepreview_has_height_for_width(const void* self) {
@@ -1623,8 +1623,8 @@ bool k_imagefilepreview_super_has_height_for_width(const void* self) {
     return KImageFilePreview_SuperHasHeightForWidth((KImageFilePreview*)self);
 }
 
-void k_imagefilepreview_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KImageFilePreview_OnHasHeightForWidth((const KImageFilePreview*)self, (intptr_t)callback);
+void k_imagefilepreview_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KImageFilePreview_OnHasHeightForWidth((KImageFilePreview*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_imagefilepreview_paint_engine(const void* self) {
@@ -1635,8 +1635,8 @@ QPaintEngine* k_imagefilepreview_super_paint_engine(const void* self) {
     return KImageFilePreview_SuperPaintEngine((KImageFilePreview*)self);
 }
 
-void k_imagefilepreview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KImageFilePreview_OnPaintEngine((const KImageFilePreview*)self, (intptr_t)callback);
+void k_imagefilepreview_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KImageFilePreview_OnPaintEngine((KImageFilePreview*)self, (intptr_t)callback);
 }
 
 bool k_imagefilepreview_event(void* self, void* event) {
@@ -1959,8 +1959,8 @@ int32_t k_imagefilepreview_super_metric(const void* self, int32_t param1) {
     return KImageFilePreview_SuperMetric((KImageFilePreview*)self, param1);
 }
 
-void k_imagefilepreview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KImageFilePreview_OnMetric((const KImageFilePreview*)self, (intptr_t)callback);
+void k_imagefilepreview_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KImageFilePreview_OnMetric((KImageFilePreview*)self, (intptr_t)callback);
 }
 
 void k_imagefilepreview_init_painter(const void* self, void* painter) {
@@ -1971,8 +1971,8 @@ void k_imagefilepreview_super_init_painter(const void* self, void* painter) {
     KImageFilePreview_SuperInitPainter((KImageFilePreview*)self, (QPainter*)painter);
 }
 
-void k_imagefilepreview_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KImageFilePreview_OnInitPainter((const KImageFilePreview*)self, (intptr_t)callback);
+void k_imagefilepreview_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KImageFilePreview_OnInitPainter((KImageFilePreview*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_imagefilepreview_redirected(const void* self, void* offset) {
@@ -1983,8 +1983,8 @@ QPaintDevice* k_imagefilepreview_super_redirected(const void* self, void* offset
     return KImageFilePreview_SuperRedirected((KImageFilePreview*)self, (QPoint*)offset);
 }
 
-void k_imagefilepreview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KImageFilePreview_OnRedirected((const KImageFilePreview*)self, (intptr_t)callback);
+void k_imagefilepreview_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KImageFilePreview_OnRedirected((KImageFilePreview*)self, (intptr_t)callback);
 }
 
 QPainter* k_imagefilepreview_shared_painter(const void* self) {
@@ -1995,8 +1995,8 @@ QPainter* k_imagefilepreview_super_shared_painter(const void* self) {
     return KImageFilePreview_SuperSharedPainter((KImageFilePreview*)self);
 }
 
-void k_imagefilepreview_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KImageFilePreview_OnSharedPainter((const KImageFilePreview*)self, (intptr_t)callback);
+void k_imagefilepreview_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KImageFilePreview_OnSharedPainter((KImageFilePreview*)self, (intptr_t)callback);
 }
 
 void k_imagefilepreview_input_method_event(void* self, void* param1) {
@@ -2019,8 +2019,8 @@ QVariant* k_imagefilepreview_super_input_method_query(const void* self, int32_t 
     return KImageFilePreview_SuperInputMethodQuery((KImageFilePreview*)self, param1);
 }
 
-void k_imagefilepreview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KImageFilePreview_OnInputMethodQuery((const KImageFilePreview*)self, (intptr_t)callback);
+void k_imagefilepreview_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KImageFilePreview_OnInputMethodQuery((KImageFilePreview*)self, (intptr_t)callback);
 }
 
 bool k_imagefilepreview_focus_next_prev_child(void* self, bool next) {

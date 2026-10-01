@@ -428,11 +428,11 @@ void k_textautocorrectionwidgets__autocorrectionlanguage_set_item_data3(void* se
     QComboBox_SetItemData3((QComboBox*)self, index, (QVariant*)value, role);
 }
 
-QPaintDevice* k_textautocorrectionwidgets__autocorrectionlanguage_as_q_paint_device(void* self) {
+QPaintDevice* k_textautocorrectionwidgets__autocorrectionlanguage_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextAutoCorrectionWidgets__AutoCorrectionLanguage* k_textautocorrectionwidgets__autocorrectionlanguage_from_q_paint_device(void* _qpaintdevice) {
+TextAutoCorrectionWidgets__AutoCorrectionLanguage* k_textautocorrectionwidgets__autocorrectionlanguage_from_q_paint_device(const void* _qpaintdevice) {
     return (TextAutoCorrectionWidgets__AutoCorrectionLanguage*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1823,8 +1823,8 @@ const QMetaObject* k_textautocorrectionwidgets__autocorrectionlanguage_super_met
     return TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperMetaObject((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnMetaObject((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnMetaObject((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 void* k_textautocorrectionwidgets__autocorrectionlanguage_metacast(void* self, const char* param1) {
@@ -1871,8 +1871,8 @@ QSize* k_textautocorrectionwidgets__autocorrectionlanguage_super_size_hint(const
     return TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperSizeHint((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnSizeHint((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnSizeHint((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 QSize* k_textautocorrectionwidgets__autocorrectionlanguage_minimum_size_hint(const void* self) {
@@ -1883,8 +1883,8 @@ QSize* k_textautocorrectionwidgets__autocorrectionlanguage_super_minimum_size_hi
     return TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperMinimumSizeHint((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnMinimumSizeHint((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnMinimumSizeHint((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 void k_textautocorrectionwidgets__autocorrectionlanguage_show_popup(void* self) {
@@ -1931,8 +1931,8 @@ QVariant* k_textautocorrectionwidgets__autocorrectionlanguage_super_input_method
     return TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperInputMethodQuery((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, param1);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnInputMethodQuery((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnInputMethodQuery((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 void k_textautocorrectionwidgets__autocorrectionlanguage_focus_in_event(void* self, void* e) {
@@ -2111,8 +2111,8 @@ void k_textautocorrectionwidgets__autocorrectionlanguage_super_init_style_option
     TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperInitStyleOption((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnInitStyleOption((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnInitStyleOption((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 int32_t k_textautocorrectionwidgets__autocorrectionlanguage_dev_type(const void* self) {
@@ -2123,8 +2123,8 @@ int32_t k_textautocorrectionwidgets__autocorrectionlanguage_super_dev_type(const
     return TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperDevType((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnDevType((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnDevType((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 void k_textautocorrectionwidgets__autocorrectionlanguage_set_visible(void* self, bool visible) {
@@ -2147,8 +2147,8 @@ int32_t k_textautocorrectionwidgets__autocorrectionlanguage_super_height_for_wid
     return TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperHeightForWidth((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, param1);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnHeightForWidth((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnHeightForWidth((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 bool k_textautocorrectionwidgets__autocorrectionlanguage_has_height_for_width(const void* self) {
@@ -2159,8 +2159,8 @@ bool k_textautocorrectionwidgets__autocorrectionlanguage_super_has_height_for_wi
     return TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperHasHeightForWidth((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnHasHeightForWidth((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnHasHeightForWidth((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textautocorrectionwidgets__autocorrectionlanguage_paint_engine(const void* self) {
@@ -2171,8 +2171,8 @@ QPaintEngine* k_textautocorrectionwidgets__autocorrectionlanguage_super_paint_en
     return TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperPaintEngine((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnPaintEngine((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnPaintEngine((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 void k_textautocorrectionwidgets__autocorrectionlanguage_mouse_double_click_event(void* self, void* event) {
@@ -2339,8 +2339,8 @@ int32_t k_textautocorrectionwidgets__autocorrectionlanguage_super_metric(const v
     return TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperMetric((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, param1);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnMetric((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnMetric((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 void k_textautocorrectionwidgets__autocorrectionlanguage_init_painter(const void* self, void* painter) {
@@ -2351,8 +2351,8 @@ void k_textautocorrectionwidgets__autocorrectionlanguage_super_init_painter(cons
     TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperInitPainter((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (QPainter*)painter);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnInitPainter((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnInitPainter((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textautocorrectionwidgets__autocorrectionlanguage_redirected(const void* self, void* offset) {
@@ -2363,8 +2363,8 @@ QPaintDevice* k_textautocorrectionwidgets__autocorrectionlanguage_super_redirect
     return TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperRedirected((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (QPoint*)offset);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnRedirected((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnRedirected((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 QPainter* k_textautocorrectionwidgets__autocorrectionlanguage_shared_painter(const void* self) {
@@ -2375,8 +2375,8 @@ QPainter* k_textautocorrectionwidgets__autocorrectionlanguage_super_shared_paint
     return TextAutoCorrectionWidgets__AutoCorrectionLanguage_SuperSharedPainter((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self);
 }
 
-void k_textautocorrectionwidgets__autocorrectionlanguage_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnSharedPainter((const TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
+void k_textautocorrectionwidgets__autocorrectionlanguage_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextAutoCorrectionWidgets__AutoCorrectionLanguage_OnSharedPainter((TextAutoCorrectionWidgets__AutoCorrectionLanguage*)self, (intptr_t)callback);
 }
 
 bool k_textautocorrectionwidgets__autocorrectionlanguage_focus_next_prev_child(void* self, bool next) {

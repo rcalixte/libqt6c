@@ -21,7 +21,7 @@ const QMetaObject* k_texteditor__message_meta_object(const void* self) {
     return KTextEditor__Message_MetaObject((KTextEditor__Message*)self);
 }
 
-void k_texteditor__message_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_texteditor__message_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KTextEditor__Message_OnMetaObject((KTextEditor__Message*)self, (intptr_t)callback);
 }
 

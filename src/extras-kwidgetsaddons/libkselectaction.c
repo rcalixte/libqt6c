@@ -26,7 +26,7 @@ const QMetaObject* k_selectaction_meta_object(const void* self) {
     return KSelectAction_MetaObject((KSelectAction*)self);
 }
 
-void k_selectaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_selectaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSelectAction_OnMetaObject((KSelectAction*)self, (intptr_t)callback);
 }
 

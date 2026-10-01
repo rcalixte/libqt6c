@@ -29,7 +29,7 @@ const QMetaObject* k_nswidgets__button_meta_object(const void* self) {
     return KNSWidgets__Button_MetaObject((KNSWidgets__Button*)self);
 }
 
-void k_nswidgets__button_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_nswidgets__button_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KNSWidgets__Button_OnMetaObject((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
@@ -277,11 +277,11 @@ void k_nswidgets__button_on_clicked1(void* self, void (*callback)(void*, bool)) 
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_nswidgets__button_as_q_paint_device(void* self) {
+QPaintDevice* k_nswidgets__button_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KNSWidgets__Button* k_nswidgets__button_from_q_paint_device(void* _qpaintdevice) {
+KNSWidgets__Button* k_nswidgets__button_from_q_paint_device(const void* _qpaintdevice) {
     return (KNSWidgets__Button*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1672,8 +1672,8 @@ QSize* k_nswidgets__button_super_size_hint(const void* self) {
     return KNSWidgets__Button_SuperSizeHint((KNSWidgets__Button*)self);
 }
 
-void k_nswidgets__button_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KNSWidgets__Button_OnSizeHint((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KNSWidgets__Button_OnSizeHint((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 QSize* k_nswidgets__button_minimum_size_hint(const void* self) {
@@ -1684,8 +1684,8 @@ QSize* k_nswidgets__button_super_minimum_size_hint(const void* self) {
     return KNSWidgets__Button_SuperMinimumSizeHint((KNSWidgets__Button*)self);
 }
 
-void k_nswidgets__button_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KNSWidgets__Button_OnMinimumSizeHint((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KNSWidgets__Button_OnMinimumSizeHint((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 bool k_nswidgets__button_event(void* self, void* e) {
@@ -1768,8 +1768,8 @@ void k_nswidgets__button_super_init_style_option(const void* self, void* option)
     KNSWidgets__Button_SuperInitStyleOption((KNSWidgets__Button*)self, (QStyleOptionButton*)option);
 }
 
-void k_nswidgets__button_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KNSWidgets__Button_OnInitStyleOption((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KNSWidgets__Button_OnInitStyleOption((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 bool k_nswidgets__button_hit_button(const void* self, const void* pos) {
@@ -1780,8 +1780,8 @@ bool k_nswidgets__button_super_hit_button(const void* self, const void* pos) {
     return KNSWidgets__Button_SuperHitButton((KNSWidgets__Button*)self, (QPoint*)pos);
 }
 
-void k_nswidgets__button_on_hit_button(const void* self, bool (*callback)(const void*, const void*)) {
-    KNSWidgets__Button_OnHitButton((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_hit_button(void* self, bool (*callback)(const void*, const void*)) {
+    KNSWidgets__Button_OnHitButton((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 void k_nswidgets__button_check_state_set(void* self) {
@@ -1876,8 +1876,8 @@ int32_t k_nswidgets__button_super_dev_type(const void* self) {
     return KNSWidgets__Button_SuperDevType((KNSWidgets__Button*)self);
 }
 
-void k_nswidgets__button_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KNSWidgets__Button_OnDevType((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KNSWidgets__Button_OnDevType((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 void k_nswidgets__button_set_visible(void* self, bool visible) {
@@ -1900,8 +1900,8 @@ int32_t k_nswidgets__button_super_height_for_width(const void* self, int param1)
     return KNSWidgets__Button_SuperHeightForWidth((KNSWidgets__Button*)self, param1);
 }
 
-void k_nswidgets__button_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KNSWidgets__Button_OnHeightForWidth((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KNSWidgets__Button_OnHeightForWidth((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 bool k_nswidgets__button_has_height_for_width(const void* self) {
@@ -1912,8 +1912,8 @@ bool k_nswidgets__button_super_has_height_for_width(const void* self) {
     return KNSWidgets__Button_SuperHasHeightForWidth((KNSWidgets__Button*)self);
 }
 
-void k_nswidgets__button_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KNSWidgets__Button_OnHasHeightForWidth((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KNSWidgets__Button_OnHasHeightForWidth((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_nswidgets__button_paint_engine(const void* self) {
@@ -1924,8 +1924,8 @@ QPaintEngine* k_nswidgets__button_super_paint_engine(const void* self) {
     return KNSWidgets__Button_SuperPaintEngine((KNSWidgets__Button*)self);
 }
 
-void k_nswidgets__button_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KNSWidgets__Button_OnPaintEngine((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KNSWidgets__Button_OnPaintEngine((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 void k_nswidgets__button_mouse_double_click_event(void* self, void* event) {
@@ -2140,8 +2140,8 @@ int32_t k_nswidgets__button_super_metric(const void* self, int32_t param1) {
     return KNSWidgets__Button_SuperMetric((KNSWidgets__Button*)self, param1);
 }
 
-void k_nswidgets__button_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KNSWidgets__Button_OnMetric((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KNSWidgets__Button_OnMetric((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 void k_nswidgets__button_init_painter(const void* self, void* painter) {
@@ -2152,8 +2152,8 @@ void k_nswidgets__button_super_init_painter(const void* self, void* painter) {
     KNSWidgets__Button_SuperInitPainter((KNSWidgets__Button*)self, (QPainter*)painter);
 }
 
-void k_nswidgets__button_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KNSWidgets__Button_OnInitPainter((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KNSWidgets__Button_OnInitPainter((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_nswidgets__button_redirected(const void* self, void* offset) {
@@ -2164,8 +2164,8 @@ QPaintDevice* k_nswidgets__button_super_redirected(const void* self, void* offse
     return KNSWidgets__Button_SuperRedirected((KNSWidgets__Button*)self, (QPoint*)offset);
 }
 
-void k_nswidgets__button_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KNSWidgets__Button_OnRedirected((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KNSWidgets__Button_OnRedirected((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 QPainter* k_nswidgets__button_shared_painter(const void* self) {
@@ -2176,8 +2176,8 @@ QPainter* k_nswidgets__button_super_shared_painter(const void* self) {
     return KNSWidgets__Button_SuperSharedPainter((KNSWidgets__Button*)self);
 }
 
-void k_nswidgets__button_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KNSWidgets__Button_OnSharedPainter((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KNSWidgets__Button_OnSharedPainter((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 void k_nswidgets__button_input_method_event(void* self, void* param1) {
@@ -2200,8 +2200,8 @@ QVariant* k_nswidgets__button_super_input_method_query(const void* self, int32_t
     return KNSWidgets__Button_SuperInputMethodQuery((KNSWidgets__Button*)self, param1);
 }
 
-void k_nswidgets__button_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KNSWidgets__Button_OnInputMethodQuery((const KNSWidgets__Button*)self, (intptr_t)callback);
+void k_nswidgets__button_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KNSWidgets__Button_OnInputMethodQuery((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
 bool k_nswidgets__button_focus_next_prev_child(void* self, bool next) {

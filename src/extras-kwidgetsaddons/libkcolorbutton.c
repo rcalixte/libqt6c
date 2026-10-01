@@ -45,7 +45,7 @@ const QMetaObject* k_colorbutton_meta_object(const void* self) {
     return KColorButton_MetaObject((KColorButton*)self);
 }
 
-void k_colorbutton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_colorbutton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KColorButton_OnMetaObject((KColorButton*)self, (intptr_t)callback);
 }
 
@@ -112,7 +112,7 @@ QSize* k_colorbutton_size_hint(const void* self) {
     return KColorButton_SizeHint((KColorButton*)self);
 }
 
-void k_colorbutton_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_colorbutton_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KColorButton_OnSizeHint((KColorButton*)self, (intptr_t)callback);
 }
 
@@ -124,7 +124,7 @@ QSize* k_colorbutton_minimum_size_hint(const void* self) {
     return KColorButton_MinimumSizeHint((KColorButton*)self);
 }
 
-void k_colorbutton_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_colorbutton_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     KColorButton_OnMinimumSizeHint((KColorButton*)self, (intptr_t)callback);
 }
 
@@ -409,11 +409,11 @@ void k_colorbutton_on_clicked1(void* self, void (*callback)(void*, bool)) {
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_colorbutton_as_q_paint_device(void* self) {
+QPaintDevice* k_colorbutton_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KColorButton* k_colorbutton_from_q_paint_device(void* _qpaintdevice) {
+KColorButton* k_colorbutton_from_q_paint_device(const void* _qpaintdevice) {
     return (KColorButton*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1840,8 +1840,8 @@ void k_colorbutton_super_init_style_option(const void* self, void* option) {
     KColorButton_SuperInitStyleOption((KColorButton*)self, (QStyleOptionButton*)option);
 }
 
-void k_colorbutton_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KColorButton_OnInitStyleOption((const KColorButton*)self, (intptr_t)callback);
+void k_colorbutton_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KColorButton_OnInitStyleOption((KColorButton*)self, (intptr_t)callback);
 }
 
 bool k_colorbutton_hit_button(const void* self, const void* pos) {
@@ -1852,8 +1852,8 @@ bool k_colorbutton_super_hit_button(const void* self, const void* pos) {
     return KColorButton_SuperHitButton((KColorButton*)self, (QPoint*)pos);
 }
 
-void k_colorbutton_on_hit_button(const void* self, bool (*callback)(const void*, const void*)) {
-    KColorButton_OnHitButton((const KColorButton*)self, (intptr_t)callback);
+void k_colorbutton_on_hit_button(void* self, bool (*callback)(const void*, const void*)) {
+    KColorButton_OnHitButton((KColorButton*)self, (intptr_t)callback);
 }
 
 void k_colorbutton_check_state_set(void* self) {
@@ -1936,8 +1936,8 @@ int32_t k_colorbutton_super_dev_type(const void* self) {
     return KColorButton_SuperDevType((KColorButton*)self);
 }
 
-void k_colorbutton_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KColorButton_OnDevType((const KColorButton*)self, (intptr_t)callback);
+void k_colorbutton_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KColorButton_OnDevType((KColorButton*)self, (intptr_t)callback);
 }
 
 void k_colorbutton_set_visible(void* self, bool visible) {
@@ -1960,8 +1960,8 @@ int32_t k_colorbutton_super_height_for_width(const void* self, int param1) {
     return KColorButton_SuperHeightForWidth((KColorButton*)self, param1);
 }
 
-void k_colorbutton_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KColorButton_OnHeightForWidth((const KColorButton*)self, (intptr_t)callback);
+void k_colorbutton_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KColorButton_OnHeightForWidth((KColorButton*)self, (intptr_t)callback);
 }
 
 bool k_colorbutton_has_height_for_width(const void* self) {
@@ -1972,8 +1972,8 @@ bool k_colorbutton_super_has_height_for_width(const void* self) {
     return KColorButton_SuperHasHeightForWidth((KColorButton*)self);
 }
 
-void k_colorbutton_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KColorButton_OnHasHeightForWidth((const KColorButton*)self, (intptr_t)callback);
+void k_colorbutton_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KColorButton_OnHasHeightForWidth((KColorButton*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_colorbutton_paint_engine(const void* self) {
@@ -1984,8 +1984,8 @@ QPaintEngine* k_colorbutton_super_paint_engine(const void* self) {
     return KColorButton_SuperPaintEngine((KColorButton*)self);
 }
 
-void k_colorbutton_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KColorButton_OnPaintEngine((const KColorButton*)self, (intptr_t)callback);
+void k_colorbutton_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KColorButton_OnPaintEngine((KColorButton*)self, (intptr_t)callback);
 }
 
 void k_colorbutton_mouse_double_click_event(void* self, void* event) {
@@ -2176,8 +2176,8 @@ int32_t k_colorbutton_super_metric(const void* self, int32_t param1) {
     return KColorButton_SuperMetric((KColorButton*)self, param1);
 }
 
-void k_colorbutton_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KColorButton_OnMetric((const KColorButton*)self, (intptr_t)callback);
+void k_colorbutton_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KColorButton_OnMetric((KColorButton*)self, (intptr_t)callback);
 }
 
 void k_colorbutton_init_painter(const void* self, void* painter) {
@@ -2188,8 +2188,8 @@ void k_colorbutton_super_init_painter(const void* self, void* painter) {
     KColorButton_SuperInitPainter((KColorButton*)self, (QPainter*)painter);
 }
 
-void k_colorbutton_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KColorButton_OnInitPainter((const KColorButton*)self, (intptr_t)callback);
+void k_colorbutton_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KColorButton_OnInitPainter((KColorButton*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_colorbutton_redirected(const void* self, void* offset) {
@@ -2200,8 +2200,8 @@ QPaintDevice* k_colorbutton_super_redirected(const void* self, void* offset) {
     return KColorButton_SuperRedirected((KColorButton*)self, (QPoint*)offset);
 }
 
-void k_colorbutton_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KColorButton_OnRedirected((const KColorButton*)self, (intptr_t)callback);
+void k_colorbutton_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KColorButton_OnRedirected((KColorButton*)self, (intptr_t)callback);
 }
 
 QPainter* k_colorbutton_shared_painter(const void* self) {
@@ -2212,8 +2212,8 @@ QPainter* k_colorbutton_super_shared_painter(const void* self) {
     return KColorButton_SuperSharedPainter((KColorButton*)self);
 }
 
-void k_colorbutton_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KColorButton_OnSharedPainter((const KColorButton*)self, (intptr_t)callback);
+void k_colorbutton_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KColorButton_OnSharedPainter((KColorButton*)self, (intptr_t)callback);
 }
 
 void k_colorbutton_input_method_event(void* self, void* param1) {
@@ -2236,8 +2236,8 @@ QVariant* k_colorbutton_super_input_method_query(const void* self, int32_t param
     return KColorButton_SuperInputMethodQuery((KColorButton*)self, param1);
 }
 
-void k_colorbutton_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KColorButton_OnInputMethodQuery((const KColorButton*)self, (intptr_t)callback);
+void k_colorbutton_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KColorButton_OnInputMethodQuery((KColorButton*)self, (intptr_t)callback);
 }
 
 bool k_colorbutton_focus_next_prev_child(void* self, bool next) {

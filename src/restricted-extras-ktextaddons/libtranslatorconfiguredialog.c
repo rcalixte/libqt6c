@@ -87,11 +87,11 @@ const char* k_texttranslator__translatorconfiguredialog_tr3(const char* s, const
     return _ret;
 }
 
-QPaintDevice* k_texttranslator__translatorconfiguredialog_as_q_paint_device(void* self) {
+QPaintDevice* k_texttranslator__translatorconfiguredialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextTranslator__TranslatorConfigureDialog* k_texttranslator__translatorconfiguredialog_from_q_paint_device(void* _qpaintdevice) {
+TextTranslator__TranslatorConfigureDialog* k_texttranslator__translatorconfiguredialog_from_q_paint_device(const void* _qpaintdevice) {
     return (TextTranslator__TranslatorConfigureDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1482,8 +1482,8 @@ const QMetaObject* k_texttranslator__translatorconfiguredialog_super_meta_object
     return TextTranslator__TranslatorConfigureDialog_SuperMetaObject((TextTranslator__TranslatorConfigureDialog*)self);
 }
 
-void k_texttranslator__translatorconfiguredialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureDialog_OnMetaObject((const TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfiguredialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureDialog_OnMetaObject((TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
 }
 
 void* k_texttranslator__translatorconfiguredialog_metacast(void* self, const char* param1) {
@@ -1530,8 +1530,8 @@ QSize* k_texttranslator__translatorconfiguredialog_super_size_hint(const void* s
     return TextTranslator__TranslatorConfigureDialog_SuperSizeHint((TextTranslator__TranslatorConfigureDialog*)self);
 }
 
-void k_texttranslator__translatorconfiguredialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureDialog_OnSizeHint((const TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfiguredialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureDialog_OnSizeHint((TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_texttranslator__translatorconfiguredialog_minimum_size_hint(const void* self) {
@@ -1542,8 +1542,8 @@ QSize* k_texttranslator__translatorconfiguredialog_super_minimum_size_hint(const
     return TextTranslator__TranslatorConfigureDialog_SuperMinimumSizeHint((TextTranslator__TranslatorConfigureDialog*)self);
 }
 
-void k_texttranslator__translatorconfiguredialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureDialog_OnMinimumSizeHint((const TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfiguredialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureDialog_OnMinimumSizeHint((TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
 }
 
 void k_texttranslator__translatorconfiguredialog_open(void* self) {
@@ -1686,8 +1686,8 @@ int32_t k_texttranslator__translatorconfiguredialog_super_dev_type(const void* s
     return TextTranslator__TranslatorConfigureDialog_SuperDevType((TextTranslator__TranslatorConfigureDialog*)self);
 }
 
-void k_texttranslator__translatorconfiguredialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureDialog_OnDevType((const TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfiguredialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureDialog_OnDevType((TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_texttranslator__translatorconfiguredialog_height_for_width(const void* self, int param1) {
@@ -1698,8 +1698,8 @@ int32_t k_texttranslator__translatorconfiguredialog_super_height_for_width(const
     return TextTranslator__TranslatorConfigureDialog_SuperHeightForWidth((TextTranslator__TranslatorConfigureDialog*)self, param1);
 }
 
-void k_texttranslator__translatorconfiguredialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextTranslator__TranslatorConfigureDialog_OnHeightForWidth((const TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfiguredialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextTranslator__TranslatorConfigureDialog_OnHeightForWidth((TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
 }
 
 bool k_texttranslator__translatorconfiguredialog_has_height_for_width(const void* self) {
@@ -1710,8 +1710,8 @@ bool k_texttranslator__translatorconfiguredialog_super_has_height_for_width(cons
     return TextTranslator__TranslatorConfigureDialog_SuperHasHeightForWidth((TextTranslator__TranslatorConfigureDialog*)self);
 }
 
-void k_texttranslator__translatorconfiguredialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureDialog_OnHasHeightForWidth((const TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfiguredialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureDialog_OnHasHeightForWidth((TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_texttranslator__translatorconfiguredialog_paint_engine(const void* self) {
@@ -1722,8 +1722,8 @@ QPaintEngine* k_texttranslator__translatorconfiguredialog_super_paint_engine(con
     return TextTranslator__TranslatorConfigureDialog_SuperPaintEngine((TextTranslator__TranslatorConfigureDialog*)self);
 }
 
-void k_texttranslator__translatorconfiguredialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureDialog_OnPaintEngine((const TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfiguredialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureDialog_OnPaintEngine((TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
 }
 
 bool k_texttranslator__translatorconfiguredialog_event(void* self, void* event) {
@@ -1998,8 +1998,8 @@ int32_t k_texttranslator__translatorconfiguredialog_super_metric(const void* sel
     return TextTranslator__TranslatorConfigureDialog_SuperMetric((TextTranslator__TranslatorConfigureDialog*)self, param1);
 }
 
-void k_texttranslator__translatorconfiguredialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextTranslator__TranslatorConfigureDialog_OnMetric((const TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfiguredialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextTranslator__TranslatorConfigureDialog_OnMetric((TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
 }
 
 void k_texttranslator__translatorconfiguredialog_init_painter(const void* self, void* painter) {
@@ -2010,8 +2010,8 @@ void k_texttranslator__translatorconfiguredialog_super_init_painter(const void* 
     TextTranslator__TranslatorConfigureDialog_SuperInitPainter((TextTranslator__TranslatorConfigureDialog*)self, (QPainter*)painter);
 }
 
-void k_texttranslator__translatorconfiguredialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextTranslator__TranslatorConfigureDialog_OnInitPainter((const TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfiguredialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextTranslator__TranslatorConfigureDialog_OnInitPainter((TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_texttranslator__translatorconfiguredialog_redirected(const void* self, void* offset) {
@@ -2022,8 +2022,8 @@ QPaintDevice* k_texttranslator__translatorconfiguredialog_super_redirected(const
     return TextTranslator__TranslatorConfigureDialog_SuperRedirected((TextTranslator__TranslatorConfigureDialog*)self, (QPoint*)offset);
 }
 
-void k_texttranslator__translatorconfiguredialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextTranslator__TranslatorConfigureDialog_OnRedirected((const TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfiguredialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextTranslator__TranslatorConfigureDialog_OnRedirected((TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_texttranslator__translatorconfiguredialog_shared_painter(const void* self) {
@@ -2034,8 +2034,8 @@ QPainter* k_texttranslator__translatorconfiguredialog_super_shared_painter(const
     return TextTranslator__TranslatorConfigureDialog_SuperSharedPainter((TextTranslator__TranslatorConfigureDialog*)self);
 }
 
-void k_texttranslator__translatorconfiguredialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureDialog_OnSharedPainter((const TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfiguredialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureDialog_OnSharedPainter((TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
 }
 
 void k_texttranslator__translatorconfiguredialog_input_method_event(void* self, void* param1) {
@@ -2058,8 +2058,8 @@ QVariant* k_texttranslator__translatorconfiguredialog_super_input_method_query(c
     return TextTranslator__TranslatorConfigureDialog_SuperInputMethodQuery((TextTranslator__TranslatorConfigureDialog*)self, param1);
 }
 
-void k_texttranslator__translatorconfiguredialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextTranslator__TranslatorConfigureDialog_OnInputMethodQuery((const TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfiguredialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextTranslator__TranslatorConfigureDialog_OnInputMethodQuery((TextTranslator__TranslatorConfigureDialog*)self, (intptr_t)callback);
 }
 
 bool k_texttranslator__translatorconfiguredialog_focus_next_prev_child(void* self, bool next) {

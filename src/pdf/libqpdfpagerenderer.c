@@ -21,7 +21,7 @@ const QMetaObject* q_pdfpagerenderer_meta_object(const void* self) {
     return QPdfPageRenderer_MetaObject((QPdfPageRenderer*)self);
 }
 
-void q_pdfpagerenderer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pdfpagerenderer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPdfPageRenderer_OnMetaObject((QPdfPageRenderer*)self, (intptr_t)callback);
 }
 

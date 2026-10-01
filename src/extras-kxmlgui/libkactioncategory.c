@@ -19,7 +19,7 @@ const QMetaObject* k_actioncategory_meta_object(const void* self) {
     return KActionCategory_MetaObject((KActionCategory*)self);
 }
 
-void k_actioncategory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_actioncategory_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KActionCategory_OnMetaObject((KActionCategory*)self, (intptr_t)callback);
 }
 

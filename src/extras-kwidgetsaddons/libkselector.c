@@ -36,7 +36,7 @@ const QMetaObject* k_selector_meta_object(const void* self) {
     return KSelector_MetaObject((KSelector*)self);
 }
 
-void k_selector_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_selector_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSelector_OnMetaObject((KSelector*)self, (intptr_t)callback);
 }
 
@@ -337,11 +337,11 @@ void k_selector_on_action_triggered(void* self, void (*callback)(void*, int)) {
     QAbstractSlider_Connect_ActionTriggered((QAbstractSlider*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_selector_as_q_paint_device(void* self) {
+QPaintDevice* k_selector_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KSelector* k_selector_from_q_paint_device(void* _qpaintdevice) {
+KSelector* k_selector_from_q_paint_device(const void* _qpaintdevice) {
     return (KSelector*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1788,8 +1788,8 @@ int32_t k_selector_super_dev_type(const void* self) {
     return KSelector_SuperDevType((KSelector*)self);
 }
 
-void k_selector_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KSelector_OnDevType((const KSelector*)self, (intptr_t)callback);
+void k_selector_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KSelector_OnDevType((KSelector*)self, (intptr_t)callback);
 }
 
 void k_selector_set_visible(void* self, bool visible) {
@@ -1812,8 +1812,8 @@ QSize* k_selector_super_size_hint(const void* self) {
     return KSelector_SuperSizeHint((KSelector*)self);
 }
 
-void k_selector_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KSelector_OnSizeHint((const KSelector*)self, (intptr_t)callback);
+void k_selector_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KSelector_OnSizeHint((KSelector*)self, (intptr_t)callback);
 }
 
 QSize* k_selector_minimum_size_hint(const void* self) {
@@ -1824,8 +1824,8 @@ QSize* k_selector_super_minimum_size_hint(const void* self) {
     return KSelector_SuperMinimumSizeHint((KSelector*)self);
 }
 
-void k_selector_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KSelector_OnMinimumSizeHint((const KSelector*)self, (intptr_t)callback);
+void k_selector_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KSelector_OnMinimumSizeHint((KSelector*)self, (intptr_t)callback);
 }
 
 int32_t k_selector_height_for_width(const void* self, int param1) {
@@ -1836,8 +1836,8 @@ int32_t k_selector_super_height_for_width(const void* self, int param1) {
     return KSelector_SuperHeightForWidth((KSelector*)self, param1);
 }
 
-void k_selector_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KSelector_OnHeightForWidth((const KSelector*)self, (intptr_t)callback);
+void k_selector_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KSelector_OnHeightForWidth((KSelector*)self, (intptr_t)callback);
 }
 
 bool k_selector_has_height_for_width(const void* self) {
@@ -1848,8 +1848,8 @@ bool k_selector_super_has_height_for_width(const void* self) {
     return KSelector_SuperHasHeightForWidth((KSelector*)self);
 }
 
-void k_selector_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KSelector_OnHasHeightForWidth((const KSelector*)self, (intptr_t)callback);
+void k_selector_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KSelector_OnHasHeightForWidth((KSelector*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_selector_paint_engine(const void* self) {
@@ -1860,8 +1860,8 @@ QPaintEngine* k_selector_super_paint_engine(const void* self) {
     return KSelector_SuperPaintEngine((KSelector*)self);
 }
 
-void k_selector_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KSelector_OnPaintEngine((const KSelector*)self, (intptr_t)callback);
+void k_selector_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KSelector_OnPaintEngine((KSelector*)self, (intptr_t)callback);
 }
 
 void k_selector_mouse_double_click_event(void* self, void* event) {
@@ -2100,8 +2100,8 @@ int32_t k_selector_super_metric(const void* self, int32_t param1) {
     return KSelector_SuperMetric((KSelector*)self, param1);
 }
 
-void k_selector_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KSelector_OnMetric((const KSelector*)self, (intptr_t)callback);
+void k_selector_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KSelector_OnMetric((KSelector*)self, (intptr_t)callback);
 }
 
 void k_selector_init_painter(const void* self, void* painter) {
@@ -2112,8 +2112,8 @@ void k_selector_super_init_painter(const void* self, void* painter) {
     KSelector_SuperInitPainter((KSelector*)self, (QPainter*)painter);
 }
 
-void k_selector_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KSelector_OnInitPainter((const KSelector*)self, (intptr_t)callback);
+void k_selector_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KSelector_OnInitPainter((KSelector*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_selector_redirected(const void* self, void* offset) {
@@ -2124,8 +2124,8 @@ QPaintDevice* k_selector_super_redirected(const void* self, void* offset) {
     return KSelector_SuperRedirected((KSelector*)self, (QPoint*)offset);
 }
 
-void k_selector_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KSelector_OnRedirected((const KSelector*)self, (intptr_t)callback);
+void k_selector_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KSelector_OnRedirected((KSelector*)self, (intptr_t)callback);
 }
 
 QPainter* k_selector_shared_painter(const void* self) {
@@ -2136,8 +2136,8 @@ QPainter* k_selector_super_shared_painter(const void* self) {
     return KSelector_SuperSharedPainter((KSelector*)self);
 }
 
-void k_selector_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KSelector_OnSharedPainter((const KSelector*)self, (intptr_t)callback);
+void k_selector_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KSelector_OnSharedPainter((KSelector*)self, (intptr_t)callback);
 }
 
 void k_selector_input_method_event(void* self, void* param1) {
@@ -2160,8 +2160,8 @@ QVariant* k_selector_super_input_method_query(const void* self, int32_t param1) 
     return KSelector_SuperInputMethodQuery((KSelector*)self, param1);
 }
 
-void k_selector_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KSelector_OnInputMethodQuery((const KSelector*)self, (intptr_t)callback);
+void k_selector_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KSelector_OnInputMethodQuery((KSelector*)self, (intptr_t)callback);
 }
 
 bool k_selector_focus_next_prev_child(void* self, bool next) {
@@ -2312,7 +2312,7 @@ const QMetaObject* k_gradientselector_meta_object(const void* self) {
     return KGradientSelector_MetaObject((KGradientSelector*)self);
 }
 
-void k_gradientselector_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_gradientselector_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KGradientSelector_OnMetaObject((KGradientSelector*)self, (intptr_t)callback);
 }
 
@@ -2421,7 +2421,7 @@ QSize* k_gradientselector_minimum_size(const void* self) {
     return KGradientSelector_MinimumSize((KGradientSelector*)self);
 }
 
-void k_gradientselector_on_minimum_size(const void* self, QSize* (*callback)(const void*)) {
+void k_gradientselector_on_minimum_size(void* self, QSize* (*callback)(const void*)) {
     KGradientSelector_OnMinimumSize((KGradientSelector*)self, (intptr_t)callback);
 }
 
@@ -2607,11 +2607,11 @@ void k_gradientselector_on_action_triggered(void* self, void (*callback)(void*, 
     QAbstractSlider_Connect_ActionTriggered((QAbstractSlider*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_gradientselector_as_q_paint_device(void* self) {
+QPaintDevice* k_gradientselector_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KGradientSelector* k_gradientselector_from_q_paint_device(void* _qpaintdevice) {
+KGradientSelector* k_gradientselector_from_q_paint_device(const void* _qpaintdevice) {
     return (KGradientSelector*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -4126,8 +4126,8 @@ int32_t k_gradientselector_super_dev_type(const void* self) {
     return KGradientSelector_SuperDevType((KGradientSelector*)self);
 }
 
-void k_gradientselector_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KGradientSelector_OnDevType((const KGradientSelector*)self, (intptr_t)callback);
+void k_gradientselector_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KGradientSelector_OnDevType((KGradientSelector*)self, (intptr_t)callback);
 }
 
 void k_gradientselector_set_visible(void* self, bool visible) {
@@ -4150,8 +4150,8 @@ QSize* k_gradientselector_super_size_hint(const void* self) {
     return KGradientSelector_SuperSizeHint((KGradientSelector*)self);
 }
 
-void k_gradientselector_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KGradientSelector_OnSizeHint((const KGradientSelector*)self, (intptr_t)callback);
+void k_gradientselector_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KGradientSelector_OnSizeHint((KGradientSelector*)self, (intptr_t)callback);
 }
 
 QSize* k_gradientselector_minimum_size_hint(const void* self) {
@@ -4162,8 +4162,8 @@ QSize* k_gradientselector_super_minimum_size_hint(const void* self) {
     return KGradientSelector_SuperMinimumSizeHint((KGradientSelector*)self);
 }
 
-void k_gradientselector_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KGradientSelector_OnMinimumSizeHint((const KGradientSelector*)self, (intptr_t)callback);
+void k_gradientselector_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KGradientSelector_OnMinimumSizeHint((KGradientSelector*)self, (intptr_t)callback);
 }
 
 int32_t k_gradientselector_height_for_width(const void* self, int param1) {
@@ -4174,8 +4174,8 @@ int32_t k_gradientselector_super_height_for_width(const void* self, int param1) 
     return KGradientSelector_SuperHeightForWidth((KGradientSelector*)self, param1);
 }
 
-void k_gradientselector_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KGradientSelector_OnHeightForWidth((const KGradientSelector*)self, (intptr_t)callback);
+void k_gradientselector_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KGradientSelector_OnHeightForWidth((KGradientSelector*)self, (intptr_t)callback);
 }
 
 bool k_gradientselector_has_height_for_width(const void* self) {
@@ -4186,8 +4186,8 @@ bool k_gradientselector_super_has_height_for_width(const void* self) {
     return KGradientSelector_SuperHasHeightForWidth((KGradientSelector*)self);
 }
 
-void k_gradientselector_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KGradientSelector_OnHasHeightForWidth((const KGradientSelector*)self, (intptr_t)callback);
+void k_gradientselector_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KGradientSelector_OnHasHeightForWidth((KGradientSelector*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_gradientselector_paint_engine(const void* self) {
@@ -4198,8 +4198,8 @@ QPaintEngine* k_gradientselector_super_paint_engine(const void* self) {
     return KGradientSelector_SuperPaintEngine((KGradientSelector*)self);
 }
 
-void k_gradientselector_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KGradientSelector_OnPaintEngine((const KGradientSelector*)self, (intptr_t)callback);
+void k_gradientselector_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KGradientSelector_OnPaintEngine((KGradientSelector*)self, (intptr_t)callback);
 }
 
 void k_gradientselector_mouse_double_click_event(void* self, void* event) {
@@ -4438,8 +4438,8 @@ int32_t k_gradientselector_super_metric(const void* self, int32_t param1) {
     return KGradientSelector_SuperMetric((KGradientSelector*)self, param1);
 }
 
-void k_gradientselector_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KGradientSelector_OnMetric((const KGradientSelector*)self, (intptr_t)callback);
+void k_gradientselector_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KGradientSelector_OnMetric((KGradientSelector*)self, (intptr_t)callback);
 }
 
 void k_gradientselector_init_painter(const void* self, void* painter) {
@@ -4450,8 +4450,8 @@ void k_gradientselector_super_init_painter(const void* self, void* painter) {
     KGradientSelector_SuperInitPainter((KGradientSelector*)self, (QPainter*)painter);
 }
 
-void k_gradientselector_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KGradientSelector_OnInitPainter((const KGradientSelector*)self, (intptr_t)callback);
+void k_gradientselector_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KGradientSelector_OnInitPainter((KGradientSelector*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_gradientselector_redirected(const void* self, void* offset) {
@@ -4462,8 +4462,8 @@ QPaintDevice* k_gradientselector_super_redirected(const void* self, void* offset
     return KGradientSelector_SuperRedirected((KGradientSelector*)self, (QPoint*)offset);
 }
 
-void k_gradientselector_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KGradientSelector_OnRedirected((const KGradientSelector*)self, (intptr_t)callback);
+void k_gradientselector_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KGradientSelector_OnRedirected((KGradientSelector*)self, (intptr_t)callback);
 }
 
 QPainter* k_gradientselector_shared_painter(const void* self) {
@@ -4474,8 +4474,8 @@ QPainter* k_gradientselector_super_shared_painter(const void* self) {
     return KGradientSelector_SuperSharedPainter((KGradientSelector*)self);
 }
 
-void k_gradientselector_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KGradientSelector_OnSharedPainter((const KGradientSelector*)self, (intptr_t)callback);
+void k_gradientselector_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KGradientSelector_OnSharedPainter((KGradientSelector*)self, (intptr_t)callback);
 }
 
 void k_gradientselector_input_method_event(void* self, void* param1) {
@@ -4498,8 +4498,8 @@ QVariant* k_gradientselector_super_input_method_query(const void* self, int32_t 
     return KGradientSelector_SuperInputMethodQuery((KGradientSelector*)self, param1);
 }
 
-void k_gradientselector_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KGradientSelector_OnInputMethodQuery((const KGradientSelector*)self, (intptr_t)callback);
+void k_gradientselector_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KGradientSelector_OnInputMethodQuery((KGradientSelector*)self, (intptr_t)callback);
 }
 
 bool k_gradientselector_focus_next_prev_child(void* self, bool next) {

@@ -36,7 +36,7 @@ const QMetaObject* k_filecustomdialog_meta_object(const void* self) {
     return KFileCustomDialog_MetaObject((KFileCustomDialog*)self);
 }
 
-void k_filecustomdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_filecustomdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFileCustomDialog_OnMetaObject((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
@@ -161,11 +161,11 @@ void k_filecustomdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_filecustomdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_filecustomdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KFileCustomDialog* k_filecustomdialog_from_q_paint_device(void* _qpaintdevice) {
+KFileCustomDialog* k_filecustomdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KFileCustomDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1568,8 +1568,8 @@ QSize* k_filecustomdialog_super_size_hint(const void* self) {
     return KFileCustomDialog_SuperSizeHint((KFileCustomDialog*)self);
 }
 
-void k_filecustomdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KFileCustomDialog_OnSizeHint((const KFileCustomDialog*)self, (intptr_t)callback);
+void k_filecustomdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KFileCustomDialog_OnSizeHint((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_filecustomdialog_minimum_size_hint(const void* self) {
@@ -1580,8 +1580,8 @@ QSize* k_filecustomdialog_super_minimum_size_hint(const void* self) {
     return KFileCustomDialog_SuperMinimumSizeHint((KFileCustomDialog*)self);
 }
 
-void k_filecustomdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KFileCustomDialog_OnMinimumSizeHint((const KFileCustomDialog*)self, (intptr_t)callback);
+void k_filecustomdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KFileCustomDialog_OnMinimumSizeHint((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
 void k_filecustomdialog_open(void* self) {
@@ -1712,8 +1712,8 @@ int32_t k_filecustomdialog_super_dev_type(const void* self) {
     return KFileCustomDialog_SuperDevType((KFileCustomDialog*)self);
 }
 
-void k_filecustomdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KFileCustomDialog_OnDevType((const KFileCustomDialog*)self, (intptr_t)callback);
+void k_filecustomdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KFileCustomDialog_OnDevType((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_filecustomdialog_height_for_width(const void* self, int param1) {
@@ -1724,8 +1724,8 @@ int32_t k_filecustomdialog_super_height_for_width(const void* self, int param1) 
     return KFileCustomDialog_SuperHeightForWidth((KFileCustomDialog*)self, param1);
 }
 
-void k_filecustomdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KFileCustomDialog_OnHeightForWidth((const KFileCustomDialog*)self, (intptr_t)callback);
+void k_filecustomdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KFileCustomDialog_OnHeightForWidth((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
 bool k_filecustomdialog_has_height_for_width(const void* self) {
@@ -1736,8 +1736,8 @@ bool k_filecustomdialog_super_has_height_for_width(const void* self) {
     return KFileCustomDialog_SuperHasHeightForWidth((KFileCustomDialog*)self);
 }
 
-void k_filecustomdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KFileCustomDialog_OnHasHeightForWidth((const KFileCustomDialog*)self, (intptr_t)callback);
+void k_filecustomdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KFileCustomDialog_OnHasHeightForWidth((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_filecustomdialog_paint_engine(const void* self) {
@@ -1748,8 +1748,8 @@ QPaintEngine* k_filecustomdialog_super_paint_engine(const void* self) {
     return KFileCustomDialog_SuperPaintEngine((KFileCustomDialog*)self);
 }
 
-void k_filecustomdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KFileCustomDialog_OnPaintEngine((const KFileCustomDialog*)self, (intptr_t)callback);
+void k_filecustomdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KFileCustomDialog_OnPaintEngine((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
 bool k_filecustomdialog_event(void* self, void* event) {
@@ -2024,8 +2024,8 @@ int32_t k_filecustomdialog_super_metric(const void* self, int32_t param1) {
     return KFileCustomDialog_SuperMetric((KFileCustomDialog*)self, param1);
 }
 
-void k_filecustomdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KFileCustomDialog_OnMetric((const KFileCustomDialog*)self, (intptr_t)callback);
+void k_filecustomdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KFileCustomDialog_OnMetric((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
 void k_filecustomdialog_init_painter(const void* self, void* painter) {
@@ -2036,8 +2036,8 @@ void k_filecustomdialog_super_init_painter(const void* self, void* painter) {
     KFileCustomDialog_SuperInitPainter((KFileCustomDialog*)self, (QPainter*)painter);
 }
 
-void k_filecustomdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KFileCustomDialog_OnInitPainter((const KFileCustomDialog*)self, (intptr_t)callback);
+void k_filecustomdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KFileCustomDialog_OnInitPainter((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_filecustomdialog_redirected(const void* self, void* offset) {
@@ -2048,8 +2048,8 @@ QPaintDevice* k_filecustomdialog_super_redirected(const void* self, void* offset
     return KFileCustomDialog_SuperRedirected((KFileCustomDialog*)self, (QPoint*)offset);
 }
 
-void k_filecustomdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KFileCustomDialog_OnRedirected((const KFileCustomDialog*)self, (intptr_t)callback);
+void k_filecustomdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KFileCustomDialog_OnRedirected((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_filecustomdialog_shared_painter(const void* self) {
@@ -2060,8 +2060,8 @@ QPainter* k_filecustomdialog_super_shared_painter(const void* self) {
     return KFileCustomDialog_SuperSharedPainter((KFileCustomDialog*)self);
 }
 
-void k_filecustomdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KFileCustomDialog_OnSharedPainter((const KFileCustomDialog*)self, (intptr_t)callback);
+void k_filecustomdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KFileCustomDialog_OnSharedPainter((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
 void k_filecustomdialog_input_method_event(void* self, void* param1) {
@@ -2084,8 +2084,8 @@ QVariant* k_filecustomdialog_super_input_method_query(const void* self, int32_t 
     return KFileCustomDialog_SuperInputMethodQuery((KFileCustomDialog*)self, param1);
 }
 
-void k_filecustomdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KFileCustomDialog_OnInputMethodQuery((const KFileCustomDialog*)self, (intptr_t)callback);
+void k_filecustomdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KFileCustomDialog_OnInputMethodQuery((KFileCustomDialog*)self, (intptr_t)callback);
 }
 
 bool k_filecustomdialog_focus_next_prev_child(void* self, bool next) {

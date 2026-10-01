@@ -22,7 +22,7 @@ const QMetaObject* q_scilexerverilog_meta_object(const void* self) {
     return QsciLexerVerilog_MetaObject((QsciLexerVerilog*)self);
 }
 
-void q_scilexerverilog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_scilexerverilog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QsciLexerVerilog_OnMetaObject((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
@@ -471,8 +471,8 @@ int32_t q_scilexerverilog_super_lexer_id(const void* self) {
     return QsciLexerVerilog_SuperLexerId((QsciLexerVerilog*)self);
 }
 
-void q_scilexerverilog_on_lexer_id(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerVerilog_OnLexerId((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_lexer_id(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerVerilog_OnLexerId((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerverilog_auto_completion_fillups(const void* self) {
@@ -483,8 +483,8 @@ const char* q_scilexerverilog_super_auto_completion_fillups(const void* self) {
     return QsciLexerVerilog_SuperAutoCompletionFillups((QsciLexerVerilog*)self);
 }
 
-void q_scilexerverilog_on_auto_completion_fillups(const void* self, const char* (*callback)(const void*)) {
-    QsciLexerVerilog_OnAutoCompletionFillups((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_auto_completion_fillups(void* self, const char* (*callback)(const void*)) {
+    QsciLexerVerilog_OnAutoCompletionFillups((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 const char** q_scilexerverilog_auto_completion_word_separators(const void* self) {
@@ -521,8 +521,8 @@ const char** q_scilexerverilog_super_auto_completion_word_separators(const void*
     return _ret;
 }
 
-void q_scilexerverilog_on_auto_completion_word_separators(const void* self, const char** (*callback)(const void*)) {
-    QsciLexerVerilog_OnAutoCompletionWordSeparators((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_auto_completion_word_separators(void* self, const char** (*callback)(const void*)) {
+    QsciLexerVerilog_OnAutoCompletionWordSeparators((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerverilog_block_end(const void* self, int* style) {
@@ -533,8 +533,8 @@ const char* q_scilexerverilog_super_block_end(const void* self, int* style) {
     return QsciLexerVerilog_SuperBlockEnd((QsciLexerVerilog*)self, style);
 }
 
-void q_scilexerverilog_on_block_end(const void* self, const char* (*callback)(const void*, int*)) {
-    QsciLexerVerilog_OnBlockEnd((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_block_end(void* self, const char* (*callback)(const void*, int*)) {
+    QsciLexerVerilog_OnBlockEnd((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerverilog_block_lookback(const void* self) {
@@ -545,8 +545,8 @@ int32_t q_scilexerverilog_super_block_lookback(const void* self) {
     return QsciLexerVerilog_SuperBlockLookback((QsciLexerVerilog*)self);
 }
 
-void q_scilexerverilog_on_block_lookback(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerVerilog_OnBlockLookback((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_block_lookback(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerVerilog_OnBlockLookback((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerverilog_block_start(const void* self, int* style) {
@@ -557,8 +557,8 @@ const char* q_scilexerverilog_super_block_start(const void* self, int* style) {
     return QsciLexerVerilog_SuperBlockStart((QsciLexerVerilog*)self, style);
 }
 
-void q_scilexerverilog_on_block_start(const void* self, const char* (*callback)(const void*, int*)) {
-    QsciLexerVerilog_OnBlockStart((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_block_start(void* self, const char* (*callback)(const void*, int*)) {
+    QsciLexerVerilog_OnBlockStart((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerverilog_block_start_keyword(const void* self, int* style) {
@@ -569,8 +569,8 @@ const char* q_scilexerverilog_super_block_start_keyword(const void* self, int* s
     return QsciLexerVerilog_SuperBlockStartKeyword((QsciLexerVerilog*)self, style);
 }
 
-void q_scilexerverilog_on_block_start_keyword(const void* self, const char* (*callback)(const void*, int*)) {
-    QsciLexerVerilog_OnBlockStartKeyword((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_block_start_keyword(void* self, const char* (*callback)(const void*, int*)) {
+    QsciLexerVerilog_OnBlockStartKeyword((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 bool q_scilexerverilog_case_sensitive(const void* self) {
@@ -581,8 +581,8 @@ bool q_scilexerverilog_super_case_sensitive(const void* self) {
     return QsciLexerVerilog_SuperCaseSensitive((QsciLexerVerilog*)self);
 }
 
-void q_scilexerverilog_on_case_sensitive(const void* self, bool (*callback)(const void*)) {
-    QsciLexerVerilog_OnCaseSensitive((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_case_sensitive(void* self, bool (*callback)(const void*)) {
+    QsciLexerVerilog_OnCaseSensitive((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerverilog_color(const void* self, int style) {
@@ -593,8 +593,8 @@ QColor* q_scilexerverilog_super_color(const void* self, int style) {
     return QsciLexerVerilog_SuperColor((QsciLexerVerilog*)self, style);
 }
 
-void q_scilexerverilog_on_color(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerVerilog_OnColor((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_color(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerVerilog_OnColor((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 bool q_scilexerverilog_eol_fill(const void* self, int style) {
@@ -605,8 +605,8 @@ bool q_scilexerverilog_super_eol_fill(const void* self, int style) {
     return QsciLexerVerilog_SuperEolFill((QsciLexerVerilog*)self, style);
 }
 
-void q_scilexerverilog_on_eol_fill(const void* self, bool (*callback)(const void*, int)) {
-    QsciLexerVerilog_OnEolFill((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_eol_fill(void* self, bool (*callback)(const void*, int)) {
+    QsciLexerVerilog_OnEolFill((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 QFont* q_scilexerverilog_font(const void* self, int style) {
@@ -617,8 +617,8 @@ QFont* q_scilexerverilog_super_font(const void* self, int style) {
     return QsciLexerVerilog_SuperFont((QsciLexerVerilog*)self, style);
 }
 
-void q_scilexerverilog_on_font(const void* self, QFont* (*callback)(const void*, int)) {
-    QsciLexerVerilog_OnFont((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_font(void* self, QFont* (*callback)(const void*, int)) {
+    QsciLexerVerilog_OnFont((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerverilog_indentation_guide_view(const void* self) {
@@ -629,8 +629,8 @@ int32_t q_scilexerverilog_super_indentation_guide_view(const void* self) {
     return QsciLexerVerilog_SuperIndentationGuideView((QsciLexerVerilog*)self);
 }
 
-void q_scilexerverilog_on_indentation_guide_view(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerVerilog_OnIndentationGuideView((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_indentation_guide_view(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerVerilog_OnIndentationGuideView((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerverilog_default_style(const void* self) {
@@ -641,8 +641,8 @@ int32_t q_scilexerverilog_super_default_style(const void* self) {
     return QsciLexerVerilog_SuperDefaultStyle((QsciLexerVerilog*)self);
 }
 
-void q_scilexerverilog_on_default_style(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerVerilog_OnDefaultStyle((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_default_style(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerVerilog_OnDefaultStyle((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerverilog_paper(const void* self, int style) {
@@ -653,8 +653,8 @@ QColor* q_scilexerverilog_super_paper(const void* self, int style) {
     return QsciLexerVerilog_SuperPaper((QsciLexerVerilog*)self, style);
 }
 
-void q_scilexerverilog_on_paper(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerVerilog_OnPaper((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_paper(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerVerilog_OnPaper((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerverilog_default_color2(const void* self, int style) {
@@ -665,8 +665,8 @@ QColor* q_scilexerverilog_super_default_color2(const void* self, int style) {
     return QsciLexerVerilog_SuperDefaultColor2((QsciLexerVerilog*)self, style);
 }
 
-void q_scilexerverilog_on_default_color2(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerVerilog_OnDefaultColor2((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_default_color2(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerVerilog_OnDefaultColor2((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 QFont* q_scilexerverilog_default_font2(const void* self, int style) {
@@ -677,8 +677,8 @@ QFont* q_scilexerverilog_super_default_font2(const void* self, int style) {
     return QsciLexerVerilog_SuperDefaultFont2((QsciLexerVerilog*)self, style);
 }
 
-void q_scilexerverilog_on_default_font2(const void* self, QFont* (*callback)(const void*, int)) {
-    QsciLexerVerilog_OnDefaultFont2((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_default_font2(void* self, QFont* (*callback)(const void*, int)) {
+    QsciLexerVerilog_OnDefaultFont2((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerverilog_default_paper2(const void* self, int style) {
@@ -689,8 +689,8 @@ QColor* q_scilexerverilog_super_default_paper2(const void* self, int style) {
     return QsciLexerVerilog_SuperDefaultPaper2((QsciLexerVerilog*)self, style);
 }
 
-void q_scilexerverilog_on_default_paper2(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerVerilog_OnDefaultPaper2((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_default_paper2(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerVerilog_OnDefaultPaper2((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 void q_scilexerverilog_set_editor(void* self, void* editor) {
@@ -713,8 +713,8 @@ int32_t q_scilexerverilog_super_style_bits_needed(const void* self) {
     return QsciLexerVerilog_SuperStyleBitsNeeded((QsciLexerVerilog*)self);
 }
 
-void q_scilexerverilog_on_style_bits_needed(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerVerilog_OnStyleBitsNeeded((const QsciLexerVerilog*)self, (intptr_t)callback);
+void q_scilexerverilog_on_style_bits_needed(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerVerilog_OnStyleBitsNeeded((QsciLexerVerilog*)self, (intptr_t)callback);
 }
 
 void q_scilexerverilog_set_auto_indent_style(void* self, int autoindentstyle) {

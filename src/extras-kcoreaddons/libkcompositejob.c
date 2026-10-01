@@ -18,7 +18,7 @@ const QMetaObject* k_compositejob_meta_object(const void* self) {
     return KCompositeJob_MetaObject((KCompositeJob*)self);
 }
 
-void k_compositejob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_compositejob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KCompositeJob_OnMetaObject((KCompositeJob*)self, (intptr_t)callback);
 }
 
@@ -526,8 +526,8 @@ const char* k_compositejob_super_error_string(const void* self) {
     return _ret;
 }
 
-void k_compositejob_on_error_string(const void* self, const char* (*callback)(const void*)) {
-    KCompositeJob_OnErrorString((const KCompositeJob*)self, (intptr_t)callback);
+void k_compositejob_on_error_string(void* self, const char* (*callback)(const void*)) {
+    KCompositeJob_OnErrorString((KCompositeJob*)self, (intptr_t)callback);
 }
 
 bool k_compositejob_event(void* self, void* event) {

@@ -19,7 +19,7 @@ const QMetaObject* k_texttranslator__translatorengineclient_meta_object(const vo
     return TextTranslator__TranslatorEngineClient_MetaObject((TextTranslator__TranslatorEngineClient*)self);
 }
 
-void k_texttranslator__translatorengineclient_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_texttranslator__translatorengineclient_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextTranslator__TranslatorEngineClient_OnMetaObject((TextTranslator__TranslatorEngineClient*)self, (intptr_t)callback);
 }
 
@@ -65,7 +65,7 @@ const char* k_texttranslator__translatorengineclient_name(const void* self) {
     return _ret;
 }
 
-void k_texttranslator__translatorengineclient_on_name(const void* self, const char* (*callback)(const void*)) {
+void k_texttranslator__translatorengineclient_on_name(void* self, const char* (*callback)(const void*)) {
     TextTranslator__TranslatorEngineClient_OnName((TextTranslator__TranslatorEngineClient*)self, (intptr_t)callback);
 }
 
@@ -76,7 +76,7 @@ const char* k_texttranslator__translatorengineclient_translated_name(const void*
     return _ret;
 }
 
-void k_texttranslator__translatorengineclient_on_translated_name(const void* self, const char* (*callback)(const void*)) {
+void k_texttranslator__translatorengineclient_on_translated_name(void* self, const char* (*callback)(const void*)) {
     TextTranslator__TranslatorEngineClient_OnTranslatedName((TextTranslator__TranslatorEngineClient*)self, (intptr_t)callback);
 }
 
@@ -178,7 +178,7 @@ bool k_texttranslator__translatorengineclient_has_configuration_dialog(const voi
     return TextTranslator__TranslatorEngineClient_HasConfigurationDialog((TextTranslator__TranslatorEngineClient*)self);
 }
 
-void k_texttranslator__translatorengineclient_on_has_configuration_dialog(const void* self, bool (*callback)(const void*)) {
+void k_texttranslator__translatorengineclient_on_has_configuration_dialog(void* self, bool (*callback)(const void*)) {
     TextTranslator__TranslatorEngineClient_OnHasConfigurationDialog((TextTranslator__TranslatorEngineClient*)self, (intptr_t)callback);
 }
 
@@ -214,7 +214,7 @@ bool k_texttranslator__translatorengineclient_has_invert_support(const void* sel
     return TextTranslator__TranslatorEngineClient_HasInvertSupport((TextTranslator__TranslatorEngineClient*)self);
 }
 
-void k_texttranslator__translatorengineclient_on_has_invert_support(const void* self, bool (*callback)(const void*)) {
+void k_texttranslator__translatorengineclient_on_has_invert_support(void* self, bool (*callback)(const void*)) {
     TextTranslator__TranslatorEngineClient_OnHasInvertSupport((TextTranslator__TranslatorEngineClient*)self, (intptr_t)callback);
 }
 
@@ -226,7 +226,7 @@ int32_t k_texttranslator__translatorengineclient_engine_type(const void* self) {
     return TextTranslator__TranslatorEngineClient_EngineType((TextTranslator__TranslatorEngineClient*)self);
 }
 
-void k_texttranslator__translatorengineclient_on_engine_type(const void* self, int32_t (*callback)(const void*)) {
+void k_texttranslator__translatorengineclient_on_engine_type(void* self, int32_t (*callback)(const void*)) {
     TextTranslator__TranslatorEngineClient_OnEngineType((TextTranslator__TranslatorEngineClient*)self, (intptr_t)callback);
 }
 
@@ -275,7 +275,7 @@ bool k_texttranslator__translatorengineclient_is_supported(const void* self, int
     return TextTranslator__TranslatorEngineClient_IsSupported((TextTranslator__TranslatorEngineClient*)self, lang);
 }
 
-void k_texttranslator__translatorengineclient_on_is_supported(const void* self, bool (*callback)(const void*, int32_t)) {
+void k_texttranslator__translatorengineclient_on_is_supported(void* self, bool (*callback)(const void*, int32_t)) {
     TextTranslator__TranslatorEngineClient_OnIsSupported((TextTranslator__TranslatorEngineClient*)self, (intptr_t)callback);
 }
 

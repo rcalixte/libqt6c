@@ -22,7 +22,7 @@ const QMetaObject* q_accounts__watch_meta_object(const void* self) {
     return Accounts__Watch_MetaObject((Accounts__Watch*)self);
 }
 
-void q_accounts__watch_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_accounts__watch_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Accounts__Watch_OnMetaObject((Accounts__Watch*)self, (intptr_t)callback);
 }
 
@@ -412,7 +412,7 @@ const QMetaObject* q_accounts__account_meta_object(const void* self) {
     return Accounts__Account_MetaObject((Accounts__Account*)self);
 }
 
-void q_accounts__account_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_accounts__account_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Accounts__Account_OnMetaObject((Accounts__Account*)self, (intptr_t)callback);
 }
 

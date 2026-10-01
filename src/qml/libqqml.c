@@ -88,7 +88,7 @@ const QMetaObject* q_qmltypenotavailable_meta_object(const void* self) {
     return QQmlTypeNotAvailable_MetaObject((QQmlTypeNotAvailable*)self);
 }
 
-void q_qmltypenotavailable_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_qmltypenotavailable_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlTypeNotAvailable_OnMetaObject((QQmlTypeNotAvailable*)self, (intptr_t)callback);
 }
 

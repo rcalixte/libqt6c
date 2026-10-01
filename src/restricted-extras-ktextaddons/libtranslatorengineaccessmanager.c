@@ -18,7 +18,7 @@ const QMetaObject* k_texttranslator__translatorengineaccessmanager_meta_object(c
     return TextTranslator__TranslatorEngineAccessManager_MetaObject((TextTranslator__TranslatorEngineAccessManager*)self);
 }
 
-void k_texttranslator__translatorengineaccessmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_texttranslator__translatorengineaccessmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextTranslator__TranslatorEngineAccessManager_OnMetaObject((TextTranslator__TranslatorEngineAccessManager*)self, (intptr_t)callback);
 }
 

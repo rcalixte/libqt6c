@@ -24,10 +24,10 @@ const QMetaObject* q_sgtexture_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGTexture*
+/// @param self QSGTexture*
 /// @param callback const QMetaObject* func(const QSGTexture* self)
 ///
-void q_sgtexture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_sgtexture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -99,10 +99,10 @@ int64_t q_sgtexture_comparison_key(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGTexture*
+/// @param self QSGTexture*
 /// @param callback int64_t func(const QSGTexture* self)
 ///
-void q_sgtexture_on_comparison_key(const void* self, int64_t (*callback)(const void*));
+void q_sgtexture_on_comparison_key(void* self, int64_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtexture.html#textureSize)
 ///
@@ -116,12 +116,12 @@ QSize* q_sgtexture_texture_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGTexture*
+/// @param self QSGTexture*
 /// @param callback QSize* func(const QSGTexture* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sgtexture_on_texture_size(const void* self, QSize* (*callback)(const void*));
+void q_sgtexture_on_texture_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtexture.html#hasAlphaChannel)
 ///
@@ -135,10 +135,10 @@ bool q_sgtexture_has_alpha_channel(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGTexture*
+/// @param self QSGTexture*
 /// @param callback bool func(const QSGTexture* self)
 ///
-void q_sgtexture_on_has_alpha_channel(const void* self, bool (*callback)(const void*));
+void q_sgtexture_on_has_alpha_channel(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtexture.html#hasMipmaps)
 ///
@@ -152,10 +152,10 @@ bool q_sgtexture_has_mipmaps(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGTexture*
+/// @param self QSGTexture*
 /// @param callback bool func(const QSGTexture* self)
 ///
-void q_sgtexture_on_has_mipmaps(const void* self, bool (*callback)(const void*));
+void q_sgtexture_on_has_mipmaps(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtexture.html#normalizedTextureSubRect)
 ///
@@ -167,12 +167,12 @@ QRectF* q_sgtexture_normalized_texture_sub_rect(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGTexture*
+/// @param self QSGTexture*
 /// @param callback QRectF* func(const QSGTexture* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sgtexture_on_normalized_texture_sub_rect(const void* self, QRectF* (*callback)(const void*));
+void q_sgtexture_on_normalized_texture_sub_rect(void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtexture.html#normalizedTextureSubRect)
 ///
@@ -192,10 +192,10 @@ bool q_sgtexture_is_atlas_texture(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGTexture*
+/// @param self QSGTexture*
 /// @param callback bool func(const QSGTexture* self)
 ///
-void q_sgtexture_on_is_atlas_texture(const void* self, bool (*callback)(const void*));
+void q_sgtexture_on_is_atlas_texture(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgtexture.html#isAtlasTexture)
 ///
@@ -1020,10 +1020,10 @@ QObject* q_sgtexture_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGTexture*
+/// @param self QSGTexture*
 /// @param callback QObject* func(QSGTexture* self)
 ///
-void q_sgtexture_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_sgtexture_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1051,10 +1051,10 @@ int32_t q_sgtexture_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGTexture*
+/// @param self QSGTexture*
 /// @param callback int32_t func(QSGTexture* self)
 ///
-void q_sgtexture_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_sgtexture_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1084,10 +1084,10 @@ int32_t q_sgtexture_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGTexture*
+/// @param self QSGTexture*
 /// @param callback int32_t func(QSGTexture* self, const char* signal)
 ///
-void q_sgtexture_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_sgtexture_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1117,10 +1117,10 @@ bool q_sgtexture_super_is_signal_connected(const void* self, const void* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGTexture*
+/// @param self QSGTexture*
 /// @param callback bool func(QSGTexture* self, QMetaMethod* signal)
 ///
-void q_sgtexture_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_sgtexture_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1157,10 +1157,10 @@ const QMetaObject* q_sgdynamictexture_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGDynamicTexture*
+/// @param self QSGDynamicTexture*
 /// @param callback const QMetaObject* func(const QSGDynamicTexture* self)
 ///
-void q_sgdynamictexture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_sgdynamictexture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1825,10 +1825,10 @@ int64_t q_sgdynamictexture_comparison_key(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGDynamicTexture*
+/// @param self QSGDynamicTexture*
 /// @param callback int64_t func(QSGDynamicTexture* self)
 ///
-void q_sgdynamictexture_on_comparison_key(const void* self, int64_t (*callback)(const void*));
+void q_sgdynamictexture_on_comparison_key(void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QSGTexture
 ///
@@ -1848,12 +1848,12 @@ QSize* q_sgdynamictexture_texture_size(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGDynamicTexture*
+/// @param self QSGDynamicTexture*
 /// @param callback QSize* func(QSGDynamicTexture* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sgdynamictexture_on_texture_size(const void* self, QSize* (*callback)(const void*));
+void q_sgdynamictexture_on_texture_size(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QSGTexture
 ///
@@ -1873,10 +1873,10 @@ bool q_sgdynamictexture_has_alpha_channel(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGDynamicTexture*
+/// @param self QSGDynamicTexture*
 /// @param callback bool func(QSGDynamicTexture* self)
 ///
-void q_sgdynamictexture_on_has_alpha_channel(const void* self, bool (*callback)(const void*));
+void q_sgdynamictexture_on_has_alpha_channel(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGTexture
 ///
@@ -1896,10 +1896,10 @@ bool q_sgdynamictexture_has_mipmaps(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGDynamicTexture*
+/// @param self QSGDynamicTexture*
 /// @param callback bool func(QSGDynamicTexture* self)
 ///
-void q_sgdynamictexture_on_has_mipmaps(const void* self, bool (*callback)(const void*));
+void q_sgdynamictexture_on_has_mipmaps(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGTexture
 ///
@@ -1927,12 +1927,12 @@ QRectF* q_sgdynamictexture_super_normalized_texture_sub_rect(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGDynamicTexture*
+/// @param self QSGDynamicTexture*
 /// @param callback QRectF* func(QSGDynamicTexture* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sgdynamictexture_on_normalized_texture_sub_rect(const void* self, QRectF* (*callback)(const void*));
+void q_sgdynamictexture_on_normalized_texture_sub_rect(void* self, QRectF* (*callback)(const void*));
 
 /// Inherited from QSGTexture
 ///
@@ -1960,10 +1960,10 @@ bool q_sgdynamictexture_super_is_atlas_texture(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGDynamicTexture*
+/// @param self QSGDynamicTexture*
 /// @param callback bool func(QSGDynamicTexture* self)
 ///
-void q_sgdynamictexture_on_is_atlas_texture(const void* self, bool (*callback)(const void*));
+void q_sgdynamictexture_on_is_atlas_texture(void* self, bool (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2228,10 +2228,10 @@ void* q_sgdynamictexture_super_resolve_interface(const void* self, const char* n
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGDynamicTexture*
+/// @param self QSGDynamicTexture*
 /// @param callback void* func(QSGDynamicTexture* self, const char* name, int revision)
 ///
-void q_sgdynamictexture_on_resolve_interface(const void* self, void* (*callback)(const void*, const char*, int));
+void q_sgdynamictexture_on_resolve_interface(void* self, void* (*callback)(const void*, const char*, int));
 
 /// Inherited from QObject
 ///
@@ -2259,10 +2259,10 @@ QObject* q_sgdynamictexture_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGDynamicTexture*
+/// @param self QSGDynamicTexture*
 /// @param callback QObject* func(QSGDynamicTexture* self)
 ///
-void q_sgdynamictexture_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_sgdynamictexture_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2290,10 +2290,10 @@ int32_t q_sgdynamictexture_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGDynamicTexture*
+/// @param self QSGDynamicTexture*
 /// @param callback int32_t func(QSGDynamicTexture* self)
 ///
-void q_sgdynamictexture_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_sgdynamictexture_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2323,10 +2323,10 @@ int32_t q_sgdynamictexture_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGDynamicTexture*
+/// @param self QSGDynamicTexture*
 /// @param callback int32_t func(QSGDynamicTexture* self, const char* signal)
 ///
-void q_sgdynamictexture_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_sgdynamictexture_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2356,10 +2356,10 @@ bool q_sgdynamictexture_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGDynamicTexture*
+/// @param self QSGDynamicTexture*
 /// @param callback bool func(QSGDynamicTexture* self, QMetaMethod* signal)
 ///
-void q_sgdynamictexture_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_sgdynamictexture_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

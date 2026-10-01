@@ -181,10 +181,10 @@ QEvent* k_parts__partactivateevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__PartActivateEvent*
+/// @param self KParts__PartActivateEvent*
 /// @param callback QEvent* func(KParts__PartActivateEvent* self)
 ///
-void k_parts__partactivateevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void k_parts__partactivateevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///

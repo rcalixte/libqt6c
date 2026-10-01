@@ -31,7 +31,7 @@ const QMetaObject* q_frame_meta_object(const void* self) {
     return QFrame_MetaObject((QFrame*)self);
 }
 
-void q_frame_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_frame_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QFrame_OnMetaObject((QFrame*)self, (intptr_t)callback);
 }
 
@@ -86,7 +86,7 @@ QSize* q_frame_size_hint(const void* self) {
     return QFrame_SizeHint((QFrame*)self);
 }
 
-void q_frame_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_frame_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QFrame_OnSizeHint((QFrame*)self, (intptr_t)callback);
 }
 
@@ -178,7 +178,7 @@ void q_frame_init_style_option(const void* self, void* option) {
     QFrame_InitStyleOption((QFrame*)self, (QStyleOptionFrame*)option);
 }
 
-void q_frame_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_frame_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QFrame_OnInitStyleOption((QFrame*)self, (intptr_t)callback);
 }
 
@@ -200,11 +200,11 @@ const char* q_frame_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_frame_as_q_paint_device(void* self) {
+QPaintDevice* q_frame_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QFrame* q_frame_from_q_paint_device(void* _qpaintdevice) {
+QFrame* q_frame_from_q_paint_device(const void* _qpaintdevice) {
     return (QFrame*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1595,8 +1595,8 @@ int32_t q_frame_super_dev_type(const void* self) {
     return QFrame_SuperDevType((QFrame*)self);
 }
 
-void q_frame_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QFrame_OnDevType((const QFrame*)self, (intptr_t)callback);
+void q_frame_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QFrame_OnDevType((QFrame*)self, (intptr_t)callback);
 }
 
 void q_frame_set_visible(void* self, bool visible) {
@@ -1619,8 +1619,8 @@ QSize* q_frame_super_minimum_size_hint(const void* self) {
     return QFrame_SuperMinimumSizeHint((QFrame*)self);
 }
 
-void q_frame_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QFrame_OnMinimumSizeHint((const QFrame*)self, (intptr_t)callback);
+void q_frame_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QFrame_OnMinimumSizeHint((QFrame*)self, (intptr_t)callback);
 }
 
 int32_t q_frame_height_for_width(const void* self, int param1) {
@@ -1631,8 +1631,8 @@ int32_t q_frame_super_height_for_width(const void* self, int param1) {
     return QFrame_SuperHeightForWidth((QFrame*)self, param1);
 }
 
-void q_frame_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QFrame_OnHeightForWidth((const QFrame*)self, (intptr_t)callback);
+void q_frame_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QFrame_OnHeightForWidth((QFrame*)self, (intptr_t)callback);
 }
 
 bool q_frame_has_height_for_width(const void* self) {
@@ -1643,8 +1643,8 @@ bool q_frame_super_has_height_for_width(const void* self) {
     return QFrame_SuperHasHeightForWidth((QFrame*)self);
 }
 
-void q_frame_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QFrame_OnHasHeightForWidth((const QFrame*)self, (intptr_t)callback);
+void q_frame_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QFrame_OnHasHeightForWidth((QFrame*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_frame_paint_engine(const void* self) {
@@ -1655,8 +1655,8 @@ QPaintEngine* q_frame_super_paint_engine(const void* self) {
     return QFrame_SuperPaintEngine((QFrame*)self);
 }
 
-void q_frame_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QFrame_OnPaintEngine((const QFrame*)self, (intptr_t)callback);
+void q_frame_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QFrame_OnPaintEngine((QFrame*)self, (intptr_t)callback);
 }
 
 void q_frame_mouse_press_event(void* self, void* event) {
@@ -1955,8 +1955,8 @@ int32_t q_frame_super_metric(const void* self, int32_t param1) {
     return QFrame_SuperMetric((QFrame*)self, param1);
 }
 
-void q_frame_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QFrame_OnMetric((const QFrame*)self, (intptr_t)callback);
+void q_frame_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QFrame_OnMetric((QFrame*)self, (intptr_t)callback);
 }
 
 void q_frame_init_painter(const void* self, void* painter) {
@@ -1967,8 +1967,8 @@ void q_frame_super_init_painter(const void* self, void* painter) {
     QFrame_SuperInitPainter((QFrame*)self, (QPainter*)painter);
 }
 
-void q_frame_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QFrame_OnInitPainter((const QFrame*)self, (intptr_t)callback);
+void q_frame_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QFrame_OnInitPainter((QFrame*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_frame_redirected(const void* self, void* offset) {
@@ -1979,8 +1979,8 @@ QPaintDevice* q_frame_super_redirected(const void* self, void* offset) {
     return QFrame_SuperRedirected((QFrame*)self, (QPoint*)offset);
 }
 
-void q_frame_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QFrame_OnRedirected((const QFrame*)self, (intptr_t)callback);
+void q_frame_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QFrame_OnRedirected((QFrame*)self, (intptr_t)callback);
 }
 
 QPainter* q_frame_shared_painter(const void* self) {
@@ -1991,8 +1991,8 @@ QPainter* q_frame_super_shared_painter(const void* self) {
     return QFrame_SuperSharedPainter((QFrame*)self);
 }
 
-void q_frame_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QFrame_OnSharedPainter((const QFrame*)self, (intptr_t)callback);
+void q_frame_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QFrame_OnSharedPainter((QFrame*)self, (intptr_t)callback);
 }
 
 void q_frame_input_method_event(void* self, void* param1) {
@@ -2015,8 +2015,8 @@ QVariant* q_frame_super_input_method_query(const void* self, int32_t param1) {
     return QFrame_SuperInputMethodQuery((QFrame*)self, param1);
 }
 
-void q_frame_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QFrame_OnInputMethodQuery((const QFrame*)self, (intptr_t)callback);
+void q_frame_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QFrame_OnInputMethodQuery((QFrame*)self, (intptr_t)callback);
 }
 
 bool q_frame_focus_next_prev_child(void* self, bool next) {

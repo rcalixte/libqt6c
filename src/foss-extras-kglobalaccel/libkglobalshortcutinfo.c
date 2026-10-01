@@ -18,7 +18,7 @@ const QMetaObject* k_globalshortcutinfo_meta_object(const void* self) {
     return KGlobalShortcutInfo_MetaObject((KGlobalShortcutInfo*)self);
 }
 
-void k_globalshortcutinfo_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_globalshortcutinfo_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KGlobalShortcutInfo_OnMetaObject((KGlobalShortcutInfo*)self, (intptr_t)callback);
 }
 

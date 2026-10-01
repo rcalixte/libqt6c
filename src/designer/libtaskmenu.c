@@ -10,7 +10,7 @@ QAction* q_designertaskmenuextension_preferred_edit_action(const void* self) {
     return QDesignerTaskMenuExtension_PreferredEditAction((QDesignerTaskMenuExtension*)self);
 }
 
-void q_designertaskmenuextension_on_preferred_edit_action(const void* self, QAction* (*callback)(const void*)) {
+void q_designertaskmenuextension_on_preferred_edit_action(void* self, QAction* (*callback)(const void*)) {
     QDesignerTaskMenuExtension_OnPreferredEditAction((QDesignerTaskMenuExtension*)self, (intptr_t)callback);
 }
 
@@ -23,7 +23,7 @@ libqt_list /* of QAction* */ q_designertaskmenuextension_task_actions(const void
     return _arr;
 }
 
-void q_designertaskmenuextension_on_task_actions(const void* self, libqt_list /* of QAction* */ (*callback)(const void*)) {
+void q_designertaskmenuextension_on_task_actions(void* self, libqt_list /* of QAction* */ (*callback)(const void*)) {
     QDesignerTaskMenuExtension_OnTaskActions((QDesignerTaskMenuExtension*)self, (intptr_t)callback);
 }
 

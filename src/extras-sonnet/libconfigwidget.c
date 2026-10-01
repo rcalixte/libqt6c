@@ -21,7 +21,7 @@ const QMetaObject* k_sonnet__configwidget_meta_object(const void* self) {
     return Sonnet__ConfigWidget_MetaObject((Sonnet__ConfigWidget*)self);
 }
 
-void k_sonnet__configwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_sonnet__configwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Sonnet__ConfigWidget_OnMetaObject((Sonnet__ConfigWidget*)self, (intptr_t)callback);
 }
 
@@ -117,11 +117,11 @@ const char* k_sonnet__configwidget_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_sonnet__configwidget_as_q_paint_device(void* self) {
+QPaintDevice* k_sonnet__configwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-Sonnet__ConfigWidget* k_sonnet__configwidget_from_q_paint_device(void* _qpaintdevice) {
+Sonnet__ConfigWidget* k_sonnet__configwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (Sonnet__ConfigWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1512,8 +1512,8 @@ int32_t k_sonnet__configwidget_super_dev_type(const void* self) {
     return Sonnet__ConfigWidget_SuperDevType((Sonnet__ConfigWidget*)self);
 }
 
-void k_sonnet__configwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    Sonnet__ConfigWidget_OnDevType((const Sonnet__ConfigWidget*)self, (intptr_t)callback);
+void k_sonnet__configwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    Sonnet__ConfigWidget_OnDevType((Sonnet__ConfigWidget*)self, (intptr_t)callback);
 }
 
 void k_sonnet__configwidget_set_visible(void* self, bool visible) {
@@ -1536,8 +1536,8 @@ QSize* k_sonnet__configwidget_super_size_hint(const void* self) {
     return Sonnet__ConfigWidget_SuperSizeHint((Sonnet__ConfigWidget*)self);
 }
 
-void k_sonnet__configwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    Sonnet__ConfigWidget_OnSizeHint((const Sonnet__ConfigWidget*)self, (intptr_t)callback);
+void k_sonnet__configwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    Sonnet__ConfigWidget_OnSizeHint((Sonnet__ConfigWidget*)self, (intptr_t)callback);
 }
 
 QSize* k_sonnet__configwidget_minimum_size_hint(const void* self) {
@@ -1548,8 +1548,8 @@ QSize* k_sonnet__configwidget_super_minimum_size_hint(const void* self) {
     return Sonnet__ConfigWidget_SuperMinimumSizeHint((Sonnet__ConfigWidget*)self);
 }
 
-void k_sonnet__configwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    Sonnet__ConfigWidget_OnMinimumSizeHint((const Sonnet__ConfigWidget*)self, (intptr_t)callback);
+void k_sonnet__configwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    Sonnet__ConfigWidget_OnMinimumSizeHint((Sonnet__ConfigWidget*)self, (intptr_t)callback);
 }
 
 int32_t k_sonnet__configwidget_height_for_width(const void* self, int param1) {
@@ -1560,8 +1560,8 @@ int32_t k_sonnet__configwidget_super_height_for_width(const void* self, int para
     return Sonnet__ConfigWidget_SuperHeightForWidth((Sonnet__ConfigWidget*)self, param1);
 }
 
-void k_sonnet__configwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    Sonnet__ConfigWidget_OnHeightForWidth((const Sonnet__ConfigWidget*)self, (intptr_t)callback);
+void k_sonnet__configwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    Sonnet__ConfigWidget_OnHeightForWidth((Sonnet__ConfigWidget*)self, (intptr_t)callback);
 }
 
 bool k_sonnet__configwidget_has_height_for_width(const void* self) {
@@ -1572,8 +1572,8 @@ bool k_sonnet__configwidget_super_has_height_for_width(const void* self) {
     return Sonnet__ConfigWidget_SuperHasHeightForWidth((Sonnet__ConfigWidget*)self);
 }
 
-void k_sonnet__configwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    Sonnet__ConfigWidget_OnHasHeightForWidth((const Sonnet__ConfigWidget*)self, (intptr_t)callback);
+void k_sonnet__configwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    Sonnet__ConfigWidget_OnHasHeightForWidth((Sonnet__ConfigWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_sonnet__configwidget_paint_engine(const void* self) {
@@ -1584,8 +1584,8 @@ QPaintEngine* k_sonnet__configwidget_super_paint_engine(const void* self) {
     return Sonnet__ConfigWidget_SuperPaintEngine((Sonnet__ConfigWidget*)self);
 }
 
-void k_sonnet__configwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    Sonnet__ConfigWidget_OnPaintEngine((const Sonnet__ConfigWidget*)self, (intptr_t)callback);
+void k_sonnet__configwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    Sonnet__ConfigWidget_OnPaintEngine((Sonnet__ConfigWidget*)self, (intptr_t)callback);
 }
 
 bool k_sonnet__configwidget_event(void* self, void* event) {
@@ -1920,8 +1920,8 @@ int32_t k_sonnet__configwidget_super_metric(const void* self, int32_t param1) {
     return Sonnet__ConfigWidget_SuperMetric((Sonnet__ConfigWidget*)self, param1);
 }
 
-void k_sonnet__configwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    Sonnet__ConfigWidget_OnMetric((const Sonnet__ConfigWidget*)self, (intptr_t)callback);
+void k_sonnet__configwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    Sonnet__ConfigWidget_OnMetric((Sonnet__ConfigWidget*)self, (intptr_t)callback);
 }
 
 void k_sonnet__configwidget_init_painter(const void* self, void* painter) {
@@ -1932,8 +1932,8 @@ void k_sonnet__configwidget_super_init_painter(const void* self, void* painter) 
     Sonnet__ConfigWidget_SuperInitPainter((Sonnet__ConfigWidget*)self, (QPainter*)painter);
 }
 
-void k_sonnet__configwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    Sonnet__ConfigWidget_OnInitPainter((const Sonnet__ConfigWidget*)self, (intptr_t)callback);
+void k_sonnet__configwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    Sonnet__ConfigWidget_OnInitPainter((Sonnet__ConfigWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_sonnet__configwidget_redirected(const void* self, void* offset) {
@@ -1944,8 +1944,8 @@ QPaintDevice* k_sonnet__configwidget_super_redirected(const void* self, void* of
     return Sonnet__ConfigWidget_SuperRedirected((Sonnet__ConfigWidget*)self, (QPoint*)offset);
 }
 
-void k_sonnet__configwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    Sonnet__ConfigWidget_OnRedirected((const Sonnet__ConfigWidget*)self, (intptr_t)callback);
+void k_sonnet__configwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    Sonnet__ConfigWidget_OnRedirected((Sonnet__ConfigWidget*)self, (intptr_t)callback);
 }
 
 QPainter* k_sonnet__configwidget_shared_painter(const void* self) {
@@ -1956,8 +1956,8 @@ QPainter* k_sonnet__configwidget_super_shared_painter(const void* self) {
     return Sonnet__ConfigWidget_SuperSharedPainter((Sonnet__ConfigWidget*)self);
 }
 
-void k_sonnet__configwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    Sonnet__ConfigWidget_OnSharedPainter((const Sonnet__ConfigWidget*)self, (intptr_t)callback);
+void k_sonnet__configwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    Sonnet__ConfigWidget_OnSharedPainter((Sonnet__ConfigWidget*)self, (intptr_t)callback);
 }
 
 void k_sonnet__configwidget_input_method_event(void* self, void* param1) {
@@ -1980,8 +1980,8 @@ QVariant* k_sonnet__configwidget_super_input_method_query(const void* self, int3
     return Sonnet__ConfigWidget_SuperInputMethodQuery((Sonnet__ConfigWidget*)self, param1);
 }
 
-void k_sonnet__configwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    Sonnet__ConfigWidget_OnInputMethodQuery((const Sonnet__ConfigWidget*)self, (intptr_t)callback);
+void k_sonnet__configwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    Sonnet__ConfigWidget_OnInputMethodQuery((Sonnet__ConfigWidget*)self, (intptr_t)callback);
 }
 
 bool k_sonnet__configwidget_focus_next_prev_child(void* self, bool next) {

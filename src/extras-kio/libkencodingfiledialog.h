@@ -482,9 +482,9 @@ void k_encodingfiledialog_reject(void* self);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self KEncodingFileDialog*
+/// @param self const KEncodingFileDialog*
 ///
-QPaintDevice* k_encodingfiledialog_as_q_paint_device(void* self);
+QPaintDevice* k_encodingfiledialog_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -492,7 +492,7 @@ QPaintDevice* k_encodingfiledialog_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-KEncodingFileDialog* k_encodingfiledialog_from_q_paint_device(void* _qpaintdevice);
+KEncodingFileDialog* k_encodingfiledialog_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///

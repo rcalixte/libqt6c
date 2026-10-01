@@ -18,7 +18,7 @@ const QMetaObject* k_startupinfo_meta_object(const void* self) {
     return KStartupInfo_MetaObject((KStartupInfo*)self);
 }
 
-void k_startupinfo_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_startupinfo_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KStartupInfo_OnMetaObject((KStartupInfo*)self, (intptr_t)callback);
 }
 

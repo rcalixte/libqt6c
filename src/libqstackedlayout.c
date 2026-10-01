@@ -26,7 +26,7 @@ const QMetaObject* q_stackedlayout_meta_object(const void* self) {
     return QStackedLayout_MetaObject((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_stackedlayout_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QStackedLayout_OnMetaObject((QStackedLayout*)self, (intptr_t)callback);
 }
 
@@ -89,7 +89,7 @@ int32_t q_stackedlayout_count(const void* self) {
     return QStackedLayout_Count((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_count(const void* self, int32_t (*callback)(const void*)) {
+void q_stackedlayout_on_count(void* self, int32_t (*callback)(const void*)) {
     QStackedLayout_OnCount((QStackedLayout*)self, (intptr_t)callback);
 }
 
@@ -121,7 +121,7 @@ QSize* q_stackedlayout_size_hint(const void* self) {
     return QStackedLayout_SizeHint((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_stackedlayout_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QStackedLayout_OnSizeHint((QStackedLayout*)self, (intptr_t)callback);
 }
 
@@ -133,7 +133,7 @@ QSize* q_stackedlayout_minimum_size(const void* self) {
     return QStackedLayout_MinimumSize((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_minimum_size(const void* self, QSize* (*callback)(const void*)) {
+void q_stackedlayout_on_minimum_size(void* self, QSize* (*callback)(const void*)) {
     QStackedLayout_OnMinimumSize((QStackedLayout*)self, (intptr_t)callback);
 }
 
@@ -145,7 +145,7 @@ QLayoutItem* q_stackedlayout_item_at(const void* self, int param1) {
     return QStackedLayout_ItemAt((QStackedLayout*)self, param1);
 }
 
-void q_stackedlayout_on_item_at(const void* self, QLayoutItem* (*callback)(const void*, int)) {
+void q_stackedlayout_on_item_at(void* self, QLayoutItem* (*callback)(const void*, int)) {
     QStackedLayout_OnItemAt((QStackedLayout*)self, (intptr_t)callback);
 }
 
@@ -181,7 +181,7 @@ bool q_stackedlayout_has_height_for_width(const void* self) {
     return QStackedLayout_HasHeightForWidth((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
+void q_stackedlayout_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
     QStackedLayout_OnHasHeightForWidth((QStackedLayout*)self, (intptr_t)callback);
 }
 
@@ -193,7 +193,7 @@ int32_t q_stackedlayout_height_for_width(const void* self, int width) {
     return QStackedLayout_HeightForWidth((QStackedLayout*)self, width);
 }
 
-void q_stackedlayout_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+void q_stackedlayout_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
     QStackedLayout_OnHeightForWidth((QStackedLayout*)self, (intptr_t)callback);
 }
 
@@ -239,11 +239,11 @@ const char* q_stackedlayout_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QLayoutItem* q_stackedlayout_as_q_layout_item(void* self) {
+QLayoutItem* q_stackedlayout_as_q_layout_item(const void* self) {
     return QLayout_AsQLayoutItem((QLayout*)self);
 }
 
-QStackedLayout* q_stackedlayout_from_q_layout_item(void* _qlayoutitem) {
+QStackedLayout* q_stackedlayout_from_q_layout_item(const void* _qlayoutitem) {
     return (QStackedLayout*)QLayout_FromQLayoutItem((QLayoutItem*)_qlayoutitem);
 }
 
@@ -319,7 +319,7 @@ int32_t q_stackedlayout_index_of2(const void* self, const void* param1) {
     return QLayout_IndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
-void q_stackedlayout_on_index_of2(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_stackedlayout_on_index_of2(void* self, int32_t (*callback)(const void*, const void*)) {
     QLayout_OnIndexOf2((QLayout*)self, (intptr_t)callback);
 }
 
@@ -584,8 +584,8 @@ int32_t q_stackedlayout_super_spacing(const void* self) {
     return QStackedLayout_SuperSpacing((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_spacing(const void* self, int32_t (*callback)(const void*)) {
-    QStackedLayout_OnSpacing((const QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_spacing(void* self, int32_t (*callback)(const void*)) {
+    QStackedLayout_OnSpacing((QStackedLayout*)self, (intptr_t)callback);
 }
 
 void q_stackedlayout_set_spacing(void* self, int spacing) {
@@ -620,8 +620,8 @@ QRect* q_stackedlayout_super_geometry(const void* self) {
     return QStackedLayout_SuperGeometry((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_geometry(const void* self, QRect* (*callback)(const void*)) {
-    QStackedLayout_OnGeometry((const QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_geometry(void* self, QRect* (*callback)(const void*)) {
+    QStackedLayout_OnGeometry((QStackedLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_stackedlayout_expanding_directions(const void* self) {
@@ -632,8 +632,8 @@ int32_t q_stackedlayout_super_expanding_directions(const void* self) {
     return QStackedLayout_SuperExpandingDirections((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_expanding_directions(const void* self, int32_t (*callback)(const void*)) {
-    QStackedLayout_OnExpandingDirections((const QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_expanding_directions(void* self, int32_t (*callback)(const void*)) {
+    QStackedLayout_OnExpandingDirections((QStackedLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_stackedlayout_maximum_size(const void* self) {
@@ -644,8 +644,8 @@ QSize* q_stackedlayout_super_maximum_size(const void* self) {
     return QStackedLayout_SuperMaximumSize((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_maximum_size(const void* self, QSize* (*callback)(const void*)) {
-    QStackedLayout_OnMaximumSize((const QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_maximum_size(void* self, QSize* (*callback)(const void*)) {
+    QStackedLayout_OnMaximumSize((QStackedLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_stackedlayout_index_of(const void* self, const void* param1) {
@@ -656,8 +656,8 @@ int32_t q_stackedlayout_super_index_of(const void* self, const void* param1) {
     return QStackedLayout_SuperIndexOf((QStackedLayout*)self, (QWidget*)param1);
 }
 
-void q_stackedlayout_on_index_of(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QStackedLayout_OnIndexOf((const QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_index_of(void* self, int32_t (*callback)(const void*, const void*)) {
+    QStackedLayout_OnIndexOf((QStackedLayout*)self, (intptr_t)callback);
 }
 
 bool q_stackedlayout_is_empty(const void* self) {
@@ -668,8 +668,8 @@ bool q_stackedlayout_super_is_empty(const void* self) {
     return QStackedLayout_SuperIsEmpty((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_is_empty(const void* self, bool (*callback)(const void*)) {
-    QStackedLayout_OnIsEmpty((const QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_is_empty(void* self, bool (*callback)(const void*)) {
+    QStackedLayout_OnIsEmpty((QStackedLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_stackedlayout_control_types(const void* self) {
@@ -680,8 +680,8 @@ int32_t q_stackedlayout_super_control_types(const void* self) {
     return QStackedLayout_SuperControlTypes((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_control_types(const void* self, int32_t (*callback)(const void*)) {
-    QStackedLayout_OnControlTypes((const QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_control_types(void* self, int32_t (*callback)(const void*)) {
+    QStackedLayout_OnControlTypes((QStackedLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_stackedlayout_replace_widget(void* self, void* from, void* to, int32_t options) {
@@ -800,8 +800,8 @@ int32_t q_stackedlayout_super_minimum_height_for_width(const void* self, int par
     return QStackedLayout_SuperMinimumHeightForWidth((QStackedLayout*)self, param1);
 }
 
-void q_stackedlayout_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QStackedLayout_OnMinimumHeightForWidth((const QStackedLayout*)self, (intptr_t)callback);
+void q_stackedlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QStackedLayout_OnMinimumHeightForWidth((QStackedLayout*)self, (intptr_t)callback);
 }
 
 QSpacerItem* q_stackedlayout_spacer_item(void* self) {

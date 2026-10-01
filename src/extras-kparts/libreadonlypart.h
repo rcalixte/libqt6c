@@ -41,10 +41,10 @@ const QMetaObject* k_parts__readonlypart_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KParts__ReadOnlyPart*
+/// @param self KParts__ReadOnlyPart*
 /// @param callback const QMetaObject* func(const KParts__ReadOnlyPart* self)
 ///
-void k_parts__readonlypart_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_parts__readonlypart_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -378,9 +378,9 @@ const char* k_parts__readonlypart_tr3(const char* s, const char* c, int n);
 ///
 /// Upcasts to a KParts::PartBase object
 ///
-/// @param self KParts__ReadOnlyPart*
+/// @param self const KParts__ReadOnlyPart*
 ///
-KParts__PartBase* k_parts__readonlypart_as_k_parts___part_base(void* self);
+KParts__PartBase* k_parts__readonlypart_as_k_parts___part_base(const void* self);
 
 /// Inherited from KParts::Part
 ///
@@ -388,7 +388,7 @@ KParts__PartBase* k_parts__readonlypart_as_k_parts___part_base(void* self);
 ///
 /// @param _kparts__partbase KParts__PartBase*
 ///
-KParts__ReadOnlyPart* k_parts__readonlypart_from_k_parts___part_base(void* _kparts__partbase);
+KParts__ReadOnlyPart* k_parts__readonlypart_from_k_parts___part_base(const void* _kparts__partbase);
 
 /// Inherited from KParts::Part
 ///
@@ -1570,10 +1570,10 @@ QAction* k_parts__readonlypart_super_action2(const void* self, const void* eleme
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ReadOnlyPart*
+/// @param self KParts__ReadOnlyPart*
 /// @param callback QAction* func(KParts__ReadOnlyPart* self, QDomElement* element)
 ///
-void k_parts__readonlypart_on_action2(const void* self, QAction* (*callback)(const void*, const void*));
+void k_parts__readonlypart_on_action2(void* self, QAction* (*callback)(const void*, const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1601,10 +1601,10 @@ KActionCollection* k_parts__readonlypart_super_action_collection(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ReadOnlyPart*
+/// @param self KParts__ReadOnlyPart*
 /// @param callback KActionCollection* func(KParts__ReadOnlyPart* self)
 ///
-void k_parts__readonlypart_on_action_collection(const void* self, KActionCollection* (*callback)(const void*));
+void k_parts__readonlypart_on_action_collection(void* self, KActionCollection* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1636,10 +1636,10 @@ const char* k_parts__readonlypart_super_component_name(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ReadOnlyPart*
+/// @param self KParts__ReadOnlyPart*
 /// @param callback const char* func(KParts__ReadOnlyPart* self)
 ///
-void k_parts__readonlypart_on_component_name(const void* self, const char* (*callback)(const void*));
+void k_parts__readonlypart_on_component_name(void* self, const char* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1667,12 +1667,12 @@ QDomDocument* k_parts__readonlypart_super_dom_document(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ReadOnlyPart*
+/// @param self KParts__ReadOnlyPart*
 /// @param callback QDomDocument* func(KParts__ReadOnlyPart* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_parts__readonlypart_on_dom_document(const void* self, QDomDocument* (*callback)(const void*));
+void k_parts__readonlypart_on_dom_document(void* self, QDomDocument* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1704,10 +1704,10 @@ const char* k_parts__readonlypart_super_xml_file(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ReadOnlyPart*
+/// @param self KParts__ReadOnlyPart*
 /// @param callback const char* func(KParts__ReadOnlyPart* self)
 ///
-void k_parts__readonlypart_on_xml_file(const void* self, const char* (*callback)(const void*));
+void k_parts__readonlypart_on_xml_file(void* self, const char* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -1739,10 +1739,10 @@ const char* k_parts__readonlypart_super_local_x_m_l_file(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ReadOnlyPart*
+/// @param self KParts__ReadOnlyPart*
 /// @param callback const char* func(KParts__ReadOnlyPart* self)
 ///
-void k_parts__readonlypart_on_local_x_m_l_file(const void* self, const char* (*callback)(const void*));
+void k_parts__readonlypart_on_local_x_m_l_file(void* self, const char* (*callback)(const void*));
 
 /// Inherited from KXMLGUIClient
 ///
@@ -2044,10 +2044,10 @@ QObject* k_parts__readonlypart_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ReadOnlyPart*
+/// @param self KParts__ReadOnlyPart*
 /// @param callback QObject* func(KParts__ReadOnlyPart* self)
 ///
-void k_parts__readonlypart_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_parts__readonlypart_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2075,10 +2075,10 @@ int32_t k_parts__readonlypart_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ReadOnlyPart*
+/// @param self KParts__ReadOnlyPart*
 /// @param callback int32_t func(KParts__ReadOnlyPart* self)
 ///
-void k_parts__readonlypart_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_parts__readonlypart_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2108,10 +2108,10 @@ int32_t k_parts__readonlypart_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ReadOnlyPart*
+/// @param self KParts__ReadOnlyPart*
 /// @param callback int32_t func(KParts__ReadOnlyPart* self, const char* signal)
 ///
-void k_parts__readonlypart_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_parts__readonlypart_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2141,10 +2141,10 @@ bool k_parts__readonlypart_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ReadOnlyPart*
+/// @param self KParts__ReadOnlyPart*
 /// @param callback bool func(KParts__ReadOnlyPart* self, QMetaMethod* signal)
 ///
-void k_parts__readonlypart_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_parts__readonlypart_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KXMLGUIClient
 ///

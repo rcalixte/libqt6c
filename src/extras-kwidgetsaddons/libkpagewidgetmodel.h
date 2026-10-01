@@ -35,10 +35,10 @@ const QMetaObject* k_pagewidgetitem_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPageWidgetItem*
+/// @param self KPageWidgetItem*
 /// @param callback const QMetaObject* func(const KPageWidgetItem* self)
 ///
-void k_pagewidgetitem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_pagewidgetitem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -979,10 +979,10 @@ QObject* k_pagewidgetitem_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetItem*
+/// @param self KPageWidgetItem*
 /// @param callback QObject* func(KPageWidgetItem* self)
 ///
-void k_pagewidgetitem_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_pagewidgetitem_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1010,10 +1010,10 @@ int32_t k_pagewidgetitem_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetItem*
+/// @param self KPageWidgetItem*
 /// @param callback int32_t func(KPageWidgetItem* self)
 ///
-void k_pagewidgetitem_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_pagewidgetitem_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1043,10 +1043,10 @@ int32_t k_pagewidgetitem_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetItem*
+/// @param self KPageWidgetItem*
 /// @param callback int32_t func(KPageWidgetItem* self, const char* signal)
 ///
-void k_pagewidgetitem_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_pagewidgetitem_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1076,10 +1076,10 @@ bool k_pagewidgetitem_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetItem*
+/// @param self KPageWidgetItem*
 /// @param callback bool func(KPageWidgetItem* self, QMetaMethod* signal)
 ///
-void k_pagewidgetitem_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_pagewidgetitem_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1124,10 +1124,10 @@ const QMetaObject* k_pagewidgetmodel_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback const QMetaObject* func(const KPageWidgetModel* self)
 ///
-void k_pagewidgetmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_pagewidgetmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1254,10 +1254,10 @@ int32_t k_pagewidgetmodel_column_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback int32_t func(const KPageWidgetModel* self, QModelIndex* parent)
 ///
-void k_pagewidgetmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
+void k_pagewidgetmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#columnCount)
 ///
@@ -1280,12 +1280,12 @@ QVariant* k_pagewidgetmodel_data(const void* self, const void* index, int role);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback QVariant* func(const KPageWidgetModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_pagewidgetmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
+void k_pagewidgetmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#data)
 ///
@@ -1339,10 +1339,10 @@ int32_t k_pagewidgetmodel_flags(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback int32_t func(const KPageWidgetModel* self, QModelIndex* index)
 ///
-void k_pagewidgetmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
+void k_pagewidgetmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#flags)
 ///
@@ -1368,12 +1368,12 @@ QModelIndex* k_pagewidgetmodel_index(const void* self, int row, int column, cons
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback QModelIndex* func(const KPageWidgetModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_pagewidgetmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void k_pagewidgetmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#index)
 ///
@@ -1397,12 +1397,12 @@ QModelIndex* k_pagewidgetmodel_parent(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback QModelIndex* func(const KPageWidgetModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_pagewidgetmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_pagewidgetmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#parent)
 ///
@@ -1424,10 +1424,10 @@ int32_t k_pagewidgetmodel_row_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback int32_t func(const KPageWidgetModel* self, QModelIndex* parent)
 ///
-void k_pagewidgetmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
+void k_pagewidgetmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kpagewidgetmodel.html#rowCount)
 ///
@@ -2264,12 +2264,12 @@ QModelIndex* k_pagewidgetmodel_super_sibling(const void* self, int row, int colu
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback QModelIndex* func(KPageWidgetModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_pagewidgetmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void k_pagewidgetmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2299,10 +2299,10 @@ bool k_pagewidgetmodel_super_has_children(const void* self, const void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback bool func(KPageWidgetModel* self, QModelIndex* parent)
 ///
-void k_pagewidgetmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
+void k_pagewidgetmodel_on_has_children(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2336,12 +2336,12 @@ QVariant* k_pagewidgetmodel_super_header_data(const void* self, int section, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback QVariant* func(KPageWidgetModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_pagewidgetmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
+void k_pagewidgetmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2436,10 +2436,10 @@ libqt_map k_pagewidgetmodel_super_item_data(const void* self, const void* index)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback libqt_map of int to QVariant* func(KPageWidgetModel* self, QModelIndex* index)
 ///
-void k_pagewidgetmodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
+void k_pagewidgetmodel_on_item_data(void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2539,10 +2539,10 @@ const char** k_pagewidgetmodel_super_mime_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback const char** func(KPageWidgetModel* self)
 ///
-void k_pagewidgetmodel_on_mime_types(const void* self, const char** (*callback)(const void*));
+void k_pagewidgetmodel_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2572,10 +2572,10 @@ QMimeData* k_pagewidgetmodel_super_mime_data(const void* self, libqt_list indexe
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback QMimeData* func(KPageWidgetModel* self, libqt_list of QModelIndex* indexes)
 ///
-void k_pagewidgetmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void k_pagewidgetmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2613,10 +2613,10 @@ bool k_pagewidgetmodel_super_can_drop_mime_data(const void* self, const void* da
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback bool func(KPageWidgetModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void k_pagewidgetmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
+void k_pagewidgetmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2689,10 +2689,10 @@ int32_t k_pagewidgetmodel_super_supported_drop_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback int32_t func(KPageWidgetModel* self)
 ///
-void k_pagewidgetmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void k_pagewidgetmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2724,10 +2724,10 @@ int32_t k_pagewidgetmodel_super_supported_drag_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback int32_t func(KPageWidgetModel* self)
 ///
-void k_pagewidgetmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
+void k_pagewidgetmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3020,10 +3020,10 @@ bool k_pagewidgetmodel_super_can_fetch_more(const void* self, const void* parent
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback bool func(KPageWidgetModel* self, QModelIndex* parent)
 ///
-void k_pagewidgetmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
+void k_pagewidgetmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3088,12 +3088,12 @@ QModelIndex* k_pagewidgetmodel_super_buddy(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback QModelIndex* func(KPageWidgetModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_pagewidgetmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_pagewidgetmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3135,10 +3135,10 @@ libqt_list k_pagewidgetmodel_super_match(const void* self, const void* start, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback libqt_list of QModelIndex* func(KPageWidgetModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void k_pagewidgetmodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
+void k_pagewidgetmodel_on_match(void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3168,12 +3168,12 @@ QSize* k_pagewidgetmodel_super_span(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback QSize* func(KPageWidgetModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_pagewidgetmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
+void k_pagewidgetmodel_on_span(void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3227,10 +3227,10 @@ libqt_map k_pagewidgetmodel_super_role_names(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback libqt_map of int to char* func(KPageWidgetModel* self)
 ///
-void k_pagewidgetmodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
+void k_pagewidgetmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3262,10 +3262,10 @@ void k_pagewidgetmodel_super_multi_data(const void* self, const void* index, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback void func(KPageWidgetModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void k_pagewidgetmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
+void k_pagewidgetmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3623,12 +3623,12 @@ QModelIndex* k_pagewidgetmodel_super_create_index(const void* self, int row, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback QModelIndex* func(KPageWidgetModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_pagewidgetmodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
+void k_pagewidgetmodel_on_create_index(void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3660,10 +3660,10 @@ void k_pagewidgetmodel_super_encode_data(const void* self, libqt_list indexes, v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback void func(KPageWidgetModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void k_pagewidgetmodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
+void k_pagewidgetmodel_on_encode_data(void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4282,10 +4282,10 @@ libqt_list k_pagewidgetmodel_super_persistent_index_list(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback libqt_list of QModelIndex* func(KPageWidgetModel* self)
 ///
-void k_pagewidgetmodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
+void k_pagewidgetmodel_on_persistent_index_list(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4313,10 +4313,10 @@ QObject* k_pagewidgetmodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback QObject* func(KPageWidgetModel* self)
 ///
-void k_pagewidgetmodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_pagewidgetmodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4344,10 +4344,10 @@ int32_t k_pagewidgetmodel_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback int32_t func(KPageWidgetModel* self)
 ///
-void k_pagewidgetmodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_pagewidgetmodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4377,10 +4377,10 @@ int32_t k_pagewidgetmodel_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback int32_t func(KPageWidgetModel* self, const char* signal)
 ///
-void k_pagewidgetmodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_pagewidgetmodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4410,10 +4410,10 @@ bool k_pagewidgetmodel_super_is_signal_connected(const void* self, const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPageWidgetModel*
+/// @param self KPageWidgetModel*
 /// @param callback bool func(KPageWidgetModel* self, QMetaMethod* signal)
 ///
-void k_pagewidgetmodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_pagewidgetmodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///

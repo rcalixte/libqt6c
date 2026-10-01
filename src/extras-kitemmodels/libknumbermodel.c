@@ -22,7 +22,7 @@ const QMetaObject* k_numbermodel_meta_object(const void* self) {
     return KNumberModel_MetaObject((KNumberModel*)self);
 }
 
-void k_numbermodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_numbermodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KNumberModel_OnMetaObject((KNumberModel*)self, (intptr_t)callback);
 }
 
@@ -101,7 +101,7 @@ int32_t k_numbermodel_row_count(const void* self, const void* index) {
     return KNumberModel_RowCount((KNumberModel*)self, (QModelIndex*)index);
 }
 
-void k_numbermodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void k_numbermodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
     KNumberModel_OnRowCount((KNumberModel*)self, (intptr_t)callback);
 }
 
@@ -113,7 +113,7 @@ QVariant* k_numbermodel_data(const void* self, const void* index, int role) {
     return KNumberModel_Data((KNumberModel*)self, (QModelIndex*)index, role);
 }
 
-void k_numbermodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
+void k_numbermodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
     KNumberModel_OnData((KNumberModel*)self, (intptr_t)callback);
 }
 
@@ -154,7 +154,7 @@ libqt_map /* of int to char* */ k_numbermodel_role_names(const void* self) {
     return _ret;
 }
 
-void k_numbermodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_numbermodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
     KNumberModel_OnRoleNames((KNumberModel*)self, (intptr_t)callback);
 }
 
@@ -245,7 +245,7 @@ QModelIndex* k_numbermodel_parent(const void* self, const void* child) {
     return QAbstractItemModel_Parent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
-void k_numbermodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void k_numbermodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -253,7 +253,7 @@ int32_t k_numbermodel_column_count(const void* self, const void* parent) {
     return QAbstractItemModel_ColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void k_numbermodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void k_numbermodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnColumnCount((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -261,7 +261,7 @@ bool k_numbermodel_has_children(const void* self, const void* parent) {
     return QAbstractItemModel_HasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void k_numbermodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
+void k_numbermodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -606,8 +606,8 @@ QModelIndex* k_numbermodel_super_index(const void* self, int row, int column, co
     return KNumberModel_SuperIndex((KNumberModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void k_numbermodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    KNumberModel_OnIndex((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    KNumberModel_OnIndex((KNumberModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* k_numbermodel_sibling(const void* self, int row, int column, const void* idx) {
@@ -618,8 +618,8 @@ QModelIndex* k_numbermodel_super_sibling(const void* self, int row, int column, 
     return KNumberModel_SuperSibling((KNumberModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void k_numbermodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    KNumberModel_OnSibling((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    KNumberModel_OnSibling((KNumberModel*)self, (intptr_t)callback);
 }
 
 bool k_numbermodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -642,8 +642,8 @@ int32_t k_numbermodel_super_flags(const void* self, const void* index) {
     return KNumberModel_SuperFlags((KNumberModel*)self, (QModelIndex*)index);
 }
 
-void k_numbermodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
-    KNumberModel_OnFlags((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
+    KNumberModel_OnFlags((KNumberModel*)self, (intptr_t)callback);
 }
 
 bool k_numbermodel_set_data(void* self, const void* index, const void* value, int role) {
@@ -666,8 +666,8 @@ QVariant* k_numbermodel_super_header_data(const void* self, int section, int32_t
     return KNumberModel_SuperHeaderData((KNumberModel*)self, section, orientation, role);
 }
 
-void k_numbermodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
-    KNumberModel_OnHeaderData((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+    KNumberModel_OnHeaderData((KNumberModel*)self, (intptr_t)callback);
 }
 
 bool k_numbermodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
@@ -702,8 +702,8 @@ libqt_map /* of int to QVariant* */ k_numbermodel_super_item_data(const void* se
     return _ret;
 }
 
-void k_numbermodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
-    KNumberModel_OnItemData((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    KNumberModel_OnItemData((KNumberModel*)self, (intptr_t)callback);
 }
 
 bool k_numbermodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
@@ -814,8 +814,8 @@ const char** k_numbermodel_super_mime_types(const void* self) {
     return _ret;
 }
 
-void k_numbermodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    KNumberModel_OnMimeTypes((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    KNumberModel_OnMimeTypes((KNumberModel*)self, (intptr_t)callback);
 }
 
 QMimeData* k_numbermodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -826,8 +826,8 @@ QMimeData* k_numbermodel_super_mime_data(const void* self, libqt_list /* of QMod
     return KNumberModel_SuperMimeData((KNumberModel*)self, indexes);
 }
 
-void k_numbermodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
-    KNumberModel_OnMimeData((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    KNumberModel_OnMimeData((KNumberModel*)self, (intptr_t)callback);
 }
 
 bool k_numbermodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -838,8 +838,8 @@ bool k_numbermodel_super_can_drop_mime_data(const void* self, const void* data, 
     return KNumberModel_SuperCanDropMimeData((KNumberModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void k_numbermodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    KNumberModel_OnCanDropMimeData((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    KNumberModel_OnCanDropMimeData((KNumberModel*)self, (intptr_t)callback);
 }
 
 int32_t k_numbermodel_supported_drop_actions(const void* self) {
@@ -850,8 +850,8 @@ int32_t k_numbermodel_super_supported_drop_actions(const void* self) {
     return KNumberModel_SuperSupportedDropActions((KNumberModel*)self);
 }
 
-void k_numbermodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
-    KNumberModel_OnSupportedDropActions((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
+    KNumberModel_OnSupportedDropActions((KNumberModel*)self, (intptr_t)callback);
 }
 
 int32_t k_numbermodel_supported_drag_actions(const void* self) {
@@ -862,8 +862,8 @@ int32_t k_numbermodel_super_supported_drag_actions(const void* self) {
     return KNumberModel_SuperSupportedDragActions((KNumberModel*)self);
 }
 
-void k_numbermodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    KNumberModel_OnSupportedDragActions((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    KNumberModel_OnSupportedDragActions((KNumberModel*)self, (intptr_t)callback);
 }
 
 bool k_numbermodel_insert_rows(void* self, int row, int count, const void* parent) {
@@ -958,8 +958,8 @@ bool k_numbermodel_super_can_fetch_more(const void* self, const void* parent) {
     return KNumberModel_SuperCanFetchMore((KNumberModel*)self, (QModelIndex*)parent);
 }
 
-void k_numbermodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    KNumberModel_OnCanFetchMore((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    KNumberModel_OnCanFetchMore((KNumberModel*)self, (intptr_t)callback);
 }
 
 void k_numbermodel_sort(void* self, int column, int32_t order) {
@@ -982,8 +982,8 @@ QModelIndex* k_numbermodel_super_buddy(const void* self, const void* index) {
     return KNumberModel_SuperBuddy((KNumberModel*)self, (QModelIndex*)index);
 }
 
-void k_numbermodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    KNumberModel_OnBuddy((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KNumberModel_OnBuddy((KNumberModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ k_numbermodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -996,8 +996,8 @@ libqt_list /* of QModelIndex* */ k_numbermodel_super_match(const void* self, con
     return _arr;
 }
 
-void k_numbermodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    KNumberModel_OnMatch((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    KNumberModel_OnMatch((KNumberModel*)self, (intptr_t)callback);
 }
 
 QSize* k_numbermodel_span(const void* self, const void* index) {
@@ -1008,8 +1008,8 @@ QSize* k_numbermodel_super_span(const void* self, const void* index) {
     return KNumberModel_SuperSpan((KNumberModel*)self, (QModelIndex*)index);
 }
 
-void k_numbermodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    KNumberModel_OnSpan((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    KNumberModel_OnSpan((KNumberModel*)self, (intptr_t)callback);
 }
 
 void k_numbermodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
@@ -1020,8 +1020,8 @@ void k_numbermodel_super_multi_data(const void* self, const void* index, void* r
     KNumberModel_SuperMultiData((KNumberModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_numbermodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    KNumberModel_OnMultiData((const KNumberModel*)self, (intptr_t)callback);
+void k_numbermodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    KNumberModel_OnMultiData((KNumberModel*)self, (intptr_t)callback);
 }
 
 bool k_numbermodel_submit(void* self) {

@@ -27,7 +27,7 @@ const QMetaObject* k_breadcrumbselectionmodel_meta_object(const void* self) {
     return KBreadcrumbSelectionModel_MetaObject((KBreadcrumbSelectionModel*)self);
 }
 
-void k_breadcrumbselectionmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_breadcrumbselectionmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KBreadcrumbSelectionModel_OnMetaObject((KBreadcrumbSelectionModel*)self, (intptr_t)callback);
 }
 

@@ -20,7 +20,7 @@ const QMetaObject* q_hboxplotmodelmapper_meta_object(const void* self) {
     return QHBoxPlotModelMapper_MetaObject((QHBoxPlotModelMapper*)self);
 }
 
-void q_hboxplotmodelmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_hboxplotmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QHBoxPlotModelMapper_OnMetaObject((QHBoxPlotModelMapper*)self, (intptr_t)callback);
 }
 

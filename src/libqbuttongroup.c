@@ -18,7 +18,7 @@ const QMetaObject* q_buttongroup_meta_object(const void* self) {
     return QButtonGroup_MetaObject((QButtonGroup*)self);
 }
 
-void q_buttongroup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_buttongroup_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QButtonGroup_OnMetaObject((QButtonGroup*)self, (intptr_t)callback);
 }
 

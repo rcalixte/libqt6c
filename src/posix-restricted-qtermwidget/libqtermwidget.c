@@ -35,11 +35,11 @@ QTermWidget* q_termwidget_new4(int startnow, void* parent) {
     return QTermWidget_New4(startnow, (QWidget*)parent);
 }
 
-QTermWidgetInterface* q_termwidget_as_q_term_widget_interface(void* self) {
+QTermWidgetInterface* q_termwidget_as_q_term_widget_interface(const void* self) {
     return QTermWidget_AsQTermWidgetInterface((QTermWidget*)self);
 }
 
-QTermWidget* q_termwidget_from_q_term_widget_interface(void* _qtermwidgetinterface) {
+QTermWidget* q_termwidget_from_q_term_widget_interface(const void* _qtermwidgetinterface) {
     return (QTermWidget*)QTermWidget_FromQTermWidgetInterface((QTermWidgetInterface*)_qtermwidgetinterface);
 }
 
@@ -47,7 +47,7 @@ const QMetaObject* q_termwidget_meta_object(const void* self) {
     return QTermWidget_MetaObject((QTermWidget*)self);
 }
 
-void q_termwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_termwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTermWidget_OnMetaObject((QTermWidget*)self, (intptr_t)callback);
 }
 
@@ -90,7 +90,7 @@ QSize* q_termwidget_size_hint(const void* self) {
     return QTermWidget_SizeHint((QTermWidget*)self);
 }
 
-void q_termwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_termwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QTermWidget_OnSizeHint((QTermWidget*)self, (intptr_t)callback);
 }
 
@@ -433,7 +433,7 @@ int32_t q_termwidget_history_size(const void* self) {
     return QTermWidget_HistorySize((QTermWidget*)self);
 }
 
-void q_termwidget_on_history_size(const void* self, int32_t (*callback)(const void*)) {
+void q_termwidget_on_history_size(void* self, int32_t (*callback)(const void*)) {
     QTermWidget_OnHistorySize((QTermWidget*)self, (intptr_t)callback);
 }
 
@@ -736,7 +736,7 @@ int32_t q_termwidget_get_pty_slave_fd(const void* self) {
     return QTermWidget_GetPtySlaveFd((QTermWidget*)self);
 }
 
-void q_termwidget_on_get_pty_slave_fd(const void* self, int32_t (*callback)(const void*)) {
+void q_termwidget_on_get_pty_slave_fd(void* self, int32_t (*callback)(const void*)) {
     QTermWidget_OnGetPtySlaveFd((QTermWidget*)self, (intptr_t)callback);
 }
 
@@ -803,7 +803,7 @@ const char* q_termwidget_title(const void* self) {
     return _ret;
 }
 
-void q_termwidget_on_title(const void* self, const char* (*callback)(const void*)) {
+void q_termwidget_on_title(void* self, const char* (*callback)(const void*)) {
     QTermWidget_OnTitle((QTermWidget*)self, (intptr_t)callback);
 }
 
@@ -821,7 +821,7 @@ const char* q_termwidget_icon(const void* self) {
     return _ret;
 }
 
-void q_termwidget_on_icon(const void* self, const char* (*callback)(const void*)) {
+void q_termwidget_on_icon(void* self, const char* (*callback)(const void*)) {
     QTermWidget_OnIcon((QTermWidget*)self, (intptr_t)callback);
 }
 
@@ -836,7 +836,7 @@ bool q_termwidget_is_title_changed(const void* self) {
     return QTermWidget_IsTitleChanged((QTermWidget*)self);
 }
 
-void q_termwidget_on_is_title_changed(const void* self, bool (*callback)(const void*)) {
+void q_termwidget_on_is_title_changed(void* self, bool (*callback)(const void*)) {
     QTermWidget_OnIsTitleChanged((QTermWidget*)self, (intptr_t)callback);
 }
 
@@ -872,7 +872,7 @@ bool q_termwidget_bracketed_paste_mode_is_disabled(const void* self) {
     return QTermWidget_BracketedPasteModeIsDisabled((QTermWidget*)self);
 }
 
-void q_termwidget_on_bracketed_paste_mode_is_disabled(const void* self, bool (*callback)(const void*)) {
+void q_termwidget_on_bracketed_paste_mode_is_disabled(void* self, bool (*callback)(const void*)) {
     QTermWidget_OnBracketedPasteModeIsDisabled((QTermWidget*)self, (intptr_t)callback);
 }
 
@@ -896,7 +896,7 @@ int32_t q_termwidget_get_margin(const void* self) {
     return QTermWidget_GetMargin((QTermWidget*)self);
 }
 
-void q_termwidget_on_get_margin(const void* self, int32_t (*callback)(const void*)) {
+void q_termwidget_on_get_margin(void* self, int32_t (*callback)(const void*)) {
     QTermWidget_OnGetMargin((QTermWidget*)self, (intptr_t)callback);
 }
 
@@ -959,7 +959,7 @@ const char* q_termwidget_word_characters(const void* self) {
     return _ret;
 }
 
-void q_termwidget_on_word_characters(const void* self, const char* (*callback)(const void*)) {
+void q_termwidget_on_word_characters(void* self, const char* (*callback)(const void*)) {
     QTermWidget_OnWordCharacters((QTermWidget*)self, (intptr_t)callback);
 }
 
@@ -986,7 +986,7 @@ QTermWidgetInterface* q_termwidget_create_widget(const void* self, int startnow)
     return QTermWidget_CreateWidget((QTermWidget*)self, startnow);
 }
 
-void q_termwidget_on_create_widget(const void* self, QTermWidgetInterface* (*callback)(const void*, int)) {
+void q_termwidget_on_create_widget(void* self, QTermWidgetInterface* (*callback)(const void*, int)) {
     QTermWidget_OnCreateWidget((QTermWidget*)self, (intptr_t)callback);
 }
 
@@ -1172,11 +1172,11 @@ const char* q_termwidget_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_termwidget_as_q_paint_device(void* self) {
+QPaintDevice* q_termwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QTermWidget* q_termwidget_from_q_paint_device(void* _qpaintdevice) {
+QTermWidget* q_termwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (QTermWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2571,8 +2571,8 @@ int32_t q_termwidget_super_dev_type(const void* self) {
     return QTermWidget_SuperDevType((QTermWidget*)self);
 }
 
-void q_termwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QTermWidget_OnDevType((const QTermWidget*)self, (intptr_t)callback);
+void q_termwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QTermWidget_OnDevType((QTermWidget*)self, (intptr_t)callback);
 }
 
 void q_termwidget_set_visible(void* self, bool visible) {
@@ -2595,8 +2595,8 @@ QSize* q_termwidget_super_minimum_size_hint(const void* self) {
     return QTermWidget_SuperMinimumSizeHint((QTermWidget*)self);
 }
 
-void q_termwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTermWidget_OnMinimumSizeHint((const QTermWidget*)self, (intptr_t)callback);
+void q_termwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTermWidget_OnMinimumSizeHint((QTermWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_termwidget_height_for_width(const void* self, int param1) {
@@ -2607,8 +2607,8 @@ int32_t q_termwidget_super_height_for_width(const void* self, int param1) {
     return QTermWidget_SuperHeightForWidth((QTermWidget*)self, param1);
 }
 
-void q_termwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QTermWidget_OnHeightForWidth((const QTermWidget*)self, (intptr_t)callback);
+void q_termwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QTermWidget_OnHeightForWidth((QTermWidget*)self, (intptr_t)callback);
 }
 
 bool q_termwidget_has_height_for_width(const void* self) {
@@ -2619,8 +2619,8 @@ bool q_termwidget_super_has_height_for_width(const void* self) {
     return QTermWidget_SuperHasHeightForWidth((QTermWidget*)self);
 }
 
-void q_termwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QTermWidget_OnHasHeightForWidth((const QTermWidget*)self, (intptr_t)callback);
+void q_termwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QTermWidget_OnHasHeightForWidth((QTermWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_termwidget_paint_engine(const void* self) {
@@ -2631,8 +2631,8 @@ QPaintEngine* q_termwidget_super_paint_engine(const void* self) {
     return QTermWidget_SuperPaintEngine((QTermWidget*)self);
 }
 
-void q_termwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QTermWidget_OnPaintEngine((const QTermWidget*)self, (intptr_t)callback);
+void q_termwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QTermWidget_OnPaintEngine((QTermWidget*)self, (intptr_t)callback);
 }
 
 bool q_termwidget_event(void* self, void* event) {
@@ -2955,8 +2955,8 @@ int32_t q_termwidget_super_metric(const void* self, int32_t param1) {
     return QTermWidget_SuperMetric((QTermWidget*)self, param1);
 }
 
-void q_termwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QTermWidget_OnMetric((const QTermWidget*)self, (intptr_t)callback);
+void q_termwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QTermWidget_OnMetric((QTermWidget*)self, (intptr_t)callback);
 }
 
 void q_termwidget_init_painter(const void* self, void* painter) {
@@ -2967,8 +2967,8 @@ void q_termwidget_super_init_painter(const void* self, void* painter) {
     QTermWidget_SuperInitPainter((QTermWidget*)self, (QPainter*)painter);
 }
 
-void q_termwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QTermWidget_OnInitPainter((const QTermWidget*)self, (intptr_t)callback);
+void q_termwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QTermWidget_OnInitPainter((QTermWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_termwidget_redirected(const void* self, void* offset) {
@@ -2979,8 +2979,8 @@ QPaintDevice* q_termwidget_super_redirected(const void* self, void* offset) {
     return QTermWidget_SuperRedirected((QTermWidget*)self, (QPoint*)offset);
 }
 
-void q_termwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QTermWidget_OnRedirected((const QTermWidget*)self, (intptr_t)callback);
+void q_termwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QTermWidget_OnRedirected((QTermWidget*)self, (intptr_t)callback);
 }
 
 QPainter* q_termwidget_shared_painter(const void* self) {
@@ -2991,8 +2991,8 @@ QPainter* q_termwidget_super_shared_painter(const void* self) {
     return QTermWidget_SuperSharedPainter((QTermWidget*)self);
 }
 
-void q_termwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QTermWidget_OnSharedPainter((const QTermWidget*)self, (intptr_t)callback);
+void q_termwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QTermWidget_OnSharedPainter((QTermWidget*)self, (intptr_t)callback);
 }
 
 void q_termwidget_input_method_event(void* self, void* param1) {
@@ -3015,8 +3015,8 @@ QVariant* q_termwidget_super_input_method_query(const void* self, int32_t param1
     return QTermWidget_SuperInputMethodQuery((QTermWidget*)self, param1);
 }
 
-void q_termwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QTermWidget_OnInputMethodQuery((const QTermWidget*)self, (intptr_t)callback);
+void q_termwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QTermWidget_OnInputMethodQuery((QTermWidget*)self, (intptr_t)callback);
 }
 
 bool q_termwidget_focus_next_prev_child(void* self, bool next) {

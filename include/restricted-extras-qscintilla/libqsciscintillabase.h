@@ -32,10 +32,10 @@ const QMetaObject* q_sciscintillabase_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback const QMetaObject* func(const QsciScintillaBase* self)
 ///
-void q_sciscintillabase_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_sciscintillabase_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -791,10 +791,10 @@ bool q_sciscintillabase_can_insert_from_mime_data(const void* self, const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback bool func(const QsciScintillaBase* self, QMimeData* source)
 ///
-void q_sciscintillabase_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*));
+void q_sciscintillabase_on_can_insert_from_mime_data(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -819,10 +819,10 @@ char* q_sciscintillabase_from_mime_data(const void* self, const void* source, bo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback libqt_string func(const QsciScintillaBase* self, QMimeData* source, bool* rectangular)
 ///
-void q_sciscintillabase_on_from_mime_data(const void* self, libqt_string (*callback)(const void*, const void*, bool*));
+void q_sciscintillabase_on_from_mime_data(void* self, libqt_string (*callback)(const void*, const void*, bool*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -846,10 +846,10 @@ QMimeData* q_sciscintillabase_to_mime_data(const void* self, char* text, bool re
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback QMimeData* func(const QsciScintillaBase* self, libqt_string text, bool rectangular)
 ///
-void q_sciscintillabase_on_to_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_string, bool));
+void q_sciscintillabase_on_to_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_string, bool));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -1147,12 +1147,12 @@ QVariant* q_sciscintillabase_input_method_query(const void* self, int32_t query)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback QVariant* func(const QsciScintillaBase* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sciscintillabase_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_sciscintillabase_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -1681,9 +1681,9 @@ void q_sciscintillabase_set_frame_rect(void* self, const void* frameRect);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QsciScintillaBase*
+/// @param self const QsciScintillaBase*
 ///
-QPaintDevice* q_sciscintillabase_as_q_paint_device(void* self);
+QPaintDevice* q_sciscintillabase_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1691,7 +1691,7 @@ QPaintDevice* q_sciscintillabase_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QsciScintillaBase* q_sciscintillabase_from_q_paint_device(void* _qpaintdevice);
+QsciScintillaBase* q_sciscintillabase_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -4676,12 +4676,12 @@ QSize* q_sciscintillabase_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback QSize* func(QsciScintillaBase* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sciscintillabase_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_sciscintillabase_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4709,12 +4709,12 @@ QSize* q_sciscintillabase_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback QSize* func(QsciScintillaBase* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sciscintillabase_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_sciscintillabase_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4909,12 +4909,12 @@ QSize* q_sciscintillabase_super_viewport_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback QSize* func(QsciScintillaBase* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sciscintillabase_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_sciscintillabase_on_viewport_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -4944,10 +4944,10 @@ void q_sciscintillabase_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback void func(QsciScintillaBase* self, QStyleOptionFrame* option)
 ///
-void q_sciscintillabase_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_sciscintillabase_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4975,10 +4975,10 @@ int32_t q_sciscintillabase_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback int32_t func(QsciScintillaBase* self)
 ///
-void q_sciscintillabase_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_sciscintillabase_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5041,10 +5041,10 @@ int32_t q_sciscintillabase_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback int32_t func(QsciScintillaBase* self, int param1)
 ///
-void q_sciscintillabase_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_sciscintillabase_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5072,10 +5072,10 @@ bool q_sciscintillabase_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback bool func(QsciScintillaBase* self)
 ///
-void q_sciscintillabase_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_sciscintillabase_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5103,10 +5103,10 @@ QPaintEngine* q_sciscintillabase_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback QPaintEngine* func(QsciScintillaBase* self)
 ///
-void q_sciscintillabase_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_sciscintillabase_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5470,10 +5470,10 @@ int32_t q_sciscintillabase_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback int32_t func(QsciScintillaBase* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_sciscintillabase_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_sciscintillabase_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5503,10 +5503,10 @@ void q_sciscintillabase_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback void func(QsciScintillaBase* self, QPainter* painter)
 ///
-void q_sciscintillabase_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_sciscintillabase_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5536,10 +5536,10 @@ QPaintDevice* q_sciscintillabase_super_redirected(const void* self, void* offset
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback QPaintDevice* func(QsciScintillaBase* self, QPoint* offset)
 ///
-void q_sciscintillabase_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_sciscintillabase_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5567,10 +5567,10 @@ QPainter* q_sciscintillabase_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback QPainter* func(QsciScintillaBase* self)
 ///
-void q_sciscintillabase_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_sciscintillabase_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5802,12 +5802,12 @@ QMargins* q_sciscintillabase_super_viewport_margins(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback QMargins* func(QsciScintillaBase* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sciscintillabase_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
+void q_sciscintillabase_on_viewport_margins(void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -6023,10 +6023,10 @@ QObject* q_sciscintillabase_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback QObject* func(QsciScintillaBase* self)
 ///
-void q_sciscintillabase_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_sciscintillabase_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6054,10 +6054,10 @@ int32_t q_sciscintillabase_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback int32_t func(QsciScintillaBase* self)
 ///
-void q_sciscintillabase_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_sciscintillabase_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6087,10 +6087,10 @@ int32_t q_sciscintillabase_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback int32_t func(QsciScintillaBase* self, const char* signal)
 ///
-void q_sciscintillabase_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_sciscintillabase_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6120,10 +6120,10 @@ bool q_sciscintillabase_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback bool func(QsciScintillaBase* self, QMetaMethod* signal)
 ///
-void q_sciscintillabase_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_sciscintillabase_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -6155,10 +6155,10 @@ double q_sciscintillabase_super_get_decoded_metric_f(const void* self, int32_t m
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciScintillaBase*
+/// @param self QsciScintillaBase*
 /// @param callback double func(QsciScintillaBase* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_sciscintillabase_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_sciscintillabase_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -25,7 +25,7 @@ const QMetaObject* q_statusbar_meta_object(const void* self) {
     return QStatusBar_MetaObject((QStatusBar*)self);
 }
 
-void q_statusbar_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_statusbar_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QStatusBar_OnMetaObject((QStatusBar*)self, (intptr_t)callback);
 }
 
@@ -205,11 +205,11 @@ void q_statusbar_show_message2(void* self, const char* text, int timeout) {
     QStatusBar_ShowMessage2((QStatusBar*)self, qstring(text), timeout);
 }
 
-QPaintDevice* q_statusbar_as_q_paint_device(void* self) {
+QPaintDevice* q_statusbar_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QStatusBar* q_statusbar_from_q_paint_device(void* _qpaintdevice) {
+QStatusBar* q_statusbar_from_q_paint_device(const void* _qpaintdevice) {
     return (QStatusBar*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1600,8 +1600,8 @@ int32_t q_statusbar_super_dev_type(const void* self) {
     return QStatusBar_SuperDevType((QStatusBar*)self);
 }
 
-void q_statusbar_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QStatusBar_OnDevType((const QStatusBar*)self, (intptr_t)callback);
+void q_statusbar_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QStatusBar_OnDevType((QStatusBar*)self, (intptr_t)callback);
 }
 
 void q_statusbar_set_visible(void* self, bool visible) {
@@ -1624,8 +1624,8 @@ QSize* q_statusbar_super_size_hint(const void* self) {
     return QStatusBar_SuperSizeHint((QStatusBar*)self);
 }
 
-void q_statusbar_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QStatusBar_OnSizeHint((const QStatusBar*)self, (intptr_t)callback);
+void q_statusbar_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QStatusBar_OnSizeHint((QStatusBar*)self, (intptr_t)callback);
 }
 
 QSize* q_statusbar_minimum_size_hint(const void* self) {
@@ -1636,8 +1636,8 @@ QSize* q_statusbar_super_minimum_size_hint(const void* self) {
     return QStatusBar_SuperMinimumSizeHint((QStatusBar*)self);
 }
 
-void q_statusbar_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QStatusBar_OnMinimumSizeHint((const QStatusBar*)self, (intptr_t)callback);
+void q_statusbar_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QStatusBar_OnMinimumSizeHint((QStatusBar*)self, (intptr_t)callback);
 }
 
 int32_t q_statusbar_height_for_width(const void* self, int param1) {
@@ -1648,8 +1648,8 @@ int32_t q_statusbar_super_height_for_width(const void* self, int param1) {
     return QStatusBar_SuperHeightForWidth((QStatusBar*)self, param1);
 }
 
-void q_statusbar_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QStatusBar_OnHeightForWidth((const QStatusBar*)self, (intptr_t)callback);
+void q_statusbar_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QStatusBar_OnHeightForWidth((QStatusBar*)self, (intptr_t)callback);
 }
 
 bool q_statusbar_has_height_for_width(const void* self) {
@@ -1660,8 +1660,8 @@ bool q_statusbar_super_has_height_for_width(const void* self) {
     return QStatusBar_SuperHasHeightForWidth((QStatusBar*)self);
 }
 
-void q_statusbar_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QStatusBar_OnHasHeightForWidth((const QStatusBar*)self, (intptr_t)callback);
+void q_statusbar_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QStatusBar_OnHasHeightForWidth((QStatusBar*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_statusbar_paint_engine(const void* self) {
@@ -1672,8 +1672,8 @@ QPaintEngine* q_statusbar_super_paint_engine(const void* self) {
     return QStatusBar_SuperPaintEngine((QStatusBar*)self);
 }
 
-void q_statusbar_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QStatusBar_OnPaintEngine((const QStatusBar*)self, (intptr_t)callback);
+void q_statusbar_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QStatusBar_OnPaintEngine((QStatusBar*)self, (intptr_t)callback);
 }
 
 void q_statusbar_mouse_press_event(void* self, void* event) {
@@ -1960,8 +1960,8 @@ int32_t q_statusbar_super_metric(const void* self, int32_t param1) {
     return QStatusBar_SuperMetric((QStatusBar*)self, param1);
 }
 
-void q_statusbar_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QStatusBar_OnMetric((const QStatusBar*)self, (intptr_t)callback);
+void q_statusbar_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QStatusBar_OnMetric((QStatusBar*)self, (intptr_t)callback);
 }
 
 void q_statusbar_init_painter(const void* self, void* painter) {
@@ -1972,8 +1972,8 @@ void q_statusbar_super_init_painter(const void* self, void* painter) {
     QStatusBar_SuperInitPainter((QStatusBar*)self, (QPainter*)painter);
 }
 
-void q_statusbar_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QStatusBar_OnInitPainter((const QStatusBar*)self, (intptr_t)callback);
+void q_statusbar_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QStatusBar_OnInitPainter((QStatusBar*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_statusbar_redirected(const void* self, void* offset) {
@@ -1984,8 +1984,8 @@ QPaintDevice* q_statusbar_super_redirected(const void* self, void* offset) {
     return QStatusBar_SuperRedirected((QStatusBar*)self, (QPoint*)offset);
 }
 
-void q_statusbar_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QStatusBar_OnRedirected((const QStatusBar*)self, (intptr_t)callback);
+void q_statusbar_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QStatusBar_OnRedirected((QStatusBar*)self, (intptr_t)callback);
 }
 
 QPainter* q_statusbar_shared_painter(const void* self) {
@@ -1996,8 +1996,8 @@ QPainter* q_statusbar_super_shared_painter(const void* self) {
     return QStatusBar_SuperSharedPainter((QStatusBar*)self);
 }
 
-void q_statusbar_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QStatusBar_OnSharedPainter((const QStatusBar*)self, (intptr_t)callback);
+void q_statusbar_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QStatusBar_OnSharedPainter((QStatusBar*)self, (intptr_t)callback);
 }
 
 void q_statusbar_input_method_event(void* self, void* param1) {
@@ -2020,8 +2020,8 @@ QVariant* q_statusbar_super_input_method_query(const void* self, int32_t param1)
     return QStatusBar_SuperInputMethodQuery((QStatusBar*)self, param1);
 }
 
-void q_statusbar_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QStatusBar_OnInputMethodQuery((const QStatusBar*)self, (intptr_t)callback);
+void q_statusbar_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QStatusBar_OnInputMethodQuery((QStatusBar*)self, (intptr_t)callback);
 }
 
 bool q_statusbar_focus_next_prev_child(void* self, bool next) {

@@ -18,7 +18,7 @@ const QMetaObject* q_placeidreply_meta_object(const void* self) {
     return QPlaceIdReply_MetaObject((QPlaceIdReply*)self);
 }
 
-void q_placeidreply_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_placeidreply_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPlaceIdReply_OnMetaObject((QPlaceIdReply*)self, (intptr_t)callback);
 }
 
@@ -61,7 +61,7 @@ int32_t q_placeidreply_type(const void* self) {
     return QPlaceIdReply_Type((QPlaceIdReply*)self);
 }
 
-void q_placeidreply_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_placeidreply_on_type(void* self, int32_t (*callback)(const void*)) {
     QPlaceIdReply_OnType((QPlaceIdReply*)self, (intptr_t)callback);
 }
 

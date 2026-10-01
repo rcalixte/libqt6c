@@ -26,10 +26,10 @@ int32_t q_designermembersheetextension_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerMemberSheetExtension*
+/// @param self QDesignerMemberSheetExtension*
 /// @param callback int32_t func(const QDesignerMemberSheetExtension* self)
 ///
-void q_designermembersheetextension_on_count(const void* self, int32_t (*callback)(const void*));
+void q_designermembersheetextension_on_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#indexOf)
 ///
@@ -44,10 +44,10 @@ int32_t q_designermembersheetextension_index_of(const void* self, const char* na
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerMemberSheetExtension*
+/// @param self QDesignerMemberSheetExtension*
 /// @param callback int32_t func(const QDesignerMemberSheetExtension* self, const char* name)
 ///
-void q_designermembersheetextension_on_index_of(const void* self, int32_t (*callback)(const void*, const char*));
+void q_designermembersheetextension_on_index_of(void* self, int32_t (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#memberName)
 ///
@@ -64,10 +64,10 @@ const char* q_designermembersheetextension_member_name(const void* self, int ind
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerMemberSheetExtension*
+/// @param self QDesignerMemberSheetExtension*
 /// @param callback const char* func(const QDesignerMemberSheetExtension* self, int index)
 ///
-void q_designermembersheetextension_on_member_name(const void* self, const char* (*callback)(const void*, int));
+void q_designermembersheetextension_on_member_name(void* self, const char* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#memberGroup)
 ///
@@ -84,10 +84,10 @@ const char* q_designermembersheetextension_member_group(const void* self, int in
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerMemberSheetExtension*
+/// @param self QDesignerMemberSheetExtension*
 /// @param callback const char* func(const QDesignerMemberSheetExtension* self, int index)
 ///
-void q_designermembersheetextension_on_member_group(const void* self, const char* (*callback)(const void*, int));
+void q_designermembersheetextension_on_member_group(void* self, const char* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#setMemberGroup)
 ///
@@ -121,10 +121,10 @@ bool q_designermembersheetextension_is_visible(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerMemberSheetExtension*
+/// @param self QDesignerMemberSheetExtension*
 /// @param callback bool func(const QDesignerMemberSheetExtension* self, int index)
 ///
-void q_designermembersheetextension_on_is_visible(const void* self, bool (*callback)(const void*, int));
+void q_designermembersheetextension_on_is_visible(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#setVisible)
 ///
@@ -158,10 +158,10 @@ bool q_designermembersheetextension_is_signal(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerMemberSheetExtension*
+/// @param self QDesignerMemberSheetExtension*
 /// @param callback bool func(const QDesignerMemberSheetExtension* self, int index)
 ///
-void q_designermembersheetextension_on_is_signal(const void* self, bool (*callback)(const void*, int));
+void q_designermembersheetextension_on_is_signal(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#isSlot)
 ///
@@ -176,10 +176,10 @@ bool q_designermembersheetextension_is_slot(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerMemberSheetExtension*
+/// @param self QDesignerMemberSheetExtension*
 /// @param callback bool func(const QDesignerMemberSheetExtension* self, int index)
 ///
-void q_designermembersheetextension_on_is_slot(const void* self, bool (*callback)(const void*, int));
+void q_designermembersheetextension_on_is_slot(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#inheritedFromWidget)
 ///
@@ -194,10 +194,10 @@ bool q_designermembersheetextension_inherited_from_widget(const void* self, int 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerMemberSheetExtension*
+/// @param self QDesignerMemberSheetExtension*
 /// @param callback bool func(const QDesignerMemberSheetExtension* self, int index)
 ///
-void q_designermembersheetextension_on_inherited_from_widget(const void* self, bool (*callback)(const void*, int));
+void q_designermembersheetextension_on_inherited_from_widget(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#declaredInClass)
 ///
@@ -214,10 +214,10 @@ const char* q_designermembersheetextension_declared_in_class(const void* self, i
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerMemberSheetExtension*
+/// @param self QDesignerMemberSheetExtension*
 /// @param callback const char* func(const QDesignerMemberSheetExtension* self, int index)
 ///
-void q_designermembersheetextension_on_declared_in_class(const void* self, const char* (*callback)(const void*, int));
+void q_designermembersheetextension_on_declared_in_class(void* self, const char* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#signature)
 ///
@@ -234,10 +234,10 @@ const char* q_designermembersheetextension_signature(const void* self, int index
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerMemberSheetExtension*
+/// @param self QDesignerMemberSheetExtension*
 /// @param callback const char* func(const QDesignerMemberSheetExtension* self, int index)
 ///
-void q_designermembersheetextension_on_signature(const void* self, const char* (*callback)(const void*, int));
+void q_designermembersheetextension_on_signature(void* self, const char* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#parameterTypes)
 ///
@@ -254,10 +254,10 @@ const char** q_designermembersheetextension_parameter_types(const void* self, in
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerMemberSheetExtension*
+/// @param self QDesignerMemberSheetExtension*
 /// @param callback const char** func(const QDesignerMemberSheetExtension* self, int index)
 ///
-void q_designermembersheetextension_on_parameter_types(const void* self, const char** (*callback)(const void*, int));
+void q_designermembersheetextension_on_parameter_types(void* self, const char** (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#parameterNames)
 ///
@@ -274,10 +274,10 @@ const char** q_designermembersheetextension_parameter_names(const void* self, in
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerMemberSheetExtension*
+/// @param self QDesignerMemberSheetExtension*
 /// @param callback const char** func(const QDesignerMemberSheetExtension* self, int index)
 ///
-void q_designermembersheetextension_on_parameter_names(const void* self, const char** (*callback)(const void*, int));
+void q_designermembersheetextension_on_parameter_names(void* self, const char** (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermembersheetextension.html#dtor.QDesignerMemberSheetExtension)
 ///

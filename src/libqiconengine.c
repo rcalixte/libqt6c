@@ -73,7 +73,7 @@ const char* q_iconengine_key(const void* self) {
     return _ret;
 }
 
-void q_iconengine_on_key(const void* self, const char* (*callback)(const void*)) {
+void q_iconengine_on_key(void* self, const char* (*callback)(const void*)) {
     QIconEngine_OnKey((QIconEngine*)self, (intptr_t)callback);
 }
 
@@ -88,7 +88,7 @@ QIconEngine* q_iconengine_clone(const void* self) {
     return QIconEngine_Clone((QIconEngine*)self);
 }
 
-void q_iconengine_on_clone(const void* self, QIconEngine* (*callback)(const void*)) {
+void q_iconengine_on_clone(void* self, QIconEngine* (*callback)(const void*)) {
     QIconEngine_OnClone((QIconEngine*)self, (intptr_t)callback);
 }
 
@@ -108,7 +108,7 @@ bool q_iconengine_write(const void* self, void* out) {
     return QIconEngine_Write((QIconEngine*)self, (QDataStream*)out);
 }
 
-void q_iconengine_on_write(const void* self, bool (*callback)(const void*, void*)) {
+void q_iconengine_on_write(void* self, bool (*callback)(const void*, void*)) {
     QIconEngine_OnWrite((QIconEngine*)self, (intptr_t)callback);
 }
 

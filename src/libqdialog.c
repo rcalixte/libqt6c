@@ -29,7 +29,7 @@ const QMetaObject* q_dialog_meta_object(const void* self) {
     return QDialog_MetaObject((QDialog*)self);
 }
 
-void q_dialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_dialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDialog_OnMetaObject((QDialog*)self, (intptr_t)callback);
 }
 
@@ -88,7 +88,7 @@ QSize* q_dialog_size_hint(const void* self) {
     return QDialog_SizeHint((QDialog*)self);
 }
 
-void q_dialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_dialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QDialog_OnSizeHint((QDialog*)self, (intptr_t)callback);
 }
 
@@ -100,7 +100,7 @@ QSize* q_dialog_minimum_size_hint(const void* self) {
     return QDialog_MinimumSizeHint((QDialog*)self);
 }
 
-void q_dialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_dialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QDialog_OnMinimumSizeHint((QDialog*)self, (intptr_t)callback);
 }
 
@@ -298,11 +298,11 @@ const char* q_dialog_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_dialog_as_q_paint_device(void* self) {
+QPaintDevice* q_dialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QDialog* q_dialog_from_q_paint_device(void* _qpaintdevice) {
+QDialog* q_dialog_from_q_paint_device(const void* _qpaintdevice) {
     return (QDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1693,8 +1693,8 @@ int32_t q_dialog_super_dev_type(const void* self) {
     return QDialog_SuperDevType((QDialog*)self);
 }
 
-void q_dialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QDialog_OnDevType((const QDialog*)self, (intptr_t)callback);
+void q_dialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QDialog_OnDevType((QDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_dialog_height_for_width(const void* self, int param1) {
@@ -1705,8 +1705,8 @@ int32_t q_dialog_super_height_for_width(const void* self, int param1) {
     return QDialog_SuperHeightForWidth((QDialog*)self, param1);
 }
 
-void q_dialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QDialog_OnHeightForWidth((const QDialog*)self, (intptr_t)callback);
+void q_dialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QDialog_OnHeightForWidth((QDialog*)self, (intptr_t)callback);
 }
 
 bool q_dialog_has_height_for_width(const void* self) {
@@ -1717,8 +1717,8 @@ bool q_dialog_super_has_height_for_width(const void* self) {
     return QDialog_SuperHasHeightForWidth((QDialog*)self);
 }
 
-void q_dialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QDialog_OnHasHeightForWidth((const QDialog*)self, (intptr_t)callback);
+void q_dialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QDialog_OnHasHeightForWidth((QDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_dialog_paint_engine(const void* self) {
@@ -1729,8 +1729,8 @@ QPaintEngine* q_dialog_super_paint_engine(const void* self) {
     return QDialog_SuperPaintEngine((QDialog*)self);
 }
 
-void q_dialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QDialog_OnPaintEngine((const QDialog*)self, (intptr_t)callback);
+void q_dialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QDialog_OnPaintEngine((QDialog*)self, (intptr_t)callback);
 }
 
 bool q_dialog_event(void* self, void* event) {
@@ -2005,8 +2005,8 @@ int32_t q_dialog_super_metric(const void* self, int32_t param1) {
     return QDialog_SuperMetric((QDialog*)self, param1);
 }
 
-void q_dialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QDialog_OnMetric((const QDialog*)self, (intptr_t)callback);
+void q_dialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QDialog_OnMetric((QDialog*)self, (intptr_t)callback);
 }
 
 void q_dialog_init_painter(const void* self, void* painter) {
@@ -2017,8 +2017,8 @@ void q_dialog_super_init_painter(const void* self, void* painter) {
     QDialog_SuperInitPainter((QDialog*)self, (QPainter*)painter);
 }
 
-void q_dialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QDialog_OnInitPainter((const QDialog*)self, (intptr_t)callback);
+void q_dialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QDialog_OnInitPainter((QDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_dialog_redirected(const void* self, void* offset) {
@@ -2029,8 +2029,8 @@ QPaintDevice* q_dialog_super_redirected(const void* self, void* offset) {
     return QDialog_SuperRedirected((QDialog*)self, (QPoint*)offset);
 }
 
-void q_dialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QDialog_OnRedirected((const QDialog*)self, (intptr_t)callback);
+void q_dialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QDialog_OnRedirected((QDialog*)self, (intptr_t)callback);
 }
 
 QPainter* q_dialog_shared_painter(const void* self) {
@@ -2041,8 +2041,8 @@ QPainter* q_dialog_super_shared_painter(const void* self) {
     return QDialog_SuperSharedPainter((QDialog*)self);
 }
 
-void q_dialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QDialog_OnSharedPainter((const QDialog*)self, (intptr_t)callback);
+void q_dialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QDialog_OnSharedPainter((QDialog*)self, (intptr_t)callback);
 }
 
 void q_dialog_input_method_event(void* self, void* param1) {
@@ -2065,8 +2065,8 @@ QVariant* q_dialog_super_input_method_query(const void* self, int32_t param1) {
     return QDialog_SuperInputMethodQuery((QDialog*)self, param1);
 }
 
-void q_dialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QDialog_OnInputMethodQuery((const QDialog*)self, (intptr_t)callback);
+void q_dialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QDialog_OnInputMethodQuery((QDialog*)self, (intptr_t)callback);
 }
 
 bool q_dialog_focus_next_prev_child(void* self, bool next) {

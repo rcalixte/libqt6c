@@ -47,10 +47,10 @@ const char** k_xmlguibuilder_container_tags(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KXMLGUIBuilder*
+/// @param self KXMLGUIBuilder*
 /// @param callback const char** func(const KXMLGUIBuilder* self)
 ///
-void k_xmlguibuilder_on_container_tags(const void* self, const char** (*callback)(const void*));
+void k_xmlguibuilder_on_container_tags(void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#containerTags)
 ///
@@ -134,10 +134,10 @@ const char** k_xmlguibuilder_custom_tags(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KXMLGUIBuilder*
+/// @param self KXMLGUIBuilder*
 /// @param callback const char** func(const KXMLGUIBuilder* self)
 ///
-void k_xmlguibuilder_on_custom_tags(const void* self, const char** (*callback)(const void*));
+void k_xmlguibuilder_on_custom_tags(void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#customTags)
 ///

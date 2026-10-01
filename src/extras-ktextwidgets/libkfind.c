@@ -20,7 +20,7 @@ const QMetaObject* k_find_meta_object(const void* self) {
     return KFind_MetaObject((KFind*)self);
 }
 
-void k_find_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_find_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFind_OnMetaObject((KFind*)self, (intptr_t)callback);
 }
 
@@ -134,7 +134,7 @@ bool k_find_should_restart(const void* self, bool forceAsking, bool showNumMatch
     return KFind_ShouldRestart((KFind*)self, forceAsking, showNumMatches);
 }
 
-void k_find_on_should_restart(const void* self, bool (*callback)(const void*, bool, bool)) {
+void k_find_on_should_restart(void* self, bool (*callback)(const void*, bool, bool)) {
     KFind_OnShouldRestart((KFind*)self, (intptr_t)callback);
 }
 
@@ -150,7 +150,7 @@ void k_find_display_final_dialog(const void* self) {
     KFind_DisplayFinalDialog((KFind*)self);
 }
 
-void k_find_on_display_final_dialog(const void* self, void (*callback)(const void*)) {
+void k_find_on_display_final_dialog(void* self, void (*callback)(const void*)) {
     KFind_OnDisplayFinalDialog((KFind*)self, (intptr_t)callback);
 }
 

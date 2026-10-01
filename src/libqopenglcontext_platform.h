@@ -35,10 +35,10 @@ void* q_nativeinterface__qeglcontext_native_context(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QEGLContext*
+/// @param self QNativeInterface__QEGLContext*
 /// @param callback void* func(const QNativeInterface__QEGLContext* self)
 ///
-void q_nativeinterface__qeglcontext_on_native_context(const void* self, void* (*callback)(const void*));
+void q_nativeinterface__qeglcontext_on_native_context(void* self, void* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#config)
 ///
@@ -52,10 +52,10 @@ void* q_nativeinterface__qeglcontext_config(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QEGLContext*
+/// @param self QNativeInterface__QEGLContext*
 /// @param callback void* func(const QNativeInterface__QEGLContext* self)
 ///
-void q_nativeinterface__qeglcontext_on_config(const void* self, void* (*callback)(const void*));
+void q_nativeinterface__qeglcontext_on_config(void* self, void* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#display)
 ///
@@ -69,10 +69,10 @@ void* q_nativeinterface__qeglcontext_display(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QEGLContext*
+/// @param self QNativeInterface__QEGLContext*
 /// @param callback void* func(const QNativeInterface__QEGLContext* self)
 ///
-void q_nativeinterface__qeglcontext_on_display(const void* self, void* (*callback)(const void*));
+void q_nativeinterface__qeglcontext_on_display(void* self, void* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qeglcontext.html#invalidateContext)
 ///

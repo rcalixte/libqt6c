@@ -18,7 +18,7 @@ const QMetaObject* k_overlayiconplugin_meta_object(const void* self) {
     return KOverlayIconPlugin_MetaObject((KOverlayIconPlugin*)self);
 }
 
-void k_overlayiconplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_overlayiconplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KOverlayIconPlugin_OnMetaObject((KOverlayIconPlugin*)self, (intptr_t)callback);
 }
 

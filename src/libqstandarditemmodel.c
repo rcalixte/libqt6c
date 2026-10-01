@@ -37,7 +37,7 @@ QVariant* q_standarditem_data(const void* self, int role) {
     return QStandardItem_Data((QStandardItem*)self, role);
 }
 
-void q_standarditem_on_data(const void* self, QVariant* (*callback)(const void*, int)) {
+void q_standarditem_on_data(void* self, QVariant* (*callback)(const void*, int)) {
     QStandardItem_OnData((QStandardItem*)self, (intptr_t)callback);
 }
 
@@ -49,7 +49,7 @@ void q_standarditem_multi_data(const void* self, void* roleDataSpan) {
     QStandardItem_MultiData((QStandardItem*)self, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_standarditem_on_multi_data(const void* self, void (*callback)(const void*, void*)) {
+void q_standarditem_on_multi_data(void* self, void (*callback)(const void*, void*)) {
     QStandardItem_OnMultiData((QStandardItem*)self, (intptr_t)callback);
 }
 
@@ -397,7 +397,7 @@ QStandardItem* q_standarditem_clone(const void* self) {
     return QStandardItem_Clone((QStandardItem*)self);
 }
 
-void q_standarditem_on_clone(const void* self, QStandardItem* (*callback)(const void*)) {
+void q_standarditem_on_clone(void* self, QStandardItem* (*callback)(const void*)) {
     QStandardItem_OnClone((QStandardItem*)self, (intptr_t)callback);
 }
 
@@ -409,7 +409,7 @@ int32_t q_standarditem_type(const void* self) {
     return QStandardItem_Type((QStandardItem*)self);
 }
 
-void q_standarditem_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_standarditem_on_type(void* self, int32_t (*callback)(const void*)) {
     QStandardItem_OnType((QStandardItem*)self, (intptr_t)callback);
 }
 
@@ -433,7 +433,7 @@ void q_standarditem_write(const void* self, void* out) {
     QStandardItem_Write((QStandardItem*)self, (QDataStream*)out);
 }
 
-void q_standarditem_on_write(const void* self, void (*callback)(const void*, void*)) {
+void q_standarditem_on_write(void* self, void (*callback)(const void*, void*)) {
     QStandardItem_OnWrite((QStandardItem*)self, (intptr_t)callback);
 }
 
@@ -445,7 +445,7 @@ bool q_standarditem_operator_lesser(const void* self, const void* other) {
     return QStandardItem_OperatorLesser((QStandardItem*)self, (QStandardItem*)other);
 }
 
-void q_standarditem_on_operator_lesser(const void* self, bool (*callback)(const void*, const void*)) {
+void q_standarditem_on_operator_lesser(void* self, bool (*callback)(const void*, const void*)) {
     QStandardItem_OnOperatorLesser((QStandardItem*)self, (intptr_t)callback);
 }
 
@@ -497,7 +497,7 @@ const QMetaObject* q_standarditemmodel_meta_object(const void* self) {
     return QStandardItemModel_MetaObject((QStandardItemModel*)self);
 }
 
-void q_standarditemmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_standarditemmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QStandardItemModel_OnMetaObject((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -597,7 +597,7 @@ libqt_map /* of int to char* */ q_standarditemmodel_role_names(const void* self)
     return _ret;
 }
 
-void q_standarditemmodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_standarditemmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
     QStandardItemModel_OnRoleNames((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -638,7 +638,7 @@ QModelIndex* q_standarditemmodel_index(const void* self, int row, int column, co
     return QStandardItemModel_Index((QStandardItemModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void q_standarditemmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void q_standarditemmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     QStandardItemModel_OnIndex((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -650,7 +650,7 @@ QModelIndex* q_standarditemmodel_parent(const void* self, const void* child) {
     return QStandardItemModel_Parent((QStandardItemModel*)self, (QModelIndex*)child);
 }
 
-void q_standarditemmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_standarditemmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QStandardItemModel_OnParent((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -662,7 +662,7 @@ int32_t q_standarditemmodel_row_count(const void* self, const void* parent) {
     return QStandardItemModel_RowCount((QStandardItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_standarditemmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_standarditemmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QStandardItemModel_OnRowCount((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -674,7 +674,7 @@ int32_t q_standarditemmodel_column_count(const void* self, const void* parent) {
     return QStandardItemModel_ColumnCount((QStandardItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_standarditemmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_standarditemmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QStandardItemModel_OnColumnCount((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -686,7 +686,7 @@ bool q_standarditemmodel_has_children(const void* self, const void* parent) {
     return QStandardItemModel_HasChildren((QStandardItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_standarditemmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
+void q_standarditemmodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
     QStandardItemModel_OnHasChildren((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -698,7 +698,7 @@ QVariant* q_standarditemmodel_data(const void* self, const void* index, int role
     return QStandardItemModel_Data((QStandardItemModel*)self, (QModelIndex*)index, role);
 }
 
-void q_standarditemmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
+void q_standarditemmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
     QStandardItemModel_OnData((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -710,7 +710,7 @@ void q_standarditemmodel_multi_data(const void* self, const void* index, void* r
     QStandardItemModel_MultiData((QStandardItemModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_standarditemmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
+void q_standarditemmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
     QStandardItemModel_OnMultiData((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -746,7 +746,7 @@ QVariant* q_standarditemmodel_header_data(const void* self, int section, int32_t
     return QStandardItemModel_HeaderData((QStandardItemModel*)self, section, orientation, role);
 }
 
-void q_standarditemmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+void q_standarditemmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
     QStandardItemModel_OnHeaderData((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -818,7 +818,7 @@ int32_t q_standarditemmodel_flags(const void* self, const void* index) {
     return QStandardItemModel_Flags((QStandardItemModel*)self, (QModelIndex*)index);
 }
 
-void q_standarditemmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_standarditemmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
     QStandardItemModel_OnFlags((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -830,7 +830,7 @@ int32_t q_standarditemmodel_supported_drop_actions(const void* self) {
     return QStandardItemModel_SupportedDropActions((QStandardItemModel*)self);
 }
 
-void q_standarditemmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
+void q_standarditemmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
     QStandardItemModel_OnSupportedDropActions((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -848,7 +848,7 @@ libqt_map /* of int to QVariant* */ q_standarditemmodel_item_data(const void* se
     return _ret;
 }
 
-void q_standarditemmodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+void q_standarditemmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
     QStandardItemModel_OnItemData((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -1105,7 +1105,7 @@ const char** q_standarditemmodel_mime_types(const void* self) {
     return _ret;
 }
 
-void q_standarditemmodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
+void q_standarditemmodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
     QStandardItemModel_OnMimeTypes((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -1130,7 +1130,7 @@ QMimeData* q_standarditemmodel_mime_data(const void* self, libqt_list /* of QMod
     return QStandardItemModel_MimeData((QStandardItemModel*)self, indexes);
 }
 
-void q_standarditemmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+void q_standarditemmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
     QStandardItemModel_OnMimeData((QStandardItemModel*)self, (intptr_t)callback);
 }
 
@@ -1523,8 +1523,8 @@ QModelIndex* q_standarditemmodel_super_sibling(const void* self, int row, int co
     return QStandardItemModel_SuperSibling((QStandardItemModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void q_standarditemmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    QStandardItemModel_OnSibling((const QStandardItemModel*)self, (intptr_t)callback);
+void q_standarditemmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    QStandardItemModel_OnSibling((QStandardItemModel*)self, (intptr_t)callback);
 }
 
 bool q_standarditemmodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -1535,8 +1535,8 @@ bool q_standarditemmodel_super_can_drop_mime_data(const void* self, const void* 
     return QStandardItemModel_SuperCanDropMimeData((QStandardItemModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_standarditemmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    QStandardItemModel_OnCanDropMimeData((const QStandardItemModel*)self, (intptr_t)callback);
+void q_standarditemmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    QStandardItemModel_OnCanDropMimeData((QStandardItemModel*)self, (intptr_t)callback);
 }
 
 int32_t q_standarditemmodel_supported_drag_actions(const void* self) {
@@ -1547,8 +1547,8 @@ int32_t q_standarditemmodel_super_supported_drag_actions(const void* self) {
     return QStandardItemModel_SuperSupportedDragActions((QStandardItemModel*)self);
 }
 
-void q_standarditemmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    QStandardItemModel_OnSupportedDragActions((const QStandardItemModel*)self, (intptr_t)callback);
+void q_standarditemmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    QStandardItemModel_OnSupportedDragActions((QStandardItemModel*)self, (intptr_t)callback);
 }
 
 bool q_standarditemmodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild) {
@@ -1595,8 +1595,8 @@ bool q_standarditemmodel_super_can_fetch_more(const void* self, const void* pare
     return QStandardItemModel_SuperCanFetchMore((QStandardItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_standarditemmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    QStandardItemModel_OnCanFetchMore((const QStandardItemModel*)self, (intptr_t)callback);
+void q_standarditemmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    QStandardItemModel_OnCanFetchMore((QStandardItemModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_standarditemmodel_buddy(const void* self, const void* index) {
@@ -1607,8 +1607,8 @@ QModelIndex* q_standarditemmodel_super_buddy(const void* self, const void* index
     return QStandardItemModel_SuperBuddy((QStandardItemModel*)self, (QModelIndex*)index);
 }
 
-void q_standarditemmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    QStandardItemModel_OnBuddy((const QStandardItemModel*)self, (intptr_t)callback);
+void q_standarditemmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    QStandardItemModel_OnBuddy((QStandardItemModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_standarditemmodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -1621,8 +1621,8 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_super_match(const void* sel
     return _arr;
 }
 
-void q_standarditemmodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    QStandardItemModel_OnMatch((const QStandardItemModel*)self, (intptr_t)callback);
+void q_standarditemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    QStandardItemModel_OnMatch((QStandardItemModel*)self, (intptr_t)callback);
 }
 
 QSize* q_standarditemmodel_span(const void* self, const void* index) {
@@ -1633,8 +1633,8 @@ QSize* q_standarditemmodel_super_span(const void* self, const void* index) {
     return QStandardItemModel_SuperSpan((QStandardItemModel*)self, (QModelIndex*)index);
 }
 
-void q_standarditemmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    QStandardItemModel_OnSpan((const QStandardItemModel*)self, (intptr_t)callback);
+void q_standarditemmodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    QStandardItemModel_OnSpan((QStandardItemModel*)self, (intptr_t)callback);
 }
 
 bool q_standarditemmodel_submit(void* self) {

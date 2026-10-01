@@ -35,10 +35,10 @@ const QMetaObject* k_texteditor__command_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KTextEditor__Command*
+/// @param self KTextEditor__Command*
 /// @param callback const QMetaObject* func(const KTextEditor__Command* self)
 ///
-void k_texteditor__command_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_texteditor__command_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -976,10 +976,10 @@ QObject* k_texteditor__command_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KTextEditor__Command*
+/// @param self KTextEditor__Command*
 /// @param callback QObject* func(KTextEditor__Command* self)
 ///
-void k_texteditor__command_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_texteditor__command_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1007,10 +1007,10 @@ int32_t k_texteditor__command_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KTextEditor__Command*
+/// @param self KTextEditor__Command*
 /// @param callback int32_t func(KTextEditor__Command* self)
 ///
-void k_texteditor__command_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_texteditor__command_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1040,10 +1040,10 @@ int32_t k_texteditor__command_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KTextEditor__Command*
+/// @param self KTextEditor__Command*
 /// @param callback int32_t func(KTextEditor__Command* self, const char* signal)
 ///
-void k_texteditor__command_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_texteditor__command_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1073,10 +1073,10 @@ bool k_texteditor__command_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KTextEditor__Command*
+/// @param self KTextEditor__Command*
 /// @param callback bool func(KTextEditor__Command* self, QMetaMethod* signal)
 ///
-void k_texteditor__command_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_texteditor__command_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

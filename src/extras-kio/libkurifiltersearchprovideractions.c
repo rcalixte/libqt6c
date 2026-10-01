@@ -18,7 +18,7 @@ const QMetaObject* k_io__kurifiltersearchprovideractions_meta_object(const void*
     return KIO__KUriFilterSearchProviderActions_MetaObject((KIO__KUriFilterSearchProviderActions*)self);
 }
 
-void k_io__kurifiltersearchprovideractions_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__kurifiltersearchprovideractions_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__KUriFilterSearchProviderActions_OnMetaObject((KIO__KUriFilterSearchProviderActions*)self, (intptr_t)callback);
 }
 

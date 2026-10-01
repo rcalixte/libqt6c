@@ -24,10 +24,10 @@ const QMetaObject* k_completion_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCompletion*
+/// @param self KCompletion*
 /// @param callback const QMetaObject* func(const KCompletion* self)
 ///
-void k_completion_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_completion_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -108,10 +108,10 @@ const char* k_completion_last_match(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCompletion*
+/// @param self KCompletion*
 /// @param callback const char* func(const KCompletion* self)
 ///
-void k_completion_on_last_match(const void* self, const char* (*callback)(const void*));
+void k_completion_on_last_match(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcompletion.html#lastMatch)
 ///
@@ -477,10 +477,10 @@ void k_completion_post_process_matches(const void* self, const char* matchList[s
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCompletion*
+/// @param self KCompletion*
 /// @param callback void func(const KCompletion* self, const char** matchList)
 ///
-void k_completion_on_post_process_matches(const void* self, void (*callback)(const void*, const char**));
+void k_completion_on_post_process_matches(void* self, void (*callback)(const void*, const char**));
 
 /// [Upstream resources](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///
@@ -502,10 +502,10 @@ void k_completion_post_process_matches2(const void* self, void* matches);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCompletion*
+/// @param self KCompletion*
 /// @param callback void func(const KCompletion* self, KCompletionMatches* matches)
 ///
-void k_completion_on_post_process_matches2(const void* self, void (*callback)(const void*, void*));
+void k_completion_on_post_process_matches2(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///
@@ -1248,10 +1248,10 @@ QObject* k_completion_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompletion*
+/// @param self KCompletion*
 /// @param callback QObject* func(KCompletion* self)
 ///
-void k_completion_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_completion_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1279,10 +1279,10 @@ int32_t k_completion_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompletion*
+/// @param self KCompletion*
 /// @param callback int32_t func(KCompletion* self)
 ///
-void k_completion_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_completion_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1312,10 +1312,10 @@ int32_t k_completion_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompletion*
+/// @param self KCompletion*
 /// @param callback int32_t func(KCompletion* self, const char* signal)
 ///
-void k_completion_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_completion_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1345,10 +1345,10 @@ bool k_completion_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompletion*
+/// @param self KCompletion*
 /// @param callback bool func(KCompletion* self, QMetaMethod* signal)
 ///
-void k_completion_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_completion_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

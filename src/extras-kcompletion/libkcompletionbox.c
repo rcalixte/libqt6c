@@ -38,7 +38,7 @@ const QMetaObject* k_completionbox_meta_object(const void* self) {
     return KCompletionBox_MetaObject((KCompletionBox*)self);
 }
 
-void k_completionbox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_completionbox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KCompletionBox_OnMetaObject((KCompletionBox*)self, (intptr_t)callback);
 }
 
@@ -81,7 +81,7 @@ QSize* k_completionbox_size_hint(const void* self) {
     return KCompletionBox_SizeHint((KCompletionBox*)self);
 }
 
-void k_completionbox_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_completionbox_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KCompletionBox_OnSizeHint((KCompletionBox*)self, (intptr_t)callback);
 }
 
@@ -249,7 +249,7 @@ QPoint* k_completionbox_global_position_hint(const void* self) {
     return KCompletionBox_GlobalPositionHint((KCompletionBox*)self);
 }
 
-void k_completionbox_on_global_position_hint(const void* self, QPoint* (*callback)(const void*)) {
+void k_completionbox_on_global_position_hint(void* self, QPoint* (*callback)(const void*)) {
     KCompletionBox_OnGlobalPositionHint((KCompletionBox*)self, (intptr_t)callback);
 }
 
@@ -1070,11 +1070,11 @@ void k_completionbox_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_completionbox_as_q_paint_device(void* self) {
+QPaintDevice* k_completionbox_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KCompletionBox* k_completionbox_from_q_paint_device(void* _qpaintdevice) {
+KCompletionBox* k_completionbox_from_q_paint_device(const void* _qpaintdevice) {
     return (KCompletionBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2523,8 +2523,8 @@ const char** k_completionbox_super_mime_types(const void* self) {
     return _ret;
 }
 
-void k_completionbox_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    KCompletionBox_OnMimeTypes((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    KCompletionBox_OnMimeTypes((KCompletionBox*)self, (intptr_t)callback);
 }
 
 QMimeData* k_completionbox_mime_data(const void* self, libqt_list /* of QListWidgetItem* */ items) {
@@ -2535,8 +2535,8 @@ QMimeData* k_completionbox_super_mime_data(const void* self, libqt_list /* of QL
     return KCompletionBox_SuperMimeData((KCompletionBox*)self, items);
 }
 
-void k_completionbox_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QListWidgetItem* */)) {
-    KCompletionBox_OnMimeData((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QListWidgetItem* */)) {
+    KCompletionBox_OnMimeData((KCompletionBox*)self, (intptr_t)callback);
 }
 
 bool k_completionbox_drop_mime_data(void* self, int index, const void* data, int32_t action) {
@@ -2559,8 +2559,8 @@ int32_t k_completionbox_super_supported_drop_actions(const void* self) {
     return KCompletionBox_SuperSupportedDropActions((KCompletionBox*)self);
 }
 
-void k_completionbox_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
-    KCompletionBox_OnSupportedDropActions((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
+    KCompletionBox_OnSupportedDropActions((KCompletionBox*)self, (intptr_t)callback);
 }
 
 QRect* k_completionbox_visual_rect(const void* self, const void* index) {
@@ -2571,8 +2571,8 @@ QRect* k_completionbox_super_visual_rect(const void* self, const void* index) {
     return KCompletionBox_SuperVisualRect((KCompletionBox*)self, (QModelIndex*)index);
 }
 
-void k_completionbox_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*)) {
-    KCompletionBox_OnVisualRect((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*)) {
+    KCompletionBox_OnVisualRect((KCompletionBox*)self, (intptr_t)callback);
 }
 
 void k_completionbox_scroll_to(void* self, const void* index, int32_t hint) {
@@ -2595,8 +2595,8 @@ QModelIndex* k_completionbox_super_index_at(const void* self, const void* p) {
     return KCompletionBox_SuperIndexAt((KCompletionBox*)self, (QPoint*)p);
 }
 
-void k_completionbox_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    KCompletionBox_OnIndexAt((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_index_at(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KCompletionBox_OnIndexAt((KCompletionBox*)self, (intptr_t)callback);
 }
 
 void k_completionbox_do_items_layout(void* self) {
@@ -2787,8 +2787,8 @@ void k_completionbox_super_init_view_item_option(const void* self, void* option)
     KCompletionBox_SuperInitViewItemOption((KCompletionBox*)self, (QStyleOptionViewItem*)option);
 }
 
-void k_completionbox_on_init_view_item_option(const void* self, void (*callback)(const void*, void*)) {
-    KCompletionBox_OnInitViewItemOption((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_init_view_item_option(void* self, void (*callback)(const void*, void*)) {
+    KCompletionBox_OnInitViewItemOption((KCompletionBox*)self, (intptr_t)callback);
 }
 
 void k_completionbox_paint_event(void* self, void* e) {
@@ -2811,8 +2811,8 @@ int32_t k_completionbox_super_horizontal_offset(const void* self) {
     return KCompletionBox_SuperHorizontalOffset((KCompletionBox*)self);
 }
 
-void k_completionbox_on_horizontal_offset(const void* self, int32_t (*callback)(const void*)) {
-    KCompletionBox_OnHorizontalOffset((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_horizontal_offset(void* self, int32_t (*callback)(const void*)) {
+    KCompletionBox_OnHorizontalOffset((KCompletionBox*)self, (intptr_t)callback);
 }
 
 int32_t k_completionbox_vertical_offset(const void* self) {
@@ -2823,8 +2823,8 @@ int32_t k_completionbox_super_vertical_offset(const void* self) {
     return KCompletionBox_SuperVerticalOffset((KCompletionBox*)self);
 }
 
-void k_completionbox_on_vertical_offset(const void* self, int32_t (*callback)(const void*)) {
-    KCompletionBox_OnVerticalOffset((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_vertical_offset(void* self, int32_t (*callback)(const void*)) {
+    KCompletionBox_OnVerticalOffset((KCompletionBox*)self, (intptr_t)callback);
 }
 
 QModelIndex* k_completionbox_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
@@ -2859,8 +2859,8 @@ QRegion* k_completionbox_super_visual_region_for_selection(const void* self, con
     return KCompletionBox_SuperVisualRegionForSelection((KCompletionBox*)self, (QItemSelection*)selection);
 }
 
-void k_completionbox_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*)) {
-    KCompletionBox_OnVisualRegionForSelection((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_visual_region_for_selection(void* self, QRegion* (*callback)(const void*, const void*)) {
+    KCompletionBox_OnVisualRegionForSelection((KCompletionBox*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ k_completionbox_selected_indexes(const void* self) {
@@ -2873,8 +2873,8 @@ libqt_list /* of QModelIndex* */ k_completionbox_super_selected_indexes(const vo
     return _arr;
 }
 
-void k_completionbox_on_selected_indexes(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
-    KCompletionBox_OnSelectedIndexes((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
+    KCompletionBox_OnSelectedIndexes((KCompletionBox*)self, (intptr_t)callback);
 }
 
 void k_completionbox_update_geometries(void* self) {
@@ -2897,8 +2897,8 @@ bool k_completionbox_super_is_index_hidden(const void* self, const void* index) 
     return KCompletionBox_SuperIsIndexHidden((KCompletionBox*)self, (QModelIndex*)index);
 }
 
-void k_completionbox_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*)) {
-    KCompletionBox_OnIsIndexHidden((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_is_index_hidden(void* self, bool (*callback)(const void*, const void*)) {
+    KCompletionBox_OnIsIndexHidden((KCompletionBox*)self, (intptr_t)callback);
 }
 
 void k_completionbox_selection_changed(void* self, const void* selected, const void* deselected) {
@@ -2933,8 +2933,8 @@ QSize* k_completionbox_super_viewport_size_hint(const void* self) {
     return KCompletionBox_SuperViewportSizeHint((KCompletionBox*)self);
 }
 
-void k_completionbox_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KCompletionBox_OnViewportSizeHint((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KCompletionBox_OnViewportSizeHint((KCompletionBox*)self, (intptr_t)callback);
 }
 
 void k_completionbox_keyboard_search(void* self, const char* search) {
@@ -2957,8 +2957,8 @@ int32_t k_completionbox_super_size_hint_for_row(const void* self, int row) {
     return KCompletionBox_SuperSizeHintForRow((KCompletionBox*)self, row);
 }
 
-void k_completionbox_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int)) {
-    KCompletionBox_OnSizeHintForRow((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_size_hint_for_row(void* self, int32_t (*callback)(const void*, int)) {
+    KCompletionBox_OnSizeHintForRow((KCompletionBox*)self, (intptr_t)callback);
 }
 
 int32_t k_completionbox_size_hint_for_column(const void* self, int column) {
@@ -2969,8 +2969,8 @@ int32_t k_completionbox_super_size_hint_for_column(const void* self, int column)
     return KCompletionBox_SuperSizeHintForColumn((KCompletionBox*)self, column);
 }
 
-void k_completionbox_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int)) {
-    KCompletionBox_OnSizeHintForColumn((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_size_hint_for_column(void* self, int32_t (*callback)(const void*, int)) {
+    KCompletionBox_OnSizeHintForColumn((KCompletionBox*)self, (intptr_t)callback);
 }
 
 QAbstractItemDelegate* k_completionbox_item_delegate_for_index(const void* self, const void* index) {
@@ -2981,8 +2981,8 @@ QAbstractItemDelegate* k_completionbox_super_item_delegate_for_index(const void*
     return KCompletionBox_SuperItemDelegateForIndex((KCompletionBox*)self, (QModelIndex*)index);
 }
 
-void k_completionbox_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
-    KCompletionBox_OnItemDelegateForIndex((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
+    KCompletionBox_OnItemDelegateForIndex((KCompletionBox*)self, (intptr_t)callback);
 }
 
 QVariant* k_completionbox_input_method_query(const void* self, int32_t query) {
@@ -2993,8 +2993,8 @@ QVariant* k_completionbox_super_input_method_query(const void* self, int32_t que
     return KCompletionBox_SuperInputMethodQuery((KCompletionBox*)self, query);
 }
 
-void k_completionbox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KCompletionBox_OnInputMethodQuery((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KCompletionBox_OnInputMethodQuery((KCompletionBox*)self, (intptr_t)callback);
 }
 
 void k_completionbox_select_all(void* self) {
@@ -3137,8 +3137,8 @@ int32_t k_completionbox_super_selection_command(const void* self, const void* in
     return KCompletionBox_SuperSelectionCommand((KCompletionBox*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void k_completionbox_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*)) {
-    KCompletionBox_OnSelectionCommand((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_selection_command(void* self, int32_t (*callback)(const void*, const void*, const void*)) {
+    KCompletionBox_OnSelectionCommand((KCompletionBox*)self, (intptr_t)callback);
 }
 
 bool k_completionbox_focus_next_prev_child(void* self, bool next) {
@@ -3257,8 +3257,8 @@ QSize* k_completionbox_super_minimum_size_hint(const void* self) {
     return KCompletionBox_SuperMinimumSizeHint((KCompletionBox*)self);
 }
 
-void k_completionbox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KCompletionBox_OnMinimumSizeHint((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KCompletionBox_OnMinimumSizeHint((KCompletionBox*)self, (intptr_t)callback);
 }
 
 void k_completionbox_setup_viewport(void* self, void* viewport) {
@@ -3305,8 +3305,8 @@ void k_completionbox_super_init_style_option(const void* self, void* option) {
     KCompletionBox_SuperInitStyleOption((KCompletionBox*)self, (QStyleOptionFrame*)option);
 }
 
-void k_completionbox_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KCompletionBox_OnInitStyleOption((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KCompletionBox_OnInitStyleOption((KCompletionBox*)self, (intptr_t)callback);
 }
 
 int32_t k_completionbox_dev_type(const void* self) {
@@ -3317,8 +3317,8 @@ int32_t k_completionbox_super_dev_type(const void* self) {
     return KCompletionBox_SuperDevType((KCompletionBox*)self);
 }
 
-void k_completionbox_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KCompletionBox_OnDevType((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KCompletionBox_OnDevType((KCompletionBox*)self, (intptr_t)callback);
 }
 
 int32_t k_completionbox_height_for_width(const void* self, int param1) {
@@ -3329,8 +3329,8 @@ int32_t k_completionbox_super_height_for_width(const void* self, int param1) {
     return KCompletionBox_SuperHeightForWidth((KCompletionBox*)self, param1);
 }
 
-void k_completionbox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KCompletionBox_OnHeightForWidth((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KCompletionBox_OnHeightForWidth((KCompletionBox*)self, (intptr_t)callback);
 }
 
 bool k_completionbox_has_height_for_width(const void* self) {
@@ -3341,8 +3341,8 @@ bool k_completionbox_super_has_height_for_width(const void* self) {
     return KCompletionBox_SuperHasHeightForWidth((KCompletionBox*)self);
 }
 
-void k_completionbox_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KCompletionBox_OnHasHeightForWidth((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KCompletionBox_OnHasHeightForWidth((KCompletionBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_completionbox_paint_engine(const void* self) {
@@ -3353,8 +3353,8 @@ QPaintEngine* k_completionbox_super_paint_engine(const void* self) {
     return KCompletionBox_SuperPaintEngine((KCompletionBox*)self);
 }
 
-void k_completionbox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KCompletionBox_OnPaintEngine((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KCompletionBox_OnPaintEngine((KCompletionBox*)self, (intptr_t)callback);
 }
 
 void k_completionbox_key_release_event(void* self, void* event) {
@@ -3485,8 +3485,8 @@ int32_t k_completionbox_super_metric(const void* self, int32_t param1) {
     return KCompletionBox_SuperMetric((KCompletionBox*)self, param1);
 }
 
-void k_completionbox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KCompletionBox_OnMetric((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KCompletionBox_OnMetric((KCompletionBox*)self, (intptr_t)callback);
 }
 
 void k_completionbox_init_painter(const void* self, void* painter) {
@@ -3497,8 +3497,8 @@ void k_completionbox_super_init_painter(const void* self, void* painter) {
     KCompletionBox_SuperInitPainter((KCompletionBox*)self, (QPainter*)painter);
 }
 
-void k_completionbox_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KCompletionBox_OnInitPainter((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KCompletionBox_OnInitPainter((KCompletionBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_completionbox_redirected(const void* self, void* offset) {
@@ -3509,8 +3509,8 @@ QPaintDevice* k_completionbox_super_redirected(const void* self, void* offset) {
     return KCompletionBox_SuperRedirected((KCompletionBox*)self, (QPoint*)offset);
 }
 
-void k_completionbox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KCompletionBox_OnRedirected((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KCompletionBox_OnRedirected((KCompletionBox*)self, (intptr_t)callback);
 }
 
 QPainter* k_completionbox_shared_painter(const void* self) {
@@ -3521,8 +3521,8 @@ QPainter* k_completionbox_super_shared_painter(const void* self) {
     return KCompletionBox_SuperSharedPainter((KCompletionBox*)self);
 }
 
-void k_completionbox_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KCompletionBox_OnSharedPainter((const KCompletionBox*)self, (intptr_t)callback);
+void k_completionbox_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KCompletionBox_OnSharedPainter((KCompletionBox*)self, (intptr_t)callback);
 }
 
 void k_completionbox_child_event(void* self, void* event) {

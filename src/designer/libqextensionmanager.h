@@ -24,15 +24,15 @@ QExtensionManager* q_extensionmanager_new2(void* parent);
 
 /// Upcasts to a QAbstractExtensionManager object
 ///
-/// @param self QExtensionManager*
+/// @param self const QExtensionManager*
 ///
-QAbstractExtensionManager* q_extensionmanager_as_q_abstract_extension_manager(void* self);
+QAbstractExtensionManager* q_extensionmanager_as_q_abstract_extension_manager(const void* self);
 
 /// Downcasts to a QExtensionManager object
 ///
 /// @param _qabstractextensionmanager QAbstractExtensionManager*
 ///
-QExtensionManager* q_extensionmanager_from_q_abstract_extension_manager(void* _qabstractextensionmanager);
+QExtensionManager* q_extensionmanager_from_q_abstract_extension_manager(const void* _qabstractextensionmanager);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -44,10 +44,10 @@ const QMetaObject* q_extensionmanager_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QExtensionManager*
+/// @param self QExtensionManager*
 /// @param callback const QMetaObject* func(const QExtensionManager* self)
 ///
-void q_extensionmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_extensionmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -173,10 +173,10 @@ QObject* q_extensionmanager_extension(const void* self, void* object, const char
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QExtensionManager*
+/// @param self QExtensionManager*
 /// @param callback QObject* func(const QExtensionManager* self, QObject* object, const char* iid)
 ///
-void q_extensionmanager_on_extension(const void* self, QObject* (*callback)(const void*, void*, const char*));
+void q_extensionmanager_on_extension(void* self, QObject* (*callback)(const void*, void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qextensionmanager.html#extension)
 ///
@@ -922,10 +922,10 @@ QObject* q_extensionmanager_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QExtensionManager*
+/// @param self QExtensionManager*
 /// @param callback QObject* func(QExtensionManager* self)
 ///
-void q_extensionmanager_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_extensionmanager_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -953,10 +953,10 @@ int32_t q_extensionmanager_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QExtensionManager*
+/// @param self QExtensionManager*
 /// @param callback int32_t func(QExtensionManager* self)
 ///
-void q_extensionmanager_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_extensionmanager_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -986,10 +986,10 @@ int32_t q_extensionmanager_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QExtensionManager*
+/// @param self QExtensionManager*
 /// @param callback int32_t func(QExtensionManager* self, const char* signal)
 ///
-void q_extensionmanager_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_extensionmanager_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1019,10 +1019,10 @@ bool q_extensionmanager_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QExtensionManager*
+/// @param self QExtensionManager*
 /// @param callback bool func(QExtensionManager* self, QMetaMethod* signal)
 ///
-void q_extensionmanager_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_extensionmanager_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

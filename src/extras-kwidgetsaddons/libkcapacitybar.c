@@ -34,7 +34,7 @@ const QMetaObject* k_capacitybar_meta_object(const void* self) {
     return KCapacityBar_MetaObject((KCapacityBar*)self);
 }
 
-void k_capacitybar_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_capacitybar_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KCapacityBar_OnMetaObject((KCapacityBar*)self, (intptr_t)callback);
 }
 
@@ -144,7 +144,7 @@ QSize* k_capacitybar_minimum_size_hint(const void* self) {
     return KCapacityBar_MinimumSizeHint((KCapacityBar*)self);
 }
 
-void k_capacitybar_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_capacitybar_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     KCapacityBar_OnMinimumSizeHint((KCapacityBar*)self, (intptr_t)callback);
 }
 
@@ -190,11 +190,11 @@ const char* k_capacitybar_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_capacitybar_as_q_paint_device(void* self) {
+QPaintDevice* k_capacitybar_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KCapacityBar* k_capacitybar_from_q_paint_device(void* _qpaintdevice) {
+KCapacityBar* k_capacitybar_from_q_paint_device(const void* _qpaintdevice) {
     return (KCapacityBar*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1585,8 +1585,8 @@ int32_t k_capacitybar_super_dev_type(const void* self) {
     return KCapacityBar_SuperDevType((KCapacityBar*)self);
 }
 
-void k_capacitybar_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KCapacityBar_OnDevType((const KCapacityBar*)self, (intptr_t)callback);
+void k_capacitybar_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KCapacityBar_OnDevType((KCapacityBar*)self, (intptr_t)callback);
 }
 
 void k_capacitybar_set_visible(void* self, bool visible) {
@@ -1609,8 +1609,8 @@ QSize* k_capacitybar_super_size_hint(const void* self) {
     return KCapacityBar_SuperSizeHint((KCapacityBar*)self);
 }
 
-void k_capacitybar_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KCapacityBar_OnSizeHint((const KCapacityBar*)self, (intptr_t)callback);
+void k_capacitybar_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KCapacityBar_OnSizeHint((KCapacityBar*)self, (intptr_t)callback);
 }
 
 int32_t k_capacitybar_height_for_width(const void* self, int param1) {
@@ -1621,8 +1621,8 @@ int32_t k_capacitybar_super_height_for_width(const void* self, int param1) {
     return KCapacityBar_SuperHeightForWidth((KCapacityBar*)self, param1);
 }
 
-void k_capacitybar_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KCapacityBar_OnHeightForWidth((const KCapacityBar*)self, (intptr_t)callback);
+void k_capacitybar_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KCapacityBar_OnHeightForWidth((KCapacityBar*)self, (intptr_t)callback);
 }
 
 bool k_capacitybar_has_height_for_width(const void* self) {
@@ -1633,8 +1633,8 @@ bool k_capacitybar_super_has_height_for_width(const void* self) {
     return KCapacityBar_SuperHasHeightForWidth((KCapacityBar*)self);
 }
 
-void k_capacitybar_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KCapacityBar_OnHasHeightForWidth((const KCapacityBar*)self, (intptr_t)callback);
+void k_capacitybar_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KCapacityBar_OnHasHeightForWidth((KCapacityBar*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_capacitybar_paint_engine(const void* self) {
@@ -1645,8 +1645,8 @@ QPaintEngine* k_capacitybar_super_paint_engine(const void* self) {
     return KCapacityBar_SuperPaintEngine((KCapacityBar*)self);
 }
 
-void k_capacitybar_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KCapacityBar_OnPaintEngine((const KCapacityBar*)self, (intptr_t)callback);
+void k_capacitybar_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KCapacityBar_OnPaintEngine((KCapacityBar*)self, (intptr_t)callback);
 }
 
 bool k_capacitybar_event(void* self, void* event) {
@@ -1957,8 +1957,8 @@ int32_t k_capacitybar_super_metric(const void* self, int32_t param1) {
     return KCapacityBar_SuperMetric((KCapacityBar*)self, param1);
 }
 
-void k_capacitybar_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KCapacityBar_OnMetric((const KCapacityBar*)self, (intptr_t)callback);
+void k_capacitybar_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KCapacityBar_OnMetric((KCapacityBar*)self, (intptr_t)callback);
 }
 
 void k_capacitybar_init_painter(const void* self, void* painter) {
@@ -1969,8 +1969,8 @@ void k_capacitybar_super_init_painter(const void* self, void* painter) {
     KCapacityBar_SuperInitPainter((KCapacityBar*)self, (QPainter*)painter);
 }
 
-void k_capacitybar_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KCapacityBar_OnInitPainter((const KCapacityBar*)self, (intptr_t)callback);
+void k_capacitybar_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KCapacityBar_OnInitPainter((KCapacityBar*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_capacitybar_redirected(const void* self, void* offset) {
@@ -1981,8 +1981,8 @@ QPaintDevice* k_capacitybar_super_redirected(const void* self, void* offset) {
     return KCapacityBar_SuperRedirected((KCapacityBar*)self, (QPoint*)offset);
 }
 
-void k_capacitybar_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KCapacityBar_OnRedirected((const KCapacityBar*)self, (intptr_t)callback);
+void k_capacitybar_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KCapacityBar_OnRedirected((KCapacityBar*)self, (intptr_t)callback);
 }
 
 QPainter* k_capacitybar_shared_painter(const void* self) {
@@ -1993,8 +1993,8 @@ QPainter* k_capacitybar_super_shared_painter(const void* self) {
     return KCapacityBar_SuperSharedPainter((KCapacityBar*)self);
 }
 
-void k_capacitybar_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KCapacityBar_OnSharedPainter((const KCapacityBar*)self, (intptr_t)callback);
+void k_capacitybar_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KCapacityBar_OnSharedPainter((KCapacityBar*)self, (intptr_t)callback);
 }
 
 void k_capacitybar_input_method_event(void* self, void* param1) {
@@ -2017,8 +2017,8 @@ QVariant* k_capacitybar_super_input_method_query(const void* self, int32_t param
     return KCapacityBar_SuperInputMethodQuery((KCapacityBar*)self, param1);
 }
 
-void k_capacitybar_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KCapacityBar_OnInputMethodQuery((const KCapacityBar*)self, (intptr_t)callback);
+void k_capacitybar_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KCapacityBar_OnInputMethodQuery((KCapacityBar*)self, (intptr_t)callback);
 }
 
 bool k_capacitybar_focus_next_prev_child(void* self, bool next) {

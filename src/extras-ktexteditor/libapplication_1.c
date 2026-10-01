@@ -17,7 +17,7 @@ const QMetaObject* k_texteditor__application_meta_object(const void* self) {
     return KTextEditor__Application_MetaObject((KTextEditor__Application*)self);
 }
 
-void k_texteditor__application_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_texteditor__application_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KTextEditor__Application_OnMetaObject((KTextEditor__Application*)self, (intptr_t)callback);
 }
 

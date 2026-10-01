@@ -21,7 +21,7 @@ const QMetaObject* k_fileitemactions_meta_object(const void* self) {
     return KFileItemActions_MetaObject((KFileItemActions*)self);
 }
 
-void k_fileitemactions_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_fileitemactions_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFileItemActions_OnMetaObject((KFileItemActions*)self, (intptr_t)callback);
 }
 

@@ -22,7 +22,7 @@ const QMetaObject* q_boxlayout_meta_object(const void* self) {
     return QBoxLayout_MetaObject((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_boxlayout_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QBoxLayout_OnMetaObject((QBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -133,7 +133,7 @@ int32_t q_boxlayout_spacing(const void* self) {
     return QBoxLayout_Spacing((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_spacing(const void* self, int32_t (*callback)(const void*)) {
+void q_boxlayout_on_spacing(void* self, int32_t (*callback)(const void*)) {
     QBoxLayout_OnSpacing((QBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -173,7 +173,7 @@ QSize* q_boxlayout_size_hint(const void* self) {
     return QBoxLayout_SizeHint((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_boxlayout_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QBoxLayout_OnSizeHint((QBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -185,7 +185,7 @@ QSize* q_boxlayout_minimum_size(const void* self) {
     return QBoxLayout_MinimumSize((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_minimum_size(const void* self, QSize* (*callback)(const void*)) {
+void q_boxlayout_on_minimum_size(void* self, QSize* (*callback)(const void*)) {
     QBoxLayout_OnMinimumSize((QBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -197,7 +197,7 @@ QSize* q_boxlayout_maximum_size(const void* self) {
     return QBoxLayout_MaximumSize((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_maximum_size(const void* self, QSize* (*callback)(const void*)) {
+void q_boxlayout_on_maximum_size(void* self, QSize* (*callback)(const void*)) {
     QBoxLayout_OnMaximumSize((QBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -209,7 +209,7 @@ bool q_boxlayout_has_height_for_width(const void* self) {
     return QBoxLayout_HasHeightForWidth((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
+void q_boxlayout_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
     QBoxLayout_OnHasHeightForWidth((QBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -221,7 +221,7 @@ int32_t q_boxlayout_height_for_width(const void* self, int param1) {
     return QBoxLayout_HeightForWidth((QBoxLayout*)self, param1);
 }
 
-void q_boxlayout_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+void q_boxlayout_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
     QBoxLayout_OnHeightForWidth((QBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -233,7 +233,7 @@ int32_t q_boxlayout_minimum_height_for_width(const void* self, int param1) {
     return QBoxLayout_MinimumHeightForWidth((QBoxLayout*)self, param1);
 }
 
-void q_boxlayout_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+void q_boxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
     QBoxLayout_OnMinimumHeightForWidth((QBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -245,7 +245,7 @@ int32_t q_boxlayout_expanding_directions(const void* self) {
     return QBoxLayout_ExpandingDirections((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_expanding_directions(const void* self, int32_t (*callback)(const void*)) {
+void q_boxlayout_on_expanding_directions(void* self, int32_t (*callback)(const void*)) {
     QBoxLayout_OnExpandingDirections((QBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -269,7 +269,7 @@ QLayoutItem* q_boxlayout_item_at(const void* self, int param1) {
     return QBoxLayout_ItemAt((QBoxLayout*)self, param1);
 }
 
-void q_boxlayout_on_item_at(const void* self, QLayoutItem* (*callback)(const void*, int)) {
+void q_boxlayout_on_item_at(void* self, QLayoutItem* (*callback)(const void*, int)) {
     QBoxLayout_OnItemAt((QBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -293,7 +293,7 @@ int32_t q_boxlayout_count(const void* self) {
     return QBoxLayout_Count((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_count(const void* self, int32_t (*callback)(const void*)) {
+void q_boxlayout_on_count(void* self, int32_t (*callback)(const void*)) {
     QBoxLayout_OnCount((QBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -359,11 +359,11 @@ void q_boxlayout_insert_layout3(void* self, int index, void* layout, int stretch
     QBoxLayout_InsertLayout3((QBoxLayout*)self, index, (QLayout*)layout, stretch);
 }
 
-QLayoutItem* q_boxlayout_as_q_layout_item(void* self) {
+QLayoutItem* q_boxlayout_as_q_layout_item(const void* self) {
     return QLayout_AsQLayoutItem((QLayout*)self);
 }
 
-QBoxLayout* q_boxlayout_from_q_layout_item(void* _qlayoutitem) {
+QBoxLayout* q_boxlayout_from_q_layout_item(const void* _qlayoutitem) {
     return (QBoxLayout*)QLayout_FromQLayoutItem((QLayoutItem*)_qlayoutitem);
 }
 
@@ -439,7 +439,7 @@ int32_t q_boxlayout_index_of2(const void* self, const void* param1) {
     return QLayout_IndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
-void q_boxlayout_on_index_of2(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_boxlayout_on_index_of2(void* self, int32_t (*callback)(const void*, const void*)) {
     QLayout_OnIndexOf2((QLayout*)self, (intptr_t)callback);
 }
 
@@ -704,8 +704,8 @@ QRect* q_boxlayout_super_geometry(const void* self) {
     return QBoxLayout_SuperGeometry((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_geometry(const void* self, QRect* (*callback)(const void*)) {
-    QBoxLayout_OnGeometry((const QBoxLayout*)self, (intptr_t)callback);
+void q_boxlayout_on_geometry(void* self, QRect* (*callback)(const void*)) {
+    QBoxLayout_OnGeometry((QBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_boxlayout_index_of(const void* self, const void* param1) {
@@ -716,8 +716,8 @@ int32_t q_boxlayout_super_index_of(const void* self, const void* param1) {
     return QBoxLayout_SuperIndexOf((QBoxLayout*)self, (QWidget*)param1);
 }
 
-void q_boxlayout_on_index_of(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QBoxLayout_OnIndexOf((const QBoxLayout*)self, (intptr_t)callback);
+void q_boxlayout_on_index_of(void* self, int32_t (*callback)(const void*, const void*)) {
+    QBoxLayout_OnIndexOf((QBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_boxlayout_is_empty(const void* self) {
@@ -728,8 +728,8 @@ bool q_boxlayout_super_is_empty(const void* self) {
     return QBoxLayout_SuperIsEmpty((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_is_empty(const void* self, bool (*callback)(const void*)) {
-    QBoxLayout_OnIsEmpty((const QBoxLayout*)self, (intptr_t)callback);
+void q_boxlayout_on_is_empty(void* self, bool (*callback)(const void*)) {
+    QBoxLayout_OnIsEmpty((QBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_boxlayout_control_types(const void* self) {
@@ -740,8 +740,8 @@ int32_t q_boxlayout_super_control_types(const void* self) {
     return QBoxLayout_SuperControlTypes((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_control_types(const void* self, int32_t (*callback)(const void*)) {
-    QBoxLayout_OnControlTypes((const QBoxLayout*)self, (intptr_t)callback);
+void q_boxlayout_on_control_types(void* self, int32_t (*callback)(const void*)) {
+    QBoxLayout_OnControlTypes((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_boxlayout_replace_widget(void* self, void* from, void* to, int32_t options) {
@@ -860,8 +860,8 @@ QWidget* q_boxlayout_super_widget(const void* self) {
     return QBoxLayout_SuperWidget((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_widget(const void* self, QWidget* (*callback)(const void*)) {
-    QBoxLayout_OnWidget((const QBoxLayout*)self, (intptr_t)callback);
+void q_boxlayout_on_widget(void* self, QWidget* (*callback)(const void*)) {
+    QBoxLayout_OnWidget((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QSpacerItem* q_boxlayout_spacer_item(void* self) {
@@ -932,7 +932,7 @@ const QMetaObject* q_hboxlayout_meta_object(const void* self) {
     return QHBoxLayout_MetaObject((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_hboxlayout_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QHBoxLayout_OnMetaObject((QHBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -1089,11 +1089,11 @@ void q_hboxlayout_insert_layout3(void* self, int index, void* layout, int stretc
     QBoxLayout_InsertLayout3((QBoxLayout*)self, index, (QLayout*)layout, stretch);
 }
 
-QLayoutItem* q_hboxlayout_as_q_layout_item(void* self) {
+QLayoutItem* q_hboxlayout_as_q_layout_item(const void* self) {
     return QLayout_AsQLayoutItem((QLayout*)self);
 }
 
-QHBoxLayout* q_hboxlayout_from_q_layout_item(void* _qlayoutitem) {
+QHBoxLayout* q_hboxlayout_from_q_layout_item(const void* _qlayoutitem) {
     return (QHBoxLayout*)QLayout_FromQLayoutItem((QLayoutItem*)_qlayoutitem);
 }
 
@@ -1169,7 +1169,7 @@ int32_t q_hboxlayout_index_of2(const void* self, const void* param1) {
     return QLayout_IndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
-void q_hboxlayout_on_index_of2(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_hboxlayout_on_index_of2(void* self, int32_t (*callback)(const void*, const void*)) {
     QLayout_OnIndexOf2((QLayout*)self, (intptr_t)callback);
 }
 
@@ -1446,8 +1446,8 @@ int32_t q_hboxlayout_super_spacing(const void* self) {
     return QHBoxLayout_SuperSpacing((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_spacing(const void* self, int32_t (*callback)(const void*)) {
-    QHBoxLayout_OnSpacing((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_spacing(void* self, int32_t (*callback)(const void*)) {
+    QHBoxLayout_OnSpacing((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_set_spacing(void* self, int spacing) {
@@ -1470,8 +1470,8 @@ QSize* q_hboxlayout_super_size_hint(const void* self) {
     return QHBoxLayout_SuperSizeHint((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QHBoxLayout_OnSizeHint((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QHBoxLayout_OnSizeHint((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_hboxlayout_minimum_size(const void* self) {
@@ -1482,8 +1482,8 @@ QSize* q_hboxlayout_super_minimum_size(const void* self) {
     return QHBoxLayout_SuperMinimumSize((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_minimum_size(const void* self, QSize* (*callback)(const void*)) {
-    QHBoxLayout_OnMinimumSize((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_minimum_size(void* self, QSize* (*callback)(const void*)) {
+    QHBoxLayout_OnMinimumSize((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_hboxlayout_maximum_size(const void* self) {
@@ -1494,8 +1494,8 @@ QSize* q_hboxlayout_super_maximum_size(const void* self) {
     return QHBoxLayout_SuperMaximumSize((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_maximum_size(const void* self, QSize* (*callback)(const void*)) {
-    QHBoxLayout_OnMaximumSize((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_maximum_size(void* self, QSize* (*callback)(const void*)) {
+    QHBoxLayout_OnMaximumSize((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_hboxlayout_has_height_for_width(const void* self) {
@@ -1506,8 +1506,8 @@ bool q_hboxlayout_super_has_height_for_width(const void* self) {
     return QHBoxLayout_SuperHasHeightForWidth((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QHBoxLayout_OnHasHeightForWidth((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QHBoxLayout_OnHasHeightForWidth((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_height_for_width(const void* self, int param1) {
@@ -1518,8 +1518,8 @@ int32_t q_hboxlayout_super_height_for_width(const void* self, int param1) {
     return QHBoxLayout_SuperHeightForWidth((QHBoxLayout*)self, param1);
 }
 
-void q_hboxlayout_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QHBoxLayout_OnHeightForWidth((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QHBoxLayout_OnHeightForWidth((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_minimum_height_for_width(const void* self, int param1) {
@@ -1530,8 +1530,8 @@ int32_t q_hboxlayout_super_minimum_height_for_width(const void* self, int param1
     return QHBoxLayout_SuperMinimumHeightForWidth((QHBoxLayout*)self, param1);
 }
 
-void q_hboxlayout_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QHBoxLayout_OnMinimumHeightForWidth((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QHBoxLayout_OnMinimumHeightForWidth((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_expanding_directions(const void* self) {
@@ -1542,8 +1542,8 @@ int32_t q_hboxlayout_super_expanding_directions(const void* self) {
     return QHBoxLayout_SuperExpandingDirections((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_expanding_directions(const void* self, int32_t (*callback)(const void*)) {
-    QHBoxLayout_OnExpandingDirections((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_expanding_directions(void* self, int32_t (*callback)(const void*)) {
+    QHBoxLayout_OnExpandingDirections((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_invalidate(void* self) {
@@ -1566,8 +1566,8 @@ QLayoutItem* q_hboxlayout_super_item_at(const void* self, int param1) {
     return QHBoxLayout_SuperItemAt((QHBoxLayout*)self, param1);
 }
 
-void q_hboxlayout_on_item_at(const void* self, QLayoutItem* (*callback)(const void*, int)) {
-    QHBoxLayout_OnItemAt((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_item_at(void* self, QLayoutItem* (*callback)(const void*, int)) {
+    QHBoxLayout_OnItemAt((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_hboxlayout_take_at(void* self, int param1) {
@@ -1590,8 +1590,8 @@ int32_t q_hboxlayout_super_count(const void* self) {
     return QHBoxLayout_SuperCount((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_count(const void* self, int32_t (*callback)(const void*)) {
-    QHBoxLayout_OnCount((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_count(void* self, int32_t (*callback)(const void*)) {
+    QHBoxLayout_OnCount((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_set_geometry(void* self, const void* geometry) {
@@ -1614,8 +1614,8 @@ QRect* q_hboxlayout_super_geometry(const void* self) {
     return QHBoxLayout_SuperGeometry((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_geometry(const void* self, QRect* (*callback)(const void*)) {
-    QHBoxLayout_OnGeometry((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_geometry(void* self, QRect* (*callback)(const void*)) {
+    QHBoxLayout_OnGeometry((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_index_of(const void* self, const void* param1) {
@@ -1626,8 +1626,8 @@ int32_t q_hboxlayout_super_index_of(const void* self, const void* param1) {
     return QHBoxLayout_SuperIndexOf((QHBoxLayout*)self, (QWidget*)param1);
 }
 
-void q_hboxlayout_on_index_of(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QHBoxLayout_OnIndexOf((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_index_of(void* self, int32_t (*callback)(const void*, const void*)) {
+    QHBoxLayout_OnIndexOf((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_hboxlayout_is_empty(const void* self) {
@@ -1638,8 +1638,8 @@ bool q_hboxlayout_super_is_empty(const void* self) {
     return QHBoxLayout_SuperIsEmpty((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_is_empty(const void* self, bool (*callback)(const void*)) {
-    QHBoxLayout_OnIsEmpty((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_is_empty(void* self, bool (*callback)(const void*)) {
+    QHBoxLayout_OnIsEmpty((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_control_types(const void* self) {
@@ -1650,8 +1650,8 @@ int32_t q_hboxlayout_super_control_types(const void* self) {
     return QHBoxLayout_SuperControlTypes((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_control_types(const void* self, int32_t (*callback)(const void*)) {
-    QHBoxLayout_OnControlTypes((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_control_types(void* self, int32_t (*callback)(const void*)) {
+    QHBoxLayout_OnControlTypes((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_hboxlayout_replace_widget(void* self, void* from, void* to, int32_t options) {
@@ -1770,8 +1770,8 @@ QWidget* q_hboxlayout_super_widget(const void* self) {
     return QHBoxLayout_SuperWidget((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_widget(const void* self, QWidget* (*callback)(const void*)) {
-    QHBoxLayout_OnWidget((const QHBoxLayout*)self, (intptr_t)callback);
+void q_hboxlayout_on_widget(void* self, QWidget* (*callback)(const void*)) {
+    QHBoxLayout_OnWidget((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QSpacerItem* q_hboxlayout_spacer_item(void* self) {
@@ -1842,7 +1842,7 @@ const QMetaObject* q_vboxlayout_meta_object(const void* self) {
     return QVBoxLayout_MetaObject((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_vboxlayout_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVBoxLayout_OnMetaObject((QVBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -1999,11 +1999,11 @@ void q_vboxlayout_insert_layout3(void* self, int index, void* layout, int stretc
     QBoxLayout_InsertLayout3((QBoxLayout*)self, index, (QLayout*)layout, stretch);
 }
 
-QLayoutItem* q_vboxlayout_as_q_layout_item(void* self) {
+QLayoutItem* q_vboxlayout_as_q_layout_item(const void* self) {
     return QLayout_AsQLayoutItem((QLayout*)self);
 }
 
-QVBoxLayout* q_vboxlayout_from_q_layout_item(void* _qlayoutitem) {
+QVBoxLayout* q_vboxlayout_from_q_layout_item(const void* _qlayoutitem) {
     return (QVBoxLayout*)QLayout_FromQLayoutItem((QLayoutItem*)_qlayoutitem);
 }
 
@@ -2079,7 +2079,7 @@ int32_t q_vboxlayout_index_of2(const void* self, const void* param1) {
     return QLayout_IndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
-void q_vboxlayout_on_index_of2(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_vboxlayout_on_index_of2(void* self, int32_t (*callback)(const void*, const void*)) {
     QLayout_OnIndexOf2((QLayout*)self, (intptr_t)callback);
 }
 
@@ -2356,8 +2356,8 @@ int32_t q_vboxlayout_super_spacing(const void* self) {
     return QVBoxLayout_SuperSpacing((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_spacing(const void* self, int32_t (*callback)(const void*)) {
-    QVBoxLayout_OnSpacing((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_spacing(void* self, int32_t (*callback)(const void*)) {
+    QVBoxLayout_OnSpacing((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_set_spacing(void* self, int spacing) {
@@ -2380,8 +2380,8 @@ QSize* q_vboxlayout_super_size_hint(const void* self) {
     return QVBoxLayout_SuperSizeHint((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QVBoxLayout_OnSizeHint((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QVBoxLayout_OnSizeHint((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_vboxlayout_minimum_size(const void* self) {
@@ -2392,8 +2392,8 @@ QSize* q_vboxlayout_super_minimum_size(const void* self) {
     return QVBoxLayout_SuperMinimumSize((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_minimum_size(const void* self, QSize* (*callback)(const void*)) {
-    QVBoxLayout_OnMinimumSize((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_minimum_size(void* self, QSize* (*callback)(const void*)) {
+    QVBoxLayout_OnMinimumSize((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_vboxlayout_maximum_size(const void* self) {
@@ -2404,8 +2404,8 @@ QSize* q_vboxlayout_super_maximum_size(const void* self) {
     return QVBoxLayout_SuperMaximumSize((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_maximum_size(const void* self, QSize* (*callback)(const void*)) {
-    QVBoxLayout_OnMaximumSize((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_maximum_size(void* self, QSize* (*callback)(const void*)) {
+    QVBoxLayout_OnMaximumSize((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_vboxlayout_has_height_for_width(const void* self) {
@@ -2416,8 +2416,8 @@ bool q_vboxlayout_super_has_height_for_width(const void* self) {
     return QVBoxLayout_SuperHasHeightForWidth((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QVBoxLayout_OnHasHeightForWidth((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QVBoxLayout_OnHasHeightForWidth((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_height_for_width(const void* self, int param1) {
@@ -2428,8 +2428,8 @@ int32_t q_vboxlayout_super_height_for_width(const void* self, int param1) {
     return QVBoxLayout_SuperHeightForWidth((QVBoxLayout*)self, param1);
 }
 
-void q_vboxlayout_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QVBoxLayout_OnHeightForWidth((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QVBoxLayout_OnHeightForWidth((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_minimum_height_for_width(const void* self, int param1) {
@@ -2440,8 +2440,8 @@ int32_t q_vboxlayout_super_minimum_height_for_width(const void* self, int param1
     return QVBoxLayout_SuperMinimumHeightForWidth((QVBoxLayout*)self, param1);
 }
 
-void q_vboxlayout_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QVBoxLayout_OnMinimumHeightForWidth((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QVBoxLayout_OnMinimumHeightForWidth((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_expanding_directions(const void* self) {
@@ -2452,8 +2452,8 @@ int32_t q_vboxlayout_super_expanding_directions(const void* self) {
     return QVBoxLayout_SuperExpandingDirections((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_expanding_directions(const void* self, int32_t (*callback)(const void*)) {
-    QVBoxLayout_OnExpandingDirections((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_expanding_directions(void* self, int32_t (*callback)(const void*)) {
+    QVBoxLayout_OnExpandingDirections((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_invalidate(void* self) {
@@ -2476,8 +2476,8 @@ QLayoutItem* q_vboxlayout_super_item_at(const void* self, int param1) {
     return QVBoxLayout_SuperItemAt((QVBoxLayout*)self, param1);
 }
 
-void q_vboxlayout_on_item_at(const void* self, QLayoutItem* (*callback)(const void*, int)) {
-    QVBoxLayout_OnItemAt((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_item_at(void* self, QLayoutItem* (*callback)(const void*, int)) {
+    QVBoxLayout_OnItemAt((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_vboxlayout_take_at(void* self, int param1) {
@@ -2500,8 +2500,8 @@ int32_t q_vboxlayout_super_count(const void* self) {
     return QVBoxLayout_SuperCount((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_count(const void* self, int32_t (*callback)(const void*)) {
-    QVBoxLayout_OnCount((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_count(void* self, int32_t (*callback)(const void*)) {
+    QVBoxLayout_OnCount((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_set_geometry(void* self, const void* geometry) {
@@ -2524,8 +2524,8 @@ QRect* q_vboxlayout_super_geometry(const void* self) {
     return QVBoxLayout_SuperGeometry((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_geometry(const void* self, QRect* (*callback)(const void*)) {
-    QVBoxLayout_OnGeometry((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_geometry(void* self, QRect* (*callback)(const void*)) {
+    QVBoxLayout_OnGeometry((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_index_of(const void* self, const void* param1) {
@@ -2536,8 +2536,8 @@ int32_t q_vboxlayout_super_index_of(const void* self, const void* param1) {
     return QVBoxLayout_SuperIndexOf((QVBoxLayout*)self, (QWidget*)param1);
 }
 
-void q_vboxlayout_on_index_of(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QVBoxLayout_OnIndexOf((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_index_of(void* self, int32_t (*callback)(const void*, const void*)) {
+    QVBoxLayout_OnIndexOf((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_vboxlayout_is_empty(const void* self) {
@@ -2548,8 +2548,8 @@ bool q_vboxlayout_super_is_empty(const void* self) {
     return QVBoxLayout_SuperIsEmpty((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_is_empty(const void* self, bool (*callback)(const void*)) {
-    QVBoxLayout_OnIsEmpty((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_is_empty(void* self, bool (*callback)(const void*)) {
+    QVBoxLayout_OnIsEmpty((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_control_types(const void* self) {
@@ -2560,8 +2560,8 @@ int32_t q_vboxlayout_super_control_types(const void* self) {
     return QVBoxLayout_SuperControlTypes((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_control_types(const void* self, int32_t (*callback)(const void*)) {
-    QVBoxLayout_OnControlTypes((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_control_types(void* self, int32_t (*callback)(const void*)) {
+    QVBoxLayout_OnControlTypes((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_vboxlayout_replace_widget(void* self, void* from, void* to, int32_t options) {
@@ -2680,8 +2680,8 @@ QWidget* q_vboxlayout_super_widget(const void* self) {
     return QVBoxLayout_SuperWidget((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_widget(const void* self, QWidget* (*callback)(const void*)) {
-    QVBoxLayout_OnWidget((const QVBoxLayout*)self, (intptr_t)callback);
+void q_vboxlayout_on_widget(void* self, QWidget* (*callback)(const void*)) {
+    QVBoxLayout_OnWidget((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QSpacerItem* q_vboxlayout_spacer_item(void* self) {

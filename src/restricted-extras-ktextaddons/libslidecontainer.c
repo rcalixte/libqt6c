@@ -27,7 +27,7 @@ const QMetaObject* k_textaddonswidgets__slidecontainer_meta_object(const void* s
     return TextAddonsWidgets__SlideContainer_MetaObject((TextAddonsWidgets__SlideContainer*)self);
 }
 
-void k_textaddonswidgets__slidecontainer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textaddonswidgets__slidecontainer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextAddonsWidgets__SlideContainer_OnMetaObject((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
@@ -78,7 +78,7 @@ QSize* k_textaddonswidgets__slidecontainer_size_hint(const void* self) {
     return TextAddonsWidgets__SlideContainer_SizeHint((TextAddonsWidgets__SlideContainer*)self);
 }
 
-void k_textaddonswidgets__slidecontainer_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_textaddonswidgets__slidecontainer_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     TextAddonsWidgets__SlideContainer_OnSizeHint((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
@@ -90,7 +90,7 @@ QSize* k_textaddonswidgets__slidecontainer_minimum_size_hint(const void* self) {
     return TextAddonsWidgets__SlideContainer_MinimumSizeHint((TextAddonsWidgets__SlideContainer*)self);
 }
 
-void k_textaddonswidgets__slidecontainer_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_textaddonswidgets__slidecontainer_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     TextAddonsWidgets__SlideContainer_OnMinimumSizeHint((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
@@ -220,11 +220,11 @@ void k_textaddonswidgets__slidecontainer_set_frame_rect(void* self, const void* 
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_textaddonswidgets__slidecontainer_as_q_paint_device(void* self) {
+QPaintDevice* k_textaddonswidgets__slidecontainer_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextAddonsWidgets__SlideContainer* k_textaddonswidgets__slidecontainer_from_q_paint_device(void* _qpaintdevice) {
+TextAddonsWidgets__SlideContainer* k_textaddonswidgets__slidecontainer_from_q_paint_device(const void* _qpaintdevice) {
     return (TextAddonsWidgets__SlideContainer*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1651,8 +1651,8 @@ void k_textaddonswidgets__slidecontainer_super_init_style_option(const void* sel
     TextAddonsWidgets__SlideContainer_SuperInitStyleOption((TextAddonsWidgets__SlideContainer*)self, (QStyleOptionFrame*)option);
 }
 
-void k_textaddonswidgets__slidecontainer_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    TextAddonsWidgets__SlideContainer_OnInitStyleOption((const TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
+void k_textaddonswidgets__slidecontainer_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    TextAddonsWidgets__SlideContainer_OnInitStyleOption((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
 int32_t k_textaddonswidgets__slidecontainer_dev_type(const void* self) {
@@ -1663,8 +1663,8 @@ int32_t k_textaddonswidgets__slidecontainer_super_dev_type(const void* self) {
     return TextAddonsWidgets__SlideContainer_SuperDevType((TextAddonsWidgets__SlideContainer*)self);
 }
 
-void k_textaddonswidgets__slidecontainer_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextAddonsWidgets__SlideContainer_OnDevType((const TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
+void k_textaddonswidgets__slidecontainer_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextAddonsWidgets__SlideContainer_OnDevType((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
 void k_textaddonswidgets__slidecontainer_set_visible(void* self, bool visible) {
@@ -1687,8 +1687,8 @@ int32_t k_textaddonswidgets__slidecontainer_super_height_for_width(const void* s
     return TextAddonsWidgets__SlideContainer_SuperHeightForWidth((TextAddonsWidgets__SlideContainer*)self, param1);
 }
 
-void k_textaddonswidgets__slidecontainer_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextAddonsWidgets__SlideContainer_OnHeightForWidth((const TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
+void k_textaddonswidgets__slidecontainer_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextAddonsWidgets__SlideContainer_OnHeightForWidth((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
 bool k_textaddonswidgets__slidecontainer_has_height_for_width(const void* self) {
@@ -1699,8 +1699,8 @@ bool k_textaddonswidgets__slidecontainer_super_has_height_for_width(const void* 
     return TextAddonsWidgets__SlideContainer_SuperHasHeightForWidth((TextAddonsWidgets__SlideContainer*)self);
 }
 
-void k_textaddonswidgets__slidecontainer_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextAddonsWidgets__SlideContainer_OnHasHeightForWidth((const TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
+void k_textaddonswidgets__slidecontainer_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextAddonsWidgets__SlideContainer_OnHasHeightForWidth((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textaddonswidgets__slidecontainer_paint_engine(const void* self) {
@@ -1711,8 +1711,8 @@ QPaintEngine* k_textaddonswidgets__slidecontainer_super_paint_engine(const void*
     return TextAddonsWidgets__SlideContainer_SuperPaintEngine((TextAddonsWidgets__SlideContainer*)self);
 }
 
-void k_textaddonswidgets__slidecontainer_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextAddonsWidgets__SlideContainer_OnPaintEngine((const TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
+void k_textaddonswidgets__slidecontainer_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextAddonsWidgets__SlideContainer_OnPaintEngine((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
 void k_textaddonswidgets__slidecontainer_mouse_press_event(void* self, void* event) {
@@ -1999,8 +1999,8 @@ int32_t k_textaddonswidgets__slidecontainer_super_metric(const void* self, int32
     return TextAddonsWidgets__SlideContainer_SuperMetric((TextAddonsWidgets__SlideContainer*)self, param1);
 }
 
-void k_textaddonswidgets__slidecontainer_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextAddonsWidgets__SlideContainer_OnMetric((const TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
+void k_textaddonswidgets__slidecontainer_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextAddonsWidgets__SlideContainer_OnMetric((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
 void k_textaddonswidgets__slidecontainer_init_painter(const void* self, void* painter) {
@@ -2011,8 +2011,8 @@ void k_textaddonswidgets__slidecontainer_super_init_painter(const void* self, vo
     TextAddonsWidgets__SlideContainer_SuperInitPainter((TextAddonsWidgets__SlideContainer*)self, (QPainter*)painter);
 }
 
-void k_textaddonswidgets__slidecontainer_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextAddonsWidgets__SlideContainer_OnInitPainter((const TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
+void k_textaddonswidgets__slidecontainer_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextAddonsWidgets__SlideContainer_OnInitPainter((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textaddonswidgets__slidecontainer_redirected(const void* self, void* offset) {
@@ -2023,8 +2023,8 @@ QPaintDevice* k_textaddonswidgets__slidecontainer_super_redirected(const void* s
     return TextAddonsWidgets__SlideContainer_SuperRedirected((TextAddonsWidgets__SlideContainer*)self, (QPoint*)offset);
 }
 
-void k_textaddonswidgets__slidecontainer_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextAddonsWidgets__SlideContainer_OnRedirected((const TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
+void k_textaddonswidgets__slidecontainer_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextAddonsWidgets__SlideContainer_OnRedirected((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
 QPainter* k_textaddonswidgets__slidecontainer_shared_painter(const void* self) {
@@ -2035,8 +2035,8 @@ QPainter* k_textaddonswidgets__slidecontainer_super_shared_painter(const void* s
     return TextAddonsWidgets__SlideContainer_SuperSharedPainter((TextAddonsWidgets__SlideContainer*)self);
 }
 
-void k_textaddonswidgets__slidecontainer_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextAddonsWidgets__SlideContainer_OnSharedPainter((const TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
+void k_textaddonswidgets__slidecontainer_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextAddonsWidgets__SlideContainer_OnSharedPainter((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
 void k_textaddonswidgets__slidecontainer_input_method_event(void* self, void* param1) {
@@ -2059,8 +2059,8 @@ QVariant* k_textaddonswidgets__slidecontainer_super_input_method_query(const voi
     return TextAddonsWidgets__SlideContainer_SuperInputMethodQuery((TextAddonsWidgets__SlideContainer*)self, param1);
 }
 
-void k_textaddonswidgets__slidecontainer_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextAddonsWidgets__SlideContainer_OnInputMethodQuery((const TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
+void k_textaddonswidgets__slidecontainer_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextAddonsWidgets__SlideContainer_OnInputMethodQuery((TextAddonsWidgets__SlideContainer*)self, (intptr_t)callback);
 }
 
 bool k_textaddonswidgets__slidecontainer_focus_next_prev_child(void* self, bool next) {

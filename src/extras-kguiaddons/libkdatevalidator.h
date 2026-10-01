@@ -32,10 +32,10 @@ const QMetaObject* k_datevalidator_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KDateValidator*
+/// @param self KDateValidator*
 /// @param callback const QMetaObject* func(const KDateValidator* self)
 ///
-void k_datevalidator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_datevalidator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -109,10 +109,10 @@ int32_t k_datevalidator_validate(const void* self, const char* text, int* e);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KDateValidator*
+/// @param self KDateValidator*
 /// @param callback int32_t func(const KDateValidator* self, const char* text, int* e)
 ///
-void k_datevalidator_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*));
+void k_datevalidator_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*));
 
 /// [Upstream resources](https://api.kde.org/kdatevalidator.html#validate)
 ///
@@ -137,10 +137,10 @@ void k_datevalidator_fixup(const void* self, const char* input);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KDateValidator*
+/// @param self KDateValidator*
 /// @param callback void func(const KDateValidator* self, const char* input)
 ///
-void k_datevalidator_on_fixup(const void* self, void (*callback)(const void*, const char*));
+void k_datevalidator_on_fixup(void* self, void (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kdatevalidator.html#fixup)
 ///
@@ -920,10 +920,10 @@ QObject* k_datevalidator_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateValidator*
+/// @param self KDateValidator*
 /// @param callback QObject* func(KDateValidator* self)
 ///
-void k_datevalidator_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_datevalidator_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -951,10 +951,10 @@ int32_t k_datevalidator_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateValidator*
+/// @param self KDateValidator*
 /// @param callback int32_t func(KDateValidator* self)
 ///
-void k_datevalidator_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_datevalidator_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -984,10 +984,10 @@ int32_t k_datevalidator_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateValidator*
+/// @param self KDateValidator*
 /// @param callback int32_t func(KDateValidator* self, const char* signal)
 ///
-void k_datevalidator_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_datevalidator_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1017,10 +1017,10 @@ bool k_datevalidator_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KDateValidator*
+/// @param self KDateValidator*
 /// @param callback bool func(KDateValidator* self, QMetaMethod* signal)
 ///
-void k_datevalidator_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_datevalidator_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

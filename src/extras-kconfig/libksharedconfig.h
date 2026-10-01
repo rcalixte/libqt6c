@@ -12,9 +12,9 @@
 
 /// Upcasts to a QSharedData object
 ///
-/// @param self KSharedConfig*
+/// @param self const KSharedConfig*
 ///
-QSharedData* k_sharedconfig_as_q_shared_data(void* self);
+QSharedData* k_sharedconfig_as_q_shared_data(const void* self);
 
 /// Inherited from KConfig
 ///

@@ -20,7 +20,7 @@ const QMetaObject* q_networkdiskcache_meta_object(const void* self) {
     return QNetworkDiskCache_MetaObject((QNetworkDiskCache*)self);
 }
 
-void q_networkdiskcache_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_networkdiskcache_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QNetworkDiskCache_OnMetaObject((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
@@ -82,7 +82,7 @@ int64_t q_networkdiskcache_cache_size(const void* self) {
     return QNetworkDiskCache_CacheSize((QNetworkDiskCache*)self);
 }
 
-void q_networkdiskcache_on_cache_size(const void* self, int64_t (*callback)(const void*)) {
+void q_networkdiskcache_on_cache_size(void* self, int64_t (*callback)(const void*)) {
     QNetworkDiskCache_OnCacheSize((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 

@@ -23,7 +23,7 @@ const QMetaObject* q_splineseries_meta_object(const void* self) {
     return QSplineSeries_MetaObject((QSplineSeries*)self);
 }
 
-void q_splineseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_splineseries_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSplineSeries_OnMetaObject((QSplineSeries*)self, (intptr_t)callback);
 }
 
@@ -66,7 +66,7 @@ int32_t q_splineseries_type(const void* self) {
     return QSplineSeries_Type((QSplineSeries*)self);
 }
 
-void q_splineseries_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_splineseries_on_type(void* self, int32_t (*callback)(const void*)) {
     QSplineSeries_OnType((QSplineSeries*)self, (intptr_t)callback);
 }
 
@@ -1039,8 +1039,8 @@ QColor* q_splineseries_super_color(const void* self) {
     return QSplineSeries_SuperColor((QSplineSeries*)self);
 }
 
-void q_splineseries_on_color(const void* self, QColor* (*callback)(const void*)) {
-    QSplineSeries_OnColor((const QSplineSeries*)self, (intptr_t)callback);
+void q_splineseries_on_color(void* self, QColor* (*callback)(const void*)) {
+    QSplineSeries_OnColor((QSplineSeries*)self, (intptr_t)callback);
 }
 
 bool q_splineseries_event(void* self, void* event) {

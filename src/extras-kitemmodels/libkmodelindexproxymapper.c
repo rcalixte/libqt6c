@@ -19,7 +19,7 @@ const QMetaObject* k_modelindexproxymapper_meta_object(const void* self) {
     return KModelIndexProxyMapper_MetaObject((KModelIndexProxyMapper*)self);
 }
 
-void k_modelindexproxymapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_modelindexproxymapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KModelIndexProxyMapper_OnMetaObject((KModelIndexProxyMapper*)self, (intptr_t)callback);
 }
 

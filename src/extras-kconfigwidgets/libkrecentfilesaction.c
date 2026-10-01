@@ -29,7 +29,7 @@ const QMetaObject* k_recentfilesaction_meta_object(const void* self) {
     return KRecentFilesAction_MetaObject((KRecentFilesAction*)self);
 }
 
-void k_recentfilesaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_recentfilesaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KRecentFilesAction_OnMetaObject((KRecentFilesAction*)self, (intptr_t)callback);
 }
 

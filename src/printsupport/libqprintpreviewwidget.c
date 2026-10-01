@@ -42,7 +42,7 @@ const QMetaObject* q_printpreviewwidget_meta_object(const void* self) {
     return QPrintPreviewWidget_MetaObject((QPrintPreviewWidget*)self);
 }
 
-void q_printpreviewwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_printpreviewwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPrintPreviewWidget_OnMetaObject((QPrintPreviewWidget*)self, (intptr_t)callback);
 }
 
@@ -219,11 +219,11 @@ void q_printpreviewwidget_zoom_out1(void* self, double zoom) {
     QPrintPreviewWidget_ZoomOut1((QPrintPreviewWidget*)self, zoom);
 }
 
-QPaintDevice* q_printpreviewwidget_as_q_paint_device(void* self) {
+QPaintDevice* q_printpreviewwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QPrintPreviewWidget* q_printpreviewwidget_from_q_paint_device(void* _qpaintdevice) {
+QPrintPreviewWidget* q_printpreviewwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (QPrintPreviewWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1614,8 +1614,8 @@ int32_t q_printpreviewwidget_super_dev_type(const void* self) {
     return QPrintPreviewWidget_SuperDevType((QPrintPreviewWidget*)self);
 }
 
-void q_printpreviewwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QPrintPreviewWidget_OnDevType((const QPrintPreviewWidget*)self, (intptr_t)callback);
+void q_printpreviewwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QPrintPreviewWidget_OnDevType((QPrintPreviewWidget*)self, (intptr_t)callback);
 }
 
 QSize* q_printpreviewwidget_size_hint(const void* self) {
@@ -1626,8 +1626,8 @@ QSize* q_printpreviewwidget_super_size_hint(const void* self) {
     return QPrintPreviewWidget_SuperSizeHint((QPrintPreviewWidget*)self);
 }
 
-void q_printpreviewwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QPrintPreviewWidget_OnSizeHint((const QPrintPreviewWidget*)self, (intptr_t)callback);
+void q_printpreviewwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QPrintPreviewWidget_OnSizeHint((QPrintPreviewWidget*)self, (intptr_t)callback);
 }
 
 QSize* q_printpreviewwidget_minimum_size_hint(const void* self) {
@@ -1638,8 +1638,8 @@ QSize* q_printpreviewwidget_super_minimum_size_hint(const void* self) {
     return QPrintPreviewWidget_SuperMinimumSizeHint((QPrintPreviewWidget*)self);
 }
 
-void q_printpreviewwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QPrintPreviewWidget_OnMinimumSizeHint((const QPrintPreviewWidget*)self, (intptr_t)callback);
+void q_printpreviewwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QPrintPreviewWidget_OnMinimumSizeHint((QPrintPreviewWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_printpreviewwidget_height_for_width(const void* self, int param1) {
@@ -1650,8 +1650,8 @@ int32_t q_printpreviewwidget_super_height_for_width(const void* self, int param1
     return QPrintPreviewWidget_SuperHeightForWidth((QPrintPreviewWidget*)self, param1);
 }
 
-void q_printpreviewwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QPrintPreviewWidget_OnHeightForWidth((const QPrintPreviewWidget*)self, (intptr_t)callback);
+void q_printpreviewwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QPrintPreviewWidget_OnHeightForWidth((QPrintPreviewWidget*)self, (intptr_t)callback);
 }
 
 bool q_printpreviewwidget_has_height_for_width(const void* self) {
@@ -1662,8 +1662,8 @@ bool q_printpreviewwidget_super_has_height_for_width(const void* self) {
     return QPrintPreviewWidget_SuperHasHeightForWidth((QPrintPreviewWidget*)self);
 }
 
-void q_printpreviewwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QPrintPreviewWidget_OnHasHeightForWidth((const QPrintPreviewWidget*)self, (intptr_t)callback);
+void q_printpreviewwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QPrintPreviewWidget_OnHasHeightForWidth((QPrintPreviewWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_printpreviewwidget_paint_engine(const void* self) {
@@ -1674,8 +1674,8 @@ QPaintEngine* q_printpreviewwidget_super_paint_engine(const void* self) {
     return QPrintPreviewWidget_SuperPaintEngine((QPrintPreviewWidget*)self);
 }
 
-void q_printpreviewwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QPrintPreviewWidget_OnPaintEngine((const QPrintPreviewWidget*)self, (intptr_t)callback);
+void q_printpreviewwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QPrintPreviewWidget_OnPaintEngine((QPrintPreviewWidget*)self, (intptr_t)callback);
 }
 
 bool q_printpreviewwidget_event(void* self, void* event) {
@@ -2010,8 +2010,8 @@ int32_t q_printpreviewwidget_super_metric(const void* self, int32_t param1) {
     return QPrintPreviewWidget_SuperMetric((QPrintPreviewWidget*)self, param1);
 }
 
-void q_printpreviewwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QPrintPreviewWidget_OnMetric((const QPrintPreviewWidget*)self, (intptr_t)callback);
+void q_printpreviewwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QPrintPreviewWidget_OnMetric((QPrintPreviewWidget*)self, (intptr_t)callback);
 }
 
 void q_printpreviewwidget_init_painter(const void* self, void* painter) {
@@ -2022,8 +2022,8 @@ void q_printpreviewwidget_super_init_painter(const void* self, void* painter) {
     QPrintPreviewWidget_SuperInitPainter((QPrintPreviewWidget*)self, (QPainter*)painter);
 }
 
-void q_printpreviewwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QPrintPreviewWidget_OnInitPainter((const QPrintPreviewWidget*)self, (intptr_t)callback);
+void q_printpreviewwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QPrintPreviewWidget_OnInitPainter((QPrintPreviewWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_printpreviewwidget_redirected(const void* self, void* offset) {
@@ -2034,8 +2034,8 @@ QPaintDevice* q_printpreviewwidget_super_redirected(const void* self, void* offs
     return QPrintPreviewWidget_SuperRedirected((QPrintPreviewWidget*)self, (QPoint*)offset);
 }
 
-void q_printpreviewwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QPrintPreviewWidget_OnRedirected((const QPrintPreviewWidget*)self, (intptr_t)callback);
+void q_printpreviewwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QPrintPreviewWidget_OnRedirected((QPrintPreviewWidget*)self, (intptr_t)callback);
 }
 
 QPainter* q_printpreviewwidget_shared_painter(const void* self) {
@@ -2046,8 +2046,8 @@ QPainter* q_printpreviewwidget_super_shared_painter(const void* self) {
     return QPrintPreviewWidget_SuperSharedPainter((QPrintPreviewWidget*)self);
 }
 
-void q_printpreviewwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QPrintPreviewWidget_OnSharedPainter((const QPrintPreviewWidget*)self, (intptr_t)callback);
+void q_printpreviewwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QPrintPreviewWidget_OnSharedPainter((QPrintPreviewWidget*)self, (intptr_t)callback);
 }
 
 void q_printpreviewwidget_input_method_event(void* self, void* param1) {
@@ -2070,8 +2070,8 @@ QVariant* q_printpreviewwidget_super_input_method_query(const void* self, int32_
     return QPrintPreviewWidget_SuperInputMethodQuery((QPrintPreviewWidget*)self, param1);
 }
 
-void q_printpreviewwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QPrintPreviewWidget_OnInputMethodQuery((const QPrintPreviewWidget*)self, (intptr_t)callback);
+void q_printpreviewwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QPrintPreviewWidget_OnInputMethodQuery((QPrintPreviewWidget*)self, (intptr_t)callback);
 }
 
 bool q_printpreviewwidget_focus_next_prev_child(void* self, bool next) {

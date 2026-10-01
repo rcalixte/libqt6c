@@ -14,7 +14,7 @@ const QMetaObject* k_parts__listingnotificationextension_meta_object(const void*
     return KParts__ListingNotificationExtension_MetaObject((KParts__ListingNotificationExtension*)self);
 }
 
-void k_parts__listingnotificationextension_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_parts__listingnotificationextension_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KParts__ListingNotificationExtension_OnMetaObject((KParts__ListingNotificationExtension*)self, (intptr_t)callback);
 }
 
@@ -57,7 +57,7 @@ int32_t k_parts__listingnotificationextension_supported_notification_event_types
     return KParts__ListingNotificationExtension_SupportedNotificationEventTypes((KParts__ListingNotificationExtension*)self);
 }
 
-void k_parts__listingnotificationextension_on_supported_notification_event_types(const void* self, int32_t (*callback)(const void*)) {
+void k_parts__listingnotificationextension_on_supported_notification_event_types(void* self, int32_t (*callback)(const void*)) {
     KParts__ListingNotificationExtension_OnSupportedNotificationEventTypes((KParts__ListingNotificationExtension*)self, (intptr_t)callback);
 }
 

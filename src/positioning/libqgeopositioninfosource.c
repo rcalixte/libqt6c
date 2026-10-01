@@ -15,7 +15,7 @@ const QMetaObject* q_geopositioninfosource_meta_object(const void* self) {
     return QGeoPositionInfoSource_MetaObject((QGeoPositionInfoSource*)self);
 }
 
-void q_geopositioninfosource_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_geopositioninfosource_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGeoPositionInfoSource_OnMetaObject((QGeoPositionInfoSource*)self, (intptr_t)callback);
 }
 
@@ -90,7 +90,7 @@ QGeoPositionInfo* q_geopositioninfosource_last_known_position(const void* self, 
     return QGeoPositionInfoSource_LastKnownPosition((QGeoPositionInfoSource*)self, fromSatellitePositioningMethodsOnly);
 }
 
-void q_geopositioninfosource_on_last_known_position(const void* self, QGeoPositionInfo* (*callback)(const void*, bool)) {
+void q_geopositioninfosource_on_last_known_position(void* self, QGeoPositionInfo* (*callback)(const void*, bool)) {
     QGeoPositionInfoSource_OnLastKnownPosition((QGeoPositionInfoSource*)self, (intptr_t)callback);
 }
 
@@ -98,7 +98,7 @@ int32_t q_geopositioninfosource_supported_positioning_methods(const void* self) 
     return QGeoPositionInfoSource_SupportedPositioningMethods((QGeoPositionInfoSource*)self);
 }
 
-void q_geopositioninfosource_on_supported_positioning_methods(const void* self, int32_t (*callback)(const void*)) {
+void q_geopositioninfosource_on_supported_positioning_methods(void* self, int32_t (*callback)(const void*)) {
     QGeoPositionInfoSource_OnSupportedPositioningMethods((QGeoPositionInfoSource*)self, (intptr_t)callback);
 }
 
@@ -106,7 +106,7 @@ int32_t q_geopositioninfosource_minimum_update_interval(const void* self) {
     return QGeoPositionInfoSource_MinimumUpdateInterval((QGeoPositionInfoSource*)self);
 }
 
-void q_geopositioninfosource_on_minimum_update_interval(const void* self, int32_t (*callback)(const void*)) {
+void q_geopositioninfosource_on_minimum_update_interval(void* self, int32_t (*callback)(const void*)) {
     QGeoPositionInfoSource_OnMinimumUpdateInterval((QGeoPositionInfoSource*)self, (intptr_t)callback);
 }
 
@@ -133,7 +133,7 @@ QVariant* q_geopositioninfosource_backend_property(const void* self, const char*
     return QGeoPositionInfoSource_BackendProperty((QGeoPositionInfoSource*)self, qstring(name));
 }
 
-void q_geopositioninfosource_on_backend_property(const void* self, QVariant* (*callback)(const void*, const char*)) {
+void q_geopositioninfosource_on_backend_property(void* self, QVariant* (*callback)(const void*, const char*)) {
     QGeoPositionInfoSource_OnBackendProperty((QGeoPositionInfoSource*)self, (intptr_t)callback);
 }
 
@@ -228,7 +228,7 @@ int32_t q_geopositioninfosource_error(const void* self) {
     return QGeoPositionInfoSource_Error((QGeoPositionInfoSource*)self);
 }
 
-void q_geopositioninfosource_on_error(const void* self, int32_t (*callback)(const void*)) {
+void q_geopositioninfosource_on_error(void* self, int32_t (*callback)(const void*)) {
     QGeoPositionInfoSource_OnError((QGeoPositionInfoSource*)self, (intptr_t)callback);
 }
 

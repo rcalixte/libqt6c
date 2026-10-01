@@ -436,8 +436,8 @@ int32_t k_desktopfile_super_access_mode(const void* self) {
     return KDesktopFile_SuperAccessMode((KDesktopFile*)self);
 }
 
-void k_desktopfile_on_access_mode(const void* self, int32_t (*callback)(const void*)) {
-    KDesktopFile_OnAccessMode((const KDesktopFile*)self, (intptr_t)callback);
+void k_desktopfile_on_access_mode(void* self, int32_t (*callback)(const void*)) {
+    KDesktopFile_OnAccessMode((KDesktopFile*)self, (intptr_t)callback);
 }
 
 bool k_desktopfile_is_immutable(const void* self) {
@@ -448,8 +448,8 @@ bool k_desktopfile_super_is_immutable(const void* self) {
     return KDesktopFile_SuperIsImmutable((KDesktopFile*)self);
 }
 
-void k_desktopfile_on_is_immutable(const void* self, bool (*callback)(const void*)) {
-    KDesktopFile_OnIsImmutable((const KDesktopFile*)self, (intptr_t)callback);
+void k_desktopfile_on_is_immutable(void* self, bool (*callback)(const void*)) {
+    KDesktopFile_OnIsImmutable((KDesktopFile*)self, (intptr_t)callback);
 }
 
 const char** k_desktopfile_group_list(const void* self) {
@@ -486,8 +486,8 @@ const char** k_desktopfile_super_group_list(const void* self) {
     return _ret;
 }
 
-void k_desktopfile_on_group_list(const void* self, const char** (*callback)(const void*)) {
-    KDesktopFile_OnGroupList((const KDesktopFile*)self, (intptr_t)callback);
+void k_desktopfile_on_group_list(void* self, const char** (*callback)(const void*)) {
+    KDesktopFile_OnGroupList((KDesktopFile*)self, (intptr_t)callback);
 }
 
 bool k_desktopfile_has_group_impl(const void* self, const char* groupName) {
@@ -498,8 +498,8 @@ bool k_desktopfile_super_has_group_impl(const void* self, const char* groupName)
     return KDesktopFile_SuperHasGroupImpl((KDesktopFile*)self, qstring(groupName));
 }
 
-void k_desktopfile_on_has_group_impl(const void* self, bool (*callback)(const void*, const char*)) {
-    KDesktopFile_OnHasGroupImpl((const KDesktopFile*)self, (intptr_t)callback);
+void k_desktopfile_on_has_group_impl(void* self, bool (*callback)(const void*, const char*)) {
+    KDesktopFile_OnHasGroupImpl((KDesktopFile*)self, (intptr_t)callback);
 }
 
 void k_desktopfile_delete_group_impl(void* self, const char* groupName, int32_t flags) {
@@ -522,8 +522,8 @@ bool k_desktopfile_super_is_group_immutable_impl(const void* self, const char* g
     return KDesktopFile_SuperIsGroupImmutableImpl((KDesktopFile*)self, qstring(groupName));
 }
 
-void k_desktopfile_on_is_group_immutable_impl(const void* self, bool (*callback)(const void*, const char*)) {
-    KDesktopFile_OnIsGroupImmutableImpl((const KDesktopFile*)self, (intptr_t)callback);
+void k_desktopfile_on_is_group_immutable_impl(void* self, bool (*callback)(const void*, const char*)) {
+    KDesktopFile_OnIsGroupImmutableImpl((KDesktopFile*)self, (intptr_t)callback);
 }
 
 void k_desktopfile_virtual_hook(void* self, int id, void* data) {

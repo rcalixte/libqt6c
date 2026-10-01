@@ -32,10 +32,10 @@ const QMetaObject* k_textautocorrectionwidgets__autocorrectionwidget_meta_object
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback const QMetaObject* func(const TextAutoCorrectionWidgets__AutoCorrectionWidget* self)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionWidgets_1_1AutoCorrectionWidget.html)
 ///
@@ -163,9 +163,9 @@ const char* k_textautocorrectionwidgets__autocorrectionwidget_tr3(const char* s,
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
 ///
-QPaintDevice* k_textautocorrectionwidgets__autocorrectionwidget_as_q_paint_device(void* self);
+QPaintDevice* k_textautocorrectionwidgets__autocorrectionwidget_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -173,7 +173,7 @@ QPaintDevice* k_textautocorrectionwidgets__autocorrectionwidget_as_q_paint_devic
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-TextAutoCorrectionWidgets__AutoCorrectionWidget* k_textautocorrectionwidgets__autocorrectionwidget_from_q_paint_device(void* _qpaintdevice);
+TextAutoCorrectionWidgets__AutoCorrectionWidget* k_textautocorrectionwidgets__autocorrectionwidget_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3158,10 +3158,10 @@ int32_t k_textautocorrectionwidgets__autocorrectionwidget_super_dev_type(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback int32_t func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3222,12 +3222,12 @@ QSize* k_textautocorrectionwidgets__autocorrectionwidget_super_size_hint(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback QSize* func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3255,12 +3255,12 @@ QSize* k_textautocorrectionwidgets__autocorrectionwidget_super_minimum_size_hint
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback QSize* func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3290,10 +3290,10 @@ int32_t k_textautocorrectionwidgets__autocorrectionwidget_super_height_for_width
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback int32_t func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self, int param1)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3321,10 +3321,10 @@ bool k_textautocorrectionwidgets__autocorrectionwidget_super_has_height_for_widt
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback bool func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3352,10 +3352,10 @@ QPaintEngine* k_textautocorrectionwidgets__autocorrectionwidget_super_paint_engi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback QPaintEngine* func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4280,10 +4280,10 @@ int32_t k_textautocorrectionwidgets__autocorrectionwidget_super_metric(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback int32_t func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4313,10 +4313,10 @@ void k_textautocorrectionwidgets__autocorrectionwidget_super_init_painter(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback void func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self, QPainter* painter)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4346,10 +4346,10 @@ QPaintDevice* k_textautocorrectionwidgets__autocorrectionwidget_super_redirected
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback QPaintDevice* func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self, QPoint* offset)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4377,10 +4377,10 @@ QPainter* k_textautocorrectionwidgets__autocorrectionwidget_super_shared_painter
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback QPainter* func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4443,12 +4443,12 @@ QVariant* k_textautocorrectionwidgets__autocorrectionwidget_super_input_method_q
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback QVariant* func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4864,10 +4864,10 @@ QObject* k_textautocorrectionwidgets__autocorrectionwidget_super_sender(const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback QObject* func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4895,10 +4895,10 @@ int32_t k_textautocorrectionwidgets__autocorrectionwidget_super_sender_signal_in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback int32_t func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4928,10 +4928,10 @@ int32_t k_textautocorrectionwidgets__autocorrectionwidget_super_receivers(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback int32_t func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self, const char* signal)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4961,10 +4961,10 @@ bool k_textautocorrectionwidgets__autocorrectionwidget_super_is_signal_connected
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback bool func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self, QMetaMethod* signal)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4996,10 +4996,10 @@ double k_textautocorrectionwidgets__autocorrectionwidget_super_get_decoded_metri
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextAutoCorrectionWidgets__AutoCorrectionWidget*
+/// @param self TextAutoCorrectionWidgets__AutoCorrectionWidget*
 /// @param callback double func(TextAutoCorrectionWidgets__AutoCorrectionWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_textautocorrectionwidgets__autocorrectionwidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_textautocorrectionwidgets__autocorrectionwidget_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

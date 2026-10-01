@@ -32,10 +32,10 @@ const QMetaObject* q_quicktransform_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickTransform*
+/// @param self QQuickTransform*
 /// @param callback const QMetaObject* func(const QQuickTransform* self)
 ///
-void q_quicktransform_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_quicktransform_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -122,10 +122,10 @@ void q_quicktransform_apply_to(const void* self, void* matrix);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickTransform*
+/// @param self QQuickTransform*
 /// @param callback void func(const QQuickTransform* self, QMatrix4x4* matrix)
 ///
-void q_quicktransform_on_apply_to(const void* self, void (*callback)(const void*, void*));
+void q_quicktransform_on_apply_to(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktransform.html#update)
 ///
@@ -858,10 +858,10 @@ QObject* q_quicktransform_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickTransform*
+/// @param self QQuickTransform*
 /// @param callback QObject* func(QQuickTransform* self)
 ///
-void q_quicktransform_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_quicktransform_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -889,10 +889,10 @@ int32_t q_quicktransform_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickTransform*
+/// @param self QQuickTransform*
 /// @param callback int32_t func(QQuickTransform* self)
 ///
-void q_quicktransform_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_quicktransform_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -922,10 +922,10 @@ int32_t q_quicktransform_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickTransform*
+/// @param self QQuickTransform*
 /// @param callback int32_t func(QQuickTransform* self, const char* signal)
 ///
-void q_quicktransform_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_quicktransform_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -955,10 +955,10 @@ bool q_quicktransform_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickTransform*
+/// @param self QQuickTransform*
 /// @param callback bool func(QQuickTransform* self, QMetaMethod* signal)
 ///
-void q_quicktransform_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_quicktransform_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -995,15 +995,15 @@ QQuickItem* q_quickitem_new2(void* parent);
 
 /// Upcasts to a QQmlParserStatus object
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QQmlParserStatus* q_quickitem_as_q_qml_parser_status(void* self);
+QQmlParserStatus* q_quickitem_as_q_qml_parser_status(const void* self);
 
 /// Downcasts to a QQuickItem object
 ///
 /// @param _qqmlparserstatus QQmlParserStatus*
 ///
-QQuickItem* q_quickitem_from_q_qml_parser_status(void* _qqmlparserstatus);
+QQuickItem* q_quickitem_from_q_qml_parser_status(const void* _qqmlparserstatus);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1015,10 +1015,10 @@ const QMetaObject* q_quickitem_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickItem*
+/// @param self QQuickItem*
 /// @param callback const QMetaObject* func(const QQuickItem* self)
 ///
-void q_quickitem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_quickitem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1465,12 +1465,12 @@ QRectF* q_quickitem_bounding_rect(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickItem*
+/// @param self QQuickItem*
 /// @param callback QRectF* func(const QQuickItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
+void q_quickitem_on_bounding_rect(void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#boundingRect)
 ///
@@ -1490,12 +1490,12 @@ QRectF* q_quickitem_clip_rect(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickItem*
+/// @param self QQuickItem*
 /// @param callback QRectF* func(const QQuickItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickitem_on_clip_rect(const void* self, QRectF* (*callback)(const void*));
+void q_quickitem_on_clip_rect(void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#clipRect)
 ///
@@ -1720,10 +1720,10 @@ bool q_quickitem_contains(const void* self, const void* point);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickItem*
+/// @param self QQuickItem*
 /// @param callback bool func(const QQuickItem* self, QPointF* point)
 ///
-void q_quickitem_on_contains(const void* self, bool (*callback)(const void*, const void*));
+void q_quickitem_on_contains(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#contains)
 ///
@@ -1957,12 +1957,12 @@ QVariant* q_quickitem_input_method_query(const void* self, int32_t query);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickItem*
+/// @param self QQuickItem*
 /// @param callback QVariant* func(const QQuickItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_quickitem_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#inputMethodQuery)
 ///
@@ -1983,10 +1983,10 @@ bool q_quickitem_is_texture_provider(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickItem*
+/// @param self QQuickItem*
 /// @param callback bool func(const QQuickItem* self)
 ///
-void q_quickitem_on_is_texture_provider(const void* self, bool (*callback)(const void*));
+void q_quickitem_on_is_texture_provider(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#isTextureProvider)
 ///
@@ -2006,10 +2006,10 @@ QSGTextureProvider* q_quickitem_texture_provider(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuickItem*
+/// @param self QQuickItem*
 /// @param callback QSGTextureProvider* func(const QQuickItem* self)
 ///
-void q_quickitem_on_texture_provider(const void* self, QSGTextureProvider* (*callback)(const void*));
+void q_quickitem_on_texture_provider(void* self, QSGTextureProvider* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#textureProvider)
 ///
@@ -3912,10 +3912,10 @@ QObject* q_quickitem_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickItem*
+/// @param self QQuickItem*
 /// @param callback QObject* func(QQuickItem* self)
 ///
-void q_quickitem_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_quickitem_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3943,10 +3943,10 @@ int32_t q_quickitem_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickItem*
+/// @param self QQuickItem*
 /// @param callback int32_t func(QQuickItem* self)
 ///
-void q_quickitem_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_quickitem_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3976,10 +3976,10 @@ int32_t q_quickitem_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickItem*
+/// @param self QQuickItem*
 /// @param callback int32_t func(QQuickItem* self, const char* signal)
 ///
-void q_quickitem_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_quickitem_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4009,10 +4009,10 @@ bool q_quickitem_super_is_signal_connected(const void* self, const void* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuickItem*
+/// @param self QQuickItem*
 /// @param callback bool func(QQuickItem* self, QMetaMethod* signal)
 ///
-void q_quickitem_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_quickitem_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

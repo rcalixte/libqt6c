@@ -41,7 +41,7 @@ const QMetaObject* k_historycombobox_meta_object(const void* self) {
     return KHistoryComboBox_MetaObject((KHistoryComboBox*)self);
 }
 
-void k_historycombobox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_historycombobox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KHistoryComboBox_OnMetaObject((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
@@ -209,11 +209,11 @@ const char* k_historycombobox_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-KCompletionBase* k_historycombobox_as_k_completion_base(void* self) {
+KCompletionBase* k_historycombobox_as_k_completion_base(const void* self) {
     return KComboBox_AsKCompletionBase((KComboBox*)self);
 }
 
-KHistoryComboBox* k_historycombobox_from_k_completion_base(void* _kcompletionbase) {
+KHistoryComboBox* k_historycombobox_from_k_completion_base(const void* _kcompletionbase) {
     return (KHistoryComboBox*)KComboBox_FromKCompletionBase((KCompletionBase*)_kcompletionbase);
 }
 
@@ -696,11 +696,11 @@ void k_historycombobox_set_item_data3(void* self, int index, const void* value, 
     QComboBox_SetItemData3((QComboBox*)self, index, (QVariant*)value, role);
 }
 
-QPaintDevice* k_historycombobox_as_q_paint_device(void* self) {
+QPaintDevice* k_historycombobox_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KHistoryComboBox* k_historycombobox_from_q_paint_device(void* _qpaintdevice) {
+KHistoryComboBox* k_historycombobox_from_q_paint_device(const void* _qpaintdevice) {
     return (KHistoryComboBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2168,8 +2168,8 @@ QSize* k_historycombobox_super_minimum_size_hint(const void* self) {
     return KHistoryComboBox_SuperMinimumSizeHint((KHistoryComboBox*)self);
 }
 
-void k_historycombobox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KHistoryComboBox_OnMinimumSizeHint((const KHistoryComboBox*)self, (intptr_t)callback);
+void k_historycombobox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KHistoryComboBox_OnMinimumSizeHint((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
 void k_historycombobox_set_completed_text(void* self, const char* completedText) {
@@ -2248,8 +2248,8 @@ QSize* k_historycombobox_super_size_hint(const void* self) {
     return KHistoryComboBox_SuperSizeHint((KHistoryComboBox*)self);
 }
 
-void k_historycombobox_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KHistoryComboBox_OnSizeHint((const KHistoryComboBox*)self, (intptr_t)callback);
+void k_historycombobox_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KHistoryComboBox_OnSizeHint((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
 void k_historycombobox_show_popup(void* self) {
@@ -2296,8 +2296,8 @@ QVariant* k_historycombobox_super_input_method_query(const void* self, int32_t p
     return KHistoryComboBox_SuperInputMethodQuery((KHistoryComboBox*)self, param1);
 }
 
-void k_historycombobox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KHistoryComboBox_OnInputMethodQuery((const KHistoryComboBox*)self, (intptr_t)callback);
+void k_historycombobox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KHistoryComboBox_OnInputMethodQuery((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
 void k_historycombobox_focus_in_event(void* self, void* e) {
@@ -2452,8 +2452,8 @@ void k_historycombobox_super_init_style_option(const void* self, void* option) {
     KHistoryComboBox_SuperInitStyleOption((KHistoryComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_historycombobox_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KHistoryComboBox_OnInitStyleOption((const KHistoryComboBox*)self, (intptr_t)callback);
+void k_historycombobox_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KHistoryComboBox_OnInitStyleOption((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
 int32_t k_historycombobox_dev_type(const void* self) {
@@ -2464,8 +2464,8 @@ int32_t k_historycombobox_super_dev_type(const void* self) {
     return KHistoryComboBox_SuperDevType((KHistoryComboBox*)self);
 }
 
-void k_historycombobox_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KHistoryComboBox_OnDevType((const KHistoryComboBox*)self, (intptr_t)callback);
+void k_historycombobox_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KHistoryComboBox_OnDevType((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
 void k_historycombobox_set_visible(void* self, bool visible) {
@@ -2488,8 +2488,8 @@ int32_t k_historycombobox_super_height_for_width(const void* self, int param1) {
     return KHistoryComboBox_SuperHeightForWidth((KHistoryComboBox*)self, param1);
 }
 
-void k_historycombobox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KHistoryComboBox_OnHeightForWidth((const KHistoryComboBox*)self, (intptr_t)callback);
+void k_historycombobox_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KHistoryComboBox_OnHeightForWidth((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
 bool k_historycombobox_has_height_for_width(const void* self) {
@@ -2500,8 +2500,8 @@ bool k_historycombobox_super_has_height_for_width(const void* self) {
     return KHistoryComboBox_SuperHasHeightForWidth((KHistoryComboBox*)self);
 }
 
-void k_historycombobox_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KHistoryComboBox_OnHasHeightForWidth((const KHistoryComboBox*)self, (intptr_t)callback);
+void k_historycombobox_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KHistoryComboBox_OnHasHeightForWidth((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_historycombobox_paint_engine(const void* self) {
@@ -2512,8 +2512,8 @@ QPaintEngine* k_historycombobox_super_paint_engine(const void* self) {
     return KHistoryComboBox_SuperPaintEngine((KHistoryComboBox*)self);
 }
 
-void k_historycombobox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KHistoryComboBox_OnPaintEngine((const KHistoryComboBox*)self, (intptr_t)callback);
+void k_historycombobox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KHistoryComboBox_OnPaintEngine((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
 void k_historycombobox_mouse_double_click_event(void* self, void* event) {
@@ -2680,8 +2680,8 @@ int32_t k_historycombobox_super_metric(const void* self, int32_t param1) {
     return KHistoryComboBox_SuperMetric((KHistoryComboBox*)self, param1);
 }
 
-void k_historycombobox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KHistoryComboBox_OnMetric((const KHistoryComboBox*)self, (intptr_t)callback);
+void k_historycombobox_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KHistoryComboBox_OnMetric((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
 void k_historycombobox_init_painter(const void* self, void* painter) {
@@ -2692,8 +2692,8 @@ void k_historycombobox_super_init_painter(const void* self, void* painter) {
     KHistoryComboBox_SuperInitPainter((KHistoryComboBox*)self, (QPainter*)painter);
 }
 
-void k_historycombobox_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KHistoryComboBox_OnInitPainter((const KHistoryComboBox*)self, (intptr_t)callback);
+void k_historycombobox_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KHistoryComboBox_OnInitPainter((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_historycombobox_redirected(const void* self, void* offset) {
@@ -2704,8 +2704,8 @@ QPaintDevice* k_historycombobox_super_redirected(const void* self, void* offset)
     return KHistoryComboBox_SuperRedirected((KHistoryComboBox*)self, (QPoint*)offset);
 }
 
-void k_historycombobox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KHistoryComboBox_OnRedirected((const KHistoryComboBox*)self, (intptr_t)callback);
+void k_historycombobox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KHistoryComboBox_OnRedirected((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
 QPainter* k_historycombobox_shared_painter(const void* self) {
@@ -2716,8 +2716,8 @@ QPainter* k_historycombobox_super_shared_painter(const void* self) {
     return KHistoryComboBox_SuperSharedPainter((KHistoryComboBox*)self);
 }
 
-void k_historycombobox_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KHistoryComboBox_OnSharedPainter((const KHistoryComboBox*)self, (intptr_t)callback);
+void k_historycombobox_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KHistoryComboBox_OnSharedPainter((KHistoryComboBox*)self, (intptr_t)callback);
 }
 
 bool k_historycombobox_focus_next_prev_child(void* self, bool next) {

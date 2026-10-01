@@ -31,7 +31,7 @@ const QMetaObject* k_fontchooserdialog_meta_object(const void* self) {
     return KFontChooserDialog_MetaObject((KFontChooserDialog*)self);
 }
 
-void k_fontchooserdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_fontchooserdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFontChooserDialog_OnMetaObject((KFontChooserDialog*)self, (intptr_t)callback);
 }
 
@@ -172,11 +172,11 @@ void k_fontchooserdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_fontchooserdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_fontchooserdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KFontChooserDialog* k_fontchooserdialog_from_q_paint_device(void* _qpaintdevice) {
+KFontChooserDialog* k_fontchooserdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KFontChooserDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1571,8 +1571,8 @@ QSize* k_fontchooserdialog_super_size_hint(const void* self) {
     return KFontChooserDialog_SuperSizeHint((KFontChooserDialog*)self);
 }
 
-void k_fontchooserdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KFontChooserDialog_OnSizeHint((const KFontChooserDialog*)self, (intptr_t)callback);
+void k_fontchooserdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KFontChooserDialog_OnSizeHint((KFontChooserDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_fontchooserdialog_minimum_size_hint(const void* self) {
@@ -1583,8 +1583,8 @@ QSize* k_fontchooserdialog_super_minimum_size_hint(const void* self) {
     return KFontChooserDialog_SuperMinimumSizeHint((KFontChooserDialog*)self);
 }
 
-void k_fontchooserdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KFontChooserDialog_OnMinimumSizeHint((const KFontChooserDialog*)self, (intptr_t)callback);
+void k_fontchooserdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KFontChooserDialog_OnMinimumSizeHint((KFontChooserDialog*)self, (intptr_t)callback);
 }
 
 void k_fontchooserdialog_open(void* self) {
@@ -1727,8 +1727,8 @@ int32_t k_fontchooserdialog_super_dev_type(const void* self) {
     return KFontChooserDialog_SuperDevType((KFontChooserDialog*)self);
 }
 
-void k_fontchooserdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KFontChooserDialog_OnDevType((const KFontChooserDialog*)self, (intptr_t)callback);
+void k_fontchooserdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KFontChooserDialog_OnDevType((KFontChooserDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_fontchooserdialog_height_for_width(const void* self, int param1) {
@@ -1739,8 +1739,8 @@ int32_t k_fontchooserdialog_super_height_for_width(const void* self, int param1)
     return KFontChooserDialog_SuperHeightForWidth((KFontChooserDialog*)self, param1);
 }
 
-void k_fontchooserdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KFontChooserDialog_OnHeightForWidth((const KFontChooserDialog*)self, (intptr_t)callback);
+void k_fontchooserdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KFontChooserDialog_OnHeightForWidth((KFontChooserDialog*)self, (intptr_t)callback);
 }
 
 bool k_fontchooserdialog_has_height_for_width(const void* self) {
@@ -1751,8 +1751,8 @@ bool k_fontchooserdialog_super_has_height_for_width(const void* self) {
     return KFontChooserDialog_SuperHasHeightForWidth((KFontChooserDialog*)self);
 }
 
-void k_fontchooserdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KFontChooserDialog_OnHasHeightForWidth((const KFontChooserDialog*)self, (intptr_t)callback);
+void k_fontchooserdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KFontChooserDialog_OnHasHeightForWidth((KFontChooserDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_fontchooserdialog_paint_engine(const void* self) {
@@ -1763,8 +1763,8 @@ QPaintEngine* k_fontchooserdialog_super_paint_engine(const void* self) {
     return KFontChooserDialog_SuperPaintEngine((KFontChooserDialog*)self);
 }
 
-void k_fontchooserdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KFontChooserDialog_OnPaintEngine((const KFontChooserDialog*)self, (intptr_t)callback);
+void k_fontchooserdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KFontChooserDialog_OnPaintEngine((KFontChooserDialog*)self, (intptr_t)callback);
 }
 
 bool k_fontchooserdialog_event(void* self, void* event) {
@@ -2039,8 +2039,8 @@ int32_t k_fontchooserdialog_super_metric(const void* self, int32_t param1) {
     return KFontChooserDialog_SuperMetric((KFontChooserDialog*)self, param1);
 }
 
-void k_fontchooserdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KFontChooserDialog_OnMetric((const KFontChooserDialog*)self, (intptr_t)callback);
+void k_fontchooserdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KFontChooserDialog_OnMetric((KFontChooserDialog*)self, (intptr_t)callback);
 }
 
 void k_fontchooserdialog_init_painter(const void* self, void* painter) {
@@ -2051,8 +2051,8 @@ void k_fontchooserdialog_super_init_painter(const void* self, void* painter) {
     KFontChooserDialog_SuperInitPainter((KFontChooserDialog*)self, (QPainter*)painter);
 }
 
-void k_fontchooserdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KFontChooserDialog_OnInitPainter((const KFontChooserDialog*)self, (intptr_t)callback);
+void k_fontchooserdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KFontChooserDialog_OnInitPainter((KFontChooserDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_fontchooserdialog_redirected(const void* self, void* offset) {
@@ -2063,8 +2063,8 @@ QPaintDevice* k_fontchooserdialog_super_redirected(const void* self, void* offse
     return KFontChooserDialog_SuperRedirected((KFontChooserDialog*)self, (QPoint*)offset);
 }
 
-void k_fontchooserdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KFontChooserDialog_OnRedirected((const KFontChooserDialog*)self, (intptr_t)callback);
+void k_fontchooserdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KFontChooserDialog_OnRedirected((KFontChooserDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_fontchooserdialog_shared_painter(const void* self) {
@@ -2075,8 +2075,8 @@ QPainter* k_fontchooserdialog_super_shared_painter(const void* self) {
     return KFontChooserDialog_SuperSharedPainter((KFontChooserDialog*)self);
 }
 
-void k_fontchooserdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KFontChooserDialog_OnSharedPainter((const KFontChooserDialog*)self, (intptr_t)callback);
+void k_fontchooserdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KFontChooserDialog_OnSharedPainter((KFontChooserDialog*)self, (intptr_t)callback);
 }
 
 void k_fontchooserdialog_input_method_event(void* self, void* param1) {
@@ -2099,8 +2099,8 @@ QVariant* k_fontchooserdialog_super_input_method_query(const void* self, int32_t
     return KFontChooserDialog_SuperInputMethodQuery((KFontChooserDialog*)self, param1);
 }
 
-void k_fontchooserdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KFontChooserDialog_OnInputMethodQuery((const KFontChooserDialog*)self, (intptr_t)callback);
+void k_fontchooserdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KFontChooserDialog_OnInputMethodQuery((KFontChooserDialog*)self, (intptr_t)callback);
 }
 
 bool k_fontchooserdialog_focus_next_prev_child(void* self, bool next) {

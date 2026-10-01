@@ -32,10 +32,10 @@ const QMetaObject* k_localizedtranslator_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KLocalizedTranslator*
+/// @param self KLocalizedTranslator*
 /// @param callback const QMetaObject* func(const KLocalizedTranslator* self)
 ///
-void k_localizedtranslator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_localizedtranslator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -111,10 +111,10 @@ const char* k_localizedtranslator_translate(const void* self, const char* contex
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KLocalizedTranslator*
+/// @param self KLocalizedTranslator*
 /// @param callback const char* func(const KLocalizedTranslator* self, const char* context, const char* sourceText, const char* disambiguation, int n)
 ///
-void k_localizedtranslator_on_translate(const void* self, const char* (*callback)(const void*, const char*, const char*, const char*, int));
+void k_localizedtranslator_on_translate(void* self, const char* (*callback)(const void*, const char*, const char*, const char*, int));
 
 /// [Upstream resources](https://api.kde.org/klocalizedtranslator.html#translate)
 ///
@@ -770,10 +770,10 @@ bool k_localizedtranslator_super_is_empty(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLocalizedTranslator*
+/// @param self KLocalizedTranslator*
 /// @param callback bool func(KLocalizedTranslator* self)
 ///
-void k_localizedtranslator_on_is_empty(const void* self, bool (*callback)(const void*));
+void k_localizedtranslator_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1034,10 +1034,10 @@ QObject* k_localizedtranslator_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLocalizedTranslator*
+/// @param self KLocalizedTranslator*
 /// @param callback QObject* func(KLocalizedTranslator* self)
 ///
-void k_localizedtranslator_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_localizedtranslator_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1065,10 +1065,10 @@ int32_t k_localizedtranslator_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLocalizedTranslator*
+/// @param self KLocalizedTranslator*
 /// @param callback int32_t func(KLocalizedTranslator* self)
 ///
-void k_localizedtranslator_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_localizedtranslator_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1098,10 +1098,10 @@ int32_t k_localizedtranslator_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLocalizedTranslator*
+/// @param self KLocalizedTranslator*
 /// @param callback int32_t func(KLocalizedTranslator* self, const char* signal)
 ///
-void k_localizedtranslator_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_localizedtranslator_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1131,10 +1131,10 @@ bool k_localizedtranslator_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLocalizedTranslator*
+/// @param self KLocalizedTranslator*
 /// @param callback bool func(KLocalizedTranslator* self, QMetaMethod* signal)
 ///
-void k_localizedtranslator_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_localizedtranslator_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

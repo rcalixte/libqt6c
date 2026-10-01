@@ -19,7 +19,7 @@ const QMetaObject* k_datevalidator_meta_object(const void* self) {
     return KDateValidator_MetaObject((KDateValidator*)self);
 }
 
-void k_datevalidator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_datevalidator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KDateValidator_OnMetaObject((KDateValidator*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ int32_t k_datevalidator_validate(const void* self, const char* text, int* e) {
     return KDateValidator_Validate((KDateValidator*)self, qstring(text), e);
 }
 
-void k_datevalidator_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*)) {
+void k_datevalidator_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*)) {
     KDateValidator_OnValidate((KDateValidator*)self, (intptr_t)callback);
 }
 
@@ -74,7 +74,7 @@ void k_datevalidator_fixup(const void* self, const char* input) {
     KDateValidator_Fixup((KDateValidator*)self, qstring(input));
 }
 
-void k_datevalidator_on_fixup(const void* self, void (*callback)(const void*, const char*)) {
+void k_datevalidator_on_fixup(void* self, void (*callback)(const void*, const char*)) {
     KDateValidator_OnFixup((KDateValidator*)self, (intptr_t)callback);
 }
 

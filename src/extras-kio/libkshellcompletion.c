@@ -17,7 +17,7 @@ const QMetaObject* k_shellcompletion_meta_object(const void* self) {
     return KShellCompletion_MetaObject((KShellCompletion*)self);
 }
 
-void k_shellcompletion_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_shellcompletion_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KShellCompletion_OnMetaObject((KShellCompletion*)self, (intptr_t)callback);
 }
 
@@ -88,7 +88,7 @@ void k_shellcompletion_post_process_matches(const void* self, const char* matche
     free(matches_qstr);
 }
 
-void k_shellcompletion_on_post_process_matches(const void* self, void (*callback)(const void*, const char**)) {
+void k_shellcompletion_on_post_process_matches(void* self, void (*callback)(const void*, const char**)) {
     KShellCompletion_OnPostProcessMatches((KShellCompletion*)self, (intptr_t)callback);
 }
 
@@ -109,7 +109,7 @@ void k_shellcompletion_post_process_matches2(const void* self, void* matches) {
     KShellCompletion_PostProcessMatches2((KShellCompletion*)self, (KCompletionMatches*)matches);
 }
 
-void k_shellcompletion_on_post_process_matches2(const void* self, void (*callback)(const void*, void*)) {
+void k_shellcompletion_on_post_process_matches2(void* self, void (*callback)(const void*, void*)) {
     KShellCompletion_OnPostProcessMatches2((KShellCompletion*)self, (intptr_t)callback);
 }
 
@@ -590,8 +590,8 @@ QUrl* k_shellcompletion_super_dir(const void* self) {
     return KShellCompletion_SuperDir((KShellCompletion*)self);
 }
 
-void k_shellcompletion_on_dir(const void* self, QUrl* (*callback)(const void*)) {
-    KShellCompletion_OnDir((const KShellCompletion*)self, (intptr_t)callback);
+void k_shellcompletion_on_dir(void* self, QUrl* (*callback)(const void*)) {
+    KShellCompletion_OnDir((KShellCompletion*)self, (intptr_t)callback);
 }
 
 bool k_shellcompletion_is_running(const void* self) {
@@ -602,8 +602,8 @@ bool k_shellcompletion_super_is_running(const void* self) {
     return KShellCompletion_SuperIsRunning((KShellCompletion*)self);
 }
 
-void k_shellcompletion_on_is_running(const void* self, bool (*callback)(const void*)) {
-    KShellCompletion_OnIsRunning((const KShellCompletion*)self, (intptr_t)callback);
+void k_shellcompletion_on_is_running(void* self, bool (*callback)(const void*)) {
+    KShellCompletion_OnIsRunning((KShellCompletion*)self, (intptr_t)callback);
 }
 
 void k_shellcompletion_stop(void* self) {
@@ -626,8 +626,8 @@ int32_t k_shellcompletion_super_mode(const void* self) {
     return KShellCompletion_SuperMode((KShellCompletion*)self);
 }
 
-void k_shellcompletion_on_mode(const void* self, int32_t (*callback)(const void*)) {
-    KShellCompletion_OnMode((const KShellCompletion*)self, (intptr_t)callback);
+void k_shellcompletion_on_mode(void* self, int32_t (*callback)(const void*)) {
+    KShellCompletion_OnMode((KShellCompletion*)self, (intptr_t)callback);
 }
 
 void k_shellcompletion_set_mode(void* self, int32_t mode) {
@@ -650,8 +650,8 @@ bool k_shellcompletion_super_replace_env(const void* self) {
     return KShellCompletion_SuperReplaceEnv((KShellCompletion*)self);
 }
 
-void k_shellcompletion_on_replace_env(const void* self, bool (*callback)(const void*)) {
-    KShellCompletion_OnReplaceEnv((const KShellCompletion*)self, (intptr_t)callback);
+void k_shellcompletion_on_replace_env(void* self, bool (*callback)(const void*)) {
+    KShellCompletion_OnReplaceEnv((KShellCompletion*)self, (intptr_t)callback);
 }
 
 void k_shellcompletion_set_replace_env(void* self, bool replace) {
@@ -674,8 +674,8 @@ bool k_shellcompletion_super_replace_home(const void* self) {
     return KShellCompletion_SuperReplaceHome((KShellCompletion*)self);
 }
 
-void k_shellcompletion_on_replace_home(const void* self, bool (*callback)(const void*)) {
-    KShellCompletion_OnReplaceHome((const KShellCompletion*)self, (intptr_t)callback);
+void k_shellcompletion_on_replace_home(void* self, bool (*callback)(const void*)) {
+    KShellCompletion_OnReplaceHome((KShellCompletion*)self, (intptr_t)callback);
 }
 
 void k_shellcompletion_set_replace_home(void* self, bool replace) {
@@ -704,8 +704,8 @@ const char* k_shellcompletion_super_last_match(const void* self) {
     return _ret;
 }
 
-void k_shellcompletion_on_last_match(const void* self, const char* (*callback)(const void*)) {
-    KShellCompletion_OnLastMatch((const KShellCompletion*)self, (intptr_t)callback);
+void k_shellcompletion_on_last_match(void* self, const char* (*callback)(const void*)) {
+    KShellCompletion_OnLastMatch((KShellCompletion*)self, (intptr_t)callback);
 }
 
 void k_shellcompletion_set_completion_mode(void* self, int32_t mode) {

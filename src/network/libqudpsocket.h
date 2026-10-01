@@ -32,10 +32,10 @@ const QMetaObject* q_udpsocket_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback const QMetaObject* func(const QUdpSocket* self)
 ///
-void q_udpsocket_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_udpsocket_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -568,9 +568,9 @@ void q_udpsocket_connect_to_host3(void* self, const void* address, uint16_t port
 ///
 /// Upcasts to a QIODeviceBase object
 ///
-/// @param self QUdpSocket*
+/// @param self const QUdpSocket*
 ///
-QIODeviceBase* q_udpsocket_as_q_i_o_device_base(void* self);
+QIODeviceBase* q_udpsocket_as_q_i_o_device_base(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1542,10 +1542,10 @@ int64_t q_udpsocket_super_bytes_available(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback int64_t func(QUdpSocket* self)
 ///
-void q_udpsocket_on_bytes_available(const void* self, int64_t (*callback)(const void*));
+void q_udpsocket_on_bytes_available(void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1573,10 +1573,10 @@ int64_t q_udpsocket_super_bytes_to_write(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback int64_t func(QUdpSocket* self)
 ///
-void q_udpsocket_on_bytes_to_write(const void* self, int64_t (*callback)(const void*));
+void q_udpsocket_on_bytes_to_write(void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1637,10 +1637,10 @@ intptr_t q_udpsocket_super_socket_descriptor(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback intptr_t func(QUdpSocket* self)
 ///
-void q_udpsocket_on_socket_descriptor(const void* self, intptr_t (*callback)(const void*));
+void q_udpsocket_on_socket_descriptor(void* self, intptr_t (*callback)(const void*));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1806,10 +1806,10 @@ bool q_udpsocket_super_is_sequential(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback bool func(QUdpSocket* self)
 ///
-void q_udpsocket_on_is_sequential(const void* self, bool (*callback)(const void*));
+void q_udpsocket_on_is_sequential(void* self, bool (*callback)(const void*));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2140,10 +2140,10 @@ int64_t q_udpsocket_super_pos(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback int64_t func(QUdpSocket* self)
 ///
-void q_udpsocket_on_pos(const void* self, int64_t (*callback)(const void*));
+void q_udpsocket_on_pos(void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -2171,10 +2171,10 @@ int64_t q_udpsocket_super_size(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback int64_t func(QUdpSocket* self)
 ///
-void q_udpsocket_on_size(const void* self, int64_t (*callback)(const void*));
+void q_udpsocket_on_size(void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -2235,10 +2235,10 @@ bool q_udpsocket_super_at_end(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback bool func(QUdpSocket* self)
 ///
-void q_udpsocket_on_at_end(const void* self, bool (*callback)(const void*));
+void q_udpsocket_on_at_end(void* self, bool (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -2297,10 +2297,10 @@ bool q_udpsocket_super_can_read_line(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback bool func(QUdpSocket* self)
 ///
-void q_udpsocket_on_can_read_line(const void* self, bool (*callback)(const void*));
+void q_udpsocket_on_can_read_line(void* self, bool (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2858,10 +2858,10 @@ QObject* q_udpsocket_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback QObject* func(QUdpSocket* self)
 ///
-void q_udpsocket_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_udpsocket_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2889,10 +2889,10 @@ int32_t q_udpsocket_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback int32_t func(QUdpSocket* self)
 ///
-void q_udpsocket_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_udpsocket_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2922,10 +2922,10 @@ int32_t q_udpsocket_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback int32_t func(QUdpSocket* self, const char* signal)
 ///
-void q_udpsocket_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_udpsocket_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2955,10 +2955,10 @@ bool q_udpsocket_super_is_signal_connected(const void* self, const void* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QUdpSocket*
+/// @param self QUdpSocket*
 /// @param callback bool func(QUdpSocket* self, QMetaMethod* signal)
 ///
-void q_udpsocket_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_udpsocket_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

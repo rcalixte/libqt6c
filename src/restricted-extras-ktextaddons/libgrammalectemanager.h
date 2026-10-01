@@ -32,10 +32,10 @@ const QMetaObject* k_textgrammarcheck__grammalectemanager_meta_object(const void
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextGrammarCheck__GrammalecteManager*
+/// @param self TextGrammarCheck__GrammalecteManager*
 /// @param callback const QMetaObject* func(const TextGrammarCheck__GrammalecteManager* self)
 ///
-void k_textgrammarcheck__grammalectemanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textgrammarcheck__grammalectemanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammalecteManager.html)
 ///
@@ -881,10 +881,10 @@ QObject* k_textgrammarcheck__grammalectemanager_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteManager*
+/// @param self TextGrammarCheck__GrammalecteManager*
 /// @param callback QObject* func(TextGrammarCheck__GrammalecteManager* self)
 ///
-void k_textgrammarcheck__grammalectemanager_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textgrammarcheck__grammalectemanager_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -912,10 +912,10 @@ int32_t k_textgrammarcheck__grammalectemanager_super_sender_signal_index(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteManager*
+/// @param self TextGrammarCheck__GrammalecteManager*
 /// @param callback int32_t func(TextGrammarCheck__GrammalecteManager* self)
 ///
-void k_textgrammarcheck__grammalectemanager_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textgrammarcheck__grammalectemanager_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -945,10 +945,10 @@ int32_t k_textgrammarcheck__grammalectemanager_super_receivers(const void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteManager*
+/// @param self TextGrammarCheck__GrammalecteManager*
 /// @param callback int32_t func(TextGrammarCheck__GrammalecteManager* self, const char* signal)
 ///
-void k_textgrammarcheck__grammalectemanager_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textgrammarcheck__grammalectemanager_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -978,10 +978,10 @@ bool k_textgrammarcheck__grammalectemanager_super_is_signal_connected(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteManager*
+/// @param self TextGrammarCheck__GrammalecteManager*
 /// @param callback bool func(TextGrammarCheck__GrammalecteManager* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__grammalectemanager_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textgrammarcheck__grammalectemanager_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

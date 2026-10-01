@@ -19,7 +19,7 @@ const QMetaObject* q_windowcapture_meta_object(const void* self) {
     return QWindowCapture_MetaObject((QWindowCapture*)self);
 }
 
-void q_windowcapture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_windowcapture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QWindowCapture_OnMetaObject((QWindowCapture*)self, (intptr_t)callback);
 }
 

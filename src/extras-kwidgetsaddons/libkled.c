@@ -42,7 +42,7 @@ const QMetaObject* k_led_meta_object(const void* self) {
     return KLed_MetaObject((KLed*)self);
 }
 
-void k_led_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_led_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KLed_OnMetaObject((KLed*)self, (intptr_t)callback);
 }
 
@@ -125,7 +125,7 @@ QSize* k_led_size_hint(const void* self) {
     return KLed_SizeHint((KLed*)self);
 }
 
-void k_led_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_led_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KLed_OnSizeHint((KLed*)self, (intptr_t)callback);
 }
 
@@ -137,7 +137,7 @@ QSize* k_led_minimum_size_hint(const void* self) {
     return KLed_MinimumSizeHint((KLed*)self);
 }
 
-void k_led_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_led_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     KLed_OnMinimumSizeHint((KLed*)self, (intptr_t)callback);
 }
 
@@ -195,11 +195,11 @@ const char* k_led_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_led_as_q_paint_device(void* self) {
+QPaintDevice* k_led_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KLed* k_led_from_q_paint_device(void* _qpaintdevice) {
+KLed* k_led_from_q_paint_device(const void* _qpaintdevice) {
     return (KLed*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1590,8 +1590,8 @@ int32_t k_led_super_dev_type(const void* self) {
     return KLed_SuperDevType((KLed*)self);
 }
 
-void k_led_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KLed_OnDevType((const KLed*)self, (intptr_t)callback);
+void k_led_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KLed_OnDevType((KLed*)self, (intptr_t)callback);
 }
 
 void k_led_set_visible(void* self, bool visible) {
@@ -1614,8 +1614,8 @@ int32_t k_led_super_height_for_width(const void* self, int param1) {
     return KLed_SuperHeightForWidth((KLed*)self, param1);
 }
 
-void k_led_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KLed_OnHeightForWidth((const KLed*)self, (intptr_t)callback);
+void k_led_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KLed_OnHeightForWidth((KLed*)self, (intptr_t)callback);
 }
 
 bool k_led_has_height_for_width(const void* self) {
@@ -1626,8 +1626,8 @@ bool k_led_super_has_height_for_width(const void* self) {
     return KLed_SuperHasHeightForWidth((KLed*)self);
 }
 
-void k_led_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KLed_OnHasHeightForWidth((const KLed*)self, (intptr_t)callback);
+void k_led_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KLed_OnHasHeightForWidth((KLed*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_led_paint_engine(const void* self) {
@@ -1638,8 +1638,8 @@ QPaintEngine* k_led_super_paint_engine(const void* self) {
     return KLed_SuperPaintEngine((KLed*)self);
 }
 
-void k_led_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KLed_OnPaintEngine((const KLed*)self, (intptr_t)callback);
+void k_led_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KLed_OnPaintEngine((KLed*)self, (intptr_t)callback);
 }
 
 bool k_led_event(void* self, void* event) {
@@ -1950,8 +1950,8 @@ int32_t k_led_super_metric(const void* self, int32_t param1) {
     return KLed_SuperMetric((KLed*)self, param1);
 }
 
-void k_led_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KLed_OnMetric((const KLed*)self, (intptr_t)callback);
+void k_led_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KLed_OnMetric((KLed*)self, (intptr_t)callback);
 }
 
 void k_led_init_painter(const void* self, void* painter) {
@@ -1962,8 +1962,8 @@ void k_led_super_init_painter(const void* self, void* painter) {
     KLed_SuperInitPainter((KLed*)self, (QPainter*)painter);
 }
 
-void k_led_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KLed_OnInitPainter((const KLed*)self, (intptr_t)callback);
+void k_led_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KLed_OnInitPainter((KLed*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_led_redirected(const void* self, void* offset) {
@@ -1974,8 +1974,8 @@ QPaintDevice* k_led_super_redirected(const void* self, void* offset) {
     return KLed_SuperRedirected((KLed*)self, (QPoint*)offset);
 }
 
-void k_led_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KLed_OnRedirected((const KLed*)self, (intptr_t)callback);
+void k_led_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KLed_OnRedirected((KLed*)self, (intptr_t)callback);
 }
 
 QPainter* k_led_shared_painter(const void* self) {
@@ -1986,8 +1986,8 @@ QPainter* k_led_super_shared_painter(const void* self) {
     return KLed_SuperSharedPainter((KLed*)self);
 }
 
-void k_led_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KLed_OnSharedPainter((const KLed*)self, (intptr_t)callback);
+void k_led_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KLed_OnSharedPainter((KLed*)self, (intptr_t)callback);
 }
 
 void k_led_input_method_event(void* self, void* param1) {
@@ -2010,8 +2010,8 @@ QVariant* k_led_super_input_method_query(const void* self, int32_t param1) {
     return KLed_SuperInputMethodQuery((KLed*)self, param1);
 }
 
-void k_led_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KLed_OnInputMethodQuery((const KLed*)self, (intptr_t)callback);
+void k_led_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KLed_OnInputMethodQuery((KLed*)self, (intptr_t)callback);
 }
 
 bool k_led_focus_next_prev_child(void* self, bool next) {

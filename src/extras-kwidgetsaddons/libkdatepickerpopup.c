@@ -38,7 +38,7 @@ const QMetaObject* k_datepickerpopup_meta_object(const void* self) {
     return KDatePickerPopup_MetaObject((KDatePickerPopup*)self);
 }
 
-void k_datepickerpopup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_datepickerpopup_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KDatePickerPopup_OnMetaObject((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
@@ -399,11 +399,11 @@ QAction* k_datepickerpopup_exec4(libqt_list /* of QAction* */ actions, const voi
     return QMenu_Exec4(actions, (QPoint*)pos, (QAction*)at, (QWidget*)parent);
 }
 
-QPaintDevice* k_datepickerpopup_as_q_paint_device(void* self) {
+QPaintDevice* k_datepickerpopup_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KDatePickerPopup* k_datepickerpopup_from_q_paint_device(void* _qpaintdevice) {
+KDatePickerPopup* k_datepickerpopup_from_q_paint_device(const void* _qpaintdevice) {
     return (KDatePickerPopup*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1794,8 +1794,8 @@ QSize* k_datepickerpopup_super_size_hint(const void* self) {
     return KDatePickerPopup_SuperSizeHint((KDatePickerPopup*)self);
 }
 
-void k_datepickerpopup_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KDatePickerPopup_OnSizeHint((const KDatePickerPopup*)self, (intptr_t)callback);
+void k_datepickerpopup_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KDatePickerPopup_OnSizeHint((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
 void k_datepickerpopup_change_event(void* self, void* param1) {
@@ -1974,8 +1974,8 @@ void k_datepickerpopup_super_init_style_option(const void* self, void* option, c
     KDatePickerPopup_SuperInitStyleOption((KDatePickerPopup*)self, (QStyleOptionMenuItem*)option, (QAction*)action);
 }
 
-void k_datepickerpopup_on_init_style_option(const void* self, void (*callback)(const void*, void*, const void*)) {
-    KDatePickerPopup_OnInitStyleOption((const KDatePickerPopup*)self, (intptr_t)callback);
+void k_datepickerpopup_on_init_style_option(void* self, void (*callback)(const void*, void*, const void*)) {
+    KDatePickerPopup_OnInitStyleOption((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
 int32_t k_datepickerpopup_dev_type(const void* self) {
@@ -1986,8 +1986,8 @@ int32_t k_datepickerpopup_super_dev_type(const void* self) {
     return KDatePickerPopup_SuperDevType((KDatePickerPopup*)self);
 }
 
-void k_datepickerpopup_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KDatePickerPopup_OnDevType((const KDatePickerPopup*)self, (intptr_t)callback);
+void k_datepickerpopup_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KDatePickerPopup_OnDevType((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
 void k_datepickerpopup_set_visible(void* self, bool visible) {
@@ -2010,8 +2010,8 @@ QSize* k_datepickerpopup_super_minimum_size_hint(const void* self) {
     return KDatePickerPopup_SuperMinimumSizeHint((KDatePickerPopup*)self);
 }
 
-void k_datepickerpopup_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KDatePickerPopup_OnMinimumSizeHint((const KDatePickerPopup*)self, (intptr_t)callback);
+void k_datepickerpopup_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KDatePickerPopup_OnMinimumSizeHint((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
 int32_t k_datepickerpopup_height_for_width(const void* self, int param1) {
@@ -2022,8 +2022,8 @@ int32_t k_datepickerpopup_super_height_for_width(const void* self, int param1) {
     return KDatePickerPopup_SuperHeightForWidth((KDatePickerPopup*)self, param1);
 }
 
-void k_datepickerpopup_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KDatePickerPopup_OnHeightForWidth((const KDatePickerPopup*)self, (intptr_t)callback);
+void k_datepickerpopup_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KDatePickerPopup_OnHeightForWidth((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
 bool k_datepickerpopup_has_height_for_width(const void* self) {
@@ -2034,8 +2034,8 @@ bool k_datepickerpopup_super_has_height_for_width(const void* self) {
     return KDatePickerPopup_SuperHasHeightForWidth((KDatePickerPopup*)self);
 }
 
-void k_datepickerpopup_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KDatePickerPopup_OnHasHeightForWidth((const KDatePickerPopup*)self, (intptr_t)callback);
+void k_datepickerpopup_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KDatePickerPopup_OnHasHeightForWidth((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_datepickerpopup_paint_engine(const void* self) {
@@ -2046,8 +2046,8 @@ QPaintEngine* k_datepickerpopup_super_paint_engine(const void* self) {
     return KDatePickerPopup_SuperPaintEngine((KDatePickerPopup*)self);
 }
 
-void k_datepickerpopup_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KDatePickerPopup_OnPaintEngine((const KDatePickerPopup*)self, (intptr_t)callback);
+void k_datepickerpopup_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KDatePickerPopup_OnPaintEngine((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
 void k_datepickerpopup_mouse_double_click_event(void* self, void* event) {
@@ -2238,8 +2238,8 @@ int32_t k_datepickerpopup_super_metric(const void* self, int32_t param1) {
     return KDatePickerPopup_SuperMetric((KDatePickerPopup*)self, param1);
 }
 
-void k_datepickerpopup_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KDatePickerPopup_OnMetric((const KDatePickerPopup*)self, (intptr_t)callback);
+void k_datepickerpopup_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KDatePickerPopup_OnMetric((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
 void k_datepickerpopup_init_painter(const void* self, void* painter) {
@@ -2250,8 +2250,8 @@ void k_datepickerpopup_super_init_painter(const void* self, void* painter) {
     KDatePickerPopup_SuperInitPainter((KDatePickerPopup*)self, (QPainter*)painter);
 }
 
-void k_datepickerpopup_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KDatePickerPopup_OnInitPainter((const KDatePickerPopup*)self, (intptr_t)callback);
+void k_datepickerpopup_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KDatePickerPopup_OnInitPainter((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_datepickerpopup_redirected(const void* self, void* offset) {
@@ -2262,8 +2262,8 @@ QPaintDevice* k_datepickerpopup_super_redirected(const void* self, void* offset)
     return KDatePickerPopup_SuperRedirected((KDatePickerPopup*)self, (QPoint*)offset);
 }
 
-void k_datepickerpopup_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KDatePickerPopup_OnRedirected((const KDatePickerPopup*)self, (intptr_t)callback);
+void k_datepickerpopup_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KDatePickerPopup_OnRedirected((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
 QPainter* k_datepickerpopup_shared_painter(const void* self) {
@@ -2274,8 +2274,8 @@ QPainter* k_datepickerpopup_super_shared_painter(const void* self) {
     return KDatePickerPopup_SuperSharedPainter((KDatePickerPopup*)self);
 }
 
-void k_datepickerpopup_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KDatePickerPopup_OnSharedPainter((const KDatePickerPopup*)self, (intptr_t)callback);
+void k_datepickerpopup_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KDatePickerPopup_OnSharedPainter((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
 void k_datepickerpopup_input_method_event(void* self, void* param1) {
@@ -2298,8 +2298,8 @@ QVariant* k_datepickerpopup_super_input_method_query(const void* self, int32_t p
     return KDatePickerPopup_SuperInputMethodQuery((KDatePickerPopup*)self, param1);
 }
 
-void k_datepickerpopup_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KDatePickerPopup_OnInputMethodQuery((const KDatePickerPopup*)self, (intptr_t)callback);
+void k_datepickerpopup_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KDatePickerPopup_OnInputMethodQuery((KDatePickerPopup*)self, (intptr_t)callback);
 }
 
 bool k_datepickerpopup_event_filter(void* self, void* watched, void* event) {

@@ -35,7 +35,7 @@ const QMetaObject* q_headerview_meta_object(const void* self) {
     return QHeaderView_MetaObject((QHeaderView*)self);
 }
 
-void q_headerview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_headerview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QHeaderView_OnMetaObject((QHeaderView*)self, (intptr_t)callback);
 }
 
@@ -102,7 +102,7 @@ QSize* q_headerview_size_hint(const void* self) {
     return QHeaderView_SizeHint((QHeaderView*)self);
 }
 
-void q_headerview_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_headerview_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QHeaderView_OnSizeHint((QHeaderView*)self, (intptr_t)callback);
 }
 
@@ -613,7 +613,7 @@ void q_headerview_paint_section(const void* self, void* painter, const void* rec
     QHeaderView_PaintSection((QHeaderView*)self, (QPainter*)painter, (QRect*)rect, logicalIndex);
 }
 
-void q_headerview_on_paint_section(const void* self, void (*callback)(const void*, void*, const void*, int)) {
+void q_headerview_on_paint_section(void* self, void (*callback)(const void*, void*, const void*, int)) {
     QHeaderView_OnPaintSection((QHeaderView*)self, (intptr_t)callback);
 }
 
@@ -625,7 +625,7 @@ QSize* q_headerview_section_size_from_contents(const void* self, int logicalInde
     return QHeaderView_SectionSizeFromContents((QHeaderView*)self, logicalIndex);
 }
 
-void q_headerview_on_section_size_from_contents(const void* self, QSize* (*callback)(const void*, int)) {
+void q_headerview_on_section_size_from_contents(void* self, QSize* (*callback)(const void*, int)) {
     QHeaderView_OnSectionSizeFromContents((QHeaderView*)self, (intptr_t)callback);
 }
 
@@ -637,7 +637,7 @@ int32_t q_headerview_horizontal_offset(const void* self) {
     return QHeaderView_HorizontalOffset((QHeaderView*)self);
 }
 
-void q_headerview_on_horizontal_offset(const void* self, int32_t (*callback)(const void*)) {
+void q_headerview_on_horizontal_offset(void* self, int32_t (*callback)(const void*)) {
     QHeaderView_OnHorizontalOffset((QHeaderView*)self, (intptr_t)callback);
 }
 
@@ -649,7 +649,7 @@ int32_t q_headerview_vertical_offset(const void* self) {
     return QHeaderView_VerticalOffset((QHeaderView*)self);
 }
 
-void q_headerview_on_vertical_offset(const void* self, int32_t (*callback)(const void*)) {
+void q_headerview_on_vertical_offset(void* self, int32_t (*callback)(const void*)) {
     QHeaderView_OnVerticalOffset((QHeaderView*)self, (intptr_t)callback);
 }
 
@@ -709,7 +709,7 @@ QRect* q_headerview_visual_rect(const void* self, const void* index) {
     return QHeaderView_VisualRect((QHeaderView*)self, (QModelIndex*)index);
 }
 
-void q_headerview_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*)) {
+void q_headerview_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*)) {
     QHeaderView_OnVisualRect((QHeaderView*)self, (intptr_t)callback);
 }
 
@@ -733,7 +733,7 @@ QModelIndex* q_headerview_index_at(const void* self, const void* p) {
     return QHeaderView_IndexAt((QHeaderView*)self, (QPoint*)p);
 }
 
-void q_headerview_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_headerview_on_index_at(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QHeaderView_OnIndexAt((QHeaderView*)self, (intptr_t)callback);
 }
 
@@ -745,7 +745,7 @@ bool q_headerview_is_index_hidden(const void* self, const void* index) {
     return QHeaderView_IsIndexHidden((QHeaderView*)self, (QModelIndex*)index);
 }
 
-void q_headerview_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*)) {
+void q_headerview_on_is_index_hidden(void* self, bool (*callback)(const void*, const void*)) {
     QHeaderView_OnIsIndexHidden((QHeaderView*)self, (intptr_t)callback);
 }
 
@@ -781,7 +781,7 @@ QRegion* q_headerview_visual_region_for_selection(const void* self, const void* 
     return QHeaderView_VisualRegionForSelection((QHeaderView*)self, (QItemSelection*)selection);
 }
 
-void q_headerview_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*)) {
+void q_headerview_on_visual_region_for_selection(void* self, QRegion* (*callback)(const void*, const void*)) {
     QHeaderView_OnVisualRegionForSelection((QHeaderView*)self, (intptr_t)callback);
 }
 
@@ -793,7 +793,7 @@ void q_headerview_init_style_option_for_index(const void* self, void* option, in
     QHeaderView_InitStyleOptionForIndex((QHeaderView*)self, (QStyleOptionHeader*)option, logicalIndex);
 }
 
-void q_headerview_on_init_style_option_for_index(const void* self, void (*callback)(const void*, void*, int)) {
+void q_headerview_on_init_style_option_for_index(void* self, void (*callback)(const void*, void*, int)) {
     QHeaderView_OnInitStyleOptionForIndex((QHeaderView*)self, (intptr_t)callback);
 }
 
@@ -805,7 +805,7 @@ void q_headerview_init_style_option(const void* self, void* option) {
     QHeaderView_InitStyleOption((QHeaderView*)self, (QStyleOptionHeader*)option);
 }
 
-void q_headerview_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_headerview_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QHeaderView_OnInitStyleOption((QHeaderView*)self, (intptr_t)callback);
 }
 
@@ -1232,11 +1232,11 @@ void q_headerview_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_headerview_as_q_paint_device(void* self) {
+QPaintDevice* q_headerview_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QHeaderView* q_headerview_from_q_paint_device(void* _qpaintdevice) {
+QHeaderView* q_headerview_from_q_paint_device(const void* _qpaintdevice) {
     return (QHeaderView*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2647,8 +2647,8 @@ int32_t q_headerview_super_size_hint_for_row(const void* self, int row) {
     return QHeaderView_SuperSizeHintForRow((QHeaderView*)self, row);
 }
 
-void q_headerview_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int)) {
-    QHeaderView_OnSizeHintForRow((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_size_hint_for_row(void* self, int32_t (*callback)(const void*, int)) {
+    QHeaderView_OnSizeHintForRow((QHeaderView*)self, (intptr_t)callback);
 }
 
 int32_t q_headerview_size_hint_for_column(const void* self, int column) {
@@ -2659,8 +2659,8 @@ int32_t q_headerview_super_size_hint_for_column(const void* self, int column) {
     return QHeaderView_SuperSizeHintForColumn((QHeaderView*)self, column);
 }
 
-void q_headerview_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int)) {
-    QHeaderView_OnSizeHintForColumn((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_size_hint_for_column(void* self, int32_t (*callback)(const void*, int)) {
+    QHeaderView_OnSizeHintForColumn((QHeaderView*)self, (intptr_t)callback);
 }
 
 QAbstractItemDelegate* q_headerview_item_delegate_for_index(const void* self, const void* index) {
@@ -2671,8 +2671,8 @@ QAbstractItemDelegate* q_headerview_super_item_delegate_for_index(const void* se
     return QHeaderView_SuperItemDelegateForIndex((QHeaderView*)self, (QModelIndex*)index);
 }
 
-void q_headerview_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
-    QHeaderView_OnItemDelegateForIndex((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
+    QHeaderView_OnItemDelegateForIndex((QHeaderView*)self, (intptr_t)callback);
 }
 
 QVariant* q_headerview_input_method_query(const void* self, int32_t query) {
@@ -2683,8 +2683,8 @@ QVariant* q_headerview_super_input_method_query(const void* self, int32_t query)
     return QHeaderView_SuperInputMethodQuery((QHeaderView*)self, query);
 }
 
-void q_headerview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QHeaderView_OnInputMethodQuery((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QHeaderView_OnInputMethodQuery((QHeaderView*)self, (intptr_t)callback);
 }
 
 void q_headerview_set_root_index(void* self, const void* index) {
@@ -2853,8 +2853,8 @@ libqt_list /* of QModelIndex* */ q_headerview_super_selected_indexes(const void*
     return _arr;
 }
 
-void q_headerview_on_selected_indexes(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
-    QHeaderView_OnSelectedIndexes((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
+    QHeaderView_OnSelectedIndexes((QHeaderView*)self, (intptr_t)callback);
 }
 
 bool q_headerview_edit2(void* self, const void* index, int32_t trigger, void* event) {
@@ -2877,8 +2877,8 @@ int32_t q_headerview_super_selection_command(const void* self, const void* index
     return QHeaderView_SuperSelectionCommand((QHeaderView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_headerview_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*)) {
-    QHeaderView_OnSelectionCommand((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_selection_command(void* self, int32_t (*callback)(const void*, const void*, const void*)) {
+    QHeaderView_OnSelectionCommand((QHeaderView*)self, (intptr_t)callback);
 }
 
 void q_headerview_start_drag(void* self, int32_t supportedActions) {
@@ -2901,8 +2901,8 @@ void q_headerview_super_init_view_item_option(const void* self, void* option) {
     QHeaderView_SuperInitViewItemOption((QHeaderView*)self, (QStyleOptionViewItem*)option);
 }
 
-void q_headerview_on_init_view_item_option(const void* self, void (*callback)(const void*, void*)) {
-    QHeaderView_OnInitViewItemOption((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_init_view_item_option(void* self, void (*callback)(const void*, void*)) {
+    QHeaderView_OnInitViewItemOption((QHeaderView*)self, (intptr_t)callback);
 }
 
 bool q_headerview_focus_next_prev_child(void* self, bool next) {
@@ -3057,8 +3057,8 @@ QSize* q_headerview_super_viewport_size_hint(const void* self) {
     return QHeaderView_SuperViewportSizeHint((QHeaderView*)self);
 }
 
-void q_headerview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QHeaderView_OnViewportSizeHint((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QHeaderView_OnViewportSizeHint((QHeaderView*)self, (intptr_t)callback);
 }
 
 QSize* q_headerview_minimum_size_hint(const void* self) {
@@ -3069,8 +3069,8 @@ QSize* q_headerview_super_minimum_size_hint(const void* self) {
     return QHeaderView_SuperMinimumSizeHint((QHeaderView*)self);
 }
 
-void q_headerview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QHeaderView_OnMinimumSizeHint((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QHeaderView_OnMinimumSizeHint((QHeaderView*)self, (intptr_t)callback);
 }
 
 void q_headerview_setup_viewport(void* self, void* viewport) {
@@ -3129,8 +3129,8 @@ int32_t q_headerview_super_dev_type(const void* self) {
     return QHeaderView_SuperDevType((QHeaderView*)self);
 }
 
-void q_headerview_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QHeaderView_OnDevType((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QHeaderView_OnDevType((QHeaderView*)self, (intptr_t)callback);
 }
 
 int32_t q_headerview_height_for_width(const void* self, int param1) {
@@ -3141,8 +3141,8 @@ int32_t q_headerview_super_height_for_width(const void* self, int param1) {
     return QHeaderView_SuperHeightForWidth((QHeaderView*)self, param1);
 }
 
-void q_headerview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QHeaderView_OnHeightForWidth((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QHeaderView_OnHeightForWidth((QHeaderView*)self, (intptr_t)callback);
 }
 
 bool q_headerview_has_height_for_width(const void* self) {
@@ -3153,8 +3153,8 @@ bool q_headerview_super_has_height_for_width(const void* self) {
     return QHeaderView_SuperHasHeightForWidth((QHeaderView*)self);
 }
 
-void q_headerview_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QHeaderView_OnHasHeightForWidth((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QHeaderView_OnHasHeightForWidth((QHeaderView*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_headerview_paint_engine(const void* self) {
@@ -3165,8 +3165,8 @@ QPaintEngine* q_headerview_super_paint_engine(const void* self) {
     return QHeaderView_SuperPaintEngine((QHeaderView*)self);
 }
 
-void q_headerview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QHeaderView_OnPaintEngine((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QHeaderView_OnPaintEngine((QHeaderView*)self, (intptr_t)callback);
 }
 
 void q_headerview_key_release_event(void* self, void* event) {
@@ -3297,8 +3297,8 @@ int32_t q_headerview_super_metric(const void* self, int32_t param1) {
     return QHeaderView_SuperMetric((QHeaderView*)self, param1);
 }
 
-void q_headerview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QHeaderView_OnMetric((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QHeaderView_OnMetric((QHeaderView*)self, (intptr_t)callback);
 }
 
 void q_headerview_init_painter(const void* self, void* painter) {
@@ -3309,8 +3309,8 @@ void q_headerview_super_init_painter(const void* self, void* painter) {
     QHeaderView_SuperInitPainter((QHeaderView*)self, (QPainter*)painter);
 }
 
-void q_headerview_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QHeaderView_OnInitPainter((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QHeaderView_OnInitPainter((QHeaderView*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_headerview_redirected(const void* self, void* offset) {
@@ -3321,8 +3321,8 @@ QPaintDevice* q_headerview_super_redirected(const void* self, void* offset) {
     return QHeaderView_SuperRedirected((QHeaderView*)self, (QPoint*)offset);
 }
 
-void q_headerview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QHeaderView_OnRedirected((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QHeaderView_OnRedirected((QHeaderView*)self, (intptr_t)callback);
 }
 
 QPainter* q_headerview_shared_painter(const void* self) {
@@ -3333,8 +3333,8 @@ QPainter* q_headerview_super_shared_painter(const void* self) {
     return QHeaderView_SuperSharedPainter((QHeaderView*)self);
 }
 
-void q_headerview_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QHeaderView_OnSharedPainter((const QHeaderView*)self, (intptr_t)callback);
+void q_headerview_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QHeaderView_OnSharedPainter((QHeaderView*)self, (intptr_t)callback);
 }
 
 void q_headerview_child_event(void* self, void* event) {

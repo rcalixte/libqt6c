@@ -4,7 +4,7 @@
 #include "libksharedconfig.hpp"
 #include "libksharedconfig.h"
 
-QSharedData* k_sharedconfig_as_q_shared_data(void* self) {
+QSharedData* k_sharedconfig_as_q_shared_data(const void* self) {
     return KSharedConfig_AsQSharedData((KSharedConfig*)self);
 }
 

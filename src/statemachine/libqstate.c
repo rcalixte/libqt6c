@@ -29,7 +29,7 @@ const QMetaObject* q_state_meta_object(const void* self) {
     return QState_MetaObject((QState*)self);
 }
 
-void q_state_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_state_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QState_OnMetaObject((QState*)self, (intptr_t)callback);
 }
 

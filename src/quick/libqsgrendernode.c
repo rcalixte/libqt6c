@@ -13,7 +13,7 @@ int32_t q_sgrendernode_changed_states(const void* self) {
     return QSGRenderNode_ChangedStates((QSGRenderNode*)self);
 }
 
-void q_sgrendernode_on_changed_states(const void* self, int32_t (*callback)(const void*)) {
+void q_sgrendernode_on_changed_states(void* self, int32_t (*callback)(const void*)) {
     QSGRenderNode_OnChangedStates((QSGRenderNode*)self, (intptr_t)callback);
 }
 
@@ -57,7 +57,7 @@ int32_t q_sgrendernode_flags(const void* self) {
     return QSGRenderNode_Flags((QSGRenderNode*)self);
 }
 
-void q_sgrendernode_on_flags(const void* self, int32_t (*callback)(const void*)) {
+void q_sgrendernode_on_flags(void* self, int32_t (*callback)(const void*)) {
     QSGRenderNode_OnFlags((QSGRenderNode*)self, (intptr_t)callback);
 }
 
@@ -69,7 +69,7 @@ QRectF* q_sgrendernode_rect(const void* self) {
     return QSGRenderNode_Rect((QSGRenderNode*)self);
 }
 
-void q_sgrendernode_on_rect(const void* self, QRectF* (*callback)(const void*)) {
+void q_sgrendernode_on_rect(void* self, QRectF* (*callback)(const void*)) {
     QSGRenderNode_OnRect((QSGRenderNode*)self, (intptr_t)callback);
 }
 
@@ -193,8 +193,8 @@ bool q_sgrendernode_super_is_subtree_blocked(const void* self) {
     return QSGRenderNode_SuperIsSubtreeBlocked((QSGRenderNode*)self);
 }
 
-void q_sgrendernode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
-    QSGRenderNode_OnIsSubtreeBlocked((const QSGRenderNode*)self, (intptr_t)callback);
+void q_sgrendernode_on_is_subtree_blocked(void* self, bool (*callback)(const void*)) {
+    QSGRenderNode_OnIsSubtreeBlocked((QSGRenderNode*)self, (intptr_t)callback);
 }
 
 void q_sgrendernode_preprocess(void* self) {

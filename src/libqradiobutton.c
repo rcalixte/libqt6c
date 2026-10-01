@@ -35,7 +35,7 @@ const QMetaObject* q_radiobutton_meta_object(const void* self) {
     return QRadioButton_MetaObject((QRadioButton*)self);
 }
 
-void q_radiobutton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_radiobutton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QRadioButton_OnMetaObject((QRadioButton*)self, (intptr_t)callback);
 }
 
@@ -78,7 +78,7 @@ QSize* q_radiobutton_size_hint(const void* self) {
     return QRadioButton_SizeHint((QRadioButton*)self);
 }
 
-void q_radiobutton_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_radiobutton_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QRadioButton_OnSizeHint((QRadioButton*)self, (intptr_t)callback);
 }
 
@@ -90,7 +90,7 @@ QSize* q_radiobutton_minimum_size_hint(const void* self) {
     return QRadioButton_MinimumSizeHint((QRadioButton*)self);
 }
 
-void q_radiobutton_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_radiobutton_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QRadioButton_OnMinimumSizeHint((QRadioButton*)self, (intptr_t)callback);
 }
 
@@ -114,7 +114,7 @@ bool q_radiobutton_hit_button(const void* self, const void* param1) {
     return QRadioButton_HitButton((QRadioButton*)self, (QPoint*)param1);
 }
 
-void q_radiobutton_on_hit_button(const void* self, bool (*callback)(const void*, const void*)) {
+void q_radiobutton_on_hit_button(void* self, bool (*callback)(const void*, const void*)) {
     QRadioButton_OnHitButton((QRadioButton*)self, (intptr_t)callback);
 }
 
@@ -150,7 +150,7 @@ void q_radiobutton_init_style_option(const void* self, void* button) {
     QRadioButton_InitStyleOption((QRadioButton*)self, (QStyleOptionButton*)button);
 }
 
-void q_radiobutton_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_radiobutton_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QRadioButton_OnInitStyleOption((QRadioButton*)self, (intptr_t)callback);
 }
 
@@ -319,11 +319,11 @@ void q_radiobutton_on_clicked1(void* self, void (*callback)(void*, bool)) {
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_radiobutton_as_q_paint_device(void* self) {
+QPaintDevice* q_radiobutton_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QRadioButton* q_radiobutton_from_q_paint_device(void* _qpaintdevice) {
+QRadioButton* q_radiobutton_from_q_paint_device(const void* _qpaintdevice) {
     return (QRadioButton*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1834,8 +1834,8 @@ int32_t q_radiobutton_super_dev_type(const void* self) {
     return QRadioButton_SuperDevType((QRadioButton*)self);
 }
 
-void q_radiobutton_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QRadioButton_OnDevType((const QRadioButton*)self, (intptr_t)callback);
+void q_radiobutton_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QRadioButton_OnDevType((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_set_visible(void* self, bool visible) {
@@ -1858,8 +1858,8 @@ int32_t q_radiobutton_super_height_for_width(const void* self, int param1) {
     return QRadioButton_SuperHeightForWidth((QRadioButton*)self, param1);
 }
 
-void q_radiobutton_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QRadioButton_OnHeightForWidth((const QRadioButton*)self, (intptr_t)callback);
+void q_radiobutton_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QRadioButton_OnHeightForWidth((QRadioButton*)self, (intptr_t)callback);
 }
 
 bool q_radiobutton_has_height_for_width(const void* self) {
@@ -1870,8 +1870,8 @@ bool q_radiobutton_super_has_height_for_width(const void* self) {
     return QRadioButton_SuperHasHeightForWidth((QRadioButton*)self);
 }
 
-void q_radiobutton_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QRadioButton_OnHasHeightForWidth((const QRadioButton*)self, (intptr_t)callback);
+void q_radiobutton_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QRadioButton_OnHasHeightForWidth((QRadioButton*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_radiobutton_paint_engine(const void* self) {
@@ -1882,8 +1882,8 @@ QPaintEngine* q_radiobutton_super_paint_engine(const void* self) {
     return QRadioButton_SuperPaintEngine((QRadioButton*)self);
 }
 
-void q_radiobutton_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QRadioButton_OnPaintEngine((const QRadioButton*)self, (intptr_t)callback);
+void q_radiobutton_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QRadioButton_OnPaintEngine((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_mouse_double_click_event(void* self, void* event) {
@@ -2098,8 +2098,8 @@ int32_t q_radiobutton_super_metric(const void* self, int32_t param1) {
     return QRadioButton_SuperMetric((QRadioButton*)self, param1);
 }
 
-void q_radiobutton_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QRadioButton_OnMetric((const QRadioButton*)self, (intptr_t)callback);
+void q_radiobutton_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QRadioButton_OnMetric((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_init_painter(const void* self, void* painter) {
@@ -2110,8 +2110,8 @@ void q_radiobutton_super_init_painter(const void* self, void* painter) {
     QRadioButton_SuperInitPainter((QRadioButton*)self, (QPainter*)painter);
 }
 
-void q_radiobutton_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QRadioButton_OnInitPainter((const QRadioButton*)self, (intptr_t)callback);
+void q_radiobutton_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QRadioButton_OnInitPainter((QRadioButton*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_radiobutton_redirected(const void* self, void* offset) {
@@ -2122,8 +2122,8 @@ QPaintDevice* q_radiobutton_super_redirected(const void* self, void* offset) {
     return QRadioButton_SuperRedirected((QRadioButton*)self, (QPoint*)offset);
 }
 
-void q_radiobutton_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QRadioButton_OnRedirected((const QRadioButton*)self, (intptr_t)callback);
+void q_radiobutton_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QRadioButton_OnRedirected((QRadioButton*)self, (intptr_t)callback);
 }
 
 QPainter* q_radiobutton_shared_painter(const void* self) {
@@ -2134,8 +2134,8 @@ QPainter* q_radiobutton_super_shared_painter(const void* self) {
     return QRadioButton_SuperSharedPainter((QRadioButton*)self);
 }
 
-void q_radiobutton_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QRadioButton_OnSharedPainter((const QRadioButton*)self, (intptr_t)callback);
+void q_radiobutton_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QRadioButton_OnSharedPainter((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_input_method_event(void* self, void* param1) {
@@ -2158,8 +2158,8 @@ QVariant* q_radiobutton_super_input_method_query(const void* self, int32_t param
     return QRadioButton_SuperInputMethodQuery((QRadioButton*)self, param1);
 }
 
-void q_radiobutton_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QRadioButton_OnInputMethodQuery((const QRadioButton*)self, (intptr_t)callback);
+void q_radiobutton_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QRadioButton_OnInputMethodQuery((QRadioButton*)self, (intptr_t)callback);
 }
 
 bool q_radiobutton_focus_next_prev_child(void* self, bool next) {

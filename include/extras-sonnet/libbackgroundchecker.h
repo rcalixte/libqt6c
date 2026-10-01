@@ -49,10 +49,10 @@ const QMetaObject* k_sonnet__backgroundchecker_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Sonnet__BackgroundChecker*
+/// @param self Sonnet__BackgroundChecker*
 /// @param callback const QMetaObject* func(const Sonnet__BackgroundChecker* self)
 ///
-void k_sonnet__backgroundchecker_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_sonnet__backgroundchecker_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1083,10 +1083,10 @@ QObject* k_sonnet__backgroundchecker_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__BackgroundChecker*
+/// @param self Sonnet__BackgroundChecker*
 /// @param callback QObject* func(Sonnet__BackgroundChecker* self)
 ///
-void k_sonnet__backgroundchecker_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_sonnet__backgroundchecker_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1114,10 +1114,10 @@ int32_t k_sonnet__backgroundchecker_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__BackgroundChecker*
+/// @param self Sonnet__BackgroundChecker*
 /// @param callback int32_t func(Sonnet__BackgroundChecker* self)
 ///
-void k_sonnet__backgroundchecker_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_sonnet__backgroundchecker_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1147,10 +1147,10 @@ int32_t k_sonnet__backgroundchecker_super_receivers(const void* self, const char
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__BackgroundChecker*
+/// @param self Sonnet__BackgroundChecker*
 /// @param callback int32_t func(Sonnet__BackgroundChecker* self, const char* signal)
 ///
-void k_sonnet__backgroundchecker_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_sonnet__backgroundchecker_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1180,10 +1180,10 @@ bool k_sonnet__backgroundchecker_super_is_signal_connected(const void* self, con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Sonnet__BackgroundChecker*
+/// @param self Sonnet__BackgroundChecker*
 /// @param callback bool func(Sonnet__BackgroundChecker* self, QMetaMethod* signal)
 ///
-void k_sonnet__backgroundchecker_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_sonnet__backgroundchecker_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

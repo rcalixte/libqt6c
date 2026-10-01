@@ -16,7 +16,7 @@ const QMetaObject* k_filecopytomenu_meta_object(const void* self) {
     return KFileCopyToMenu_MetaObject((KFileCopyToMenu*)self);
 }
 
-void k_filecopytomenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_filecopytomenu_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFileCopyToMenu_OnMetaObject((KFileCopyToMenu*)self, (intptr_t)callback);
 }
 

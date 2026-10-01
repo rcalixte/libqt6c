@@ -46,10 +46,10 @@ void q_graphicslayout_get_contents_margins(const void* self, double* left, doubl
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsLayout*
+/// @param self QGraphicsLayout*
 /// @param callback void func(const QGraphicsLayout* self, double* left, double* top, double* right, double* bottom)
 ///
-void q_graphicslayout_on_get_contents_margins(const void* self, void (*callback)(const void*, double*, double*, double*, double*));
+void q_graphicslayout_on_get_contents_margins(void* self, void (*callback)(const void*, double*, double*, double*, double*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#getContentsMargins)
 ///
@@ -158,10 +158,10 @@ int32_t q_graphicslayout_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsLayout*
+/// @param self QGraphicsLayout*
 /// @param callback int32_t func(const QGraphicsLayout* self)
 ///
-void q_graphicslayout_on_count(const void* self, int32_t (*callback)(const void*));
+void q_graphicslayout_on_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#itemAt)
 ///
@@ -176,10 +176,10 @@ QGraphicsLayoutItem* q_graphicslayout_item_at(const void* self, int i);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsLayout*
+/// @param self QGraphicsLayout*
 /// @param callback QGraphicsLayoutItem* func(const QGraphicsLayout* self, int i)
 ///
-void q_graphicslayout_on_item_at(const void* self, QGraphicsLayoutItem* (*callback)(const void*, int));
+void q_graphicslayout_on_item_at(void* self, QGraphicsLayoutItem* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#removeAt)
 ///
@@ -572,10 +572,10 @@ bool q_graphicslayout_super_is_empty(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsLayout*
+/// @param self QGraphicsLayout*
 /// @param callback bool func(QGraphicsLayout* self)
 ///
-void q_graphicslayout_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_graphicslayout_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -597,12 +597,12 @@ QSizeF* q_graphicslayout_size_hint(const void* self, int32_t which, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsLayout*
+/// @param self QGraphicsLayout*
 /// @param callback QSizeF* func(QGraphicsLayout* self, enum Qt__SizeHint which, QSizeF* constraint)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicslayout_on_size_hint(const void* self, QSizeF* (*callback)(const void*, int32_t, const void*));
+void q_graphicslayout_on_size_hint(void* self, QSizeF* (*callback)(const void*, int32_t, const void*));
 
 /// Inherited from QGraphicsLayoutItem
 ///

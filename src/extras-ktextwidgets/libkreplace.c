@@ -24,7 +24,7 @@ const QMetaObject* k_replace_meta_object(const void* self) {
     return KReplace_MetaObject((KReplace*)self);
 }
 
-void k_replace_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_replace_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KReplace_OnMetaObject((KReplace*)self, (intptr_t)callback);
 }
 
@@ -99,7 +99,7 @@ bool k_replace_should_restart(const void* self, bool forceAsking, bool showNumMa
     return KReplace_ShouldRestart((KReplace*)self, forceAsking, showNumMatches);
 }
 
-void k_replace_on_should_restart(const void* self, bool (*callback)(const void*, bool, bool)) {
+void k_replace_on_should_restart(void* self, bool (*callback)(const void*, bool, bool)) {
     KReplace_OnShouldRestart((KReplace*)self, (intptr_t)callback);
 }
 
@@ -111,7 +111,7 @@ void k_replace_display_final_dialog(const void* self) {
     KReplace_DisplayFinalDialog((KReplace*)self);
 }
 
-void k_replace_on_display_final_dialog(const void* self, void (*callback)(const void*)) {
+void k_replace_on_display_final_dialog(void* self, void (*callback)(const void*)) {
     KReplace_OnDisplayFinalDialog((KReplace*)self, (intptr_t)callback);
 }
 

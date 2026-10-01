@@ -42,7 +42,7 @@ const QMetaObject* q_qmlexpression_meta_object(const void* self) {
     return QQmlExpression_MetaObject((QQmlExpression*)self);
 }
 
-void q_qmlexpression_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_qmlexpression_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlExpression_OnMetaObject((QQmlExpression*)self, (intptr_t)callback);
 }
 

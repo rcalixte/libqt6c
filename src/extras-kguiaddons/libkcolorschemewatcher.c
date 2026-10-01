@@ -17,7 +17,7 @@ const QMetaObject* k_colorschemewatcher_meta_object(const void* self) {
     return KColorSchemeWatcher_MetaObject((KColorSchemeWatcher*)self);
 }
 
-void k_colorschemewatcher_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_colorschemewatcher_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KColorSchemeWatcher_OnMetaObject((KColorSchemeWatcher*)self, (intptr_t)callback);
 }
 

@@ -32,10 +32,10 @@ const QMetaObject* q_designerformwindowmanagerinterface_meta_object(const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowManagerInterface*
+/// @param self QDesignerFormWindowManagerInterface*
 /// @param callback const QMetaObject* func(const QDesignerFormWindowManagerInterface* self)
 ///
-void q_designerformwindowmanagerinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_designerformwindowmanagerinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -108,10 +108,10 @@ QAction* q_designerformwindowmanagerinterface_action(const void* self, int32_t a
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowManagerInterface*
+/// @param self QDesignerFormWindowManagerInterface*
 /// @param callback QAction* func(const QDesignerFormWindowManagerInterface* self, enum QDesignerFormWindowManagerInterface__Action action)
 ///
-void q_designerformwindowmanagerinterface_on_action(const void* self, QAction* (*callback)(const void*, int32_t));
+void q_designerformwindowmanagerinterface_on_action(void* self, QAction* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#actionGroup)
 ///
@@ -126,10 +126,10 @@ QActionGroup* q_designerformwindowmanagerinterface_action_group(const void* self
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowManagerInterface*
+/// @param self QDesignerFormWindowManagerInterface*
 /// @param callback QActionGroup* func(const QDesignerFormWindowManagerInterface* self, enum QDesignerFormWindowManagerInterface__ActionGroup actionGroup)
 ///
-void q_designerformwindowmanagerinterface_on_action_group(const void* self, QActionGroup* (*callback)(const void*, int32_t));
+void q_designerformwindowmanagerinterface_on_action_group(void* self, QActionGroup* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#actionCut)
 ///
@@ -251,10 +251,10 @@ QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_active_form_w
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowManagerInterface*
+/// @param self QDesignerFormWindowManagerInterface*
 /// @param callback QDesignerFormWindowInterface* func(const QDesignerFormWindowManagerInterface* self)
 ///
-void q_designerformwindowmanagerinterface_on_active_form_window(const void* self, QDesignerFormWindowInterface* (*callback)(const void*));
+void q_designerformwindowmanagerinterface_on_active_form_window(void* self, QDesignerFormWindowInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#formWindowCount)
 ///
@@ -268,10 +268,10 @@ int32_t q_designerformwindowmanagerinterface_form_window_count(const void* self)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowManagerInterface*
+/// @param self QDesignerFormWindowManagerInterface*
 /// @param callback int32_t func(const QDesignerFormWindowManagerInterface* self)
 ///
-void q_designerformwindowmanagerinterface_on_form_window_count(const void* self, int32_t (*callback)(const void*));
+void q_designerformwindowmanagerinterface_on_form_window_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#formWindow)
 ///
@@ -286,10 +286,10 @@ QDesignerFormWindowInterface* q_designerformwindowmanagerinterface_form_window(c
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowManagerInterface*
+/// @param self QDesignerFormWindowManagerInterface*
 /// @param callback QDesignerFormWindowInterface* func(const QDesignerFormWindowManagerInterface* self, int index)
 ///
-void q_designerformwindowmanagerinterface_on_form_window(const void* self, QDesignerFormWindowInterface* (*callback)(const void*, int));
+void q_designerformwindowmanagerinterface_on_form_window(void* self, QDesignerFormWindowInterface* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#createFormWindow)
 ///
@@ -322,10 +322,10 @@ QDesignerFormEditorInterface* q_designerformwindowmanagerinterface_core(const vo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowManagerInterface*
+/// @param self QDesignerFormWindowManagerInterface*
 /// @param callback QDesignerFormEditorInterface* func(const QDesignerFormWindowManagerInterface* self)
 ///
-void q_designerformwindowmanagerinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*));
+void q_designerformwindowmanagerinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#dragItems)
 ///
@@ -357,12 +357,12 @@ QPixmap* q_designerformwindowmanagerinterface_create_preview_pixmap(const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormWindowManagerInterface*
+/// @param self QDesignerFormWindowManagerInterface*
 /// @param callback QPixmap* func(const QDesignerFormWindowManagerInterface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerformwindowmanagerinterface_on_create_preview_pixmap(const void* self, QPixmap* (*callback)(const void*));
+void q_designerformwindowmanagerinterface_on_create_preview_pixmap(void* self, QPixmap* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformwindowmanagerinterface.html#formWindowAdded)
 ///
@@ -1250,10 +1250,10 @@ QObject* q_designerformwindowmanagerinterface_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerFormWindowManagerInterface*
+/// @param self QDesignerFormWindowManagerInterface*
 /// @param callback QObject* func(QDesignerFormWindowManagerInterface* self)
 ///
-void q_designerformwindowmanagerinterface_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_designerformwindowmanagerinterface_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1281,10 +1281,10 @@ int32_t q_designerformwindowmanagerinterface_super_sender_signal_index(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerFormWindowManagerInterface*
+/// @param self QDesignerFormWindowManagerInterface*
 /// @param callback int32_t func(QDesignerFormWindowManagerInterface* self)
 ///
-void q_designerformwindowmanagerinterface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_designerformwindowmanagerinterface_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1314,10 +1314,10 @@ int32_t q_designerformwindowmanagerinterface_super_receivers(const void* self, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerFormWindowManagerInterface*
+/// @param self QDesignerFormWindowManagerInterface*
 /// @param callback int32_t func(QDesignerFormWindowManagerInterface* self, const char* signal)
 ///
-void q_designerformwindowmanagerinterface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_designerformwindowmanagerinterface_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1347,10 +1347,10 @@ bool q_designerformwindowmanagerinterface_super_is_signal_connected(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerFormWindowManagerInterface*
+/// @param self QDesignerFormWindowManagerInterface*
 /// @param callback bool func(QDesignerFormWindowManagerInterface* self, QMetaMethod* signal)
 ///
-void q_designerformwindowmanagerinterface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_designerformwindowmanagerinterface_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -20,7 +20,7 @@ const QMetaObject* k_configviewstatesaver_meta_object(const void* self) {
     return KConfigViewStateSaver_MetaObject((KConfigViewStateSaver*)self);
 }
 
-void k_configviewstatesaver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_configviewstatesaver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KConfigViewStateSaver_OnMetaObject((KConfigViewStateSaver*)self, (intptr_t)callback);
 }
 
@@ -391,8 +391,8 @@ QModelIndex* k_configviewstatesaver_index_from_config_string(const void* self, c
     return KConfigViewStateSaver_IndexFromConfigString((KConfigViewStateSaver*)self, (QAbstractItemModel*)model, qstring(key));
 }
 
-void k_configviewstatesaver_on_index_from_config_string(const void* self, QModelIndex* (*callback)(const void*, const void*, const char*)) {
-    KConfigViewStateSaver_OnIndexFromConfigString((const KConfigViewStateSaver*)self, (intptr_t)callback);
+void k_configviewstatesaver_on_index_from_config_string(void* self, QModelIndex* (*callback)(const void*, const void*, const char*)) {
+    KConfigViewStateSaver_OnIndexFromConfigString((KConfigViewStateSaver*)self, (intptr_t)callback);
 }
 
 const char* k_configviewstatesaver_index_to_config_string(const void* self, const void* index) {
@@ -402,8 +402,8 @@ const char* k_configviewstatesaver_index_to_config_string(const void* self, cons
     return _ret;
 }
 
-void k_configviewstatesaver_on_index_to_config_string(const void* self, const char* (*callback)(const void*, const void*)) {
-    KConfigViewStateSaver_OnIndexToConfigString((const KConfigViewStateSaver*)self, (intptr_t)callback);
+void k_configviewstatesaver_on_index_to_config_string(void* self, const char* (*callback)(const void*, const void*)) {
+    KConfigViewStateSaver_OnIndexToConfigString((KConfigViewStateSaver*)self, (intptr_t)callback);
 }
 
 bool k_configviewstatesaver_event(void* self, void* event) {

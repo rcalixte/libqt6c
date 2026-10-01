@@ -18,7 +18,7 @@ const QMetaObject* k_sonnet__settings_meta_object(const void* self) {
     return Sonnet__Settings_MetaObject((Sonnet__Settings*)self);
 }
 
-void k_sonnet__settings_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_sonnet__settings_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Sonnet__Settings_OnMetaObject((Sonnet__Settings*)self, (intptr_t)callback);
 }
 

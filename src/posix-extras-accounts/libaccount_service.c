@@ -21,7 +21,7 @@ const QMetaObject* q_accounts__accountservice_meta_object(const void* self) {
     return Accounts__AccountService_MetaObject((Accounts__AccountService*)self);
 }
 
-void q_accounts__accountservice_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_accounts__accountservice_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Accounts__AccountService_OnMetaObject((Accounts__AccountService*)self, (intptr_t)callback);
 }
 

@@ -49,10 +49,10 @@ const QMetaObject* q_videoframeinput_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QVideoFrameInput*
+/// @param self QVideoFrameInput*
 /// @param callback const QMetaObject* func(const QVideoFrameInput* self)
 ///
-void q_videoframeinput_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_videoframeinput_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -869,10 +869,10 @@ QObject* q_videoframeinput_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVideoFrameInput*
+/// @param self QVideoFrameInput*
 /// @param callback QObject* func(QVideoFrameInput* self)
 ///
-void q_videoframeinput_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_videoframeinput_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -900,10 +900,10 @@ int32_t q_videoframeinput_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVideoFrameInput*
+/// @param self QVideoFrameInput*
 /// @param callback int32_t func(QVideoFrameInput* self)
 ///
-void q_videoframeinput_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_videoframeinput_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -933,10 +933,10 @@ int32_t q_videoframeinput_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVideoFrameInput*
+/// @param self QVideoFrameInput*
 /// @param callback int32_t func(QVideoFrameInput* self, const char* signal)
 ///
-void q_videoframeinput_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_videoframeinput_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -966,10 +966,10 @@ bool q_videoframeinput_super_is_signal_connected(const void* self, const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVideoFrameInput*
+/// @param self QVideoFrameInput*
 /// @param callback bool func(QVideoFrameInput* self, QMetaMethod* signal)
 ///
-void q_videoframeinput_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_videoframeinput_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

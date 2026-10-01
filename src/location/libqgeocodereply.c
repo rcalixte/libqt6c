@@ -17,7 +17,7 @@ const QMetaObject* q_geocodereply_meta_object(const void* self) {
     return QGeoCodeReply_MetaObject((QGeoCodeReply*)self);
 }
 
-void q_geocodereply_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_geocodereply_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGeoCodeReply_OnMetaObject((QGeoCodeReply*)self, (intptr_t)callback);
 }
 

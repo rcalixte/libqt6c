@@ -25,11 +25,11 @@ QPdfWriter* q_pdfwriter_new2(void* device) {
     return QPdfWriter_New2((QIODevice*)device);
 }
 
-QPagedPaintDevice* q_pdfwriter_as_q_paged_paint_device(void* self) {
+QPagedPaintDevice* q_pdfwriter_as_q_paged_paint_device(const void* self) {
     return QPdfWriter_AsQPagedPaintDevice((QPdfWriter*)self);
 }
 
-QPdfWriter* q_pdfwriter_from_q_paged_paint_device(void* _qpagedpaintdevice) {
+QPdfWriter* q_pdfwriter_from_q_paged_paint_device(const void* _qpagedpaintdevice) {
     return (QPdfWriter*)QPdfWriter_FromQPagedPaintDevice((QPagedPaintDevice*)_qpagedpaintdevice);
 }
 
@@ -37,7 +37,7 @@ const QMetaObject* q_pdfwriter_meta_object(const void* self) {
     return QPdfWriter_MetaObject((QPdfWriter*)self);
 }
 
-void q_pdfwriter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pdfwriter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPdfWriter_OnMetaObject((QPdfWriter*)self, (intptr_t)callback);
 }
 
@@ -169,7 +169,7 @@ QPaintEngine* q_pdfwriter_paint_engine(const void* self) {
     return QPdfWriter_PaintEngine((QPdfWriter*)self);
 }
 
-void q_pdfwriter_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
+void q_pdfwriter_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
     QPdfWriter_OnPaintEngine((QPdfWriter*)self, (intptr_t)callback);
 }
 
@@ -181,7 +181,7 @@ int32_t q_pdfwriter_metric(const void* self, int32_t id) {
     return QPdfWriter_Metric((QPdfWriter*)self, id);
 }
 
-void q_pdfwriter_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
+void q_pdfwriter_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
     QPdfWriter_OnMetric((QPdfWriter*)self, (intptr_t)callback);
 }
 
@@ -636,8 +636,8 @@ int32_t q_pdfwriter_super_dev_type(const void* self) {
     return QPdfWriter_SuperDevType((QPdfWriter*)self);
 }
 
-void q_pdfwriter_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QPdfWriter_OnDevType((const QPdfWriter*)self, (intptr_t)callback);
+void q_pdfwriter_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QPdfWriter_OnDevType((QPdfWriter*)self, (intptr_t)callback);
 }
 
 void q_pdfwriter_init_painter(const void* self, void* painter) {
@@ -648,8 +648,8 @@ void q_pdfwriter_super_init_painter(const void* self, void* painter) {
     QPdfWriter_SuperInitPainter((QPdfWriter*)self, (QPainter*)painter);
 }
 
-void q_pdfwriter_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QPdfWriter_OnInitPainter((const QPdfWriter*)self, (intptr_t)callback);
+void q_pdfwriter_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QPdfWriter_OnInitPainter((QPdfWriter*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_pdfwriter_redirected(const void* self, void* offset) {
@@ -660,8 +660,8 @@ QPaintDevice* q_pdfwriter_super_redirected(const void* self, void* offset) {
     return QPdfWriter_SuperRedirected((QPdfWriter*)self, (QPoint*)offset);
 }
 
-void q_pdfwriter_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QPdfWriter_OnRedirected((const QPdfWriter*)self, (intptr_t)callback);
+void q_pdfwriter_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QPdfWriter_OnRedirected((QPdfWriter*)self, (intptr_t)callback);
 }
 
 QPainter* q_pdfwriter_shared_painter(const void* self) {
@@ -672,8 +672,8 @@ QPainter* q_pdfwriter_super_shared_painter(const void* self) {
     return QPdfWriter_SuperSharedPainter((QPdfWriter*)self);
 }
 
-void q_pdfwriter_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QPdfWriter_OnSharedPainter((const QPdfWriter*)self, (intptr_t)callback);
+void q_pdfwriter_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QPdfWriter_OnSharedPainter((QPdfWriter*)self, (intptr_t)callback);
 }
 
 QObject* q_pdfwriter_sender(const void* self) {

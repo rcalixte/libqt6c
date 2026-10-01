@@ -35,7 +35,7 @@ const QMetaObject* q_scrollbar_meta_object(const void* self) {
     return QScrollBar_MetaObject((QScrollBar*)self);
 }
 
-void q_scrollbar_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_scrollbar_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QScrollBar_OnMetaObject((QScrollBar*)self, (intptr_t)callback);
 }
 
@@ -78,7 +78,7 @@ QSize* q_scrollbar_size_hint(const void* self) {
     return QScrollBar_SizeHint((QScrollBar*)self);
 }
 
-void q_scrollbar_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_scrollbar_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QScrollBar_OnSizeHint((QScrollBar*)self, (intptr_t)callback);
 }
 
@@ -198,7 +198,7 @@ void q_scrollbar_init_style_option(const void* self, void* option) {
     QScrollBar_InitStyleOption((QScrollBar*)self, (QStyleOptionSlider*)option);
 }
 
-void q_scrollbar_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_scrollbar_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QScrollBar_OnInitStyleOption((QScrollBar*)self, (intptr_t)callback);
 }
 
@@ -364,11 +364,11 @@ void q_scrollbar_on_action_triggered(void* self, void (*callback)(void*, int)) {
     QAbstractSlider_Connect_ActionTriggered((QAbstractSlider*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_scrollbar_as_q_paint_device(void* self) {
+QPaintDevice* q_scrollbar_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QScrollBar* q_scrollbar_from_q_paint_device(void* _qpaintdevice) {
+QScrollBar* q_scrollbar_from_q_paint_device(const void* _qpaintdevice) {
     return (QScrollBar*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1795,8 +1795,8 @@ int32_t q_scrollbar_super_dev_type(const void* self) {
     return QScrollBar_SuperDevType((QScrollBar*)self);
 }
 
-void q_scrollbar_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QScrollBar_OnDevType((const QScrollBar*)self, (intptr_t)callback);
+void q_scrollbar_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QScrollBar_OnDevType((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_set_visible(void* self, bool visible) {
@@ -1819,8 +1819,8 @@ QSize* q_scrollbar_super_minimum_size_hint(const void* self) {
     return QScrollBar_SuperMinimumSizeHint((QScrollBar*)self);
 }
 
-void q_scrollbar_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QScrollBar_OnMinimumSizeHint((const QScrollBar*)self, (intptr_t)callback);
+void q_scrollbar_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QScrollBar_OnMinimumSizeHint((QScrollBar*)self, (intptr_t)callback);
 }
 
 int32_t q_scrollbar_height_for_width(const void* self, int param1) {
@@ -1831,8 +1831,8 @@ int32_t q_scrollbar_super_height_for_width(const void* self, int param1) {
     return QScrollBar_SuperHeightForWidth((QScrollBar*)self, param1);
 }
 
-void q_scrollbar_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QScrollBar_OnHeightForWidth((const QScrollBar*)self, (intptr_t)callback);
+void q_scrollbar_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QScrollBar_OnHeightForWidth((QScrollBar*)self, (intptr_t)callback);
 }
 
 bool q_scrollbar_has_height_for_width(const void* self) {
@@ -1843,8 +1843,8 @@ bool q_scrollbar_super_has_height_for_width(const void* self) {
     return QScrollBar_SuperHasHeightForWidth((QScrollBar*)self);
 }
 
-void q_scrollbar_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QScrollBar_OnHasHeightForWidth((const QScrollBar*)self, (intptr_t)callback);
+void q_scrollbar_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QScrollBar_OnHasHeightForWidth((QScrollBar*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_scrollbar_paint_engine(const void* self) {
@@ -1855,8 +1855,8 @@ QPaintEngine* q_scrollbar_super_paint_engine(const void* self) {
     return QScrollBar_SuperPaintEngine((QScrollBar*)self);
 }
 
-void q_scrollbar_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QScrollBar_OnPaintEngine((const QScrollBar*)self, (intptr_t)callback);
+void q_scrollbar_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QScrollBar_OnPaintEngine((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_mouse_double_click_event(void* self, void* event) {
@@ -2071,8 +2071,8 @@ int32_t q_scrollbar_super_metric(const void* self, int32_t param1) {
     return QScrollBar_SuperMetric((QScrollBar*)self, param1);
 }
 
-void q_scrollbar_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QScrollBar_OnMetric((const QScrollBar*)self, (intptr_t)callback);
+void q_scrollbar_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QScrollBar_OnMetric((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_init_painter(const void* self, void* painter) {
@@ -2083,8 +2083,8 @@ void q_scrollbar_super_init_painter(const void* self, void* painter) {
     QScrollBar_SuperInitPainter((QScrollBar*)self, (QPainter*)painter);
 }
 
-void q_scrollbar_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QScrollBar_OnInitPainter((const QScrollBar*)self, (intptr_t)callback);
+void q_scrollbar_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QScrollBar_OnInitPainter((QScrollBar*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_scrollbar_redirected(const void* self, void* offset) {
@@ -2095,8 +2095,8 @@ QPaintDevice* q_scrollbar_super_redirected(const void* self, void* offset) {
     return QScrollBar_SuperRedirected((QScrollBar*)self, (QPoint*)offset);
 }
 
-void q_scrollbar_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QScrollBar_OnRedirected((const QScrollBar*)self, (intptr_t)callback);
+void q_scrollbar_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QScrollBar_OnRedirected((QScrollBar*)self, (intptr_t)callback);
 }
 
 QPainter* q_scrollbar_shared_painter(const void* self) {
@@ -2107,8 +2107,8 @@ QPainter* q_scrollbar_super_shared_painter(const void* self) {
     return QScrollBar_SuperSharedPainter((QScrollBar*)self);
 }
 
-void q_scrollbar_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QScrollBar_OnSharedPainter((const QScrollBar*)self, (intptr_t)callback);
+void q_scrollbar_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QScrollBar_OnSharedPainter((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_input_method_event(void* self, void* param1) {
@@ -2131,8 +2131,8 @@ QVariant* q_scrollbar_super_input_method_query(const void* self, int32_t param1)
     return QScrollBar_SuperInputMethodQuery((QScrollBar*)self, param1);
 }
 
-void q_scrollbar_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QScrollBar_OnInputMethodQuery((const QScrollBar*)self, (intptr_t)callback);
+void q_scrollbar_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QScrollBar_OnInputMethodQuery((QScrollBar*)self, (intptr_t)callback);
 }
 
 bool q_scrollbar_focus_next_prev_child(void* self, bool next) {

@@ -671,7 +671,7 @@ const QMetaObject* q_poppler__asyncobject_meta_object(const void* self) {
     return Poppler__AsyncObject_MetaObject((Poppler__AsyncObject*)self);
 }
 
-void q_poppler__asyncobject_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_poppler__asyncobject_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Poppler__AsyncObject_OnMetaObject((Poppler__AsyncObject*)self, (intptr_t)callback);
 }
 

@@ -34,7 +34,7 @@ const QMetaObject* k_pixmapsequencewidget_meta_object(const void* self) {
     return KPixmapSequenceWidget_MetaObject((KPixmapSequenceWidget*)self);
 }
 
-void k_pixmapsequencewidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_pixmapsequencewidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPixmapSequenceWidget_OnMetaObject((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
@@ -85,7 +85,7 @@ QSize* k_pixmapsequencewidget_size_hint(const void* self) {
     return KPixmapSequenceWidget_SizeHint((KPixmapSequenceWidget*)self);
 }
 
-void k_pixmapsequencewidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_pixmapsequencewidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KPixmapSequenceWidget_OnSizeHint((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
@@ -115,11 +115,11 @@ const char* k_pixmapsequencewidget_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_pixmapsequencewidget_as_q_paint_device(void* self) {
+QPaintDevice* k_pixmapsequencewidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KPixmapSequenceWidget* k_pixmapsequencewidget_from_q_paint_device(void* _qpaintdevice) {
+KPixmapSequenceWidget* k_pixmapsequencewidget_from_q_paint_device(const void* _qpaintdevice) {
     return (KPixmapSequenceWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1510,8 +1510,8 @@ int32_t k_pixmapsequencewidget_super_dev_type(const void* self) {
     return KPixmapSequenceWidget_SuperDevType((KPixmapSequenceWidget*)self);
 }
 
-void k_pixmapsequencewidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KPixmapSequenceWidget_OnDevType((const KPixmapSequenceWidget*)self, (intptr_t)callback);
+void k_pixmapsequencewidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KPixmapSequenceWidget_OnDevType((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
 void k_pixmapsequencewidget_set_visible(void* self, bool visible) {
@@ -1534,8 +1534,8 @@ QSize* k_pixmapsequencewidget_super_minimum_size_hint(const void* self) {
     return KPixmapSequenceWidget_SuperMinimumSizeHint((KPixmapSequenceWidget*)self);
 }
 
-void k_pixmapsequencewidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPixmapSequenceWidget_OnMinimumSizeHint((const KPixmapSequenceWidget*)self, (intptr_t)callback);
+void k_pixmapsequencewidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPixmapSequenceWidget_OnMinimumSizeHint((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
 int32_t k_pixmapsequencewidget_height_for_width(const void* self, int param1) {
@@ -1546,8 +1546,8 @@ int32_t k_pixmapsequencewidget_super_height_for_width(const void* self, int para
     return KPixmapSequenceWidget_SuperHeightForWidth((KPixmapSequenceWidget*)self, param1);
 }
 
-void k_pixmapsequencewidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KPixmapSequenceWidget_OnHeightForWidth((const KPixmapSequenceWidget*)self, (intptr_t)callback);
+void k_pixmapsequencewidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KPixmapSequenceWidget_OnHeightForWidth((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
 bool k_pixmapsequencewidget_has_height_for_width(const void* self) {
@@ -1558,8 +1558,8 @@ bool k_pixmapsequencewidget_super_has_height_for_width(const void* self) {
     return KPixmapSequenceWidget_SuperHasHeightForWidth((KPixmapSequenceWidget*)self);
 }
 
-void k_pixmapsequencewidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KPixmapSequenceWidget_OnHasHeightForWidth((const KPixmapSequenceWidget*)self, (intptr_t)callback);
+void k_pixmapsequencewidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KPixmapSequenceWidget_OnHasHeightForWidth((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_pixmapsequencewidget_paint_engine(const void* self) {
@@ -1570,8 +1570,8 @@ QPaintEngine* k_pixmapsequencewidget_super_paint_engine(const void* self) {
     return KPixmapSequenceWidget_SuperPaintEngine((KPixmapSequenceWidget*)self);
 }
 
-void k_pixmapsequencewidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KPixmapSequenceWidget_OnPaintEngine((const KPixmapSequenceWidget*)self, (intptr_t)callback);
+void k_pixmapsequencewidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KPixmapSequenceWidget_OnPaintEngine((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
 bool k_pixmapsequencewidget_event(void* self, void* event) {
@@ -1906,8 +1906,8 @@ int32_t k_pixmapsequencewidget_super_metric(const void* self, int32_t param1) {
     return KPixmapSequenceWidget_SuperMetric((KPixmapSequenceWidget*)self, param1);
 }
 
-void k_pixmapsequencewidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KPixmapSequenceWidget_OnMetric((const KPixmapSequenceWidget*)self, (intptr_t)callback);
+void k_pixmapsequencewidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KPixmapSequenceWidget_OnMetric((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
 void k_pixmapsequencewidget_init_painter(const void* self, void* painter) {
@@ -1918,8 +1918,8 @@ void k_pixmapsequencewidget_super_init_painter(const void* self, void* painter) 
     KPixmapSequenceWidget_SuperInitPainter((KPixmapSequenceWidget*)self, (QPainter*)painter);
 }
 
-void k_pixmapsequencewidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KPixmapSequenceWidget_OnInitPainter((const KPixmapSequenceWidget*)self, (intptr_t)callback);
+void k_pixmapsequencewidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KPixmapSequenceWidget_OnInitPainter((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_pixmapsequencewidget_redirected(const void* self, void* offset) {
@@ -1930,8 +1930,8 @@ QPaintDevice* k_pixmapsequencewidget_super_redirected(const void* self, void* of
     return KPixmapSequenceWidget_SuperRedirected((KPixmapSequenceWidget*)self, (QPoint*)offset);
 }
 
-void k_pixmapsequencewidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KPixmapSequenceWidget_OnRedirected((const KPixmapSequenceWidget*)self, (intptr_t)callback);
+void k_pixmapsequencewidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KPixmapSequenceWidget_OnRedirected((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
 QPainter* k_pixmapsequencewidget_shared_painter(const void* self) {
@@ -1942,8 +1942,8 @@ QPainter* k_pixmapsequencewidget_super_shared_painter(const void* self) {
     return KPixmapSequenceWidget_SuperSharedPainter((KPixmapSequenceWidget*)self);
 }
 
-void k_pixmapsequencewidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KPixmapSequenceWidget_OnSharedPainter((const KPixmapSequenceWidget*)self, (intptr_t)callback);
+void k_pixmapsequencewidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KPixmapSequenceWidget_OnSharedPainter((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
 void k_pixmapsequencewidget_input_method_event(void* self, void* param1) {
@@ -1966,8 +1966,8 @@ QVariant* k_pixmapsequencewidget_super_input_method_query(const void* self, int3
     return KPixmapSequenceWidget_SuperInputMethodQuery((KPixmapSequenceWidget*)self, param1);
 }
 
-void k_pixmapsequencewidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KPixmapSequenceWidget_OnInputMethodQuery((const KPixmapSequenceWidget*)self, (intptr_t)callback);
+void k_pixmapsequencewidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KPixmapSequenceWidget_OnInputMethodQuery((KPixmapSequenceWidget*)self, (intptr_t)callback);
 }
 
 bool k_pixmapsequencewidget_focus_next_prev_child(void* self, bool next) {

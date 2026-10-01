@@ -16,7 +16,7 @@ const QMetaObject* k_io__deleteortrashjob_meta_object(const void* self) {
     return KIO__DeleteOrTrashJob_MetaObject((KIO__DeleteOrTrashJob*)self);
 }
 
-void k_io__deleteortrashjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__deleteortrashjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__DeleteOrTrashJob_OnMetaObject((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
@@ -511,8 +511,8 @@ const char* k_io__deleteortrashjob_super_error_string(const void* self) {
     return _ret;
 }
 
-void k_io__deleteortrashjob_on_error_string(const void* self, const char* (*callback)(const void*)) {
-    KIO__DeleteOrTrashJob_OnErrorString((const KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
+void k_io__deleteortrashjob_on_error_string(void* self, const char* (*callback)(const void*)) {
+    KIO__DeleteOrTrashJob_OnErrorString((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
 bool k_io__deleteortrashjob_event(void* self, void* event) {

@@ -32,10 +32,10 @@ const QMetaObject* k_shortcutwidget_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback const QMetaObject* func(const KShortcutWidget* self)
 ///
-void k_shortcutwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_shortcutwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -186,9 +186,9 @@ const char* k_shortcutwidget_tr3(const char* s, const char* c, int n);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self KShortcutWidget*
+/// @param self const KShortcutWidget*
 ///
-QPaintDevice* k_shortcutwidget_as_q_paint_device(void* self);
+QPaintDevice* k_shortcutwidget_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -196,7 +196,7 @@ QPaintDevice* k_shortcutwidget_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-KShortcutWidget* k_shortcutwidget_from_q_paint_device(void* _qpaintdevice);
+KShortcutWidget* k_shortcutwidget_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3181,10 +3181,10 @@ int32_t k_shortcutwidget_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback int32_t func(KShortcutWidget* self)
 ///
-void k_shortcutwidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_shortcutwidget_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3245,12 +3245,12 @@ QSize* k_shortcutwidget_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback QSize* func(KShortcutWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_shortcutwidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_shortcutwidget_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3278,12 +3278,12 @@ QSize* k_shortcutwidget_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback QSize* func(KShortcutWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_shortcutwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_shortcutwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3313,10 +3313,10 @@ int32_t k_shortcutwidget_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback int32_t func(KShortcutWidget* self, int param1)
 ///
-void k_shortcutwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_shortcutwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3344,10 +3344,10 @@ bool k_shortcutwidget_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback bool func(KShortcutWidget* self)
 ///
-void k_shortcutwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_shortcutwidget_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3375,10 +3375,10 @@ QPaintEngine* k_shortcutwidget_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback QPaintEngine* func(KShortcutWidget* self)
 ///
-void k_shortcutwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_shortcutwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4303,10 +4303,10 @@ int32_t k_shortcutwidget_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback int32_t func(KShortcutWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_shortcutwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_shortcutwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4336,10 +4336,10 @@ void k_shortcutwidget_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback void func(KShortcutWidget* self, QPainter* painter)
 ///
-void k_shortcutwidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_shortcutwidget_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4369,10 +4369,10 @@ QPaintDevice* k_shortcutwidget_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback QPaintDevice* func(KShortcutWidget* self, QPoint* offset)
 ///
-void k_shortcutwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_shortcutwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4400,10 +4400,10 @@ QPainter* k_shortcutwidget_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback QPainter* func(KShortcutWidget* self)
 ///
-void k_shortcutwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_shortcutwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4466,12 +4466,12 @@ QVariant* k_shortcutwidget_super_input_method_query(const void* self, int32_t pa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback QVariant* func(KShortcutWidget* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_shortcutwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_shortcutwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4887,10 +4887,10 @@ QObject* k_shortcutwidget_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback QObject* func(KShortcutWidget* self)
 ///
-void k_shortcutwidget_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_shortcutwidget_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4918,10 +4918,10 @@ int32_t k_shortcutwidget_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback int32_t func(KShortcutWidget* self)
 ///
-void k_shortcutwidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_shortcutwidget_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4951,10 +4951,10 @@ int32_t k_shortcutwidget_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback int32_t func(KShortcutWidget* self, const char* signal)
 ///
-void k_shortcutwidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_shortcutwidget_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4984,10 +4984,10 @@ bool k_shortcutwidget_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback bool func(KShortcutWidget* self, QMetaMethod* signal)
 ///
-void k_shortcutwidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_shortcutwidget_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5019,10 +5019,10 @@ double k_shortcutwidget_super_get_decoded_metric_f(const void* self, int32_t met
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KShortcutWidget*
+/// @param self KShortcutWidget*
 /// @param callback double func(KShortcutWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_shortcutwidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_shortcutwidget_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

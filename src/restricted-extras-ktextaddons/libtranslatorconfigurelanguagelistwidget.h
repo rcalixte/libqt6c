@@ -35,10 +35,10 @@ const QMetaObject* k_texttranslator__translatorconfigurelanguagelistwidget_meta_
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback const QMetaObject* func(const TextTranslator__TranslatorConfigureLanguageListWidget* self)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorConfigureLanguageListWidget.html)
 ///
@@ -150,9 +150,9 @@ const char* k_texttranslator__translatorconfigurelanguagelistwidget_tr3(const ch
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
 ///
-QPaintDevice* k_texttranslator__translatorconfigurelanguagelistwidget_as_q_paint_device(void* self);
+QPaintDevice* k_texttranslator__translatorconfigurelanguagelistwidget_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -160,7 +160,7 @@ QPaintDevice* k_texttranslator__translatorconfigurelanguagelistwidget_as_q_paint
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-TextTranslator__TranslatorConfigureLanguageListWidget* k_texttranslator__translatorconfigurelanguagelistwidget_from_q_paint_device(void* _qpaintdevice);
+TextTranslator__TranslatorConfigureLanguageListWidget* k_texttranslator__translatorconfigurelanguagelistwidget_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3145,10 +3145,10 @@ int32_t k_texttranslator__translatorconfigurelanguagelistwidget_super_dev_type(c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback int32_t func(TextTranslator__TranslatorConfigureLanguageListWidget* self)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3209,12 +3209,12 @@ QSize* k_texttranslator__translatorconfigurelanguagelistwidget_super_size_hint(c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback QSize* func(TextTranslator__TranslatorConfigureLanguageListWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3242,12 +3242,12 @@ QSize* k_texttranslator__translatorconfigurelanguagelistwidget_super_minimum_siz
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback QSize* func(TextTranslator__TranslatorConfigureLanguageListWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3277,10 +3277,10 @@ int32_t k_texttranslator__translatorconfigurelanguagelistwidget_super_height_for
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback int32_t func(TextTranslator__TranslatorConfigureLanguageListWidget* self, int param1)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3308,10 +3308,10 @@ bool k_texttranslator__translatorconfigurelanguagelistwidget_super_has_height_fo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback bool func(TextTranslator__TranslatorConfigureLanguageListWidget* self)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3339,10 +3339,10 @@ QPaintEngine* k_texttranslator__translatorconfigurelanguagelistwidget_super_pain
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback QPaintEngine* func(TextTranslator__TranslatorConfigureLanguageListWidget* self)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4267,10 +4267,10 @@ int32_t k_texttranslator__translatorconfigurelanguagelistwidget_super_metric(con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback int32_t func(TextTranslator__TranslatorConfigureLanguageListWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4300,10 +4300,10 @@ void k_texttranslator__translatorconfigurelanguagelistwidget_super_init_painter(
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback void func(TextTranslator__TranslatorConfigureLanguageListWidget* self, QPainter* painter)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4333,10 +4333,10 @@ QPaintDevice* k_texttranslator__translatorconfigurelanguagelistwidget_super_redi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback QPaintDevice* func(TextTranslator__TranslatorConfigureLanguageListWidget* self, QPoint* offset)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4364,10 +4364,10 @@ QPainter* k_texttranslator__translatorconfigurelanguagelistwidget_super_shared_p
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback QPainter* func(TextTranslator__TranslatorConfigureLanguageListWidget* self)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4430,12 +4430,12 @@ QVariant* k_texttranslator__translatorconfigurelanguagelistwidget_super_input_me
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback QVariant* func(TextTranslator__TranslatorConfigureLanguageListWidget* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4851,10 +4851,10 @@ QObject* k_texttranslator__translatorconfigurelanguagelistwidget_super_sender(co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback QObject* func(TextTranslator__TranslatorConfigureLanguageListWidget* self)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4882,10 +4882,10 @@ int32_t k_texttranslator__translatorconfigurelanguagelistwidget_super_sender_sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback int32_t func(TextTranslator__TranslatorConfigureLanguageListWidget* self)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4915,10 +4915,10 @@ int32_t k_texttranslator__translatorconfigurelanguagelistwidget_super_receivers(
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback int32_t func(TextTranslator__TranslatorConfigureLanguageListWidget* self, const char* signal)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4948,10 +4948,10 @@ bool k_texttranslator__translatorconfigurelanguagelistwidget_super_is_signal_con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback bool func(TextTranslator__TranslatorConfigureLanguageListWidget* self, QMetaMethod* signal)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4983,10 +4983,10 @@ double k_texttranslator__translatorconfigurelanguagelistwidget_super_get_decoded
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorConfigureLanguageListWidget*
+/// @param self TextTranslator__TranslatorConfigureLanguageListWidget*
 /// @param callback double func(TextTranslator__TranslatorConfigureLanguageListWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_texttranslator__translatorconfigurelanguagelistwidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_texttranslator__translatorconfigurelanguagelistwidget_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

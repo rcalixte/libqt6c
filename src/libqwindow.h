@@ -32,15 +32,15 @@ QWindow* q_window_new3(void* screen);
 
 /// Upcasts to a QSurface object
 ///
-/// @param self QWindow*
+/// @param self const QWindow*
 ///
-QSurface* q_window_as_q_surface(void* self);
+QSurface* q_window_as_q_surface(const void* self);
 
 /// Downcasts to a QWindow object
 ///
 /// @param _qsurface QSurface*
 ///
-QWindow* q_window_from_q_surface(void* _qsurface);
+QWindow* q_window_from_q_surface(const void* _qsurface);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -52,10 +52,10 @@ const QMetaObject* q_window_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWindow*
+/// @param self QWindow*
 /// @param callback const QMetaObject* func(const QWindow* self)
 ///
-void q_window_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_window_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -134,10 +134,10 @@ int32_t q_window_surface_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWindow*
+/// @param self QWindow*
 /// @param callback int32_t func(const QWindow* self)
 ///
-void q_window_on_surface_type(const void* self, int32_t (*callback)(const void*));
+void q_window_on_surface_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
 ///
@@ -239,12 +239,12 @@ QSurfaceFormat* q_window_format(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWindow*
+/// @param self QWindow*
 /// @param callback QSurfaceFormat* func(const QWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_window_on_format(const void* self, QSurfaceFormat* (*callback)(const void*));
+void q_window_on_format(void* self, QSurfaceFormat* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#format)
 ///
@@ -548,12 +548,12 @@ QSize* q_window_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWindow*
+/// @param self QWindow*
 /// @param callback QSize* func(const QWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_window_on_size(const void* self, QSize* (*callback)(const void*));
+void q_window_on_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#size)
 ///
@@ -670,10 +670,10 @@ QAccessibleInterface* q_window_accessible_root(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWindow*
+/// @param self QWindow*
 /// @param callback QAccessibleInterface* func(const QWindow* self)
 ///
-void q_window_on_accessible_root(const void* self, QAccessibleInterface* (*callback)(const void*));
+void q_window_on_accessible_root(void* self, QAccessibleInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#accessibleRoot)
 ///
@@ -693,10 +693,10 @@ QObject* q_window_focus_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWindow*
+/// @param self QWindow*
 /// @param callback QObject* func(const QWindow* self)
 ///
-void q_window_on_focus_object(const void* self, QObject* (*callback)(const void*));
+void q_window_on_focus_object(void* self, QObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#focusObject)
 ///
@@ -2434,10 +2434,10 @@ QObject* q_window_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWindow*
+/// @param self QWindow*
 /// @param callback QObject* func(QWindow* self)
 ///
-void q_window_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_window_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2465,10 +2465,10 @@ int32_t q_window_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWindow*
+/// @param self QWindow*
 /// @param callback int32_t func(QWindow* self)
 ///
-void q_window_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_window_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2498,10 +2498,10 @@ int32_t q_window_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWindow*
+/// @param self QWindow*
 /// @param callback int32_t func(QWindow* self, const char* signal)
 ///
-void q_window_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_window_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2531,10 +2531,10 @@ bool q_window_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWindow*
+/// @param self QWindow*
 /// @param callback bool func(QWindow* self, QMetaMethod* signal)
 ///
-void q_window_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_window_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

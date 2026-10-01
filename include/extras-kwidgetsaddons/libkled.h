@@ -72,10 +72,10 @@ const QMetaObject* k_led_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback const QMetaObject* func(const KLed* self)
 ///
-void k_led_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_led_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -216,12 +216,12 @@ QSize* k_led_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback QSize* func(const KLed* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_led_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_led_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kled.html#sizeHint)
 ///
@@ -241,12 +241,12 @@ QSize* k_led_minimum_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback QSize* func(const KLed* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_led_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_led_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kled.html#minimumSizeHint)
 ///
@@ -347,9 +347,9 @@ const char* k_led_tr3(const char* s, const char* c, int n);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self KLed*
+/// @param self const KLed*
 ///
-QPaintDevice* k_led_as_q_paint_device(void* self);
+QPaintDevice* k_led_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -357,7 +357,7 @@ QPaintDevice* k_led_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-KLed* k_led_from_q_paint_device(void* _qpaintdevice);
+KLed* k_led_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3342,10 +3342,10 @@ int32_t k_led_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback int32_t func(KLed* self)
 ///
-void k_led_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_led_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3408,10 +3408,10 @@ int32_t k_led_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback int32_t func(KLed* self, int param1)
 ///
-void k_led_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_led_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3439,10 +3439,10 @@ bool k_led_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback bool func(KLed* self)
 ///
-void k_led_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_led_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3470,10 +3470,10 @@ QPaintEngine* k_led_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback QPaintEngine* func(KLed* self)
 ///
-void k_led_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_led_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4332,10 +4332,10 @@ int32_t k_led_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback int32_t func(KLed* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_led_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_led_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4365,10 +4365,10 @@ void k_led_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback void func(KLed* self, QPainter* painter)
 ///
-void k_led_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_led_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4398,10 +4398,10 @@ QPaintDevice* k_led_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback QPaintDevice* func(KLed* self, QPoint* offset)
 ///
-void k_led_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_led_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4429,10 +4429,10 @@ QPainter* k_led_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback QPainter* func(KLed* self)
 ///
-void k_led_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_led_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4495,12 +4495,12 @@ QVariant* k_led_super_input_method_query(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback QVariant* func(KLed* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_led_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_led_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4916,10 +4916,10 @@ QObject* k_led_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback QObject* func(KLed* self)
 ///
-void k_led_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_led_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4947,10 +4947,10 @@ int32_t k_led_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback int32_t func(KLed* self)
 ///
-void k_led_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_led_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4980,10 +4980,10 @@ int32_t k_led_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback int32_t func(KLed* self, const char* signal)
 ///
-void k_led_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_led_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5013,10 +5013,10 @@ bool k_led_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback bool func(KLed* self, QMetaMethod* signal)
 ///
-void k_led_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_led_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5048,10 +5048,10 @@ double k_led_super_get_decoded_metric_f(const void* self, int32_t metricA, int32
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLed*
+/// @param self KLed*
 /// @param callback double func(KLed* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_led_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_led_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

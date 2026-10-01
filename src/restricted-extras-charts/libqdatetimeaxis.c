@@ -19,7 +19,7 @@ const QMetaObject* q_datetimeaxis_meta_object(const void* self) {
     return QDateTimeAxis_MetaObject((QDateTimeAxis*)self);
 }
 
-void q_datetimeaxis_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_datetimeaxis_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDateTimeAxis_OnMetaObject((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ int32_t q_datetimeaxis_type(const void* self) {
     return QDateTimeAxis_Type((QDateTimeAxis*)self);
 }
 
-void q_datetimeaxis_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_datetimeaxis_on_type(void* self, int32_t (*callback)(const void*)) {
     QDateTimeAxis_OnType((QDateTimeAxis*)self, (intptr_t)callback);
 }
 

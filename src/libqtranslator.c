@@ -18,7 +18,7 @@ const QMetaObject* q_translator_meta_object(const void* self) {
     return QTranslator_MetaObject((QTranslator*)self);
 }
 
-void q_translator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_translator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTranslator_OnMetaObject((QTranslator*)self, (intptr_t)callback);
 }
 
@@ -64,7 +64,7 @@ const char* q_translator_translate(const void* self, const char* context, const 
     return _ret;
 }
 
-void q_translator_on_translate(const void* self, const char* (*callback)(const void*, const char*, const char*, const char*, int)) {
+void q_translator_on_translate(void* self, const char* (*callback)(const void*, const char*, const char*, const char*, int)) {
     QTranslator_OnTranslate((QTranslator*)self, (intptr_t)callback);
 }
 
@@ -79,7 +79,7 @@ bool q_translator_is_empty(const void* self) {
     return QTranslator_IsEmpty((QTranslator*)self);
 }
 
-void q_translator_on_is_empty(const void* self, bool (*callback)(const void*)) {
+void q_translator_on_is_empty(void* self, bool (*callback)(const void*)) {
     QTranslator_OnIsEmpty((QTranslator*)self, (intptr_t)callback);
 }
 

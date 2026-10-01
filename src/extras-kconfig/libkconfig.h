@@ -148,10 +148,10 @@ int32_t k_config_access_mode(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfig*
+/// @param self KConfig*
 /// @param callback int32_t func(const KConfig* self)
 ///
-void k_config_on_access_mode(const void* self, int32_t (*callback)(const void*));
+void k_config_on_access_mode(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#accessMode)
 ///
@@ -244,10 +244,10 @@ bool k_config_is_immutable(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfig*
+/// @param self KConfig*
 /// @param callback bool func(const KConfig* self)
 ///
-void k_config_on_is_immutable(const void* self, bool (*callback)(const void*));
+void k_config_on_is_immutable(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#isImmutable)
 ///
@@ -269,10 +269,10 @@ const char** k_config_group_list(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfig*
+/// @param self KConfig*
 /// @param callback const char** func(const KConfig* self)
 ///
-void k_config_on_group_list(const void* self, const char** (*callback)(const void*));
+void k_config_on_group_list(void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#groupList)
 ///
@@ -325,10 +325,10 @@ bool k_config_has_group_impl(const void* self, const char* groupName);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfig*
+/// @param self KConfig*
 /// @param callback bool func(const KConfig* self, const char* groupName)
 ///
-void k_config_on_has_group_impl(const void* self, bool (*callback)(const void*, const char*));
+void k_config_on_has_group_impl(void* self, bool (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#hasGroupImpl)
 ///
@@ -377,10 +377,10 @@ bool k_config_is_group_immutable_impl(const void* self, const char* groupName);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfig*
+/// @param self KConfig*
 /// @param callback bool func(const KConfig* self, const char* groupName)
 ///
-void k_config_on_is_group_immutable_impl(const void* self, bool (*callback)(const void*, const char*));
+void k_config_on_is_group_immutable_impl(void* self, bool (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#isGroupImmutableImpl)
 ///

@@ -33,7 +33,7 @@ const QMetaObject* k_colorpicker__kcolorpicker_meta_object(const void* self) {
     return kColorPicker__KColorPicker_MetaObject((kColorPicker__KColorPicker*)self);
 }
 
-void k_colorpicker__kcolorpicker_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_colorpicker__kcolorpicker_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     kColorPicker__KColorPicker_OnMetaObject((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
@@ -96,8 +96,8 @@ void k_colorpicker__kcolorpicker_color_changed(const void* self, const void* col
     kColorPicker__KColorPicker_ColorChanged((kColorPicker__KColorPicker*)self, (QColor*)color);
 }
 
-void k_colorpicker__kcolorpicker_on_color_changed(const void* self, void (*callback)(const void*, const void*)) {
-    kColorPicker__KColorPicker_Connect_ColorChanged((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_color_changed(void* self, void (*callback)(const void*, const void*)) {
+    kColorPicker__KColorPicker_Connect_ColorChanged((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 const char* k_colorpicker__kcolorpicker_tr2(const char* s, const char* c) {
@@ -325,11 +325,11 @@ void k_colorpicker__kcolorpicker_on_clicked1(void* self, void (*callback)(void*,
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_colorpicker__kcolorpicker_as_q_paint_device(void* self) {
+QPaintDevice* k_colorpicker__kcolorpicker_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-kColorPicker__KColorPicker* k_colorpicker__kcolorpicker_from_q_paint_device(void* _qpaintdevice) {
+kColorPicker__KColorPicker* k_colorpicker__kcolorpicker_from_q_paint_device(const void* _qpaintdevice) {
     return (kColorPicker__KColorPicker*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1712,8 +1712,8 @@ QSize* k_colorpicker__kcolorpicker_super_size_hint(const void* self) {
     return kColorPicker__KColorPicker_SuperSizeHint((kColorPicker__KColorPicker*)self);
 }
 
-void k_colorpicker__kcolorpicker_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    kColorPicker__KColorPicker_OnSizeHint((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    kColorPicker__KColorPicker_OnSizeHint((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 QSize* k_colorpicker__kcolorpicker_minimum_size_hint(const void* self) {
@@ -1724,8 +1724,8 @@ QSize* k_colorpicker__kcolorpicker_super_minimum_size_hint(const void* self) {
     return kColorPicker__KColorPicker_SuperMinimumSizeHint((kColorPicker__KColorPicker*)self);
 }
 
-void k_colorpicker__kcolorpicker_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    kColorPicker__KColorPicker_OnMinimumSizeHint((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    kColorPicker__KColorPicker_OnMinimumSizeHint((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 bool k_colorpicker__kcolorpicker_event(void* self, void* e) {
@@ -1844,8 +1844,8 @@ bool k_colorpicker__kcolorpicker_super_hit_button(const void* self, const void* 
     return kColorPicker__KColorPicker_SuperHitButton((kColorPicker__KColorPicker*)self, (QPoint*)pos);
 }
 
-void k_colorpicker__kcolorpicker_on_hit_button(const void* self, bool (*callback)(const void*, const void*)) {
-    kColorPicker__KColorPicker_OnHitButton((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_hit_button(void* self, bool (*callback)(const void*, const void*)) {
+    kColorPicker__KColorPicker_OnHitButton((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 void k_colorpicker__kcolorpicker_check_state_set(void* self) {
@@ -1880,8 +1880,8 @@ void k_colorpicker__kcolorpicker_super_init_style_option(const void* self, void*
     kColorPicker__KColorPicker_SuperInitStyleOption((kColorPicker__KColorPicker*)self, (QStyleOptionToolButton*)option);
 }
 
-void k_colorpicker__kcolorpicker_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    kColorPicker__KColorPicker_OnInitStyleOption((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    kColorPicker__KColorPicker_OnInitStyleOption((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 void k_colorpicker__kcolorpicker_key_press_event(void* self, void* e) {
@@ -1952,8 +1952,8 @@ int32_t k_colorpicker__kcolorpicker_super_dev_type(const void* self) {
     return kColorPicker__KColorPicker_SuperDevType((kColorPicker__KColorPicker*)self);
 }
 
-void k_colorpicker__kcolorpicker_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    kColorPicker__KColorPicker_OnDevType((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    kColorPicker__KColorPicker_OnDevType((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 void k_colorpicker__kcolorpicker_set_visible(void* self, bool visible) {
@@ -1976,8 +1976,8 @@ int32_t k_colorpicker__kcolorpicker_super_height_for_width(const void* self, int
     return kColorPicker__KColorPicker_SuperHeightForWidth((kColorPicker__KColorPicker*)self, param1);
 }
 
-void k_colorpicker__kcolorpicker_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    kColorPicker__KColorPicker_OnHeightForWidth((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    kColorPicker__KColorPicker_OnHeightForWidth((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 bool k_colorpicker__kcolorpicker_has_height_for_width(const void* self) {
@@ -1988,8 +1988,8 @@ bool k_colorpicker__kcolorpicker_super_has_height_for_width(const void* self) {
     return kColorPicker__KColorPicker_SuperHasHeightForWidth((kColorPicker__KColorPicker*)self);
 }
 
-void k_colorpicker__kcolorpicker_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    kColorPicker__KColorPicker_OnHasHeightForWidth((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    kColorPicker__KColorPicker_OnHasHeightForWidth((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_colorpicker__kcolorpicker_paint_engine(const void* self) {
@@ -2000,8 +2000,8 @@ QPaintEngine* k_colorpicker__kcolorpicker_super_paint_engine(const void* self) {
     return kColorPicker__KColorPicker_SuperPaintEngine((kColorPicker__KColorPicker*)self);
 }
 
-void k_colorpicker__kcolorpicker_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    kColorPicker__KColorPicker_OnPaintEngine((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    kColorPicker__KColorPicker_OnPaintEngine((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 void k_colorpicker__kcolorpicker_mouse_double_click_event(void* self, void* event) {
@@ -2180,8 +2180,8 @@ int32_t k_colorpicker__kcolorpicker_super_metric(const void* self, int32_t param
     return kColorPicker__KColorPicker_SuperMetric((kColorPicker__KColorPicker*)self, param1);
 }
 
-void k_colorpicker__kcolorpicker_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    kColorPicker__KColorPicker_OnMetric((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    kColorPicker__KColorPicker_OnMetric((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 void k_colorpicker__kcolorpicker_init_painter(const void* self, void* painter) {
@@ -2192,8 +2192,8 @@ void k_colorpicker__kcolorpicker_super_init_painter(const void* self, void* pain
     kColorPicker__KColorPicker_SuperInitPainter((kColorPicker__KColorPicker*)self, (QPainter*)painter);
 }
 
-void k_colorpicker__kcolorpicker_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    kColorPicker__KColorPicker_OnInitPainter((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    kColorPicker__KColorPicker_OnInitPainter((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_colorpicker__kcolorpicker_redirected(const void* self, void* offset) {
@@ -2204,8 +2204,8 @@ QPaintDevice* k_colorpicker__kcolorpicker_super_redirected(const void* self, voi
     return kColorPicker__KColorPicker_SuperRedirected((kColorPicker__KColorPicker*)self, (QPoint*)offset);
 }
 
-void k_colorpicker__kcolorpicker_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    kColorPicker__KColorPicker_OnRedirected((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    kColorPicker__KColorPicker_OnRedirected((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 QPainter* k_colorpicker__kcolorpicker_shared_painter(const void* self) {
@@ -2216,8 +2216,8 @@ QPainter* k_colorpicker__kcolorpicker_super_shared_painter(const void* self) {
     return kColorPicker__KColorPicker_SuperSharedPainter((kColorPicker__KColorPicker*)self);
 }
 
-void k_colorpicker__kcolorpicker_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    kColorPicker__KColorPicker_OnSharedPainter((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    kColorPicker__KColorPicker_OnSharedPainter((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 void k_colorpicker__kcolorpicker_input_method_event(void* self, void* param1) {
@@ -2240,8 +2240,8 @@ QVariant* k_colorpicker__kcolorpicker_super_input_method_query(const void* self,
     return kColorPicker__KColorPicker_SuperInputMethodQuery((kColorPicker__KColorPicker*)self, param1);
 }
 
-void k_colorpicker__kcolorpicker_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    kColorPicker__KColorPicker_OnInputMethodQuery((const kColorPicker__KColorPicker*)self, (intptr_t)callback);
+void k_colorpicker__kcolorpicker_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    kColorPicker__KColorPicker_OnInputMethodQuery((kColorPicker__KColorPicker*)self, (intptr_t)callback);
 }
 
 bool k_colorpicker__kcolorpicker_focus_next_prev_child(void* self, bool next) {

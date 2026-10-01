@@ -20,7 +20,7 @@ const QMetaObject* k_io__mimetypefinderjob_meta_object(const void* self) {
     return KIO__MimeTypeFinderJob_MetaObject((KIO__MimeTypeFinderJob*)self);
 }
 
-void k_io__mimetypefinderjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__mimetypefinderjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__MimeTypeFinderJob_OnMetaObject((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
@@ -549,8 +549,8 @@ const char* k_io__mimetypefinderjob_super_error_string(const void* self) {
     return _ret;
 }
 
-void k_io__mimetypefinderjob_on_error_string(const void* self, const char* (*callback)(const void*)) {
-    KIO__MimeTypeFinderJob_OnErrorString((const KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
+void k_io__mimetypefinderjob_on_error_string(void* self, const char* (*callback)(const void*)) {
+    KIO__MimeTypeFinderJob_OnErrorString((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
 bool k_io__mimetypefinderjob_event(void* self, void* event) {

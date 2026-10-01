@@ -36,7 +36,7 @@ const QMetaObject* q_camera_meta_object(const void* self) {
     return QCamera_MetaObject((QCamera*)self);
 }
 
-void q_camera_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_camera_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCamera_OnMetaObject((QCamera*)self, (intptr_t)callback);
 }
 
@@ -478,16 +478,16 @@ void q_camera_white_balance_mode_changed(const void* self) {
     QCamera_WhiteBalanceModeChanged((QCamera*)self);
 }
 
-void q_camera_on_white_balance_mode_changed(const void* self, void (*callback)(const void*)) {
-    QCamera_Connect_WhiteBalanceModeChanged((const QCamera*)self, (intptr_t)callback);
+void q_camera_on_white_balance_mode_changed(void* self, void (*callback)(const void*)) {
+    QCamera_Connect_WhiteBalanceModeChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_color_temperature_changed(const void* self) {
     QCamera_ColorTemperatureChanged((QCamera*)self);
 }
 
-void q_camera_on_color_temperature_changed(const void* self, void (*callback)(const void*)) {
-    QCamera_Connect_ColorTemperatureChanged((const QCamera*)self, (intptr_t)callback);
+void q_camera_on_color_temperature_changed(void* self, void (*callback)(const void*)) {
+    QCamera_Connect_ColorTemperatureChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_brightness_changed(void* self) {

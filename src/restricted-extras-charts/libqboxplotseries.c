@@ -21,7 +21,7 @@ const QMetaObject* q_boxplotseries_meta_object(const void* self) {
     return QBoxPlotSeries_MetaObject((QBoxPlotSeries*)self);
 }
 
-void q_boxplotseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_boxplotseries_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QBoxPlotSeries_OnMetaObject((QBoxPlotSeries*)self, (intptr_t)callback);
 }
 
@@ -97,7 +97,7 @@ int32_t q_boxplotseries_type(const void* self) {
     return QBoxPlotSeries_Type((QBoxPlotSeries*)self);
 }
 
-void q_boxplotseries_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_boxplotseries_on_type(void* self, int32_t (*callback)(const void*)) {
     QBoxPlotSeries_OnType((QBoxPlotSeries*)self, (intptr_t)callback);
 }
 

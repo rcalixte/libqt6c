@@ -32,10 +32,10 @@ const QMetaObject* q_scilexer_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback const QMetaObject* func(const QsciLexer* self)
 ///
-void q_scilexer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_scilexer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -109,10 +109,10 @@ const char* q_scilexer_language(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback const char* func(const QsciLexer* self)
 ///
-void q_scilexer_on_language(const void* self, const char* (*callback)(const void*));
+void q_scilexer_on_language(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -126,10 +126,10 @@ const char* q_scilexer_lexer(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback const char* func(const QsciLexer* self)
 ///
-void q_scilexer_on_lexer(const void* self, const char* (*callback)(const void*));
+void q_scilexer_on_lexer(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -149,10 +149,10 @@ int32_t q_scilexer_lexer_id(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback int32_t func(const QsciLexer* self)
 ///
-void q_scilexer_on_lexer_id(const void* self, int32_t (*callback)(const void*));
+void q_scilexer_on_lexer_id(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -180,10 +180,10 @@ const char* q_scilexer_auto_completion_fillups(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback const char* func(const QsciLexer* self)
 ///
-void q_scilexer_on_auto_completion_fillups(const void* self, const char* (*callback)(const void*));
+void q_scilexer_on_auto_completion_fillups(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -205,10 +205,10 @@ const char** q_scilexer_auto_completion_word_separators(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback const char** func(const QsciLexer* self)
 ///
-void q_scilexer_on_auto_completion_word_separators(const void* self, const char** (*callback)(const void*));
+void q_scilexer_on_auto_completion_word_separators(void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -237,10 +237,10 @@ const char* q_scilexer_block_end(const void* self, int* style);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback const char* func(const QsciLexer* self, int* style)
 ///
-void q_scilexer_on_block_end(const void* self, const char* (*callback)(const void*, int*));
+void q_scilexer_on_block_end(void* self, const char* (*callback)(const void*, int*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -261,10 +261,10 @@ int32_t q_scilexer_block_lookback(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback int32_t func(const QsciLexer* self)
 ///
-void q_scilexer_on_block_lookback(const void* self, int32_t (*callback)(const void*));
+void q_scilexer_on_block_lookback(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -287,10 +287,10 @@ const char* q_scilexer_block_start(const void* self, int* style);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback const char* func(const QsciLexer* self, int* style)
 ///
-void q_scilexer_on_block_start(const void* self, const char* (*callback)(const void*, int*));
+void q_scilexer_on_block_start(void* self, const char* (*callback)(const void*, int*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -314,10 +314,10 @@ const char* q_scilexer_block_start_keyword(const void* self, int* style);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback const char* func(const QsciLexer* self, int* style)
 ///
-void q_scilexer_on_block_start_keyword(const void* self, const char* (*callback)(const void*, int*));
+void q_scilexer_on_block_start_keyword(void* self, const char* (*callback)(const void*, int*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -338,10 +338,10 @@ int32_t q_scilexer_brace_style(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback int32_t func(const QsciLexer* self)
 ///
-void q_scilexer_on_brace_style(const void* self, int32_t (*callback)(const void*));
+void q_scilexer_on_brace_style(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -361,10 +361,10 @@ bool q_scilexer_case_sensitive(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback bool func(const QsciLexer* self)
 ///
-void q_scilexer_on_case_sensitive(const void* self, bool (*callback)(const void*));
+void q_scilexer_on_case_sensitive(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -385,12 +385,12 @@ QColor* q_scilexer_color(const void* self, int style);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback QColor* func(const QsciLexer* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexer_on_color(const void* self, QColor* (*callback)(const void*, int));
+void q_scilexer_on_color(void* self, QColor* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -412,10 +412,10 @@ bool q_scilexer_eol_fill(const void* self, int style);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback bool func(const QsciLexer* self, int style)
 ///
-void q_scilexer_on_eol_fill(const void* self, bool (*callback)(const void*, int));
+void q_scilexer_on_eol_fill(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -437,12 +437,12 @@ QFont* q_scilexer_font(const void* self, int style);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback QFont* func(const QsciLexer* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexer_on_font(const void* self, QFont* (*callback)(const void*, int));
+void q_scilexer_on_font(void* self, QFont* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -463,10 +463,10 @@ int32_t q_scilexer_indentation_guide_view(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback int32_t func(const QsciLexer* self)
 ///
-void q_scilexer_on_indentation_guide_view(const void* self, int32_t (*callback)(const void*));
+void q_scilexer_on_indentation_guide_view(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -489,10 +489,10 @@ const char* q_scilexer_keywords(const void* self, int set);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback const char* func(const QsciLexer* self, int set)
 ///
-void q_scilexer_on_keywords(const void* self, const char* (*callback)(const void*, int));
+void q_scilexer_on_keywords(void* self, const char* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -513,10 +513,10 @@ int32_t q_scilexer_default_style(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback int32_t func(const QsciLexer* self)
 ///
-void q_scilexer_on_default_style(const void* self, int32_t (*callback)(const void*));
+void q_scilexer_on_default_style(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -541,10 +541,10 @@ const char* q_scilexer_description(const void* self, int style);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback const char* func(const QsciLexer* self, int style)
 ///
-void q_scilexer_on_description(const void* self, const char* (*callback)(const void*, int));
+void q_scilexer_on_description(void* self, const char* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -557,12 +557,12 @@ QColor* q_scilexer_paper(const void* self, int style);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback QColor* func(const QsciLexer* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexer_on_paper(const void* self, QColor* (*callback)(const void*, int));
+void q_scilexer_on_paper(void* self, QColor* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -590,12 +590,12 @@ QColor* q_scilexer_default_color2(const void* self, int style);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback QColor* func(const QsciLexer* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexer_on_default_color2(const void* self, QColor* (*callback)(const void*, int));
+void q_scilexer_on_default_color2(void* self, QColor* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -617,10 +617,10 @@ bool q_scilexer_default_eol_fill(const void* self, int style);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback bool func(const QsciLexer* self, int style)
 ///
-void q_scilexer_on_default_eol_fill(const void* self, bool (*callback)(const void*, int));
+void q_scilexer_on_default_eol_fill(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -648,12 +648,12 @@ QFont* q_scilexer_default_font2(const void* self, int style);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback QFont* func(const QsciLexer* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexer_on_default_font2(const void* self, QFont* (*callback)(const void*, int));
+void q_scilexer_on_default_font2(void* self, QFont* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -681,12 +681,12 @@ QColor* q_scilexer_default_paper2(const void* self, int style);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback QColor* func(const QsciLexer* self, int style)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scilexer_on_default_paper2(const void* self, QColor* (*callback)(const void*, int));
+void q_scilexer_on_default_paper2(void* self, QColor* (*callback)(const void*, int));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -796,10 +796,10 @@ int32_t q_scilexer_style_bits_needed(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback int32_t func(const QsciLexer* self)
 ///
-void q_scilexer_on_style_bits_needed(const void* self, int32_t (*callback)(const void*));
+void q_scilexer_on_style_bits_needed(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -821,10 +821,10 @@ const char* q_scilexer_word_characters(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback const char* func(const QsciLexer* self)
 ///
-void q_scilexer_on_word_characters(const void* self, const char* (*callback)(const void*));
+void q_scilexer_on_word_characters(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -1088,10 +1088,10 @@ bool q_scilexer_write_properties(const void* self, void* qs, const char* prefix)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback bool func(const QsciLexer* self, QSettings* qs, const char* prefix)
 ///
-void q_scilexer_on_write_properties(const void* self, bool (*callback)(const void*, void*, const char*));
+void q_scilexer_on_write_properties(void* self, bool (*callback)(const void*, void*, const char*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -1863,10 +1863,10 @@ QObject* q_scilexer_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback QObject* func(QsciLexer* self)
 ///
-void q_scilexer_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_scilexer_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1894,10 +1894,10 @@ int32_t q_scilexer_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback int32_t func(QsciLexer* self)
 ///
-void q_scilexer_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_scilexer_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1927,10 +1927,10 @@ int32_t q_scilexer_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback int32_t func(QsciLexer* self, const char* signal)
 ///
-void q_scilexer_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_scilexer_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1960,10 +1960,10 @@ bool q_scilexer_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciLexer*
+/// @param self QsciLexer*
 /// @param callback bool func(QsciLexer* self, QMetaMethod* signal)
 ///
-void q_scilexer_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_scilexer_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

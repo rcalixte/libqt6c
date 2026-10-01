@@ -32,10 +32,10 @@ const QMetaObject* k_lineediturldropeventfilter_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KLineEditUrlDropEventFilter*
+/// @param self KLineEditUrlDropEventFilter*
 /// @param callback const QMetaObject* func(const KLineEditUrlDropEventFilter* self)
 ///
-void k_lineediturldropeventfilter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_lineediturldropeventfilter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -812,10 +812,10 @@ QObject* k_lineediturldropeventfilter_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLineEditUrlDropEventFilter*
+/// @param self KLineEditUrlDropEventFilter*
 /// @param callback QObject* func(KLineEditUrlDropEventFilter* self)
 ///
-void k_lineediturldropeventfilter_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_lineediturldropeventfilter_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -843,10 +843,10 @@ int32_t k_lineediturldropeventfilter_super_sender_signal_index(const void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLineEditUrlDropEventFilter*
+/// @param self KLineEditUrlDropEventFilter*
 /// @param callback int32_t func(KLineEditUrlDropEventFilter* self)
 ///
-void k_lineediturldropeventfilter_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_lineediturldropeventfilter_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -876,10 +876,10 @@ int32_t k_lineediturldropeventfilter_super_receivers(const void* self, const cha
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLineEditUrlDropEventFilter*
+/// @param self KLineEditUrlDropEventFilter*
 /// @param callback int32_t func(KLineEditUrlDropEventFilter* self, const char* signal)
 ///
-void k_lineediturldropeventfilter_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_lineediturldropeventfilter_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -909,10 +909,10 @@ bool k_lineediturldropeventfilter_super_is_signal_connected(const void* self, co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KLineEditUrlDropEventFilter*
+/// @param self KLineEditUrlDropEventFilter*
 /// @param callback bool func(KLineEditUrlDropEventFilter* self, QMetaMethod* signal)
 ///
-void k_lineediturldropeventfilter_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_lineediturldropeventfilter_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

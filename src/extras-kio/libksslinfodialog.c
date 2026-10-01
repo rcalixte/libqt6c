@@ -27,7 +27,7 @@ const QMetaObject* k_sslinfodialog_meta_object(const void* self) {
     return KSslInfoDialog_MetaObject((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_sslinfodialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSslInfoDialog_OnMetaObject((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
@@ -140,11 +140,11 @@ void k_sslinfodialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_sslinfodialog_as_q_paint_device(void* self) {
+QPaintDevice* k_sslinfodialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KSslInfoDialog* k_sslinfodialog_from_q_paint_device(void* _qpaintdevice) {
+KSslInfoDialog* k_sslinfodialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KSslInfoDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1547,8 +1547,8 @@ QSize* k_sslinfodialog_super_size_hint(const void* self) {
     return KSslInfoDialog_SuperSizeHint((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KSslInfoDialog_OnSizeHint((const KSslInfoDialog*)self, (intptr_t)callback);
+void k_sslinfodialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KSslInfoDialog_OnSizeHint((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_sslinfodialog_minimum_size_hint(const void* self) {
@@ -1559,8 +1559,8 @@ QSize* k_sslinfodialog_super_minimum_size_hint(const void* self) {
     return KSslInfoDialog_SuperMinimumSizeHint((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KSslInfoDialog_OnMinimumSizeHint((const KSslInfoDialog*)self, (intptr_t)callback);
+void k_sslinfodialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KSslInfoDialog_OnMinimumSizeHint((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
 void k_sslinfodialog_open(void* self) {
@@ -1703,8 +1703,8 @@ int32_t k_sslinfodialog_super_dev_type(const void* self) {
     return KSslInfoDialog_SuperDevType((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KSslInfoDialog_OnDevType((const KSslInfoDialog*)self, (intptr_t)callback);
+void k_sslinfodialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KSslInfoDialog_OnDevType((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_sslinfodialog_height_for_width(const void* self, int param1) {
@@ -1715,8 +1715,8 @@ int32_t k_sslinfodialog_super_height_for_width(const void* self, int param1) {
     return KSslInfoDialog_SuperHeightForWidth((KSslInfoDialog*)self, param1);
 }
 
-void k_sslinfodialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KSslInfoDialog_OnHeightForWidth((const KSslInfoDialog*)self, (intptr_t)callback);
+void k_sslinfodialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KSslInfoDialog_OnHeightForWidth((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
 bool k_sslinfodialog_has_height_for_width(const void* self) {
@@ -1727,8 +1727,8 @@ bool k_sslinfodialog_super_has_height_for_width(const void* self) {
     return KSslInfoDialog_SuperHasHeightForWidth((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KSslInfoDialog_OnHasHeightForWidth((const KSslInfoDialog*)self, (intptr_t)callback);
+void k_sslinfodialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KSslInfoDialog_OnHasHeightForWidth((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_sslinfodialog_paint_engine(const void* self) {
@@ -1739,8 +1739,8 @@ QPaintEngine* k_sslinfodialog_super_paint_engine(const void* self) {
     return KSslInfoDialog_SuperPaintEngine((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KSslInfoDialog_OnPaintEngine((const KSslInfoDialog*)self, (intptr_t)callback);
+void k_sslinfodialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KSslInfoDialog_OnPaintEngine((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
 bool k_sslinfodialog_event(void* self, void* event) {
@@ -2015,8 +2015,8 @@ int32_t k_sslinfodialog_super_metric(const void* self, int32_t param1) {
     return KSslInfoDialog_SuperMetric((KSslInfoDialog*)self, param1);
 }
 
-void k_sslinfodialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KSslInfoDialog_OnMetric((const KSslInfoDialog*)self, (intptr_t)callback);
+void k_sslinfodialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KSslInfoDialog_OnMetric((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
 void k_sslinfodialog_init_painter(const void* self, void* painter) {
@@ -2027,8 +2027,8 @@ void k_sslinfodialog_super_init_painter(const void* self, void* painter) {
     KSslInfoDialog_SuperInitPainter((KSslInfoDialog*)self, (QPainter*)painter);
 }
 
-void k_sslinfodialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KSslInfoDialog_OnInitPainter((const KSslInfoDialog*)self, (intptr_t)callback);
+void k_sslinfodialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KSslInfoDialog_OnInitPainter((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_sslinfodialog_redirected(const void* self, void* offset) {
@@ -2039,8 +2039,8 @@ QPaintDevice* k_sslinfodialog_super_redirected(const void* self, void* offset) {
     return KSslInfoDialog_SuperRedirected((KSslInfoDialog*)self, (QPoint*)offset);
 }
 
-void k_sslinfodialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KSslInfoDialog_OnRedirected((const KSslInfoDialog*)self, (intptr_t)callback);
+void k_sslinfodialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KSslInfoDialog_OnRedirected((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_sslinfodialog_shared_painter(const void* self) {
@@ -2051,8 +2051,8 @@ QPainter* k_sslinfodialog_super_shared_painter(const void* self) {
     return KSslInfoDialog_SuperSharedPainter((KSslInfoDialog*)self);
 }
 
-void k_sslinfodialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KSslInfoDialog_OnSharedPainter((const KSslInfoDialog*)self, (intptr_t)callback);
+void k_sslinfodialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KSslInfoDialog_OnSharedPainter((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
 void k_sslinfodialog_input_method_event(void* self, void* param1) {
@@ -2075,8 +2075,8 @@ QVariant* k_sslinfodialog_super_input_method_query(const void* self, int32_t par
     return KSslInfoDialog_SuperInputMethodQuery((KSslInfoDialog*)self, param1);
 }
 
-void k_sslinfodialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KSslInfoDialog_OnInputMethodQuery((const KSslInfoDialog*)self, (intptr_t)callback);
+void k_sslinfodialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KSslInfoDialog_OnInputMethodQuery((KSslInfoDialog*)self, (intptr_t)callback);
 }
 
 bool k_sslinfodialog_focus_next_prev_child(void* self, bool next) {

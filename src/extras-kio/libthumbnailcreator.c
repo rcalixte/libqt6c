@@ -92,7 +92,7 @@ const QMetaObject* k_io__thumbnailcreator_meta_object(const void* self) {
     return KIO__ThumbnailCreator_MetaObject((KIO__ThumbnailCreator*)self);
 }
 
-void k_io__thumbnailcreator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__thumbnailcreator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__ThumbnailCreator_OnMetaObject((KIO__ThumbnailCreator*)self, (intptr_t)callback);
 }
 

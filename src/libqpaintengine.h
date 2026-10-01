@@ -631,12 +631,12 @@ QPoint* q_paintengine_coordinate_offset(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPaintEngine*
+/// @param self QPaintEngine*
 /// @param callback QPoint* func(const QPaintEngine* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_paintengine_on_coordinate_offset(const void* self, QPoint* (*callback)(const void*));
+void q_paintengine_on_coordinate_offset(void* self, QPoint* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#coordinateOffset)
 ///
@@ -660,10 +660,10 @@ int32_t q_paintengine_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPaintEngine*
+/// @param self QPaintEngine*
 /// @param callback int32_t func(const QPaintEngine* self)
 ///
-void q_paintengine_on_type(const void* self, int32_t (*callback)(const void*));
+void q_paintengine_on_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintengine.html#fix_neg_rect)
 ///

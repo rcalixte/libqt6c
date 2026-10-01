@@ -46,7 +46,7 @@ const QMetaObject* q_shortcut_meta_object(const void* self) {
     return QShortcut_MetaObject((QShortcut*)self);
 }
 
-void q_shortcut_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_shortcut_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QShortcut_OnMetaObject((QShortcut*)self, (intptr_t)callback);
 }
 

@@ -29,7 +29,7 @@ const QMetaObject* k_timecombobox_meta_object(const void* self) {
     return KTimeComboBox_MetaObject((KTimeComboBox*)self);
 }
 
-void k_timecombobox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_timecombobox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KTimeComboBox_OnMetaObject((KTimeComboBox*)self, (intptr_t)callback);
 }
 
@@ -700,11 +700,11 @@ void k_timecombobox_set_item_data3(void* self, int index, const void* value, int
     QComboBox_SetItemData3((QComboBox*)self, index, (QVariant*)value, role);
 }
 
-QPaintDevice* k_timecombobox_as_q_paint_device(void* self) {
+QPaintDevice* k_timecombobox_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KTimeComboBox* k_timecombobox_from_q_paint_device(void* _qpaintdevice) {
+KTimeComboBox* k_timecombobox_from_q_paint_device(const void* _qpaintdevice) {
     return (KTimeComboBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2107,8 +2107,8 @@ QSize* k_timecombobox_super_size_hint(const void* self) {
     return KTimeComboBox_SuperSizeHint((KTimeComboBox*)self);
 }
 
-void k_timecombobox_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KTimeComboBox_OnSizeHint((const KTimeComboBox*)self, (intptr_t)callback);
+void k_timecombobox_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KTimeComboBox_OnSizeHint((KTimeComboBox*)self, (intptr_t)callback);
 }
 
 QSize* k_timecombobox_minimum_size_hint(const void* self) {
@@ -2119,8 +2119,8 @@ QSize* k_timecombobox_super_minimum_size_hint(const void* self) {
     return KTimeComboBox_SuperMinimumSizeHint((KTimeComboBox*)self);
 }
 
-void k_timecombobox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KTimeComboBox_OnMinimumSizeHint((const KTimeComboBox*)self, (intptr_t)callback);
+void k_timecombobox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KTimeComboBox_OnMinimumSizeHint((KTimeComboBox*)self, (intptr_t)callback);
 }
 
 bool k_timecombobox_event(void* self, void* event) {
@@ -2143,8 +2143,8 @@ QVariant* k_timecombobox_super_input_method_query(const void* self, int32_t para
     return KTimeComboBox_SuperInputMethodQuery((KTimeComboBox*)self, param1);
 }
 
-void k_timecombobox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KTimeComboBox_OnInputMethodQuery((const KTimeComboBox*)self, (intptr_t)callback);
+void k_timecombobox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KTimeComboBox_OnInputMethodQuery((KTimeComboBox*)self, (intptr_t)callback);
 }
 
 void k_timecombobox_change_event(void* self, void* e) {
@@ -2251,8 +2251,8 @@ void k_timecombobox_super_init_style_option(const void* self, void* option) {
     KTimeComboBox_SuperInitStyleOption((KTimeComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_timecombobox_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KTimeComboBox_OnInitStyleOption((const KTimeComboBox*)self, (intptr_t)callback);
+void k_timecombobox_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KTimeComboBox_OnInitStyleOption((KTimeComboBox*)self, (intptr_t)callback);
 }
 
 int32_t k_timecombobox_dev_type(const void* self) {
@@ -2263,8 +2263,8 @@ int32_t k_timecombobox_super_dev_type(const void* self) {
     return KTimeComboBox_SuperDevType((KTimeComboBox*)self);
 }
 
-void k_timecombobox_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KTimeComboBox_OnDevType((const KTimeComboBox*)self, (intptr_t)callback);
+void k_timecombobox_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KTimeComboBox_OnDevType((KTimeComboBox*)self, (intptr_t)callback);
 }
 
 void k_timecombobox_set_visible(void* self, bool visible) {
@@ -2287,8 +2287,8 @@ int32_t k_timecombobox_super_height_for_width(const void* self, int param1) {
     return KTimeComboBox_SuperHeightForWidth((KTimeComboBox*)self, param1);
 }
 
-void k_timecombobox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KTimeComboBox_OnHeightForWidth((const KTimeComboBox*)self, (intptr_t)callback);
+void k_timecombobox_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KTimeComboBox_OnHeightForWidth((KTimeComboBox*)self, (intptr_t)callback);
 }
 
 bool k_timecombobox_has_height_for_width(const void* self) {
@@ -2299,8 +2299,8 @@ bool k_timecombobox_super_has_height_for_width(const void* self) {
     return KTimeComboBox_SuperHasHeightForWidth((KTimeComboBox*)self);
 }
 
-void k_timecombobox_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KTimeComboBox_OnHasHeightForWidth((const KTimeComboBox*)self, (intptr_t)callback);
+void k_timecombobox_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KTimeComboBox_OnHasHeightForWidth((KTimeComboBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_timecombobox_paint_engine(const void* self) {
@@ -2311,8 +2311,8 @@ QPaintEngine* k_timecombobox_super_paint_engine(const void* self) {
     return KTimeComboBox_SuperPaintEngine((KTimeComboBox*)self);
 }
 
-void k_timecombobox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KTimeComboBox_OnPaintEngine((const KTimeComboBox*)self, (intptr_t)callback);
+void k_timecombobox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KTimeComboBox_OnPaintEngine((KTimeComboBox*)self, (intptr_t)callback);
 }
 
 void k_timecombobox_mouse_double_click_event(void* self, void* event) {
@@ -2479,8 +2479,8 @@ int32_t k_timecombobox_super_metric(const void* self, int32_t param1) {
     return KTimeComboBox_SuperMetric((KTimeComboBox*)self, param1);
 }
 
-void k_timecombobox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KTimeComboBox_OnMetric((const KTimeComboBox*)self, (intptr_t)callback);
+void k_timecombobox_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KTimeComboBox_OnMetric((KTimeComboBox*)self, (intptr_t)callback);
 }
 
 void k_timecombobox_init_painter(const void* self, void* painter) {
@@ -2491,8 +2491,8 @@ void k_timecombobox_super_init_painter(const void* self, void* painter) {
     KTimeComboBox_SuperInitPainter((KTimeComboBox*)self, (QPainter*)painter);
 }
 
-void k_timecombobox_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KTimeComboBox_OnInitPainter((const KTimeComboBox*)self, (intptr_t)callback);
+void k_timecombobox_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KTimeComboBox_OnInitPainter((KTimeComboBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_timecombobox_redirected(const void* self, void* offset) {
@@ -2503,8 +2503,8 @@ QPaintDevice* k_timecombobox_super_redirected(const void* self, void* offset) {
     return KTimeComboBox_SuperRedirected((KTimeComboBox*)self, (QPoint*)offset);
 }
 
-void k_timecombobox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KTimeComboBox_OnRedirected((const KTimeComboBox*)self, (intptr_t)callback);
+void k_timecombobox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KTimeComboBox_OnRedirected((KTimeComboBox*)self, (intptr_t)callback);
 }
 
 QPainter* k_timecombobox_shared_painter(const void* self) {
@@ -2515,8 +2515,8 @@ QPainter* k_timecombobox_super_shared_painter(const void* self) {
     return KTimeComboBox_SuperSharedPainter((KTimeComboBox*)self);
 }
 
-void k_timecombobox_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KTimeComboBox_OnSharedPainter((const KTimeComboBox*)self, (intptr_t)callback);
+void k_timecombobox_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KTimeComboBox_OnSharedPainter((KTimeComboBox*)self, (intptr_t)callback);
 }
 
 bool k_timecombobox_focus_next_prev_child(void* self, bool next) {

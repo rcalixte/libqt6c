@@ -32,10 +32,10 @@ const QMetaObject* k_compositejob_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCompositeJob*
+/// @param self KCompositeJob*
 /// @param callback const QMetaObject* func(const KCompositeJob* self)
 ///
-void k_compositejob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_compositejob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1102,10 +1102,10 @@ const char* k_compositejob_super_error_string(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompositeJob*
+/// @param self KCompositeJob*
 /// @param callback const char* func(KCompositeJob* self)
 ///
-void k_compositejob_on_error_string(const void* self, const char* (*callback)(const void*));
+void k_compositejob_on_error_string(void* self, const char* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1399,10 +1399,10 @@ bool k_compositejob_super_is_finished(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompositeJob*
+/// @param self KCompositeJob*
 /// @param callback bool func(KCompositeJob* self)
 ///
-void k_compositejob_on_is_finished(const void* self, bool (*callback)(const void*));
+void k_compositejob_on_is_finished(void* self, bool (*callback)(const void*));
 
 /// Inherited from KJob
 ///
@@ -1762,10 +1762,10 @@ QObject* k_compositejob_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompositeJob*
+/// @param self KCompositeJob*
 /// @param callback QObject* func(KCompositeJob* self)
 ///
-void k_compositejob_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_compositejob_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1793,10 +1793,10 @@ int32_t k_compositejob_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompositeJob*
+/// @param self KCompositeJob*
 /// @param callback int32_t func(KCompositeJob* self)
 ///
-void k_compositejob_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_compositejob_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1826,10 +1826,10 @@ int32_t k_compositejob_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompositeJob*
+/// @param self KCompositeJob*
 /// @param callback int32_t func(KCompositeJob* self, const char* signal)
 ///
-void k_compositejob_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_compositejob_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1859,10 +1859,10 @@ bool k_compositejob_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCompositeJob*
+/// @param self KCompositeJob*
 /// @param callback bool func(KCompositeJob* self, QMetaMethod* signal)
 ///
-void k_compositejob_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_compositejob_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KJob
 ///

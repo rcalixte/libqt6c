@@ -75,10 +75,10 @@ const QMetaObject* q_object_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QObject*
+/// @param self QObject*
 /// @param callback const QMetaObject* func(const QObject* self)
 ///
-void q_object_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_object_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///

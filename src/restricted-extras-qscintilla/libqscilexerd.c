@@ -22,7 +22,7 @@ const QMetaObject* q_scilexerd_meta_object(const void* self) {
     return QsciLexerD_MetaObject((QsciLexerD*)self);
 }
 
-void q_scilexerd_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_scilexerd_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QsciLexerD_OnMetaObject((QsciLexerD*)self, (intptr_t)callback);
 }
 
@@ -520,8 +520,8 @@ int32_t q_scilexerd_super_lexer_id(const void* self) {
     return QsciLexerD_SuperLexerId((QsciLexerD*)self);
 }
 
-void q_scilexerd_on_lexer_id(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerD_OnLexerId((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_lexer_id(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerD_OnLexerId((QsciLexerD*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerd_auto_completion_fillups(const void* self) {
@@ -532,8 +532,8 @@ const char* q_scilexerd_super_auto_completion_fillups(const void* self) {
     return QsciLexerD_SuperAutoCompletionFillups((QsciLexerD*)self);
 }
 
-void q_scilexerd_on_auto_completion_fillups(const void* self, const char* (*callback)(const void*)) {
-    QsciLexerD_OnAutoCompletionFillups((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_auto_completion_fillups(void* self, const char* (*callback)(const void*)) {
+    QsciLexerD_OnAutoCompletionFillups((QsciLexerD*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerd_block_lookback(const void* self) {
@@ -544,8 +544,8 @@ int32_t q_scilexerd_super_block_lookback(const void* self) {
     return QsciLexerD_SuperBlockLookback((QsciLexerD*)self);
 }
 
-void q_scilexerd_on_block_lookback(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerD_OnBlockLookback((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_block_lookback(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerD_OnBlockLookback((QsciLexerD*)self, (intptr_t)callback);
 }
 
 bool q_scilexerd_case_sensitive(const void* self) {
@@ -556,8 +556,8 @@ bool q_scilexerd_super_case_sensitive(const void* self) {
     return QsciLexerD_SuperCaseSensitive((QsciLexerD*)self);
 }
 
-void q_scilexerd_on_case_sensitive(const void* self, bool (*callback)(const void*)) {
-    QsciLexerD_OnCaseSensitive((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_case_sensitive(void* self, bool (*callback)(const void*)) {
+    QsciLexerD_OnCaseSensitive((QsciLexerD*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerd_color(const void* self, int style) {
@@ -568,8 +568,8 @@ QColor* q_scilexerd_super_color(const void* self, int style) {
     return QsciLexerD_SuperColor((QsciLexerD*)self, style);
 }
 
-void q_scilexerd_on_color(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerD_OnColor((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_color(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerD_OnColor((QsciLexerD*)self, (intptr_t)callback);
 }
 
 bool q_scilexerd_eol_fill(const void* self, int style) {
@@ -580,8 +580,8 @@ bool q_scilexerd_super_eol_fill(const void* self, int style) {
     return QsciLexerD_SuperEolFill((QsciLexerD*)self, style);
 }
 
-void q_scilexerd_on_eol_fill(const void* self, bool (*callback)(const void*, int)) {
-    QsciLexerD_OnEolFill((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_eol_fill(void* self, bool (*callback)(const void*, int)) {
+    QsciLexerD_OnEolFill((QsciLexerD*)self, (intptr_t)callback);
 }
 
 QFont* q_scilexerd_font(const void* self, int style) {
@@ -592,8 +592,8 @@ QFont* q_scilexerd_super_font(const void* self, int style) {
     return QsciLexerD_SuperFont((QsciLexerD*)self, style);
 }
 
-void q_scilexerd_on_font(const void* self, QFont* (*callback)(const void*, int)) {
-    QsciLexerD_OnFont((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_font(void* self, QFont* (*callback)(const void*, int)) {
+    QsciLexerD_OnFont((QsciLexerD*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerd_indentation_guide_view(const void* self) {
@@ -604,8 +604,8 @@ int32_t q_scilexerd_super_indentation_guide_view(const void* self) {
     return QsciLexerD_SuperIndentationGuideView((QsciLexerD*)self);
 }
 
-void q_scilexerd_on_indentation_guide_view(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerD_OnIndentationGuideView((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_indentation_guide_view(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerD_OnIndentationGuideView((QsciLexerD*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerd_default_style(const void* self) {
@@ -616,8 +616,8 @@ int32_t q_scilexerd_super_default_style(const void* self) {
     return QsciLexerD_SuperDefaultStyle((QsciLexerD*)self);
 }
 
-void q_scilexerd_on_default_style(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerD_OnDefaultStyle((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_default_style(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerD_OnDefaultStyle((QsciLexerD*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerd_paper(const void* self, int style) {
@@ -628,8 +628,8 @@ QColor* q_scilexerd_super_paper(const void* self, int style) {
     return QsciLexerD_SuperPaper((QsciLexerD*)self, style);
 }
 
-void q_scilexerd_on_paper(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerD_OnPaper((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_paper(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerD_OnPaper((QsciLexerD*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerd_default_color2(const void* self, int style) {
@@ -640,8 +640,8 @@ QColor* q_scilexerd_super_default_color2(const void* self, int style) {
     return QsciLexerD_SuperDefaultColor2((QsciLexerD*)self, style);
 }
 
-void q_scilexerd_on_default_color2(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerD_OnDefaultColor2((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_default_color2(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerD_OnDefaultColor2((QsciLexerD*)self, (intptr_t)callback);
 }
 
 QFont* q_scilexerd_default_font2(const void* self, int style) {
@@ -652,8 +652,8 @@ QFont* q_scilexerd_super_default_font2(const void* self, int style) {
     return QsciLexerD_SuperDefaultFont2((QsciLexerD*)self, style);
 }
 
-void q_scilexerd_on_default_font2(const void* self, QFont* (*callback)(const void*, int)) {
-    QsciLexerD_OnDefaultFont2((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_default_font2(void* self, QFont* (*callback)(const void*, int)) {
+    QsciLexerD_OnDefaultFont2((QsciLexerD*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerd_default_paper2(const void* self, int style) {
@@ -664,8 +664,8 @@ QColor* q_scilexerd_super_default_paper2(const void* self, int style) {
     return QsciLexerD_SuperDefaultPaper2((QsciLexerD*)self, style);
 }
 
-void q_scilexerd_on_default_paper2(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerD_OnDefaultPaper2((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_default_paper2(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerD_OnDefaultPaper2((QsciLexerD*)self, (intptr_t)callback);
 }
 
 void q_scilexerd_set_editor(void* self, void* editor) {
@@ -688,8 +688,8 @@ int32_t q_scilexerd_super_style_bits_needed(const void* self) {
     return QsciLexerD_SuperStyleBitsNeeded((QsciLexerD*)self);
 }
 
-void q_scilexerd_on_style_bits_needed(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerD_OnStyleBitsNeeded((const QsciLexerD*)self, (intptr_t)callback);
+void q_scilexerd_on_style_bits_needed(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerD_OnStyleBitsNeeded((QsciLexerD*)self, (intptr_t)callback);
 }
 
 void q_scilexerd_set_auto_indent_style(void* self, int autoindentstyle) {

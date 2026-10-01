@@ -26,7 +26,7 @@ int32_t k_filterbase_mode(const void* self) {
     return KFilterBase_Mode((KFilterBase*)self);
 }
 
-void k_filterbase_on_mode(const void* self, int32_t (*callback)(const void*)) {
+void k_filterbase_on_mode(void* self, int32_t (*callback)(const void*)) {
     KFilterBase_OnMode((KFilterBase*)self, (intptr_t)callback);
 }
 
@@ -90,7 +90,7 @@ bool k_filterbase_in_buffer_empty(const void* self) {
     return KFilterBase_InBufferEmpty((KFilterBase*)self);
 }
 
-void k_filterbase_on_in_buffer_empty(const void* self, bool (*callback)(const void*)) {
+void k_filterbase_on_in_buffer_empty(void* self, bool (*callback)(const void*)) {
     KFilterBase_OnInBufferEmpty((KFilterBase*)self, (intptr_t)callback);
 }
 
@@ -102,7 +102,7 @@ int32_t k_filterbase_in_buffer_available(const void* self) {
     return KFilterBase_InBufferAvailable((KFilterBase*)self);
 }
 
-void k_filterbase_on_in_buffer_available(const void* self, int32_t (*callback)(const void*)) {
+void k_filterbase_on_in_buffer_available(void* self, int32_t (*callback)(const void*)) {
     KFilterBase_OnInBufferAvailable((KFilterBase*)self, (intptr_t)callback);
 }
 
@@ -110,7 +110,7 @@ bool k_filterbase_out_buffer_full(const void* self) {
     return KFilterBase_OutBufferFull((KFilterBase*)self);
 }
 
-void k_filterbase_on_out_buffer_full(const void* self, bool (*callback)(const void*)) {
+void k_filterbase_on_out_buffer_full(void* self, bool (*callback)(const void*)) {
     KFilterBase_OnOutBufferFull((KFilterBase*)self, (intptr_t)callback);
 }
 
@@ -122,7 +122,7 @@ int32_t k_filterbase_out_buffer_available(const void* self) {
     return KFilterBase_OutBufferAvailable((KFilterBase*)self);
 }
 
-void k_filterbase_on_out_buffer_available(const void* self, int32_t (*callback)(const void*)) {
+void k_filterbase_on_out_buffer_available(void* self, int32_t (*callback)(const void*)) {
     KFilterBase_OnOutBufferAvailable((KFilterBase*)self, (intptr_t)callback);
 }
 

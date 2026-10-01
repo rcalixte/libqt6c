@@ -19,7 +19,7 @@ const QMetaObject* q_coloraxis_meta_object(const void* self) {
     return QColorAxis_MetaObject((QColorAxis*)self);
 }
 
-void q_coloraxis_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_coloraxis_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QColorAxis_OnMetaObject((QColorAxis*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ int32_t q_coloraxis_type(const void* self) {
     return QColorAxis_Type((QColorAxis*)self);
 }
 
-void q_coloraxis_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_coloraxis_on_type(void* self, int32_t (*callback)(const void*)) {
     QColorAxis_OnType((QColorAxis*)self, (intptr_t)callback);
 }
 

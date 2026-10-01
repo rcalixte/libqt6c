@@ -18,7 +18,7 @@ const QMetaObject* k_localizedcontext_meta_object(const void* self) {
     return KLocalizedContext_MetaObject((KLocalizedContext*)self);
 }
 
-void k_localizedcontext_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_localizedcontext_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KLocalizedContext_OnMetaObject((KLocalizedContext*)self, (intptr_t)callback);
 }
 

@@ -50,10 +50,10 @@ const char* k_urifiltersearchprovider_icon_name(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KUriFilterSearchProvider*
+/// @param self KUriFilterSearchProvider*
 /// @param callback const char* func(const KUriFilterSearchProvider* self)
 ///
-void k_urifiltersearchprovider_on_icon_name(const void* self, const char* (*callback)(const void*));
+void k_urifiltersearchprovider_on_icon_name(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#iconName)
 ///

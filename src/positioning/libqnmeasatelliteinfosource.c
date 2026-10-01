@@ -21,7 +21,7 @@ const QMetaObject* q_nmeasatelliteinfosource_meta_object(const void* self) {
     return QNmeaSatelliteInfoSource_MetaObject((QNmeaSatelliteInfoSource*)self);
 }
 
-void q_nmeasatelliteinfosource_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_nmeasatelliteinfosource_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QNmeaSatelliteInfoSource_OnMetaObject((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
@@ -88,7 +88,7 @@ int32_t q_nmeasatelliteinfosource_minimum_update_interval(const void* self) {
     return QNmeaSatelliteInfoSource_MinimumUpdateInterval((QNmeaSatelliteInfoSource*)self);
 }
 
-void q_nmeasatelliteinfosource_on_minimum_update_interval(const void* self, int32_t (*callback)(const void*)) {
+void q_nmeasatelliteinfosource_on_minimum_update_interval(void* self, int32_t (*callback)(const void*)) {
     QNmeaSatelliteInfoSource_OnMinimumUpdateInterval((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
@@ -100,7 +100,7 @@ int32_t q_nmeasatelliteinfosource_error(const void* self) {
     return QNmeaSatelliteInfoSource_Error((QNmeaSatelliteInfoSource*)self);
 }
 
-void q_nmeasatelliteinfosource_on_error(const void* self, int32_t (*callback)(const void*)) {
+void q_nmeasatelliteinfosource_on_error(void* self, int32_t (*callback)(const void*)) {
     QNmeaSatelliteInfoSource_OnError((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
@@ -124,7 +124,7 @@ QVariant* q_nmeasatelliteinfosource_backend_property(const void* self, const cha
     return QNmeaSatelliteInfoSource_BackendProperty((QNmeaSatelliteInfoSource*)self, qstring(name));
 }
 
-void q_nmeasatelliteinfosource_on_backend_property(const void* self, QVariant* (*callback)(const void*, const char*)) {
+void q_nmeasatelliteinfosource_on_backend_property(void* self, QVariant* (*callback)(const void*, const char*)) {
     QNmeaSatelliteInfoSource_OnBackendProperty((QNmeaSatelliteInfoSource*)self, (intptr_t)callback);
 }
 

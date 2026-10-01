@@ -29,7 +29,7 @@ const QMetaObject* q_scrollarea_meta_object(const void* self) {
     return QScrollArea_MetaObject((QScrollArea*)self);
 }
 
-void q_scrollarea_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_scrollarea_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QScrollArea_OnMetaObject((QScrollArea*)self, (intptr_t)callback);
 }
 
@@ -92,7 +92,7 @@ QSize* q_scrollarea_size_hint(const void* self) {
     return QScrollArea_SizeHint((QScrollArea*)self);
 }
 
-void q_scrollarea_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_scrollarea_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QScrollArea_OnSizeHint((QScrollArea*)self, (intptr_t)callback);
 }
 
@@ -180,7 +180,7 @@ QSize* q_scrollarea_viewport_size_hint(const void* self) {
     return QScrollArea_ViewportSizeHint((QScrollArea*)self);
 }
 
-void q_scrollarea_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_scrollarea_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
     QScrollArea_OnViewportSizeHint((QScrollArea*)self, (intptr_t)callback);
 }
 
@@ -339,11 +339,11 @@ void q_scrollarea_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_scrollarea_as_q_paint_device(void* self) {
+QPaintDevice* q_scrollarea_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QScrollArea* q_scrollarea_from_q_paint_device(void* _qpaintdevice) {
+QScrollArea* q_scrollarea_from_q_paint_device(const void* _qpaintdevice) {
     return (QScrollArea*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1734,8 +1734,8 @@ QSize* q_scrollarea_super_minimum_size_hint(const void* self) {
     return QScrollArea_SuperMinimumSizeHint((QScrollArea*)self);
 }
 
-void q_scrollarea_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QScrollArea_OnMinimumSizeHint((const QScrollArea*)self, (intptr_t)callback);
+void q_scrollarea_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QScrollArea_OnMinimumSizeHint((QScrollArea*)self, (intptr_t)callback);
 }
 
 void q_scrollarea_setup_viewport(void* self, void* viewport) {
@@ -1926,8 +1926,8 @@ void q_scrollarea_super_init_style_option(const void* self, void* option) {
     QScrollArea_SuperInitStyleOption((QScrollArea*)self, (QStyleOptionFrame*)option);
 }
 
-void q_scrollarea_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QScrollArea_OnInitStyleOption((const QScrollArea*)self, (intptr_t)callback);
+void q_scrollarea_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QScrollArea_OnInitStyleOption((QScrollArea*)self, (intptr_t)callback);
 }
 
 int32_t q_scrollarea_dev_type(const void* self) {
@@ -1938,8 +1938,8 @@ int32_t q_scrollarea_super_dev_type(const void* self) {
     return QScrollArea_SuperDevType((QScrollArea*)self);
 }
 
-void q_scrollarea_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QScrollArea_OnDevType((const QScrollArea*)self, (intptr_t)callback);
+void q_scrollarea_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QScrollArea_OnDevType((QScrollArea*)self, (intptr_t)callback);
 }
 
 void q_scrollarea_set_visible(void* self, bool visible) {
@@ -1962,8 +1962,8 @@ int32_t q_scrollarea_super_height_for_width(const void* self, int param1) {
     return QScrollArea_SuperHeightForWidth((QScrollArea*)self, param1);
 }
 
-void q_scrollarea_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QScrollArea_OnHeightForWidth((const QScrollArea*)self, (intptr_t)callback);
+void q_scrollarea_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QScrollArea_OnHeightForWidth((QScrollArea*)self, (intptr_t)callback);
 }
 
 bool q_scrollarea_has_height_for_width(const void* self) {
@@ -1974,8 +1974,8 @@ bool q_scrollarea_super_has_height_for_width(const void* self) {
     return QScrollArea_SuperHasHeightForWidth((QScrollArea*)self);
 }
 
-void q_scrollarea_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QScrollArea_OnHasHeightForWidth((const QScrollArea*)self, (intptr_t)callback);
+void q_scrollarea_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QScrollArea_OnHasHeightForWidth((QScrollArea*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_scrollarea_paint_engine(const void* self) {
@@ -1986,8 +1986,8 @@ QPaintEngine* q_scrollarea_super_paint_engine(const void* self) {
     return QScrollArea_SuperPaintEngine((QScrollArea*)self);
 }
 
-void q_scrollarea_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QScrollArea_OnPaintEngine((const QScrollArea*)self, (intptr_t)callback);
+void q_scrollarea_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QScrollArea_OnPaintEngine((QScrollArea*)self, (intptr_t)callback);
 }
 
 void q_scrollarea_key_release_event(void* self, void* event) {
@@ -2142,8 +2142,8 @@ int32_t q_scrollarea_super_metric(const void* self, int32_t param1) {
     return QScrollArea_SuperMetric((QScrollArea*)self, param1);
 }
 
-void q_scrollarea_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QScrollArea_OnMetric((const QScrollArea*)self, (intptr_t)callback);
+void q_scrollarea_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QScrollArea_OnMetric((QScrollArea*)self, (intptr_t)callback);
 }
 
 void q_scrollarea_init_painter(const void* self, void* painter) {
@@ -2154,8 +2154,8 @@ void q_scrollarea_super_init_painter(const void* self, void* painter) {
     QScrollArea_SuperInitPainter((QScrollArea*)self, (QPainter*)painter);
 }
 
-void q_scrollarea_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QScrollArea_OnInitPainter((const QScrollArea*)self, (intptr_t)callback);
+void q_scrollarea_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QScrollArea_OnInitPainter((QScrollArea*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_scrollarea_redirected(const void* self, void* offset) {
@@ -2166,8 +2166,8 @@ QPaintDevice* q_scrollarea_super_redirected(const void* self, void* offset) {
     return QScrollArea_SuperRedirected((QScrollArea*)self, (QPoint*)offset);
 }
 
-void q_scrollarea_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QScrollArea_OnRedirected((const QScrollArea*)self, (intptr_t)callback);
+void q_scrollarea_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QScrollArea_OnRedirected((QScrollArea*)self, (intptr_t)callback);
 }
 
 QPainter* q_scrollarea_shared_painter(const void* self) {
@@ -2178,8 +2178,8 @@ QPainter* q_scrollarea_super_shared_painter(const void* self) {
     return QScrollArea_SuperSharedPainter((QScrollArea*)self);
 }
 
-void q_scrollarea_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QScrollArea_OnSharedPainter((const QScrollArea*)self, (intptr_t)callback);
+void q_scrollarea_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QScrollArea_OnSharedPainter((QScrollArea*)self, (intptr_t)callback);
 }
 
 void q_scrollarea_input_method_event(void* self, void* param1) {
@@ -2202,8 +2202,8 @@ QVariant* q_scrollarea_super_input_method_query(const void* self, int32_t param1
     return QScrollArea_SuperInputMethodQuery((QScrollArea*)self, param1);
 }
 
-void q_scrollarea_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QScrollArea_OnInputMethodQuery((const QScrollArea*)self, (intptr_t)callback);
+void q_scrollarea_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QScrollArea_OnInputMethodQuery((QScrollArea*)self, (intptr_t)callback);
 }
 
 void q_scrollarea_timer_event(void* self, void* event) {

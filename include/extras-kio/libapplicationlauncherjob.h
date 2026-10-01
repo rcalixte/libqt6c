@@ -900,10 +900,10 @@ const QMetaObject* k_io__applicationlauncherjob_super_meta_object(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__ApplicationLauncherJob*
+/// @param self KIO__ApplicationLauncherJob*
 /// @param callback const QMetaObject* func(KIO__ApplicationLauncherJob* self)
 ///
-void k_io__applicationlauncherjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_io__applicationlauncherjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// Inherited from KJob
 ///
@@ -1098,10 +1098,10 @@ const char* k_io__applicationlauncherjob_super_error_string(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__ApplicationLauncherJob*
+/// @param self KIO__ApplicationLauncherJob*
 /// @param callback const char* func(KIO__ApplicationLauncherJob* self)
 ///
-void k_io__applicationlauncherjob_on_error_string(const void* self, const char* (*callback)(const void*));
+void k_io__applicationlauncherjob_on_error_string(void* self, const char* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1395,10 +1395,10 @@ bool k_io__applicationlauncherjob_super_is_finished(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__ApplicationLauncherJob*
+/// @param self KIO__ApplicationLauncherJob*
 /// @param callback bool func(KIO__ApplicationLauncherJob* self)
 ///
-void k_io__applicationlauncherjob_on_is_finished(const void* self, bool (*callback)(const void*));
+void k_io__applicationlauncherjob_on_is_finished(void* self, bool (*callback)(const void*));
 
 /// Inherited from KJob
 ///
@@ -1758,10 +1758,10 @@ QObject* k_io__applicationlauncherjob_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__ApplicationLauncherJob*
+/// @param self KIO__ApplicationLauncherJob*
 /// @param callback QObject* func(KIO__ApplicationLauncherJob* self)
 ///
-void k_io__applicationlauncherjob_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_io__applicationlauncherjob_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1789,10 +1789,10 @@ int32_t k_io__applicationlauncherjob_super_sender_signal_index(const void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__ApplicationLauncherJob*
+/// @param self KIO__ApplicationLauncherJob*
 /// @param callback int32_t func(KIO__ApplicationLauncherJob* self)
 ///
-void k_io__applicationlauncherjob_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_io__applicationlauncherjob_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1822,10 +1822,10 @@ int32_t k_io__applicationlauncherjob_super_receivers(const void* self, const cha
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__ApplicationLauncherJob*
+/// @param self KIO__ApplicationLauncherJob*
 /// @param callback int32_t func(KIO__ApplicationLauncherJob* self, const char* signal)
 ///
-void k_io__applicationlauncherjob_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_io__applicationlauncherjob_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1855,10 +1855,10 @@ bool k_io__applicationlauncherjob_super_is_signal_connected(const void* self, co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KIO__ApplicationLauncherJob*
+/// @param self KIO__ApplicationLauncherJob*
 /// @param callback bool func(KIO__ApplicationLauncherJob* self, QMetaMethod* signal)
 ///
-void k_io__applicationlauncherjob_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_io__applicationlauncherjob_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KJob
 ///

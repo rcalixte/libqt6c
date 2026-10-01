@@ -139,7 +139,7 @@ bool k_configskeletonitem_is_equal(const void* self, const void* p) {
     return KConfigSkeletonItem_IsEqual((KConfigSkeletonItem*)self, (QVariant*)p);
 }
 
-void k_configskeletonitem_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_configskeletonitem_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KConfigSkeletonItem_OnIsEqual((KConfigSkeletonItem*)self, (intptr_t)callback);
 }
 
@@ -147,7 +147,7 @@ QVariant* k_configskeletonitem_property(const void* self) {
     return KConfigSkeletonItem_Property((KConfigSkeletonItem*)self);
 }
 
-void k_configskeletonitem_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_configskeletonitem_on_property(void* self, QVariant* (*callback)(const void*)) {
     KConfigSkeletonItem_OnProperty((KConfigSkeletonItem*)self, (intptr_t)callback);
 }
 
@@ -155,7 +155,7 @@ QVariant* k_configskeletonitem_min_value(const void* self) {
     return KConfigSkeletonItem_MinValue((KConfigSkeletonItem*)self);
 }
 
-void k_configskeletonitem_on_min_value(const void* self, QVariant* (*callback)(const void*)) {
+void k_configskeletonitem_on_min_value(void* self, QVariant* (*callback)(const void*)) {
     KConfigSkeletonItem_OnMinValue((KConfigSkeletonItem*)self, (intptr_t)callback);
 }
 
@@ -167,7 +167,7 @@ QVariant* k_configskeletonitem_max_value(const void* self) {
     return KConfigSkeletonItem_MaxValue((KConfigSkeletonItem*)self);
 }
 
-void k_configskeletonitem_on_max_value(const void* self, QVariant* (*callback)(const void*)) {
+void k_configskeletonitem_on_max_value(void* self, QVariant* (*callback)(const void*)) {
     KConfigSkeletonItem_OnMaxValue((KConfigSkeletonItem*)self, (intptr_t)callback);
 }
 
@@ -227,7 +227,7 @@ QVariant* k_propertyskeletonitem_property(const void* self) {
     return KPropertySkeletonItem_Property((KPropertySkeletonItem*)self);
 }
 
-void k_propertyskeletonitem_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_propertyskeletonitem_on_property(void* self, QVariant* (*callback)(const void*)) {
     KPropertySkeletonItem_OnProperty((KPropertySkeletonItem*)self, (intptr_t)callback);
 }
 
@@ -251,7 +251,7 @@ bool k_propertyskeletonitem_is_equal(const void* self, const void* p) {
     return KPropertySkeletonItem_IsEqual((KPropertySkeletonItem*)self, (QVariant*)p);
 }
 
-void k_propertyskeletonitem_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_propertyskeletonitem_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KPropertySkeletonItem_OnIsEqual((KPropertySkeletonItem*)self, (intptr_t)callback);
 }
 
@@ -429,8 +429,8 @@ QVariant* k_propertyskeletonitem_super_min_value(const void* self) {
     return KPropertySkeletonItem_SuperMinValue((KPropertySkeletonItem*)self);
 }
 
-void k_propertyskeletonitem_on_min_value(const void* self, QVariant* (*callback)(const void*)) {
-    KPropertySkeletonItem_OnMinValue((const KPropertySkeletonItem*)self, (intptr_t)callback);
+void k_propertyskeletonitem_on_min_value(void* self, QVariant* (*callback)(const void*)) {
+    KPropertySkeletonItem_OnMinValue((KPropertySkeletonItem*)self, (intptr_t)callback);
 }
 
 QVariant* k_propertyskeletonitem_max_value(const void* self) {
@@ -441,8 +441,8 @@ QVariant* k_propertyskeletonitem_super_max_value(const void* self) {
     return KPropertySkeletonItem_SuperMaxValue((KPropertySkeletonItem*)self);
 }
 
-void k_propertyskeletonitem_on_max_value(const void* self, QVariant* (*callback)(const void*)) {
-    KPropertySkeletonItem_OnMaxValue((const KPropertySkeletonItem*)self, (intptr_t)callback);
+void k_propertyskeletonitem_on_max_value(void* self, QVariant* (*callback)(const void*)) {
+    KPropertySkeletonItem_OnMaxValue((KPropertySkeletonItem*)self, (intptr_t)callback);
 }
 
 void k_propertyskeletonitem_read_immutability(void* self, const void* group) {
@@ -611,7 +611,7 @@ const QMetaObject* k_coreconfigskeleton_meta_object(const void* self) {
     return KCoreConfigSkeleton_MetaObject((KCoreConfigSkeleton*)self);
 }
 
-void k_coreconfigskeleton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_coreconfigskeleton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KCoreConfigSkeleton_OnMetaObject((KCoreConfigSkeleton*)self, (intptr_t)callback);
 }
 
@@ -1462,7 +1462,7 @@ bool k_coreconfigskeleton__itemstring_is_equal(const void* self, const void* p) 
     return KCoreConfigSkeleton__ItemString_IsEqual((KCoreConfigSkeleton__ItemString*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemstring_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemstring_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemString_OnIsEqual((KCoreConfigSkeleton__ItemString*)self, (intptr_t)callback);
 }
 
@@ -1474,7 +1474,7 @@ QVariant* k_coreconfigskeleton__itemstring_property(const void* self) {
     return KCoreConfigSkeleton__ItemString_Property((KCoreConfigSkeleton__ItemString*)self);
 }
 
-void k_coreconfigskeleton__itemstring_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemstring_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemString_OnProperty((KCoreConfigSkeleton__ItemString*)self, (intptr_t)callback);
 }
 
@@ -1538,8 +1538,8 @@ bool k_coreconfigskeleton__itempassword_super_is_equal(const void* self, const v
     return KCoreConfigSkeleton__ItemPassword_SuperIsEqual((KCoreConfigSkeleton__ItemPassword*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itempassword_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
-    KCoreConfigSkeleton__ItemPassword_OnIsEqual((const KCoreConfigSkeleton__ItemPassword*)self, (intptr_t)callback);
+void k_coreconfigskeleton__itempassword_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
+    KCoreConfigSkeleton__ItemPassword_OnIsEqual((KCoreConfigSkeleton__ItemPassword*)self, (intptr_t)callback);
 }
 
 QVariant* k_coreconfigskeleton__itempassword_property(const void* self) {
@@ -1550,8 +1550,8 @@ QVariant* k_coreconfigskeleton__itempassword_super_property(const void* self) {
     return KCoreConfigSkeleton__ItemPassword_SuperProperty((KCoreConfigSkeleton__ItemPassword*)self);
 }
 
-void k_coreconfigskeleton__itempassword_on_property(const void* self, QVariant* (*callback)(const void*)) {
-    KCoreConfigSkeleton__ItemPassword_OnProperty((const KCoreConfigSkeleton__ItemPassword*)self, (intptr_t)callback);
+void k_coreconfigskeleton__itempassword_on_property(void* self, QVariant* (*callback)(const void*)) {
+    KCoreConfigSkeleton__ItemPassword_OnProperty((KCoreConfigSkeleton__ItemPassword*)self, (intptr_t)callback);
 }
 
 void k_coreconfigskeleton__itempassword_delete(void* self) {
@@ -1610,8 +1610,8 @@ bool k_coreconfigskeleton__itempath_super_is_equal(const void* self, const void*
     return KCoreConfigSkeleton__ItemPath_SuperIsEqual((KCoreConfigSkeleton__ItemPath*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itempath_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
-    KCoreConfigSkeleton__ItemPath_OnIsEqual((const KCoreConfigSkeleton__ItemPath*)self, (intptr_t)callback);
+void k_coreconfigskeleton__itempath_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
+    KCoreConfigSkeleton__ItemPath_OnIsEqual((KCoreConfigSkeleton__ItemPath*)self, (intptr_t)callback);
 }
 
 QVariant* k_coreconfigskeleton__itempath_property(const void* self) {
@@ -1622,8 +1622,8 @@ QVariant* k_coreconfigskeleton__itempath_super_property(const void* self) {
     return KCoreConfigSkeleton__ItemPath_SuperProperty((KCoreConfigSkeleton__ItemPath*)self);
 }
 
-void k_coreconfigskeleton__itempath_on_property(const void* self, QVariant* (*callback)(const void*)) {
-    KCoreConfigSkeleton__ItemPath_OnProperty((const KCoreConfigSkeleton__ItemPath*)self, (intptr_t)callback);
+void k_coreconfigskeleton__itempath_on_property(void* self, QVariant* (*callback)(const void*)) {
+    KCoreConfigSkeleton__ItemPath_OnProperty((KCoreConfigSkeleton__ItemPath*)self, (intptr_t)callback);
 }
 
 void k_coreconfigskeleton__itempath_delete(void* self) {
@@ -1678,7 +1678,7 @@ bool k_coreconfigskeleton__itemurl_is_equal(const void* self, const void* p) {
     return KCoreConfigSkeleton__ItemUrl_IsEqual((KCoreConfigSkeleton__ItemUrl*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemurl_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemurl_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemUrl_OnIsEqual((KCoreConfigSkeleton__ItemUrl*)self, (intptr_t)callback);
 }
 
@@ -1690,7 +1690,7 @@ QVariant* k_coreconfigskeleton__itemurl_property(const void* self) {
     return KCoreConfigSkeleton__ItemUrl_Property((KCoreConfigSkeleton__ItemUrl*)self);
 }
 
-void k_coreconfigskeleton__itemurl_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemurl_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemUrl_OnProperty((KCoreConfigSkeleton__ItemUrl*)self, (intptr_t)callback);
 }
 
@@ -1738,7 +1738,7 @@ bool k_coreconfigskeleton__itemproperty_is_equal(const void* self, const void* p
     return KCoreConfigSkeleton__ItemProperty_IsEqual((KCoreConfigSkeleton__ItemProperty*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemproperty_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemproperty_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemProperty_OnIsEqual((KCoreConfigSkeleton__ItemProperty*)self, (intptr_t)callback);
 }
 
@@ -1750,7 +1750,7 @@ QVariant* k_coreconfigskeleton__itemproperty_property(const void* self) {
     return KCoreConfigSkeleton__ItemProperty_Property((KCoreConfigSkeleton__ItemProperty*)self);
 }
 
-void k_coreconfigskeleton__itemproperty_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemproperty_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemProperty_OnProperty((KCoreConfigSkeleton__ItemProperty*)self, (intptr_t)callback);
 }
 
@@ -1798,7 +1798,7 @@ bool k_coreconfigskeleton__itembool_is_equal(const void* self, const void* p) {
     return KCoreConfigSkeleton__ItemBool_IsEqual((KCoreConfigSkeleton__ItemBool*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itembool_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itembool_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemBool_OnIsEqual((KCoreConfigSkeleton__ItemBool*)self, (intptr_t)callback);
 }
 
@@ -1810,7 +1810,7 @@ QVariant* k_coreconfigskeleton__itembool_property(const void* self) {
     return KCoreConfigSkeleton__ItemBool_Property((KCoreConfigSkeleton__ItemBool*)self);
 }
 
-void k_coreconfigskeleton__itembool_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itembool_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemBool_OnProperty((KCoreConfigSkeleton__ItemBool*)self, (intptr_t)callback);
 }
 
@@ -1858,7 +1858,7 @@ bool k_coreconfigskeleton__itemint_is_equal(const void* self, const void* p) {
     return KCoreConfigSkeleton__ItemInt_IsEqual((KCoreConfigSkeleton__ItemInt*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemint_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemint_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemInt_OnIsEqual((KCoreConfigSkeleton__ItemInt*)self, (intptr_t)callback);
 }
 
@@ -1870,7 +1870,7 @@ QVariant* k_coreconfigskeleton__itemint_property(const void* self) {
     return KCoreConfigSkeleton__ItemInt_Property((KCoreConfigSkeleton__ItemInt*)self);
 }
 
-void k_coreconfigskeleton__itemint_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemint_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemInt_OnProperty((KCoreConfigSkeleton__ItemInt*)self, (intptr_t)callback);
 }
 
@@ -1882,7 +1882,7 @@ QVariant* k_coreconfigskeleton__itemint_min_value(const void* self) {
     return KCoreConfigSkeleton__ItemInt_MinValue((KCoreConfigSkeleton__ItemInt*)self);
 }
 
-void k_coreconfigskeleton__itemint_on_min_value(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemint_on_min_value(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemInt_OnMinValue((KCoreConfigSkeleton__ItemInt*)self, (intptr_t)callback);
 }
 
@@ -1894,7 +1894,7 @@ QVariant* k_coreconfigskeleton__itemint_max_value(const void* self) {
     return KCoreConfigSkeleton__ItemInt_MaxValue((KCoreConfigSkeleton__ItemInt*)self);
 }
 
-void k_coreconfigskeleton__itemint_on_max_value(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemint_on_max_value(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemInt_OnMaxValue((KCoreConfigSkeleton__ItemInt*)self, (intptr_t)callback);
 }
 
@@ -1942,7 +1942,7 @@ bool k_coreconfigskeleton__itemlonglong_is_equal(const void* self, const void* p
     return KCoreConfigSkeleton__ItemLongLong_IsEqual((KCoreConfigSkeleton__ItemLongLong*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemlonglong_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemlonglong_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemLongLong_OnIsEqual((KCoreConfigSkeleton__ItemLongLong*)self, (intptr_t)callback);
 }
 
@@ -1954,7 +1954,7 @@ QVariant* k_coreconfigskeleton__itemlonglong_property(const void* self) {
     return KCoreConfigSkeleton__ItemLongLong_Property((KCoreConfigSkeleton__ItemLongLong*)self);
 }
 
-void k_coreconfigskeleton__itemlonglong_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemlonglong_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemLongLong_OnProperty((KCoreConfigSkeleton__ItemLongLong*)self, (intptr_t)callback);
 }
 
@@ -1966,7 +1966,7 @@ QVariant* k_coreconfigskeleton__itemlonglong_min_value(const void* self) {
     return KCoreConfigSkeleton__ItemLongLong_MinValue((KCoreConfigSkeleton__ItemLongLong*)self);
 }
 
-void k_coreconfigskeleton__itemlonglong_on_min_value(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemlonglong_on_min_value(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemLongLong_OnMinValue((KCoreConfigSkeleton__ItemLongLong*)self, (intptr_t)callback);
 }
 
@@ -1978,7 +1978,7 @@ QVariant* k_coreconfigskeleton__itemlonglong_max_value(const void* self) {
     return KCoreConfigSkeleton__ItemLongLong_MaxValue((KCoreConfigSkeleton__ItemLongLong*)self);
 }
 
-void k_coreconfigskeleton__itemlonglong_on_max_value(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemlonglong_on_max_value(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemLongLong_OnMaxValue((KCoreConfigSkeleton__ItemLongLong*)self, (intptr_t)callback);
 }
 
@@ -2137,8 +2137,8 @@ bool k_coreconfigskeleton__itemenum_super_is_equal(const void* self, const void*
     return KCoreConfigSkeleton__ItemEnum_SuperIsEqual((KCoreConfigSkeleton__ItemEnum*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemenum_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
-    KCoreConfigSkeleton__ItemEnum_OnIsEqual((const KCoreConfigSkeleton__ItemEnum*)self, (intptr_t)callback);
+void k_coreconfigskeleton__itemenum_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
+    KCoreConfigSkeleton__ItemEnum_OnIsEqual((KCoreConfigSkeleton__ItemEnum*)self, (intptr_t)callback);
 }
 
 QVariant* k_coreconfigskeleton__itemenum_property(const void* self) {
@@ -2149,8 +2149,8 @@ QVariant* k_coreconfigskeleton__itemenum_super_property(const void* self) {
     return KCoreConfigSkeleton__ItemEnum_SuperProperty((KCoreConfigSkeleton__ItemEnum*)self);
 }
 
-void k_coreconfigskeleton__itemenum_on_property(const void* self, QVariant* (*callback)(const void*)) {
-    KCoreConfigSkeleton__ItemEnum_OnProperty((const KCoreConfigSkeleton__ItemEnum*)self, (intptr_t)callback);
+void k_coreconfigskeleton__itemenum_on_property(void* self, QVariant* (*callback)(const void*)) {
+    KCoreConfigSkeleton__ItemEnum_OnProperty((KCoreConfigSkeleton__ItemEnum*)self, (intptr_t)callback);
 }
 
 QVariant* k_coreconfigskeleton__itemenum_min_value(const void* self) {
@@ -2161,8 +2161,8 @@ QVariant* k_coreconfigskeleton__itemenum_super_min_value(const void* self) {
     return KCoreConfigSkeleton__ItemEnum_SuperMinValue((KCoreConfigSkeleton__ItemEnum*)self);
 }
 
-void k_coreconfigskeleton__itemenum_on_min_value(const void* self, QVariant* (*callback)(const void*)) {
-    KCoreConfigSkeleton__ItemEnum_OnMinValue((const KCoreConfigSkeleton__ItemEnum*)self, (intptr_t)callback);
+void k_coreconfigskeleton__itemenum_on_min_value(void* self, QVariant* (*callback)(const void*)) {
+    KCoreConfigSkeleton__ItemEnum_OnMinValue((KCoreConfigSkeleton__ItemEnum*)self, (intptr_t)callback);
 }
 
 QVariant* k_coreconfigskeleton__itemenum_max_value(const void* self) {
@@ -2173,8 +2173,8 @@ QVariant* k_coreconfigskeleton__itemenum_super_max_value(const void* self) {
     return KCoreConfigSkeleton__ItemEnum_SuperMaxValue((KCoreConfigSkeleton__ItemEnum*)self);
 }
 
-void k_coreconfigskeleton__itemenum_on_max_value(const void* self, QVariant* (*callback)(const void*)) {
-    KCoreConfigSkeleton__ItemEnum_OnMaxValue((const KCoreConfigSkeleton__ItemEnum*)self, (intptr_t)callback);
+void k_coreconfigskeleton__itemenum_on_max_value(void* self, QVariant* (*callback)(const void*)) {
+    KCoreConfigSkeleton__ItemEnum_OnMaxValue((KCoreConfigSkeleton__ItemEnum*)self, (intptr_t)callback);
 }
 
 void k_coreconfigskeleton__itemenum_delete(void* self) {
@@ -2217,7 +2217,7 @@ bool k_coreconfigskeleton__itemuint_is_equal(const void* self, const void* p) {
     return KCoreConfigSkeleton__ItemUInt_IsEqual((KCoreConfigSkeleton__ItemUInt*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemuint_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemuint_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemUInt_OnIsEqual((KCoreConfigSkeleton__ItemUInt*)self, (intptr_t)callback);
 }
 
@@ -2229,7 +2229,7 @@ QVariant* k_coreconfigskeleton__itemuint_property(const void* self) {
     return KCoreConfigSkeleton__ItemUInt_Property((KCoreConfigSkeleton__ItemUInt*)self);
 }
 
-void k_coreconfigskeleton__itemuint_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemuint_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemUInt_OnProperty((KCoreConfigSkeleton__ItemUInt*)self, (intptr_t)callback);
 }
 
@@ -2241,7 +2241,7 @@ QVariant* k_coreconfigskeleton__itemuint_min_value(const void* self) {
     return KCoreConfigSkeleton__ItemUInt_MinValue((KCoreConfigSkeleton__ItemUInt*)self);
 }
 
-void k_coreconfigskeleton__itemuint_on_min_value(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemuint_on_min_value(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemUInt_OnMinValue((KCoreConfigSkeleton__ItemUInt*)self, (intptr_t)callback);
 }
 
@@ -2253,7 +2253,7 @@ QVariant* k_coreconfigskeleton__itemuint_max_value(const void* self) {
     return KCoreConfigSkeleton__ItemUInt_MaxValue((KCoreConfigSkeleton__ItemUInt*)self);
 }
 
-void k_coreconfigskeleton__itemuint_on_max_value(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemuint_on_max_value(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemUInt_OnMaxValue((KCoreConfigSkeleton__ItemUInt*)self, (intptr_t)callback);
 }
 
@@ -2309,7 +2309,7 @@ bool k_coreconfigskeleton__itemulonglong_is_equal(const void* self, const void* 
     return KCoreConfigSkeleton__ItemULongLong_IsEqual((KCoreConfigSkeleton__ItemULongLong*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemulonglong_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemulonglong_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemULongLong_OnIsEqual((KCoreConfigSkeleton__ItemULongLong*)self, (intptr_t)callback);
 }
 
@@ -2321,7 +2321,7 @@ QVariant* k_coreconfigskeleton__itemulonglong_property(const void* self) {
     return KCoreConfigSkeleton__ItemULongLong_Property((KCoreConfigSkeleton__ItemULongLong*)self);
 }
 
-void k_coreconfigskeleton__itemulonglong_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemulonglong_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemULongLong_OnProperty((KCoreConfigSkeleton__ItemULongLong*)self, (intptr_t)callback);
 }
 
@@ -2333,7 +2333,7 @@ QVariant* k_coreconfigskeleton__itemulonglong_min_value(const void* self) {
     return KCoreConfigSkeleton__ItemULongLong_MinValue((KCoreConfigSkeleton__ItemULongLong*)self);
 }
 
-void k_coreconfigskeleton__itemulonglong_on_min_value(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemulonglong_on_min_value(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemULongLong_OnMinValue((KCoreConfigSkeleton__ItemULongLong*)self, (intptr_t)callback);
 }
 
@@ -2345,7 +2345,7 @@ QVariant* k_coreconfigskeleton__itemulonglong_max_value(const void* self) {
     return KCoreConfigSkeleton__ItemULongLong_MaxValue((KCoreConfigSkeleton__ItemULongLong*)self);
 }
 
-void k_coreconfigskeleton__itemulonglong_on_max_value(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemulonglong_on_max_value(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemULongLong_OnMaxValue((KCoreConfigSkeleton__ItemULongLong*)self, (intptr_t)callback);
 }
 
@@ -2401,7 +2401,7 @@ bool k_coreconfigskeleton__itemdouble_is_equal(const void* self, const void* p) 
     return KCoreConfigSkeleton__ItemDouble_IsEqual((KCoreConfigSkeleton__ItemDouble*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemdouble_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemdouble_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemDouble_OnIsEqual((KCoreConfigSkeleton__ItemDouble*)self, (intptr_t)callback);
 }
 
@@ -2413,7 +2413,7 @@ QVariant* k_coreconfigskeleton__itemdouble_property(const void* self) {
     return KCoreConfigSkeleton__ItemDouble_Property((KCoreConfigSkeleton__ItemDouble*)self);
 }
 
-void k_coreconfigskeleton__itemdouble_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemdouble_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemDouble_OnProperty((KCoreConfigSkeleton__ItemDouble*)self, (intptr_t)callback);
 }
 
@@ -2425,7 +2425,7 @@ QVariant* k_coreconfigskeleton__itemdouble_min_value(const void* self) {
     return KCoreConfigSkeleton__ItemDouble_MinValue((KCoreConfigSkeleton__ItemDouble*)self);
 }
 
-void k_coreconfigskeleton__itemdouble_on_min_value(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemdouble_on_min_value(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemDouble_OnMinValue((KCoreConfigSkeleton__ItemDouble*)self, (intptr_t)callback);
 }
 
@@ -2437,7 +2437,7 @@ QVariant* k_coreconfigskeleton__itemdouble_max_value(const void* self) {
     return KCoreConfigSkeleton__ItemDouble_MaxValue((KCoreConfigSkeleton__ItemDouble*)self);
 }
 
-void k_coreconfigskeleton__itemdouble_on_max_value(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemdouble_on_max_value(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemDouble_OnMaxValue((KCoreConfigSkeleton__ItemDouble*)self, (intptr_t)callback);
 }
 
@@ -2493,7 +2493,7 @@ bool k_coreconfigskeleton__itemrect_is_equal(const void* self, const void* p) {
     return KCoreConfigSkeleton__ItemRect_IsEqual((KCoreConfigSkeleton__ItemRect*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemrect_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemrect_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemRect_OnIsEqual((KCoreConfigSkeleton__ItemRect*)self, (intptr_t)callback);
 }
 
@@ -2505,7 +2505,7 @@ QVariant* k_coreconfigskeleton__itemrect_property(const void* self) {
     return KCoreConfigSkeleton__ItemRect_Property((KCoreConfigSkeleton__ItemRect*)self);
 }
 
-void k_coreconfigskeleton__itemrect_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemrect_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemRect_OnProperty((KCoreConfigSkeleton__ItemRect*)self, (intptr_t)callback);
 }
 
@@ -2553,7 +2553,7 @@ bool k_coreconfigskeleton__itemrectf_is_equal(const void* self, const void* p) {
     return KCoreConfigSkeleton__ItemRectF_IsEqual((KCoreConfigSkeleton__ItemRectF*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemrectf_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemrectf_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemRectF_OnIsEqual((KCoreConfigSkeleton__ItemRectF*)self, (intptr_t)callback);
 }
 
@@ -2565,7 +2565,7 @@ QVariant* k_coreconfigskeleton__itemrectf_property(const void* self) {
     return KCoreConfigSkeleton__ItemRectF_Property((KCoreConfigSkeleton__ItemRectF*)self);
 }
 
-void k_coreconfigskeleton__itemrectf_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemrectf_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemRectF_OnProperty((KCoreConfigSkeleton__ItemRectF*)self, (intptr_t)callback);
 }
 
@@ -2613,7 +2613,7 @@ bool k_coreconfigskeleton__itempoint_is_equal(const void* self, const void* p) {
     return KCoreConfigSkeleton__ItemPoint_IsEqual((KCoreConfigSkeleton__ItemPoint*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itempoint_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itempoint_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemPoint_OnIsEqual((KCoreConfigSkeleton__ItemPoint*)self, (intptr_t)callback);
 }
 
@@ -2625,7 +2625,7 @@ QVariant* k_coreconfigskeleton__itempoint_property(const void* self) {
     return KCoreConfigSkeleton__ItemPoint_Property((KCoreConfigSkeleton__ItemPoint*)self);
 }
 
-void k_coreconfigskeleton__itempoint_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itempoint_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemPoint_OnProperty((KCoreConfigSkeleton__ItemPoint*)self, (intptr_t)callback);
 }
 
@@ -2673,7 +2673,7 @@ bool k_coreconfigskeleton__itempointf_is_equal(const void* self, const void* p) 
     return KCoreConfigSkeleton__ItemPointF_IsEqual((KCoreConfigSkeleton__ItemPointF*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itempointf_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itempointf_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemPointF_OnIsEqual((KCoreConfigSkeleton__ItemPointF*)self, (intptr_t)callback);
 }
 
@@ -2685,7 +2685,7 @@ QVariant* k_coreconfigskeleton__itempointf_property(const void* self) {
     return KCoreConfigSkeleton__ItemPointF_Property((KCoreConfigSkeleton__ItemPointF*)self);
 }
 
-void k_coreconfigskeleton__itempointf_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itempointf_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemPointF_OnProperty((KCoreConfigSkeleton__ItemPointF*)self, (intptr_t)callback);
 }
 
@@ -2733,7 +2733,7 @@ bool k_coreconfigskeleton__itemsize_is_equal(const void* self, const void* p) {
     return KCoreConfigSkeleton__ItemSize_IsEqual((KCoreConfigSkeleton__ItemSize*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemsize_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemsize_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemSize_OnIsEqual((KCoreConfigSkeleton__ItemSize*)self, (intptr_t)callback);
 }
 
@@ -2745,7 +2745,7 @@ QVariant* k_coreconfigskeleton__itemsize_property(const void* self) {
     return KCoreConfigSkeleton__ItemSize_Property((KCoreConfigSkeleton__ItemSize*)self);
 }
 
-void k_coreconfigskeleton__itemsize_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemsize_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemSize_OnProperty((KCoreConfigSkeleton__ItemSize*)self, (intptr_t)callback);
 }
 
@@ -2793,7 +2793,7 @@ bool k_coreconfigskeleton__itemsizef_is_equal(const void* self, const void* p) {
     return KCoreConfigSkeleton__ItemSizeF_IsEqual((KCoreConfigSkeleton__ItemSizeF*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemsizef_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemsizef_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemSizeF_OnIsEqual((KCoreConfigSkeleton__ItemSizeF*)self, (intptr_t)callback);
 }
 
@@ -2805,7 +2805,7 @@ QVariant* k_coreconfigskeleton__itemsizef_property(const void* self) {
     return KCoreConfigSkeleton__ItemSizeF_Property((KCoreConfigSkeleton__ItemSizeF*)self);
 }
 
-void k_coreconfigskeleton__itemsizef_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemsizef_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemSizeF_OnProperty((KCoreConfigSkeleton__ItemSizeF*)self, (intptr_t)callback);
 }
 
@@ -2853,7 +2853,7 @@ bool k_coreconfigskeleton__itemdatetime_is_equal(const void* self, const void* p
     return KCoreConfigSkeleton__ItemDateTime_IsEqual((KCoreConfigSkeleton__ItemDateTime*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemdatetime_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemdatetime_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemDateTime_OnIsEqual((KCoreConfigSkeleton__ItemDateTime*)self, (intptr_t)callback);
 }
 
@@ -2865,7 +2865,7 @@ QVariant* k_coreconfigskeleton__itemdatetime_property(const void* self) {
     return KCoreConfigSkeleton__ItemDateTime_Property((KCoreConfigSkeleton__ItemDateTime*)self);
 }
 
-void k_coreconfigskeleton__itemdatetime_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemdatetime_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemDateTime_OnProperty((KCoreConfigSkeleton__ItemDateTime*)self, (intptr_t)callback);
 }
 
@@ -2947,7 +2947,7 @@ bool k_coreconfigskeleton__itemstringlist_is_equal(const void* self, const void*
     return KCoreConfigSkeleton__ItemStringList_IsEqual((KCoreConfigSkeleton__ItemStringList*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemstringlist_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemstringlist_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemStringList_OnIsEqual((KCoreConfigSkeleton__ItemStringList*)self, (intptr_t)callback);
 }
 
@@ -2959,7 +2959,7 @@ QVariant* k_coreconfigskeleton__itemstringlist_property(const void* self) {
     return KCoreConfigSkeleton__ItemStringList_Property((KCoreConfigSkeleton__ItemStringList*)self);
 }
 
-void k_coreconfigskeleton__itemstringlist_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemstringlist_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemStringList_OnProperty((KCoreConfigSkeleton__ItemStringList*)self, (intptr_t)callback);
 }
 
@@ -3057,8 +3057,8 @@ bool k_coreconfigskeleton__itempathlist_super_is_equal(const void* self, const v
     return KCoreConfigSkeleton__ItemPathList_SuperIsEqual((KCoreConfigSkeleton__ItemPathList*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itempathlist_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
-    KCoreConfigSkeleton__ItemPathList_OnIsEqual((const KCoreConfigSkeleton__ItemPathList*)self, (intptr_t)callback);
+void k_coreconfigskeleton__itempathlist_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
+    KCoreConfigSkeleton__ItemPathList_OnIsEqual((KCoreConfigSkeleton__ItemPathList*)self, (intptr_t)callback);
 }
 
 QVariant* k_coreconfigskeleton__itempathlist_property(const void* self) {
@@ -3069,8 +3069,8 @@ QVariant* k_coreconfigskeleton__itempathlist_super_property(const void* self) {
     return KCoreConfigSkeleton__ItemPathList_SuperProperty((KCoreConfigSkeleton__ItemPathList*)self);
 }
 
-void k_coreconfigskeleton__itempathlist_on_property(const void* self, QVariant* (*callback)(const void*)) {
-    KCoreConfigSkeleton__ItemPathList_OnProperty((const KCoreConfigSkeleton__ItemPathList*)self, (intptr_t)callback);
+void k_coreconfigskeleton__itempathlist_on_property(void* self, QVariant* (*callback)(const void*)) {
+    KCoreConfigSkeleton__ItemPathList_OnProperty((KCoreConfigSkeleton__ItemPathList*)self, (intptr_t)callback);
 }
 
 void k_coreconfigskeleton__itempathlist_delete(void* self) {
@@ -3125,7 +3125,7 @@ bool k_coreconfigskeleton__itemurllist_is_equal(const void* self, const void* p)
     return KCoreConfigSkeleton__ItemUrlList_IsEqual((KCoreConfigSkeleton__ItemUrlList*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemurllist_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemurllist_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemUrlList_OnIsEqual((KCoreConfigSkeleton__ItemUrlList*)self, (intptr_t)callback);
 }
 
@@ -3137,7 +3137,7 @@ QVariant* k_coreconfigskeleton__itemurllist_property(const void* self) {
     return KCoreConfigSkeleton__ItemUrlList_Property((KCoreConfigSkeleton__ItemUrlList*)self);
 }
 
-void k_coreconfigskeleton__itemurllist_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemurllist_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemUrlList_OnProperty((KCoreConfigSkeleton__ItemUrlList*)self, (intptr_t)callback);
 }
 
@@ -3185,7 +3185,7 @@ bool k_coreconfigskeleton__itemintlist_is_equal(const void* self, const void* p)
     return KCoreConfigSkeleton__ItemIntList_IsEqual((KCoreConfigSkeleton__ItemIntList*)self, (QVariant*)p);
 }
 
-void k_coreconfigskeleton__itemintlist_on_is_equal(const void* self, bool (*callback)(const void*, const void*)) {
+void k_coreconfigskeleton__itemintlist_on_is_equal(void* self, bool (*callback)(const void*, const void*)) {
     KCoreConfigSkeleton__ItemIntList_OnIsEqual((KCoreConfigSkeleton__ItemIntList*)self, (intptr_t)callback);
 }
 
@@ -3197,7 +3197,7 @@ QVariant* k_coreconfigskeleton__itemintlist_property(const void* self) {
     return KCoreConfigSkeleton__ItemIntList_Property((KCoreConfigSkeleton__ItemIntList*)self);
 }
 
-void k_coreconfigskeleton__itemintlist_on_property(const void* self, QVariant* (*callback)(const void*)) {
+void k_coreconfigskeleton__itemintlist_on_property(void* self, QVariant* (*callback)(const void*)) {
     KCoreConfigSkeleton__ItemIntList_OnProperty((KCoreConfigSkeleton__ItemIntList*)self, (intptr_t)callback);
 }
 

@@ -16,7 +16,7 @@ const QMetaObject* k_configdialogmanager_meta_object(const void* self) {
     return KConfigDialogManager_MetaObject((KConfigDialogManager*)self);
 }
 
-void k_configdialogmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_configdialogmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KConfigDialogManager_OnMetaObject((KConfigDialogManager*)self, (intptr_t)callback);
 }
 

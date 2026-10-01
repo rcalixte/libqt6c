@@ -181,10 +181,10 @@ QEvent* q_graphicssceneevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsSceneEvent*
+/// @param self QGraphicsSceneEvent*
 /// @param callback QEvent* func(QGraphicsSceneEvent* self)
 ///
-void q_graphicssceneevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void q_graphicssceneevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#dtor.QGraphicsSceneEvent)
 ///
@@ -579,10 +579,10 @@ QEvent* q_graphicsscenemouseevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsSceneMouseEvent*
+/// @param self QGraphicsSceneMouseEvent*
 /// @param callback QEvent* func(QGraphicsSceneMouseEvent* self)
 ///
-void q_graphicsscenemouseevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void q_graphicsscenemouseevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#dtor.QGraphicsSceneMouseEvent)
 ///
@@ -917,10 +917,10 @@ QEvent* q_graphicsscenewheelevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsSceneWheelEvent*
+/// @param self QGraphicsSceneWheelEvent*
 /// @param callback QEvent* func(QGraphicsSceneWheelEvent* self)
 ///
-void q_graphicsscenewheelevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void q_graphicsscenewheelevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#dtor.QGraphicsSceneWheelEvent)
 ///
@@ -1186,10 +1186,10 @@ QEvent* q_graphicsscenecontextmenuevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsSceneContextMenuEvent*
+/// @param self QGraphicsSceneContextMenuEvent*
 /// @param callback QEvent* func(QGraphicsSceneContextMenuEvent* self)
 ///
-void q_graphicsscenecontextmenuevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void q_graphicsscenecontextmenuevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#dtor.QGraphicsSceneContextMenuEvent)
 ///
@@ -1479,10 +1479,10 @@ QEvent* q_graphicsscenehoverevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsSceneHoverEvent*
+/// @param self QGraphicsSceneHoverEvent*
 /// @param callback QEvent* func(QGraphicsSceneHoverEvent* self)
 ///
-void q_graphicsscenehoverevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void q_graphicsscenehoverevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#dtor.QGraphicsSceneHoverEvent)
 ///
@@ -1705,10 +1705,10 @@ QEvent* q_graphicsscenehelpevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsSceneHelpEvent*
+/// @param self QGraphicsSceneHelpEvent*
 /// @param callback QEvent* func(QGraphicsSceneHelpEvent* self)
 ///
-void q_graphicsscenehelpevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void q_graphicsscenehelpevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehelpevent.html#dtor.QGraphicsSceneHelpEvent)
 ///
@@ -2051,10 +2051,10 @@ QEvent* q_graphicsscenedragdropevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsSceneDragDropEvent*
+/// @param self QGraphicsSceneDragDropEvent*
 /// @param callback QEvent* func(QGraphicsSceneDragDropEvent* self)
 ///
-void q_graphicsscenedragdropevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void q_graphicsscenedragdropevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#dtor.QGraphicsSceneDragDropEvent)
 ///
@@ -2269,10 +2269,10 @@ QEvent* q_graphicssceneresizeevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsSceneResizeEvent*
+/// @param self QGraphicsSceneResizeEvent*
 /// @param callback QEvent* func(QGraphicsSceneResizeEvent* self)
 ///
-void q_graphicssceneresizeevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void q_graphicssceneresizeevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneresizeevent.html#dtor.QGraphicsSceneResizeEvent)
 ///
@@ -2487,10 +2487,10 @@ QEvent* q_graphicsscenemoveevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsSceneMoveEvent*
+/// @param self QGraphicsSceneMoveEvent*
 /// @param callback QEvent* func(QGraphicsSceneMoveEvent* self)
 ///
-void q_graphicsscenemoveevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void q_graphicsscenemoveevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemoveevent.html#dtor.QGraphicsSceneMoveEvent)
 ///

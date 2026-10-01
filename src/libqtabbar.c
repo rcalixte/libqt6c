@@ -29,7 +29,7 @@ const QMetaObject* q_tabbar_meta_object(const void* self) {
     return QTabBar_MetaObject((QTabBar*)self);
 }
 
-void q_tabbar_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_tabbar_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTabBar_OnMetaObject((QTabBar*)self, (intptr_t)callback);
 }
 
@@ -201,7 +201,7 @@ QSize* q_tabbar_size_hint(const void* self) {
     return QTabBar_SizeHint((QTabBar*)self);
 }
 
-void q_tabbar_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_tabbar_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QTabBar_OnSizeHint((QTabBar*)self, (intptr_t)callback);
 }
 
@@ -213,7 +213,7 @@ QSize* q_tabbar_minimum_size_hint(const void* self) {
     return QTabBar_MinimumSizeHint((QTabBar*)self);
 }
 
-void q_tabbar_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_tabbar_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QTabBar_OnMinimumSizeHint((QTabBar*)self, (intptr_t)callback);
 }
 
@@ -368,7 +368,7 @@ QSize* q_tabbar_tab_size_hint(const void* self, int index) {
     return QTabBar_TabSizeHint((QTabBar*)self, index);
 }
 
-void q_tabbar_on_tab_size_hint(const void* self, QSize* (*callback)(const void*, int)) {
+void q_tabbar_on_tab_size_hint(void* self, QSize* (*callback)(const void*, int)) {
     QTabBar_OnTabSizeHint((QTabBar*)self, (intptr_t)callback);
 }
 
@@ -380,7 +380,7 @@ QSize* q_tabbar_minimum_tab_size_hint(const void* self, int index) {
     return QTabBar_MinimumTabSizeHint((QTabBar*)self, index);
 }
 
-void q_tabbar_on_minimum_tab_size_hint(const void* self, QSize* (*callback)(const void*, int)) {
+void q_tabbar_on_minimum_tab_size_hint(void* self, QSize* (*callback)(const void*, int)) {
     QTabBar_OnMinimumTabSizeHint((QTabBar*)self, (intptr_t)callback);
 }
 
@@ -584,7 +584,7 @@ void q_tabbar_init_style_option(const void* self, void* option, int tabIndex) {
     QTabBar_InitStyleOption((QTabBar*)self, (QStyleOptionTab*)option, tabIndex);
 }
 
-void q_tabbar_on_init_style_option(const void* self, void (*callback)(const void*, void*, int)) {
+void q_tabbar_on_init_style_option(void* self, void (*callback)(const void*, void*, int)) {
     QTabBar_OnInitStyleOption((QTabBar*)self, (intptr_t)callback);
 }
 
@@ -606,11 +606,11 @@ const char* q_tabbar_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_tabbar_as_q_paint_device(void* self) {
+QPaintDevice* q_tabbar_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QTabBar* q_tabbar_from_q_paint_device(void* _qpaintdevice) {
+QTabBar* q_tabbar_from_q_paint_device(const void* _qpaintdevice) {
     return (QTabBar*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2001,8 +2001,8 @@ int32_t q_tabbar_super_dev_type(const void* self) {
     return QTabBar_SuperDevType((QTabBar*)self);
 }
 
-void q_tabbar_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QTabBar_OnDevType((const QTabBar*)self, (intptr_t)callback);
+void q_tabbar_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QTabBar_OnDevType((QTabBar*)self, (intptr_t)callback);
 }
 
 void q_tabbar_set_visible(void* self, bool visible) {
@@ -2025,8 +2025,8 @@ int32_t q_tabbar_super_height_for_width(const void* self, int param1) {
     return QTabBar_SuperHeightForWidth((QTabBar*)self, param1);
 }
 
-void q_tabbar_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QTabBar_OnHeightForWidth((const QTabBar*)self, (intptr_t)callback);
+void q_tabbar_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QTabBar_OnHeightForWidth((QTabBar*)self, (intptr_t)callback);
 }
 
 bool q_tabbar_has_height_for_width(const void* self) {
@@ -2037,8 +2037,8 @@ bool q_tabbar_super_has_height_for_width(const void* self) {
     return QTabBar_SuperHasHeightForWidth((QTabBar*)self);
 }
 
-void q_tabbar_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QTabBar_OnHasHeightForWidth((const QTabBar*)self, (intptr_t)callback);
+void q_tabbar_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QTabBar_OnHasHeightForWidth((QTabBar*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_tabbar_paint_engine(const void* self) {
@@ -2049,8 +2049,8 @@ QPaintEngine* q_tabbar_super_paint_engine(const void* self) {
     return QTabBar_SuperPaintEngine((QTabBar*)self);
 }
 
-void q_tabbar_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QTabBar_OnPaintEngine((const QTabBar*)self, (intptr_t)callback);
+void q_tabbar_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QTabBar_OnPaintEngine((QTabBar*)self, (intptr_t)callback);
 }
 
 void q_tabbar_key_release_event(void* self, void* event) {
@@ -2241,8 +2241,8 @@ int32_t q_tabbar_super_metric(const void* self, int32_t param1) {
     return QTabBar_SuperMetric((QTabBar*)self, param1);
 }
 
-void q_tabbar_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QTabBar_OnMetric((const QTabBar*)self, (intptr_t)callback);
+void q_tabbar_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QTabBar_OnMetric((QTabBar*)self, (intptr_t)callback);
 }
 
 void q_tabbar_init_painter(const void* self, void* painter) {
@@ -2253,8 +2253,8 @@ void q_tabbar_super_init_painter(const void* self, void* painter) {
     QTabBar_SuperInitPainter((QTabBar*)self, (QPainter*)painter);
 }
 
-void q_tabbar_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QTabBar_OnInitPainter((const QTabBar*)self, (intptr_t)callback);
+void q_tabbar_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QTabBar_OnInitPainter((QTabBar*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_tabbar_redirected(const void* self, void* offset) {
@@ -2265,8 +2265,8 @@ QPaintDevice* q_tabbar_super_redirected(const void* self, void* offset) {
     return QTabBar_SuperRedirected((QTabBar*)self, (QPoint*)offset);
 }
 
-void q_tabbar_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QTabBar_OnRedirected((const QTabBar*)self, (intptr_t)callback);
+void q_tabbar_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QTabBar_OnRedirected((QTabBar*)self, (intptr_t)callback);
 }
 
 QPainter* q_tabbar_shared_painter(const void* self) {
@@ -2277,8 +2277,8 @@ QPainter* q_tabbar_super_shared_painter(const void* self) {
     return QTabBar_SuperSharedPainter((QTabBar*)self);
 }
 
-void q_tabbar_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QTabBar_OnSharedPainter((const QTabBar*)self, (intptr_t)callback);
+void q_tabbar_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QTabBar_OnSharedPainter((QTabBar*)self, (intptr_t)callback);
 }
 
 void q_tabbar_input_method_event(void* self, void* param1) {
@@ -2301,8 +2301,8 @@ QVariant* q_tabbar_super_input_method_query(const void* self, int32_t param1) {
     return QTabBar_SuperInputMethodQuery((QTabBar*)self, param1);
 }
 
-void q_tabbar_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QTabBar_OnInputMethodQuery((const QTabBar*)self, (intptr_t)callback);
+void q_tabbar_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QTabBar_OnInputMethodQuery((QTabBar*)self, (intptr_t)callback);
 }
 
 bool q_tabbar_focus_next_prev_child(void* self, bool next) {

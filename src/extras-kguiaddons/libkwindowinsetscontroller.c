@@ -18,7 +18,7 @@ const QMetaObject* k_windowinsetscontroller_meta_object(const void* self) {
     return KWindowInsetsController_MetaObject((KWindowInsetsController*)self);
 }
 
-void k_windowinsetscontroller_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_windowinsetscontroller_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KWindowInsetsController_OnMetaObject((KWindowInsetsController*)self, (intptr_t)callback);
 }
 

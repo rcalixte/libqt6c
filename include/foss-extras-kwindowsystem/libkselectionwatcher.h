@@ -128,10 +128,10 @@ const QMetaObject* k_selectionwatcher_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionWatcher*
+/// @param self KSelectionWatcher*
 /// @param callback const QMetaObject* func(const KSelectionWatcher* self)
 ///
-void k_selectionwatcher_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_selectionwatcher_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -962,10 +962,10 @@ QObject* k_selectionwatcher_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionWatcher*
+/// @param self KSelectionWatcher*
 /// @param callback QObject* func(KSelectionWatcher* self)
 ///
-void k_selectionwatcher_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_selectionwatcher_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -993,10 +993,10 @@ int32_t k_selectionwatcher_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionWatcher*
+/// @param self KSelectionWatcher*
 /// @param callback int32_t func(KSelectionWatcher* self)
 ///
-void k_selectionwatcher_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_selectionwatcher_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1026,10 +1026,10 @@ int32_t k_selectionwatcher_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionWatcher*
+/// @param self KSelectionWatcher*
 /// @param callback int32_t func(KSelectionWatcher* self, const char* signal)
 ///
-void k_selectionwatcher_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_selectionwatcher_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1059,10 +1059,10 @@ bool k_selectionwatcher_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionWatcher*
+/// @param self KSelectionWatcher*
 /// @param callback bool func(KSelectionWatcher* self, QMetaMethod* signal)
 ///
-void k_selectionwatcher_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_selectionwatcher_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

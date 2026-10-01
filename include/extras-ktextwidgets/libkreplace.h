@@ -51,10 +51,10 @@ const QMetaObject* k_replace_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KReplace*
+/// @param self KReplace*
 /// @param callback const QMetaObject* func(const KReplace* self)
 ///
-void k_replace_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_replace_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -186,10 +186,10 @@ bool k_replace_should_restart(const void* self, bool forceAsking, bool showNumMa
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KReplace*
+/// @param self KReplace*
 /// @param callback bool func(const KReplace* self, bool forceAsking, bool showNumMatches)
 ///
-void k_replace_on_should_restart(const void* self, bool (*callback)(const void*, bool, bool));
+void k_replace_on_should_restart(void* self, bool (*callback)(const void*, bool, bool));
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#shouldRestart)
 ///
@@ -211,10 +211,10 @@ void k_replace_display_final_dialog(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KReplace*
+/// @param self KReplace*
 /// @param callback void func(const KReplace* self)
 ///
-void k_replace_on_display_final_dialog(const void* self, void (*callback)(const void*));
+void k_replace_on_display_final_dialog(void* self, void (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#displayFinalDialog)
 ///
@@ -1273,10 +1273,10 @@ QWidget* k_replace_super_parent_widget(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KReplace*
+/// @param self KReplace*
 /// @param callback QWidget* func(KReplace* self)
 ///
-void k_replace_on_parent_widget(const void* self, QWidget* (*callback)(const void*));
+void k_replace_on_parent_widget(void* self, QWidget* (*callback)(const void*));
 
 /// Inherited from KFind
 ///
@@ -1304,10 +1304,10 @@ QWidget* k_replace_super_dialogs_parent(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KReplace*
+/// @param self KReplace*
 /// @param callback QWidget* func(KReplace* self)
 ///
-void k_replace_on_dialogs_parent(const void* self, QWidget* (*callback)(const void*));
+void k_replace_on_dialogs_parent(void* self, QWidget* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1335,10 +1335,10 @@ QObject* k_replace_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KReplace*
+/// @param self KReplace*
 /// @param callback QObject* func(KReplace* self)
 ///
-void k_replace_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_replace_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1366,10 +1366,10 @@ int32_t k_replace_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KReplace*
+/// @param self KReplace*
 /// @param callback int32_t func(KReplace* self)
 ///
-void k_replace_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_replace_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1399,10 +1399,10 @@ int32_t k_replace_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KReplace*
+/// @param self KReplace*
 /// @param callback int32_t func(KReplace* self, const char* signal)
 ///
-void k_replace_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_replace_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1432,10 +1432,10 @@ bool k_replace_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KReplace*
+/// @param self KReplace*
 /// @param callback bool func(KReplace* self, QMetaMethod* signal)
 ///
-void k_replace_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_replace_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

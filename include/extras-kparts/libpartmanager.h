@@ -35,10 +35,10 @@ const QMetaObject* k_parts__partmanager_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KParts__PartManager*
+/// @param self KParts__PartManager*
 /// @param callback const QMetaObject* func(const KParts__PartManager* self)
 ///
-void k_parts__partmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_parts__partmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -297,10 +297,10 @@ KParts__Part* k_parts__partmanager_active_part(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KParts__PartManager*
+/// @param self KParts__PartManager*
 /// @param callback KParts__Part* func(const KParts__PartManager* self)
 ///
-void k_parts__partmanager_on_active_part(const void* self, KParts__Part* (*callback)(const void*));
+void k_parts__partmanager_on_active_part(void* self, KParts__Part* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-partmanager.html#activePart)
 ///
@@ -320,10 +320,10 @@ QWidget* k_parts__partmanager_active_widget(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KParts__PartManager*
+/// @param self KParts__PartManager*
 /// @param callback QWidget* func(const KParts__PartManager* self)
 ///
-void k_parts__partmanager_on_active_widget(const void* self, QWidget* (*callback)(const void*));
+void k_parts__partmanager_on_active_widget(void* self, QWidget* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-partmanager.html#activeWidget)
 ///
@@ -1118,10 +1118,10 @@ QObject* k_parts__partmanager_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__PartManager*
+/// @param self KParts__PartManager*
 /// @param callback QObject* func(KParts__PartManager* self)
 ///
-void k_parts__partmanager_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_parts__partmanager_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1149,10 +1149,10 @@ int32_t k_parts__partmanager_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__PartManager*
+/// @param self KParts__PartManager*
 /// @param callback int32_t func(KParts__PartManager* self)
 ///
-void k_parts__partmanager_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_parts__partmanager_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1182,10 +1182,10 @@ int32_t k_parts__partmanager_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__PartManager*
+/// @param self KParts__PartManager*
 /// @param callback int32_t func(KParts__PartManager* self, const char* signal)
 ///
-void k_parts__partmanager_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_parts__partmanager_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1215,10 +1215,10 @@ bool k_parts__partmanager_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__PartManager*
+/// @param self KParts__PartManager*
 /// @param callback bool func(KParts__PartManager* self, QMetaMethod* signal)
 ///
-void k_parts__partmanager_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_parts__partmanager_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -19,7 +19,7 @@ const QMetaObject* k_texttranslator__translatormenu_meta_object(const void* self
     return TextTranslator__TranslatorMenu_MetaObject((TextTranslator__TranslatorMenu*)self);
 }
 
-void k_texttranslator__translatormenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_texttranslator__translatormenu_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextTranslator__TranslatorMenu_OnMetaObject((TextTranslator__TranslatorMenu*)self, (intptr_t)callback);
 }
 

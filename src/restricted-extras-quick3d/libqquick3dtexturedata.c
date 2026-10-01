@@ -20,7 +20,7 @@ const QMetaObject* q_quick3dtexturedata_meta_object(const void* self) {
     return QQuick3DTextureData_MetaObject((QQuick3DTextureData*)self);
 }
 
-void q_quick3dtexturedata_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quick3dtexturedata_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuick3DTextureData_OnMetaObject((QQuick3DTextureData*)self, (intptr_t)callback);
 }
 
@@ -136,11 +136,11 @@ const char* q_quick3dtexturedata_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QQmlParserStatus* q_quick3dtexturedata_as_q_qml_parser_status(void* self) {
+QQmlParserStatus* q_quick3dtexturedata_as_q_qml_parser_status(const void* self) {
     return QQuick3DObject_AsQQmlParserStatus((QQuick3DObject*)self);
 }
 
-QQuick3DTextureData* q_quick3dtexturedata_from_q_qml_parser_status(void* _qqmlparserstatus) {
+QQuick3DTextureData* q_quick3dtexturedata_from_q_qml_parser_status(const void* _qqmlparserstatus) {
     return (QQuick3DTextureData*)QQuick3DObject_FromQQmlParserStatus((QQmlParserStatus*)_qqmlparserstatus);
 }
 

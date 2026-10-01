@@ -23,7 +23,7 @@ const QMetaObject* k_nameandurlinputdialog_meta_object(const void* self) {
     return KNameAndUrlInputDialog_MetaObject((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_nameandurlinputdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KNameAndUrlInputDialog_OnMetaObject((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
@@ -146,11 +146,11 @@ void k_nameandurlinputdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_nameandurlinputdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_nameandurlinputdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KNameAndUrlInputDialog* k_nameandurlinputdialog_from_q_paint_device(void* _qpaintdevice) {
+KNameAndUrlInputDialog* k_nameandurlinputdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KNameAndUrlInputDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1553,8 +1553,8 @@ QSize* k_nameandurlinputdialog_super_size_hint(const void* self) {
     return KNameAndUrlInputDialog_SuperSizeHint((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KNameAndUrlInputDialog_OnSizeHint((const KNameAndUrlInputDialog*)self, (intptr_t)callback);
+void k_nameandurlinputdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KNameAndUrlInputDialog_OnSizeHint((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_nameandurlinputdialog_minimum_size_hint(const void* self) {
@@ -1565,8 +1565,8 @@ QSize* k_nameandurlinputdialog_super_minimum_size_hint(const void* self) {
     return KNameAndUrlInputDialog_SuperMinimumSizeHint((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KNameAndUrlInputDialog_OnMinimumSizeHint((const KNameAndUrlInputDialog*)self, (intptr_t)callback);
+void k_nameandurlinputdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KNameAndUrlInputDialog_OnMinimumSizeHint((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
 void k_nameandurlinputdialog_open(void* self) {
@@ -1709,8 +1709,8 @@ int32_t k_nameandurlinputdialog_super_dev_type(const void* self) {
     return KNameAndUrlInputDialog_SuperDevType((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KNameAndUrlInputDialog_OnDevType((const KNameAndUrlInputDialog*)self, (intptr_t)callback);
+void k_nameandurlinputdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KNameAndUrlInputDialog_OnDevType((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_nameandurlinputdialog_height_for_width(const void* self, int param1) {
@@ -1721,8 +1721,8 @@ int32_t k_nameandurlinputdialog_super_height_for_width(const void* self, int par
     return KNameAndUrlInputDialog_SuperHeightForWidth((KNameAndUrlInputDialog*)self, param1);
 }
 
-void k_nameandurlinputdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KNameAndUrlInputDialog_OnHeightForWidth((const KNameAndUrlInputDialog*)self, (intptr_t)callback);
+void k_nameandurlinputdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KNameAndUrlInputDialog_OnHeightForWidth((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
 bool k_nameandurlinputdialog_has_height_for_width(const void* self) {
@@ -1733,8 +1733,8 @@ bool k_nameandurlinputdialog_super_has_height_for_width(const void* self) {
     return KNameAndUrlInputDialog_SuperHasHeightForWidth((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KNameAndUrlInputDialog_OnHasHeightForWidth((const KNameAndUrlInputDialog*)self, (intptr_t)callback);
+void k_nameandurlinputdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KNameAndUrlInputDialog_OnHasHeightForWidth((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_nameandurlinputdialog_paint_engine(const void* self) {
@@ -1745,8 +1745,8 @@ QPaintEngine* k_nameandurlinputdialog_super_paint_engine(const void* self) {
     return KNameAndUrlInputDialog_SuperPaintEngine((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KNameAndUrlInputDialog_OnPaintEngine((const KNameAndUrlInputDialog*)self, (intptr_t)callback);
+void k_nameandurlinputdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KNameAndUrlInputDialog_OnPaintEngine((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
 bool k_nameandurlinputdialog_event(void* self, void* event) {
@@ -2021,8 +2021,8 @@ int32_t k_nameandurlinputdialog_super_metric(const void* self, int32_t param1) {
     return KNameAndUrlInputDialog_SuperMetric((KNameAndUrlInputDialog*)self, param1);
 }
 
-void k_nameandurlinputdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KNameAndUrlInputDialog_OnMetric((const KNameAndUrlInputDialog*)self, (intptr_t)callback);
+void k_nameandurlinputdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KNameAndUrlInputDialog_OnMetric((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
 void k_nameandurlinputdialog_init_painter(const void* self, void* painter) {
@@ -2033,8 +2033,8 @@ void k_nameandurlinputdialog_super_init_painter(const void* self, void* painter)
     KNameAndUrlInputDialog_SuperInitPainter((KNameAndUrlInputDialog*)self, (QPainter*)painter);
 }
 
-void k_nameandurlinputdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KNameAndUrlInputDialog_OnInitPainter((const KNameAndUrlInputDialog*)self, (intptr_t)callback);
+void k_nameandurlinputdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KNameAndUrlInputDialog_OnInitPainter((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_nameandurlinputdialog_redirected(const void* self, void* offset) {
@@ -2045,8 +2045,8 @@ QPaintDevice* k_nameandurlinputdialog_super_redirected(const void* self, void* o
     return KNameAndUrlInputDialog_SuperRedirected((KNameAndUrlInputDialog*)self, (QPoint*)offset);
 }
 
-void k_nameandurlinputdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KNameAndUrlInputDialog_OnRedirected((const KNameAndUrlInputDialog*)self, (intptr_t)callback);
+void k_nameandurlinputdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KNameAndUrlInputDialog_OnRedirected((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_nameandurlinputdialog_shared_painter(const void* self) {
@@ -2057,8 +2057,8 @@ QPainter* k_nameandurlinputdialog_super_shared_painter(const void* self) {
     return KNameAndUrlInputDialog_SuperSharedPainter((KNameAndUrlInputDialog*)self);
 }
 
-void k_nameandurlinputdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KNameAndUrlInputDialog_OnSharedPainter((const KNameAndUrlInputDialog*)self, (intptr_t)callback);
+void k_nameandurlinputdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KNameAndUrlInputDialog_OnSharedPainter((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
 void k_nameandurlinputdialog_input_method_event(void* self, void* param1) {
@@ -2081,8 +2081,8 @@ QVariant* k_nameandurlinputdialog_super_input_method_query(const void* self, int
     return KNameAndUrlInputDialog_SuperInputMethodQuery((KNameAndUrlInputDialog*)self, param1);
 }
 
-void k_nameandurlinputdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KNameAndUrlInputDialog_OnInputMethodQuery((const KNameAndUrlInputDialog*)self, (intptr_t)callback);
+void k_nameandurlinputdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KNameAndUrlInputDialog_OnInputMethodQuery((KNameAndUrlInputDialog*)self, (intptr_t)callback);
 }
 
 bool k_nameandurlinputdialog_focus_next_prev_child(void* self, bool next) {

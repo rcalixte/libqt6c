@@ -19,7 +19,7 @@ const QMetaObject* k_parts__partmanager_meta_object(const void* self) {
     return KParts__PartManager_MetaObject((KParts__PartManager*)self);
 }
 
-void k_parts__partmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_parts__partmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KParts__PartManager_OnMetaObject((KParts__PartManager*)self, (intptr_t)callback);
 }
 
@@ -154,7 +154,7 @@ KParts__Part* k_parts__partmanager_active_part(const void* self) {
     return KParts__PartManager_ActivePart((KParts__PartManager*)self);
 }
 
-void k_parts__partmanager_on_active_part(const void* self, KParts__Part* (*callback)(const void*)) {
+void k_parts__partmanager_on_active_part(void* self, KParts__Part* (*callback)(const void*)) {
     KParts__PartManager_OnActivePart((KParts__PartManager*)self, (intptr_t)callback);
 }
 
@@ -166,7 +166,7 @@ QWidget* k_parts__partmanager_active_widget(const void* self) {
     return KParts__PartManager_ActiveWidget((KParts__PartManager*)self);
 }
 
-void k_parts__partmanager_on_active_widget(const void* self, QWidget* (*callback)(const void*)) {
+void k_parts__partmanager_on_active_widget(void* self, QWidget* (*callback)(const void*)) {
     KParts__PartManager_OnActiveWidget((KParts__PartManager*)self, (intptr_t)callback);
 }
 

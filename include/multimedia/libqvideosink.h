@@ -32,10 +32,10 @@ const QMetaObject* q_videosink_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QVideoSink*
+/// @param self QVideoSink*
 /// @param callback const QMetaObject* func(const QVideoSink* self)
 ///
-void q_videosink_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_videosink_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -138,10 +138,10 @@ void q_videosink_video_frame_changed(const void* self, const void* frame);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#videoFrameChanged)
 ///
-/// @param self const QVideoSink*
+/// @param self QVideoSink*
 /// @param callback void func(const QVideoSink* self, QVideoFrame* frame)
 ///
-void q_videosink_on_video_frame_changed(const void* self, void (*callback)(const void*, const void*));
+void q_videosink_on_video_frame_changed(void* self, void (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#subtitleTextChanged)
 ///
@@ -152,10 +152,10 @@ void q_videosink_subtitle_text_changed(const void* self, const char* subtitleTex
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#subtitleTextChanged)
 ///
-/// @param self const QVideoSink*
+/// @param self QVideoSink*
 /// @param callback void func(const QVideoSink* self, const char* subtitleText)
 ///
-void q_videosink_on_subtitle_text_changed(const void* self, void (*callback)(const void*, const char*));
+void q_videosink_on_subtitle_text_changed(void* self, void (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideosink.html#videoSizeChanged)
 ///
@@ -895,10 +895,10 @@ QObject* q_videosink_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVideoSink*
+/// @param self QVideoSink*
 /// @param callback QObject* func(QVideoSink* self)
 ///
-void q_videosink_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_videosink_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -926,10 +926,10 @@ int32_t q_videosink_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVideoSink*
+/// @param self QVideoSink*
 /// @param callback int32_t func(QVideoSink* self)
 ///
-void q_videosink_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_videosink_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -959,10 +959,10 @@ int32_t q_videosink_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVideoSink*
+/// @param self QVideoSink*
 /// @param callback int32_t func(QVideoSink* self, const char* signal)
 ///
-void q_videosink_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_videosink_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -992,10 +992,10 @@ bool q_videosink_super_is_signal_connected(const void* self, const void* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVideoSink*
+/// @param self QVideoSink*
 /// @param callback bool func(QVideoSink* self, QMetaMethod* signal)
 ///
-void q_videosink_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_videosink_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

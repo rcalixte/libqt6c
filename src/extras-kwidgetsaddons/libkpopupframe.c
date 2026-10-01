@@ -27,7 +27,7 @@ const QMetaObject* k_popupframe_meta_object(const void* self) {
     return KPopupFrame_MetaObject((KPopupFrame*)self);
 }
 
-void k_popupframe_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_popupframe_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPopupFrame_OnMetaObject((KPopupFrame*)self, (intptr_t)callback);
 }
 
@@ -196,11 +196,11 @@ void k_popupframe_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_popupframe_as_q_paint_device(void* self) {
+QPaintDevice* k_popupframe_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KPopupFrame* k_popupframe_from_q_paint_device(void* _qpaintdevice) {
+KPopupFrame* k_popupframe_from_q_paint_device(const void* _qpaintdevice) {
     return (KPopupFrame*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1587,8 +1587,8 @@ QSize* k_popupframe_super_size_hint(const void* self) {
     return KPopupFrame_SuperSizeHint((KPopupFrame*)self);
 }
 
-void k_popupframe_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPopupFrame_OnSizeHint((const KPopupFrame*)self, (intptr_t)callback);
+void k_popupframe_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPopupFrame_OnSizeHint((KPopupFrame*)self, (intptr_t)callback);
 }
 
 bool k_popupframe_event(void* self, void* e) {
@@ -1635,8 +1635,8 @@ void k_popupframe_super_init_style_option(const void* self, void* option) {
     KPopupFrame_SuperInitStyleOption((KPopupFrame*)self, (QStyleOptionFrame*)option);
 }
 
-void k_popupframe_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KPopupFrame_OnInitStyleOption((const KPopupFrame*)self, (intptr_t)callback);
+void k_popupframe_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KPopupFrame_OnInitStyleOption((KPopupFrame*)self, (intptr_t)callback);
 }
 
 int32_t k_popupframe_dev_type(const void* self) {
@@ -1647,8 +1647,8 @@ int32_t k_popupframe_super_dev_type(const void* self) {
     return KPopupFrame_SuperDevType((KPopupFrame*)self);
 }
 
-void k_popupframe_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KPopupFrame_OnDevType((const KPopupFrame*)self, (intptr_t)callback);
+void k_popupframe_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KPopupFrame_OnDevType((KPopupFrame*)self, (intptr_t)callback);
 }
 
 void k_popupframe_set_visible(void* self, bool visible) {
@@ -1671,8 +1671,8 @@ QSize* k_popupframe_super_minimum_size_hint(const void* self) {
     return KPopupFrame_SuperMinimumSizeHint((KPopupFrame*)self);
 }
 
-void k_popupframe_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPopupFrame_OnMinimumSizeHint((const KPopupFrame*)self, (intptr_t)callback);
+void k_popupframe_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPopupFrame_OnMinimumSizeHint((KPopupFrame*)self, (intptr_t)callback);
 }
 
 int32_t k_popupframe_height_for_width(const void* self, int param1) {
@@ -1683,8 +1683,8 @@ int32_t k_popupframe_super_height_for_width(const void* self, int param1) {
     return KPopupFrame_SuperHeightForWidth((KPopupFrame*)self, param1);
 }
 
-void k_popupframe_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KPopupFrame_OnHeightForWidth((const KPopupFrame*)self, (intptr_t)callback);
+void k_popupframe_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KPopupFrame_OnHeightForWidth((KPopupFrame*)self, (intptr_t)callback);
 }
 
 bool k_popupframe_has_height_for_width(const void* self) {
@@ -1695,8 +1695,8 @@ bool k_popupframe_super_has_height_for_width(const void* self) {
     return KPopupFrame_SuperHasHeightForWidth((KPopupFrame*)self);
 }
 
-void k_popupframe_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KPopupFrame_OnHasHeightForWidth((const KPopupFrame*)self, (intptr_t)callback);
+void k_popupframe_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KPopupFrame_OnHasHeightForWidth((KPopupFrame*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_popupframe_paint_engine(const void* self) {
@@ -1707,8 +1707,8 @@ QPaintEngine* k_popupframe_super_paint_engine(const void* self) {
     return KPopupFrame_SuperPaintEngine((KPopupFrame*)self);
 }
 
-void k_popupframe_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KPopupFrame_OnPaintEngine((const KPopupFrame*)self, (intptr_t)callback);
+void k_popupframe_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KPopupFrame_OnPaintEngine((KPopupFrame*)self, (intptr_t)callback);
 }
 
 void k_popupframe_mouse_press_event(void* self, void* event) {
@@ -1971,8 +1971,8 @@ int32_t k_popupframe_super_metric(const void* self, int32_t param1) {
     return KPopupFrame_SuperMetric((KPopupFrame*)self, param1);
 }
 
-void k_popupframe_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KPopupFrame_OnMetric((const KPopupFrame*)self, (intptr_t)callback);
+void k_popupframe_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KPopupFrame_OnMetric((KPopupFrame*)self, (intptr_t)callback);
 }
 
 void k_popupframe_init_painter(const void* self, void* painter) {
@@ -1983,8 +1983,8 @@ void k_popupframe_super_init_painter(const void* self, void* painter) {
     KPopupFrame_SuperInitPainter((KPopupFrame*)self, (QPainter*)painter);
 }
 
-void k_popupframe_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KPopupFrame_OnInitPainter((const KPopupFrame*)self, (intptr_t)callback);
+void k_popupframe_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KPopupFrame_OnInitPainter((KPopupFrame*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_popupframe_redirected(const void* self, void* offset) {
@@ -1995,8 +1995,8 @@ QPaintDevice* k_popupframe_super_redirected(const void* self, void* offset) {
     return KPopupFrame_SuperRedirected((KPopupFrame*)self, (QPoint*)offset);
 }
 
-void k_popupframe_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KPopupFrame_OnRedirected((const KPopupFrame*)self, (intptr_t)callback);
+void k_popupframe_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KPopupFrame_OnRedirected((KPopupFrame*)self, (intptr_t)callback);
 }
 
 QPainter* k_popupframe_shared_painter(const void* self) {
@@ -2007,8 +2007,8 @@ QPainter* k_popupframe_super_shared_painter(const void* self) {
     return KPopupFrame_SuperSharedPainter((KPopupFrame*)self);
 }
 
-void k_popupframe_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KPopupFrame_OnSharedPainter((const KPopupFrame*)self, (intptr_t)callback);
+void k_popupframe_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KPopupFrame_OnSharedPainter((KPopupFrame*)self, (intptr_t)callback);
 }
 
 void k_popupframe_input_method_event(void* self, void* param1) {
@@ -2031,8 +2031,8 @@ QVariant* k_popupframe_super_input_method_query(const void* self, int32_t param1
     return KPopupFrame_SuperInputMethodQuery((KPopupFrame*)self, param1);
 }
 
-void k_popupframe_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KPopupFrame_OnInputMethodQuery((const KPopupFrame*)self, (intptr_t)callback);
+void k_popupframe_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KPopupFrame_OnInputMethodQuery((KPopupFrame*)self, (intptr_t)callback);
 }
 
 bool k_popupframe_focus_next_prev_child(void* self, bool next) {

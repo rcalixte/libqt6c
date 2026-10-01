@@ -22,7 +22,7 @@ const QMetaObject* q_scilexercoffeescript_meta_object(const void* self) {
     return QsciLexerCoffeeScript_MetaObject((QsciLexerCoffeeScript*)self);
 }
 
-void q_scilexercoffeescript_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_scilexercoffeescript_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QsciLexerCoffeeScript_OnMetaObject((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
@@ -504,8 +504,8 @@ int32_t q_scilexercoffeescript_super_lexer_id(const void* self) {
     return QsciLexerCoffeeScript_SuperLexerId((QsciLexerCoffeeScript*)self);
 }
 
-void q_scilexercoffeescript_on_lexer_id(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerCoffeeScript_OnLexerId((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_lexer_id(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerCoffeeScript_OnLexerId((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 const char* q_scilexercoffeescript_auto_completion_fillups(const void* self) {
@@ -516,8 +516,8 @@ const char* q_scilexercoffeescript_super_auto_completion_fillups(const void* sel
     return QsciLexerCoffeeScript_SuperAutoCompletionFillups((QsciLexerCoffeeScript*)self);
 }
 
-void q_scilexercoffeescript_on_auto_completion_fillups(const void* self, const char* (*callback)(const void*)) {
-    QsciLexerCoffeeScript_OnAutoCompletionFillups((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_auto_completion_fillups(void* self, const char* (*callback)(const void*)) {
+    QsciLexerCoffeeScript_OnAutoCompletionFillups((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexercoffeescript_block_lookback(const void* self) {
@@ -528,8 +528,8 @@ int32_t q_scilexercoffeescript_super_block_lookback(const void* self) {
     return QsciLexerCoffeeScript_SuperBlockLookback((QsciLexerCoffeeScript*)self);
 }
 
-void q_scilexercoffeescript_on_block_lookback(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerCoffeeScript_OnBlockLookback((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_block_lookback(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerCoffeeScript_OnBlockLookback((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 bool q_scilexercoffeescript_case_sensitive(const void* self) {
@@ -540,8 +540,8 @@ bool q_scilexercoffeescript_super_case_sensitive(const void* self) {
     return QsciLexerCoffeeScript_SuperCaseSensitive((QsciLexerCoffeeScript*)self);
 }
 
-void q_scilexercoffeescript_on_case_sensitive(const void* self, bool (*callback)(const void*)) {
-    QsciLexerCoffeeScript_OnCaseSensitive((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_case_sensitive(void* self, bool (*callback)(const void*)) {
+    QsciLexerCoffeeScript_OnCaseSensitive((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexercoffeescript_color(const void* self, int style) {
@@ -552,8 +552,8 @@ QColor* q_scilexercoffeescript_super_color(const void* self, int style) {
     return QsciLexerCoffeeScript_SuperColor((QsciLexerCoffeeScript*)self, style);
 }
 
-void q_scilexercoffeescript_on_color(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerCoffeeScript_OnColor((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_color(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerCoffeeScript_OnColor((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 bool q_scilexercoffeescript_eol_fill(const void* self, int style) {
@@ -564,8 +564,8 @@ bool q_scilexercoffeescript_super_eol_fill(const void* self, int style) {
     return QsciLexerCoffeeScript_SuperEolFill((QsciLexerCoffeeScript*)self, style);
 }
 
-void q_scilexercoffeescript_on_eol_fill(const void* self, bool (*callback)(const void*, int)) {
-    QsciLexerCoffeeScript_OnEolFill((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_eol_fill(void* self, bool (*callback)(const void*, int)) {
+    QsciLexerCoffeeScript_OnEolFill((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 QFont* q_scilexercoffeescript_font(const void* self, int style) {
@@ -576,8 +576,8 @@ QFont* q_scilexercoffeescript_super_font(const void* self, int style) {
     return QsciLexerCoffeeScript_SuperFont((QsciLexerCoffeeScript*)self, style);
 }
 
-void q_scilexercoffeescript_on_font(const void* self, QFont* (*callback)(const void*, int)) {
-    QsciLexerCoffeeScript_OnFont((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_font(void* self, QFont* (*callback)(const void*, int)) {
+    QsciLexerCoffeeScript_OnFont((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexercoffeescript_indentation_guide_view(const void* self) {
@@ -588,8 +588,8 @@ int32_t q_scilexercoffeescript_super_indentation_guide_view(const void* self) {
     return QsciLexerCoffeeScript_SuperIndentationGuideView((QsciLexerCoffeeScript*)self);
 }
 
-void q_scilexercoffeescript_on_indentation_guide_view(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerCoffeeScript_OnIndentationGuideView((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_indentation_guide_view(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerCoffeeScript_OnIndentationGuideView((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexercoffeescript_default_style(const void* self) {
@@ -600,8 +600,8 @@ int32_t q_scilexercoffeescript_super_default_style(const void* self) {
     return QsciLexerCoffeeScript_SuperDefaultStyle((QsciLexerCoffeeScript*)self);
 }
 
-void q_scilexercoffeescript_on_default_style(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerCoffeeScript_OnDefaultStyle((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_default_style(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerCoffeeScript_OnDefaultStyle((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexercoffeescript_paper(const void* self, int style) {
@@ -612,8 +612,8 @@ QColor* q_scilexercoffeescript_super_paper(const void* self, int style) {
     return QsciLexerCoffeeScript_SuperPaper((QsciLexerCoffeeScript*)self, style);
 }
 
-void q_scilexercoffeescript_on_paper(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerCoffeeScript_OnPaper((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_paper(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerCoffeeScript_OnPaper((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexercoffeescript_default_color2(const void* self, int style) {
@@ -624,8 +624,8 @@ QColor* q_scilexercoffeescript_super_default_color2(const void* self, int style)
     return QsciLexerCoffeeScript_SuperDefaultColor2((QsciLexerCoffeeScript*)self, style);
 }
 
-void q_scilexercoffeescript_on_default_color2(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerCoffeeScript_OnDefaultColor2((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_default_color2(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerCoffeeScript_OnDefaultColor2((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 QFont* q_scilexercoffeescript_default_font2(const void* self, int style) {
@@ -636,8 +636,8 @@ QFont* q_scilexercoffeescript_super_default_font2(const void* self, int style) {
     return QsciLexerCoffeeScript_SuperDefaultFont2((QsciLexerCoffeeScript*)self, style);
 }
 
-void q_scilexercoffeescript_on_default_font2(const void* self, QFont* (*callback)(const void*, int)) {
-    QsciLexerCoffeeScript_OnDefaultFont2((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_default_font2(void* self, QFont* (*callback)(const void*, int)) {
+    QsciLexerCoffeeScript_OnDefaultFont2((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexercoffeescript_default_paper2(const void* self, int style) {
@@ -648,8 +648,8 @@ QColor* q_scilexercoffeescript_super_default_paper2(const void* self, int style)
     return QsciLexerCoffeeScript_SuperDefaultPaper2((QsciLexerCoffeeScript*)self, style);
 }
 
-void q_scilexercoffeescript_on_default_paper2(const void* self, QColor* (*callback)(const void*, int)) {
-    QsciLexerCoffeeScript_OnDefaultPaper2((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_default_paper2(void* self, QColor* (*callback)(const void*, int)) {
+    QsciLexerCoffeeScript_OnDefaultPaper2((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 void q_scilexercoffeescript_set_editor(void* self, void* editor) {
@@ -672,8 +672,8 @@ int32_t q_scilexercoffeescript_super_style_bits_needed(const void* self) {
     return QsciLexerCoffeeScript_SuperStyleBitsNeeded((QsciLexerCoffeeScript*)self);
 }
 
-void q_scilexercoffeescript_on_style_bits_needed(const void* self, int32_t (*callback)(const void*)) {
-    QsciLexerCoffeeScript_OnStyleBitsNeeded((const QsciLexerCoffeeScript*)self, (intptr_t)callback);
+void q_scilexercoffeescript_on_style_bits_needed(void* self, int32_t (*callback)(const void*)) {
+    QsciLexerCoffeeScript_OnStyleBitsNeeded((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
 void q_scilexercoffeescript_set_auto_indent_style(void* self, int autoindentstyle) {

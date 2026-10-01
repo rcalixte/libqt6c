@@ -21,7 +21,7 @@ const QMetaObject* q_graphicsitemanimation_meta_object(const void* self) {
     return QGraphicsItemAnimation_MetaObject((QGraphicsItemAnimation*)self);
 }
 
-void q_graphicsitemanimation_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_graphicsitemanimation_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGraphicsItemAnimation_OnMetaObject((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 

@@ -45,7 +45,7 @@ const QMetaObject* q_pushbutton_meta_object(const void* self) {
     return QPushButton_MetaObject((QPushButton*)self);
 }
 
-void q_pushbutton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pushbutton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPushButton_OnMetaObject((QPushButton*)self, (intptr_t)callback);
 }
 
@@ -88,7 +88,7 @@ QSize* q_pushbutton_size_hint(const void* self) {
     return QPushButton_SizeHint((QPushButton*)self);
 }
 
-void q_pushbutton_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_pushbutton_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QPushButton_OnSizeHint((QPushButton*)self, (intptr_t)callback);
 }
 
@@ -100,7 +100,7 @@ QSize* q_pushbutton_minimum_size_hint(const void* self) {
     return QPushButton_MinimumSizeHint((QPushButton*)self);
 }
 
-void q_pushbutton_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_pushbutton_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QPushButton_OnMinimumSizeHint((QPushButton*)self, (intptr_t)callback);
 }
 
@@ -220,7 +220,7 @@ void q_pushbutton_init_style_option(const void* self, void* option) {
     QPushButton_InitStyleOption((QPushButton*)self, (QStyleOptionButton*)option);
 }
 
-void q_pushbutton_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_pushbutton_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QPushButton_OnInitStyleOption((QPushButton*)self, (intptr_t)callback);
 }
 
@@ -232,7 +232,7 @@ bool q_pushbutton_hit_button(const void* self, const void* pos) {
     return QPushButton_HitButton((QPushButton*)self, (QPoint*)pos);
 }
 
-void q_pushbutton_on_hit_button(const void* self, bool (*callback)(const void*, const void*)) {
+void q_pushbutton_on_hit_button(void* self, bool (*callback)(const void*, const void*)) {
     QPushButton_OnHitButton((QPushButton*)self, (intptr_t)callback);
 }
 
@@ -401,11 +401,11 @@ void q_pushbutton_on_clicked1(void* self, void (*callback)(void*, bool)) {
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_pushbutton_as_q_paint_device(void* self) {
+QPaintDevice* q_pushbutton_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QPushButton* q_pushbutton_from_q_paint_device(void* _qpaintdevice) {
+QPushButton* q_pushbutton_from_q_paint_device(const void* _qpaintdevice) {
     return (QPushButton*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1880,8 +1880,8 @@ int32_t q_pushbutton_super_dev_type(const void* self) {
     return QPushButton_SuperDevType((QPushButton*)self);
 }
 
-void q_pushbutton_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QPushButton_OnDevType((const QPushButton*)self, (intptr_t)callback);
+void q_pushbutton_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QPushButton_OnDevType((QPushButton*)self, (intptr_t)callback);
 }
 
 void q_pushbutton_set_visible(void* self, bool visible) {
@@ -1904,8 +1904,8 @@ int32_t q_pushbutton_super_height_for_width(const void* self, int param1) {
     return QPushButton_SuperHeightForWidth((QPushButton*)self, param1);
 }
 
-void q_pushbutton_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QPushButton_OnHeightForWidth((const QPushButton*)self, (intptr_t)callback);
+void q_pushbutton_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QPushButton_OnHeightForWidth((QPushButton*)self, (intptr_t)callback);
 }
 
 bool q_pushbutton_has_height_for_width(const void* self) {
@@ -1916,8 +1916,8 @@ bool q_pushbutton_super_has_height_for_width(const void* self) {
     return QPushButton_SuperHasHeightForWidth((QPushButton*)self);
 }
 
-void q_pushbutton_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QPushButton_OnHasHeightForWidth((const QPushButton*)self, (intptr_t)callback);
+void q_pushbutton_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QPushButton_OnHasHeightForWidth((QPushButton*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_pushbutton_paint_engine(const void* self) {
@@ -1928,8 +1928,8 @@ QPaintEngine* q_pushbutton_super_paint_engine(const void* self) {
     return QPushButton_SuperPaintEngine((QPushButton*)self);
 }
 
-void q_pushbutton_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QPushButton_OnPaintEngine((const QPushButton*)self, (intptr_t)callback);
+void q_pushbutton_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QPushButton_OnPaintEngine((QPushButton*)self, (intptr_t)callback);
 }
 
 void q_pushbutton_mouse_double_click_event(void* self, void* event) {
@@ -2144,8 +2144,8 @@ int32_t q_pushbutton_super_metric(const void* self, int32_t param1) {
     return QPushButton_SuperMetric((QPushButton*)self, param1);
 }
 
-void q_pushbutton_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QPushButton_OnMetric((const QPushButton*)self, (intptr_t)callback);
+void q_pushbutton_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QPushButton_OnMetric((QPushButton*)self, (intptr_t)callback);
 }
 
 void q_pushbutton_init_painter(const void* self, void* painter) {
@@ -2156,8 +2156,8 @@ void q_pushbutton_super_init_painter(const void* self, void* painter) {
     QPushButton_SuperInitPainter((QPushButton*)self, (QPainter*)painter);
 }
 
-void q_pushbutton_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QPushButton_OnInitPainter((const QPushButton*)self, (intptr_t)callback);
+void q_pushbutton_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QPushButton_OnInitPainter((QPushButton*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_pushbutton_redirected(const void* self, void* offset) {
@@ -2168,8 +2168,8 @@ QPaintDevice* q_pushbutton_super_redirected(const void* self, void* offset) {
     return QPushButton_SuperRedirected((QPushButton*)self, (QPoint*)offset);
 }
 
-void q_pushbutton_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QPushButton_OnRedirected((const QPushButton*)self, (intptr_t)callback);
+void q_pushbutton_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QPushButton_OnRedirected((QPushButton*)self, (intptr_t)callback);
 }
 
 QPainter* q_pushbutton_shared_painter(const void* self) {
@@ -2180,8 +2180,8 @@ QPainter* q_pushbutton_super_shared_painter(const void* self) {
     return QPushButton_SuperSharedPainter((QPushButton*)self);
 }
 
-void q_pushbutton_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QPushButton_OnSharedPainter((const QPushButton*)self, (intptr_t)callback);
+void q_pushbutton_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QPushButton_OnSharedPainter((QPushButton*)self, (intptr_t)callback);
 }
 
 void q_pushbutton_input_method_event(void* self, void* param1) {
@@ -2204,8 +2204,8 @@ QVariant* q_pushbutton_super_input_method_query(const void* self, int32_t param1
     return QPushButton_SuperInputMethodQuery((QPushButton*)self, param1);
 }
 
-void q_pushbutton_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QPushButton_OnInputMethodQuery((const QPushButton*)self, (intptr_t)callback);
+void q_pushbutton_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QPushButton_OnInputMethodQuery((QPushButton*)self, (intptr_t)callback);
 }
 
 bool q_pushbutton_focus_next_prev_child(void* self, bool next) {

@@ -167,10 +167,10 @@ QTableWidgetItem* q_tablewidgetitem_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTableWidgetItem*
+/// @param self QTableWidgetItem*
 /// @param callback QTableWidgetItem* func(const QTableWidgetItem* self)
 ///
-void q_tablewidgetitem_on_clone(const void* self, QTableWidgetItem* (*callback)(const void*));
+void q_tablewidgetitem_on_clone(void* self, QTableWidgetItem* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidgetitem.html#clone)
 ///
@@ -404,12 +404,12 @@ QVariant* q_tablewidgetitem_data(const void* self, int role);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTableWidgetItem*
+/// @param self QTableWidgetItem*
 /// @param callback QVariant* func(const QTableWidgetItem* self, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tablewidgetitem_on_data(const void* self, QVariant* (*callback)(const void*, int));
+void q_tablewidgetitem_on_data(void* self, QVariant* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidgetitem.html#data)
 ///
@@ -458,10 +458,10 @@ bool q_tablewidgetitem_operator_lesser(const void* self, const void* other);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTableWidgetItem*
+/// @param self QTableWidgetItem*
 /// @param callback bool func(const QTableWidgetItem* self, QTableWidgetItem* other)
 ///
-void q_tablewidgetitem_on_operator_lesser(const void* self, bool (*callback)(const void*, const void*));
+void q_tablewidgetitem_on_operator_lesser(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator-lt)
 ///
@@ -508,10 +508,10 @@ void q_tablewidgetitem_write(const void* self, void* out);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTableWidgetItem*
+/// @param self QTableWidgetItem*
 /// @param callback void func(const QTableWidgetItem* self, QDataStream* out)
 ///
-void q_tablewidgetitem_on_write(const void* self, void (*callback)(const void*, void*));
+void q_tablewidgetitem_on_write(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidgetitem.html#write)
 ///
@@ -586,10 +586,10 @@ const QMetaObject* q_tablewidget_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback const QMetaObject* func(const QTableWidget* self)
 ///
-void q_tablewidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_tablewidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1304,10 +1304,10 @@ const char** q_tablewidget_mime_types(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback const char** func(const QTableWidget* self)
 ///
-void q_tablewidget_on_mime_types(const void* self, const char** (*callback)(const void*));
+void q_tablewidget_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidget.html#mimeTypes)
 ///
@@ -1328,10 +1328,10 @@ QMimeData* q_tablewidget_mime_data(const void* self, libqt_list items);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QMimeData* func(const QTableWidget* self, libqt_list of QTableWidgetItem* items)
 ///
-void q_tablewidget_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void q_tablewidget_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidget.html#mimeData)
 ///
@@ -1385,10 +1385,10 @@ int32_t q_tablewidget_supported_drop_actions(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(const QTableWidget* self)
 ///
-void q_tablewidget_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void q_tablewidget_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidget.html#supportedDropActions)
 ///
@@ -2721,9 +2721,9 @@ void q_tablewidget_set_frame_rect(void* self, const void* frameRect);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QTableWidget*
+/// @param self const QTableWidget*
 ///
-QPaintDevice* q_tablewidget_as_q_paint_device(void* self);
+QPaintDevice* q_tablewidget_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2731,7 +2731,7 @@ QPaintDevice* q_tablewidget_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QTableWidget* q_tablewidget_from_q_paint_device(void* _qpaintdevice);
+QTableWidget* q_tablewidget_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -5807,12 +5807,12 @@ QRect* q_tablewidget_super_visual_rect(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QRect* func(QTableWidget* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tablewidget_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*));
+void q_tablewidget_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*));
 
 /// Inherited from QTableView
 ///
@@ -5877,12 +5877,12 @@ QModelIndex* q_tablewidget_super_index_at(const void* self, const void* p);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QModelIndex* func(QTableWidget* self, QPoint* p)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tablewidget_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_tablewidget_on_index_at(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QTableView
 ///
@@ -5947,10 +5947,10 @@ void q_tablewidget_super_init_view_item_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback void func(QTableWidget* self, QStyleOptionViewItem* option)
 ///
-void q_tablewidget_on_init_view_item_option(const void* self, void (*callback)(const void*, void*));
+void q_tablewidget_on_init_view_item_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QTableView
 ///
@@ -6044,10 +6044,10 @@ int32_t q_tablewidget_super_horizontal_offset(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(QTableWidget* self)
 ///
-void q_tablewidget_on_horizontal_offset(const void* self, int32_t (*callback)(const void*));
+void q_tablewidget_on_horizontal_offset(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QTableView
 ///
@@ -6075,10 +6075,10 @@ int32_t q_tablewidget_super_vertical_offset(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(QTableWidget* self)
 ///
-void q_tablewidget_on_vertical_offset(const void* self, int32_t (*callback)(const void*));
+void q_tablewidget_on_vertical_offset(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QTableView
 ///
@@ -6180,12 +6180,12 @@ QRegion* q_tablewidget_super_visual_region_for_selection(const void* self, const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QRegion* func(QTableWidget* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tablewidget_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*));
+void q_tablewidget_on_visual_region_for_selection(void* self, QRegion* (*callback)(const void*, const void*));
 
 /// Inherited from QTableView
 ///
@@ -6217,10 +6217,10 @@ libqt_list q_tablewidget_super_selected_indexes(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback libqt_list of QModelIndex* func(QTableWidget* self)
 ///
-void q_tablewidget_on_selected_indexes(const void* self, libqt_list (*callback)(const void*));
+void q_tablewidget_on_selected_indexes(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QTableView
 ///
@@ -6279,12 +6279,12 @@ QSize* q_tablewidget_super_viewport_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QSize* func(QTableWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tablewidget_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_tablewidget_on_viewport_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QTableView
 ///
@@ -6314,10 +6314,10 @@ int32_t q_tablewidget_super_size_hint_for_row(const void* self, int row);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(QTableWidget* self, int row)
 ///
-void q_tablewidget_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int));
+void q_tablewidget_on_size_hint_for_row(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QTableView
 ///
@@ -6347,10 +6347,10 @@ int32_t q_tablewidget_super_size_hint_for_column(const void* self, int column);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(QTableWidget* self, int column)
 ///
-void q_tablewidget_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int));
+void q_tablewidget_on_size_hint_for_column(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QTableView
 ///
@@ -6446,10 +6446,10 @@ bool q_tablewidget_super_is_index_hidden(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback bool func(QTableWidget* self, QModelIndex* index)
 ///
-void q_tablewidget_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*));
+void q_tablewidget_on_is_index_hidden(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QTableView
 ///
@@ -6582,10 +6582,10 @@ QAbstractItemDelegate* q_tablewidget_super_item_delegate_for_index(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QAbstractItemDelegate* func(QTableWidget* self, QModelIndex* index)
 ///
-void q_tablewidget_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
+void q_tablewidget_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6615,12 +6615,12 @@ QVariant* q_tablewidget_super_input_method_query(const void* self, int32_t query
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QVariant* func(QTableWidget* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tablewidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_tablewidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7095,10 +7095,10 @@ int32_t q_tablewidget_super_selection_command(const void* self, const void* inde
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(QTableWidget* self, QModelIndex* index, QEvent* event)
 ///
-void q_tablewidget_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*));
+void q_tablewidget_on_selection_command(void* self, int32_t (*callback)(const void*, const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7656,12 +7656,12 @@ QSize* q_tablewidget_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QSize* func(QTableWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tablewidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_tablewidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7689,12 +7689,12 @@ QSize* q_tablewidget_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QSize* func(QTableWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tablewidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_tablewidget_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7856,10 +7856,10 @@ void q_tablewidget_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback void func(QTableWidget* self, QStyleOptionFrame* option)
 ///
-void q_tablewidget_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_tablewidget_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -7887,10 +7887,10 @@ int32_t q_tablewidget_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(QTableWidget* self)
 ///
-void q_tablewidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_tablewidget_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -7953,10 +7953,10 @@ int32_t q_tablewidget_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(QTableWidget* self, int param1)
 ///
-void q_tablewidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_tablewidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -7984,10 +7984,10 @@ bool q_tablewidget_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback bool func(QTableWidget* self)
 ///
-void q_tablewidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_tablewidget_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -8015,10 +8015,10 @@ QPaintEngine* q_tablewidget_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QPaintEngine* func(QTableWidget* self)
 ///
-void q_tablewidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_tablewidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -8382,10 +8382,10 @@ int32_t q_tablewidget_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(QTableWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_tablewidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_tablewidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -8415,10 +8415,10 @@ void q_tablewidget_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback void func(QTableWidget* self, QPainter* painter)
 ///
-void q_tablewidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_tablewidget_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -8448,10 +8448,10 @@ QPaintDevice* q_tablewidget_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QPaintDevice* func(QTableWidget* self, QPoint* offset)
 ///
-void q_tablewidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_tablewidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -8479,10 +8479,10 @@ QPainter* q_tablewidget_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QPainter* func(QTableWidget* self)
 ///
-void q_tablewidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_tablewidget_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -8864,10 +8864,10 @@ int32_t q_tablewidget_super_state(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(QTableWidget* self)
 ///
-void q_tablewidget_on_state(const void* self, int32_t (*callback)(const void*));
+void q_tablewidget_on_state(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -9058,12 +9058,12 @@ QPoint* q_tablewidget_super_dirty_region_offset(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QPoint* func(QTableWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tablewidget_on_dirty_region_offset(const void* self, QPoint* (*callback)(const void*));
+void q_tablewidget_on_dirty_region_offset(void* self, QPoint* (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -9188,10 +9188,10 @@ int32_t q_tablewidget_super_drop_indicator_position(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(QTableWidget* self)
 ///
-void q_tablewidget_on_drop_indicator_position(const void* self, int32_t (*callback)(const void*));
+void q_tablewidget_on_drop_indicator_position(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -9258,12 +9258,12 @@ QMargins* q_tablewidget_super_viewport_margins(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QMargins* func(QTableWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tablewidget_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
+void q_tablewidget_on_viewport_margins(void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -9479,10 +9479,10 @@ QObject* q_tablewidget_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback QObject* func(QTableWidget* self)
 ///
-void q_tablewidget_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_tablewidget_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -9510,10 +9510,10 @@ int32_t q_tablewidget_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(QTableWidget* self)
 ///
-void q_tablewidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_tablewidget_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -9543,10 +9543,10 @@ int32_t q_tablewidget_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback int32_t func(QTableWidget* self, const char* signal)
 ///
-void q_tablewidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_tablewidget_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -9576,10 +9576,10 @@ bool q_tablewidget_super_is_signal_connected(const void* self, const void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback bool func(QTableWidget* self, QMetaMethod* signal)
 ///
-void q_tablewidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_tablewidget_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -9611,10 +9611,10 @@ double q_tablewidget_super_get_decoded_metric_f(const void* self, int32_t metric
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QTableWidget*
+/// @param self QTableWidget*
 /// @param callback double func(QTableWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_tablewidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_tablewidget_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

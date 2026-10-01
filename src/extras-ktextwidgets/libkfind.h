@@ -39,10 +39,10 @@ const QMetaObject* k_find_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KFind*
+/// @param self KFind*
 /// @param callback const QMetaObject* func(const KFind* self)
 ///
-void k_find_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_find_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -247,10 +247,10 @@ bool k_find_should_restart(const void* self, bool forceAsking, bool showNumMatch
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KFind*
+/// @param self KFind*
 /// @param callback bool func(const KFind* self, bool forceAsking, bool showNumMatches)
 ///
-void k_find_on_should_restart(const void* self, bool (*callback)(const void*, bool, bool));
+void k_find_on_should_restart(void* self, bool (*callback)(const void*, bool, bool));
 
 /// [Upstream resources](https://api.kde.org/kfind.html#shouldRestart)
 ///
@@ -283,10 +283,10 @@ void k_find_display_final_dialog(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KFind*
+/// @param self KFind*
 /// @param callback void func(const KFind* self)
 ///
-void k_find_on_display_final_dialog(const void* self, void (*callback)(const void*));
+void k_find_on_display_final_dialog(void* self, void (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kfind.html#displayFinalDialog)
 ///
@@ -1146,10 +1146,10 @@ QObject* k_find_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFind*
+/// @param self KFind*
 /// @param callback QObject* func(KFind* self)
 ///
-void k_find_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_find_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1177,10 +1177,10 @@ int32_t k_find_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFind*
+/// @param self KFind*
 /// @param callback int32_t func(KFind* self)
 ///
-void k_find_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_find_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1210,10 +1210,10 @@ int32_t k_find_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFind*
+/// @param self KFind*
 /// @param callback int32_t func(KFind* self, const char* signal)
 ///
-void k_find_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_find_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1243,10 +1243,10 @@ bool k_find_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KFind*
+/// @param self KFind*
 /// @param callback bool func(KFind* self, QMetaMethod* signal)
 ///
-void k_find_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_find_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -29,7 +29,7 @@ const QMetaObject* k_pixmapsequenceoverlaypainter_meta_object(const void* self) 
     return KPixmapSequenceOverlayPainter_MetaObject((KPixmapSequenceOverlayPainter*)self);
 }
 
-void k_pixmapsequenceoverlaypainter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_pixmapsequenceoverlaypainter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPixmapSequenceOverlayPainter_OnMetaObject((KPixmapSequenceOverlayPainter*)self, (intptr_t)callback);
 }
 

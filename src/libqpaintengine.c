@@ -314,7 +314,7 @@ QPoint* q_paintengine_coordinate_offset(const void* self) {
     return QPaintEngine_CoordinateOffset((QPaintEngine*)self);
 }
 
-void q_paintengine_on_coordinate_offset(const void* self, QPoint* (*callback)(const void*)) {
+void q_paintengine_on_coordinate_offset(void* self, QPoint* (*callback)(const void*)) {
     QPaintEngine_OnCoordinateOffset((QPaintEngine*)self, (intptr_t)callback);
 }
 
@@ -326,7 +326,7 @@ int32_t q_paintengine_type(const void* self) {
     return QPaintEngine_Type((QPaintEngine*)self);
 }
 
-void q_paintengine_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_paintengine_on_type(void* self, int32_t (*callback)(const void*)) {
     QPaintEngine_OnType((QPaintEngine*)self, (intptr_t)callback);
 }
 

@@ -32,10 +32,10 @@ const QMetaObject* q_spinbox_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback const QMetaObject* func(const QSpinBox* self)
 ///
-void q_spinbox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_spinbox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -253,10 +253,10 @@ int32_t q_spinbox_validate(const void* self, const char* input, int* pos);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback int32_t func(const QSpinBox* self, const char* input, int* pos)
 ///
-void q_spinbox_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*));
+void q_spinbox_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#validate)
 ///
@@ -281,10 +281,10 @@ int32_t q_spinbox_value_from_text(const void* self, const char* text);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback int32_t func(const QSpinBox* self, const char* text)
 ///
-void q_spinbox_on_value_from_text(const void* self, int32_t (*callback)(const void*, const char*));
+void q_spinbox_on_value_from_text(void* self, int32_t (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#valueFromText)
 ///
@@ -308,10 +308,10 @@ const char* q_spinbox_text_from_value(const void* self, int val);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback const char* func(const QSpinBox* self, int val)
 ///
-void q_spinbox_on_text_from_value(const void* self, const char* (*callback)(const void*, int));
+void q_spinbox_on_text_from_value(void* self, const char* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#textFromValue)
 ///
@@ -333,10 +333,10 @@ void q_spinbox_fixup(const void* self, const char* str);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback void func(const QSpinBox* self, const char* str)
 ///
-void q_spinbox_on_fixup(const void* self, void (*callback)(const void*, const char*));
+void q_spinbox_on_fixup(void* self, void (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspinbox.html#fixup)
 ///
@@ -650,9 +650,9 @@ void q_spinbox_on_editing_finished(void* self, void (*callback)(void*));
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QSpinBox*
+/// @param self const QSpinBox*
 ///
-QPaintDevice* q_spinbox_as_q_paint_device(void* self);
+QPaintDevice* q_spinbox_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -660,7 +660,7 @@ QPaintDevice* q_spinbox_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QSpinBox* q_spinbox_from_q_paint_device(void* _qpaintdevice);
+QSpinBox* q_spinbox_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3645,12 +3645,12 @@ QSize* q_spinbox_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback QSize* func(QSpinBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_spinbox_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_spinbox_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3678,12 +3678,12 @@ QSize* q_spinbox_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback QSize* func(QSpinBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_spinbox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_spinbox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3713,12 +3713,12 @@ QVariant* q_spinbox_super_input_method_query(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback QVariant* func(QSpinBox* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_spinbox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_spinbox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4340,10 +4340,10 @@ void q_spinbox_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback void func(QSpinBox* self, QStyleOptionSpinBox* option)
 ///
-void q_spinbox_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_spinbox_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4375,10 +4375,10 @@ int32_t q_spinbox_super_step_enabled(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback int32_t func(QSpinBox* self)
 ///
-void q_spinbox_on_step_enabled(const void* self, int32_t (*callback)(const void*));
+void q_spinbox_on_step_enabled(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4406,10 +4406,10 @@ int32_t q_spinbox_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback int32_t func(QSpinBox* self)
 ///
-void q_spinbox_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_spinbox_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4472,10 +4472,10 @@ int32_t q_spinbox_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback int32_t func(QSpinBox* self, int param1)
 ///
-void q_spinbox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_spinbox_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4503,10 +4503,10 @@ bool q_spinbox_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback bool func(QSpinBox* self)
 ///
-void q_spinbox_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_spinbox_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4534,10 +4534,10 @@ QPaintEngine* q_spinbox_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback QPaintEngine* func(QSpinBox* self)
 ///
-void q_spinbox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_spinbox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4934,10 +4934,10 @@ int32_t q_spinbox_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback int32_t func(QSpinBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_spinbox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_spinbox_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4967,10 +4967,10 @@ void q_spinbox_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback void func(QSpinBox* self, QPainter* painter)
 ///
-void q_spinbox_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_spinbox_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5000,10 +5000,10 @@ QPaintDevice* q_spinbox_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback QPaintDevice* func(QSpinBox* self, QPoint* offset)
 ///
-void q_spinbox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_spinbox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5031,10 +5031,10 @@ QPainter* q_spinbox_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback QPainter* func(QSpinBox* self)
 ///
-void q_spinbox_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_spinbox_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5295,10 +5295,10 @@ QLineEdit* q_spinbox_super_line_edit(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback QLineEdit* func(QSpinBox* self)
 ///
-void q_spinbox_on_line_edit(const void* self, QLineEdit* (*callback)(const void*));
+void q_spinbox_on_line_edit(void* self, QLineEdit* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5514,10 +5514,10 @@ QObject* q_spinbox_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback QObject* func(QSpinBox* self)
 ///
-void q_spinbox_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_spinbox_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5545,10 +5545,10 @@ int32_t q_spinbox_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback int32_t func(QSpinBox* self)
 ///
-void q_spinbox_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_spinbox_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5578,10 +5578,10 @@ int32_t q_spinbox_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback int32_t func(QSpinBox* self, const char* signal)
 ///
-void q_spinbox_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_spinbox_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5611,10 +5611,10 @@ bool q_spinbox_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback bool func(QSpinBox* self, QMetaMethod* signal)
 ///
-void q_spinbox_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_spinbox_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5646,10 +5646,10 @@ double q_spinbox_super_get_decoded_metric_f(const void* self, int32_t metricA, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpinBox*
+/// @param self QSpinBox*
 /// @param callback double func(QSpinBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_spinbox_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_spinbox_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -5694,10 +5694,10 @@ const QMetaObject* q_doublespinbox_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback const QMetaObject* func(const QDoubleSpinBox* self)
 ///
-void q_doublespinbox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_doublespinbox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -5890,10 +5890,10 @@ int32_t q_doublespinbox_validate(const void* self, const char* input, int* pos);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback int32_t func(const QDoubleSpinBox* self, const char* input, int* pos)
 ///
-void q_doublespinbox_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*));
+void q_doublespinbox_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdoublespinbox.html#validate)
 ///
@@ -5918,10 +5918,10 @@ double q_doublespinbox_value_from_text(const void* self, const char* text);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback double func(const QDoubleSpinBox* self, const char* text)
 ///
-void q_doublespinbox_on_value_from_text(const void* self, double (*callback)(const void*, const char*));
+void q_doublespinbox_on_value_from_text(void* self, double (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdoublespinbox.html#valueFromText)
 ///
@@ -5945,10 +5945,10 @@ const char* q_doublespinbox_text_from_value(const void* self, double val);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback const char* func(const QDoubleSpinBox* self, double val)
 ///
-void q_doublespinbox_on_text_from_value(const void* self, const char* (*callback)(const void*, double));
+void q_doublespinbox_on_text_from_value(void* self, const char* (*callback)(const void*, double));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdoublespinbox.html#textFromValue)
 ///
@@ -5970,10 +5970,10 @@ void q_doublespinbox_fixup(const void* self, const char* str);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback void func(const QDoubleSpinBox* self, const char* str)
 ///
-void q_doublespinbox_on_fixup(const void* self, void (*callback)(const void*, const char*));
+void q_doublespinbox_on_fixup(void* self, void (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdoublespinbox.html#fixup)
 ///
@@ -6287,9 +6287,9 @@ void q_doublespinbox_on_editing_finished(void* self, void (*callback)(void*));
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QDoubleSpinBox*
+/// @param self const QDoubleSpinBox*
 ///
-QPaintDevice* q_doublespinbox_as_q_paint_device(void* self);
+QPaintDevice* q_doublespinbox_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6297,7 +6297,7 @@ QPaintDevice* q_doublespinbox_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QDoubleSpinBox* q_doublespinbox_from_q_paint_device(void* _qpaintdevice);
+QDoubleSpinBox* q_doublespinbox_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -9282,12 +9282,12 @@ QSize* q_doublespinbox_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback QSize* func(QDoubleSpinBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_doublespinbox_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_doublespinbox_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -9315,12 +9315,12 @@ QSize* q_doublespinbox_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback QSize* func(QDoubleSpinBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_doublespinbox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_doublespinbox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -9383,12 +9383,12 @@ QVariant* q_doublespinbox_super_input_method_query(const void* self, int32_t par
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback QVariant* func(QDoubleSpinBox* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_doublespinbox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_doublespinbox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10010,10 +10010,10 @@ void q_doublespinbox_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback void func(QDoubleSpinBox* self, QStyleOptionSpinBox* option)
 ///
-void q_doublespinbox_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_doublespinbox_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10045,10 +10045,10 @@ int32_t q_doublespinbox_super_step_enabled(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback int32_t func(QDoubleSpinBox* self)
 ///
-void q_doublespinbox_on_step_enabled(const void* self, int32_t (*callback)(const void*));
+void q_doublespinbox_on_step_enabled(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10076,10 +10076,10 @@ int32_t q_doublespinbox_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback int32_t func(QDoubleSpinBox* self)
 ///
-void q_doublespinbox_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_doublespinbox_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10142,10 +10142,10 @@ int32_t q_doublespinbox_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback int32_t func(QDoubleSpinBox* self, int param1)
 ///
-void q_doublespinbox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_doublespinbox_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -10173,10 +10173,10 @@ bool q_doublespinbox_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback bool func(QDoubleSpinBox* self)
 ///
-void q_doublespinbox_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_doublespinbox_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10204,10 +10204,10 @@ QPaintEngine* q_doublespinbox_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback QPaintEngine* func(QDoubleSpinBox* self)
 ///
-void q_doublespinbox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_doublespinbox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10604,10 +10604,10 @@ int32_t q_doublespinbox_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback int32_t func(QDoubleSpinBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_doublespinbox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_doublespinbox_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -10637,10 +10637,10 @@ void q_doublespinbox_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback void func(QDoubleSpinBox* self, QPainter* painter)
 ///
-void q_doublespinbox_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_doublespinbox_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -10670,10 +10670,10 @@ QPaintDevice* q_doublespinbox_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback QPaintDevice* func(QDoubleSpinBox* self, QPoint* offset)
 ///
-void q_doublespinbox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_doublespinbox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -10701,10 +10701,10 @@ QPainter* q_doublespinbox_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback QPainter* func(QDoubleSpinBox* self)
 ///
-void q_doublespinbox_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_doublespinbox_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10965,10 +10965,10 @@ QLineEdit* q_doublespinbox_super_line_edit(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback QLineEdit* func(QDoubleSpinBox* self)
 ///
-void q_doublespinbox_on_line_edit(const void* self, QLineEdit* (*callback)(const void*));
+void q_doublespinbox_on_line_edit(void* self, QLineEdit* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -11184,10 +11184,10 @@ QObject* q_doublespinbox_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback QObject* func(QDoubleSpinBox* self)
 ///
-void q_doublespinbox_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_doublespinbox_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -11215,10 +11215,10 @@ int32_t q_doublespinbox_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback int32_t func(QDoubleSpinBox* self)
 ///
-void q_doublespinbox_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_doublespinbox_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -11248,10 +11248,10 @@ int32_t q_doublespinbox_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback int32_t func(QDoubleSpinBox* self, const char* signal)
 ///
-void q_doublespinbox_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_doublespinbox_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -11281,10 +11281,10 @@ bool q_doublespinbox_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback bool func(QDoubleSpinBox* self, QMetaMethod* signal)
 ///
-void q_doublespinbox_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_doublespinbox_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -11316,10 +11316,10 @@ double q_doublespinbox_super_get_decoded_metric_f(const void* self, int32_t metr
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDoubleSpinBox*
+/// @param self QDoubleSpinBox*
 /// @param callback double func(QDoubleSpinBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_doublespinbox_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_doublespinbox_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

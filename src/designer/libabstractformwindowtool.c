@@ -21,7 +21,7 @@ const QMetaObject* q_designerformwindowtoolinterface_meta_object(const void* sel
     return QDesignerFormWindowToolInterface_MetaObject((QDesignerFormWindowToolInterface*)self);
 }
 
-void q_designerformwindowtoolinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_designerformwindowtoolinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerFormWindowToolInterface_OnMetaObject((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 
@@ -64,7 +64,7 @@ QDesignerFormEditorInterface* q_designerformwindowtoolinterface_core(const void*
     return QDesignerFormWindowToolInterface_Core((QDesignerFormWindowToolInterface*)self);
 }
 
-void q_designerformwindowtoolinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
+void q_designerformwindowtoolinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
     QDesignerFormWindowToolInterface_OnCore((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 
@@ -72,7 +72,7 @@ QDesignerFormWindowInterface* q_designerformwindowtoolinterface_form_window(cons
     return QDesignerFormWindowToolInterface_FormWindow((QDesignerFormWindowToolInterface*)self);
 }
 
-void q_designerformwindowtoolinterface_on_form_window(const void* self, QDesignerFormWindowInterface* (*callback)(const void*)) {
+void q_designerformwindowtoolinterface_on_form_window(void* self, QDesignerFormWindowInterface* (*callback)(const void*)) {
     QDesignerFormWindowToolInterface_OnFormWindow((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 
@@ -80,7 +80,7 @@ QWidget* q_designerformwindowtoolinterface_editor(const void* self) {
     return QDesignerFormWindowToolInterface_Editor((QDesignerFormWindowToolInterface*)self);
 }
 
-void q_designerformwindowtoolinterface_on_editor(const void* self, QWidget* (*callback)(const void*)) {
+void q_designerformwindowtoolinterface_on_editor(void* self, QWidget* (*callback)(const void*)) {
     QDesignerFormWindowToolInterface_OnEditor((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 
@@ -88,7 +88,7 @@ QAction* q_designerformwindowtoolinterface_action(const void* self) {
     return QDesignerFormWindowToolInterface_Action((QDesignerFormWindowToolInterface*)self);
 }
 
-void q_designerformwindowtoolinterface_on_action(const void* self, QAction* (*callback)(const void*)) {
+void q_designerformwindowtoolinterface_on_action(void* self, QAction* (*callback)(const void*)) {
     QDesignerFormWindowToolInterface_OnAction((QDesignerFormWindowToolInterface*)self, (intptr_t)callback);
 }
 

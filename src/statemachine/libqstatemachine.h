@@ -49,10 +49,10 @@ const QMetaObject* q_statemachine_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QStateMachine*
+/// @param self QStateMachine*
 /// @param callback const QMetaObject* func(const QStateMachine* self)
 ///
-void q_statemachine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_statemachine_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1296,10 +1296,10 @@ QObject* q_statemachine_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStateMachine*
+/// @param self QStateMachine*
 /// @param callback QObject* func(QStateMachine* self)
 ///
-void q_statemachine_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_statemachine_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1327,10 +1327,10 @@ int32_t q_statemachine_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStateMachine*
+/// @param self QStateMachine*
 /// @param callback int32_t func(QStateMachine* self)
 ///
-void q_statemachine_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_statemachine_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1360,10 +1360,10 @@ int32_t q_statemachine_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStateMachine*
+/// @param self QStateMachine*
 /// @param callback int32_t func(QStateMachine* self, const char* signal)
 ///
-void q_statemachine_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_statemachine_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1393,10 +1393,10 @@ bool q_statemachine_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStateMachine*
+/// @param self QStateMachine*
 /// @param callback bool func(QStateMachine* self, QMetaMethod* signal)
 ///
-void q_statemachine_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_statemachine_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstatemachine.html#started)
 ///
@@ -1696,10 +1696,10 @@ QEvent* q_statemachine__signalevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStateMachine__SignalEvent*
+/// @param self QStateMachine__SignalEvent*
 /// @param callback QEvent* func(QStateMachine__SignalEvent* self)
 ///
-void q_statemachine__signalevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void q_statemachine__signalevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///
@@ -1882,10 +1882,10 @@ QEvent* q_statemachine__wrappedevent_super_clone(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QStateMachine__WrappedEvent*
+/// @param self QStateMachine__WrappedEvent*
 /// @param callback QEvent* func(QStateMachine__WrappedEvent* self)
 ///
-void q_statemachine__wrappedevent_on_clone(const void* self, QEvent* (*callback)(const void*));
+void q_statemachine__wrappedevent_on_clone(void* self, QEvent* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///

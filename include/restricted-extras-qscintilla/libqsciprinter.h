@@ -756,10 +756,10 @@ int32_t q_sciprinter_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciPrinter*
+/// @param self QsciPrinter*
 /// @param callback int32_t func(QsciPrinter* self)
 ///
-void q_sciprinter_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_sciprinter_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QPrinter
 ///
@@ -818,10 +818,10 @@ QPaintEngine* q_sciprinter_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciPrinter*
+/// @param self QsciPrinter*
 /// @param callback QPaintEngine* func(QsciPrinter* self)
 ///
-void q_sciprinter_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_sciprinter_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QPrinter
 ///
@@ -851,10 +851,10 @@ int32_t q_sciprinter_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciPrinter*
+/// @param self QsciPrinter*
 /// @param callback int32_t func(QsciPrinter* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_sciprinter_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_sciprinter_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -1051,10 +1051,10 @@ void q_sciprinter_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciPrinter*
+/// @param self QsciPrinter*
 /// @param callback void func(QsciPrinter* self, QPainter* painter)
 ///
-void q_sciprinter_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_sciprinter_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -1084,10 +1084,10 @@ QPaintDevice* q_sciprinter_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciPrinter*
+/// @param self QsciPrinter*
 /// @param callback QPaintDevice* func(QsciPrinter* self, QPoint* offset)
 ///
-void q_sciprinter_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_sciprinter_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -1115,10 +1115,10 @@ QPainter* q_sciprinter_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciPrinter*
+/// @param self QsciPrinter*
 /// @param callback QPainter* func(QsciPrinter* self)
 ///
-void q_sciprinter_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_sciprinter_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QPrinter
 ///
@@ -1185,10 +1185,10 @@ double q_sciprinter_super_get_decoded_metric_f(const void* self, int32_t metricA
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QsciPrinter*
+/// @param self QsciPrinter*
 /// @param callback double func(QsciPrinter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_sciprinter_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_sciprinter_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///

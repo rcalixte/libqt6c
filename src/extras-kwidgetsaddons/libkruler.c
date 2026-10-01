@@ -50,7 +50,7 @@ const QMetaObject* k_ruler_meta_object(const void* self) {
     return KRuler_MetaObject((KRuler*)self);
 }
 
-void k_ruler_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_ruler_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KRuler_OnMetaObject((KRuler*)self, (intptr_t)callback);
 }
 
@@ -426,11 +426,11 @@ void k_ruler_on_action_triggered(void* self, void (*callback)(void*, int)) {
     QAbstractSlider_Connect_ActionTriggered((QAbstractSlider*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_ruler_as_q_paint_device(void* self) {
+QPaintDevice* k_ruler_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KRuler* k_ruler_from_q_paint_device(void* _qpaintdevice) {
+KRuler* k_ruler_from_q_paint_device(const void* _qpaintdevice) {
     return (KRuler*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1893,8 +1893,8 @@ int32_t k_ruler_super_dev_type(const void* self) {
     return KRuler_SuperDevType((KRuler*)self);
 }
 
-void k_ruler_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KRuler_OnDevType((const KRuler*)self, (intptr_t)callback);
+void k_ruler_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KRuler_OnDevType((KRuler*)self, (intptr_t)callback);
 }
 
 void k_ruler_set_visible(void* self, bool visible) {
@@ -1917,8 +1917,8 @@ QSize* k_ruler_super_size_hint(const void* self) {
     return KRuler_SuperSizeHint((KRuler*)self);
 }
 
-void k_ruler_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KRuler_OnSizeHint((const KRuler*)self, (intptr_t)callback);
+void k_ruler_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KRuler_OnSizeHint((KRuler*)self, (intptr_t)callback);
 }
 
 QSize* k_ruler_minimum_size_hint(const void* self) {
@@ -1929,8 +1929,8 @@ QSize* k_ruler_super_minimum_size_hint(const void* self) {
     return KRuler_SuperMinimumSizeHint((KRuler*)self);
 }
 
-void k_ruler_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KRuler_OnMinimumSizeHint((const KRuler*)self, (intptr_t)callback);
+void k_ruler_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KRuler_OnMinimumSizeHint((KRuler*)self, (intptr_t)callback);
 }
 
 int32_t k_ruler_height_for_width(const void* self, int param1) {
@@ -1941,8 +1941,8 @@ int32_t k_ruler_super_height_for_width(const void* self, int param1) {
     return KRuler_SuperHeightForWidth((KRuler*)self, param1);
 }
 
-void k_ruler_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KRuler_OnHeightForWidth((const KRuler*)self, (intptr_t)callback);
+void k_ruler_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KRuler_OnHeightForWidth((KRuler*)self, (intptr_t)callback);
 }
 
 bool k_ruler_has_height_for_width(const void* self) {
@@ -1953,8 +1953,8 @@ bool k_ruler_super_has_height_for_width(const void* self) {
     return KRuler_SuperHasHeightForWidth((KRuler*)self);
 }
 
-void k_ruler_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KRuler_OnHasHeightForWidth((const KRuler*)self, (intptr_t)callback);
+void k_ruler_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KRuler_OnHasHeightForWidth((KRuler*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_ruler_paint_engine(const void* self) {
@@ -1965,8 +1965,8 @@ QPaintEngine* k_ruler_super_paint_engine(const void* self) {
     return KRuler_SuperPaintEngine((KRuler*)self);
 }
 
-void k_ruler_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KRuler_OnPaintEngine((const KRuler*)self, (intptr_t)callback);
+void k_ruler_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KRuler_OnPaintEngine((KRuler*)self, (intptr_t)callback);
 }
 
 void k_ruler_mouse_press_event(void* self, void* event) {
@@ -2241,8 +2241,8 @@ int32_t k_ruler_super_metric(const void* self, int32_t param1) {
     return KRuler_SuperMetric((KRuler*)self, param1);
 }
 
-void k_ruler_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KRuler_OnMetric((const KRuler*)self, (intptr_t)callback);
+void k_ruler_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KRuler_OnMetric((KRuler*)self, (intptr_t)callback);
 }
 
 void k_ruler_init_painter(const void* self, void* painter) {
@@ -2253,8 +2253,8 @@ void k_ruler_super_init_painter(const void* self, void* painter) {
     KRuler_SuperInitPainter((KRuler*)self, (QPainter*)painter);
 }
 
-void k_ruler_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KRuler_OnInitPainter((const KRuler*)self, (intptr_t)callback);
+void k_ruler_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KRuler_OnInitPainter((KRuler*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_ruler_redirected(const void* self, void* offset) {
@@ -2265,8 +2265,8 @@ QPaintDevice* k_ruler_super_redirected(const void* self, void* offset) {
     return KRuler_SuperRedirected((KRuler*)self, (QPoint*)offset);
 }
 
-void k_ruler_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KRuler_OnRedirected((const KRuler*)self, (intptr_t)callback);
+void k_ruler_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KRuler_OnRedirected((KRuler*)self, (intptr_t)callback);
 }
 
 QPainter* k_ruler_shared_painter(const void* self) {
@@ -2277,8 +2277,8 @@ QPainter* k_ruler_super_shared_painter(const void* self) {
     return KRuler_SuperSharedPainter((KRuler*)self);
 }
 
-void k_ruler_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KRuler_OnSharedPainter((const KRuler*)self, (intptr_t)callback);
+void k_ruler_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KRuler_OnSharedPainter((KRuler*)self, (intptr_t)callback);
 }
 
 void k_ruler_input_method_event(void* self, void* param1) {
@@ -2301,8 +2301,8 @@ QVariant* k_ruler_super_input_method_query(const void* self, int32_t param1) {
     return KRuler_SuperInputMethodQuery((KRuler*)self, param1);
 }
 
-void k_ruler_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KRuler_OnInputMethodQuery((const KRuler*)self, (intptr_t)callback);
+void k_ruler_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KRuler_OnInputMethodQuery((KRuler*)self, (intptr_t)callback);
 }
 
 bool k_ruler_focus_next_prev_child(void* self, bool next) {

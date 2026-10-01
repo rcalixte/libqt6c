@@ -30,7 +30,7 @@ const QMetaObject* k_fileitemdelegate_meta_object(const void* self) {
     return KFileItemDelegate_MetaObject((KFileItemDelegate*)self);
 }
 
-void k_fileitemdelegate_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_fileitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KFileItemDelegate_OnMetaObject((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -73,7 +73,7 @@ QSize* k_fileitemdelegate_size_hint(const void* self, const void* option, const 
     return KFileItemDelegate_SizeHint((KFileItemDelegate*)self, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void k_fileitemdelegate_on_size_hint(const void* self, QSize* (*callback)(const void*, const void*, const void*)) {
+void k_fileitemdelegate_on_size_hint(void* self, QSize* (*callback)(const void*, const void*, const void*)) {
     KFileItemDelegate_OnSizeHint((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -85,7 +85,7 @@ void k_fileitemdelegate_paint(const void* self, void* painter, const void* optio
     KFileItemDelegate_Paint((KFileItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void k_fileitemdelegate_on_paint(const void* self, void (*callback)(const void*, void*, const void*, const void*)) {
+void k_fileitemdelegate_on_paint(void* self, void (*callback)(const void*, void*, const void*, const void*)) {
     KFileItemDelegate_OnPaint((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -97,7 +97,7 @@ QWidget* k_fileitemdelegate_create_editor(const void* self, void* parent, const 
     return KFileItemDelegate_CreateEditor((KFileItemDelegate*)self, (QWidget*)parent, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void k_fileitemdelegate_on_create_editor(const void* self, QWidget* (*callback)(const void*, void*, const void*, const void*)) {
+void k_fileitemdelegate_on_create_editor(void* self, QWidget* (*callback)(const void*, void*, const void*, const void*)) {
     KFileItemDelegate_OnCreateEditor((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -121,7 +121,7 @@ void k_fileitemdelegate_set_editor_data(const void* self, void* editor, const vo
     KFileItemDelegate_SetEditorData((KFileItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
-void k_fileitemdelegate_on_set_editor_data(const void* self, void (*callback)(const void*, void*, const void*)) {
+void k_fileitemdelegate_on_set_editor_data(void* self, void (*callback)(const void*, void*, const void*)) {
     KFileItemDelegate_OnSetEditorData((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -133,7 +133,7 @@ void k_fileitemdelegate_set_model_data(const void* self, void* editor, void* mod
     KFileItemDelegate_SetModelData((KFileItemDelegate*)self, (QWidget*)editor, (QAbstractItemModel*)model, (QModelIndex*)index);
 }
 
-void k_fileitemdelegate_on_set_model_data(const void* self, void (*callback)(const void*, void*, void*, const void*)) {
+void k_fileitemdelegate_on_set_model_data(void* self, void (*callback)(const void*, void*, void*, const void*)) {
     KFileItemDelegate_OnSetModelData((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -145,7 +145,7 @@ void k_fileitemdelegate_update_editor_geometry(const void* self, void* editor, c
     KFileItemDelegate_UpdateEditorGeometry((KFileItemDelegate*)self, (QWidget*)editor, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void k_fileitemdelegate_on_update_editor_geometry(const void* self, void (*callback)(const void*, void*, const void*, const void*)) {
+void k_fileitemdelegate_on_update_editor_geometry(void* self, void (*callback)(const void*, void*, const void*, const void*)) {
     KFileItemDelegate_OnUpdateEditorGeometry((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -529,8 +529,8 @@ void k_fileitemdelegate_super_destroy_editor(const void* self, void* editor, con
     KFileItemDelegate_SuperDestroyEditor((KFileItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
-void k_fileitemdelegate_on_destroy_editor(const void* self, void (*callback)(const void*, void*, const void*)) {
-    KFileItemDelegate_OnDestroyEditor((const KFileItemDelegate*)self, (intptr_t)callback);
+void k_fileitemdelegate_on_destroy_editor(void* self, void (*callback)(const void*, void*, const void*)) {
+    KFileItemDelegate_OnDestroyEditor((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
 libqt_list /* of int */ k_fileitemdelegate_painting_roles(const void* self) {
@@ -543,8 +543,8 @@ libqt_list /* of int */ k_fileitemdelegate_super_painting_roles(const void* self
     return _arr;
 }
 
-void k_fileitemdelegate_on_painting_roles(const void* self, libqt_list /* of int */ (*callback)(const void*)) {
-    KFileItemDelegate_OnPaintingRoles((const KFileItemDelegate*)self, (intptr_t)callback);
+void k_fileitemdelegate_on_painting_roles(void* self, libqt_list /* of int */ (*callback)(const void*)) {
+    KFileItemDelegate_OnPaintingRoles((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
 bool k_fileitemdelegate_event(void* self, void* event) {

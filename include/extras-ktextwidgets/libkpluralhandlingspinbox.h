@@ -32,10 +32,10 @@ const QMetaObject* k_pluralhandlingspinbox_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback const QMetaObject* func(const KPluralHandlingSpinBox* self)
 ///
-void k_pluralhandlingspinbox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_pluralhandlingspinbox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -559,9 +559,9 @@ void k_pluralhandlingspinbox_on_editing_finished(void* self, void (*callback)(vo
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self KPluralHandlingSpinBox*
+/// @param self const KPluralHandlingSpinBox*
 ///
-QPaintDevice* k_pluralhandlingspinbox_as_q_paint_device(void* self);
+QPaintDevice* k_pluralhandlingspinbox_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -569,7 +569,7 @@ QPaintDevice* k_pluralhandlingspinbox_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-KPluralHandlingSpinBox* k_pluralhandlingspinbox_from_q_paint_device(void* _qpaintdevice);
+KPluralHandlingSpinBox* k_pluralhandlingspinbox_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3595,10 +3595,10 @@ int32_t k_pluralhandlingspinbox_super_validate(const void* self, const char* inp
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback int32_t func(KPluralHandlingSpinBox* self, const char* input, int* pos)
 ///
-void k_pluralhandlingspinbox_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*));
+void k_pluralhandlingspinbox_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*));
 
 /// Inherited from QSpinBox
 ///
@@ -3628,10 +3628,10 @@ int32_t k_pluralhandlingspinbox_super_value_from_text(const void* self, const ch
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback int32_t func(KPluralHandlingSpinBox* self, const char* text)
 ///
-void k_pluralhandlingspinbox_on_value_from_text(const void* self, int32_t (*callback)(const void*, const char*));
+void k_pluralhandlingspinbox_on_value_from_text(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QSpinBox
 ///
@@ -3665,10 +3665,10 @@ const char* k_pluralhandlingspinbox_super_text_from_value(const void* self, int 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback const char* func(KPluralHandlingSpinBox* self, int val)
 ///
-void k_pluralhandlingspinbox_on_text_from_value(const void* self, const char* (*callback)(const void*, int));
+void k_pluralhandlingspinbox_on_text_from_value(void* self, const char* (*callback)(const void*, int));
 
 /// Inherited from QSpinBox
 ///
@@ -3698,10 +3698,10 @@ void k_pluralhandlingspinbox_super_fixup(const void* self, const char* str);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback void func(KPluralHandlingSpinBox* self, const char* str)
 ///
-void k_pluralhandlingspinbox_on_fixup(const void* self, void (*callback)(const void*, const char*));
+void k_pluralhandlingspinbox_on_fixup(void* self, void (*callback)(const void*, const char*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3729,12 +3729,12 @@ QSize* k_pluralhandlingspinbox_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback QSize* func(KPluralHandlingSpinBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_pluralhandlingspinbox_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_pluralhandlingspinbox_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3762,12 +3762,12 @@ QSize* k_pluralhandlingspinbox_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback QSize* func(KPluralHandlingSpinBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_pluralhandlingspinbox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_pluralhandlingspinbox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3797,12 +3797,12 @@ QVariant* k_pluralhandlingspinbox_super_input_method_query(const void* self, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback QVariant* func(KPluralHandlingSpinBox* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_pluralhandlingspinbox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_pluralhandlingspinbox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4424,10 +4424,10 @@ void k_pluralhandlingspinbox_super_init_style_option(const void* self, void* opt
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback void func(KPluralHandlingSpinBox* self, QStyleOptionSpinBox* option)
 ///
-void k_pluralhandlingspinbox_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void k_pluralhandlingspinbox_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4459,10 +4459,10 @@ int32_t k_pluralhandlingspinbox_super_step_enabled(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback int32_t func(KPluralHandlingSpinBox* self)
 ///
-void k_pluralhandlingspinbox_on_step_enabled(const void* self, int32_t (*callback)(const void*));
+void k_pluralhandlingspinbox_on_step_enabled(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4490,10 +4490,10 @@ int32_t k_pluralhandlingspinbox_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback int32_t func(KPluralHandlingSpinBox* self)
 ///
-void k_pluralhandlingspinbox_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_pluralhandlingspinbox_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4556,10 +4556,10 @@ int32_t k_pluralhandlingspinbox_super_height_for_width(const void* self, int par
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback int32_t func(KPluralHandlingSpinBox* self, int param1)
 ///
-void k_pluralhandlingspinbox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_pluralhandlingspinbox_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4587,10 +4587,10 @@ bool k_pluralhandlingspinbox_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback bool func(KPluralHandlingSpinBox* self)
 ///
-void k_pluralhandlingspinbox_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_pluralhandlingspinbox_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4618,10 +4618,10 @@ QPaintEngine* k_pluralhandlingspinbox_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback QPaintEngine* func(KPluralHandlingSpinBox* self)
 ///
-void k_pluralhandlingspinbox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_pluralhandlingspinbox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5018,10 +5018,10 @@ int32_t k_pluralhandlingspinbox_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback int32_t func(KPluralHandlingSpinBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_pluralhandlingspinbox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_pluralhandlingspinbox_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5051,10 +5051,10 @@ void k_pluralhandlingspinbox_super_init_painter(const void* self, void* painter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback void func(KPluralHandlingSpinBox* self, QPainter* painter)
 ///
-void k_pluralhandlingspinbox_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_pluralhandlingspinbox_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5084,10 +5084,10 @@ QPaintDevice* k_pluralhandlingspinbox_super_redirected(const void* self, void* o
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback QPaintDevice* func(KPluralHandlingSpinBox* self, QPoint* offset)
 ///
-void k_pluralhandlingspinbox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_pluralhandlingspinbox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5115,10 +5115,10 @@ QPainter* k_pluralhandlingspinbox_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback QPainter* func(KPluralHandlingSpinBox* self)
 ///
-void k_pluralhandlingspinbox_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_pluralhandlingspinbox_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5379,10 +5379,10 @@ QLineEdit* k_pluralhandlingspinbox_super_line_edit(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback QLineEdit* func(KPluralHandlingSpinBox* self)
 ///
-void k_pluralhandlingspinbox_on_line_edit(const void* self, QLineEdit* (*callback)(const void*));
+void k_pluralhandlingspinbox_on_line_edit(void* self, QLineEdit* (*callback)(const void*));
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5598,10 +5598,10 @@ QObject* k_pluralhandlingspinbox_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback QObject* func(KPluralHandlingSpinBox* self)
 ///
-void k_pluralhandlingspinbox_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_pluralhandlingspinbox_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5629,10 +5629,10 @@ int32_t k_pluralhandlingspinbox_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback int32_t func(KPluralHandlingSpinBox* self)
 ///
-void k_pluralhandlingspinbox_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_pluralhandlingspinbox_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5662,10 +5662,10 @@ int32_t k_pluralhandlingspinbox_super_receivers(const void* self, const char* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback int32_t func(KPluralHandlingSpinBox* self, const char* signal)
 ///
-void k_pluralhandlingspinbox_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_pluralhandlingspinbox_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5695,10 +5695,10 @@ bool k_pluralhandlingspinbox_super_is_signal_connected(const void* self, const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback bool func(KPluralHandlingSpinBox* self, QMetaMethod* signal)
 ///
-void k_pluralhandlingspinbox_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_pluralhandlingspinbox_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5730,10 +5730,10 @@ double k_pluralhandlingspinbox_super_get_decoded_metric_f(const void* self, int3
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPluralHandlingSpinBox*
+/// @param self KPluralHandlingSpinBox*
 /// @param callback double func(KPluralHandlingSpinBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_pluralhandlingspinbox_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_pluralhandlingspinbox_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

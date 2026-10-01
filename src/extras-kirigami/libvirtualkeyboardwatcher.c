@@ -17,7 +17,7 @@ const QMetaObject* k_irigami__platform__virtualkeyboardwatcher_meta_object(const
     return Kirigami__Platform__VirtualKeyboardWatcher_MetaObject((Kirigami__Platform__VirtualKeyboardWatcher*)self);
 }
 
-void k_irigami__platform__virtualkeyboardwatcher_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_irigami__platform__virtualkeyboardwatcher_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Kirigami__Platform__VirtualKeyboardWatcher_OnMetaObject((Kirigami__Platform__VirtualKeyboardWatcher*)self, (intptr_t)callback);
 }
 

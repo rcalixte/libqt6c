@@ -36,7 +36,7 @@ const QMetaObject* k_textcustomeditor__richtexteditor_meta_object(const void* se
     return TextCustomEditor__RichTextEditor_MetaObject((TextCustomEditor__RichTextEditor*)self);
 }
 
-void k_textcustomeditor__richtexteditor_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textcustomeditor__richtexteditor_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextCustomEditor__RichTextEditor_OnMetaObject((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
@@ -1027,11 +1027,11 @@ void k_textcustomeditor__richtexteditor_set_frame_rect(void* self, const void* f
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_textcustomeditor__richtexteditor_as_q_paint_device(void* self) {
+QPaintDevice* k_textcustomeditor__richtexteditor_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextCustomEditor__RichTextEditor* k_textcustomeditor__richtexteditor_from_q_paint_device(void* _qpaintdevice) {
+TextCustomEditor__RichTextEditor* k_textcustomeditor__richtexteditor_from_q_paint_device(const void* _qpaintdevice) {
     return (TextCustomEditor__RichTextEditor*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2430,8 +2430,8 @@ QVariant* k_textcustomeditor__richtexteditor_super_input_method_query(const void
     return TextCustomEditor__RichTextEditor_SuperInputMethodQuery((TextCustomEditor__RichTextEditor*)self, property);
 }
 
-void k_textcustomeditor__richtexteditor_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextCustomEditor__RichTextEditor_OnInputMethodQuery((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextCustomEditor__RichTextEditor_OnInputMethodQuery((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__richtexteditor_timer_event(void* self, void* e) {
@@ -2634,8 +2634,8 @@ QMimeData* k_textcustomeditor__richtexteditor_super_create_mime_data_from_select
     return TextCustomEditor__RichTextEditor_SuperCreateMimeDataFromSelection((TextCustomEditor__RichTextEditor*)self);
 }
 
-void k_textcustomeditor__richtexteditor_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*)) {
-    TextCustomEditor__RichTextEditor_OnCreateMimeDataFromSelection((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)(const void*)) {
+    TextCustomEditor__RichTextEditor_OnCreateMimeDataFromSelection((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 bool k_textcustomeditor__richtexteditor_can_insert_from_mime_data(const void* self, const void* source) {
@@ -2646,8 +2646,8 @@ bool k_textcustomeditor__richtexteditor_super_can_insert_from_mime_data(const vo
     return TextCustomEditor__RichTextEditor_SuperCanInsertFromMimeData((TextCustomEditor__RichTextEditor*)self, (QMimeData*)source);
 }
 
-void k_textcustomeditor__richtexteditor_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*)) {
-    TextCustomEditor__RichTextEditor_OnCanInsertFromMimeData((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_can_insert_from_mime_data(void* self, bool (*callback)(const void*, const void*)) {
+    TextCustomEditor__RichTextEditor_OnCanInsertFromMimeData((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__richtexteditor_insert_from_mime_data(void* self, const void* source) {
@@ -2706,8 +2706,8 @@ QSize* k_textcustomeditor__richtexteditor_super_minimum_size_hint(const void* se
     return TextCustomEditor__RichTextEditor_SuperMinimumSizeHint((TextCustomEditor__RichTextEditor*)self);
 }
 
-void k_textcustomeditor__richtexteditor_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextCustomEditor__RichTextEditor_OnMinimumSizeHint((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextCustomEditor__RichTextEditor_OnMinimumSizeHint((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 QSize* k_textcustomeditor__richtexteditor_size_hint(const void* self) {
@@ -2718,8 +2718,8 @@ QSize* k_textcustomeditor__richtexteditor_super_size_hint(const void* self) {
     return TextCustomEditor__RichTextEditor_SuperSizeHint((TextCustomEditor__RichTextEditor*)self);
 }
 
-void k_textcustomeditor__richtexteditor_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextCustomEditor__RichTextEditor_OnSizeHint((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextCustomEditor__RichTextEditor_OnSizeHint((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__richtexteditor_setup_viewport(void* self, void* viewport) {
@@ -2766,8 +2766,8 @@ QSize* k_textcustomeditor__richtexteditor_super_viewport_size_hint(const void* s
     return TextCustomEditor__RichTextEditor_SuperViewportSizeHint((TextCustomEditor__RichTextEditor*)self);
 }
 
-void k_textcustomeditor__richtexteditor_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextCustomEditor__RichTextEditor_OnViewportSizeHint((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextCustomEditor__RichTextEditor_OnViewportSizeHint((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__richtexteditor_init_style_option(const void* self, void* option) {
@@ -2778,8 +2778,8 @@ void k_textcustomeditor__richtexteditor_super_init_style_option(const void* self
     TextCustomEditor__RichTextEditor_SuperInitStyleOption((TextCustomEditor__RichTextEditor*)self, (QStyleOptionFrame*)option);
 }
 
-void k_textcustomeditor__richtexteditor_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    TextCustomEditor__RichTextEditor_OnInitStyleOption((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    TextCustomEditor__RichTextEditor_OnInitStyleOption((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 int32_t k_textcustomeditor__richtexteditor_dev_type(const void* self) {
@@ -2790,8 +2790,8 @@ int32_t k_textcustomeditor__richtexteditor_super_dev_type(const void* self) {
     return TextCustomEditor__RichTextEditor_SuperDevType((TextCustomEditor__RichTextEditor*)self);
 }
 
-void k_textcustomeditor__richtexteditor_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextCustomEditor__RichTextEditor_OnDevType((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextCustomEditor__RichTextEditor_OnDevType((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__richtexteditor_set_visible(void* self, bool visible) {
@@ -2814,8 +2814,8 @@ int32_t k_textcustomeditor__richtexteditor_super_height_for_width(const void* se
     return TextCustomEditor__RichTextEditor_SuperHeightForWidth((TextCustomEditor__RichTextEditor*)self, param1);
 }
 
-void k_textcustomeditor__richtexteditor_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextCustomEditor__RichTextEditor_OnHeightForWidth((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextCustomEditor__RichTextEditor_OnHeightForWidth((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 bool k_textcustomeditor__richtexteditor_has_height_for_width(const void* self) {
@@ -2826,8 +2826,8 @@ bool k_textcustomeditor__richtexteditor_super_has_height_for_width(const void* s
     return TextCustomEditor__RichTextEditor_SuperHasHeightForWidth((TextCustomEditor__RichTextEditor*)self);
 }
 
-void k_textcustomeditor__richtexteditor_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextCustomEditor__RichTextEditor_OnHasHeightForWidth((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextCustomEditor__RichTextEditor_OnHasHeightForWidth((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textcustomeditor__richtexteditor_paint_engine(const void* self) {
@@ -2838,8 +2838,8 @@ QPaintEngine* k_textcustomeditor__richtexteditor_super_paint_engine(const void* 
     return TextCustomEditor__RichTextEditor_SuperPaintEngine((TextCustomEditor__RichTextEditor*)self);
 }
 
-void k_textcustomeditor__richtexteditor_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextCustomEditor__RichTextEditor_OnPaintEngine((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextCustomEditor__RichTextEditor_OnPaintEngine((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__richtexteditor_enter_event(void* self, void* event) {
@@ -2946,8 +2946,8 @@ int32_t k_textcustomeditor__richtexteditor_super_metric(const void* self, int32_
     return TextCustomEditor__RichTextEditor_SuperMetric((TextCustomEditor__RichTextEditor*)self, param1);
 }
 
-void k_textcustomeditor__richtexteditor_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextCustomEditor__RichTextEditor_OnMetric((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextCustomEditor__RichTextEditor_OnMetric((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__richtexteditor_init_painter(const void* self, void* painter) {
@@ -2958,8 +2958,8 @@ void k_textcustomeditor__richtexteditor_super_init_painter(const void* self, voi
     TextCustomEditor__RichTextEditor_SuperInitPainter((TextCustomEditor__RichTextEditor*)self, (QPainter*)painter);
 }
 
-void k_textcustomeditor__richtexteditor_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextCustomEditor__RichTextEditor_OnInitPainter((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextCustomEditor__RichTextEditor_OnInitPainter((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textcustomeditor__richtexteditor_redirected(const void* self, void* offset) {
@@ -2970,8 +2970,8 @@ QPaintDevice* k_textcustomeditor__richtexteditor_super_redirected(const void* se
     return TextCustomEditor__RichTextEditor_SuperRedirected((TextCustomEditor__RichTextEditor*)self, (QPoint*)offset);
 }
 
-void k_textcustomeditor__richtexteditor_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextCustomEditor__RichTextEditor_OnRedirected((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextCustomEditor__RichTextEditor_OnRedirected((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 QPainter* k_textcustomeditor__richtexteditor_shared_painter(const void* self) {
@@ -2982,8 +2982,8 @@ QPainter* k_textcustomeditor__richtexteditor_super_shared_painter(const void* se
     return TextCustomEditor__RichTextEditor_SuperSharedPainter((TextCustomEditor__RichTextEditor*)self);
 }
 
-void k_textcustomeditor__richtexteditor_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextCustomEditor__RichTextEditor_OnSharedPainter((const TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
+void k_textcustomeditor__richtexteditor_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextCustomEditor__RichTextEditor_OnSharedPainter((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__richtexteditor_child_event(void* self, void* event) {

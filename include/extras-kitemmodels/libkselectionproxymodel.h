@@ -41,10 +41,10 @@ const QMetaObject* k_selectionproxymodel_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback const QMetaObject* func(const KSelectionProxyModel* self)
 ///
-void k_selectionproxymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_selectionproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -168,12 +168,12 @@ QModelIndex* k_selectionproxymodel_map_from_source(const void* self, const void*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(const KSelectionProxyModel* self, QModelIndex* sourceIndex)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_map_from_source(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mapFromSource)
 ///
@@ -195,12 +195,12 @@ QModelIndex* k_selectionproxymodel_map_to_source(const void* self, const void* p
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(const KSelectionProxyModel* self, QModelIndex* proxyIndex)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_map_to_source(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mapToSource)
 ///
@@ -222,12 +222,12 @@ QItemSelection* k_selectionproxymodel_map_selection_from_source(const void* self
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QItemSelection* func(const KSelectionProxyModel* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_map_selection_from_source(const void* self, QItemSelection* (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mapSelectionFromSource)
 ///
@@ -249,12 +249,12 @@ QItemSelection* k_selectionproxymodel_map_selection_to_source(const void* self, 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QItemSelection* func(const KSelectionProxyModel* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_map_selection_to_source(const void* self, QItemSelection* (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mapSelectionToSource)
 ///
@@ -278,10 +278,10 @@ int32_t k_selectionproxymodel_flags(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback int32_t func(const KSelectionProxyModel* self, QModelIndex* index)
 ///
-void k_selectionproxymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_flags(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#flags)
 ///
@@ -306,12 +306,12 @@ QVariant* k_selectionproxymodel_data(const void* self, const void* index, int ro
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QVariant* func(const KSelectionProxyModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
+void k_selectionproxymodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#data)
 ///
@@ -334,10 +334,10 @@ int32_t k_selectionproxymodel_row_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback int32_t func(const KSelectionProxyModel* self, QModelIndex* parent)
 ///
-void k_selectionproxymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#rowCount)
 ///
@@ -361,12 +361,12 @@ QVariant* k_selectionproxymodel_header_data(const void* self, int section, int32
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QVariant* func(const KSelectionProxyModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
+void k_selectionproxymodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#headerData)
 ///
@@ -390,10 +390,10 @@ QMimeData* k_selectionproxymodel_mime_data(const void* self, libqt_list indexes)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QMimeData* func(const KSelectionProxyModel* self, libqt_list of QModelIndex* indexes)
 ///
-void k_selectionproxymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void k_selectionproxymodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mimeData)
 ///
@@ -416,10 +416,10 @@ const char** k_selectionproxymodel_mime_types(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback const char** func(const KSelectionProxyModel* self)
 ///
-void k_selectionproxymodel_on_mime_types(const void* self, const char** (*callback)(const void*));
+void k_selectionproxymodel_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#mimeTypes)
 ///
@@ -441,10 +441,10 @@ int32_t k_selectionproxymodel_supported_drop_actions(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback int32_t func(const KSelectionProxyModel* self)
 ///
-void k_selectionproxymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void k_selectionproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#supportedDropActions)
 ///
@@ -500,10 +500,10 @@ bool k_selectionproxymodel_has_children(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback bool func(const KSelectionProxyModel* self, QModelIndex* parent)
 ///
-void k_selectionproxymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_has_children(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#hasChildren)
 ///
@@ -527,12 +527,12 @@ QModelIndex* k_selectionproxymodel_index(const void* self, int param1, int param
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(const KSelectionProxyModel* self, int param1, int param2, QModelIndex* param3)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void k_selectionproxymodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#index)
 ///
@@ -556,12 +556,12 @@ QModelIndex* k_selectionproxymodel_parent(const void* self, const void* param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(const KSelectionProxyModel* self, QModelIndex* param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#parent)
 ///
@@ -583,10 +583,10 @@ int32_t k_selectionproxymodel_column_count(const void* self, const void* param1)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback int32_t func(const KSelectionProxyModel* self, QModelIndex* param1)
 ///
-void k_selectionproxymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#columnCount)
 ///
@@ -614,10 +614,10 @@ libqt_list k_selectionproxymodel_match(const void* self, const void* start, int 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback libqt_list of QModelIndex* func(const KSelectionProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void k_selectionproxymodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
+void k_selectionproxymodel_on_match(void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#match)
 ///
@@ -1531,10 +1531,10 @@ libqt_map k_selectionproxymodel_super_item_data(const void* self, const void* in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback libqt_map of int to QVariant* func(KSelectionProxyModel* self, QModelIndex* index)
 ///
-void k_selectionproxymodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_item_data(void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1708,12 +1708,12 @@ QModelIndex* k_selectionproxymodel_super_buddy(const void* self, const void* ind
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(KSelectionProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1743,10 +1743,10 @@ bool k_selectionproxymodel_super_can_fetch_more(const void* self, const void* pa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback bool func(KSelectionProxyModel* self, QModelIndex* parent)
 ///
-void k_selectionproxymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1844,12 +1844,12 @@ QSize* k_selectionproxymodel_super_span(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QSize* func(KSelectionProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_span(void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1883,12 +1883,12 @@ QModelIndex* k_selectionproxymodel_super_sibling(const void* self, int row, int 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(KSelectionProxyModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void k_selectionproxymodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1926,10 +1926,10 @@ bool k_selectionproxymodel_super_can_drop_mime_data(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback bool func(KSelectionProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void k_selectionproxymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
+void k_selectionproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1961,10 +1961,10 @@ int32_t k_selectionproxymodel_super_supported_drag_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback int32_t func(KSelectionProxyModel* self)
 ///
-void k_selectionproxymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
+void k_selectionproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2018,10 +2018,10 @@ libqt_map k_selectionproxymodel_super_role_names(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback libqt_map of int to char* func(KSelectionProxyModel* self)
 ///
-void k_selectionproxymodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
+void k_selectionproxymodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2283,10 +2283,10 @@ void k_selectionproxymodel_super_multi_data(const void* self, const void* index,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback void func(KSelectionProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void k_selectionproxymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
+void k_selectionproxymodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2584,12 +2584,12 @@ QModelIndex* k_selectionproxymodel_super_create_source_index(const void* self, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(KSelectionProxyModel* self, int row, int col, void* internalPtr)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_create_source_index(const void* self, QModelIndex* (*callback)(const void*, int, int, void*));
+void k_selectionproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(const void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2621,12 +2621,12 @@ QModelIndex* k_selectionproxymodel_super_create_index(const void* self, int row,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(KSelectionProxyModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_selectionproxymodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
+void k_selectionproxymodel_on_create_index(void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2658,10 +2658,10 @@ void k_selectionproxymodel_super_encode_data(const void* self, libqt_list indexe
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback void func(KSelectionProxyModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void k_selectionproxymodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
+void k_selectionproxymodel_on_encode_data(void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3280,10 +3280,10 @@ libqt_list k_selectionproxymodel_super_persistent_index_list(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback libqt_list of QModelIndex* func(KSelectionProxyModel* self)
 ///
-void k_selectionproxymodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
+void k_selectionproxymodel_on_persistent_index_list(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3311,10 +3311,10 @@ QObject* k_selectionproxymodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback QObject* func(KSelectionProxyModel* self)
 ///
-void k_selectionproxymodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_selectionproxymodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3342,10 +3342,10 @@ int32_t k_selectionproxymodel_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback int32_t func(KSelectionProxyModel* self)
 ///
-void k_selectionproxymodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_selectionproxymodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3375,10 +3375,10 @@ int32_t k_selectionproxymodel_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback int32_t func(KSelectionProxyModel* self, const char* signal)
 ///
-void k_selectionproxymodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_selectionproxymodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3408,10 +3408,10 @@ bool k_selectionproxymodel_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSelectionProxyModel*
+/// @param self KSelectionProxyModel*
 /// @param callback bool func(KSelectionProxyModel* self, QMetaMethod* signal)
 ///
-void k_selectionproxymodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_selectionproxymodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kselectionproxymodel.html#rootIndexAboutToBeRemoved)
 ///

@@ -35,7 +35,7 @@ const QMetaObject* q_webengineprofile_meta_object(const void* self) {
     return QWebEngineProfile_MetaObject((QWebEngineProfile*)self);
 }
 
-void q_webengineprofile_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_webengineprofile_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QWebEngineProfile_OnMetaObject((QWebEngineProfile*)self, (intptr_t)callback);
 }
 

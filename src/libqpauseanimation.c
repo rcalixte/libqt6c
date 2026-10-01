@@ -26,7 +26,7 @@ const QMetaObject* q_pauseanimation_meta_object(const void* self) {
     return QPauseAnimation_MetaObject((QPauseAnimation*)self);
 }
 
-void q_pauseanimation_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pauseanimation_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPauseAnimation_OnMetaObject((QPauseAnimation*)self, (intptr_t)callback);
 }
 
@@ -69,7 +69,7 @@ int32_t q_pauseanimation_duration(const void* self) {
     return QPauseAnimation_Duration((QPauseAnimation*)self);
 }
 
-void q_pauseanimation_on_duration(const void* self, int32_t (*callback)(const void*)) {
+void q_pauseanimation_on_duration(void* self, int32_t (*callback)(const void*)) {
     QPauseAnimation_OnDuration((QPauseAnimation*)self, (intptr_t)callback);
 }
 

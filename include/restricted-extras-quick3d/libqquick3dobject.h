@@ -24,15 +24,15 @@ QQuick3DObject* q_quick3dobject_new2(void* parent);
 
 /// Upcasts to a QQmlParserStatus object
 ///
-/// @param self QQuick3DObject*
+/// @param self const QQuick3DObject*
 ///
-QQmlParserStatus* q_quick3dobject_as_q_qml_parser_status(void* self);
+QQmlParserStatus* q_quick3dobject_as_q_qml_parser_status(const void* self);
 
 /// Downcasts to a QQuick3DObject object
 ///
 /// @param _qqmlparserstatus QQmlParserStatus*
 ///
-QQuick3DObject* q_quick3dobject_from_q_qml_parser_status(void* _qqmlparserstatus);
+QQuick3DObject* q_quick3dobject_from_q_qml_parser_status(const void* _qqmlparserstatus);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -44,10 +44,10 @@ const QMetaObject* q_quick3dobject_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuick3DObject*
+/// @param self QQuick3DObject*
 /// @param callback const QMetaObject* func(const QQuick3DObject* self)
 ///
-void q_quick3dobject_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_quick3dobject_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1047,10 +1047,10 @@ QObject* q_quick3dobject_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuick3DObject*
+/// @param self QQuick3DObject*
 /// @param callback QObject* func(QQuick3DObject* self)
 ///
-void q_quick3dobject_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_quick3dobject_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1078,10 +1078,10 @@ int32_t q_quick3dobject_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuick3DObject*
+/// @param self QQuick3DObject*
 /// @param callback int32_t func(QQuick3DObject* self)
 ///
-void q_quick3dobject_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_quick3dobject_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1111,10 +1111,10 @@ int32_t q_quick3dobject_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuick3DObject*
+/// @param self QQuick3DObject*
 /// @param callback int32_t func(QQuick3DObject* self, const char* signal)
 ///
-void q_quick3dobject_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_quick3dobject_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1144,10 +1144,10 @@ bool q_quick3dobject_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuick3DObject*
+/// @param self QQuick3DObject*
 /// @param callback bool func(QQuick3DObject* self, QMetaMethod* signal)
 ///
-void q_quick3dobject_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_quick3dobject_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

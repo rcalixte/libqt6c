@@ -13,11 +13,11 @@ KBookmarkAction* k_bookmarkaction_new(const void* bk, void* owner, void* parent)
     return KBookmarkAction_New((KBookmark*)bk, (KBookmarkOwner*)owner, (QObject*)parent);
 }
 
-KBookmarkActionInterface* k_bookmarkaction_as_k_bookmark_action_interface(void* self) {
+KBookmarkActionInterface* k_bookmarkaction_as_k_bookmark_action_interface(const void* self) {
     return KBookmarkAction_AsKBookmarkActionInterface((KBookmarkAction*)self);
 }
 
-KBookmarkAction* k_bookmarkaction_from_k_bookmark_action_interface(void* _kbookmarkactioninterface) {
+KBookmarkAction* k_bookmarkaction_from_k_bookmark_action_interface(const void* _kbookmarkactioninterface) {
     return (KBookmarkAction*)KBookmarkAction_FromKBookmarkActionInterface((KBookmarkActionInterface*)_kbookmarkactioninterface);
 }
 
@@ -25,7 +25,7 @@ const QMetaObject* k_bookmarkaction_meta_object(const void* self) {
     return KBookmarkAction_MetaObject((KBookmarkAction*)self);
 }
 
-void k_bookmarkaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_bookmarkaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KBookmarkAction_OnMetaObject((KBookmarkAction*)self, (intptr_t)callback);
 }
 

@@ -13,7 +13,7 @@ const char* q_designeroptionspageinterface_name(const void* self) {
     return _ret;
 }
 
-void q_designeroptionspageinterface_on_name(const void* self, const char* (*callback)(const void*)) {
+void q_designeroptionspageinterface_on_name(void* self, const char* (*callback)(const void*)) {
     QDesignerOptionsPageInterface_OnName((QDesignerOptionsPageInterface*)self, (intptr_t)callback);
 }
 

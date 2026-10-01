@@ -18,7 +18,7 @@ const char* q_designermetadatabaseiteminterface_name(const void* self) {
     return _ret;
 }
 
-void q_designermetadatabaseiteminterface_on_name(const void* self, const char* (*callback)(const void*)) {
+void q_designermetadatabaseiteminterface_on_name(void* self, const char* (*callback)(const void*)) {
     QDesignerMetaDataBaseItemInterface_OnName((QDesignerMetaDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
@@ -35,7 +35,7 @@ libqt_list /* of QWidget* */ q_designermetadatabaseiteminterface_tab_order(const
     return _arr;
 }
 
-void q_designermetadatabaseiteminterface_on_tab_order(const void* self, libqt_list /* of QWidget* */ (*callback)(const void*)) {
+void q_designermetadatabaseiteminterface_on_tab_order(void* self, libqt_list /* of QWidget* */ (*callback)(const void*)) {
     QDesignerMetaDataBaseItemInterface_OnTabOrder((QDesignerMetaDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
@@ -51,7 +51,7 @@ bool q_designermetadatabaseiteminterface_enabled(const void* self) {
     return QDesignerMetaDataBaseItemInterface_Enabled((QDesignerMetaDataBaseItemInterface*)self);
 }
 
-void q_designermetadatabaseiteminterface_on_enabled(const void* self, bool (*callback)(const void*)) {
+void q_designermetadatabaseiteminterface_on_enabled(void* self, bool (*callback)(const void*)) {
     QDesignerMetaDataBaseItemInterface_OnEnabled((QDesignerMetaDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
@@ -79,7 +79,7 @@ const QMetaObject* q_designermetadatabaseinterface_meta_object(const void* self)
     return QDesignerMetaDataBaseInterface_MetaObject((QDesignerMetaDataBaseInterface*)self);
 }
 
-void q_designermetadatabaseinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_designermetadatabaseinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerMetaDataBaseInterface_OnMetaObject((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 
@@ -122,7 +122,7 @@ QDesignerMetaDataBaseItemInterface* q_designermetadatabaseinterface_item(const v
     return QDesignerMetaDataBaseInterface_Item((QDesignerMetaDataBaseInterface*)self, (QObject*)object);
 }
 
-void q_designermetadatabaseinterface_on_item(const void* self, QDesignerMetaDataBaseItemInterface* (*callback)(const void*, void*)) {
+void q_designermetadatabaseinterface_on_item(void* self, QDesignerMetaDataBaseItemInterface* (*callback)(const void*, void*)) {
     QDesignerMetaDataBaseInterface_OnItem((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 
@@ -147,7 +147,7 @@ libqt_list /* of QObject* */ q_designermetadatabaseinterface_objects(const void*
     return _arr;
 }
 
-void q_designermetadatabaseinterface_on_objects(const void* self, libqt_list /* of QObject* */ (*callback)(const void*)) {
+void q_designermetadatabaseinterface_on_objects(void* self, libqt_list /* of QObject* */ (*callback)(const void*)) {
     QDesignerMetaDataBaseInterface_OnObjects((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 
@@ -155,7 +155,7 @@ QDesignerFormEditorInterface* q_designermetadatabaseinterface_core(const void* s
     return QDesignerMetaDataBaseInterface_Core((QDesignerMetaDataBaseInterface*)self);
 }
 
-void q_designermetadatabaseinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
+void q_designermetadatabaseinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
     QDesignerMetaDataBaseInterface_OnCore((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 

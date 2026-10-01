@@ -35,10 +35,10 @@ const QMetaObject* k_textedittexttospeech__texttospeechinterface_meta_object(con
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechInterface*
+/// @param self TextEditTextToSpeech__TextToSpeechInterface*
 /// @param callback const QMetaObject* func(const TextEditTextToSpeech__TextToSpeechInterface* self)
 ///
-void k_textedittexttospeech__texttospeechinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textedittexttospeech__texttospeechinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEditTextToSpeech_1_1TextToSpeechInterface.html)
 ///
@@ -855,10 +855,10 @@ QObject* k_textedittexttospeech__texttospeechinterface_super_sender(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechInterface*
+/// @param self TextEditTextToSpeech__TextToSpeechInterface*
 /// @param callback QObject* func(TextEditTextToSpeech__TextToSpeechInterface* self)
 ///
-void k_textedittexttospeech__texttospeechinterface_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textedittexttospeech__texttospeechinterface_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -886,10 +886,10 @@ int32_t k_textedittexttospeech__texttospeechinterface_super_sender_signal_index(
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechInterface*
+/// @param self TextEditTextToSpeech__TextToSpeechInterface*
 /// @param callback int32_t func(TextEditTextToSpeech__TextToSpeechInterface* self)
 ///
-void k_textedittexttospeech__texttospeechinterface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textedittexttospeech__texttospeechinterface_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -919,10 +919,10 @@ int32_t k_textedittexttospeech__texttospeechinterface_super_receivers(const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechInterface*
+/// @param self TextEditTextToSpeech__TextToSpeechInterface*
 /// @param callback int32_t func(TextEditTextToSpeech__TextToSpeechInterface* self, const char* signal)
 ///
-void k_textedittexttospeech__texttospeechinterface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textedittexttospeech__texttospeechinterface_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -952,10 +952,10 @@ bool k_textedittexttospeech__texttospeechinterface_super_is_signal_connected(con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechInterface*
+/// @param self TextEditTextToSpeech__TextToSpeechInterface*
 /// @param callback bool func(TextEditTextToSpeech__TextToSpeechInterface* self, QMetaMethod* signal)
 ///
-void k_textedittexttospeech__texttospeechinterface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textedittexttospeech__texttospeechinterface_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

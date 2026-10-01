@@ -35,7 +35,7 @@ const QMetaObject* k_pagedialog_meta_object(const void* self) {
     return KPageDialog_MetaObject((KPageDialog*)self);
 }
 
-void k_pagedialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_pagedialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPageDialog_OnMetaObject((KPageDialog*)self, (intptr_t)callback);
 }
 
@@ -224,11 +224,11 @@ void k_pagedialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_pagedialog_as_q_paint_device(void* self) {
+QPaintDevice* k_pagedialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KPageDialog* k_pagedialog_from_q_paint_device(void* _qpaintdevice) {
+KPageDialog* k_pagedialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KPageDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1631,8 +1631,8 @@ QSize* k_pagedialog_super_size_hint(const void* self) {
     return KPageDialog_SuperSizeHint((KPageDialog*)self);
 }
 
-void k_pagedialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPageDialog_OnSizeHint((const KPageDialog*)self, (intptr_t)callback);
+void k_pagedialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPageDialog_OnSizeHint((KPageDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_pagedialog_minimum_size_hint(const void* self) {
@@ -1643,8 +1643,8 @@ QSize* k_pagedialog_super_minimum_size_hint(const void* self) {
     return KPageDialog_SuperMinimumSizeHint((KPageDialog*)self);
 }
 
-void k_pagedialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPageDialog_OnMinimumSizeHint((const KPageDialog*)self, (intptr_t)callback);
+void k_pagedialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPageDialog_OnMinimumSizeHint((KPageDialog*)self, (intptr_t)callback);
 }
 
 void k_pagedialog_open(void* self) {
@@ -1787,8 +1787,8 @@ int32_t k_pagedialog_super_dev_type(const void* self) {
     return KPageDialog_SuperDevType((KPageDialog*)self);
 }
 
-void k_pagedialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KPageDialog_OnDevType((const KPageDialog*)self, (intptr_t)callback);
+void k_pagedialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KPageDialog_OnDevType((KPageDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_pagedialog_height_for_width(const void* self, int param1) {
@@ -1799,8 +1799,8 @@ int32_t k_pagedialog_super_height_for_width(const void* self, int param1) {
     return KPageDialog_SuperHeightForWidth((KPageDialog*)self, param1);
 }
 
-void k_pagedialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KPageDialog_OnHeightForWidth((const KPageDialog*)self, (intptr_t)callback);
+void k_pagedialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KPageDialog_OnHeightForWidth((KPageDialog*)self, (intptr_t)callback);
 }
 
 bool k_pagedialog_has_height_for_width(const void* self) {
@@ -1811,8 +1811,8 @@ bool k_pagedialog_super_has_height_for_width(const void* self) {
     return KPageDialog_SuperHasHeightForWidth((KPageDialog*)self);
 }
 
-void k_pagedialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KPageDialog_OnHasHeightForWidth((const KPageDialog*)self, (intptr_t)callback);
+void k_pagedialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KPageDialog_OnHasHeightForWidth((KPageDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_pagedialog_paint_engine(const void* self) {
@@ -1823,8 +1823,8 @@ QPaintEngine* k_pagedialog_super_paint_engine(const void* self) {
     return KPageDialog_SuperPaintEngine((KPageDialog*)self);
 }
 
-void k_pagedialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KPageDialog_OnPaintEngine((const KPageDialog*)self, (intptr_t)callback);
+void k_pagedialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KPageDialog_OnPaintEngine((KPageDialog*)self, (intptr_t)callback);
 }
 
 bool k_pagedialog_event(void* self, void* event) {
@@ -2099,8 +2099,8 @@ int32_t k_pagedialog_super_metric(const void* self, int32_t param1) {
     return KPageDialog_SuperMetric((KPageDialog*)self, param1);
 }
 
-void k_pagedialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KPageDialog_OnMetric((const KPageDialog*)self, (intptr_t)callback);
+void k_pagedialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KPageDialog_OnMetric((KPageDialog*)self, (intptr_t)callback);
 }
 
 void k_pagedialog_init_painter(const void* self, void* painter) {
@@ -2111,8 +2111,8 @@ void k_pagedialog_super_init_painter(const void* self, void* painter) {
     KPageDialog_SuperInitPainter((KPageDialog*)self, (QPainter*)painter);
 }
 
-void k_pagedialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KPageDialog_OnInitPainter((const KPageDialog*)self, (intptr_t)callback);
+void k_pagedialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KPageDialog_OnInitPainter((KPageDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_pagedialog_redirected(const void* self, void* offset) {
@@ -2123,8 +2123,8 @@ QPaintDevice* k_pagedialog_super_redirected(const void* self, void* offset) {
     return KPageDialog_SuperRedirected((KPageDialog*)self, (QPoint*)offset);
 }
 
-void k_pagedialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KPageDialog_OnRedirected((const KPageDialog*)self, (intptr_t)callback);
+void k_pagedialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KPageDialog_OnRedirected((KPageDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_pagedialog_shared_painter(const void* self) {
@@ -2135,8 +2135,8 @@ QPainter* k_pagedialog_super_shared_painter(const void* self) {
     return KPageDialog_SuperSharedPainter((KPageDialog*)self);
 }
 
-void k_pagedialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KPageDialog_OnSharedPainter((const KPageDialog*)self, (intptr_t)callback);
+void k_pagedialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KPageDialog_OnSharedPainter((KPageDialog*)self, (intptr_t)callback);
 }
 
 void k_pagedialog_input_method_event(void* self, void* param1) {
@@ -2159,8 +2159,8 @@ QVariant* k_pagedialog_super_input_method_query(const void* self, int32_t param1
     return KPageDialog_SuperInputMethodQuery((KPageDialog*)self, param1);
 }
 
-void k_pagedialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KPageDialog_OnInputMethodQuery((const KPageDialog*)self, (intptr_t)callback);
+void k_pagedialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KPageDialog_OnInputMethodQuery((KPageDialog*)self, (intptr_t)callback);
 }
 
 bool k_pagedialog_focus_next_prev_child(void* self, bool next) {

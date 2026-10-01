@@ -3682,10 +3682,10 @@ bool q_openglfunctions_1_3_super_is_initialized(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLFunctions_1_3*
+/// @param self QOpenGLFunctions_1_3*
 /// @param callback bool func(QOpenGLFunctions_1_3* self)
 ///
-void q_openglfunctions_1_3_on_is_initialized(const void* self, bool (*callback)(const void*));
+void q_openglfunctions_1_3_on_is_initialized(void* self, bool (*callback)(const void*));
 
 /// Inherited from QAbstractOpenGLFunctions
 ///
@@ -3746,10 +3746,10 @@ QOpenGLContext* q_openglfunctions_1_3_super_owning_context(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOpenGLFunctions_1_3*
+/// @param self QOpenGLFunctions_1_3*
 /// @param callback QOpenGLContext* func(QOpenGLFunctions_1_3* self)
 ///
-void q_openglfunctions_1_3_on_owning_context(const void* self, QOpenGLContext* (*callback)(const void*));
+void q_openglfunctions_1_3_on_owning_context(void* self, QOpenGLContext* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-3.html#dtor.QOpenGLFunctions_1_3)
 ///

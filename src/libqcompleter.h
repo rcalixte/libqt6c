@@ -66,10 +66,10 @@ const QMetaObject* q_completer_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCompleter*
+/// @param self QCompleter*
 /// @param callback const QMetaObject* func(const QCompleter* self)
 ///
-void q_completer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_completer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -353,10 +353,10 @@ const char* q_completer_path_from_index(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCompleter*
+/// @param self QCompleter*
 /// @param callback const char* func(const QCompleter* self, QModelIndex* index)
 ///
-void q_completer_on_path_from_index(const void* self, const char* (*callback)(const void*, const void*));
+void q_completer_on_path_from_index(void* self, const char* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#pathFromIndex)
 ///
@@ -380,10 +380,10 @@ const char** q_completer_split_path(const void* self, const char* path);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCompleter*
+/// @param self QCompleter*
 /// @param callback const char** func(const QCompleter* self, const char* path)
 ///
-void q_completer_on_split_path(const void* self, const char** (*callback)(const void*, const char*));
+void q_completer_on_split_path(void* self, const char** (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#splitPath)
 ///
@@ -1166,10 +1166,10 @@ QObject* q_completer_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCompleter*
+/// @param self QCompleter*
 /// @param callback QObject* func(QCompleter* self)
 ///
-void q_completer_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_completer_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1197,10 +1197,10 @@ int32_t q_completer_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCompleter*
+/// @param self QCompleter*
 /// @param callback int32_t func(QCompleter* self)
 ///
-void q_completer_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_completer_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1230,10 +1230,10 @@ int32_t q_completer_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCompleter*
+/// @param self QCompleter*
 /// @param callback int32_t func(QCompleter* self, const char* signal)
 ///
-void q_completer_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_completer_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1263,10 +1263,10 @@ bool q_completer_super_is_signal_connected(const void* self, const void* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCompleter*
+/// @param self QCompleter*
 /// @param callback bool func(QCompleter* self, QMetaMethod* signal)
 ///
-void q_completer_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_completer_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

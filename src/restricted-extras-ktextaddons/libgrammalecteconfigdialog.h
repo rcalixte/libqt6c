@@ -41,10 +41,10 @@ const QMetaObject* k_textgrammarcheck__grammalecteconfigdialog_meta_object(const
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback const QMetaObject* func(const TextGrammarCheck__GrammalecteConfigDialog* self)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammalecteConfigDialog.html)
 ///
@@ -222,9 +222,9 @@ void k_textgrammarcheck__grammalecteconfigdialog_on_rejected(void* self, void (*
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
 ///
-QPaintDevice* k_textgrammarcheck__grammalecteconfigdialog_as_q_paint_device(void* self);
+QPaintDevice* k_textgrammarcheck__grammalecteconfigdialog_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -232,7 +232,7 @@ QPaintDevice* k_textgrammarcheck__grammalecteconfigdialog_as_q_paint_device(void
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-TextGrammarCheck__GrammalecteConfigDialog* k_textgrammarcheck__grammalecteconfigdialog_from_q_paint_device(void* _qpaintdevice);
+TextGrammarCheck__GrammalecteConfigDialog* k_textgrammarcheck__grammalecteconfigdialog_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3250,12 +3250,12 @@ QSize* k_textgrammarcheck__grammalecteconfigdialog_super_size_hint(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback QSize* func(TextGrammarCheck__GrammalecteConfigDialog* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3283,12 +3283,12 @@ QSize* k_textgrammarcheck__grammalecteconfigdialog_super_minimum_size_hint(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback QSize* func(TextGrammarCheck__GrammalecteConfigDialog* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3673,10 +3673,10 @@ int32_t k_textgrammarcheck__grammalecteconfigdialog_super_dev_type(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback int32_t func(TextGrammarCheck__GrammalecteConfigDialog* self)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3706,10 +3706,10 @@ int32_t k_textgrammarcheck__grammalecteconfigdialog_super_height_for_width(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback int32_t func(TextGrammarCheck__GrammalecteConfigDialog* self, int param1)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_textgrammarcheck__grammalecteconfigdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3737,10 +3737,10 @@ bool k_textgrammarcheck__grammalecteconfigdialog_super_has_height_for_width(cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback bool func(TextGrammarCheck__GrammalecteConfigDialog* self)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3768,10 +3768,10 @@ QPaintEngine* k_textgrammarcheck__grammalecteconfigdialog_super_paint_engine(con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback QPaintEngine* func(TextGrammarCheck__GrammalecteConfigDialog* self)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4531,10 +4531,10 @@ int32_t k_textgrammarcheck__grammalecteconfigdialog_super_metric(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback int32_t func(TextGrammarCheck__GrammalecteConfigDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_textgrammarcheck__grammalecteconfigdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4564,10 +4564,10 @@ void k_textgrammarcheck__grammalecteconfigdialog_super_init_painter(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback void func(TextGrammarCheck__GrammalecteConfigDialog* self, QPainter* painter)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4597,10 +4597,10 @@ QPaintDevice* k_textgrammarcheck__grammalecteconfigdialog_super_redirected(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback QPaintDevice* func(TextGrammarCheck__GrammalecteConfigDialog* self, QPoint* offset)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4628,10 +4628,10 @@ QPainter* k_textgrammarcheck__grammalecteconfigdialog_super_shared_painter(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback QPainter* func(TextGrammarCheck__GrammalecteConfigDialog* self)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4694,12 +4694,12 @@ QVariant* k_textgrammarcheck__grammalecteconfigdialog_super_input_method_query(c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback QVariant* func(TextGrammarCheck__GrammalecteConfigDialog* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_textgrammarcheck__grammalecteconfigdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5113,10 +5113,10 @@ QObject* k_textgrammarcheck__grammalecteconfigdialog_super_sender(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback QObject* func(TextGrammarCheck__GrammalecteConfigDialog* self)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5144,10 +5144,10 @@ int32_t k_textgrammarcheck__grammalecteconfigdialog_super_sender_signal_index(co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback int32_t func(TextGrammarCheck__GrammalecteConfigDialog* self)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5177,10 +5177,10 @@ int32_t k_textgrammarcheck__grammalecteconfigdialog_super_receivers(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback int32_t func(TextGrammarCheck__GrammalecteConfigDialog* self, const char* signal)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5210,10 +5210,10 @@ bool k_textgrammarcheck__grammalecteconfigdialog_super_is_signal_connected(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback bool func(TextGrammarCheck__GrammalecteConfigDialog* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textgrammarcheck__grammalecteconfigdialog_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5245,10 +5245,10 @@ double k_textgrammarcheck__grammalecteconfigdialog_super_get_decoded_metric_f(co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__GrammalecteConfigDialog*
+/// @param self TextGrammarCheck__GrammalecteConfigDialog*
 /// @param callback double func(TextGrammarCheck__GrammalecteConfigDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_textgrammarcheck__grammalecteconfigdialog_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_textgrammarcheck__grammalecteconfigdialog_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

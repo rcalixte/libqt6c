@@ -88,7 +88,7 @@ const QMetaObject* q_texttospeech_meta_object(const void* self) {
     return QTextToSpeech_MetaObject((QTextToSpeech*)self);
 }
 
-void q_texttospeech_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_texttospeech_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTextToSpeech_OnMetaObject((QTextToSpeech*)self, (intptr_t)callback);
 }
 

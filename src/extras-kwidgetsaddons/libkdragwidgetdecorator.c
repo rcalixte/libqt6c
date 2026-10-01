@@ -19,7 +19,7 @@ const QMetaObject* k_dragwidgetdecoratorbase_meta_object(const void* self) {
     return KDragWidgetDecoratorBase_MetaObject((KDragWidgetDecoratorBase*)self);
 }
 
-void k_dragwidgetdecoratorbase_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_dragwidgetdecoratorbase_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KDragWidgetDecoratorBase_OnMetaObject((KDragWidgetDecoratorBase*)self, (intptr_t)callback);
 }
 

@@ -25,7 +25,7 @@ const QMetaObject* k_texttranslator__translatorconfigurelistswidget_meta_object(
     return TextTranslator__TranslatorConfigureListsWidget_MetaObject((TextTranslator__TranslatorConfigureListsWidget*)self);
 }
 
-void k_texttranslator__translatorconfigurelistswidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_texttranslator__translatorconfigurelistswidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextTranslator__TranslatorConfigureListsWidget_OnMetaObject((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
@@ -86,11 +86,11 @@ const char* k_texttranslator__translatorconfigurelistswidget_tr3(const char* s, 
     return _ret;
 }
 
-QPaintDevice* k_texttranslator__translatorconfigurelistswidget_as_q_paint_device(void* self) {
+QPaintDevice* k_texttranslator__translatorconfigurelistswidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextTranslator__TranslatorConfigureListsWidget* k_texttranslator__translatorconfigurelistswidget_from_q_paint_device(void* _qpaintdevice) {
+TextTranslator__TranslatorConfigureListsWidget* k_texttranslator__translatorconfigurelistswidget_from_q_paint_device(const void* _qpaintdevice) {
     return (TextTranslator__TranslatorConfigureListsWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1481,8 +1481,8 @@ int32_t k_texttranslator__translatorconfigurelistswidget_super_dev_type(const vo
     return TextTranslator__TranslatorConfigureListsWidget_SuperDevType((TextTranslator__TranslatorConfigureListsWidget*)self);
 }
 
-void k_texttranslator__translatorconfigurelistswidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureListsWidget_OnDevType((const TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfigurelistswidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureListsWidget_OnDevType((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
 void k_texttranslator__translatorconfigurelistswidget_set_visible(void* self, bool visible) {
@@ -1505,8 +1505,8 @@ QSize* k_texttranslator__translatorconfigurelistswidget_super_size_hint(const vo
     return TextTranslator__TranslatorConfigureListsWidget_SuperSizeHint((TextTranslator__TranslatorConfigureListsWidget*)self);
 }
 
-void k_texttranslator__translatorconfigurelistswidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureListsWidget_OnSizeHint((const TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfigurelistswidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureListsWidget_OnSizeHint((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
 QSize* k_texttranslator__translatorconfigurelistswidget_minimum_size_hint(const void* self) {
@@ -1517,8 +1517,8 @@ QSize* k_texttranslator__translatorconfigurelistswidget_super_minimum_size_hint(
     return TextTranslator__TranslatorConfigureListsWidget_SuperMinimumSizeHint((TextTranslator__TranslatorConfigureListsWidget*)self);
 }
 
-void k_texttranslator__translatorconfigurelistswidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureListsWidget_OnMinimumSizeHint((const TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfigurelistswidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureListsWidget_OnMinimumSizeHint((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
 int32_t k_texttranslator__translatorconfigurelistswidget_height_for_width(const void* self, int param1) {
@@ -1529,8 +1529,8 @@ int32_t k_texttranslator__translatorconfigurelistswidget_super_height_for_width(
     return TextTranslator__TranslatorConfigureListsWidget_SuperHeightForWidth((TextTranslator__TranslatorConfigureListsWidget*)self, param1);
 }
 
-void k_texttranslator__translatorconfigurelistswidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextTranslator__TranslatorConfigureListsWidget_OnHeightForWidth((const TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfigurelistswidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextTranslator__TranslatorConfigureListsWidget_OnHeightForWidth((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
 bool k_texttranslator__translatorconfigurelistswidget_has_height_for_width(const void* self) {
@@ -1541,8 +1541,8 @@ bool k_texttranslator__translatorconfigurelistswidget_super_has_height_for_width
     return TextTranslator__TranslatorConfigureListsWidget_SuperHasHeightForWidth((TextTranslator__TranslatorConfigureListsWidget*)self);
 }
 
-void k_texttranslator__translatorconfigurelistswidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureListsWidget_OnHasHeightForWidth((const TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfigurelistswidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureListsWidget_OnHasHeightForWidth((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_texttranslator__translatorconfigurelistswidget_paint_engine(const void* self) {
@@ -1553,8 +1553,8 @@ QPaintEngine* k_texttranslator__translatorconfigurelistswidget_super_paint_engin
     return TextTranslator__TranslatorConfigureListsWidget_SuperPaintEngine((TextTranslator__TranslatorConfigureListsWidget*)self);
 }
 
-void k_texttranslator__translatorconfigurelistswidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureListsWidget_OnPaintEngine((const TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfigurelistswidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureListsWidget_OnPaintEngine((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
 bool k_texttranslator__translatorconfigurelistswidget_event(void* self, void* event) {
@@ -1889,8 +1889,8 @@ int32_t k_texttranslator__translatorconfigurelistswidget_super_metric(const void
     return TextTranslator__TranslatorConfigureListsWidget_SuperMetric((TextTranslator__TranslatorConfigureListsWidget*)self, param1);
 }
 
-void k_texttranslator__translatorconfigurelistswidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextTranslator__TranslatorConfigureListsWidget_OnMetric((const TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfigurelistswidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextTranslator__TranslatorConfigureListsWidget_OnMetric((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
 void k_texttranslator__translatorconfigurelistswidget_init_painter(const void* self, void* painter) {
@@ -1901,8 +1901,8 @@ void k_texttranslator__translatorconfigurelistswidget_super_init_painter(const v
     TextTranslator__TranslatorConfigureListsWidget_SuperInitPainter((TextTranslator__TranslatorConfigureListsWidget*)self, (QPainter*)painter);
 }
 
-void k_texttranslator__translatorconfigurelistswidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextTranslator__TranslatorConfigureListsWidget_OnInitPainter((const TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfigurelistswidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextTranslator__TranslatorConfigureListsWidget_OnInitPainter((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_texttranslator__translatorconfigurelistswidget_redirected(const void* self, void* offset) {
@@ -1913,8 +1913,8 @@ QPaintDevice* k_texttranslator__translatorconfigurelistswidget_super_redirected(
     return TextTranslator__TranslatorConfigureListsWidget_SuperRedirected((TextTranslator__TranslatorConfigureListsWidget*)self, (QPoint*)offset);
 }
 
-void k_texttranslator__translatorconfigurelistswidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextTranslator__TranslatorConfigureListsWidget_OnRedirected((const TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfigurelistswidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextTranslator__TranslatorConfigureListsWidget_OnRedirected((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
 QPainter* k_texttranslator__translatorconfigurelistswidget_shared_painter(const void* self) {
@@ -1925,8 +1925,8 @@ QPainter* k_texttranslator__translatorconfigurelistswidget_super_shared_painter(
     return TextTranslator__TranslatorConfigureListsWidget_SuperSharedPainter((TextTranslator__TranslatorConfigureListsWidget*)self);
 }
 
-void k_texttranslator__translatorconfigurelistswidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextTranslator__TranslatorConfigureListsWidget_OnSharedPainter((const TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfigurelistswidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextTranslator__TranslatorConfigureListsWidget_OnSharedPainter((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
 void k_texttranslator__translatorconfigurelistswidget_input_method_event(void* self, void* param1) {
@@ -1949,8 +1949,8 @@ QVariant* k_texttranslator__translatorconfigurelistswidget_super_input_method_qu
     return TextTranslator__TranslatorConfigureListsWidget_SuperInputMethodQuery((TextTranslator__TranslatorConfigureListsWidget*)self, param1);
 }
 
-void k_texttranslator__translatorconfigurelistswidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextTranslator__TranslatorConfigureListsWidget_OnInputMethodQuery((const TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
+void k_texttranslator__translatorconfigurelistswidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextTranslator__TranslatorConfigureListsWidget_OnInputMethodQuery((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
 bool k_texttranslator__translatorconfigurelistswidget_focus_next_prev_child(void* self, bool next) {

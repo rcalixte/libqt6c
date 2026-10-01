@@ -29,7 +29,7 @@ const QMetaObject* q_calendarwidget_meta_object(const void* self) {
     return QCalendarWidget_MetaObject((QCalendarWidget*)self);
 }
 
-void q_calendarwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_calendarwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCalendarWidget_OnMetaObject((QCalendarWidget*)self, (intptr_t)callback);
 }
 
@@ -72,7 +72,7 @@ QSize* q_calendarwidget_size_hint(const void* self) {
     return QCalendarWidget_SizeHint((QCalendarWidget*)self);
 }
 
-void q_calendarwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_calendarwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCalendarWidget_OnSizeHint((QCalendarWidget*)self, (intptr_t)callback);
 }
 
@@ -84,7 +84,7 @@ QSize* q_calendarwidget_minimum_size_hint(const void* self) {
     return QCalendarWidget_MinimumSizeHint((QCalendarWidget*)self);
 }
 
-void q_calendarwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_calendarwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCalendarWidget_OnMinimumSizeHint((QCalendarWidget*)self, (intptr_t)callback);
 }
 
@@ -290,7 +290,7 @@ void q_calendarwidget_paint_cell(const void* self, void* painter, const void* re
     QCalendarWidget_PaintCell((QCalendarWidget*)self, (QPainter*)painter, (QRect*)rect, (QDate*)date);
 }
 
-void q_calendarwidget_on_paint_cell(const void* self, void (*callback)(const void*, void*, const void*, void*)) {
+void q_calendarwidget_on_paint_cell(void* self, void (*callback)(const void*, void*, const void*, void*)) {
     QCalendarWidget_OnPaintCell((QCalendarWidget*)self, (intptr_t)callback);
 }
 
@@ -396,11 +396,11 @@ const char* q_calendarwidget_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_calendarwidget_as_q_paint_device(void* self) {
+QPaintDevice* q_calendarwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QCalendarWidget* q_calendarwidget_from_q_paint_device(void* _qpaintdevice) {
+QCalendarWidget* q_calendarwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (QCalendarWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1791,8 +1791,8 @@ int32_t q_calendarwidget_super_dev_type(const void* self) {
     return QCalendarWidget_SuperDevType((QCalendarWidget*)self);
 }
 
-void q_calendarwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QCalendarWidget_OnDevType((const QCalendarWidget*)self, (intptr_t)callback);
+void q_calendarwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QCalendarWidget_OnDevType((QCalendarWidget*)self, (intptr_t)callback);
 }
 
 void q_calendarwidget_set_visible(void* self, bool visible) {
@@ -1815,8 +1815,8 @@ int32_t q_calendarwidget_super_height_for_width(const void* self, int param1) {
     return QCalendarWidget_SuperHeightForWidth((QCalendarWidget*)self, param1);
 }
 
-void q_calendarwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QCalendarWidget_OnHeightForWidth((const QCalendarWidget*)self, (intptr_t)callback);
+void q_calendarwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QCalendarWidget_OnHeightForWidth((QCalendarWidget*)self, (intptr_t)callback);
 }
 
 bool q_calendarwidget_has_height_for_width(const void* self) {
@@ -1827,8 +1827,8 @@ bool q_calendarwidget_super_has_height_for_width(const void* self) {
     return QCalendarWidget_SuperHasHeightForWidth((QCalendarWidget*)self);
 }
 
-void q_calendarwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QCalendarWidget_OnHasHeightForWidth((const QCalendarWidget*)self, (intptr_t)callback);
+void q_calendarwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QCalendarWidget_OnHasHeightForWidth((QCalendarWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_calendarwidget_paint_engine(const void* self) {
@@ -1839,8 +1839,8 @@ QPaintEngine* q_calendarwidget_super_paint_engine(const void* self) {
     return QCalendarWidget_SuperPaintEngine((QCalendarWidget*)self);
 }
 
-void q_calendarwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QCalendarWidget_OnPaintEngine((const QCalendarWidget*)self, (intptr_t)callback);
+void q_calendarwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QCalendarWidget_OnPaintEngine((QCalendarWidget*)self, (intptr_t)callback);
 }
 
 void q_calendarwidget_mouse_release_event(void* self, void* event) {
@@ -2127,8 +2127,8 @@ int32_t q_calendarwidget_super_metric(const void* self, int32_t param1) {
     return QCalendarWidget_SuperMetric((QCalendarWidget*)self, param1);
 }
 
-void q_calendarwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QCalendarWidget_OnMetric((const QCalendarWidget*)self, (intptr_t)callback);
+void q_calendarwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QCalendarWidget_OnMetric((QCalendarWidget*)self, (intptr_t)callback);
 }
 
 void q_calendarwidget_init_painter(const void* self, void* painter) {
@@ -2139,8 +2139,8 @@ void q_calendarwidget_super_init_painter(const void* self, void* painter) {
     QCalendarWidget_SuperInitPainter((QCalendarWidget*)self, (QPainter*)painter);
 }
 
-void q_calendarwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QCalendarWidget_OnInitPainter((const QCalendarWidget*)self, (intptr_t)callback);
+void q_calendarwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QCalendarWidget_OnInitPainter((QCalendarWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_calendarwidget_redirected(const void* self, void* offset) {
@@ -2151,8 +2151,8 @@ QPaintDevice* q_calendarwidget_super_redirected(const void* self, void* offset) 
     return QCalendarWidget_SuperRedirected((QCalendarWidget*)self, (QPoint*)offset);
 }
 
-void q_calendarwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QCalendarWidget_OnRedirected((const QCalendarWidget*)self, (intptr_t)callback);
+void q_calendarwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QCalendarWidget_OnRedirected((QCalendarWidget*)self, (intptr_t)callback);
 }
 
 QPainter* q_calendarwidget_shared_painter(const void* self) {
@@ -2163,8 +2163,8 @@ QPainter* q_calendarwidget_super_shared_painter(const void* self) {
     return QCalendarWidget_SuperSharedPainter((QCalendarWidget*)self);
 }
 
-void q_calendarwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QCalendarWidget_OnSharedPainter((const QCalendarWidget*)self, (intptr_t)callback);
+void q_calendarwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QCalendarWidget_OnSharedPainter((QCalendarWidget*)self, (intptr_t)callback);
 }
 
 void q_calendarwidget_input_method_event(void* self, void* param1) {
@@ -2187,8 +2187,8 @@ QVariant* q_calendarwidget_super_input_method_query(const void* self, int32_t pa
     return QCalendarWidget_SuperInputMethodQuery((QCalendarWidget*)self, param1);
 }
 
-void q_calendarwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QCalendarWidget_OnInputMethodQuery((const QCalendarWidget*)self, (intptr_t)callback);
+void q_calendarwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QCalendarWidget_OnInputMethodQuery((QCalendarWidget*)self, (intptr_t)callback);
 }
 
 bool q_calendarwidget_focus_next_prev_child(void* self, bool next) {

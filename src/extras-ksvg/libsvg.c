@@ -25,7 +25,7 @@ const QMetaObject* k_svg__svg_meta_object(const void* self) {
     return KSvg__Svg_MetaObject((KSvg__Svg*)self);
 }
 
-void k_svg__svg_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_svg__svg_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSvg__Svg_OnMetaObject((KSvg__Svg*)self, (intptr_t)callback);
 }
 

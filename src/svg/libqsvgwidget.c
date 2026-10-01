@@ -34,7 +34,7 @@ const QMetaObject* q_svgwidget_meta_object(const void* self) {
     return QSvgWidget_MetaObject((QSvgWidget*)self);
 }
 
-void q_svgwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_svgwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSvgWidget_OnMetaObject((QSvgWidget*)self, (intptr_t)callback);
 }
 
@@ -81,7 +81,7 @@ QSize* q_svgwidget_size_hint(const void* self) {
     return QSvgWidget_SizeHint((QSvgWidget*)self);
 }
 
-void q_svgwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_svgwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QSvgWidget_OnSizeHint((QSvgWidget*)self, (intptr_t)callback);
 }
 
@@ -131,11 +131,11 @@ const char* q_svgwidget_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_svgwidget_as_q_paint_device(void* self) {
+QPaintDevice* q_svgwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QSvgWidget* q_svgwidget_from_q_paint_device(void* _qpaintdevice) {
+QSvgWidget* q_svgwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (QSvgWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1526,8 +1526,8 @@ int32_t q_svgwidget_super_dev_type(const void* self) {
     return QSvgWidget_SuperDevType((QSvgWidget*)self);
 }
 
-void q_svgwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QSvgWidget_OnDevType((const QSvgWidget*)self, (intptr_t)callback);
+void q_svgwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QSvgWidget_OnDevType((QSvgWidget*)self, (intptr_t)callback);
 }
 
 void q_svgwidget_set_visible(void* self, bool visible) {
@@ -1550,8 +1550,8 @@ QSize* q_svgwidget_super_minimum_size_hint(const void* self) {
     return QSvgWidget_SuperMinimumSizeHint((QSvgWidget*)self);
 }
 
-void q_svgwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QSvgWidget_OnMinimumSizeHint((const QSvgWidget*)self, (intptr_t)callback);
+void q_svgwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QSvgWidget_OnMinimumSizeHint((QSvgWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_svgwidget_height_for_width(const void* self, int param1) {
@@ -1562,8 +1562,8 @@ int32_t q_svgwidget_super_height_for_width(const void* self, int param1) {
     return QSvgWidget_SuperHeightForWidth((QSvgWidget*)self, param1);
 }
 
-void q_svgwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QSvgWidget_OnHeightForWidth((const QSvgWidget*)self, (intptr_t)callback);
+void q_svgwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QSvgWidget_OnHeightForWidth((QSvgWidget*)self, (intptr_t)callback);
 }
 
 bool q_svgwidget_has_height_for_width(const void* self) {
@@ -1574,8 +1574,8 @@ bool q_svgwidget_super_has_height_for_width(const void* self) {
     return QSvgWidget_SuperHasHeightForWidth((QSvgWidget*)self);
 }
 
-void q_svgwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QSvgWidget_OnHasHeightForWidth((const QSvgWidget*)self, (intptr_t)callback);
+void q_svgwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QSvgWidget_OnHasHeightForWidth((QSvgWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_svgwidget_paint_engine(const void* self) {
@@ -1586,8 +1586,8 @@ QPaintEngine* q_svgwidget_super_paint_engine(const void* self) {
     return QSvgWidget_SuperPaintEngine((QSvgWidget*)self);
 }
 
-void q_svgwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QSvgWidget_OnPaintEngine((const QSvgWidget*)self, (intptr_t)callback);
+void q_svgwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QSvgWidget_OnPaintEngine((QSvgWidget*)self, (intptr_t)callback);
 }
 
 bool q_svgwidget_event(void* self, void* event) {
@@ -1910,8 +1910,8 @@ int32_t q_svgwidget_super_metric(const void* self, int32_t param1) {
     return QSvgWidget_SuperMetric((QSvgWidget*)self, param1);
 }
 
-void q_svgwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QSvgWidget_OnMetric((const QSvgWidget*)self, (intptr_t)callback);
+void q_svgwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QSvgWidget_OnMetric((QSvgWidget*)self, (intptr_t)callback);
 }
 
 void q_svgwidget_init_painter(const void* self, void* painter) {
@@ -1922,8 +1922,8 @@ void q_svgwidget_super_init_painter(const void* self, void* painter) {
     QSvgWidget_SuperInitPainter((QSvgWidget*)self, (QPainter*)painter);
 }
 
-void q_svgwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QSvgWidget_OnInitPainter((const QSvgWidget*)self, (intptr_t)callback);
+void q_svgwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QSvgWidget_OnInitPainter((QSvgWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_svgwidget_redirected(const void* self, void* offset) {
@@ -1934,8 +1934,8 @@ QPaintDevice* q_svgwidget_super_redirected(const void* self, void* offset) {
     return QSvgWidget_SuperRedirected((QSvgWidget*)self, (QPoint*)offset);
 }
 
-void q_svgwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QSvgWidget_OnRedirected((const QSvgWidget*)self, (intptr_t)callback);
+void q_svgwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QSvgWidget_OnRedirected((QSvgWidget*)self, (intptr_t)callback);
 }
 
 QPainter* q_svgwidget_shared_painter(const void* self) {
@@ -1946,8 +1946,8 @@ QPainter* q_svgwidget_super_shared_painter(const void* self) {
     return QSvgWidget_SuperSharedPainter((QSvgWidget*)self);
 }
 
-void q_svgwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QSvgWidget_OnSharedPainter((const QSvgWidget*)self, (intptr_t)callback);
+void q_svgwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QSvgWidget_OnSharedPainter((QSvgWidget*)self, (intptr_t)callback);
 }
 
 void q_svgwidget_input_method_event(void* self, void* param1) {
@@ -1970,8 +1970,8 @@ QVariant* q_svgwidget_super_input_method_query(const void* self, int32_t param1)
     return QSvgWidget_SuperInputMethodQuery((QSvgWidget*)self, param1);
 }
 
-void q_svgwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QSvgWidget_OnInputMethodQuery((const QSvgWidget*)self, (intptr_t)callback);
+void q_svgwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QSvgWidget_OnInputMethodQuery((QSvgWidget*)self, (intptr_t)callback);
 }
 
 bool q_svgwidget_focus_next_prev_child(void* self, bool next) {

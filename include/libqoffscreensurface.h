@@ -33,15 +33,15 @@ QOffscreenSurface* q_offscreensurface_new3(void* screen, void* parent);
 
 /// Upcasts to a QSurface object
 ///
-/// @param self QOffscreenSurface*
+/// @param self const QOffscreenSurface*
 ///
-QSurface* q_offscreensurface_as_q_surface(void* self);
+QSurface* q_offscreensurface_as_q_surface(const void* self);
 
 /// Downcasts to a QOffscreenSurface object
 ///
 /// @param _qsurface QSurface*
 ///
-QOffscreenSurface* q_offscreensurface_from_q_surface(void* _qsurface);
+QOffscreenSurface* q_offscreensurface_from_q_surface(const void* _qsurface);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -53,10 +53,10 @@ const QMetaObject* q_offscreensurface_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QOffscreenSurface*
+/// @param self QOffscreenSurface*
 /// @param callback const QMetaObject* func(const QOffscreenSurface* self)
 ///
-void q_offscreensurface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_offscreensurface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -128,10 +128,10 @@ int32_t q_offscreensurface_surface_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QOffscreenSurface*
+/// @param self QOffscreenSurface*
 /// @param callback int32_t func(const QOffscreenSurface* self)
 ///
-void q_offscreensurface_on_surface_type(const void* self, int32_t (*callback)(const void*));
+void q_offscreensurface_on_surface_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoffscreensurface.html#surfaceType)
 ///
@@ -178,12 +178,12 @@ QSurfaceFormat* q_offscreensurface_format(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QOffscreenSurface*
+/// @param self QOffscreenSurface*
 /// @param callback QSurfaceFormat* func(const QOffscreenSurface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_offscreensurface_on_format(const void* self, QSurfaceFormat* (*callback)(const void*));
+void q_offscreensurface_on_format(void* self, QSurfaceFormat* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoffscreensurface.html#format)
 ///
@@ -209,12 +209,12 @@ QSize* q_offscreensurface_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QOffscreenSurface*
+/// @param self QOffscreenSurface*
 /// @param callback QSize* func(const QOffscreenSurface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_offscreensurface_on_size(const void* self, QSize* (*callback)(const void*));
+void q_offscreensurface_on_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qoffscreensurface.html#size)
 ///
@@ -1011,10 +1011,10 @@ QObject* q_offscreensurface_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOffscreenSurface*
+/// @param self QOffscreenSurface*
 /// @param callback QObject* func(QOffscreenSurface* self)
 ///
-void q_offscreensurface_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_offscreensurface_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1042,10 +1042,10 @@ int32_t q_offscreensurface_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOffscreenSurface*
+/// @param self QOffscreenSurface*
 /// @param callback int32_t func(QOffscreenSurface* self)
 ///
-void q_offscreensurface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_offscreensurface_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1075,10 +1075,10 @@ int32_t q_offscreensurface_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOffscreenSurface*
+/// @param self QOffscreenSurface*
 /// @param callback int32_t func(QOffscreenSurface* self, const char* signal)
 ///
-void q_offscreensurface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_offscreensurface_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1108,10 +1108,10 @@ bool q_offscreensurface_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QOffscreenSurface*
+/// @param self QOffscreenSurface*
 /// @param callback bool func(QOffscreenSurface* self, QMetaMethod* signal)
 ///
-void q_offscreensurface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_offscreensurface_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -18,7 +18,7 @@ const QMetaObject* q_styleplugin_meta_object(const void* self) {
     return QStylePlugin_MetaObject((QStylePlugin*)self);
 }
 
-void q_styleplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_styleplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QStylePlugin_OnMetaObject((QStylePlugin*)self, (intptr_t)callback);
 }
 

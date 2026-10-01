@@ -24,10 +24,10 @@ const QMetaObject* k_nscore__provider_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KNSCore__Provider*
+/// @param self KNSCore__Provider*
 /// @param callback const QMetaObject* func(const KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_nscore__provider_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -101,10 +101,10 @@ const char* k_nscore__provider_id(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KNSCore__Provider*
+/// @param self KNSCore__Provider*
 /// @param callback const char* func(const KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_id(const void* self, const char* (*callback)(const void*));
+void k_nscore__provider_on_id(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setProviderXML)
 ///
@@ -136,10 +136,10 @@ bool k_nscore__provider_is_initialized(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KNSCore__Provider*
+/// @param self KNSCore__Provider*
 /// @param callback bool func(const KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_is_initialized(const void* self, bool (*callback)(const void*));
+void k_nscore__provider_on_is_initialized(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setCachedEntries)
 ///
@@ -171,10 +171,10 @@ const char* k_nscore__provider_name(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KNSCore__Provider*
+/// @param self KNSCore__Provider*
 /// @param callback const char* func(const KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_name(const void* self, const char* (*callback)(const void*));
+void k_nscore__provider_on_name(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#name)
 ///
@@ -194,12 +194,12 @@ QUrl* k_nscore__provider_icon(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KNSCore__Provider*
+/// @param self KNSCore__Provider*
 /// @param callback QUrl* func(const KNSCore__Provider* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_nscore__provider_on_icon(const void* self, QUrl* (*callback)(const void*));
+void k_nscore__provider_on_icon(void* self, QUrl* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#icon)
 ///
@@ -1466,10 +1466,10 @@ QObject* k_nscore__provider_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNSCore__Provider*
+/// @param self KNSCore__Provider*
 /// @param callback QObject* func(KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_nscore__provider_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1497,10 +1497,10 @@ int32_t k_nscore__provider_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNSCore__Provider*
+/// @param self KNSCore__Provider*
 /// @param callback int32_t func(KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_nscore__provider_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1530,10 +1530,10 @@ int32_t k_nscore__provider_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNSCore__Provider*
+/// @param self KNSCore__Provider*
 /// @param callback int32_t func(KNSCore__Provider* self, const char* signal)
 ///
-void k_nscore__provider_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_nscore__provider_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1563,10 +1563,10 @@ bool k_nscore__provider_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNSCore__Provider*
+/// @param self KNSCore__Provider*
 /// @param callback bool func(KNSCore__Provider* self, QMetaMethod* signal)
 ///
-void k_nscore__provider_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_nscore__provider_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

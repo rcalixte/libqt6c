@@ -25,7 +25,7 @@ const QMetaObject* q_chronotimer_meta_object(const void* self) {
     return QChronoTimer_MetaObject((QChronoTimer*)self);
 }
 
-void q_chronotimer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_chronotimer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QChronoTimer_OnMetaObject((QChronoTimer*)self, (intptr_t)callback);
 }
 

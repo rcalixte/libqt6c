@@ -86,8 +86,8 @@ QEvent* q_graphicssceneevent_super_clone(const void* self) {
     return QGraphicsSceneEvent_SuperClone((QGraphicsSceneEvent*)self);
 }
 
-void q_graphicssceneevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    QGraphicsSceneEvent_OnClone((const QGraphicsSceneEvent*)self, (intptr_t)callback);
+void q_graphicssceneevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneEvent_OnClone((QGraphicsSceneEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicssceneevent_delete(void* self) {
@@ -290,8 +290,8 @@ QEvent* q_graphicsscenemouseevent_super_clone(const void* self) {
     return QGraphicsSceneMouseEvent_SuperClone((QGraphicsSceneMouseEvent*)self);
 }
 
-void q_graphicsscenemouseevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    QGraphicsSceneMouseEvent_OnClone((const QGraphicsSceneMouseEvent*)self, (intptr_t)callback);
+void q_graphicsscenemouseevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneMouseEvent_OnClone((QGraphicsSceneMouseEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenemouseevent_delete(void* self) {
@@ -462,8 +462,8 @@ QEvent* q_graphicsscenewheelevent_super_clone(const void* self) {
     return QGraphicsSceneWheelEvent_SuperClone((QGraphicsSceneWheelEvent*)self);
 }
 
-void q_graphicsscenewheelevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    QGraphicsSceneWheelEvent_OnClone((const QGraphicsSceneWheelEvent*)self, (intptr_t)callback);
+void q_graphicsscenewheelevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneWheelEvent_OnClone((QGraphicsSceneWheelEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenewheelevent_delete(void* self) {
@@ -594,8 +594,8 @@ QEvent* q_graphicsscenecontextmenuevent_super_clone(const void* self) {
     return QGraphicsSceneContextMenuEvent_SuperClone((QGraphicsSceneContextMenuEvent*)self);
 }
 
-void q_graphicsscenecontextmenuevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    QGraphicsSceneContextMenuEvent_OnClone((const QGraphicsSceneContextMenuEvent*)self, (intptr_t)callback);
+void q_graphicsscenecontextmenuevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneContextMenuEvent_OnClone((QGraphicsSceneContextMenuEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenecontextmenuevent_delete(void* self) {
@@ -742,8 +742,8 @@ QEvent* q_graphicsscenehoverevent_super_clone(const void* self) {
     return QGraphicsSceneHoverEvent_SuperClone((QGraphicsSceneHoverEvent*)self);
 }
 
-void q_graphicsscenehoverevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    QGraphicsSceneHoverEvent_OnClone((const QGraphicsSceneHoverEvent*)self, (intptr_t)callback);
+void q_graphicsscenehoverevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneHoverEvent_OnClone((QGraphicsSceneHoverEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenehoverevent_delete(void* self) {
@@ -850,8 +850,8 @@ QEvent* q_graphicsscenehelpevent_super_clone(const void* self) {
     return QGraphicsSceneHelpEvent_SuperClone((QGraphicsSceneHelpEvent*)self);
 }
 
-void q_graphicsscenehelpevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    QGraphicsSceneHelpEvent_OnClone((const QGraphicsSceneHelpEvent*)self, (intptr_t)callback);
+void q_graphicsscenehelpevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneHelpEvent_OnClone((QGraphicsSceneHelpEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenehelpevent_delete(void* self) {
@@ -1026,8 +1026,8 @@ QEvent* q_graphicsscenedragdropevent_super_clone(const void* self) {
     return QGraphicsSceneDragDropEvent_SuperClone((QGraphicsSceneDragDropEvent*)self);
 }
 
-void q_graphicsscenedragdropevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    QGraphicsSceneDragDropEvent_OnClone((const QGraphicsSceneDragDropEvent*)self, (intptr_t)callback);
+void q_graphicsscenedragdropevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneDragDropEvent_OnClone((QGraphicsSceneDragDropEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenedragdropevent_delete(void* self) {
@@ -1130,8 +1130,8 @@ QEvent* q_graphicssceneresizeevent_super_clone(const void* self) {
     return QGraphicsSceneResizeEvent_SuperClone((QGraphicsSceneResizeEvent*)self);
 }
 
-void q_graphicssceneresizeevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    QGraphicsSceneResizeEvent_OnClone((const QGraphicsSceneResizeEvent*)self, (intptr_t)callback);
+void q_graphicssceneresizeevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneResizeEvent_OnClone((QGraphicsSceneResizeEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicssceneresizeevent_delete(void* self) {
@@ -1234,8 +1234,8 @@ QEvent* q_graphicsscenemoveevent_super_clone(const void* self) {
     return QGraphicsSceneMoveEvent_SuperClone((QGraphicsSceneMoveEvent*)self);
 }
 
-void q_graphicsscenemoveevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    QGraphicsSceneMoveEvent_OnClone((const QGraphicsSceneMoveEvent*)self, (intptr_t)callback);
+void q_graphicsscenemoveevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneMoveEvent_OnClone((QGraphicsSceneMoveEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenemoveevent_delete(void* self) {

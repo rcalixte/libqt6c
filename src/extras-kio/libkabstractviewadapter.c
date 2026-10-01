@@ -17,7 +17,7 @@ QAbstractItemModel* k_abstractviewadapter_model(const void* self) {
     return KAbstractViewAdapter_Model((KAbstractViewAdapter*)self);
 }
 
-void k_abstractviewadapter_on_model(const void* self, QAbstractItemModel* (*callback)(const void*)) {
+void k_abstractviewadapter_on_model(void* self, QAbstractItemModel* (*callback)(const void*)) {
     KAbstractViewAdapter_OnModel((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
@@ -25,7 +25,7 @@ QSize* k_abstractviewadapter_icon_size(const void* self) {
     return KAbstractViewAdapter_IconSize((KAbstractViewAdapter*)self);
 }
 
-void k_abstractviewadapter_on_icon_size(const void* self, QSize* (*callback)(const void*)) {
+void k_abstractviewadapter_on_icon_size(void* self, QSize* (*callback)(const void*)) {
     KAbstractViewAdapter_OnIconSize((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
@@ -33,7 +33,7 @@ QPalette* k_abstractviewadapter_palette(const void* self) {
     return KAbstractViewAdapter_Palette((KAbstractViewAdapter*)self);
 }
 
-void k_abstractviewadapter_on_palette(const void* self, QPalette* (*callback)(const void*)) {
+void k_abstractviewadapter_on_palette(void* self, QPalette* (*callback)(const void*)) {
     KAbstractViewAdapter_OnPalette((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
@@ -41,7 +41,7 @@ QRect* k_abstractviewadapter_visible_area(const void* self) {
     return KAbstractViewAdapter_VisibleArea((KAbstractViewAdapter*)self);
 }
 
-void k_abstractviewadapter_on_visible_area(const void* self, QRect* (*callback)(const void*)) {
+void k_abstractviewadapter_on_visible_area(void* self, QRect* (*callback)(const void*)) {
     KAbstractViewAdapter_OnVisibleArea((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
@@ -49,7 +49,7 @@ QRect* k_abstractviewadapter_visual_rect(const void* self, const void* index) {
     return KAbstractViewAdapter_VisualRect((KAbstractViewAdapter*)self, (QModelIndex*)index);
 }
 
-void k_abstractviewadapter_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*)) {
+void k_abstractviewadapter_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*)) {
     KAbstractViewAdapter_OnVisualRect((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
@@ -295,8 +295,8 @@ const QMetaObject* k_abstractviewadapter_super_meta_object(const void* self) {
     return KAbstractViewAdapter_SuperMetaObject((KAbstractViewAdapter*)self);
 }
 
-void k_abstractviewadapter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    KAbstractViewAdapter_OnMetaObject((const KAbstractViewAdapter*)self, (intptr_t)callback);
+void k_abstractviewadapter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    KAbstractViewAdapter_OnMetaObject((KAbstractViewAdapter*)self, (intptr_t)callback);
 }
 
 void* k_abstractviewadapter_metacast(void* self, const char* param1) {

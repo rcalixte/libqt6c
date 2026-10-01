@@ -24,7 +24,7 @@ const QMetaObject* q_abstracttextdocumentlayout_meta_object(const void* self) {
     return QAbstractTextDocumentLayout_MetaObject((QAbstractTextDocumentLayout*)self);
 }
 
-void q_abstracttextdocumentlayout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstracttextdocumentlayout_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractTextDocumentLayout_OnMetaObject((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
@@ -75,7 +75,7 @@ int32_t q_abstracttextdocumentlayout_hit_test(const void* self, const void* poin
     return QAbstractTextDocumentLayout_HitTest((QAbstractTextDocumentLayout*)self, (QPointF*)point, accuracy);
 }
 
-void q_abstracttextdocumentlayout_on_hit_test(const void* self, int32_t (*callback)(const void*, const void*, int32_t)) {
+void q_abstracttextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(const void*, const void*, int32_t)) {
     QAbstractTextDocumentLayout_OnHitTest((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
@@ -105,7 +105,7 @@ int32_t q_abstracttextdocumentlayout_page_count(const void* self) {
     return QAbstractTextDocumentLayout_PageCount((QAbstractTextDocumentLayout*)self);
 }
 
-void q_abstracttextdocumentlayout_on_page_count(const void* self, int32_t (*callback)(const void*)) {
+void q_abstracttextdocumentlayout_on_page_count(void* self, int32_t (*callback)(const void*)) {
     QAbstractTextDocumentLayout_OnPageCount((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
@@ -113,7 +113,7 @@ QSizeF* q_abstracttextdocumentlayout_document_size(const void* self) {
     return QAbstractTextDocumentLayout_DocumentSize((QAbstractTextDocumentLayout*)self);
 }
 
-void q_abstracttextdocumentlayout_on_document_size(const void* self, QSizeF* (*callback)(const void*)) {
+void q_abstracttextdocumentlayout_on_document_size(void* self, QSizeF* (*callback)(const void*)) {
     QAbstractTextDocumentLayout_OnDocumentSize((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
@@ -121,7 +121,7 @@ QRectF* q_abstracttextdocumentlayout_frame_bounding_rect(const void* self, void*
     return QAbstractTextDocumentLayout_FrameBoundingRect((QAbstractTextDocumentLayout*)self, (QTextFrame*)frame);
 }
 
-void q_abstracttextdocumentlayout_on_frame_bounding_rect(const void* self, QRectF* (*callback)(const void*, void*)) {
+void q_abstracttextdocumentlayout_on_frame_bounding_rect(void* self, QRectF* (*callback)(const void*, void*)) {
     QAbstractTextDocumentLayout_OnFrameBoundingRect((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 
@@ -129,7 +129,7 @@ QRectF* q_abstracttextdocumentlayout_block_bounding_rect(const void* self, const
     return QAbstractTextDocumentLayout_BlockBoundingRect((QAbstractTextDocumentLayout*)self, (QTextBlock*)block);
 }
 
-void q_abstracttextdocumentlayout_on_block_bounding_rect(const void* self, QRectF* (*callback)(const void*, const void*)) {
+void q_abstracttextdocumentlayout_on_block_bounding_rect(void* self, QRectF* (*callback)(const void*, const void*)) {
     QAbstractTextDocumentLayout_OnBlockBoundingRect((QAbstractTextDocumentLayout*)self, (intptr_t)callback);
 }
 

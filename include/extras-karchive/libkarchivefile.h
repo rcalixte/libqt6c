@@ -63,10 +63,10 @@ char* k_archivefile_data(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KArchiveFile*
+/// @param self KArchiveFile*
 /// @param callback libqt_string func(const KArchiveFile* self)
 ///
-void k_archivefile_on_data(const void* self, libqt_string (*callback)(const void*));
+void k_archivefile_on_data(void* self, libqt_string (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#data)
 ///
@@ -86,10 +86,10 @@ QIODevice* k_archivefile_create_device(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KArchiveFile*
+/// @param self KArchiveFile*
 /// @param callback QIODevice* func(const KArchiveFile* self)
 ///
-void k_archivefile_on_create_device(const void* self, QIODevice* (*callback)(const void*));
+void k_archivefile_on_create_device(void* self, QIODevice* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#createDevice)
 ///
@@ -109,10 +109,10 @@ bool k_archivefile_is_file(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KArchiveFile*
+/// @param self KArchiveFile*
 /// @param callback bool func(const KArchiveFile* self)
 ///
-void k_archivefile_on_is_file(const void* self, bool (*callback)(const void*));
+void k_archivefile_on_is_file(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#isFile)
 ///
@@ -238,10 +238,10 @@ bool k_archivefile_super_is_directory(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KArchiveFile*
+/// @param self KArchiveFile*
 /// @param callback bool func(KArchiveFile* self)
 ///
-void k_archivefile_on_is_directory(const void* self, bool (*callback)(const void*));
+void k_archivefile_on_is_directory(void* self, bool (*callback)(const void*));
 
 /// Inherited from KArchiveEntry
 ///
@@ -269,10 +269,10 @@ KArchive* k_archivefile_super_archive(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KArchiveFile*
+/// @param self KArchiveFile*
 /// @param callback KArchive* func(KArchiveFile* self)
 ///
-void k_archivefile_on_archive(const void* self, KArchive* (*callback)(const void*));
+void k_archivefile_on_archive(void* self, KArchive* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#dtor.KArchiveFile)
 ///

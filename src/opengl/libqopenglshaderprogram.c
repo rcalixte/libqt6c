@@ -24,7 +24,7 @@ const QMetaObject* q_openglshader_meta_object(const void* self) {
     return QOpenGLShader_MetaObject((QOpenGLShader*)self);
 }
 
-void q_openglshader_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_openglshader_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QOpenGLShader_OnMetaObject((QOpenGLShader*)self, (intptr_t)callback);
 }
 
@@ -456,7 +456,7 @@ const QMetaObject* q_openglshaderprogram_meta_object(const void* self) {
     return QOpenGLShaderProgram_MetaObject((QOpenGLShaderProgram*)self);
 }
 
-void q_openglshaderprogram_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_openglshaderprogram_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QOpenGLShaderProgram_OnMetaObject((QOpenGLShaderProgram*)self, (intptr_t)callback);
 }
 

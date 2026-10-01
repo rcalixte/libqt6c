@@ -44,7 +44,7 @@ const QMetaObject* k_urllabel_meta_object(const void* self) {
     return KUrlLabel_MetaObject((KUrlLabel*)self);
 }
 
-void k_urllabel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_urllabel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KUrlLabel_OnMetaObject((KUrlLabel*)self, (intptr_t)callback);
 }
 
@@ -517,11 +517,11 @@ void k_urllabel_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_urllabel_as_q_paint_device(void* self) {
+QPaintDevice* k_urllabel_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KUrlLabel* k_urllabel_from_q_paint_device(void* _qpaintdevice) {
+KUrlLabel* k_urllabel_from_q_paint_device(const void* _qpaintdevice) {
     return (KUrlLabel*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1908,8 +1908,8 @@ QSize* k_urllabel_super_size_hint(const void* self) {
     return KUrlLabel_SuperSizeHint((KUrlLabel*)self);
 }
 
-void k_urllabel_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KUrlLabel_OnSizeHint((const KUrlLabel*)self, (intptr_t)callback);
+void k_urllabel_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KUrlLabel_OnSizeHint((KUrlLabel*)self, (intptr_t)callback);
 }
 
 QSize* k_urllabel_minimum_size_hint(const void* self) {
@@ -1920,8 +1920,8 @@ QSize* k_urllabel_super_minimum_size_hint(const void* self) {
     return KUrlLabel_SuperMinimumSizeHint((KUrlLabel*)self);
 }
 
-void k_urllabel_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KUrlLabel_OnMinimumSizeHint((const KUrlLabel*)self, (intptr_t)callback);
+void k_urllabel_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KUrlLabel_OnMinimumSizeHint((KUrlLabel*)self, (intptr_t)callback);
 }
 
 int32_t k_urllabel_height_for_width(const void* self, int param1) {
@@ -1932,8 +1932,8 @@ int32_t k_urllabel_super_height_for_width(const void* self, int param1) {
     return KUrlLabel_SuperHeightForWidth((KUrlLabel*)self, param1);
 }
 
-void k_urllabel_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KUrlLabel_OnHeightForWidth((const KUrlLabel*)self, (intptr_t)callback);
+void k_urllabel_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KUrlLabel_OnHeightForWidth((KUrlLabel*)self, (intptr_t)callback);
 }
 
 void k_urllabel_key_press_event(void* self, void* ev) {
@@ -2052,8 +2052,8 @@ void k_urllabel_super_init_style_option(const void* self, void* option) {
     KUrlLabel_SuperInitStyleOption((KUrlLabel*)self, (QStyleOptionFrame*)option);
 }
 
-void k_urllabel_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KUrlLabel_OnInitStyleOption((const KUrlLabel*)self, (intptr_t)callback);
+void k_urllabel_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KUrlLabel_OnInitStyleOption((KUrlLabel*)self, (intptr_t)callback);
 }
 
 int32_t k_urllabel_dev_type(const void* self) {
@@ -2064,8 +2064,8 @@ int32_t k_urllabel_super_dev_type(const void* self) {
     return KUrlLabel_SuperDevType((KUrlLabel*)self);
 }
 
-void k_urllabel_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KUrlLabel_OnDevType((const KUrlLabel*)self, (intptr_t)callback);
+void k_urllabel_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KUrlLabel_OnDevType((KUrlLabel*)self, (intptr_t)callback);
 }
 
 void k_urllabel_set_visible(void* self, bool visible) {
@@ -2088,8 +2088,8 @@ bool k_urllabel_super_has_height_for_width(const void* self) {
     return KUrlLabel_SuperHasHeightForWidth((KUrlLabel*)self);
 }
 
-void k_urllabel_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KUrlLabel_OnHasHeightForWidth((const KUrlLabel*)self, (intptr_t)callback);
+void k_urllabel_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KUrlLabel_OnHasHeightForWidth((KUrlLabel*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_urllabel_paint_engine(const void* self) {
@@ -2100,8 +2100,8 @@ QPaintEngine* k_urllabel_super_paint_engine(const void* self) {
     return KUrlLabel_SuperPaintEngine((KUrlLabel*)self);
 }
 
-void k_urllabel_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KUrlLabel_OnPaintEngine((const KUrlLabel*)self, (intptr_t)callback);
+void k_urllabel_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KUrlLabel_OnPaintEngine((KUrlLabel*)self, (intptr_t)callback);
 }
 
 void k_urllabel_mouse_double_click_event(void* self, void* event) {
@@ -2292,8 +2292,8 @@ int32_t k_urllabel_super_metric(const void* self, int32_t param1) {
     return KUrlLabel_SuperMetric((KUrlLabel*)self, param1);
 }
 
-void k_urllabel_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KUrlLabel_OnMetric((const KUrlLabel*)self, (intptr_t)callback);
+void k_urllabel_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KUrlLabel_OnMetric((KUrlLabel*)self, (intptr_t)callback);
 }
 
 void k_urllabel_init_painter(const void* self, void* painter) {
@@ -2304,8 +2304,8 @@ void k_urllabel_super_init_painter(const void* self, void* painter) {
     KUrlLabel_SuperInitPainter((KUrlLabel*)self, (QPainter*)painter);
 }
 
-void k_urllabel_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KUrlLabel_OnInitPainter((const KUrlLabel*)self, (intptr_t)callback);
+void k_urllabel_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KUrlLabel_OnInitPainter((KUrlLabel*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_urllabel_redirected(const void* self, void* offset) {
@@ -2316,8 +2316,8 @@ QPaintDevice* k_urllabel_super_redirected(const void* self, void* offset) {
     return KUrlLabel_SuperRedirected((KUrlLabel*)self, (QPoint*)offset);
 }
 
-void k_urllabel_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KUrlLabel_OnRedirected((const KUrlLabel*)self, (intptr_t)callback);
+void k_urllabel_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KUrlLabel_OnRedirected((KUrlLabel*)self, (intptr_t)callback);
 }
 
 QPainter* k_urllabel_shared_painter(const void* self) {
@@ -2328,8 +2328,8 @@ QPainter* k_urllabel_super_shared_painter(const void* self) {
     return KUrlLabel_SuperSharedPainter((KUrlLabel*)self);
 }
 
-void k_urllabel_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KUrlLabel_OnSharedPainter((const KUrlLabel*)self, (intptr_t)callback);
+void k_urllabel_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KUrlLabel_OnSharedPainter((KUrlLabel*)self, (intptr_t)callback);
 }
 
 void k_urllabel_input_method_event(void* self, void* param1) {
@@ -2352,8 +2352,8 @@ QVariant* k_urllabel_super_input_method_query(const void* self, int32_t param1) 
     return KUrlLabel_SuperInputMethodQuery((KUrlLabel*)self, param1);
 }
 
-void k_urllabel_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KUrlLabel_OnInputMethodQuery((const KUrlLabel*)self, (intptr_t)callback);
+void k_urllabel_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KUrlLabel_OnInputMethodQuery((KUrlLabel*)self, (intptr_t)callback);
 }
 
 bool k_urllabel_event_filter(void* self, void* watched, void* event) {

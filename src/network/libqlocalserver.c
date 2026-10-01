@@ -18,7 +18,7 @@ const QMetaObject* q_localserver_meta_object(const void* self) {
     return QLocalServer_MetaObject((QLocalServer*)self);
 }
 
-void q_localserver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_localserver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QLocalServer_OnMetaObject((QLocalServer*)self, (intptr_t)callback);
 }
 
@@ -80,7 +80,7 @@ bool q_localserver_has_pending_connections(const void* self) {
     return QLocalServer_HasPendingConnections((QLocalServer*)self);
 }
 
-void q_localserver_on_has_pending_connections(const void* self, bool (*callback)(const void*)) {
+void q_localserver_on_has_pending_connections(void* self, bool (*callback)(const void*)) {
     QLocalServer_OnHasPendingConnections((QLocalServer*)self, (intptr_t)callback);
 }
 

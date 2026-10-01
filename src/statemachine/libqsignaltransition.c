@@ -27,7 +27,7 @@ const QMetaObject* q_signaltransition_meta_object(const void* self) {
     return QSignalTransition_MetaObject((QSignalTransition*)self);
 }
 
-void q_signaltransition_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_signaltransition_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSignalTransition_OnMetaObject((QSignalTransition*)self, (intptr_t)callback);
 }
 

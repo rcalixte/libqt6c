@@ -30,7 +30,7 @@ const QMetaObject* k_svg__imageset_meta_object(const void* self) {
     return KSvg__ImageSet_MetaObject((KSvg__ImageSet*)self);
 }
 
-void k_svg__imageset_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_svg__imageset_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSvg__ImageSet_OnMetaObject((KSvg__ImageSet*)self, (intptr_t)callback);
 }
 

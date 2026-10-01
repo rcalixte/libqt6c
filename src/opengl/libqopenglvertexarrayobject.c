@@ -17,7 +17,7 @@ const QMetaObject* q_openglvertexarrayobject_meta_object(const void* self) {
     return QOpenGLVertexArrayObject_MetaObject((QOpenGLVertexArrayObject*)self);
 }
 
-void q_openglvertexarrayobject_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_openglvertexarrayobject_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QOpenGLVertexArrayObject_OnMetaObject((QOpenGLVertexArrayObject*)self, (intptr_t)callback);
 }
 

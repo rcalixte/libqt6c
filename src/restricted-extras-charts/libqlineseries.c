@@ -22,7 +22,7 @@ const QMetaObject* q_lineseries_meta_object(const void* self) {
     return QLineSeries_MetaObject((QLineSeries*)self);
 }
 
-void q_lineseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_lineseries_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QLineSeries_OnMetaObject((QLineSeries*)self, (intptr_t)callback);
 }
 
@@ -65,7 +65,7 @@ int32_t q_lineseries_type(const void* self) {
     return QLineSeries_Type((QLineSeries*)self);
 }
 
-void q_lineseries_on_type(const void* self, int32_t (*callback)(const void*)) {
+void q_lineseries_on_type(void* self, int32_t (*callback)(const void*)) {
     QLineSeries_OnType((QLineSeries*)self, (intptr_t)callback);
 }
 
@@ -1038,8 +1038,8 @@ QColor* q_lineseries_super_color(const void* self) {
     return QLineSeries_SuperColor((QLineSeries*)self);
 }
 
-void q_lineseries_on_color(const void* self, QColor* (*callback)(const void*)) {
-    QLineSeries_OnColor((const QLineSeries*)self, (intptr_t)callback);
+void q_lineseries_on_color(void* self, QColor* (*callback)(const void*)) {
+    QLineSeries_OnColor((QLineSeries*)self, (intptr_t)callback);
 }
 
 bool q_lineseries_event(void* self, void* event) {

@@ -32,10 +32,10 @@ const QMetaObject* q_quick3dgeometry_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QQuick3DGeometry*
+/// @param self QQuick3DGeometry*
 /// @param callback const QMetaObject* func(const QQuick3DGeometry* self)
 ///
-void q_quick3dgeometry_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_quick3dgeometry_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -422,9 +422,9 @@ void q_quick3dgeometry_add_target_attribute4(void* self, uint32_t targetId, int3
 ///
 /// Upcasts to a QQmlParserStatus object
 ///
-/// @param self QQuick3DGeometry*
+/// @param self const QQuick3DGeometry*
 ///
-QQmlParserStatus* q_quick3dgeometry_as_q_qml_parser_status(void* self);
+QQmlParserStatus* q_quick3dgeometry_as_q_qml_parser_status(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -432,7 +432,7 @@ QQmlParserStatus* q_quick3dgeometry_as_q_qml_parser_status(void* self);
 ///
 /// @param _qqmlparserstatus QQmlParserStatus*
 ///
-QQuick3DGeometry* q_quick3dgeometry_from_q_qml_parser_status(void* _qqmlparserstatus);
+QQuick3DGeometry* q_quick3dgeometry_from_q_qml_parser_status(const void* _qqmlparserstatus);
 
 /// Inherited from QQuick3DObject
 ///
@@ -1382,10 +1382,10 @@ bool q_quick3dgeometry_super_is_component_complete(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuick3DGeometry*
+/// @param self QQuick3DGeometry*
 /// @param callback bool func(QQuick3DGeometry* self)
 ///
-void q_quick3dgeometry_on_is_component_complete(const void* self, bool (*callback)(const void*));
+void q_quick3dgeometry_on_is_component_complete(void* self, bool (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1413,10 +1413,10 @@ QObject* q_quick3dgeometry_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuick3DGeometry*
+/// @param self QQuick3DGeometry*
 /// @param callback QObject* func(QQuick3DGeometry* self)
 ///
-void q_quick3dgeometry_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_quick3dgeometry_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1444,10 +1444,10 @@ int32_t q_quick3dgeometry_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuick3DGeometry*
+/// @param self QQuick3DGeometry*
 /// @param callback int32_t func(QQuick3DGeometry* self)
 ///
-void q_quick3dgeometry_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_quick3dgeometry_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1477,10 +1477,10 @@ int32_t q_quick3dgeometry_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuick3DGeometry*
+/// @param self QQuick3DGeometry*
 /// @param callback int32_t func(QQuick3DGeometry* self, const char* signal)
 ///
-void q_quick3dgeometry_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_quick3dgeometry_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1510,10 +1510,10 @@ bool q_quick3dgeometry_super_is_signal_connected(const void* self, const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QQuick3DGeometry*
+/// @param self QQuick3DGeometry*
 /// @param callback bool func(QQuick3DGeometry* self, QMetaMethod* signal)
 ///
-void q_quick3dgeometry_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_quick3dgeometry_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

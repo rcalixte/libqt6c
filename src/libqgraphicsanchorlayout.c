@@ -360,7 +360,7 @@ int32_t q_graphicsanchorlayout_count(const void* self) {
     return QGraphicsAnchorLayout_Count((QGraphicsAnchorLayout*)self);
 }
 
-void q_graphicsanchorlayout_on_count(const void* self, int32_t (*callback)(const void*)) {
+void q_graphicsanchorlayout_on_count(void* self, int32_t (*callback)(const void*)) {
     QGraphicsAnchorLayout_OnCount((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
@@ -372,7 +372,7 @@ QGraphicsLayoutItem* q_graphicsanchorlayout_item_at(const void* self, int index)
     return QGraphicsAnchorLayout_ItemAt((QGraphicsAnchorLayout*)self, index);
 }
 
-void q_graphicsanchorlayout_on_item_at(const void* self, QGraphicsLayoutItem* (*callback)(const void*, int)) {
+void q_graphicsanchorlayout_on_item_at(void* self, QGraphicsLayoutItem* (*callback)(const void*, int)) {
     QGraphicsAnchorLayout_OnItemAt((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
@@ -396,7 +396,7 @@ QSizeF* q_graphicsanchorlayout_size_hint(const void* self, int32_t which, const 
     return QGraphicsAnchorLayout_SizeHint((QGraphicsAnchorLayout*)self, which, (QSizeF*)constraint);
 }
 
-void q_graphicsanchorlayout_on_size_hint(const void* self, QSizeF* (*callback)(const void*, int32_t, const void*)) {
+void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*callback)(const void*, int32_t, const void*)) {
     QGraphicsAnchorLayout_OnSizeHint((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
@@ -572,8 +572,8 @@ void q_graphicsanchorlayout_super_get_contents_margins(const void* self, double*
     QGraphicsAnchorLayout_SuperGetContentsMargins((QGraphicsAnchorLayout*)self, left, top, right, bottom);
 }
 
-void q_graphicsanchorlayout_on_get_contents_margins(const void* self, void (*callback)(const void*, double*, double*, double*, double*)) {
-    QGraphicsAnchorLayout_OnGetContentsMargins((const QGraphicsAnchorLayout*)self, (intptr_t)callback);
+void q_graphicsanchorlayout_on_get_contents_margins(void* self, void (*callback)(const void*, double*, double*, double*, double*)) {
+    QGraphicsAnchorLayout_OnGetContentsMargins((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicsanchorlayout_update_geometry(void* self) {
@@ -608,8 +608,8 @@ bool q_graphicsanchorlayout_super_is_empty(const void* self) {
     return QGraphicsAnchorLayout_SuperIsEmpty((QGraphicsAnchorLayout*)self);
 }
 
-void q_graphicsanchorlayout_on_is_empty(const void* self, bool (*callback)(const void*)) {
-    QGraphicsAnchorLayout_OnIsEmpty((const QGraphicsAnchorLayout*)self, (intptr_t)callback);
+void q_graphicsanchorlayout_on_is_empty(void* self, bool (*callback)(const void*)) {
+    QGraphicsAnchorLayout_OnIsEmpty((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicsanchorlayout_add_child_layout_item(void* self, void* layoutItem) {

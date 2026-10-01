@@ -32,10 +32,10 @@ const QMetaObject* q_candlestickmodelmapper_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCandlestickModelMapper*
+/// @param self QCandlestickModelMapper*
 /// @param callback const QMetaObject* func(const QCandlestickModelMapper* self)
 ///
-void q_candlestickmodelmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_candlestickmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -135,10 +135,10 @@ int32_t q_candlestickmodelmapper_orientation(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QCandlestickModelMapper*
+/// @param self QCandlestickModelMapper*
 /// @param callback int32_t func(const QCandlestickModelMapper* self)
 ///
-void q_candlestickmodelmapper_on_orientation(const void* self, int32_t (*callback)(const void*));
+void q_candlestickmodelmapper_on_orientation(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html#modelReplaced)
 ///
@@ -982,10 +982,10 @@ QObject* q_candlestickmodelmapper_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCandlestickModelMapper*
+/// @param self QCandlestickModelMapper*
 /// @param callback QObject* func(QCandlestickModelMapper* self)
 ///
-void q_candlestickmodelmapper_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_candlestickmodelmapper_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1013,10 +1013,10 @@ int32_t q_candlestickmodelmapper_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCandlestickModelMapper*
+/// @param self QCandlestickModelMapper*
 /// @param callback int32_t func(QCandlestickModelMapper* self)
 ///
-void q_candlestickmodelmapper_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_candlestickmodelmapper_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1046,10 +1046,10 @@ int32_t q_candlestickmodelmapper_super_receivers(const void* self, const char* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCandlestickModelMapper*
+/// @param self QCandlestickModelMapper*
 /// @param callback int32_t func(QCandlestickModelMapper* self, const char* signal)
 ///
-void q_candlestickmodelmapper_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_candlestickmodelmapper_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1079,10 +1079,10 @@ bool q_candlestickmodelmapper_super_is_signal_connected(const void* self, const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QCandlestickModelMapper*
+/// @param self QCandlestickModelMapper*
 /// @param callback bool func(QCandlestickModelMapper* self, QMetaMethod* signal)
 ///
-void q_candlestickmodelmapper_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_candlestickmodelmapper_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

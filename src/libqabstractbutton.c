@@ -28,7 +28,7 @@ const QMetaObject* q_abstractbutton_meta_object(const void* self) {
     return QAbstractButton_MetaObject((QAbstractButton*)self);
 }
 
-void q_abstractbutton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstractbutton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractButton_OnMetaObject((QAbstractButton*)self, (intptr_t)callback);
 }
 
@@ -218,7 +218,7 @@ bool q_abstractbutton_hit_button(const void* self, const void* pos) {
     return QAbstractButton_HitButton((QAbstractButton*)self, (QPoint*)pos);
 }
 
-void q_abstractbutton_on_hit_button(const void* self, bool (*callback)(const void*, const void*)) {
+void q_abstractbutton_on_hit_button(void* self, bool (*callback)(const void*, const void*)) {
     QAbstractButton_OnHitButton((QAbstractButton*)self, (intptr_t)callback);
 }
 
@@ -392,11 +392,11 @@ void q_abstractbutton_on_clicked1(void* self, void (*callback)(void*, bool)) {
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_abstractbutton_as_q_paint_device(void* self) {
+QPaintDevice* q_abstractbutton_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QAbstractButton* q_abstractbutton_from_q_paint_device(void* _qpaintdevice) {
+QAbstractButton* q_abstractbutton_from_q_paint_device(const void* _qpaintdevice) {
     return (QAbstractButton*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1787,8 +1787,8 @@ int32_t q_abstractbutton_super_dev_type(const void* self) {
     return QAbstractButton_SuperDevType((QAbstractButton*)self);
 }
 
-void q_abstractbutton_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QAbstractButton_OnDevType((const QAbstractButton*)self, (intptr_t)callback);
+void q_abstractbutton_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QAbstractButton_OnDevType((QAbstractButton*)self, (intptr_t)callback);
 }
 
 void q_abstractbutton_set_visible(void* self, bool visible) {
@@ -1811,8 +1811,8 @@ QSize* q_abstractbutton_super_size_hint(const void* self) {
     return QAbstractButton_SuperSizeHint((QAbstractButton*)self);
 }
 
-void q_abstractbutton_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QAbstractButton_OnSizeHint((const QAbstractButton*)self, (intptr_t)callback);
+void q_abstractbutton_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QAbstractButton_OnSizeHint((QAbstractButton*)self, (intptr_t)callback);
 }
 
 QSize* q_abstractbutton_minimum_size_hint(const void* self) {
@@ -1823,8 +1823,8 @@ QSize* q_abstractbutton_super_minimum_size_hint(const void* self) {
     return QAbstractButton_SuperMinimumSizeHint((QAbstractButton*)self);
 }
 
-void q_abstractbutton_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QAbstractButton_OnMinimumSizeHint((const QAbstractButton*)self, (intptr_t)callback);
+void q_abstractbutton_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QAbstractButton_OnMinimumSizeHint((QAbstractButton*)self, (intptr_t)callback);
 }
 
 int32_t q_abstractbutton_height_for_width(const void* self, int param1) {
@@ -1835,8 +1835,8 @@ int32_t q_abstractbutton_super_height_for_width(const void* self, int param1) {
     return QAbstractButton_SuperHeightForWidth((QAbstractButton*)self, param1);
 }
 
-void q_abstractbutton_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QAbstractButton_OnHeightForWidth((const QAbstractButton*)self, (intptr_t)callback);
+void q_abstractbutton_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QAbstractButton_OnHeightForWidth((QAbstractButton*)self, (intptr_t)callback);
 }
 
 bool q_abstractbutton_has_height_for_width(const void* self) {
@@ -1847,8 +1847,8 @@ bool q_abstractbutton_super_has_height_for_width(const void* self) {
     return QAbstractButton_SuperHasHeightForWidth((QAbstractButton*)self);
 }
 
-void q_abstractbutton_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QAbstractButton_OnHasHeightForWidth((const QAbstractButton*)self, (intptr_t)callback);
+void q_abstractbutton_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QAbstractButton_OnHasHeightForWidth((QAbstractButton*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_abstractbutton_paint_engine(const void* self) {
@@ -1859,8 +1859,8 @@ QPaintEngine* q_abstractbutton_super_paint_engine(const void* self) {
     return QAbstractButton_SuperPaintEngine((QAbstractButton*)self);
 }
 
-void q_abstractbutton_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QAbstractButton_OnPaintEngine((const QAbstractButton*)self, (intptr_t)callback);
+void q_abstractbutton_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QAbstractButton_OnPaintEngine((QAbstractButton*)self, (intptr_t)callback);
 }
 
 void q_abstractbutton_mouse_double_click_event(void* self, void* event) {
@@ -2075,8 +2075,8 @@ int32_t q_abstractbutton_super_metric(const void* self, int32_t param1) {
     return QAbstractButton_SuperMetric((QAbstractButton*)self, param1);
 }
 
-void q_abstractbutton_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QAbstractButton_OnMetric((const QAbstractButton*)self, (intptr_t)callback);
+void q_abstractbutton_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QAbstractButton_OnMetric((QAbstractButton*)self, (intptr_t)callback);
 }
 
 void q_abstractbutton_init_painter(const void* self, void* painter) {
@@ -2087,8 +2087,8 @@ void q_abstractbutton_super_init_painter(const void* self, void* painter) {
     QAbstractButton_SuperInitPainter((QAbstractButton*)self, (QPainter*)painter);
 }
 
-void q_abstractbutton_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QAbstractButton_OnInitPainter((const QAbstractButton*)self, (intptr_t)callback);
+void q_abstractbutton_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QAbstractButton_OnInitPainter((QAbstractButton*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_abstractbutton_redirected(const void* self, void* offset) {
@@ -2099,8 +2099,8 @@ QPaintDevice* q_abstractbutton_super_redirected(const void* self, void* offset) 
     return QAbstractButton_SuperRedirected((QAbstractButton*)self, (QPoint*)offset);
 }
 
-void q_abstractbutton_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QAbstractButton_OnRedirected((const QAbstractButton*)self, (intptr_t)callback);
+void q_abstractbutton_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QAbstractButton_OnRedirected((QAbstractButton*)self, (intptr_t)callback);
 }
 
 QPainter* q_abstractbutton_shared_painter(const void* self) {
@@ -2111,8 +2111,8 @@ QPainter* q_abstractbutton_super_shared_painter(const void* self) {
     return QAbstractButton_SuperSharedPainter((QAbstractButton*)self);
 }
 
-void q_abstractbutton_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QAbstractButton_OnSharedPainter((const QAbstractButton*)self, (intptr_t)callback);
+void q_abstractbutton_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QAbstractButton_OnSharedPainter((QAbstractButton*)self, (intptr_t)callback);
 }
 
 void q_abstractbutton_input_method_event(void* self, void* param1) {
@@ -2135,8 +2135,8 @@ QVariant* q_abstractbutton_super_input_method_query(const void* self, int32_t pa
     return QAbstractButton_SuperInputMethodQuery((QAbstractButton*)self, param1);
 }
 
-void q_abstractbutton_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QAbstractButton_OnInputMethodQuery((const QAbstractButton*)self, (intptr_t)callback);
+void q_abstractbutton_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QAbstractButton_OnInputMethodQuery((QAbstractButton*)self, (intptr_t)callback);
 }
 
 bool q_abstractbutton_focus_next_prev_child(void* self, bool next) {

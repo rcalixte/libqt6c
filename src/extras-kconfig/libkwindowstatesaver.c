@@ -19,7 +19,7 @@ const QMetaObject* k_windowstatesaver_meta_object(const void* self) {
     return KWindowStateSaver_MetaObject((KWindowStateSaver*)self);
 }
 
-void k_windowstatesaver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_windowstatesaver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KWindowStateSaver_OnMetaObject((KWindowStateSaver*)self, (intptr_t)callback);
 }
 

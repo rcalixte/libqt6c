@@ -24,7 +24,7 @@ const QMetaObject* k_compressiondevice_meta_object(const void* self) {
     return KCompressionDevice_MetaObject((KCompressionDevice*)self);
 }
 
-void k_compressiondevice_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_compressiondevice_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KCompressionDevice_OnMetaObject((KCompressionDevice*)self, (intptr_t)callback);
 }
 
@@ -115,7 +115,7 @@ bool k_compressiondevice_at_end(const void* self) {
     return KCompressionDevice_AtEnd((KCompressionDevice*)self);
 }
 
-void k_compressiondevice_on_at_end(const void* self, bool (*callback)(const void*)) {
+void k_compressiondevice_on_at_end(void* self, bool (*callback)(const void*)) {
     KCompressionDevice_OnAtEnd((KCompressionDevice*)self, (intptr_t)callback);
 }
 
@@ -177,7 +177,7 @@ const char* k_compressiondevice_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QIODeviceBase* k_compressiondevice_as_q_i_o_device_base(void* self) {
+QIODeviceBase* k_compressiondevice_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
@@ -592,8 +592,8 @@ bool k_compressiondevice_super_is_sequential(const void* self) {
     return KCompressionDevice_SuperIsSequential((KCompressionDevice*)self);
 }
 
-void k_compressiondevice_on_is_sequential(const void* self, bool (*callback)(const void*)) {
-    KCompressionDevice_OnIsSequential((const KCompressionDevice*)self, (intptr_t)callback);
+void k_compressiondevice_on_is_sequential(void* self, bool (*callback)(const void*)) {
+    KCompressionDevice_OnIsSequential((KCompressionDevice*)self, (intptr_t)callback);
 }
 
 int64_t k_compressiondevice_pos(const void* self) {
@@ -604,8 +604,8 @@ int64_t k_compressiondevice_super_pos(const void* self) {
     return KCompressionDevice_SuperPos((KCompressionDevice*)self);
 }
 
-void k_compressiondevice_on_pos(const void* self, int64_t (*callback)(const void*)) {
-    KCompressionDevice_OnPos((const KCompressionDevice*)self, (intptr_t)callback);
+void k_compressiondevice_on_pos(void* self, int64_t (*callback)(const void*)) {
+    KCompressionDevice_OnPos((KCompressionDevice*)self, (intptr_t)callback);
 }
 
 int64_t k_compressiondevice_size(const void* self) {
@@ -616,8 +616,8 @@ int64_t k_compressiondevice_super_size(const void* self) {
     return KCompressionDevice_SuperSize((KCompressionDevice*)self);
 }
 
-void k_compressiondevice_on_size(const void* self, int64_t (*callback)(const void*)) {
-    KCompressionDevice_OnSize((const KCompressionDevice*)self, (intptr_t)callback);
+void k_compressiondevice_on_size(void* self, int64_t (*callback)(const void*)) {
+    KCompressionDevice_OnSize((KCompressionDevice*)self, (intptr_t)callback);
 }
 
 bool k_compressiondevice_reset(void* self) {
@@ -640,8 +640,8 @@ int64_t k_compressiondevice_super_bytes_available(const void* self) {
     return KCompressionDevice_SuperBytesAvailable((KCompressionDevice*)self);
 }
 
-void k_compressiondevice_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
-    KCompressionDevice_OnBytesAvailable((const KCompressionDevice*)self, (intptr_t)callback);
+void k_compressiondevice_on_bytes_available(void* self, int64_t (*callback)(const void*)) {
+    KCompressionDevice_OnBytesAvailable((KCompressionDevice*)self, (intptr_t)callback);
 }
 
 int64_t k_compressiondevice_bytes_to_write(const void* self) {
@@ -652,8 +652,8 @@ int64_t k_compressiondevice_super_bytes_to_write(const void* self) {
     return KCompressionDevice_SuperBytesToWrite((KCompressionDevice*)self);
 }
 
-void k_compressiondevice_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
-    KCompressionDevice_OnBytesToWrite((const KCompressionDevice*)self, (intptr_t)callback);
+void k_compressiondevice_on_bytes_to_write(void* self, int64_t (*callback)(const void*)) {
+    KCompressionDevice_OnBytesToWrite((KCompressionDevice*)self, (intptr_t)callback);
 }
 
 bool k_compressiondevice_can_read_line(const void* self) {
@@ -664,8 +664,8 @@ bool k_compressiondevice_super_can_read_line(const void* self) {
     return KCompressionDevice_SuperCanReadLine((KCompressionDevice*)self);
 }
 
-void k_compressiondevice_on_can_read_line(const void* self, bool (*callback)(const void*)) {
-    KCompressionDevice_OnCanReadLine((const KCompressionDevice*)self, (intptr_t)callback);
+void k_compressiondevice_on_can_read_line(void* self, bool (*callback)(const void*)) {
+    KCompressionDevice_OnCanReadLine((KCompressionDevice*)self, (intptr_t)callback);
 }
 
 bool k_compressiondevice_wait_for_ready_read(void* self, int msecs) {

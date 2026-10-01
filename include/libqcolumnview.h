@@ -32,10 +32,10 @@ const QMetaObject* q_columnview_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback const QMetaObject* func(const QColumnView* self)
 ///
-void q_columnview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_columnview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -120,12 +120,12 @@ QModelIndex* q_columnview_index_at(const void* self, const void* point);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QModelIndex* func(const QColumnView* self, QPoint* point)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_columnview_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_columnview_on_index_at(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#indexAt)
 ///
@@ -173,12 +173,12 @@ QSize* q_columnview_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QSize* func(const QColumnView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_columnview_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_columnview_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#sizeHint)
 ///
@@ -199,12 +199,12 @@ QRect* q_columnview_visual_rect(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QRect* func(const QColumnView* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_columnview_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*));
+void q_columnview_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#visualRect)
 ///
@@ -365,10 +365,10 @@ bool q_columnview_is_index_hidden(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback bool func(const QColumnView* self, QModelIndex* index)
 ///
-void q_columnview_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*));
+void q_columnview_on_is_index_hidden(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#isIndexHidden)
 ///
@@ -471,12 +471,12 @@ QRegion* q_columnview_visual_region_for_selection(const void* self, const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QRegion* func(const QColumnView* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_columnview_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*));
+void q_columnview_on_visual_region_for_selection(void* self, QRegion* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#visualRegionForSelection)
 ///
@@ -497,10 +497,10 @@ int32_t q_columnview_horizontal_offset(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback int32_t func(const QColumnView* self)
 ///
-void q_columnview_on_horizontal_offset(const void* self, int32_t (*callback)(const void*));
+void q_columnview_on_horizontal_offset(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#horizontalOffset)
 ///
@@ -520,10 +520,10 @@ int32_t q_columnview_vertical_offset(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback int32_t func(const QColumnView* self)
 ///
-void q_columnview_on_vertical_offset(const void* self, int32_t (*callback)(const void*));
+void q_columnview_on_vertical_offset(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolumnview.html#verticalOffset)
 ///
@@ -1570,9 +1570,9 @@ void q_columnview_set_frame_rect(void* self, const void* frameRect);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QColumnView*
+/// @param self const QColumnView*
 ///
-QPaintDevice* q_columnview_as_q_paint_device(void* self);
+QPaintDevice* q_columnview_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1580,7 +1580,7 @@ QPaintDevice* q_columnview_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QColumnView* q_columnview_from_q_paint_device(void* _qpaintdevice);
+QColumnView* q_columnview_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -4592,10 +4592,10 @@ int32_t q_columnview_super_size_hint_for_row(const void* self, int row);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback int32_t func(QColumnView* self, int row)
 ///
-void q_columnview_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int));
+void q_columnview_on_size_hint_for_row(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4625,10 +4625,10 @@ int32_t q_columnview_super_size_hint_for_column(const void* self, int column);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback int32_t func(QColumnView* self, int column)
 ///
-void q_columnview_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int));
+void q_columnview_on_size_hint_for_column(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4658,10 +4658,10 @@ QAbstractItemDelegate* q_columnview_super_item_delegate_for_index(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QAbstractItemDelegate* func(QColumnView* self, QModelIndex* index)
 ///
-void q_columnview_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
+void q_columnview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4691,12 +4691,12 @@ QVariant* q_columnview_super_input_method_query(const void* self, int32_t query)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QVariant* func(QColumnView* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_columnview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_columnview_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5225,10 +5225,10 @@ libqt_list q_columnview_super_selected_indexes(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback libqt_list of QModelIndex* func(QColumnView* self)
 ///
-void q_columnview_on_selected_indexes(const void* self, libqt_list (*callback)(const void*));
+void q_columnview_on_selected_indexes(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5301,10 +5301,10 @@ int32_t q_columnview_super_selection_command(const void* self, const void* index
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback int32_t func(QColumnView* self, QModelIndex* index, QEvent* event)
 ///
-void q_columnview_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*));
+void q_columnview_on_selection_command(void* self, int32_t (*callback)(const void*, const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5367,10 +5367,10 @@ void q_columnview_super_init_view_item_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback void func(QColumnView* self, QStyleOptionViewItem* option)
 ///
-void q_columnview_on_init_view_item_option(const void* self, void (*callback)(const void*, void*));
+void q_columnview_on_init_view_item_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5961,12 +5961,12 @@ QSize* q_columnview_super_viewport_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QSize* func(QColumnView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_columnview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_columnview_on_viewport_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5994,12 +5994,12 @@ QSize* q_columnview_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QSize* func(QColumnView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_columnview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_columnview_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6194,10 +6194,10 @@ void q_columnview_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback void func(QColumnView* self, QStyleOptionFrame* option)
 ///
-void q_columnview_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_columnview_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6225,10 +6225,10 @@ int32_t q_columnview_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback int32_t func(QColumnView* self)
 ///
-void q_columnview_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_columnview_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6291,10 +6291,10 @@ int32_t q_columnview_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback int32_t func(QColumnView* self, int param1)
 ///
-void q_columnview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_columnview_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -6322,10 +6322,10 @@ bool q_columnview_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback bool func(QColumnView* self)
 ///
-void q_columnview_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_columnview_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6353,10 +6353,10 @@ QPaintEngine* q_columnview_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QPaintEngine* func(QColumnView* self)
 ///
-void q_columnview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_columnview_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6720,10 +6720,10 @@ int32_t q_columnview_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback int32_t func(QColumnView* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_columnview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_columnview_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6753,10 +6753,10 @@ void q_columnview_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback void func(QColumnView* self, QPainter* painter)
 ///
-void q_columnview_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_columnview_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6786,10 +6786,10 @@ QPaintDevice* q_columnview_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QPaintDevice* func(QColumnView* self, QPoint* offset)
 ///
-void q_columnview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_columnview_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6817,10 +6817,10 @@ QPainter* q_columnview_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QPainter* func(QColumnView* self)
 ///
-void q_columnview_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_columnview_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6984,10 +6984,10 @@ int32_t q_columnview_super_state(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback int32_t func(QColumnView* self)
 ///
-void q_columnview_on_state(const void* self, int32_t (*callback)(const void*));
+void q_columnview_on_state(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7178,12 +7178,12 @@ QPoint* q_columnview_super_dirty_region_offset(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QPoint* func(QColumnView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_columnview_on_dirty_region_offset(const void* self, QPoint* (*callback)(const void*));
+void q_columnview_on_dirty_region_offset(void* self, QPoint* (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7308,10 +7308,10 @@ int32_t q_columnview_super_drop_indicator_position(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback int32_t func(QColumnView* self)
 ///
-void q_columnview_on_drop_indicator_position(const void* self, int32_t (*callback)(const void*));
+void q_columnview_on_drop_indicator_position(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7378,12 +7378,12 @@ QMargins* q_columnview_super_viewport_margins(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QMargins* func(QColumnView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_columnview_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
+void q_columnview_on_viewport_margins(void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -7599,10 +7599,10 @@ QObject* q_columnview_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback QObject* func(QColumnView* self)
 ///
-void q_columnview_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_columnview_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7630,10 +7630,10 @@ int32_t q_columnview_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback int32_t func(QColumnView* self)
 ///
-void q_columnview_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_columnview_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7663,10 +7663,10 @@ int32_t q_columnview_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback int32_t func(QColumnView* self, const char* signal)
 ///
-void q_columnview_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_columnview_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -7696,10 +7696,10 @@ bool q_columnview_super_is_signal_connected(const void* self, const void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback bool func(QColumnView* self, QMetaMethod* signal)
 ///
-void q_columnview_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_columnview_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -7731,10 +7731,10 @@ double q_columnview_super_get_decoded_metric_f(const void* self, int32_t metricA
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QColumnView*
+/// @param self QColumnView*
 /// @param callback double func(QColumnView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_columnview_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_columnview_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

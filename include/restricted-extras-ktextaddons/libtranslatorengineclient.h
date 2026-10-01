@@ -32,10 +32,10 @@ const QMetaObject* k_texttranslator__translatorengineclient_meta_object(const vo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextTranslator__TranslatorEngineClient*
+/// @param self TextTranslator__TranslatorEngineClient*
 /// @param callback const QMetaObject* func(const TextTranslator__TranslatorEngineClient* self)
 ///
-void k_texttranslator__translatorengineclient_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_texttranslator__translatorengineclient_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -109,10 +109,10 @@ const char* k_texttranslator__translatorengineclient_name(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextTranslator__TranslatorEngineClient*
+/// @param self TextTranslator__TranslatorEngineClient*
 /// @param callback const char* func(const TextTranslator__TranslatorEngineClient* self)
 ///
-void k_texttranslator__translatorengineclient_on_name(const void* self, const char* (*callback)(const void*));
+void k_texttranslator__translatorengineclient_on_name(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -128,10 +128,10 @@ const char* k_texttranslator__translatorengineclient_translated_name(const void*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextTranslator__TranslatorEngineClient*
+/// @param self TextTranslator__TranslatorEngineClient*
 /// @param callback const char* func(const TextTranslator__TranslatorEngineClient* self)
 ///
-void k_texttranslator__translatorengineclient_on_translated_name(const void* self, const char* (*callback)(const void*));
+void k_texttranslator__translatorengineclient_on_translated_name(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -243,10 +243,10 @@ bool k_texttranslator__translatorengineclient_has_configuration_dialog(const voi
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextTranslator__TranslatorEngineClient*
+/// @param self TextTranslator__TranslatorEngineClient*
 /// @param callback bool func(const TextTranslator__TranslatorEngineClient* self)
 ///
-void k_texttranslator__translatorengineclient_on_has_configuration_dialog(const void* self, bool (*callback)(const void*));
+void k_texttranslator__translatorengineclient_on_has_configuration_dialog(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -316,10 +316,10 @@ bool k_texttranslator__translatorengineclient_has_invert_support(const void* sel
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextTranslator__TranslatorEngineClient*
+/// @param self TextTranslator__TranslatorEngineClient*
 /// @param callback bool func(const TextTranslator__TranslatorEngineClient* self)
 ///
-void k_texttranslator__translatorengineclient_on_has_invert_support(const void* self, bool (*callback)(const void*));
+void k_texttranslator__translatorengineclient_on_has_invert_support(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -343,10 +343,10 @@ int32_t k_texttranslator__translatorengineclient_engine_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextTranslator__TranslatorEngineClient*
+/// @param self TextTranslator__TranslatorEngineClient*
 /// @param callback int32_t func(const TextTranslator__TranslatorEngineClient* self)
 ///
-void k_texttranslator__translatorengineclient_on_engine_type(const void* self, int32_t (*callback)(const void*));
+void k_texttranslator__translatorengineclient_on_engine_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -393,10 +393,10 @@ bool k_texttranslator__translatorengineclient_is_supported(const void* self, int
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextTranslator__TranslatorEngineClient*
+/// @param self TextTranslator__TranslatorEngineClient*
 /// @param callback bool func(const TextTranslator__TranslatorEngineClient* self, enum TextTranslator__TranslatorUtil__Language lang)
 ///
-void k_texttranslator__translatorengineclient_on_is_supported(const void* self, bool (*callback)(const void*, int32_t));
+void k_texttranslator__translatorengineclient_on_is_supported(void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorEngineClient.html)
 ///
@@ -1123,10 +1123,10 @@ QObject* k_texttranslator__translatorengineclient_super_sender(const void* self)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorEngineClient*
+/// @param self TextTranslator__TranslatorEngineClient*
 /// @param callback QObject* func(TextTranslator__TranslatorEngineClient* self)
 ///
-void k_texttranslator__translatorengineclient_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_texttranslator__translatorengineclient_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1154,10 +1154,10 @@ int32_t k_texttranslator__translatorengineclient_super_sender_signal_index(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorEngineClient*
+/// @param self TextTranslator__TranslatorEngineClient*
 /// @param callback int32_t func(TextTranslator__TranslatorEngineClient* self)
 ///
-void k_texttranslator__translatorengineclient_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_texttranslator__translatorengineclient_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1187,10 +1187,10 @@ int32_t k_texttranslator__translatorengineclient_super_receivers(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorEngineClient*
+/// @param self TextTranslator__TranslatorEngineClient*
 /// @param callback int32_t func(TextTranslator__TranslatorEngineClient* self, const char* signal)
 ///
-void k_texttranslator__translatorengineclient_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_texttranslator__translatorengineclient_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1220,10 +1220,10 @@ bool k_texttranslator__translatorengineclient_super_is_signal_connected(const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorEngineClient*
+/// @param self TextTranslator__TranslatorEngineClient*
 /// @param callback bool func(TextTranslator__TranslatorEngineClient* self, QMetaMethod* signal)
 ///
-void k_texttranslator__translatorengineclient_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_texttranslator__translatorengineclient_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

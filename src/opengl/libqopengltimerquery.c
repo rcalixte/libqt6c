@@ -17,7 +17,7 @@ const QMetaObject* q_opengltimerquery_meta_object(const void* self) {
     return QOpenGLTimerQuery_MetaObject((QOpenGLTimerQuery*)self);
 }
 
-void q_opengltimerquery_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_opengltimerquery_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QOpenGLTimerQuery_OnMetaObject((QOpenGLTimerQuery*)self, (intptr_t)callback);
 }
 
@@ -439,7 +439,7 @@ const QMetaObject* q_opengltimemonitor_meta_object(const void* self) {
     return QOpenGLTimeMonitor_MetaObject((QOpenGLTimeMonitor*)self);
 }
 
-void q_opengltimemonitor_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_opengltimemonitor_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QOpenGLTimeMonitor_OnMetaObject((QOpenGLTimeMonitor*)self, (intptr_t)callback);
 }
 

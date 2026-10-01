@@ -26,7 +26,7 @@ const QMetaObject* k_notificationaction_meta_object(const void* self) {
     return KNotificationAction_MetaObject((KNotificationAction*)self);
 }
 
-void k_notificationaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_notificationaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KNotificationAction_OnMetaObject((KNotificationAction*)self, (intptr_t)callback);
 }
 
@@ -439,7 +439,7 @@ const QMetaObject* k_notification_meta_object(const void* self) {
     return KNotification_MetaObject((KNotification*)self);
 }
 
-void k_notification_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_notification_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KNotification_OnMetaObject((KNotification*)self, (intptr_t)callback);
 }
 

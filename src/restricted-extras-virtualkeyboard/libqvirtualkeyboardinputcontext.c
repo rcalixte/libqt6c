@@ -22,7 +22,7 @@ const QMetaObject* q_virtualkeyboardinputcontext_meta_object(const void* self) {
     return QVirtualKeyboardInputContext_MetaObject((QVirtualKeyboardInputContext*)self);
 }
 
-void q_virtualkeyboardinputcontext_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_virtualkeyboardinputcontext_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVirtualKeyboardInputContext_OnMetaObject((QVirtualKeyboardInputContext*)self, (intptr_t)callback);
 }
 

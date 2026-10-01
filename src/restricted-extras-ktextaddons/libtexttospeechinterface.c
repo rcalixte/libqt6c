@@ -18,7 +18,7 @@ const QMetaObject* k_textedittexttospeech__texttospeechinterface_meta_object(con
     return TextEditTextToSpeech__TextToSpeechInterface_MetaObject((TextEditTextToSpeech__TextToSpeechInterface*)self);
 }
 
-void k_textedittexttospeech__texttospeechinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textedittexttospeech__texttospeechinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextEditTextToSpeech__TextToSpeechInterface_OnMetaObject((TextEditTextToSpeech__TextToSpeechInterface*)self, (intptr_t)callback);
 }
 

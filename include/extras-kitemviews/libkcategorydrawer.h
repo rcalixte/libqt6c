@@ -26,10 +26,10 @@ const QMetaObject* k_categorydrawer_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCategoryDrawer*
+/// @param self KCategoryDrawer*
 /// @param callback const QMetaObject* func(const KCategoryDrawer* self)
 ///
-void k_categorydrawer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_categorydrawer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -109,10 +109,10 @@ void k_categorydrawer_draw_category(const void* self, const void* index, int sor
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCategoryDrawer*
+/// @param self KCategoryDrawer*
 /// @param callback void func(const KCategoryDrawer* self, QModelIndex* index, int sortRole, QStyleOption* option, QPainter* painter)
 ///
-void k_categorydrawer_on_draw_category(const void* self, void (*callback)(const void*, const void*, int, const void*, void*));
+void k_categorydrawer_on_draw_category(void* self, void (*callback)(const void*, const void*, int, const void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kcategorydrawer.html#drawCategory)
 ///
@@ -138,10 +138,10 @@ int32_t k_categorydrawer_category_height(const void* self, const void* index, co
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCategoryDrawer*
+/// @param self KCategoryDrawer*
 /// @param callback int32_t func(const KCategoryDrawer* self, QModelIndex* index, QStyleOption* option)
 ///
-void k_categorydrawer_on_category_height(const void* self, int32_t (*callback)(const void*, const void*, const void*));
+void k_categorydrawer_on_category_height(void* self, int32_t (*callback)(const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kcategorydrawer.html#categoryHeight)
 ///
@@ -163,10 +163,10 @@ int32_t k_categorydrawer_left_margin(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCategoryDrawer*
+/// @param self KCategoryDrawer*
 /// @param callback int32_t func(const KCategoryDrawer* self)
 ///
-void k_categorydrawer_on_left_margin(const void* self, int32_t (*callback)(const void*));
+void k_categorydrawer_on_left_margin(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcategorydrawer.html#leftMargin)
 ///
@@ -186,10 +186,10 @@ int32_t k_categorydrawer_right_margin(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCategoryDrawer*
+/// @param self KCategoryDrawer*
 /// @param callback int32_t func(const KCategoryDrawer* self)
 ///
-void k_categorydrawer_on_right_margin(const void* self, int32_t (*callback)(const void*));
+void k_categorydrawer_on_right_margin(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcategorydrawer.html#rightMargin)
 ///
@@ -1096,10 +1096,10 @@ QObject* k_categorydrawer_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCategoryDrawer*
+/// @param self KCategoryDrawer*
 /// @param callback QObject* func(KCategoryDrawer* self)
 ///
-void k_categorydrawer_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_categorydrawer_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1127,10 +1127,10 @@ int32_t k_categorydrawer_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCategoryDrawer*
+/// @param self KCategoryDrawer*
 /// @param callback int32_t func(KCategoryDrawer* self)
 ///
-void k_categorydrawer_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_categorydrawer_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1160,10 +1160,10 @@ int32_t k_categorydrawer_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCategoryDrawer*
+/// @param self KCategoryDrawer*
 /// @param callback int32_t func(KCategoryDrawer* self, const char* signal)
 ///
-void k_categorydrawer_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_categorydrawer_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1193,10 +1193,10 @@ bool k_categorydrawer_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCategoryDrawer*
+/// @param self KCategoryDrawer*
 /// @param callback bool func(KCategoryDrawer* self, QMetaMethod* signal)
 ///
-void k_categorydrawer_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_categorydrawer_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

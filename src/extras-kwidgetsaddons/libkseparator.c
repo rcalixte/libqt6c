@@ -43,7 +43,7 @@ const QMetaObject* k_separator_meta_object(const void* self) {
     return KSeparator_MetaObject((KSeparator*)self);
 }
 
-void k_separator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_separator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSeparator_OnMetaObject((KSeparator*)self, (intptr_t)callback);
 }
 
@@ -156,11 +156,11 @@ void k_separator_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_separator_as_q_paint_device(void* self) {
+QPaintDevice* k_separator_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KSeparator* k_separator_from_q_paint_device(void* _qpaintdevice) {
+KSeparator* k_separator_from_q_paint_device(const void* _qpaintdevice) {
     return (KSeparator*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1551,8 +1551,8 @@ QSize* k_separator_super_size_hint(const void* self) {
     return KSeparator_SuperSizeHint((KSeparator*)self);
 }
 
-void k_separator_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KSeparator_OnSizeHint((const KSeparator*)self, (intptr_t)callback);
+void k_separator_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KSeparator_OnSizeHint((KSeparator*)self, (intptr_t)callback);
 }
 
 bool k_separator_event(void* self, void* e) {
@@ -1599,8 +1599,8 @@ void k_separator_super_init_style_option(const void* self, void* option) {
     KSeparator_SuperInitStyleOption((KSeparator*)self, (QStyleOptionFrame*)option);
 }
 
-void k_separator_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KSeparator_OnInitStyleOption((const KSeparator*)self, (intptr_t)callback);
+void k_separator_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KSeparator_OnInitStyleOption((KSeparator*)self, (intptr_t)callback);
 }
 
 int32_t k_separator_dev_type(const void* self) {
@@ -1611,8 +1611,8 @@ int32_t k_separator_super_dev_type(const void* self) {
     return KSeparator_SuperDevType((KSeparator*)self);
 }
 
-void k_separator_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KSeparator_OnDevType((const KSeparator*)self, (intptr_t)callback);
+void k_separator_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KSeparator_OnDevType((KSeparator*)self, (intptr_t)callback);
 }
 
 void k_separator_set_visible(void* self, bool visible) {
@@ -1635,8 +1635,8 @@ QSize* k_separator_super_minimum_size_hint(const void* self) {
     return KSeparator_SuperMinimumSizeHint((KSeparator*)self);
 }
 
-void k_separator_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KSeparator_OnMinimumSizeHint((const KSeparator*)self, (intptr_t)callback);
+void k_separator_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KSeparator_OnMinimumSizeHint((KSeparator*)self, (intptr_t)callback);
 }
 
 int32_t k_separator_height_for_width(const void* self, int param1) {
@@ -1647,8 +1647,8 @@ int32_t k_separator_super_height_for_width(const void* self, int param1) {
     return KSeparator_SuperHeightForWidth((KSeparator*)self, param1);
 }
 
-void k_separator_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KSeparator_OnHeightForWidth((const KSeparator*)self, (intptr_t)callback);
+void k_separator_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KSeparator_OnHeightForWidth((KSeparator*)self, (intptr_t)callback);
 }
 
 bool k_separator_has_height_for_width(const void* self) {
@@ -1659,8 +1659,8 @@ bool k_separator_super_has_height_for_width(const void* self) {
     return KSeparator_SuperHasHeightForWidth((KSeparator*)self);
 }
 
-void k_separator_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KSeparator_OnHasHeightForWidth((const KSeparator*)self, (intptr_t)callback);
+void k_separator_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KSeparator_OnHasHeightForWidth((KSeparator*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_separator_paint_engine(const void* self) {
@@ -1671,8 +1671,8 @@ QPaintEngine* k_separator_super_paint_engine(const void* self) {
     return KSeparator_SuperPaintEngine((KSeparator*)self);
 }
 
-void k_separator_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KSeparator_OnPaintEngine((const KSeparator*)self, (intptr_t)callback);
+void k_separator_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KSeparator_OnPaintEngine((KSeparator*)self, (intptr_t)callback);
 }
 
 void k_separator_mouse_press_event(void* self, void* event) {
@@ -1971,8 +1971,8 @@ int32_t k_separator_super_metric(const void* self, int32_t param1) {
     return KSeparator_SuperMetric((KSeparator*)self, param1);
 }
 
-void k_separator_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KSeparator_OnMetric((const KSeparator*)self, (intptr_t)callback);
+void k_separator_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KSeparator_OnMetric((KSeparator*)self, (intptr_t)callback);
 }
 
 void k_separator_init_painter(const void* self, void* painter) {
@@ -1983,8 +1983,8 @@ void k_separator_super_init_painter(const void* self, void* painter) {
     KSeparator_SuperInitPainter((KSeparator*)self, (QPainter*)painter);
 }
 
-void k_separator_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KSeparator_OnInitPainter((const KSeparator*)self, (intptr_t)callback);
+void k_separator_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KSeparator_OnInitPainter((KSeparator*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_separator_redirected(const void* self, void* offset) {
@@ -1995,8 +1995,8 @@ QPaintDevice* k_separator_super_redirected(const void* self, void* offset) {
     return KSeparator_SuperRedirected((KSeparator*)self, (QPoint*)offset);
 }
 
-void k_separator_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KSeparator_OnRedirected((const KSeparator*)self, (intptr_t)callback);
+void k_separator_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KSeparator_OnRedirected((KSeparator*)self, (intptr_t)callback);
 }
 
 QPainter* k_separator_shared_painter(const void* self) {
@@ -2007,8 +2007,8 @@ QPainter* k_separator_super_shared_painter(const void* self) {
     return KSeparator_SuperSharedPainter((KSeparator*)self);
 }
 
-void k_separator_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KSeparator_OnSharedPainter((const KSeparator*)self, (intptr_t)callback);
+void k_separator_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KSeparator_OnSharedPainter((KSeparator*)self, (intptr_t)callback);
 }
 
 void k_separator_input_method_event(void* self, void* param1) {
@@ -2031,8 +2031,8 @@ QVariant* k_separator_super_input_method_query(const void* self, int32_t param1)
     return KSeparator_SuperInputMethodQuery((KSeparator*)self, param1);
 }
 
-void k_separator_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KSeparator_OnInputMethodQuery((const KSeparator*)self, (intptr_t)callback);
+void k_separator_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KSeparator_OnInputMethodQuery((KSeparator*)self, (intptr_t)callback);
 }
 
 bool k_separator_focus_next_prev_child(void* self, bool next) {

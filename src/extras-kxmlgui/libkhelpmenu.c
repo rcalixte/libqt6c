@@ -37,7 +37,7 @@ const QMetaObject* k_helpmenu_meta_object(const void* self) {
     return KHelpMenu_MetaObject((KHelpMenu*)self);
 }
 
-void k_helpmenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_helpmenu_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KHelpMenu_OnMetaObject((KHelpMenu*)self, (intptr_t)callback);
 }
 

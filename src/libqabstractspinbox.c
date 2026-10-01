@@ -27,7 +27,7 @@ const QMetaObject* q_abstractspinbox_meta_object(const void* self) {
     return QAbstractSpinBox_MetaObject((QAbstractSpinBox*)self);
 }
 
-void q_abstractspinbox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_abstractspinbox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAbstractSpinBox_OnMetaObject((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
@@ -164,7 +164,7 @@ QSize* q_abstractspinbox_size_hint(const void* self) {
     return QAbstractSpinBox_SizeHint((QAbstractSpinBox*)self);
 }
 
-void q_abstractspinbox_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_abstractspinbox_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QAbstractSpinBox_OnSizeHint((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
@@ -176,7 +176,7 @@ QSize* q_abstractspinbox_minimum_size_hint(const void* self) {
     return QAbstractSpinBox_MinimumSizeHint((QAbstractSpinBox*)self);
 }
 
-void q_abstractspinbox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_abstractspinbox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QAbstractSpinBox_OnMinimumSizeHint((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
@@ -204,7 +204,7 @@ QVariant* q_abstractspinbox_input_method_query(const void* self, int32_t param1)
     return QAbstractSpinBox_InputMethodQuery((QAbstractSpinBox*)self, param1);
 }
 
-void q_abstractspinbox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+void q_abstractspinbox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
     QAbstractSpinBox_OnInputMethodQuery((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
@@ -216,7 +216,7 @@ int32_t q_abstractspinbox_validate(const void* self, const char* input, int* pos
     return QAbstractSpinBox_Validate((QAbstractSpinBox*)self, qstring(input), pos);
 }
 
-void q_abstractspinbox_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*)) {
+void q_abstractspinbox_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*)) {
     QAbstractSpinBox_OnValidate((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
@@ -228,7 +228,7 @@ void q_abstractspinbox_fixup(const void* self, const char* input) {
     QAbstractSpinBox_Fixup((QAbstractSpinBox*)self, qstring(input));
 }
 
-void q_abstractspinbox_on_fixup(const void* self, void (*callback)(const void*, const char*)) {
+void q_abstractspinbox_on_fixup(void* self, void (*callback)(const void*, const char*)) {
     QAbstractSpinBox_OnFixup((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
@@ -468,7 +468,7 @@ void q_abstractspinbox_init_style_option(const void* self, void* option) {
     QAbstractSpinBox_InitStyleOption((QAbstractSpinBox*)self, (QStyleOptionSpinBox*)option);
 }
 
-void q_abstractspinbox_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_abstractspinbox_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QAbstractSpinBox_OnInitStyleOption((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
@@ -488,7 +488,7 @@ int32_t q_abstractspinbox_step_enabled(const void* self) {
     return QAbstractSpinBox_StepEnabled((QAbstractSpinBox*)self);
 }
 
-void q_abstractspinbox_on_step_enabled(const void* self, int32_t (*callback)(const void*)) {
+void q_abstractspinbox_on_step_enabled(void* self, int32_t (*callback)(const void*)) {
     QAbstractSpinBox_OnStepEnabled((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
@@ -518,11 +518,11 @@ const char* q_abstractspinbox_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_abstractspinbox_as_q_paint_device(void* self) {
+QPaintDevice* q_abstractspinbox_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QAbstractSpinBox* q_abstractspinbox_from_q_paint_device(void* _qpaintdevice) {
+QAbstractSpinBox* q_abstractspinbox_from_q_paint_device(const void* _qpaintdevice) {
     return (QAbstractSpinBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1913,8 +1913,8 @@ int32_t q_abstractspinbox_super_dev_type(const void* self) {
     return QAbstractSpinBox_SuperDevType((QAbstractSpinBox*)self);
 }
 
-void q_abstractspinbox_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QAbstractSpinBox_OnDevType((const QAbstractSpinBox*)self, (intptr_t)callback);
+void q_abstractspinbox_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QAbstractSpinBox_OnDevType((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
 void q_abstractspinbox_set_visible(void* self, bool visible) {
@@ -1937,8 +1937,8 @@ int32_t q_abstractspinbox_super_height_for_width(const void* self, int param1) {
     return QAbstractSpinBox_SuperHeightForWidth((QAbstractSpinBox*)self, param1);
 }
 
-void q_abstractspinbox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QAbstractSpinBox_OnHeightForWidth((const QAbstractSpinBox*)self, (intptr_t)callback);
+void q_abstractspinbox_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QAbstractSpinBox_OnHeightForWidth((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_abstractspinbox_has_height_for_width(const void* self) {
@@ -1949,8 +1949,8 @@ bool q_abstractspinbox_super_has_height_for_width(const void* self) {
     return QAbstractSpinBox_SuperHasHeightForWidth((QAbstractSpinBox*)self);
 }
 
-void q_abstractspinbox_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QAbstractSpinBox_OnHasHeightForWidth((const QAbstractSpinBox*)self, (intptr_t)callback);
+void q_abstractspinbox_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QAbstractSpinBox_OnHasHeightForWidth((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_abstractspinbox_paint_engine(const void* self) {
@@ -1961,8 +1961,8 @@ QPaintEngine* q_abstractspinbox_super_paint_engine(const void* self) {
     return QAbstractSpinBox_SuperPaintEngine((QAbstractSpinBox*)self);
 }
 
-void q_abstractspinbox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QAbstractSpinBox_OnPaintEngine((const QAbstractSpinBox*)self, (intptr_t)callback);
+void q_abstractspinbox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QAbstractSpinBox_OnPaintEngine((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
 void q_abstractspinbox_mouse_double_click_event(void* self, void* event) {
@@ -2105,8 +2105,8 @@ int32_t q_abstractspinbox_super_metric(const void* self, int32_t param1) {
     return QAbstractSpinBox_SuperMetric((QAbstractSpinBox*)self, param1);
 }
 
-void q_abstractspinbox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QAbstractSpinBox_OnMetric((const QAbstractSpinBox*)self, (intptr_t)callback);
+void q_abstractspinbox_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QAbstractSpinBox_OnMetric((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
 void q_abstractspinbox_init_painter(const void* self, void* painter) {
@@ -2117,8 +2117,8 @@ void q_abstractspinbox_super_init_painter(const void* self, void* painter) {
     QAbstractSpinBox_SuperInitPainter((QAbstractSpinBox*)self, (QPainter*)painter);
 }
 
-void q_abstractspinbox_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QAbstractSpinBox_OnInitPainter((const QAbstractSpinBox*)self, (intptr_t)callback);
+void q_abstractspinbox_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QAbstractSpinBox_OnInitPainter((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_abstractspinbox_redirected(const void* self, void* offset) {
@@ -2129,8 +2129,8 @@ QPaintDevice* q_abstractspinbox_super_redirected(const void* self, void* offset)
     return QAbstractSpinBox_SuperRedirected((QAbstractSpinBox*)self, (QPoint*)offset);
 }
 
-void q_abstractspinbox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QAbstractSpinBox_OnRedirected((const QAbstractSpinBox*)self, (intptr_t)callback);
+void q_abstractspinbox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QAbstractSpinBox_OnRedirected((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
 QPainter* q_abstractspinbox_shared_painter(const void* self) {
@@ -2141,8 +2141,8 @@ QPainter* q_abstractspinbox_super_shared_painter(const void* self) {
     return QAbstractSpinBox_SuperSharedPainter((QAbstractSpinBox*)self);
 }
 
-void q_abstractspinbox_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QAbstractSpinBox_OnSharedPainter((const QAbstractSpinBox*)self, (intptr_t)callback);
+void q_abstractspinbox_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QAbstractSpinBox_OnSharedPainter((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
 void q_abstractspinbox_input_method_event(void* self, void* param1) {

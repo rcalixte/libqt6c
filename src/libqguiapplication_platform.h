@@ -28,10 +28,10 @@ void* q_nativeinterface__qx11application_display(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QX11Application*
+/// @param self QNativeInterface__QX11Application*
 /// @param callback void* func(const QNativeInterface__QX11Application* self)
 ///
-void q_nativeinterface__qx11application_on_display(const void* self, void* (*callback)(const void*));
+void q_nativeinterface__qx11application_on_display(void* self, void* (*callback)(const void*));
 
 #ifdef __linux__
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qx11application.html#connection)
@@ -50,10 +50,10 @@ xcb_connection_t* q_nativeinterface__qx11application_connection(const void* self
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QX11Application*
+/// @param self QNativeInterface__QX11Application*
 /// @param callback xcb_connection_t* func(const QNativeInterface__QX11Application* self)
 ///
-void q_nativeinterface__qx11application_on_connection(const void* self, xcb_connection_t* (*callback)(const void*));
+void q_nativeinterface__qx11application_on_connection(void* self, xcb_connection_t* (*callback)(const void*));
 #endif
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qwaylandapplication.html)
@@ -78,10 +78,10 @@ void* q_nativeinterface__qwaylandapplication_display(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QWaylandApplication*
+/// @param self QNativeInterface__QWaylandApplication*
 /// @param callback void* func(const QNativeInterface__QWaylandApplication* self)
 ///
-void q_nativeinterface__qwaylandapplication_on_display(const void* self, void* (*callback)(const void*));
+void q_nativeinterface__qwaylandapplication_on_display(void* self, void* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qwaylandapplication.html#compositor)
 ///
@@ -97,10 +97,10 @@ void* q_nativeinterface__qwaylandapplication_compositor(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QWaylandApplication*
+/// @param self QNativeInterface__QWaylandApplication*
 /// @param callback void* func(const QNativeInterface__QWaylandApplication* self)
 ///
-void q_nativeinterface__qwaylandapplication_on_compositor(const void* self, void* (*callback)(const void*));
+void q_nativeinterface__qwaylandapplication_on_compositor(void* self, void* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qwaylandapplication.html#seat)
 ///
@@ -116,10 +116,10 @@ void* q_nativeinterface__qwaylandapplication_seat(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QWaylandApplication*
+/// @param self QNativeInterface__QWaylandApplication*
 /// @param callback void* func(const QNativeInterface__QWaylandApplication* self)
 ///
-void q_nativeinterface__qwaylandapplication_on_seat(const void* self, void* (*callback)(const void*));
+void q_nativeinterface__qwaylandapplication_on_seat(void* self, void* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qwaylandapplication.html#keyboard)
 ///
@@ -135,10 +135,10 @@ void* q_nativeinterface__qwaylandapplication_keyboard(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QWaylandApplication*
+/// @param self QNativeInterface__QWaylandApplication*
 /// @param callback void* func(const QNativeInterface__QWaylandApplication* self)
 ///
-void q_nativeinterface__qwaylandapplication_on_keyboard(const void* self, void* (*callback)(const void*));
+void q_nativeinterface__qwaylandapplication_on_keyboard(void* self, void* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qwaylandapplication.html#pointer)
 ///
@@ -154,10 +154,10 @@ void* q_nativeinterface__qwaylandapplication_pointer(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QWaylandApplication*
+/// @param self QNativeInterface__QWaylandApplication*
 /// @param callback void* func(const QNativeInterface__QWaylandApplication* self)
 ///
-void q_nativeinterface__qwaylandapplication_on_pointer(const void* self, void* (*callback)(const void*));
+void q_nativeinterface__qwaylandapplication_on_pointer(void* self, void* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qwaylandapplication.html#touch)
 ///
@@ -173,10 +173,10 @@ void* q_nativeinterface__qwaylandapplication_touch(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QWaylandApplication*
+/// @param self QNativeInterface__QWaylandApplication*
 /// @param callback void* func(const QNativeInterface__QWaylandApplication* self)
 ///
-void q_nativeinterface__qwaylandapplication_on_touch(const void* self, void* (*callback)(const void*));
+void q_nativeinterface__qwaylandapplication_on_touch(void* self, void* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qwaylandapplication.html#lastInputSerial)
 ///
@@ -190,10 +190,10 @@ uint32_t q_nativeinterface__qwaylandapplication_last_input_serial(const void* se
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QWaylandApplication*
+/// @param self QNativeInterface__QWaylandApplication*
 /// @param callback uint32_t func(const QNativeInterface__QWaylandApplication* self)
 ///
-void q_nativeinterface__qwaylandapplication_on_last_input_serial(const void* self, uint32_t (*callback)(const void*));
+void q_nativeinterface__qwaylandapplication_on_last_input_serial(void* self, uint32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qwaylandapplication.html#lastInputSeat)
 ///
@@ -209,9 +209,9 @@ void* q_nativeinterface__qwaylandapplication_last_input_seat(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QWaylandApplication*
+/// @param self QNativeInterface__QWaylandApplication*
 /// @param callback void* func(const QNativeInterface__QWaylandApplication* self)
 ///
-void q_nativeinterface__qwaylandapplication_on_last_input_seat(const void* self, void* (*callback)(const void*));
+void q_nativeinterface__qwaylandapplication_on_last_input_seat(void* self, void* (*callback)(const void*));
 
 #endif

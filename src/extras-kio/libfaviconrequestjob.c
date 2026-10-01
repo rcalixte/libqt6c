@@ -24,7 +24,7 @@ const QMetaObject* k_io__faviconrequestjob_meta_object(const void* self) {
     return KIO__FavIconRequestJob_MetaObject((KIO__FavIconRequestJob*)self);
 }
 
-void k_io__faviconrequestjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__faviconrequestjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__FavIconRequestJob_OnMetaObject((KIO__FavIconRequestJob*)self, (intptr_t)callback);
 }
 
@@ -526,8 +526,8 @@ const char* k_io__faviconrequestjob_super_error_string(const void* self) {
     return _ret;
 }
 
-void k_io__faviconrequestjob_on_error_string(const void* self, const char* (*callback)(const void*)) {
-    KIO__FavIconRequestJob_OnErrorString((const KIO__FavIconRequestJob*)self, (intptr_t)callback);
+void k_io__faviconrequestjob_on_error_string(void* self, const char* (*callback)(const void*)) {
+    KIO__FavIconRequestJob_OnErrorString((KIO__FavIconRequestJob*)self, (intptr_t)callback);
 }
 
 bool k_io__faviconrequestjob_event(void* self, void* event) {

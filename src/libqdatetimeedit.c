@@ -56,7 +56,7 @@ const QMetaObject* q_datetimeedit_meta_object(const void* self) {
     return QDateTimeEdit_MetaObject((QDateTimeEdit*)self);
 }
 
-void q_datetimeedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_datetimeedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDateTimeEdit_OnMetaObject((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
@@ -285,7 +285,7 @@ QSize* q_datetimeedit_size_hint(const void* self) {
     return QDateTimeEdit_SizeHint((QDateTimeEdit*)self);
 }
 
-void q_datetimeedit_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_datetimeedit_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QDateTimeEdit_OnSizeHint((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
@@ -417,7 +417,7 @@ int32_t q_datetimeedit_validate(const void* self, const char* input, int* pos) {
     return QDateTimeEdit_Validate((QDateTimeEdit*)self, qstring(input), pos);
 }
 
-void q_datetimeedit_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*)) {
+void q_datetimeedit_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*)) {
     QDateTimeEdit_OnValidate((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
@@ -429,7 +429,7 @@ void q_datetimeedit_fixup(const void* self, const char* input) {
     QDateTimeEdit_Fixup((QDateTimeEdit*)self, qstring(input));
 }
 
-void q_datetimeedit_on_fixup(const void* self, void (*callback)(const void*, const char*)) {
+void q_datetimeedit_on_fixup(void* self, void (*callback)(const void*, const char*)) {
     QDateTimeEdit_OnFixup((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
@@ -441,7 +441,7 @@ QDateTime* q_datetimeedit_date_time_from_text(const void* self, const char* text
     return QDateTimeEdit_DateTimeFromText((QDateTimeEdit*)self, qstring(text));
 }
 
-void q_datetimeedit_on_date_time_from_text(const void* self, QDateTime* (*callback)(const void*, const char*)) {
+void q_datetimeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(const void*, const char*)) {
     QDateTimeEdit_OnDateTimeFromText((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
@@ -456,7 +456,7 @@ const char* q_datetimeedit_text_from_date_time(const void* self, const void* dt)
     return _ret;
 }
 
-void q_datetimeedit_on_text_from_date_time(const void* self, const char* (*callback)(const void*, const void*)) {
+void q_datetimeedit_on_text_from_date_time(void* self, const char* (*callback)(const void*, const void*)) {
     QDateTimeEdit_OnTextFromDateTime((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
@@ -471,7 +471,7 @@ int32_t q_datetimeedit_step_enabled(const void* self) {
     return QDateTimeEdit_StepEnabled((QDateTimeEdit*)self);
 }
 
-void q_datetimeedit_on_step_enabled(const void* self, int32_t (*callback)(const void*)) {
+void q_datetimeedit_on_step_enabled(void* self, int32_t (*callback)(const void*)) {
     QDateTimeEdit_OnStepEnabled((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
@@ -507,7 +507,7 @@ void q_datetimeedit_init_style_option(const void* self, void* option) {
     QDateTimeEdit_InitStyleOption((QDateTimeEdit*)self, (QStyleOptionSpinBox*)option);
 }
 
-void q_datetimeedit_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_datetimeedit_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QDateTimeEdit_OnInitStyleOption((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
@@ -647,11 +647,11 @@ void q_datetimeedit_on_editing_finished(void* self, void (*callback)(void*)) {
     QAbstractSpinBox_Connect_EditingFinished((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_datetimeedit_as_q_paint_device(void* self) {
+QPaintDevice* q_datetimeedit_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QDateTimeEdit* q_datetimeedit_from_q_paint_device(void* _qpaintdevice) {
+QDateTimeEdit* q_datetimeedit_from_q_paint_device(const void* _qpaintdevice) {
     return (QDateTimeEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2042,8 +2042,8 @@ QSize* q_datetimeedit_super_minimum_size_hint(const void* self) {
     return QDateTimeEdit_SuperMinimumSizeHint((QDateTimeEdit*)self);
 }
 
-void q_datetimeedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDateTimeEdit_OnMinimumSizeHint((const QDateTimeEdit*)self, (intptr_t)callback);
+void q_datetimeedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDateTimeEdit_OnMinimumSizeHint((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
 QVariant* q_datetimeedit_input_method_query(const void* self, int32_t param1) {
@@ -2054,8 +2054,8 @@ QVariant* q_datetimeedit_super_input_method_query(const void* self, int32_t para
     return QDateTimeEdit_SuperInputMethodQuery((QDateTimeEdit*)self, param1);
 }
 
-void q_datetimeedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QDateTimeEdit_OnInputMethodQuery((const QDateTimeEdit*)self, (intptr_t)callback);
+void q_datetimeedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QDateTimeEdit_OnInputMethodQuery((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_datetimeedit_resize_event(void* self, void* event) {
@@ -2198,8 +2198,8 @@ int32_t q_datetimeedit_super_dev_type(const void* self) {
     return QDateTimeEdit_SuperDevType((QDateTimeEdit*)self);
 }
 
-void q_datetimeedit_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QDateTimeEdit_OnDevType((const QDateTimeEdit*)self, (intptr_t)callback);
+void q_datetimeedit_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QDateTimeEdit_OnDevType((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_datetimeedit_set_visible(void* self, bool visible) {
@@ -2222,8 +2222,8 @@ int32_t q_datetimeedit_super_height_for_width(const void* self, int param1) {
     return QDateTimeEdit_SuperHeightForWidth((QDateTimeEdit*)self, param1);
 }
 
-void q_datetimeedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QDateTimeEdit_OnHeightForWidth((const QDateTimeEdit*)self, (intptr_t)callback);
+void q_datetimeedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QDateTimeEdit_OnHeightForWidth((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
 bool q_datetimeedit_has_height_for_width(const void* self) {
@@ -2234,8 +2234,8 @@ bool q_datetimeedit_super_has_height_for_width(const void* self) {
     return QDateTimeEdit_SuperHasHeightForWidth((QDateTimeEdit*)self);
 }
 
-void q_datetimeedit_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QDateTimeEdit_OnHasHeightForWidth((const QDateTimeEdit*)self, (intptr_t)callback);
+void q_datetimeedit_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QDateTimeEdit_OnHasHeightForWidth((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_datetimeedit_paint_engine(const void* self) {
@@ -2246,8 +2246,8 @@ QPaintEngine* q_datetimeedit_super_paint_engine(const void* self) {
     return QDateTimeEdit_SuperPaintEngine((QDateTimeEdit*)self);
 }
 
-void q_datetimeedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QDateTimeEdit_OnPaintEngine((const QDateTimeEdit*)self, (intptr_t)callback);
+void q_datetimeedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QDateTimeEdit_OnPaintEngine((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_datetimeedit_mouse_double_click_event(void* self, void* event) {
@@ -2390,8 +2390,8 @@ int32_t q_datetimeedit_super_metric(const void* self, int32_t param1) {
     return QDateTimeEdit_SuperMetric((QDateTimeEdit*)self, param1);
 }
 
-void q_datetimeedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QDateTimeEdit_OnMetric((const QDateTimeEdit*)self, (intptr_t)callback);
+void q_datetimeedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QDateTimeEdit_OnMetric((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_datetimeedit_init_painter(const void* self, void* painter) {
@@ -2402,8 +2402,8 @@ void q_datetimeedit_super_init_painter(const void* self, void* painter) {
     QDateTimeEdit_SuperInitPainter((QDateTimeEdit*)self, (QPainter*)painter);
 }
 
-void q_datetimeedit_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QDateTimeEdit_OnInitPainter((const QDateTimeEdit*)self, (intptr_t)callback);
+void q_datetimeedit_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QDateTimeEdit_OnInitPainter((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_datetimeedit_redirected(const void* self, void* offset) {
@@ -2414,8 +2414,8 @@ QPaintDevice* q_datetimeedit_super_redirected(const void* self, void* offset) {
     return QDateTimeEdit_SuperRedirected((QDateTimeEdit*)self, (QPoint*)offset);
 }
 
-void q_datetimeedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QDateTimeEdit_OnRedirected((const QDateTimeEdit*)self, (intptr_t)callback);
+void q_datetimeedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QDateTimeEdit_OnRedirected((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
 QPainter* q_datetimeedit_shared_painter(const void* self) {
@@ -2426,8 +2426,8 @@ QPainter* q_datetimeedit_super_shared_painter(const void* self) {
     return QDateTimeEdit_SuperSharedPainter((QDateTimeEdit*)self);
 }
 
-void q_datetimeedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QDateTimeEdit_OnSharedPainter((const QDateTimeEdit*)self, (intptr_t)callback);
+void q_datetimeedit_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QDateTimeEdit_OnSharedPainter((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_datetimeedit_input_method_event(void* self, void* param1) {
@@ -2578,7 +2578,7 @@ const QMetaObject* q_timeedit_meta_object(const void* self) {
     return QTimeEdit_MetaObject((QTimeEdit*)self);
 }
 
-void q_timeedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_timeedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTimeEdit_OnMetaObject((QTimeEdit*)self, (intptr_t)callback);
 }
 
@@ -2979,11 +2979,11 @@ void q_timeedit_on_editing_finished(void* self, void (*callback)(void*)) {
     QAbstractSpinBox_Connect_EditingFinished((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_timeedit_as_q_paint_device(void* self) {
+QPaintDevice* q_timeedit_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QTimeEdit* q_timeedit_from_q_paint_device(void* _qpaintdevice) {
+QTimeEdit* q_timeedit_from_q_paint_device(const void* _qpaintdevice) {
     return (QTimeEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -4374,8 +4374,8 @@ QSize* q_timeedit_super_size_hint(const void* self) {
     return QTimeEdit_SuperSizeHint((QTimeEdit*)self);
 }
 
-void q_timeedit_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTimeEdit_OnSizeHint((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTimeEdit_OnSizeHint((QTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_timeedit_clear(void* self) {
@@ -4470,8 +4470,8 @@ int32_t q_timeedit_super_validate(const void* self, const char* input, int* pos)
     return QTimeEdit_SuperValidate((QTimeEdit*)self, qstring(input), pos);
 }
 
-void q_timeedit_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*)) {
-    QTimeEdit_OnValidate((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*)) {
+    QTimeEdit_OnValidate((QTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_timeedit_fixup(const void* self, const char* input) {
@@ -4482,8 +4482,8 @@ void q_timeedit_super_fixup(const void* self, const char* input) {
     QTimeEdit_SuperFixup((QTimeEdit*)self, qstring(input));
 }
 
-void q_timeedit_on_fixup(const void* self, void (*callback)(const void*, const char*)) {
-    QTimeEdit_OnFixup((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_fixup(void* self, void (*callback)(const void*, const char*)) {
+    QTimeEdit_OnFixup((QTimeEdit*)self, (intptr_t)callback);
 }
 
 QDateTime* q_timeedit_date_time_from_text(const void* self, const char* text) {
@@ -4494,8 +4494,8 @@ QDateTime* q_timeedit_super_date_time_from_text(const void* self, const char* te
     return QTimeEdit_SuperDateTimeFromText((QTimeEdit*)self, qstring(text));
 }
 
-void q_timeedit_on_date_time_from_text(const void* self, QDateTime* (*callback)(const void*, const char*)) {
-    QTimeEdit_OnDateTimeFromText((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(const void*, const char*)) {
+    QTimeEdit_OnDateTimeFromText((QTimeEdit*)self, (intptr_t)callback);
 }
 
 const char* q_timeedit_text_from_date_time(const void* self, const void* dt) {
@@ -4512,8 +4512,8 @@ const char* q_timeedit_super_text_from_date_time(const void* self, const void* d
     return _ret;
 }
 
-void q_timeedit_on_text_from_date_time(const void* self, const char* (*callback)(const void*, const void*)) {
-    QTimeEdit_OnTextFromDateTime((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_text_from_date_time(void* self, const char* (*callback)(const void*, const void*)) {
+    QTimeEdit_OnTextFromDateTime((QTimeEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_timeedit_step_enabled(const void* self) {
@@ -4524,8 +4524,8 @@ int32_t q_timeedit_super_step_enabled(const void* self) {
     return QTimeEdit_SuperStepEnabled((QTimeEdit*)self);
 }
 
-void q_timeedit_on_step_enabled(const void* self, int32_t (*callback)(const void*)) {
-    QTimeEdit_OnStepEnabled((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_step_enabled(void* self, int32_t (*callback)(const void*)) {
+    QTimeEdit_OnStepEnabled((QTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_timeedit_mouse_press_event(void* self, void* event) {
@@ -4560,8 +4560,8 @@ void q_timeedit_super_init_style_option(const void* self, void* option) {
     QTimeEdit_SuperInitStyleOption((QTimeEdit*)self, (QStyleOptionSpinBox*)option);
 }
 
-void q_timeedit_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QTimeEdit_OnInitStyleOption((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QTimeEdit_OnInitStyleOption((QTimeEdit*)self, (intptr_t)callback);
 }
 
 QSize* q_timeedit_minimum_size_hint(const void* self) {
@@ -4572,8 +4572,8 @@ QSize* q_timeedit_super_minimum_size_hint(const void* self) {
     return QTimeEdit_SuperMinimumSizeHint((QTimeEdit*)self);
 }
 
-void q_timeedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QTimeEdit_OnMinimumSizeHint((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QTimeEdit_OnMinimumSizeHint((QTimeEdit*)self, (intptr_t)callback);
 }
 
 QVariant* q_timeedit_input_method_query(const void* self, int32_t param1) {
@@ -4584,8 +4584,8 @@ QVariant* q_timeedit_super_input_method_query(const void* self, int32_t param1) 
     return QTimeEdit_SuperInputMethodQuery((QTimeEdit*)self, param1);
 }
 
-void q_timeedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QTimeEdit_OnInputMethodQuery((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QTimeEdit_OnInputMethodQuery((QTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_timeedit_resize_event(void* self, void* event) {
@@ -4728,8 +4728,8 @@ int32_t q_timeedit_super_dev_type(const void* self) {
     return QTimeEdit_SuperDevType((QTimeEdit*)self);
 }
 
-void q_timeedit_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QTimeEdit_OnDevType((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QTimeEdit_OnDevType((QTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_timeedit_set_visible(void* self, bool visible) {
@@ -4752,8 +4752,8 @@ int32_t q_timeedit_super_height_for_width(const void* self, int param1) {
     return QTimeEdit_SuperHeightForWidth((QTimeEdit*)self, param1);
 }
 
-void q_timeedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QTimeEdit_OnHeightForWidth((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QTimeEdit_OnHeightForWidth((QTimeEdit*)self, (intptr_t)callback);
 }
 
 bool q_timeedit_has_height_for_width(const void* self) {
@@ -4764,8 +4764,8 @@ bool q_timeedit_super_has_height_for_width(const void* self) {
     return QTimeEdit_SuperHasHeightForWidth((QTimeEdit*)self);
 }
 
-void q_timeedit_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QTimeEdit_OnHasHeightForWidth((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QTimeEdit_OnHasHeightForWidth((QTimeEdit*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_timeedit_paint_engine(const void* self) {
@@ -4776,8 +4776,8 @@ QPaintEngine* q_timeedit_super_paint_engine(const void* self) {
     return QTimeEdit_SuperPaintEngine((QTimeEdit*)self);
 }
 
-void q_timeedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QTimeEdit_OnPaintEngine((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QTimeEdit_OnPaintEngine((QTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_timeedit_mouse_double_click_event(void* self, void* event) {
@@ -4920,8 +4920,8 @@ int32_t q_timeedit_super_metric(const void* self, int32_t param1) {
     return QTimeEdit_SuperMetric((QTimeEdit*)self, param1);
 }
 
-void q_timeedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QTimeEdit_OnMetric((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QTimeEdit_OnMetric((QTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_timeedit_init_painter(const void* self, void* painter) {
@@ -4932,8 +4932,8 @@ void q_timeedit_super_init_painter(const void* self, void* painter) {
     QTimeEdit_SuperInitPainter((QTimeEdit*)self, (QPainter*)painter);
 }
 
-void q_timeedit_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QTimeEdit_OnInitPainter((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QTimeEdit_OnInitPainter((QTimeEdit*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_timeedit_redirected(const void* self, void* offset) {
@@ -4944,8 +4944,8 @@ QPaintDevice* q_timeedit_super_redirected(const void* self, void* offset) {
     return QTimeEdit_SuperRedirected((QTimeEdit*)self, (QPoint*)offset);
 }
 
-void q_timeedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QTimeEdit_OnRedirected((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QTimeEdit_OnRedirected((QTimeEdit*)self, (intptr_t)callback);
 }
 
 QPainter* q_timeedit_shared_painter(const void* self) {
@@ -4956,8 +4956,8 @@ QPainter* q_timeedit_super_shared_painter(const void* self) {
     return QTimeEdit_SuperSharedPainter((QTimeEdit*)self);
 }
 
-void q_timeedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QTimeEdit_OnSharedPainter((const QTimeEdit*)self, (intptr_t)callback);
+void q_timeedit_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QTimeEdit_OnSharedPainter((QTimeEdit*)self, (intptr_t)callback);
 }
 
 void q_timeedit_input_method_event(void* self, void* param1) {
@@ -5108,7 +5108,7 @@ const QMetaObject* q_dateedit_meta_object(const void* self) {
     return QDateEdit_MetaObject((QDateEdit*)self);
 }
 
-void q_dateedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_dateedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDateEdit_OnMetaObject((QDateEdit*)self, (intptr_t)callback);
 }
 
@@ -5509,11 +5509,11 @@ void q_dateedit_on_editing_finished(void* self, void (*callback)(void*)) {
     QAbstractSpinBox_Connect_EditingFinished((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_dateedit_as_q_paint_device(void* self) {
+QPaintDevice* q_dateedit_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QDateEdit* q_dateedit_from_q_paint_device(void* _qpaintdevice) {
+QDateEdit* q_dateedit_from_q_paint_device(const void* _qpaintdevice) {
     return (QDateEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -6904,8 +6904,8 @@ QSize* q_dateedit_super_size_hint(const void* self) {
     return QDateEdit_SuperSizeHint((QDateEdit*)self);
 }
 
-void q_dateedit_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDateEdit_OnSizeHint((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDateEdit_OnSizeHint((QDateEdit*)self, (intptr_t)callback);
 }
 
 void q_dateedit_clear(void* self) {
@@ -7000,8 +7000,8 @@ int32_t q_dateedit_super_validate(const void* self, const char* input, int* pos)
     return QDateEdit_SuperValidate((QDateEdit*)self, qstring(input), pos);
 }
 
-void q_dateedit_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*)) {
-    QDateEdit_OnValidate((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*)) {
+    QDateEdit_OnValidate((QDateEdit*)self, (intptr_t)callback);
 }
 
 void q_dateedit_fixup(const void* self, const char* input) {
@@ -7012,8 +7012,8 @@ void q_dateedit_super_fixup(const void* self, const char* input) {
     QDateEdit_SuperFixup((QDateEdit*)self, qstring(input));
 }
 
-void q_dateedit_on_fixup(const void* self, void (*callback)(const void*, const char*)) {
-    QDateEdit_OnFixup((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_fixup(void* self, void (*callback)(const void*, const char*)) {
+    QDateEdit_OnFixup((QDateEdit*)self, (intptr_t)callback);
 }
 
 QDateTime* q_dateedit_date_time_from_text(const void* self, const char* text) {
@@ -7024,8 +7024,8 @@ QDateTime* q_dateedit_super_date_time_from_text(const void* self, const char* te
     return QDateEdit_SuperDateTimeFromText((QDateEdit*)self, qstring(text));
 }
 
-void q_dateedit_on_date_time_from_text(const void* self, QDateTime* (*callback)(const void*, const char*)) {
-    QDateEdit_OnDateTimeFromText((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_date_time_from_text(void* self, QDateTime* (*callback)(const void*, const char*)) {
+    QDateEdit_OnDateTimeFromText((QDateEdit*)self, (intptr_t)callback);
 }
 
 const char* q_dateedit_text_from_date_time(const void* self, const void* dt) {
@@ -7042,8 +7042,8 @@ const char* q_dateedit_super_text_from_date_time(const void* self, const void* d
     return _ret;
 }
 
-void q_dateedit_on_text_from_date_time(const void* self, const char* (*callback)(const void*, const void*)) {
-    QDateEdit_OnTextFromDateTime((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_text_from_date_time(void* self, const char* (*callback)(const void*, const void*)) {
+    QDateEdit_OnTextFromDateTime((QDateEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_dateedit_step_enabled(const void* self) {
@@ -7054,8 +7054,8 @@ int32_t q_dateedit_super_step_enabled(const void* self) {
     return QDateEdit_SuperStepEnabled((QDateEdit*)self);
 }
 
-void q_dateedit_on_step_enabled(const void* self, int32_t (*callback)(const void*)) {
-    QDateEdit_OnStepEnabled((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_step_enabled(void* self, int32_t (*callback)(const void*)) {
+    QDateEdit_OnStepEnabled((QDateEdit*)self, (intptr_t)callback);
 }
 
 void q_dateedit_mouse_press_event(void* self, void* event) {
@@ -7090,8 +7090,8 @@ void q_dateedit_super_init_style_option(const void* self, void* option) {
     QDateEdit_SuperInitStyleOption((QDateEdit*)self, (QStyleOptionSpinBox*)option);
 }
 
-void q_dateedit_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QDateEdit_OnInitStyleOption((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QDateEdit_OnInitStyleOption((QDateEdit*)self, (intptr_t)callback);
 }
 
 QSize* q_dateedit_minimum_size_hint(const void* self) {
@@ -7102,8 +7102,8 @@ QSize* q_dateedit_super_minimum_size_hint(const void* self) {
     return QDateEdit_SuperMinimumSizeHint((QDateEdit*)self);
 }
 
-void q_dateedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDateEdit_OnMinimumSizeHint((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDateEdit_OnMinimumSizeHint((QDateEdit*)self, (intptr_t)callback);
 }
 
 QVariant* q_dateedit_input_method_query(const void* self, int32_t param1) {
@@ -7114,8 +7114,8 @@ QVariant* q_dateedit_super_input_method_query(const void* self, int32_t param1) 
     return QDateEdit_SuperInputMethodQuery((QDateEdit*)self, param1);
 }
 
-void q_dateedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QDateEdit_OnInputMethodQuery((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QDateEdit_OnInputMethodQuery((QDateEdit*)self, (intptr_t)callback);
 }
 
 void q_dateedit_resize_event(void* self, void* event) {
@@ -7258,8 +7258,8 @@ int32_t q_dateedit_super_dev_type(const void* self) {
     return QDateEdit_SuperDevType((QDateEdit*)self);
 }
 
-void q_dateedit_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QDateEdit_OnDevType((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QDateEdit_OnDevType((QDateEdit*)self, (intptr_t)callback);
 }
 
 void q_dateedit_set_visible(void* self, bool visible) {
@@ -7282,8 +7282,8 @@ int32_t q_dateedit_super_height_for_width(const void* self, int param1) {
     return QDateEdit_SuperHeightForWidth((QDateEdit*)self, param1);
 }
 
-void q_dateedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QDateEdit_OnHeightForWidth((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QDateEdit_OnHeightForWidth((QDateEdit*)self, (intptr_t)callback);
 }
 
 bool q_dateedit_has_height_for_width(const void* self) {
@@ -7294,8 +7294,8 @@ bool q_dateedit_super_has_height_for_width(const void* self) {
     return QDateEdit_SuperHasHeightForWidth((QDateEdit*)self);
 }
 
-void q_dateedit_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QDateEdit_OnHasHeightForWidth((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QDateEdit_OnHasHeightForWidth((QDateEdit*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_dateedit_paint_engine(const void* self) {
@@ -7306,8 +7306,8 @@ QPaintEngine* q_dateedit_super_paint_engine(const void* self) {
     return QDateEdit_SuperPaintEngine((QDateEdit*)self);
 }
 
-void q_dateedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QDateEdit_OnPaintEngine((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QDateEdit_OnPaintEngine((QDateEdit*)self, (intptr_t)callback);
 }
 
 void q_dateedit_mouse_double_click_event(void* self, void* event) {
@@ -7450,8 +7450,8 @@ int32_t q_dateedit_super_metric(const void* self, int32_t param1) {
     return QDateEdit_SuperMetric((QDateEdit*)self, param1);
 }
 
-void q_dateedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QDateEdit_OnMetric((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QDateEdit_OnMetric((QDateEdit*)self, (intptr_t)callback);
 }
 
 void q_dateedit_init_painter(const void* self, void* painter) {
@@ -7462,8 +7462,8 @@ void q_dateedit_super_init_painter(const void* self, void* painter) {
     QDateEdit_SuperInitPainter((QDateEdit*)self, (QPainter*)painter);
 }
 
-void q_dateedit_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QDateEdit_OnInitPainter((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QDateEdit_OnInitPainter((QDateEdit*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_dateedit_redirected(const void* self, void* offset) {
@@ -7474,8 +7474,8 @@ QPaintDevice* q_dateedit_super_redirected(const void* self, void* offset) {
     return QDateEdit_SuperRedirected((QDateEdit*)self, (QPoint*)offset);
 }
 
-void q_dateedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QDateEdit_OnRedirected((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QDateEdit_OnRedirected((QDateEdit*)self, (intptr_t)callback);
 }
 
 QPainter* q_dateedit_shared_painter(const void* self) {
@@ -7486,8 +7486,8 @@ QPainter* q_dateedit_super_shared_painter(const void* self) {
     return QDateEdit_SuperSharedPainter((QDateEdit*)self);
 }
 
-void q_dateedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QDateEdit_OnSharedPainter((const QDateEdit*)self, (intptr_t)callback);
+void q_dateedit_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QDateEdit_OnSharedPainter((QDateEdit*)self, (intptr_t)callback);
 }
 
 void q_dateedit_input_method_event(void* self, void* param1) {

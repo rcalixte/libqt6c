@@ -24,7 +24,7 @@ const QMetaObject* k_toggleaction_meta_object(const void* self) {
     return KToggleAction_MetaObject((KToggleAction*)self);
 }
 
-void k_toggleaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_toggleaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KToggleAction_OnMetaObject((KToggleAction*)self, (intptr_t)callback);
 }
 

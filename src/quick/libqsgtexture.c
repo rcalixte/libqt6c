@@ -15,7 +15,7 @@ const QMetaObject* q_sgtexture_meta_object(const void* self) {
     return QSGTexture_MetaObject((QSGTexture*)self);
 }
 
-void q_sgtexture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_sgtexture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSGTexture_OnMetaObject((QSGTexture*)self, (intptr_t)callback);
 }
 
@@ -58,7 +58,7 @@ int64_t q_sgtexture_comparison_key(const void* self) {
     return QSGTexture_ComparisonKey((QSGTexture*)self);
 }
 
-void q_sgtexture_on_comparison_key(const void* self, int64_t (*callback)(const void*)) {
+void q_sgtexture_on_comparison_key(void* self, int64_t (*callback)(const void*)) {
     QSGTexture_OnComparisonKey((QSGTexture*)self, (intptr_t)callback);
 }
 
@@ -66,7 +66,7 @@ QSize* q_sgtexture_texture_size(const void* self) {
     return QSGTexture_TextureSize((QSGTexture*)self);
 }
 
-void q_sgtexture_on_texture_size(const void* self, QSize* (*callback)(const void*)) {
+void q_sgtexture_on_texture_size(void* self, QSize* (*callback)(const void*)) {
     QSGTexture_OnTextureSize((QSGTexture*)self, (intptr_t)callback);
 }
 
@@ -74,7 +74,7 @@ bool q_sgtexture_has_alpha_channel(const void* self) {
     return QSGTexture_HasAlphaChannel((QSGTexture*)self);
 }
 
-void q_sgtexture_on_has_alpha_channel(const void* self, bool (*callback)(const void*)) {
+void q_sgtexture_on_has_alpha_channel(void* self, bool (*callback)(const void*)) {
     QSGTexture_OnHasAlphaChannel((QSGTexture*)self, (intptr_t)callback);
 }
 
@@ -82,7 +82,7 @@ bool q_sgtexture_has_mipmaps(const void* self) {
     return QSGTexture_HasMipmaps((QSGTexture*)self);
 }
 
-void q_sgtexture_on_has_mipmaps(const void* self, bool (*callback)(const void*)) {
+void q_sgtexture_on_has_mipmaps(void* self, bool (*callback)(const void*)) {
     QSGTexture_OnHasMipmaps((QSGTexture*)self, (intptr_t)callback);
 }
 
@@ -90,7 +90,7 @@ QRectF* q_sgtexture_normalized_texture_sub_rect(const void* self) {
     return QSGTexture_NormalizedTextureSubRect((QSGTexture*)self);
 }
 
-void q_sgtexture_on_normalized_texture_sub_rect(const void* self, QRectF* (*callback)(const void*)) {
+void q_sgtexture_on_normalized_texture_sub_rect(void* self, QRectF* (*callback)(const void*)) {
     QSGTexture_OnNormalizedTextureSubRect((QSGTexture*)self, (intptr_t)callback);
 }
 
@@ -102,7 +102,7 @@ bool q_sgtexture_is_atlas_texture(const void* self) {
     return QSGTexture_IsAtlasTexture((QSGTexture*)self);
 }
 
-void q_sgtexture_on_is_atlas_texture(const void* self, bool (*callback)(const void*)) {
+void q_sgtexture_on_is_atlas_texture(void* self, bool (*callback)(const void*)) {
     QSGTexture_OnIsAtlasTexture((QSGTexture*)self, (intptr_t)callback);
 }
 
@@ -497,7 +497,7 @@ const QMetaObject* q_sgdynamictexture_meta_object(const void* self) {
     return QSGDynamicTexture_MetaObject((QSGDynamicTexture*)self);
 }
 
-void q_sgdynamictexture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_sgdynamictexture_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSGDynamicTexture_OnMetaObject((QSGDynamicTexture*)self, (intptr_t)callback);
 }
 
@@ -815,32 +815,32 @@ int64_t q_sgdynamictexture_comparison_key(const void* self) {
     return QSGDynamicTexture_ComparisonKey((QSGDynamicTexture*)self);
 }
 
-void q_sgdynamictexture_on_comparison_key(const void* self, int64_t (*callback)(const void*)) {
-    QSGDynamicTexture_OnComparisonKey((const QSGDynamicTexture*)self, (intptr_t)callback);
+void q_sgdynamictexture_on_comparison_key(void* self, int64_t (*callback)(const void*)) {
+    QSGDynamicTexture_OnComparisonKey((QSGDynamicTexture*)self, (intptr_t)callback);
 }
 
 QSize* q_sgdynamictexture_texture_size(const void* self) {
     return QSGDynamicTexture_TextureSize((QSGDynamicTexture*)self);
 }
 
-void q_sgdynamictexture_on_texture_size(const void* self, QSize* (*callback)(const void*)) {
-    QSGDynamicTexture_OnTextureSize((const QSGDynamicTexture*)self, (intptr_t)callback);
+void q_sgdynamictexture_on_texture_size(void* self, QSize* (*callback)(const void*)) {
+    QSGDynamicTexture_OnTextureSize((QSGDynamicTexture*)self, (intptr_t)callback);
 }
 
 bool q_sgdynamictexture_has_alpha_channel(const void* self) {
     return QSGDynamicTexture_HasAlphaChannel((QSGDynamicTexture*)self);
 }
 
-void q_sgdynamictexture_on_has_alpha_channel(const void* self, bool (*callback)(const void*)) {
-    QSGDynamicTexture_OnHasAlphaChannel((const QSGDynamicTexture*)self, (intptr_t)callback);
+void q_sgdynamictexture_on_has_alpha_channel(void* self, bool (*callback)(const void*)) {
+    QSGDynamicTexture_OnHasAlphaChannel((QSGDynamicTexture*)self, (intptr_t)callback);
 }
 
 bool q_sgdynamictexture_has_mipmaps(const void* self) {
     return QSGDynamicTexture_HasMipmaps((QSGDynamicTexture*)self);
 }
 
-void q_sgdynamictexture_on_has_mipmaps(const void* self, bool (*callback)(const void*)) {
-    QSGDynamicTexture_OnHasMipmaps((const QSGDynamicTexture*)self, (intptr_t)callback);
+void q_sgdynamictexture_on_has_mipmaps(void* self, bool (*callback)(const void*)) {
+    QSGDynamicTexture_OnHasMipmaps((QSGDynamicTexture*)self, (intptr_t)callback);
 }
 
 QRectF* q_sgdynamictexture_normalized_texture_sub_rect(const void* self) {
@@ -851,8 +851,8 @@ QRectF* q_sgdynamictexture_super_normalized_texture_sub_rect(const void* self) {
     return QSGDynamicTexture_SuperNormalizedTextureSubRect((QSGDynamicTexture*)self);
 }
 
-void q_sgdynamictexture_on_normalized_texture_sub_rect(const void* self, QRectF* (*callback)(const void*)) {
-    QSGDynamicTexture_OnNormalizedTextureSubRect((const QSGDynamicTexture*)self, (intptr_t)callback);
+void q_sgdynamictexture_on_normalized_texture_sub_rect(void* self, QRectF* (*callback)(const void*)) {
+    QSGDynamicTexture_OnNormalizedTextureSubRect((QSGDynamicTexture*)self, (intptr_t)callback);
 }
 
 bool q_sgdynamictexture_is_atlas_texture(const void* self) {
@@ -863,8 +863,8 @@ bool q_sgdynamictexture_super_is_atlas_texture(const void* self) {
     return QSGDynamicTexture_SuperIsAtlasTexture((QSGDynamicTexture*)self);
 }
 
-void q_sgdynamictexture_on_is_atlas_texture(const void* self, bool (*callback)(const void*)) {
-    QSGDynamicTexture_OnIsAtlasTexture((const QSGDynamicTexture*)self, (intptr_t)callback);
+void q_sgdynamictexture_on_is_atlas_texture(void* self, bool (*callback)(const void*)) {
+    QSGDynamicTexture_OnIsAtlasTexture((QSGDynamicTexture*)self, (intptr_t)callback);
 }
 
 bool q_sgdynamictexture_event(void* self, void* event) {

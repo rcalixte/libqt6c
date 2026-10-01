@@ -11,7 +11,7 @@ QIcon* q_abstractfileiconprovider_icon(const void* self, int32_t param1) {
     return QAbstractFileIconProvider_Icon((QAbstractFileIconProvider*)self, param1);
 }
 
-void q_abstractfileiconprovider_on_icon(const void* self, QIcon* (*callback)(const void*, int32_t)) {
+void q_abstractfileiconprovider_on_icon(void* self, QIcon* (*callback)(const void*, int32_t)) {
     QAbstractFileIconProvider_OnIcon((QAbstractFileIconProvider*)self, (intptr_t)callback);
 }
 
@@ -23,7 +23,7 @@ QIcon* q_abstractfileiconprovider_icon2(const void* self, const void* param1) {
     return QAbstractFileIconProvider_Icon2((QAbstractFileIconProvider*)self, (QFileInfo*)param1);
 }
 
-void q_abstractfileiconprovider_on_icon2(const void* self, QIcon* (*callback)(const void*, const void*)) {
+void q_abstractfileiconprovider_on_icon2(void* self, QIcon* (*callback)(const void*, const void*)) {
     QAbstractFileIconProvider_OnIcon2((QAbstractFileIconProvider*)self, (intptr_t)callback);
 }
 
@@ -38,7 +38,7 @@ const char* q_abstractfileiconprovider_type(const void* self, const void* param1
     return _ret;
 }
 
-void q_abstractfileiconprovider_on_type(const void* self, const char* (*callback)(const void*, const void*)) {
+void q_abstractfileiconprovider_on_type(void* self, const char* (*callback)(const void*, const void*)) {
     QAbstractFileIconProvider_OnType((QAbstractFileIconProvider*)self, (intptr_t)callback);
 }
 
@@ -65,7 +65,7 @@ int32_t q_abstractfileiconprovider_options(const void* self) {
     return QAbstractFileIconProvider_Options((QAbstractFileIconProvider*)self);
 }
 
-void q_abstractfileiconprovider_on_options(const void* self, int32_t (*callback)(const void*)) {
+void q_abstractfileiconprovider_on_options(void* self, int32_t (*callback)(const void*)) {
     QAbstractFileIconProvider_OnOptions((QAbstractFileIconProvider*)self, (intptr_t)callback);
 }
 

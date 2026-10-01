@@ -40,10 +40,10 @@ const QMetaObject* k_notificationaction_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KNotificationAction*
+/// @param self KNotificationAction*
 /// @param callback const QMetaObject* func(const KNotificationAction* self)
 ///
-void k_notificationaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_notificationaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -870,10 +870,10 @@ QObject* k_notificationaction_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNotificationAction*
+/// @param self KNotificationAction*
 /// @param callback QObject* func(KNotificationAction* self)
 ///
-void k_notificationaction_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_notificationaction_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -901,10 +901,10 @@ int32_t k_notificationaction_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNotificationAction*
+/// @param self KNotificationAction*
 /// @param callback int32_t func(KNotificationAction* self)
 ///
-void k_notificationaction_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_notificationaction_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -934,10 +934,10 @@ int32_t k_notificationaction_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNotificationAction*
+/// @param self KNotificationAction*
 /// @param callback int32_t func(KNotificationAction* self, const char* signal)
 ///
-void k_notificationaction_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_notificationaction_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -967,10 +967,10 @@ bool k_notificationaction_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNotificationAction*
+/// @param self KNotificationAction*
 /// @param callback bool func(KNotificationAction* self, QMetaMethod* signal)
 ///
-void k_notificationaction_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_notificationaction_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1028,10 +1028,10 @@ const QMetaObject* k_notification_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KNotification*
+/// @param self KNotification*
 /// @param callback const QMetaObject* func(const KNotification* self)
 ///
-void k_notification_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_notification_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -2442,10 +2442,10 @@ QObject* k_notification_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNotification*
+/// @param self KNotification*
 /// @param callback QObject* func(KNotification* self)
 ///
-void k_notification_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_notification_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2473,10 +2473,10 @@ int32_t k_notification_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNotification*
+/// @param self KNotification*
 /// @param callback int32_t func(KNotification* self)
 ///
-void k_notification_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_notification_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2506,10 +2506,10 @@ int32_t k_notification_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNotification*
+/// @param self KNotification*
 /// @param callback int32_t func(KNotification* self, const char* signal)
 ///
-void k_notification_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_notification_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2539,10 +2539,10 @@ bool k_notification_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KNotification*
+/// @param self KNotification*
 /// @param callback bool func(KNotification* self, QMetaMethod* signal)
 ///
-void k_notification_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_notification_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

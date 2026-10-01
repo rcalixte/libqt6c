@@ -254,10 +254,10 @@ bool k_texteditor__codecompletionmodelcontrollerinterface_should_hide_items_with
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KTextEditor__CodeCompletionModelControllerInterface*
+/// @param self KTextEditor__CodeCompletionModelControllerInterface*
 /// @param callback bool func(const KTextEditor__CodeCompletionModelControllerInterface* self)
 ///
-void k_texteditor__codecompletionmodelcontrollerinterface_on_should_hide_items_with_equal_names(const void* self, bool (*callback)(const void*));
+void k_texteditor__codecompletionmodelcontrollerinterface_on_should_hide_items_with_equal_names(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodelcontrollerinterface.html#shouldHideItemsWithEqualNames)
 ///

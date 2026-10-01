@@ -18,7 +18,7 @@ const QMetaObject* q_webengineurlrequestinterceptor_meta_object(const void* self
     return QWebEngineUrlRequestInterceptor_MetaObject((QWebEngineUrlRequestInterceptor*)self);
 }
 
-void q_webengineurlrequestinterceptor_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_webengineurlrequestinterceptor_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QWebEngineUrlRequestInterceptor_OnMetaObject((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 

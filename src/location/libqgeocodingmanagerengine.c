@@ -72,7 +72,7 @@ const QMetaObject* q_geocodingmanagerengine_meta_object(const void* self) {
     return QGeoCodingManagerEngine_MetaObject((QGeoCodingManagerEngine*)self);
 }
 
-void q_geocodingmanagerengine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_geocodingmanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGeoCodingManagerEngine_OnMetaObject((QGeoCodingManagerEngine*)self, (intptr_t)callback);
 }
 

@@ -119,7 +119,7 @@ const QMetaObject* q_itemselectionmodel_meta_object(const void* self) {
     return QItemSelectionModel_MetaObject((QItemSelectionModel*)self);
 }
 
-void q_itemselectionmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_itemselectionmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QItemSelectionModel_OnMetaObject((QItemSelectionModel*)self, (intptr_t)callback);
 }
 

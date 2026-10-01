@@ -20,7 +20,7 @@ const QMetaObject* k_textcustomeditor__texteditorcompleter_meta_object(const voi
     return TextCustomEditor__TextEditorCompleter_MetaObject((TextCustomEditor__TextEditorCompleter*)self);
 }
 
-void k_textcustomeditor__texteditorcompleter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textcustomeditor__texteditorcompleter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextCustomEditor__TextEditorCompleter_OnMetaObject((TextCustomEditor__TextEditorCompleter*)self, (intptr_t)callback);
 }
 

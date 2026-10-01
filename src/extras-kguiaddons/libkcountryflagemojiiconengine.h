@@ -26,10 +26,10 @@ QIconEngine* k_countryflagemojiiconengine_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCountryFlagEmojiIconEngine*
+/// @param self KCountryFlagEmojiIconEngine*
 /// @param callback QIconEngine* func(const KCountryFlagEmojiIconEngine* self)
 ///
-void k_countryflagemojiiconengine_on_clone(const void* self, QIconEngine* (*callback)(const void*));
+void k_countryflagemojiiconengine_on_clone(void* self, QIconEngine* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#clone)
 ///
@@ -51,10 +51,10 @@ const char* k_countryflagemojiiconengine_key(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KCountryFlagEmojiIconEngine*
+/// @param self KCountryFlagEmojiIconEngine*
 /// @param callback const char* func(const KCountryFlagEmojiIconEngine* self)
 ///
-void k_countryflagemojiiconengine_on_key(const void* self, const char* (*callback)(const void*));
+void k_countryflagemojiiconengine_on_key(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kcountryflagemojiiconengine.html#key)
 ///
@@ -364,10 +364,10 @@ bool k_countryflagemojiiconengine_super_write(const void* self, void* out);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KCountryFlagEmojiIconEngine*
+/// @param self KCountryFlagEmojiIconEngine*
 /// @param callback bool func(KCountryFlagEmojiIconEngine* self, QDataStream* out)
 ///
-void k_countryflagemojiiconengine_on_write(const void* self, bool (*callback)(const void*, void*));
+void k_countryflagemojiiconengine_on_write(void* self, bool (*callback)(const void*, void*));
 
 /// Inherited from QIconEngine
 ///

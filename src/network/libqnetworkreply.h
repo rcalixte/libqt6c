@@ -380,9 +380,9 @@ const char* q_networkreply_tr3(const char* s, const char* c, int n);
 ///
 /// Upcasts to a QIODeviceBase object
 ///
-/// @param self QNetworkReply*
+/// @param self const QNetworkReply*
 ///
-QIODeviceBase* q_networkreply_as_q_i_o_device_base(void* self);
+QIODeviceBase* q_networkreply_as_q_i_o_device_base(const void* self);
 
 /// Inherited from QIODevice
 ///

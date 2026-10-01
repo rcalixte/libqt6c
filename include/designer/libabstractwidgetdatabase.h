@@ -28,10 +28,10 @@ const char* q_designerwidgetdatabaseiteminterface_name(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback const char* func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
-void q_designerwidgetdatabaseiteminterface_on_name(const void* self, const char* (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_name(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setName)
 ///
@@ -65,10 +65,10 @@ const char* q_designerwidgetdatabaseiteminterface_group(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback const char* func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
-void q_designerwidgetdatabaseiteminterface_on_group(const void* self, const char* (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_group(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setGroup)
 ///
@@ -102,10 +102,10 @@ const char* q_designerwidgetdatabaseiteminterface_tool_tip(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback const char* func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
-void q_designerwidgetdatabaseiteminterface_on_tool_tip(const void* self, const char* (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_tool_tip(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setToolTip)
 ///
@@ -139,10 +139,10 @@ const char* q_designerwidgetdatabaseiteminterface_whats_this(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback const char* func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
-void q_designerwidgetdatabaseiteminterface_on_whats_this(const void* self, const char* (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_whats_this(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setWhatsThis)
 ///
@@ -176,10 +176,10 @@ const char* q_designerwidgetdatabaseiteminterface_include_file(const void* self)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback const char* func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
-void q_designerwidgetdatabaseiteminterface_on_include_file(const void* self, const char* (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_include_file(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setIncludeFile)
 ///
@@ -211,12 +211,12 @@ QIcon* q_designerwidgetdatabaseiteminterface_icon(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback QIcon* func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerwidgetdatabaseiteminterface_on_icon(const void* self, QIcon* (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_icon(void* self, QIcon* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setIcon)
 ///
@@ -248,10 +248,10 @@ bool q_designerwidgetdatabaseiteminterface_is_compat(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback bool func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
-void q_designerwidgetdatabaseiteminterface_on_is_compat(const void* self, bool (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_is_compat(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setCompat)
 ///
@@ -283,10 +283,10 @@ bool q_designerwidgetdatabaseiteminterface_is_container(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback bool func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
-void q_designerwidgetdatabaseiteminterface_on_is_container(const void* self, bool (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_is_container(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setContainer)
 ///
@@ -318,10 +318,10 @@ bool q_designerwidgetdatabaseiteminterface_is_custom(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback bool func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
-void q_designerwidgetdatabaseiteminterface_on_is_custom(const void* self, bool (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_is_custom(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setCustom)
 ///
@@ -355,10 +355,10 @@ const char* q_designerwidgetdatabaseiteminterface_plugin_path(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback const char* func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
-void q_designerwidgetdatabaseiteminterface_on_plugin_path(const void* self, const char* (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_plugin_path(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setPluginPath)
 ///
@@ -390,10 +390,10 @@ bool q_designerwidgetdatabaseiteminterface_is_promoted(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback bool func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
-void q_designerwidgetdatabaseiteminterface_on_is_promoted(const void* self, bool (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_is_promoted(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setPromoted)
 ///
@@ -427,10 +427,10 @@ const char* q_designerwidgetdatabaseiteminterface_extends(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback const char* func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
-void q_designerwidgetdatabaseiteminterface_on_extends(const void* self, const char* (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_extends(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#setExtends)
 ///
@@ -482,10 +482,10 @@ libqt_list q_designerwidgetdatabaseiteminterface_default_property_values(const v
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseItemInterface*
+/// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback libqt_list of QVariant* func(const QDesignerWidgetDataBaseItemInterface* self)
 ///
-void q_designerwidgetdatabaseiteminterface_on_default_property_values(const void* self, libqt_list (*callback)(const void*));
+void q_designerwidgetdatabaseiteminterface_on_default_property_values(void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseiteminterface.html#dtor.QDesignerWidgetDataBaseItemInterface)
 ///
@@ -519,10 +519,10 @@ const QMetaObject* q_designerwidgetdatabaseinterface_meta_object(const void* sel
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseInterface*
+/// @param self QDesignerWidgetDataBaseInterface*
 /// @param callback const QMetaObject* func(const QDesignerWidgetDataBaseInterface* self)
 ///
-void q_designerwidgetdatabaseinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_designerwidgetdatabaseinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -592,10 +592,10 @@ int32_t q_designerwidgetdatabaseinterface_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseInterface*
+/// @param self QDesignerWidgetDataBaseInterface*
 /// @param callback int32_t func(const QDesignerWidgetDataBaseInterface* self)
 ///
-void q_designerwidgetdatabaseinterface_on_count(const void* self, int32_t (*callback)(const void*));
+void q_designerwidgetdatabaseinterface_on_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseinterface.html#count)
 ///
@@ -616,10 +616,10 @@ QDesignerWidgetDataBaseItemInterface* q_designerwidgetdatabaseinterface_item(con
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseInterface*
+/// @param self QDesignerWidgetDataBaseInterface*
 /// @param callback QDesignerWidgetDataBaseItemInterface* func(const QDesignerWidgetDataBaseInterface* self, int index)
 ///
-void q_designerwidgetdatabaseinterface_on_item(const void* self, QDesignerWidgetDataBaseItemInterface* (*callback)(const void*, int));
+void q_designerwidgetdatabaseinterface_on_item(void* self, QDesignerWidgetDataBaseItemInterface* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseinterface.html#item)
 ///
@@ -641,10 +641,10 @@ int32_t q_designerwidgetdatabaseinterface_index_of(const void* self, void* item)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseInterface*
+/// @param self QDesignerWidgetDataBaseInterface*
 /// @param callback int32_t func(const QDesignerWidgetDataBaseInterface* self, QDesignerWidgetDataBaseItemInterface* item)
 ///
-void q_designerwidgetdatabaseinterface_on_index_of(const void* self, int32_t (*callback)(const void*, void*));
+void q_designerwidgetdatabaseinterface_on_index_of(void* self, int32_t (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseinterface.html#indexOf)
 ///
@@ -719,10 +719,10 @@ int32_t q_designerwidgetdatabaseinterface_index_of_object(const void* self, void
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseInterface*
+/// @param self QDesignerWidgetDataBaseInterface*
 /// @param callback int32_t func(const QDesignerWidgetDataBaseInterface* self, QObject* object, bool resolveName)
 ///
-void q_designerwidgetdatabaseinterface_on_index_of_object(const void* self, int32_t (*callback)(const void*, void*, bool));
+void q_designerwidgetdatabaseinterface_on_index_of_object(void* self, int32_t (*callback)(const void*, void*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseinterface.html#indexOfObject)
 ///
@@ -746,10 +746,10 @@ int32_t q_designerwidgetdatabaseinterface_index_of_class_name(const void* self, 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseInterface*
+/// @param self QDesignerWidgetDataBaseInterface*
 /// @param callback int32_t func(const QDesignerWidgetDataBaseInterface* self, const char* className, bool resolveName)
 ///
-void q_designerwidgetdatabaseinterface_on_index_of_class_name(const void* self, int32_t (*callback)(const void*, const char*, bool));
+void q_designerwidgetdatabaseinterface_on_index_of_class_name(void* self, int32_t (*callback)(const void*, const char*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseinterface.html#indexOfClassName)
 ///
@@ -771,10 +771,10 @@ QDesignerFormEditorInterface* q_designerwidgetdatabaseinterface_core(const void*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerWidgetDataBaseInterface*
+/// @param self QDesignerWidgetDataBaseInterface*
 /// @param callback QDesignerFormEditorInterface* func(const QDesignerWidgetDataBaseInterface* self)
 ///
-void q_designerwidgetdatabaseinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*));
+void q_designerwidgetdatabaseinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerwidgetdatabaseinterface.html#core)
 ///
@@ -1552,10 +1552,10 @@ QObject* q_designerwidgetdatabaseinterface_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetDataBaseInterface*
+/// @param self QDesignerWidgetDataBaseInterface*
 /// @param callback QObject* func(QDesignerWidgetDataBaseInterface* self)
 ///
-void q_designerwidgetdatabaseinterface_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_designerwidgetdatabaseinterface_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1583,10 +1583,10 @@ int32_t q_designerwidgetdatabaseinterface_super_sender_signal_index(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetDataBaseInterface*
+/// @param self QDesignerWidgetDataBaseInterface*
 /// @param callback int32_t func(QDesignerWidgetDataBaseInterface* self)
 ///
-void q_designerwidgetdatabaseinterface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_designerwidgetdatabaseinterface_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1616,10 +1616,10 @@ int32_t q_designerwidgetdatabaseinterface_super_receivers(const void* self, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetDataBaseInterface*
+/// @param self QDesignerWidgetDataBaseInterface*
 /// @param callback int32_t func(QDesignerWidgetDataBaseInterface* self, const char* signal)
 ///
-void q_designerwidgetdatabaseinterface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_designerwidgetdatabaseinterface_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1649,10 +1649,10 @@ bool q_designerwidgetdatabaseinterface_super_is_signal_connected(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerWidgetDataBaseInterface*
+/// @param self QDesignerWidgetDataBaseInterface*
 /// @param callback bool func(QDesignerWidgetDataBaseInterface* self, QMetaMethod* signal)
 ///
-void q_designerwidgetdatabaseinterface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_designerwidgetdatabaseinterface_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

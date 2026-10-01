@@ -18,7 +18,7 @@ const QMetaObject* k_colorschememanager_meta_object(const void* self) {
     return KColorSchemeManager_MetaObject((KColorSchemeManager*)self);
 }
 
-void k_colorschememanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_colorschememanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KColorSchemeManager_OnMetaObject((KColorSchemeManager*)self, (intptr_t)callback);
 }
 

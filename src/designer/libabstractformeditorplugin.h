@@ -26,10 +26,10 @@ bool q_designerformeditorplugininterface_is_initialized(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormEditorPluginInterface*
+/// @param self QDesignerFormEditorPluginInterface*
 /// @param callback bool func(const QDesignerFormEditorPluginInterface* self)
 ///
-void q_designerformeditorplugininterface_on_is_initialized(const void* self, bool (*callback)(const void*));
+void q_designerformeditorplugininterface_on_is_initialized(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#initialize)
 ///
@@ -61,10 +61,10 @@ QAction* q_designerformeditorplugininterface_action(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormEditorPluginInterface*
+/// @param self QDesignerFormEditorPluginInterface*
 /// @param callback QAction* func(const QDesignerFormEditorPluginInterface* self)
 ///
-void q_designerformeditorplugininterface_on_action(const void* self, QAction* (*callback)(const void*));
+void q_designerformeditorplugininterface_on_action(void* self, QAction* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#core)
 ///
@@ -78,10 +78,10 @@ QDesignerFormEditorInterface* q_designerformeditorplugininterface_core(const voi
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerFormEditorPluginInterface*
+/// @param self QDesignerFormEditorPluginInterface*
 /// @param callback QDesignerFormEditorInterface* func(const QDesignerFormEditorPluginInterface* self)
 ///
-void q_designerformeditorplugininterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*));
+void q_designerformeditorplugininterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorplugininterface.html#dtor.QDesignerFormEditorPluginInterface)
 ///

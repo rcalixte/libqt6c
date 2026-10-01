@@ -30,7 +30,7 @@ const QMetaObject* q_designerwidgetboxinterface_meta_object(const void* self) {
     return QDesignerWidgetBoxInterface_MetaObject((QDesignerWidgetBoxInterface*)self);
 }
 
-void q_designerwidgetboxinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_designerwidgetboxinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerWidgetBoxInterface_OnMetaObject((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
@@ -73,7 +73,7 @@ int32_t q_designerwidgetboxinterface_category_count(const void* self) {
     return QDesignerWidgetBoxInterface_CategoryCount((QDesignerWidgetBoxInterface*)self);
 }
 
-void q_designerwidgetboxinterface_on_category_count(const void* self, int32_t (*callback)(const void*)) {
+void q_designerwidgetboxinterface_on_category_count(void* self, int32_t (*callback)(const void*)) {
     QDesignerWidgetBoxInterface_OnCategoryCount((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
@@ -81,7 +81,7 @@ QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface_category(con
     return QDesignerWidgetBoxInterface_Category((QDesignerWidgetBoxInterface*)self, cat_idx);
 }
 
-void q_designerwidgetboxinterface_on_category(const void* self, QDesignerWidgetBoxInterface__Category* (*callback)(const void*, int)) {
+void q_designerwidgetboxinterface_on_category(void* self, QDesignerWidgetBoxInterface__Category* (*callback)(const void*, int)) {
     QDesignerWidgetBoxInterface_OnCategory((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
@@ -105,7 +105,7 @@ int32_t q_designerwidgetboxinterface_widget_count(const void* self, int cat_idx)
     return QDesignerWidgetBoxInterface_WidgetCount((QDesignerWidgetBoxInterface*)self, cat_idx);
 }
 
-void q_designerwidgetboxinterface_on_widget_count(const void* self, int32_t (*callback)(const void*, int)) {
+void q_designerwidgetboxinterface_on_widget_count(void* self, int32_t (*callback)(const void*, int)) {
     QDesignerWidgetBoxInterface_OnWidgetCount((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
@@ -113,7 +113,7 @@ QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface_widget(const v
     return QDesignerWidgetBoxInterface_Widget((QDesignerWidgetBoxInterface*)self, cat_idx, wgt_idx);
 }
 
-void q_designerwidgetboxinterface_on_widget(const void* self, QDesignerWidgetBoxInterface__Widget* (*callback)(const void*, int, int)) {
+void q_designerwidgetboxinterface_on_widget(void* self, QDesignerWidgetBoxInterface__Widget* (*callback)(const void*, int, int)) {
     QDesignerWidgetBoxInterface_OnWidget((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
@@ -160,7 +160,7 @@ const char* q_designerwidgetboxinterface_file_name(const void* self) {
     return _ret;
 }
 
-void q_designerwidgetboxinterface_on_file_name(const void* self, const char* (*callback)(const void*)) {
+void q_designerwidgetboxinterface_on_file_name(void* self, const char* (*callback)(const void*)) {
     QDesignerWidgetBoxInterface_OnFileName((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
@@ -194,11 +194,11 @@ const char* q_designerwidgetboxinterface_tr3(const char* s, const char* c, int n
     return _ret;
 }
 
-QPaintDevice* q_designerwidgetboxinterface_as_q_paint_device(void* self) {
+QPaintDevice* q_designerwidgetboxinterface_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QDesignerWidgetBoxInterface* q_designerwidgetboxinterface_from_q_paint_device(void* _qpaintdevice) {
+QDesignerWidgetBoxInterface* q_designerwidgetboxinterface_from_q_paint_device(const void* _qpaintdevice) {
     return (QDesignerWidgetBoxInterface*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1589,8 +1589,8 @@ int32_t q_designerwidgetboxinterface_super_dev_type(const void* self) {
     return QDesignerWidgetBoxInterface_SuperDevType((QDesignerWidgetBoxInterface*)self);
 }
 
-void q_designerwidgetboxinterface_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QDesignerWidgetBoxInterface_OnDevType((const QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+void q_designerwidgetboxinterface_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QDesignerWidgetBoxInterface_OnDevType((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
 void q_designerwidgetboxinterface_set_visible(void* self, bool visible) {
@@ -1613,8 +1613,8 @@ QSize* q_designerwidgetboxinterface_super_size_hint(const void* self) {
     return QDesignerWidgetBoxInterface_SuperSizeHint((QDesignerWidgetBoxInterface*)self);
 }
 
-void q_designerwidgetboxinterface_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDesignerWidgetBoxInterface_OnSizeHint((const QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+void q_designerwidgetboxinterface_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDesignerWidgetBoxInterface_OnSizeHint((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
 QSize* q_designerwidgetboxinterface_minimum_size_hint(const void* self) {
@@ -1625,8 +1625,8 @@ QSize* q_designerwidgetboxinterface_super_minimum_size_hint(const void* self) {
     return QDesignerWidgetBoxInterface_SuperMinimumSizeHint((QDesignerWidgetBoxInterface*)self);
 }
 
-void q_designerwidgetboxinterface_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QDesignerWidgetBoxInterface_OnMinimumSizeHint((const QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+void q_designerwidgetboxinterface_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QDesignerWidgetBoxInterface_OnMinimumSizeHint((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
 int32_t q_designerwidgetboxinterface_height_for_width(const void* self, int param1) {
@@ -1637,8 +1637,8 @@ int32_t q_designerwidgetboxinterface_super_height_for_width(const void* self, in
     return QDesignerWidgetBoxInterface_SuperHeightForWidth((QDesignerWidgetBoxInterface*)self, param1);
 }
 
-void q_designerwidgetboxinterface_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QDesignerWidgetBoxInterface_OnHeightForWidth((const QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+void q_designerwidgetboxinterface_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QDesignerWidgetBoxInterface_OnHeightForWidth((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
 bool q_designerwidgetboxinterface_has_height_for_width(const void* self) {
@@ -1649,8 +1649,8 @@ bool q_designerwidgetboxinterface_super_has_height_for_width(const void* self) {
     return QDesignerWidgetBoxInterface_SuperHasHeightForWidth((QDesignerWidgetBoxInterface*)self);
 }
 
-void q_designerwidgetboxinterface_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QDesignerWidgetBoxInterface_OnHasHeightForWidth((const QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+void q_designerwidgetboxinterface_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QDesignerWidgetBoxInterface_OnHasHeightForWidth((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_designerwidgetboxinterface_paint_engine(const void* self) {
@@ -1661,8 +1661,8 @@ QPaintEngine* q_designerwidgetboxinterface_super_paint_engine(const void* self) 
     return QDesignerWidgetBoxInterface_SuperPaintEngine((QDesignerWidgetBoxInterface*)self);
 }
 
-void q_designerwidgetboxinterface_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QDesignerWidgetBoxInterface_OnPaintEngine((const QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+void q_designerwidgetboxinterface_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QDesignerWidgetBoxInterface_OnPaintEngine((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
 bool q_designerwidgetboxinterface_event(void* self, void* event) {
@@ -1997,8 +1997,8 @@ int32_t q_designerwidgetboxinterface_super_metric(const void* self, int32_t para
     return QDesignerWidgetBoxInterface_SuperMetric((QDesignerWidgetBoxInterface*)self, param1);
 }
 
-void q_designerwidgetboxinterface_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QDesignerWidgetBoxInterface_OnMetric((const QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+void q_designerwidgetboxinterface_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QDesignerWidgetBoxInterface_OnMetric((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
 void q_designerwidgetboxinterface_init_painter(const void* self, void* painter) {
@@ -2009,8 +2009,8 @@ void q_designerwidgetboxinterface_super_init_painter(const void* self, void* pai
     QDesignerWidgetBoxInterface_SuperInitPainter((QDesignerWidgetBoxInterface*)self, (QPainter*)painter);
 }
 
-void q_designerwidgetboxinterface_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QDesignerWidgetBoxInterface_OnInitPainter((const QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+void q_designerwidgetboxinterface_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QDesignerWidgetBoxInterface_OnInitPainter((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_designerwidgetboxinterface_redirected(const void* self, void* offset) {
@@ -2021,8 +2021,8 @@ QPaintDevice* q_designerwidgetboxinterface_super_redirected(const void* self, vo
     return QDesignerWidgetBoxInterface_SuperRedirected((QDesignerWidgetBoxInterface*)self, (QPoint*)offset);
 }
 
-void q_designerwidgetboxinterface_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QDesignerWidgetBoxInterface_OnRedirected((const QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+void q_designerwidgetboxinterface_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QDesignerWidgetBoxInterface_OnRedirected((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
 QPainter* q_designerwidgetboxinterface_shared_painter(const void* self) {
@@ -2033,8 +2033,8 @@ QPainter* q_designerwidgetboxinterface_super_shared_painter(const void* self) {
     return QDesignerWidgetBoxInterface_SuperSharedPainter((QDesignerWidgetBoxInterface*)self);
 }
 
-void q_designerwidgetboxinterface_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QDesignerWidgetBoxInterface_OnSharedPainter((const QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+void q_designerwidgetboxinterface_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QDesignerWidgetBoxInterface_OnSharedPainter((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
 void q_designerwidgetboxinterface_input_method_event(void* self, void* param1) {
@@ -2057,8 +2057,8 @@ QVariant* q_designerwidgetboxinterface_super_input_method_query(const void* self
     return QDesignerWidgetBoxInterface_SuperInputMethodQuery((QDesignerWidgetBoxInterface*)self, param1);
 }
 
-void q_designerwidgetboxinterface_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QDesignerWidgetBoxInterface_OnInputMethodQuery((const QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
+void q_designerwidgetboxinterface_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QDesignerWidgetBoxInterface_OnInputMethodQuery((QDesignerWidgetBoxInterface*)self, (intptr_t)callback);
 }
 
 bool q_designerwidgetboxinterface_focus_next_prev_child(void* self, bool next) {

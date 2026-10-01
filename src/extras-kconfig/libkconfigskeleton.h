@@ -41,10 +41,10 @@ const QMetaObject* k_configskeleton_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfigSkeleton*
+/// @param self KConfigSkeleton*
 /// @param callback const QMetaObject* func(const KConfigSkeleton* self)
 ///
-void k_configskeleton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_configskeleton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1856,10 +1856,10 @@ QObject* k_configskeleton_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigSkeleton*
+/// @param self KConfigSkeleton*
 /// @param callback QObject* func(KConfigSkeleton* self)
 ///
-void k_configskeleton_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_configskeleton_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1887,10 +1887,10 @@ int32_t k_configskeleton_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigSkeleton*
+/// @param self KConfigSkeleton*
 /// @param callback int32_t func(KConfigSkeleton* self)
 ///
-void k_configskeleton_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_configskeleton_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1920,10 +1920,10 @@ int32_t k_configskeleton_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigSkeleton*
+/// @param self KConfigSkeleton*
 /// @param callback int32_t func(KConfigSkeleton* self, const char* signal)
 ///
-void k_configskeleton_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_configskeleton_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1953,10 +1953,10 @@ bool k_configskeleton_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KConfigSkeleton*
+/// @param self KConfigSkeleton*
 /// @param callback bool func(KConfigSkeleton* self, QMetaMethod* signal)
 ///
-void k_configskeleton_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_configskeleton_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2059,10 +2059,10 @@ bool k_configskeleton__itemcolor_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfigSkeleton__ItemColor*
+/// @param self KConfigSkeleton__ItemColor*
 /// @param callback bool func(const KConfigSkeleton__ItemColor* self, QVariant* p)
 ///
-void k_configskeleton__itemcolor_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_configskeleton__itemcolor_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#isEqual)
 ///
@@ -2083,12 +2083,12 @@ QVariant* k_configskeleton__itemcolor_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfigSkeleton__ItemColor*
+/// @param self KConfigSkeleton__ItemColor*
 /// @param callback QVariant* func(const KConfigSkeleton__ItemColor* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_configskeleton__itemcolor_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_configskeleton__itemcolor_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemcolor.html#property)
 ///
@@ -2186,10 +2186,10 @@ bool k_configskeleton__itemfont_is_equal(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfigSkeleton__ItemFont*
+/// @param self KConfigSkeleton__ItemFont*
 /// @param callback bool func(const KConfigSkeleton__ItemFont* self, QVariant* p)
 ///
-void k_configskeleton__itemfont_on_is_equal(const void* self, bool (*callback)(const void*, const void*));
+void k_configskeleton__itemfont_on_is_equal(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#isEqual)
 ///
@@ -2210,12 +2210,12 @@ QVariant* k_configskeleton__itemfont_property(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KConfigSkeleton__ItemFont*
+/// @param self KConfigSkeleton__ItemFont*
 /// @param callback QVariant* func(const KConfigSkeleton__ItemFont* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_configskeleton__itemfont_on_property(const void* self, QVariant* (*callback)(const void*));
+void k_configskeleton__itemfont_on_property(void* self, QVariant* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kconfigskeleton-itemfont.html#property)
 ///

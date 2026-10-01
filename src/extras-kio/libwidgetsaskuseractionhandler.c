@@ -23,7 +23,7 @@ const QMetaObject* k_io__widgetsaskuseractionhandler_meta_object(const void* sel
     return KIO__WidgetsAskUserActionHandler_MetaObject((KIO__WidgetsAskUserActionHandler*)self);
 }
 
-void k_io__widgetsaskuseractionhandler_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__widgetsaskuseractionhandler_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__WidgetsAskUserActionHandler_OnMetaObject((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
 }
 

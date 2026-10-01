@@ -26,10 +26,10 @@ uint32_t q_nativeinterface__qsgopengltexture_native_texture(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QNativeInterface__QSGOpenGLTexture*
+/// @param self QNativeInterface__QSGOpenGLTexture*
 /// @param callback uint32_t func(const QNativeInterface__QSGOpenGLTexture* self)
 ///
-void q_nativeinterface__qsgopengltexture_on_native_texture(const void* self, uint32_t (*callback)(const void*));
+void q_nativeinterface__qsgopengltexture_on_native_texture(void* self, uint32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeinterface-qsgopengltexture.html#fromNative)
 ///

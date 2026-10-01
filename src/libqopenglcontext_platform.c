@@ -21,7 +21,7 @@ void* q_nativeinterface__qeglcontext_native_context(const void* self) {
 #endif
 
 #if defined(__linux__) && defined(__FreeBSD__)
-void q_nativeinterface__qeglcontext_on_native_context(const void* self, void* (*callback)(const void*)) {
+void q_nativeinterface__qeglcontext_on_native_context(void* self, void* (*callback)(const void*)) {
     QNativeInterface__QEGLContext_OnNativeContext((QNativeInterface__QEGLContext*)self, (intptr_t)callback);
 }
 #endif
@@ -33,7 +33,7 @@ void* q_nativeinterface__qeglcontext_config(const void* self) {
 #endif
 
 #if defined(__linux__) && defined(__FreeBSD__)
-void q_nativeinterface__qeglcontext_on_config(const void* self, void* (*callback)(const void*)) {
+void q_nativeinterface__qeglcontext_on_config(void* self, void* (*callback)(const void*)) {
     QNativeInterface__QEGLContext_OnConfig((QNativeInterface__QEGLContext*)self, (intptr_t)callback);
 }
 #endif
@@ -45,7 +45,7 @@ void* q_nativeinterface__qeglcontext_display(const void* self) {
 #endif
 
 #if defined(__linux__) && defined(__FreeBSD__)
-void q_nativeinterface__qeglcontext_on_display(const void* self, void* (*callback)(const void*)) {
+void q_nativeinterface__qeglcontext_on_display(void* self, void* (*callback)(const void*)) {
     QNativeInterface__QEGLContext_OnDisplay((QNativeInterface__QEGLContext*)self, (intptr_t)callback);
 }
 #endif

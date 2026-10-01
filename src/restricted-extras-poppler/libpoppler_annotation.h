@@ -200,10 +200,10 @@ int32_t q_poppler__textannotation_sub_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__TextAnnotation*
+/// @param self Poppler__TextAnnotation*
 /// @param callback int32_t func(const Poppler__TextAnnotation* self)
 ///
-void q_poppler__textannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__textannotation_on_sub_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1TextAnnotation.html)
 ///
@@ -552,10 +552,10 @@ int32_t q_poppler__lineannotation_sub_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__LineAnnotation*
+/// @param self Poppler__LineAnnotation*
 /// @param callback int32_t func(const Poppler__LineAnnotation* self)
 ///
-void q_poppler__lineannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__lineannotation_on_sub_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1LineAnnotation.html)
 ///
@@ -934,10 +934,10 @@ int32_t q_poppler__geomannotation_sub_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__GeomAnnotation*
+/// @param self Poppler__GeomAnnotation*
 /// @param callback int32_t func(const Poppler__GeomAnnotation* self)
 ///
-void q_poppler__geomannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__geomannotation_on_sub_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1GeomAnnotation.html)
 ///
@@ -1211,10 +1211,10 @@ int32_t q_poppler__highlightannotation_sub_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__HighlightAnnotation*
+/// @param self Poppler__HighlightAnnotation*
 /// @param callback int32_t func(const Poppler__HighlightAnnotation* self)
 ///
-void q_poppler__highlightannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__highlightannotation_on_sub_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1HighlightAnnotation.html)
 ///
@@ -1490,10 +1490,10 @@ int32_t q_poppler__stampannotation_sub_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__StampAnnotation*
+/// @param self Poppler__StampAnnotation*
 /// @param callback int32_t func(const Poppler__StampAnnotation* self)
 ///
-void q_poppler__stampannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__stampannotation_on_sub_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1StampAnnotation.html)
 ///
@@ -1761,10 +1761,10 @@ int32_t q_poppler__signatureannotation_sub_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__SignatureAnnotation*
+/// @param self Poppler__SignatureAnnotation*
 /// @param callback int32_t func(const Poppler__SignatureAnnotation* self)
 ///
-void q_poppler__signatureannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__signatureannotation_on_sub_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureAnnotation.html)
 ///
@@ -2142,10 +2142,10 @@ int32_t q_poppler__inkannotation_sub_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__InkAnnotation*
+/// @param self Poppler__InkAnnotation*
 /// @param callback int32_t func(const Poppler__InkAnnotation* self)
 ///
-void q_poppler__inkannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__inkannotation_on_sub_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
@@ -2668,10 +2668,10 @@ int32_t q_poppler__caretannotation_sub_type(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Poppler__CaretAnnotation*
+/// @param self Poppler__CaretAnnotation*
 /// @param callback int32_t func(const Poppler__CaretAnnotation* self)
 ///
-void q_poppler__caretannotation_on_sub_type(const void* self, int32_t (*callback)(const void*));
+void q_poppler__caretannotation_on_sub_type(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CaretAnnotation.html)
 ///

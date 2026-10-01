@@ -37,7 +37,7 @@ const QMetaObject* k_messagewidget_meta_object(const void* self) {
     return KMessageWidget_MetaObject((KMessageWidget*)self);
 }
 
-void k_messagewidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_messagewidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KMessageWidget_OnMetaObject((KMessageWidget*)self, (intptr_t)callback);
 }
 
@@ -123,7 +123,7 @@ QSize* k_messagewidget_size_hint(const void* self) {
     return KMessageWidget_SizeHint((KMessageWidget*)self);
 }
 
-void k_messagewidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_messagewidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KMessageWidget_OnSizeHint((KMessageWidget*)self, (intptr_t)callback);
 }
 
@@ -135,7 +135,7 @@ QSize* k_messagewidget_minimum_size_hint(const void* self) {
     return KMessageWidget_MinimumSizeHint((KMessageWidget*)self);
 }
 
-void k_messagewidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_messagewidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     KMessageWidget_OnMinimumSizeHint((KMessageWidget*)self, (intptr_t)callback);
 }
 
@@ -147,7 +147,7 @@ int32_t k_messagewidget_height_for_width(const void* self, int width) {
     return KMessageWidget_HeightForWidth((KMessageWidget*)self, width);
 }
 
-void k_messagewidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+void k_messagewidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
     KMessageWidget_OnHeightForWidth((KMessageWidget*)self, (intptr_t)callback);
 }
 
@@ -333,11 +333,11 @@ void k_messagewidget_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_messagewidget_as_q_paint_device(void* self) {
+QPaintDevice* k_messagewidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KMessageWidget* k_messagewidget_from_q_paint_device(void* _qpaintdevice) {
+KMessageWidget* k_messagewidget_from_q_paint_device(const void* _qpaintdevice) {
     return (KMessageWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1732,8 +1732,8 @@ void k_messagewidget_super_init_style_option(const void* self, void* option) {
     KMessageWidget_SuperInitStyleOption((KMessageWidget*)self, (QStyleOptionFrame*)option);
 }
 
-void k_messagewidget_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KMessageWidget_OnInitStyleOption((const KMessageWidget*)self, (intptr_t)callback);
+void k_messagewidget_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KMessageWidget_OnInitStyleOption((KMessageWidget*)self, (intptr_t)callback);
 }
 
 int32_t k_messagewidget_dev_type(const void* self) {
@@ -1744,8 +1744,8 @@ int32_t k_messagewidget_super_dev_type(const void* self) {
     return KMessageWidget_SuperDevType((KMessageWidget*)self);
 }
 
-void k_messagewidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KMessageWidget_OnDevType((const KMessageWidget*)self, (intptr_t)callback);
+void k_messagewidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KMessageWidget_OnDevType((KMessageWidget*)self, (intptr_t)callback);
 }
 
 void k_messagewidget_set_visible(void* self, bool visible) {
@@ -1768,8 +1768,8 @@ bool k_messagewidget_super_has_height_for_width(const void* self) {
     return KMessageWidget_SuperHasHeightForWidth((KMessageWidget*)self);
 }
 
-void k_messagewidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KMessageWidget_OnHasHeightForWidth((const KMessageWidget*)self, (intptr_t)callback);
+void k_messagewidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KMessageWidget_OnHasHeightForWidth((KMessageWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_messagewidget_paint_engine(const void* self) {
@@ -1780,8 +1780,8 @@ QPaintEngine* k_messagewidget_super_paint_engine(const void* self) {
     return KMessageWidget_SuperPaintEngine((KMessageWidget*)self);
 }
 
-void k_messagewidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KMessageWidget_OnPaintEngine((const KMessageWidget*)self, (intptr_t)callback);
+void k_messagewidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KMessageWidget_OnPaintEngine((KMessageWidget*)self, (intptr_t)callback);
 }
 
 void k_messagewidget_mouse_press_event(void* self, void* event) {
@@ -2068,8 +2068,8 @@ int32_t k_messagewidget_super_metric(const void* self, int32_t param1) {
     return KMessageWidget_SuperMetric((KMessageWidget*)self, param1);
 }
 
-void k_messagewidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KMessageWidget_OnMetric((const KMessageWidget*)self, (intptr_t)callback);
+void k_messagewidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KMessageWidget_OnMetric((KMessageWidget*)self, (intptr_t)callback);
 }
 
 void k_messagewidget_init_painter(const void* self, void* painter) {
@@ -2080,8 +2080,8 @@ void k_messagewidget_super_init_painter(const void* self, void* painter) {
     KMessageWidget_SuperInitPainter((KMessageWidget*)self, (QPainter*)painter);
 }
 
-void k_messagewidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KMessageWidget_OnInitPainter((const KMessageWidget*)self, (intptr_t)callback);
+void k_messagewidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KMessageWidget_OnInitPainter((KMessageWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_messagewidget_redirected(const void* self, void* offset) {
@@ -2092,8 +2092,8 @@ QPaintDevice* k_messagewidget_super_redirected(const void* self, void* offset) {
     return KMessageWidget_SuperRedirected((KMessageWidget*)self, (QPoint*)offset);
 }
 
-void k_messagewidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KMessageWidget_OnRedirected((const KMessageWidget*)self, (intptr_t)callback);
+void k_messagewidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KMessageWidget_OnRedirected((KMessageWidget*)self, (intptr_t)callback);
 }
 
 QPainter* k_messagewidget_shared_painter(const void* self) {
@@ -2104,8 +2104,8 @@ QPainter* k_messagewidget_super_shared_painter(const void* self) {
     return KMessageWidget_SuperSharedPainter((KMessageWidget*)self);
 }
 
-void k_messagewidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KMessageWidget_OnSharedPainter((const KMessageWidget*)self, (intptr_t)callback);
+void k_messagewidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KMessageWidget_OnSharedPainter((KMessageWidget*)self, (intptr_t)callback);
 }
 
 void k_messagewidget_input_method_event(void* self, void* param1) {
@@ -2128,8 +2128,8 @@ QVariant* k_messagewidget_super_input_method_query(const void* self, int32_t par
     return KMessageWidget_SuperInputMethodQuery((KMessageWidget*)self, param1);
 }
 
-void k_messagewidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KMessageWidget_OnInputMethodQuery((const KMessageWidget*)self, (intptr_t)callback);
+void k_messagewidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KMessageWidget_OnInputMethodQuery((KMessageWidget*)self, (intptr_t)callback);
 }
 
 bool k_messagewidget_focus_next_prev_child(void* self, bool next) {

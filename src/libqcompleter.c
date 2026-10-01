@@ -61,7 +61,7 @@ const QMetaObject* q_completer_meta_object(const void* self) {
     return QCompleter_MetaObject((QCompleter*)self);
 }
 
-void q_completer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_completer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCompleter_OnMetaObject((QCompleter*)self, (intptr_t)callback);
 }
 
@@ -237,7 +237,7 @@ const char* q_completer_path_from_index(const void* self, const void* index) {
     return _ret;
 }
 
-void q_completer_on_path_from_index(const void* self, const char* (*callback)(const void*, const void*)) {
+void q_completer_on_path_from_index(void* self, const char* (*callback)(const void*, const void*)) {
     QCompleter_OnPathFromIndex((QCompleter*)self, (intptr_t)callback);
 }
 
@@ -265,7 +265,7 @@ const char** q_completer_split_path(const void* self, const char* path) {
     return _ret;
 }
 
-void q_completer_on_split_path(const void* self, const char** (*callback)(const void*, const char*)) {
+void q_completer_on_split_path(void* self, const char** (*callback)(const void*, const char*)) {
     QCompleter_OnSplitPath((QCompleter*)self, (intptr_t)callback);
 }
 

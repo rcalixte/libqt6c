@@ -20,7 +20,7 @@ const QMetaObject* q_vxymodelmapper_meta_object(const void* self) {
     return QVXYModelMapper_MetaObject((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_vxymodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVXYModelMapper_OnMetaObject((QVXYModelMapper*)self, (intptr_t)callback);
 }
 

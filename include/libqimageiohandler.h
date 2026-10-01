@@ -61,10 +61,10 @@ bool q_imageiohandler_can_read(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QImageIOHandler*
+/// @param self QImageIOHandler*
 /// @param callback bool func(const QImageIOHandler* self)
 ///
-void q_imageiohandler_on_can_read(const void* self, bool (*callback)(const void*));
+void q_imageiohandler_on_can_read(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#read)
 ///
@@ -120,12 +120,12 @@ QVariant* q_imageiohandler_option(const void* self, int32_t option);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QImageIOHandler*
+/// @param self QImageIOHandler*
 /// @param callback QVariant* func(const QImageIOHandler* self, enum QImageIOHandler__ImageOption option)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_imageiohandler_on_option(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_imageiohandler_on_option(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#option)
 ///
@@ -174,10 +174,10 @@ bool q_imageiohandler_supports_option(const void* self, int32_t option);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QImageIOHandler*
+/// @param self QImageIOHandler*
 /// @param callback bool func(const QImageIOHandler* self, enum QImageIOHandler__ImageOption option)
 ///
-void q_imageiohandler_on_supports_option(const void* self, bool (*callback)(const void*, int32_t));
+void q_imageiohandler_on_supports_option(void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#supportsOption)
 ///
@@ -246,10 +246,10 @@ int32_t q_imageiohandler_loop_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QImageIOHandler*
+/// @param self QImageIOHandler*
 /// @param callback int32_t func(const QImageIOHandler* self)
 ///
-void q_imageiohandler_on_loop_count(const void* self, int32_t (*callback)(const void*));
+void q_imageiohandler_on_loop_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#loopCount)
 ///
@@ -269,10 +269,10 @@ int32_t q_imageiohandler_image_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QImageIOHandler*
+/// @param self QImageIOHandler*
 /// @param callback int32_t func(const QImageIOHandler* self)
 ///
-void q_imageiohandler_on_image_count(const void* self, int32_t (*callback)(const void*));
+void q_imageiohandler_on_image_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#imageCount)
 ///
@@ -292,10 +292,10 @@ int32_t q_imageiohandler_next_image_delay(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QImageIOHandler*
+/// @param self QImageIOHandler*
 /// @param callback int32_t func(const QImageIOHandler* self)
 ///
-void q_imageiohandler_on_next_image_delay(const void* self, int32_t (*callback)(const void*));
+void q_imageiohandler_on_next_image_delay(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#nextImageDelay)
 ///
@@ -315,10 +315,10 @@ int32_t q_imageiohandler_current_image_number(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QImageIOHandler*
+/// @param self QImageIOHandler*
 /// @param callback int32_t func(const QImageIOHandler* self)
 ///
-void q_imageiohandler_on_current_image_number(const void* self, int32_t (*callback)(const void*));
+void q_imageiohandler_on_current_image_number(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#currentImageNumber)
 ///
@@ -338,12 +338,12 @@ QRect* q_imageiohandler_current_image_rect(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QImageIOHandler*
+/// @param self QImageIOHandler*
 /// @param callback QRect* func(const QImageIOHandler* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_imageiohandler_on_current_image_rect(const void* self, QRect* (*callback)(const void*));
+void q_imageiohandler_on_current_image_rect(void* self, QRect* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#currentImageRect)
 ///
@@ -393,10 +393,10 @@ const QMetaObject* q_imageioplugin_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QImageIOPlugin*
+/// @param self QImageIOPlugin*
 /// @param callback const QMetaObject* func(const QImageIOPlugin* self)
 ///
-void q_imageioplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_imageioplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -472,10 +472,10 @@ int32_t q_imageioplugin_capabilities(const void* self, void* device, char* forma
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QImageIOPlugin*
+/// @param self QImageIOPlugin*
 /// @param callback int32_t func(const QImageIOPlugin* self, QIODevice* device, libqt_string format)
 ///
-void q_imageioplugin_on_capabilities(const void* self, int32_t (*callback)(const void*, void*, libqt_string));
+void q_imageioplugin_on_capabilities(void* self, int32_t (*callback)(const void*, void*, libqt_string));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageioplugin.html#create)
 ///
@@ -491,10 +491,10 @@ QImageIOHandler* q_imageioplugin_create(const void* self, void* device, char* fo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QImageIOPlugin*
+/// @param self QImageIOPlugin*
 /// @param callback QImageIOHandler* func(const QImageIOPlugin* self, QIODevice* device, libqt_string format)
 ///
-void q_imageioplugin_on_create(const void* self, QImageIOHandler* (*callback)(const void*, void*, libqt_string));
+void q_imageioplugin_on_create(void* self, QImageIOHandler* (*callback)(const void*, void*, libqt_string));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1221,10 +1221,10 @@ QObject* q_imageioplugin_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QImageIOPlugin*
+/// @param self QImageIOPlugin*
 /// @param callback QObject* func(QImageIOPlugin* self)
 ///
-void q_imageioplugin_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_imageioplugin_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1252,10 +1252,10 @@ int32_t q_imageioplugin_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QImageIOPlugin*
+/// @param self QImageIOPlugin*
 /// @param callback int32_t func(QImageIOPlugin* self)
 ///
-void q_imageioplugin_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_imageioplugin_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1285,10 +1285,10 @@ int32_t q_imageioplugin_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QImageIOPlugin*
+/// @param self QImageIOPlugin*
 /// @param callback int32_t func(QImageIOPlugin* self, const char* signal)
 ///
-void q_imageioplugin_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_imageioplugin_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1318,10 +1318,10 @@ bool q_imageioplugin_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QImageIOPlugin*
+/// @param self QImageIOPlugin*
 /// @param callback bool func(QImageIOPlugin* self, QMetaMethod* signal)
 ///
-void q_imageioplugin_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_imageioplugin_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

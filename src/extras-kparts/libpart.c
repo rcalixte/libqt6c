@@ -28,11 +28,11 @@ KParts__Part* k_parts__part_new3(void* parent, const void* data) {
     return KParts__Part_New3((QObject*)parent, (KPluginMetaData*)data);
 }
 
-KParts__PartBase* k_parts__part_as_k_parts___part_base(void* self) {
+KParts__PartBase* k_parts__part_as_k_parts___part_base(const void* self) {
     return KParts__Part_AsKParts__PartBase((KParts__Part*)self);
 }
 
-KParts__Part* k_parts__part_from_k_parts___part_base(void* _kparts__partbase) {
+KParts__Part* k_parts__part_from_k_parts___part_base(const void* _kparts__partbase) {
     return (KParts__Part*)KParts__Part_FromKParts__PartBase((KParts__PartBase*)_kparts__partbase);
 }
 
@@ -40,7 +40,7 @@ const QMetaObject* k_parts__part_meta_object(const void* self) {
     return KParts__Part_MetaObject((KParts__Part*)self);
 }
 
-void k_parts__part_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_parts__part_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KParts__Part_OnMetaObject((KParts__Part*)self, (intptr_t)callback);
 }
 
@@ -627,8 +627,8 @@ QAction* k_parts__part_super_action2(const void* self, const void* element) {
     return KParts__Part_SuperAction2((KParts__Part*)self, (QDomElement*)element);
 }
 
-void k_parts__part_on_action2(const void* self, QAction* (*callback)(const void*, const void*)) {
-    KParts__Part_OnAction2((const KParts__Part*)self, (intptr_t)callback);
+void k_parts__part_on_action2(void* self, QAction* (*callback)(const void*, const void*)) {
+    KParts__Part_OnAction2((KParts__Part*)self, (intptr_t)callback);
 }
 
 KActionCollection* k_parts__part_action_collection(const void* self) {
@@ -639,8 +639,8 @@ KActionCollection* k_parts__part_super_action_collection(const void* self) {
     return KParts__Part_SuperActionCollection((KParts__Part*)self);
 }
 
-void k_parts__part_on_action_collection(const void* self, KActionCollection* (*callback)(const void*)) {
-    KParts__Part_OnActionCollection((const KParts__Part*)self, (intptr_t)callback);
+void k_parts__part_on_action_collection(void* self, KActionCollection* (*callback)(const void*)) {
+    KParts__Part_OnActionCollection((KParts__Part*)self, (intptr_t)callback);
 }
 
 const char* k_parts__part_component_name(const void* self) {
@@ -657,8 +657,8 @@ const char* k_parts__part_super_component_name(const void* self) {
     return _ret;
 }
 
-void k_parts__part_on_component_name(const void* self, const char* (*callback)(const void*)) {
-    KParts__Part_OnComponentName((const KParts__Part*)self, (intptr_t)callback);
+void k_parts__part_on_component_name(void* self, const char* (*callback)(const void*)) {
+    KParts__Part_OnComponentName((KParts__Part*)self, (intptr_t)callback);
 }
 
 QDomDocument* k_parts__part_dom_document(const void* self) {
@@ -669,8 +669,8 @@ QDomDocument* k_parts__part_super_dom_document(const void* self) {
     return KParts__Part_SuperDomDocument((KParts__Part*)self);
 }
 
-void k_parts__part_on_dom_document(const void* self, QDomDocument* (*callback)(const void*)) {
-    KParts__Part_OnDomDocument((const KParts__Part*)self, (intptr_t)callback);
+void k_parts__part_on_dom_document(void* self, QDomDocument* (*callback)(const void*)) {
+    KParts__Part_OnDomDocument((KParts__Part*)self, (intptr_t)callback);
 }
 
 const char* k_parts__part_xml_file(const void* self) {
@@ -687,8 +687,8 @@ const char* k_parts__part_super_xml_file(const void* self) {
     return _ret;
 }
 
-void k_parts__part_on_xml_file(const void* self, const char* (*callback)(const void*)) {
-    KParts__Part_OnXmlFile((const KParts__Part*)self, (intptr_t)callback);
+void k_parts__part_on_xml_file(void* self, const char* (*callback)(const void*)) {
+    KParts__Part_OnXmlFile((KParts__Part*)self, (intptr_t)callback);
 }
 
 const char* k_parts__part_local_x_m_l_file(const void* self) {
@@ -705,8 +705,8 @@ const char* k_parts__part_super_local_x_m_l_file(const void* self) {
     return _ret;
 }
 
-void k_parts__part_on_local_x_m_l_file(const void* self, const char* (*callback)(const void*)) {
-    KParts__Part_OnLocalXMLFile((const KParts__Part*)self, (intptr_t)callback);
+void k_parts__part_on_local_x_m_l_file(void* self, const char* (*callback)(const void*)) {
+    KParts__Part_OnLocalXMLFile((KParts__Part*)self, (intptr_t)callback);
 }
 
 void k_parts__part_set_component_name(void* self, const char* componentName, const char* componentDisplayName) {

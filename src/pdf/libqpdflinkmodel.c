@@ -25,7 +25,7 @@ const QMetaObject* q_pdflinkmodel_meta_object(const void* self) {
     return QPdfLinkModel_MetaObject((QPdfLinkModel*)self);
 }
 
-void q_pdflinkmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pdflinkmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPdfLinkModel_OnMetaObject((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
@@ -101,7 +101,7 @@ libqt_map /* of int to char* */ q_pdflinkmodel_role_names(const void* self) {
     return _ret;
 }
 
-void q_pdflinkmodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_pdflinkmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
     QPdfLinkModel_OnRoleNames((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
@@ -142,7 +142,7 @@ int32_t q_pdflinkmodel_row_count(const void* self, const void* parent) {
     return QPdfLinkModel_RowCount((QPdfLinkModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdflinkmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_pdflinkmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QPdfLinkModel_OnRowCount((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
@@ -154,7 +154,7 @@ QVariant* q_pdflinkmodel_data(const void* self, const void* index, int role) {
     return QPdfLinkModel_Data((QPdfLinkModel*)self, (QModelIndex*)index, role);
 }
 
-void q_pdflinkmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
+void q_pdflinkmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
     QPdfLinkModel_OnData((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
@@ -216,7 +216,7 @@ QModelIndex* q_pdflinkmodel_parent(const void* self, const void* child) {
     return QAbstractItemModel_Parent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
-void q_pdflinkmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_pdflinkmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -224,7 +224,7 @@ int32_t q_pdflinkmodel_column_count(const void* self, const void* parent) {
     return QAbstractItemModel_ColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdflinkmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_pdflinkmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnColumnCount((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -232,7 +232,7 @@ bool q_pdflinkmodel_has_children(const void* self, const void* parent) {
     return QAbstractItemModel_HasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdflinkmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
+void q_pdflinkmodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -577,8 +577,8 @@ QModelIndex* q_pdflinkmodel_super_index(const void* self, int row, int column, c
     return QPdfLinkModel_SuperIndex((QPdfLinkModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void q_pdflinkmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    QPdfLinkModel_OnIndex((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    QPdfLinkModel_OnIndex((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_pdflinkmodel_sibling(const void* self, int row, int column, const void* idx) {
@@ -589,8 +589,8 @@ QModelIndex* q_pdflinkmodel_super_sibling(const void* self, int row, int column,
     return QPdfLinkModel_SuperSibling((QPdfLinkModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void q_pdflinkmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    QPdfLinkModel_OnSibling((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    QPdfLinkModel_OnSibling((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdflinkmodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -613,8 +613,8 @@ int32_t q_pdflinkmodel_super_flags(const void* self, const void* index) {
     return QPdfLinkModel_SuperFlags((QPdfLinkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdflinkmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QPdfLinkModel_OnFlags((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
+    QPdfLinkModel_OnFlags((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdflinkmodel_set_data(void* self, const void* index, const void* value, int role) {
@@ -637,8 +637,8 @@ QVariant* q_pdflinkmodel_super_header_data(const void* self, int section, int32_
     return QPdfLinkModel_SuperHeaderData((QPdfLinkModel*)self, section, orientation, role);
 }
 
-void q_pdflinkmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
-    QPdfLinkModel_OnHeaderData((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+    QPdfLinkModel_OnHeaderData((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdflinkmodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
@@ -673,8 +673,8 @@ libqt_map /* of int to QVariant* */ q_pdflinkmodel_super_item_data(const void* s
     return _ret;
 }
 
-void q_pdflinkmodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
-    QPdfLinkModel_OnItemData((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    QPdfLinkModel_OnItemData((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdflinkmodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
@@ -785,8 +785,8 @@ const char** q_pdflinkmodel_super_mime_types(const void* self) {
     return _ret;
 }
 
-void q_pdflinkmodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    QPdfLinkModel_OnMimeTypes((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    QPdfLinkModel_OnMimeTypes((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 QMimeData* q_pdflinkmodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -797,8 +797,8 @@ QMimeData* q_pdflinkmodel_super_mime_data(const void* self, libqt_list /* of QMo
     return QPdfLinkModel_SuperMimeData((QPdfLinkModel*)self, indexes);
 }
 
-void q_pdflinkmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
-    QPdfLinkModel_OnMimeData((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    QPdfLinkModel_OnMimeData((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdflinkmodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -809,8 +809,8 @@ bool q_pdflinkmodel_super_can_drop_mime_data(const void* self, const void* data,
     return QPdfLinkModel_SuperCanDropMimeData((QPdfLinkModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_pdflinkmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    QPdfLinkModel_OnCanDropMimeData((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    QPdfLinkModel_OnCanDropMimeData((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 int32_t q_pdflinkmodel_supported_drop_actions(const void* self) {
@@ -821,8 +821,8 @@ int32_t q_pdflinkmodel_super_supported_drop_actions(const void* self) {
     return QPdfLinkModel_SuperSupportedDropActions((QPdfLinkModel*)self);
 }
 
-void q_pdflinkmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
-    QPdfLinkModel_OnSupportedDropActions((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
+    QPdfLinkModel_OnSupportedDropActions((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 int32_t q_pdflinkmodel_supported_drag_actions(const void* self) {
@@ -833,8 +833,8 @@ int32_t q_pdflinkmodel_super_supported_drag_actions(const void* self) {
     return QPdfLinkModel_SuperSupportedDragActions((QPdfLinkModel*)self);
 }
 
-void q_pdflinkmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    QPdfLinkModel_OnSupportedDragActions((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    QPdfLinkModel_OnSupportedDragActions((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdflinkmodel_insert_rows(void* self, int row, int count, const void* parent) {
@@ -929,8 +929,8 @@ bool q_pdflinkmodel_super_can_fetch_more(const void* self, const void* parent) {
     return QPdfLinkModel_SuperCanFetchMore((QPdfLinkModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdflinkmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    QPdfLinkModel_OnCanFetchMore((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    QPdfLinkModel_OnCanFetchMore((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 void q_pdflinkmodel_sort(void* self, int column, int32_t order) {
@@ -953,8 +953,8 @@ QModelIndex* q_pdflinkmodel_super_buddy(const void* self, const void* index) {
     return QPdfLinkModel_SuperBuddy((QPdfLinkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdflinkmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    QPdfLinkModel_OnBuddy((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    QPdfLinkModel_OnBuddy((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_pdflinkmodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -967,8 +967,8 @@ libqt_list /* of QModelIndex* */ q_pdflinkmodel_super_match(const void* self, co
     return _arr;
 }
 
-void q_pdflinkmodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    QPdfLinkModel_OnMatch((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    QPdfLinkModel_OnMatch((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 QSize* q_pdflinkmodel_span(const void* self, const void* index) {
@@ -979,8 +979,8 @@ QSize* q_pdflinkmodel_super_span(const void* self, const void* index) {
     return QPdfLinkModel_SuperSpan((QPdfLinkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdflinkmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    QPdfLinkModel_OnSpan((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    QPdfLinkModel_OnSpan((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 void q_pdflinkmodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
@@ -991,8 +991,8 @@ void q_pdflinkmodel_super_multi_data(const void* self, const void* index, void* 
     QPdfLinkModel_SuperMultiData((QPdfLinkModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_pdflinkmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    QPdfLinkModel_OnMultiData((const QPdfLinkModel*)self, (intptr_t)callback);
+void q_pdflinkmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    QPdfLinkModel_OnMultiData((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdflinkmodel_submit(void* self) {

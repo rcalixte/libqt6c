@@ -20,7 +20,7 @@ const QMetaObject* q_designerwidgetfactoryinterface_meta_object(const void* self
     return QDesignerWidgetFactoryInterface_MetaObject((QDesignerWidgetFactoryInterface*)self);
 }
 
-void q_designerwidgetfactoryinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_designerwidgetfactoryinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDesignerWidgetFactoryInterface_OnMetaObject((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
@@ -63,7 +63,7 @@ QDesignerFormEditorInterface* q_designerwidgetfactoryinterface_core(const void* 
     return QDesignerWidgetFactoryInterface_Core((QDesignerWidgetFactoryInterface*)self);
 }
 
-void q_designerwidgetfactoryinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
+void q_designerwidgetfactoryinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
     QDesignerWidgetFactoryInterface_OnCore((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
@@ -71,7 +71,7 @@ QWidget* q_designerwidgetfactoryinterface_container_of_widget(const void* self, 
     return QDesignerWidgetFactoryInterface_ContainerOfWidget((QDesignerWidgetFactoryInterface*)self, (QWidget*)w);
 }
 
-void q_designerwidgetfactoryinterface_on_container_of_widget(const void* self, QWidget* (*callback)(const void*, void*)) {
+void q_designerwidgetfactoryinterface_on_container_of_widget(void* self, QWidget* (*callback)(const void*, void*)) {
     QDesignerWidgetFactoryInterface_OnContainerOfWidget((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
@@ -79,7 +79,7 @@ QWidget* q_designerwidgetfactoryinterface_widget_of_container(const void* self, 
     return QDesignerWidgetFactoryInterface_WidgetOfContainer((QDesignerWidgetFactoryInterface*)self, (QWidget*)w);
 }
 
-void q_designerwidgetfactoryinterface_on_widget_of_container(const void* self, QWidget* (*callback)(const void*, void*)) {
+void q_designerwidgetfactoryinterface_on_widget_of_container(void* self, QWidget* (*callback)(const void*, void*)) {
     QDesignerWidgetFactoryInterface_OnWidgetOfContainer((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
@@ -87,7 +87,7 @@ QWidget* q_designerwidgetfactoryinterface_create_widget(const void* self, const 
     return QDesignerWidgetFactoryInterface_CreateWidget((QDesignerWidgetFactoryInterface*)self, qstring(name), (QWidget*)parentWidget);
 }
 
-void q_designerwidgetfactoryinterface_on_create_widget(const void* self, QWidget* (*callback)(const void*, const char*, void*)) {
+void q_designerwidgetfactoryinterface_on_create_widget(void* self, QWidget* (*callback)(const void*, const char*, void*)) {
     QDesignerWidgetFactoryInterface_OnCreateWidget((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
@@ -95,7 +95,7 @@ QLayout* q_designerwidgetfactoryinterface_create_layout(const void* self, void* 
     return QDesignerWidgetFactoryInterface_CreateLayout((QDesignerWidgetFactoryInterface*)self, (QWidget*)widget, (QLayout*)layout, type);
 }
 
-void q_designerwidgetfactoryinterface_on_create_layout(const void* self, QLayout* (*callback)(const void*, void*, void*, int)) {
+void q_designerwidgetfactoryinterface_on_create_layout(void* self, QLayout* (*callback)(const void*, void*, void*, int)) {
     QDesignerWidgetFactoryInterface_OnCreateLayout((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 
@@ -111,7 +111,7 @@ void q_designerwidgetfactoryinterface_initialize(const void* self, void* object)
     QDesignerWidgetFactoryInterface_Initialize((QDesignerWidgetFactoryInterface*)self, (QObject*)object);
 }
 
-void q_designerwidgetfactoryinterface_on_initialize(const void* self, void (*callback)(const void*, void*)) {
+void q_designerwidgetfactoryinterface_on_initialize(void* self, void (*callback)(const void*, void*)) {
     QDesignerWidgetFactoryInterface_OnInitialize((QDesignerWidgetFactoryInterface*)self, (intptr_t)callback);
 }
 

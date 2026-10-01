@@ -15,7 +15,7 @@ const QMetaObject* k_onsole__emulation_meta_object(const void* self) {
     return Konsole__Emulation_MetaObject((Konsole__Emulation*)self);
 }
 
-void k_onsole__emulation_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_onsole__emulation_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Konsole__Emulation_OnMetaObject((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
@@ -70,7 +70,7 @@ char k_onsole__emulation_erase_char(const void* self) {
     return Konsole__Emulation_EraseChar((Konsole__Emulation*)self);
 }
 
-void k_onsole__emulation_on_erase_char(const void* self, char (*callback)(const void*)) {
+void k_onsole__emulation_on_erase_char(void* self, char (*callback)(const void*)) {
     Konsole__Emulation_OnEraseChar((Konsole__Emulation*)self, (intptr_t)callback);
 }
 

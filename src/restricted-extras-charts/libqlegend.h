@@ -428,9 +428,9 @@ void q_legend_set_reverse_markers1(void* self, bool reverseMarkers);
 ///
 /// Upcasts to a QGraphicsLayoutItem object
 ///
-/// @param self QLegend*
+/// @param self const QLegend*
 ///
-QGraphicsLayoutItem* q_legend_as_q_graphics_layout_item(void* self);
+QGraphicsLayoutItem* q_legend_as_q_graphics_layout_item(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -438,7 +438,7 @@ QGraphicsLayoutItem* q_legend_as_q_graphics_layout_item(void* self);
 ///
 /// @param _qgraphicslayoutitem QGraphicsLayoutItem*
 ///
-QLegend* q_legend_from_q_graphics_layout_item(void* _qgraphicslayoutitem);
+QLegend* q_legend_from_q_graphics_layout_item(const void* _qgraphicslayoutitem);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1013,9 +1013,9 @@ void q_legend_set_attribute2(void* self, int32_t attribute, bool on);
 ///
 /// Upcasts to a QGraphicsItem object
 ///
-/// @param self QLegend*
+/// @param self const QLegend*
 ///
-QGraphicsItem* q_legend_as_q_graphics_item(void* self);
+QGraphicsItem* q_legend_as_q_graphics_item(const void* self);
 
 /// Inherited from QGraphicsObject
 ///
@@ -1023,7 +1023,7 @@ QGraphicsItem* q_legend_as_q_graphics_item(void* self);
 ///
 /// @param _qgraphicsitem QGraphicsItem*
 ///
-QLegend* q_legend_from_q_graphics_item(void* _qgraphicsitem);
+QLegend* q_legend_from_q_graphics_item(const void* _qgraphicsitem);
 
 /// Inherited from QGraphicsObject
 ///

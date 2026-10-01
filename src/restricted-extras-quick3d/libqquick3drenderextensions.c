@@ -19,7 +19,7 @@ const QMetaObject* q_quick3drenderextension_meta_object(const void* self) {
     return QQuick3DRenderExtension_MetaObject((QQuick3DRenderExtension*)self);
 }
 
-void q_quick3drenderextension_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quick3drenderextension_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuick3DRenderExtension_OnMetaObject((QQuick3DRenderExtension*)self, (intptr_t)callback);
 }
 
@@ -72,11 +72,11 @@ const char* q_quick3drenderextension_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QQmlParserStatus* q_quick3drenderextension_as_q_qml_parser_status(void* self) {
+QQmlParserStatus* q_quick3drenderextension_as_q_qml_parser_status(const void* self) {
     return QQuick3DObject_AsQQmlParserStatus((QQuick3DObject*)self);
 }
 
-QQuick3DRenderExtension* q_quick3drenderextension_from_q_qml_parser_status(void* _qqmlparserstatus) {
+QQuick3DRenderExtension* q_quick3drenderextension_from_q_qml_parser_status(const void* _qqmlparserstatus) {
     return (QQuick3DRenderExtension*)QQuick3DObject_FromQQmlParserStatus((QQmlParserStatus*)_qqmlparserstatus);
 }
 

@@ -32,10 +32,10 @@ const QMetaObject* k_abstractkirigamiapplication_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const AbstractKirigamiApplication*
+/// @param self AbstractKirigamiApplication*
 /// @param callback const QMetaObject* func(const AbstractKirigamiApplication* self)
 ///
-void k_abstractkirigamiapplication_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_abstractkirigamiapplication_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -107,10 +107,10 @@ libqt_list k_abstractkirigamiapplication_action_collections(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const AbstractKirigamiApplication*
+/// @param self AbstractKirigamiApplication*
 /// @param callback libqt_list of KirigamiActionCollection* func(const AbstractKirigamiApplication* self)
 ///
-void k_abstractkirigamiapplication_on_action_collections(const void* self, libqt_list (*callback)(const void*));
+void k_abstractkirigamiapplication_on_action_collections(void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/abstractkirigamiapplication.html#actionCollections)
 ///
@@ -979,10 +979,10 @@ QObject* k_abstractkirigamiapplication_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const AbstractKirigamiApplication*
+/// @param self AbstractKirigamiApplication*
 /// @param callback QObject* func(AbstractKirigamiApplication* self)
 ///
-void k_abstractkirigamiapplication_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_abstractkirigamiapplication_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1010,10 +1010,10 @@ int32_t k_abstractkirigamiapplication_super_sender_signal_index(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const AbstractKirigamiApplication*
+/// @param self AbstractKirigamiApplication*
 /// @param callback int32_t func(AbstractKirigamiApplication* self)
 ///
-void k_abstractkirigamiapplication_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_abstractkirigamiapplication_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1043,10 +1043,10 @@ int32_t k_abstractkirigamiapplication_super_receivers(const void* self, const ch
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const AbstractKirigamiApplication*
+/// @param self AbstractKirigamiApplication*
 /// @param callback int32_t func(AbstractKirigamiApplication* self, const char* signal)
 ///
-void k_abstractkirigamiapplication_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_abstractkirigamiapplication_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1076,10 +1076,10 @@ bool k_abstractkirigamiapplication_super_is_signal_connected(const void* self, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const AbstractKirigamiApplication*
+/// @param self AbstractKirigamiApplication*
 /// @param callback bool func(AbstractKirigamiApplication* self, QMetaMethod* signal)
 ///
-void k_abstractkirigamiapplication_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_abstractkirigamiapplication_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

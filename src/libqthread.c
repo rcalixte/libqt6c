@@ -19,7 +19,7 @@ const QMetaObject* q_thread_meta_object(const void* self) {
     return QThread_MetaObject((QThread*)self);
 }
 
-void q_thread_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_thread_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QThread_OnMetaObject((QThread*)self, (intptr_t)callback);
 }
 

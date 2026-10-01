@@ -21,7 +21,7 @@ const QMetaObject* q_sizegrip_meta_object(const void* self) {
     return QSizeGrip_MetaObject((QSizeGrip*)self);
 }
 
-void q_sizegrip_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_sizegrip_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSizeGrip_OnMetaObject((QSizeGrip*)self, (intptr_t)callback);
 }
 
@@ -64,7 +64,7 @@ QSize* q_sizegrip_size_hint(const void* self) {
     return QSizeGrip_SizeHint((QSizeGrip*)self);
 }
 
-void q_sizegrip_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_sizegrip_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QSizeGrip_OnSizeHint((QSizeGrip*)self, (intptr_t)callback);
 }
 
@@ -206,11 +206,11 @@ const char* q_sizegrip_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_sizegrip_as_q_paint_device(void* self) {
+QPaintDevice* q_sizegrip_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QSizeGrip* q_sizegrip_from_q_paint_device(void* _qpaintdevice) {
+QSizeGrip* q_sizegrip_from_q_paint_device(const void* _qpaintdevice) {
     return (QSizeGrip*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1601,8 +1601,8 @@ int32_t q_sizegrip_super_dev_type(const void* self) {
     return QSizeGrip_SuperDevType((QSizeGrip*)self);
 }
 
-void q_sizegrip_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QSizeGrip_OnDevType((const QSizeGrip*)self, (intptr_t)callback);
+void q_sizegrip_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QSizeGrip_OnDevType((QSizeGrip*)self, (intptr_t)callback);
 }
 
 QSize* q_sizegrip_minimum_size_hint(const void* self) {
@@ -1613,8 +1613,8 @@ QSize* q_sizegrip_super_minimum_size_hint(const void* self) {
     return QSizeGrip_SuperMinimumSizeHint((QSizeGrip*)self);
 }
 
-void q_sizegrip_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QSizeGrip_OnMinimumSizeHint((const QSizeGrip*)self, (intptr_t)callback);
+void q_sizegrip_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QSizeGrip_OnMinimumSizeHint((QSizeGrip*)self, (intptr_t)callback);
 }
 
 int32_t q_sizegrip_height_for_width(const void* self, int param1) {
@@ -1625,8 +1625,8 @@ int32_t q_sizegrip_super_height_for_width(const void* self, int param1) {
     return QSizeGrip_SuperHeightForWidth((QSizeGrip*)self, param1);
 }
 
-void q_sizegrip_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QSizeGrip_OnHeightForWidth((const QSizeGrip*)self, (intptr_t)callback);
+void q_sizegrip_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QSizeGrip_OnHeightForWidth((QSizeGrip*)self, (intptr_t)callback);
 }
 
 bool q_sizegrip_has_height_for_width(const void* self) {
@@ -1637,8 +1637,8 @@ bool q_sizegrip_super_has_height_for_width(const void* self) {
     return QSizeGrip_SuperHasHeightForWidth((QSizeGrip*)self);
 }
 
-void q_sizegrip_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QSizeGrip_OnHasHeightForWidth((const QSizeGrip*)self, (intptr_t)callback);
+void q_sizegrip_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QSizeGrip_OnHasHeightForWidth((QSizeGrip*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_sizegrip_paint_engine(const void* self) {
@@ -1649,8 +1649,8 @@ QPaintEngine* q_sizegrip_super_paint_engine(const void* self) {
     return QSizeGrip_SuperPaintEngine((QSizeGrip*)self);
 }
 
-void q_sizegrip_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QSizeGrip_OnPaintEngine((const QSizeGrip*)self, (intptr_t)callback);
+void q_sizegrip_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QSizeGrip_OnPaintEngine((QSizeGrip*)self, (intptr_t)callback);
 }
 
 void q_sizegrip_mouse_double_click_event(void* self, void* event) {
@@ -1889,8 +1889,8 @@ int32_t q_sizegrip_super_metric(const void* self, int32_t param1) {
     return QSizeGrip_SuperMetric((QSizeGrip*)self, param1);
 }
 
-void q_sizegrip_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QSizeGrip_OnMetric((const QSizeGrip*)self, (intptr_t)callback);
+void q_sizegrip_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QSizeGrip_OnMetric((QSizeGrip*)self, (intptr_t)callback);
 }
 
 void q_sizegrip_init_painter(const void* self, void* painter) {
@@ -1901,8 +1901,8 @@ void q_sizegrip_super_init_painter(const void* self, void* painter) {
     QSizeGrip_SuperInitPainter((QSizeGrip*)self, (QPainter*)painter);
 }
 
-void q_sizegrip_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QSizeGrip_OnInitPainter((const QSizeGrip*)self, (intptr_t)callback);
+void q_sizegrip_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QSizeGrip_OnInitPainter((QSizeGrip*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_sizegrip_redirected(const void* self, void* offset) {
@@ -1913,8 +1913,8 @@ QPaintDevice* q_sizegrip_super_redirected(const void* self, void* offset) {
     return QSizeGrip_SuperRedirected((QSizeGrip*)self, (QPoint*)offset);
 }
 
-void q_sizegrip_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QSizeGrip_OnRedirected((const QSizeGrip*)self, (intptr_t)callback);
+void q_sizegrip_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QSizeGrip_OnRedirected((QSizeGrip*)self, (intptr_t)callback);
 }
 
 QPainter* q_sizegrip_shared_painter(const void* self) {
@@ -1925,8 +1925,8 @@ QPainter* q_sizegrip_super_shared_painter(const void* self) {
     return QSizeGrip_SuperSharedPainter((QSizeGrip*)self);
 }
 
-void q_sizegrip_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QSizeGrip_OnSharedPainter((const QSizeGrip*)self, (intptr_t)callback);
+void q_sizegrip_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QSizeGrip_OnSharedPainter((QSizeGrip*)self, (intptr_t)callback);
 }
 
 void q_sizegrip_input_method_event(void* self, void* param1) {
@@ -1949,8 +1949,8 @@ QVariant* q_sizegrip_super_input_method_query(const void* self, int32_t param1) 
     return QSizeGrip_SuperInputMethodQuery((QSizeGrip*)self, param1);
 }
 
-void q_sizegrip_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QSizeGrip_OnInputMethodQuery((const QSizeGrip*)self, (intptr_t)callback);
+void q_sizegrip_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QSizeGrip_OnInputMethodQuery((QSizeGrip*)self, (intptr_t)callback);
 }
 
 bool q_sizegrip_focus_next_prev_child(void* self, bool next) {

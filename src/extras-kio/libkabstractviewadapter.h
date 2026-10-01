@@ -28,10 +28,10 @@ QAbstractItemModel* k_abstractviewadapter_model(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KAbstractViewAdapter*
+/// @param self KAbstractViewAdapter*
 /// @param callback QAbstractItemModel* func(const KAbstractViewAdapter* self)
 ///
-void k_abstractviewadapter_on_model(const void* self, QAbstractItemModel* (*callback)(const void*));
+void k_abstractviewadapter_on_model(void* self, QAbstractItemModel* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#iconSize)
 ///
@@ -45,12 +45,12 @@ QSize* k_abstractviewadapter_icon_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KAbstractViewAdapter*
+/// @param self KAbstractViewAdapter*
 /// @param callback QSize* func(const KAbstractViewAdapter* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_abstractviewadapter_on_icon_size(const void* self, QSize* (*callback)(const void*));
+void k_abstractviewadapter_on_icon_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#palette)
 ///
@@ -64,12 +64,12 @@ QPalette* k_abstractviewadapter_palette(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KAbstractViewAdapter*
+/// @param self KAbstractViewAdapter*
 /// @param callback QPalette* func(const KAbstractViewAdapter* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_abstractviewadapter_on_palette(const void* self, QPalette* (*callback)(const void*));
+void k_abstractviewadapter_on_palette(void* self, QPalette* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#visibleArea)
 ///
@@ -83,12 +83,12 @@ QRect* k_abstractviewadapter_visible_area(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KAbstractViewAdapter*
+/// @param self KAbstractViewAdapter*
 /// @param callback QRect* func(const KAbstractViewAdapter* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_abstractviewadapter_on_visible_area(const void* self, QRect* (*callback)(const void*));
+void k_abstractviewadapter_on_visible_area(void* self, QRect* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#visualRect)
 ///
@@ -103,12 +103,12 @@ QRect* k_abstractviewadapter_visual_rect(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KAbstractViewAdapter*
+/// @param self KAbstractViewAdapter*
 /// @param callback QRect* func(const KAbstractViewAdapter* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_abstractviewadapter_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*));
+void k_abstractviewadapter_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kabstractviewadapter.html#connect)
 ///
@@ -625,10 +625,10 @@ const QMetaObject* k_abstractviewadapter_super_meta_object(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KAbstractViewAdapter*
+/// @param self KAbstractViewAdapter*
 /// @param callback const QMetaObject* func(KAbstractViewAdapter* self)
 ///
-void k_abstractviewadapter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_abstractviewadapter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -959,10 +959,10 @@ QObject* k_abstractviewadapter_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KAbstractViewAdapter*
+/// @param self KAbstractViewAdapter*
 /// @param callback QObject* func(KAbstractViewAdapter* self)
 ///
-void k_abstractviewadapter_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_abstractviewadapter_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -990,10 +990,10 @@ int32_t k_abstractviewadapter_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KAbstractViewAdapter*
+/// @param self KAbstractViewAdapter*
 /// @param callback int32_t func(KAbstractViewAdapter* self)
 ///
-void k_abstractviewadapter_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_abstractviewadapter_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1023,10 +1023,10 @@ int32_t k_abstractviewadapter_super_receivers(const void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KAbstractViewAdapter*
+/// @param self KAbstractViewAdapter*
 /// @param callback int32_t func(KAbstractViewAdapter* self, const char* signal)
 ///
-void k_abstractviewadapter_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_abstractviewadapter_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1056,10 +1056,10 @@ bool k_abstractviewadapter_super_is_signal_connected(const void* self, const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KAbstractViewAdapter*
+/// @param self KAbstractViewAdapter*
 /// @param callback bool func(KAbstractViewAdapter* self, QMetaMethod* signal)
 ///
-void k_abstractviewadapter_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_abstractviewadapter_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

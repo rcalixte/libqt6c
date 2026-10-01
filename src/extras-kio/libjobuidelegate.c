@@ -10,11 +10,11 @@
 #include "libjobuidelegate.hpp"
 #include "libjobuidelegate.h"
 
-KIO__JobUiDelegateExtension* k_io__jobuidelegate_as_k_i_o___job_ui_delegate_extension(void* self) {
+KIO__JobUiDelegateExtension* k_io__jobuidelegate_as_k_i_o___job_ui_delegate_extension(const void* self) {
     return KIO__JobUiDelegate_AsKIO__JobUiDelegateExtension((KIO__JobUiDelegate*)self);
 }
 
-KIO__JobUiDelegate* k_io__jobuidelegate_from_k_i_o___job_ui_delegate_extension(void* _kio__jobuidelegateextension) {
+KIO__JobUiDelegate* k_io__jobuidelegate_from_k_i_o___job_ui_delegate_extension(const void* _kio__jobuidelegateextension) {
     return (KIO__JobUiDelegate*)KIO__JobUiDelegate_FromKIO__JobUiDelegateExtension((KIO__JobUiDelegateExtension*)_kio__jobuidelegateextension);
 }
 

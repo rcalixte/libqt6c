@@ -19,7 +19,7 @@ const QMetaObject* q_georoutereply_meta_object(const void* self) {
     return QGeoRouteReply_MetaObject((QGeoRouteReply*)self);
 }
 
-void q_georoutereply_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_georoutereply_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QGeoRouteReply_OnMetaObject((QGeoRouteReply*)self, (intptr_t)callback);
 }
 

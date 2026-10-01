@@ -42,12 +42,12 @@ QSize* q_layoutitem_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayoutItem*
+/// @param self QLayoutItem*
 /// @param callback QSize* func(const QLayoutItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_layoutitem_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_layoutitem_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#minimumSize)
 ///
@@ -61,12 +61,12 @@ QSize* q_layoutitem_minimum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayoutItem*
+/// @param self QLayoutItem*
 /// @param callback QSize* func(const QLayoutItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_layoutitem_on_minimum_size(const void* self, QSize* (*callback)(const void*));
+void q_layoutitem_on_minimum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#maximumSize)
 ///
@@ -80,12 +80,12 @@ QSize* q_layoutitem_maximum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayoutItem*
+/// @param self QLayoutItem*
 /// @param callback QSize* func(const QLayoutItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_layoutitem_on_maximum_size(const void* self, QSize* (*callback)(const void*));
+void q_layoutitem_on_maximum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#expandingDirections)
 ///
@@ -101,10 +101,10 @@ int32_t q_layoutitem_expanding_directions(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayoutItem*
+/// @param self QLayoutItem*
 /// @param callback int32_t func(const QLayoutItem* self)
 ///
-void q_layoutitem_on_expanding_directions(const void* self, int32_t (*callback)(const void*));
+void q_layoutitem_on_expanding_directions(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#setGeometry)
 ///
@@ -136,12 +136,12 @@ QRect* q_layoutitem_geometry(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayoutItem*
+/// @param self QLayoutItem*
 /// @param callback QRect* func(const QLayoutItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_layoutitem_on_geometry(const void* self, QRect* (*callback)(const void*));
+void q_layoutitem_on_geometry(void* self, QRect* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#isEmpty)
 ///
@@ -155,10 +155,10 @@ bool q_layoutitem_is_empty(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayoutItem*
+/// @param self QLayoutItem*
 /// @param callback bool func(const QLayoutItem* self)
 ///
-void q_layoutitem_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_layoutitem_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#hasHeightForWidth)
 ///
@@ -170,10 +170,10 @@ bool q_layoutitem_has_height_for_width(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayoutItem*
+/// @param self QLayoutItem*
 /// @param callback bool func(const QLayoutItem* self)
 ///
-void q_layoutitem_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_layoutitem_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#hasHeightForWidth)
 ///
@@ -194,10 +194,10 @@ int32_t q_layoutitem_height_for_width(const void* self, int param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayoutItem*
+/// @param self QLayoutItem*
 /// @param callback int32_t func(const QLayoutItem* self, int param1)
 ///
-void q_layoutitem_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_layoutitem_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#heightForWidth)
 ///
@@ -219,10 +219,10 @@ int32_t q_layoutitem_minimum_height_for_width(const void* self, int param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayoutItem*
+/// @param self QLayoutItem*
 /// @param callback int32_t func(const QLayoutItem* self, int param1)
 ///
-void q_layoutitem_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_layoutitem_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#minimumHeightForWidth)
 ///
@@ -266,10 +266,10 @@ QWidget* q_layoutitem_widget(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayoutItem*
+/// @param self QLayoutItem*
 /// @param callback QWidget* func(const QLayoutItem* self)
 ///
-void q_layoutitem_on_widget(const void* self, QWidget* (*callback)(const void*));
+void q_layoutitem_on_widget(void* self, QWidget* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#widget)
 ///
@@ -352,10 +352,10 @@ int32_t q_layoutitem_control_types(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QLayoutItem*
+/// @param self QLayoutItem*
 /// @param callback int32_t func(const QLayoutItem* self)
 ///
-void q_layoutitem_on_control_types(const void* self, int32_t (*callback)(const void*));
+void q_layoutitem_on_control_types(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#controlTypes)
 ///
@@ -438,12 +438,12 @@ QSize* q_spaceritem_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSpacerItem*
+/// @param self QSpacerItem*
 /// @param callback QSize* func(const QSpacerItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_spaceritem_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_spaceritem_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#sizeHint)
 ///
@@ -463,12 +463,12 @@ QSize* q_spaceritem_minimum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSpacerItem*
+/// @param self QSpacerItem*
 /// @param callback QSize* func(const QSpacerItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_spaceritem_on_minimum_size(const void* self, QSize* (*callback)(const void*));
+void q_spaceritem_on_minimum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#minimumSize)
 ///
@@ -488,12 +488,12 @@ QSize* q_spaceritem_maximum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSpacerItem*
+/// @param self QSpacerItem*
 /// @param callback QSize* func(const QSpacerItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_spaceritem_on_maximum_size(const void* self, QSize* (*callback)(const void*));
+void q_spaceritem_on_maximum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#maximumSize)
 ///
@@ -515,10 +515,10 @@ int32_t q_spaceritem_expanding_directions(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSpacerItem*
+/// @param self QSpacerItem*
 /// @param callback int32_t func(const QSpacerItem* self)
 ///
-void q_spaceritem_on_expanding_directions(const void* self, int32_t (*callback)(const void*));
+void q_spaceritem_on_expanding_directions(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#expandingDirections)
 ///
@@ -540,10 +540,10 @@ bool q_spaceritem_is_empty(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSpacerItem*
+/// @param self QSpacerItem*
 /// @param callback bool func(const QSpacerItem* self)
 ///
-void q_spaceritem_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_spaceritem_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#isEmpty)
 ///
@@ -588,12 +588,12 @@ QRect* q_spaceritem_geometry(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSpacerItem*
+/// @param self QSpacerItem*
 /// @param callback QRect* func(const QSpacerItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_spaceritem_on_geometry(const void* self, QRect* (*callback)(const void*));
+void q_spaceritem_on_geometry(void* self, QRect* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#geometry)
 ///
@@ -703,10 +703,10 @@ bool q_spaceritem_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpacerItem*
+/// @param self QSpacerItem*
 /// @param callback bool func(QSpacerItem* self)
 ///
-void q_spaceritem_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_spaceritem_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QLayoutItem
 ///
@@ -736,10 +736,10 @@ int32_t q_spaceritem_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpacerItem*
+/// @param self QSpacerItem*
 /// @param callback int32_t func(QSpacerItem* self, int param1)
 ///
-void q_spaceritem_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_spaceritem_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QLayoutItem
 ///
@@ -769,10 +769,10 @@ int32_t q_spaceritem_super_minimum_height_for_width(const void* self, int param1
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpacerItem*
+/// @param self QSpacerItem*
 /// @param callback int32_t func(QSpacerItem* self, int param1)
 ///
-void q_spaceritem_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_spaceritem_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QLayoutItem
 ///
@@ -831,10 +831,10 @@ QWidget* q_spaceritem_super_widget(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpacerItem*
+/// @param self QSpacerItem*
 /// @param callback QWidget* func(QSpacerItem* self)
 ///
-void q_spaceritem_on_widget(const void* self, QWidget* (*callback)(const void*));
+void q_spaceritem_on_widget(void* self, QWidget* (*callback)(const void*));
 
 /// Inherited from QLayoutItem
 ///
@@ -897,10 +897,10 @@ int32_t q_spaceritem_super_control_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSpacerItem*
+/// @param self QSpacerItem*
 /// @param callback int32_t func(QSpacerItem* self)
 ///
-void q_spaceritem_on_control_types(const void* self, int32_t (*callback)(const void*));
+void q_spaceritem_on_control_types(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qspaceritem.html#dtor.QSpacerItem)
 ///
@@ -928,12 +928,12 @@ QSize* q_widgetitem_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItem*
+/// @param self QWidgetItem*
 /// @param callback QSize* func(const QWidgetItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_widgetitem_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_widgetitem_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#sizeHint)
 ///
@@ -953,12 +953,12 @@ QSize* q_widgetitem_minimum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItem*
+/// @param self QWidgetItem*
 /// @param callback QSize* func(const QWidgetItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_widgetitem_on_minimum_size(const void* self, QSize* (*callback)(const void*));
+void q_widgetitem_on_minimum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#minimumSize)
 ///
@@ -978,12 +978,12 @@ QSize* q_widgetitem_maximum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItem*
+/// @param self QWidgetItem*
 /// @param callback QSize* func(const QWidgetItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_widgetitem_on_maximum_size(const void* self, QSize* (*callback)(const void*));
+void q_widgetitem_on_maximum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#maximumSize)
 ///
@@ -1005,10 +1005,10 @@ int32_t q_widgetitem_expanding_directions(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItem*
+/// @param self QWidgetItem*
 /// @param callback int32_t func(const QWidgetItem* self)
 ///
-void q_widgetitem_on_expanding_directions(const void* self, int32_t (*callback)(const void*));
+void q_widgetitem_on_expanding_directions(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#expandingDirections)
 ///
@@ -1030,10 +1030,10 @@ bool q_widgetitem_is_empty(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItem*
+/// @param self QWidgetItem*
 /// @param callback bool func(const QWidgetItem* self)
 ///
-void q_widgetitem_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_widgetitem_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#isEmpty)
 ///
@@ -1078,12 +1078,12 @@ QRect* q_widgetitem_geometry(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItem*
+/// @param self QWidgetItem*
 /// @param callback QRect* func(const QWidgetItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_widgetitem_on_geometry(const void* self, QRect* (*callback)(const void*));
+void q_widgetitem_on_geometry(void* self, QRect* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#geometry)
 ///
@@ -1103,10 +1103,10 @@ QWidget* q_widgetitem_widget(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItem*
+/// @param self QWidgetItem*
 /// @param callback QWidget* func(const QWidgetItem* self)
 ///
-void q_widgetitem_on_widget(const void* self, QWidget* (*callback)(const void*));
+void q_widgetitem_on_widget(void* self, QWidget* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#widget)
 ///
@@ -1126,10 +1126,10 @@ bool q_widgetitem_has_height_for_width(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItem*
+/// @param self QWidgetItem*
 /// @param callback bool func(const QWidgetItem* self)
 ///
-void q_widgetitem_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_widgetitem_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#hasHeightForWidth)
 ///
@@ -1150,10 +1150,10 @@ int32_t q_widgetitem_height_for_width(const void* self, int param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItem*
+/// @param self QWidgetItem*
 /// @param callback int32_t func(const QWidgetItem* self, int param1)
 ///
-void q_widgetitem_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_widgetitem_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#heightForWidth)
 ///
@@ -1175,10 +1175,10 @@ int32_t q_widgetitem_minimum_height_for_width(const void* self, int param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItem*
+/// @param self QWidgetItem*
 /// @param callback int32_t func(const QWidgetItem* self, int param1)
 ///
-void q_widgetitem_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_widgetitem_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#minimumHeightForWidth)
 ///
@@ -1201,10 +1201,10 @@ int32_t q_widgetitem_control_types(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItem*
+/// @param self QWidgetItem*
 /// @param callback int32_t func(const QWidgetItem* self)
 ///
-void q_widgetitem_on_control_types(const void* self, int32_t (*callback)(const void*));
+void q_widgetitem_on_control_types(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitem.html#controlTypes)
 ///
@@ -1363,12 +1363,12 @@ QSize* q_widgetitemv2_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItemV2*
+/// @param self QWidgetItemV2*
 /// @param callback QSize* func(const QWidgetItemV2* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_widgetitemv2_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_widgetitemv2_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitemv2.html#sizeHint)
 ///
@@ -1388,12 +1388,12 @@ QSize* q_widgetitemv2_minimum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItemV2*
+/// @param self QWidgetItemV2*
 /// @param callback QSize* func(const QWidgetItemV2* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_widgetitemv2_on_minimum_size(const void* self, QSize* (*callback)(const void*));
+void q_widgetitemv2_on_minimum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitemv2.html#minimumSize)
 ///
@@ -1413,12 +1413,12 @@ QSize* q_widgetitemv2_maximum_size(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItemV2*
+/// @param self QWidgetItemV2*
 /// @param callback QSize* func(const QWidgetItemV2* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_widgetitemv2_on_maximum_size(const void* self, QSize* (*callback)(const void*));
+void q_widgetitemv2_on_maximum_size(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitemv2.html#maximumSize)
 ///
@@ -1439,10 +1439,10 @@ int32_t q_widgetitemv2_height_for_width(const void* self, int width);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QWidgetItemV2*
+/// @param self QWidgetItemV2*
 /// @param callback int32_t func(const QWidgetItemV2* self, int width)
 ///
-void q_widgetitemv2_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_widgetitemv2_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetitemv2.html#heightForWidth)
 ///
@@ -1511,10 +1511,10 @@ int32_t q_widgetitemv2_super_expanding_directions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWidgetItemV2*
+/// @param self QWidgetItemV2*
 /// @param callback int32_t func(QWidgetItemV2* self)
 ///
-void q_widgetitemv2_on_expanding_directions(const void* self, int32_t (*callback)(const void*));
+void q_widgetitemv2_on_expanding_directions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidgetItem
 ///
@@ -1542,10 +1542,10 @@ bool q_widgetitemv2_super_is_empty(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWidgetItemV2*
+/// @param self QWidgetItemV2*
 /// @param callback bool func(QWidgetItemV2* self)
 ///
-void q_widgetitemv2_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_widgetitemv2_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidgetItem
 ///
@@ -1606,12 +1606,12 @@ QRect* q_widgetitemv2_super_geometry(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWidgetItemV2*
+/// @param self QWidgetItemV2*
 /// @param callback QRect* func(QWidgetItemV2* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_widgetitemv2_on_geometry(const void* self, QRect* (*callback)(const void*));
+void q_widgetitemv2_on_geometry(void* self, QRect* (*callback)(const void*));
 
 /// Inherited from QWidgetItem
 ///
@@ -1639,10 +1639,10 @@ QWidget* q_widgetitemv2_super_widget(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWidgetItemV2*
+/// @param self QWidgetItemV2*
 /// @param callback QWidget* func(QWidgetItemV2* self)
 ///
-void q_widgetitemv2_on_widget(const void* self, QWidget* (*callback)(const void*));
+void q_widgetitemv2_on_widget(void* self, QWidget* (*callback)(const void*));
 
 /// Inherited from QWidgetItem
 ///
@@ -1670,10 +1670,10 @@ bool q_widgetitemv2_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWidgetItemV2*
+/// @param self QWidgetItemV2*
 /// @param callback bool func(QWidgetItemV2* self)
 ///
-void q_widgetitemv2_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_widgetitemv2_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidgetItem
 ///
@@ -1703,10 +1703,10 @@ int32_t q_widgetitemv2_super_minimum_height_for_width(const void* self, int para
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWidgetItemV2*
+/// @param self QWidgetItemV2*
 /// @param callback int32_t func(QWidgetItemV2* self, int param1)
 ///
-void q_widgetitemv2_on_minimum_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_widgetitemv2_on_minimum_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidgetItem
 ///
@@ -1738,10 +1738,10 @@ int32_t q_widgetitemv2_super_control_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QWidgetItemV2*
+/// @param self QWidgetItemV2*
 /// @param callback int32_t func(QWidgetItemV2* self)
 ///
-void q_widgetitemv2_on_control_types(const void* self, int32_t (*callback)(const void*));
+void q_widgetitemv2_on_control_types(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QLayoutItem
 ///

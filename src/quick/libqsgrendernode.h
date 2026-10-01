@@ -26,10 +26,10 @@ int32_t q_sgrendernode_changed_states(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGRenderNode*
+/// @param self QSGRenderNode*
 /// @param callback int32_t func(const QSGRenderNode* self)
 ///
-void q_sgrendernode_on_changed_states(const void* self, int32_t (*callback)(const void*));
+void q_sgrendernode_on_changed_states(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#changedStates)
 ///
@@ -117,10 +117,10 @@ int32_t q_sgrendernode_flags(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGRenderNode*
+/// @param self QSGRenderNode*
 /// @param callback int32_t func(const QSGRenderNode* self)
 ///
-void q_sgrendernode_on_flags(const void* self, int32_t (*callback)(const void*));
+void q_sgrendernode_on_flags(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#flags)
 ///
@@ -142,12 +142,12 @@ QRectF* q_sgrendernode_rect(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QSGRenderNode*
+/// @param self QSGRenderNode*
 /// @param callback QRectF* func(const QSGRenderNode* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sgrendernode_on_rect(const void* self, QRectF* (*callback)(const void*));
+void q_sgrendernode_on_rect(void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode.html#rect)
 ///
@@ -410,10 +410,10 @@ bool q_sgrendernode_super_is_subtree_blocked(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QSGRenderNode*
+/// @param self QSGRenderNode*
 /// @param callback bool func(QSGRenderNode* self)
 ///
-void q_sgrendernode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
+void q_sgrendernode_on_is_subtree_blocked(void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///

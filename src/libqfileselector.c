@@ -18,7 +18,7 @@ const QMetaObject* q_fileselector_meta_object(const void* self) {
     return QFileSelector_MetaObject((QFileSelector*)self);
 }
 
-void q_fileselector_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_fileselector_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QFileSelector_OnMetaObject((QFileSelector*)self, (intptr_t)callback);
 }
 

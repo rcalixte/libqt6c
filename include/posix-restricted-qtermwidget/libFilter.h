@@ -575,10 +575,10 @@ const QMetaObject* k_onsole__filter_super_meta_object(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__Filter*
+/// @param self Konsole__Filter*
 /// @param callback const QMetaObject* func(Konsole__Filter* self)
 ///
-void k_onsole__filter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_onsole__filter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -909,10 +909,10 @@ QObject* k_onsole__filter_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__Filter*
+/// @param self Konsole__Filter*
 /// @param callback QObject* func(Konsole__Filter* self)
 ///
-void k_onsole__filter_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_onsole__filter_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -940,10 +940,10 @@ int32_t k_onsole__filter_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__Filter*
+/// @param self Konsole__Filter*
 /// @param callback int32_t func(Konsole__Filter* self)
 ///
-void k_onsole__filter_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_onsole__filter_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -973,10 +973,10 @@ int32_t k_onsole__filter_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__Filter*
+/// @param self Konsole__Filter*
 /// @param callback int32_t func(Konsole__Filter* self, const char* signal)
 ///
-void k_onsole__filter_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_onsole__filter_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1006,10 +1006,10 @@ bool k_onsole__filter_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__Filter*
+/// @param self Konsole__Filter*
 /// @param callback bool func(Konsole__Filter* self, QMetaMethod* signal)
 ///
-void k_onsole__filter_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_onsole__filter_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1625,10 +1625,10 @@ const QMetaObject* k_onsole__regexpfilter_super_meta_object(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__RegExpFilter*
+/// @param self Konsole__RegExpFilter*
 /// @param callback const QMetaObject* func(Konsole__RegExpFilter* self)
 ///
-void k_onsole__regexpfilter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_onsole__regexpfilter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2064,10 +2064,10 @@ QObject* k_onsole__regexpfilter_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__RegExpFilter*
+/// @param self Konsole__RegExpFilter*
 /// @param callback QObject* func(Konsole__RegExpFilter* self)
 ///
-void k_onsole__regexpfilter_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_onsole__regexpfilter_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2095,10 +2095,10 @@ int32_t k_onsole__regexpfilter_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__RegExpFilter*
+/// @param self Konsole__RegExpFilter*
 /// @param callback int32_t func(Konsole__RegExpFilter* self)
 ///
-void k_onsole__regexpfilter_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_onsole__regexpfilter_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2128,10 +2128,10 @@ int32_t k_onsole__regexpfilter_super_receivers(const void* self, const char* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__RegExpFilter*
+/// @param self Konsole__RegExpFilter*
 /// @param callback int32_t func(Konsole__RegExpFilter* self, const char* signal)
 ///
-void k_onsole__regexpfilter_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_onsole__regexpfilter_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2161,10 +2161,10 @@ bool k_onsole__regexpfilter_super_is_signal_connected(const void* self, const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__RegExpFilter*
+/// @param self Konsole__RegExpFilter*
 /// @param callback bool func(Konsole__RegExpFilter* self, QMetaMethod* signal)
 ///
-void k_onsole__regexpfilter_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_onsole__regexpfilter_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2199,10 +2199,10 @@ const QMetaObject* k_onsole__urlfilter_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Konsole__UrlFilter*
+/// @param self Konsole__UrlFilter*
 /// @param callback const QMetaObject* func(const Konsole__UrlFilter* self)
 ///
-void k_onsole__urlfilter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_onsole__urlfilter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -3204,10 +3204,10 @@ QObject* k_onsole__urlfilter_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__UrlFilter*
+/// @param self Konsole__UrlFilter*
 /// @param callback QObject* func(Konsole__UrlFilter* self)
 ///
-void k_onsole__urlfilter_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_onsole__urlfilter_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3235,10 +3235,10 @@ int32_t k_onsole__urlfilter_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__UrlFilter*
+/// @param self Konsole__UrlFilter*
 /// @param callback int32_t func(Konsole__UrlFilter* self)
 ///
-void k_onsole__urlfilter_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_onsole__urlfilter_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3268,10 +3268,10 @@ int32_t k_onsole__urlfilter_super_receivers(const void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__UrlFilter*
+/// @param self Konsole__UrlFilter*
 /// @param callback int32_t func(Konsole__UrlFilter* self, const char* signal)
 ///
-void k_onsole__urlfilter_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_onsole__urlfilter_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3301,10 +3301,10 @@ bool k_onsole__urlfilter_super_is_signal_connected(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__UrlFilter*
+/// @param self Konsole__UrlFilter*
 /// @param callback bool func(Konsole__UrlFilter* self, QMetaMethod* signal)
 ///
-void k_onsole__urlfilter_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_onsole__urlfilter_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3341,10 +3341,10 @@ const QMetaObject* k_onsole__filterobject_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const Konsole__FilterObject*
+/// @param self Konsole__FilterObject*
 /// @param callback const QMetaObject* func(const Konsole__FilterObject* self)
 ///
-void k_onsole__filterobject_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_onsole__filterobject_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -4158,10 +4158,10 @@ QObject* k_onsole__filterobject_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__FilterObject*
+/// @param self Konsole__FilterObject*
 /// @param callback QObject* func(Konsole__FilterObject* self)
 ///
-void k_onsole__filterobject_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_onsole__filterobject_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4189,10 +4189,10 @@ int32_t k_onsole__filterobject_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__FilterObject*
+/// @param self Konsole__FilterObject*
 /// @param callback int32_t func(Konsole__FilterObject* self)
 ///
-void k_onsole__filterobject_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_onsole__filterobject_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4222,10 +4222,10 @@ int32_t k_onsole__filterobject_super_receivers(const void* self, const char* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__FilterObject*
+/// @param self Konsole__FilterObject*
 /// @param callback int32_t func(Konsole__FilterObject* self, const char* signal)
 ///
-void k_onsole__filterobject_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_onsole__filterobject_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4255,10 +4255,10 @@ bool k_onsole__filterobject_super_is_signal_connected(const void* self, const vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const Konsole__FilterObject*
+/// @param self Konsole__FilterObject*
 /// @param callback bool func(Konsole__FilterObject* self, QMetaMethod* signal)
 ///
-void k_onsole__filterobject_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_onsole__filterobject_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

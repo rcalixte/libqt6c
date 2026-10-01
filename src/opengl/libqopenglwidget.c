@@ -32,7 +32,7 @@ const QMetaObject* q_openglwidget_meta_object(const void* self) {
     return QOpenGLWidget_MetaObject((QOpenGLWidget*)self);
 }
 
-void q_openglwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_openglwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QOpenGLWidget_OnMetaObject((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
@@ -239,7 +239,7 @@ int32_t q_openglwidget_metric(const void* self, int32_t metric) {
     return QOpenGLWidget_Metric((QOpenGLWidget*)self, metric);
 }
 
-void q_openglwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
+void q_openglwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
     QOpenGLWidget_OnMetric((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
@@ -251,7 +251,7 @@ QPaintDevice* q_openglwidget_redirected(const void* self, void* p) {
     return QOpenGLWidget_Redirected((QOpenGLWidget*)self, (QPoint*)p);
 }
 
-void q_openglwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
+void q_openglwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
     QOpenGLWidget_OnRedirected((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
@@ -263,7 +263,7 @@ QPaintEngine* q_openglwidget_paint_engine(const void* self) {
     return QOpenGLWidget_PaintEngine((QOpenGLWidget*)self);
 }
 
-void q_openglwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
+void q_openglwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
     QOpenGLWidget_OnPaintEngine((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
@@ -285,11 +285,11 @@ const char* q_openglwidget_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_openglwidget_as_q_paint_device(void* self) {
+QPaintDevice* q_openglwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QOpenGLWidget* q_openglwidget_from_q_paint_device(void* _qpaintdevice) {
+QOpenGLWidget* q_openglwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (QOpenGLWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1680,8 +1680,8 @@ int32_t q_openglwidget_super_dev_type(const void* self) {
     return QOpenGLWidget_SuperDevType((QOpenGLWidget*)self);
 }
 
-void q_openglwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QOpenGLWidget_OnDevType((const QOpenGLWidget*)self, (intptr_t)callback);
+void q_openglwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QOpenGLWidget_OnDevType((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
 void q_openglwidget_set_visible(void* self, bool visible) {
@@ -1704,8 +1704,8 @@ QSize* q_openglwidget_super_size_hint(const void* self) {
     return QOpenGLWidget_SuperSizeHint((QOpenGLWidget*)self);
 }
 
-void q_openglwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QOpenGLWidget_OnSizeHint((const QOpenGLWidget*)self, (intptr_t)callback);
+void q_openglwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QOpenGLWidget_OnSizeHint((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
 QSize* q_openglwidget_minimum_size_hint(const void* self) {
@@ -1716,8 +1716,8 @@ QSize* q_openglwidget_super_minimum_size_hint(const void* self) {
     return QOpenGLWidget_SuperMinimumSizeHint((QOpenGLWidget*)self);
 }
 
-void q_openglwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QOpenGLWidget_OnMinimumSizeHint((const QOpenGLWidget*)self, (intptr_t)callback);
+void q_openglwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QOpenGLWidget_OnMinimumSizeHint((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_openglwidget_height_for_width(const void* self, int param1) {
@@ -1728,8 +1728,8 @@ int32_t q_openglwidget_super_height_for_width(const void* self, int param1) {
     return QOpenGLWidget_SuperHeightForWidth((QOpenGLWidget*)self, param1);
 }
 
-void q_openglwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QOpenGLWidget_OnHeightForWidth((const QOpenGLWidget*)self, (intptr_t)callback);
+void q_openglwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QOpenGLWidget_OnHeightForWidth((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
 bool q_openglwidget_has_height_for_width(const void* self) {
@@ -1740,8 +1740,8 @@ bool q_openglwidget_super_has_height_for_width(const void* self) {
     return QOpenGLWidget_SuperHasHeightForWidth((QOpenGLWidget*)self);
 }
 
-void q_openglwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QOpenGLWidget_OnHasHeightForWidth((const QOpenGLWidget*)self, (intptr_t)callback);
+void q_openglwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QOpenGLWidget_OnHasHeightForWidth((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
 void q_openglwidget_mouse_press_event(void* self, void* event) {
@@ -2040,8 +2040,8 @@ void q_openglwidget_super_init_painter(const void* self, void* painter) {
     QOpenGLWidget_SuperInitPainter((QOpenGLWidget*)self, (QPainter*)painter);
 }
 
-void q_openglwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QOpenGLWidget_OnInitPainter((const QOpenGLWidget*)self, (intptr_t)callback);
+void q_openglwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QOpenGLWidget_OnInitPainter((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
 QPainter* q_openglwidget_shared_painter(const void* self) {
@@ -2052,8 +2052,8 @@ QPainter* q_openglwidget_super_shared_painter(const void* self) {
     return QOpenGLWidget_SuperSharedPainter((QOpenGLWidget*)self);
 }
 
-void q_openglwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QOpenGLWidget_OnSharedPainter((const QOpenGLWidget*)self, (intptr_t)callback);
+void q_openglwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QOpenGLWidget_OnSharedPainter((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
 void q_openglwidget_input_method_event(void* self, void* param1) {
@@ -2076,8 +2076,8 @@ QVariant* q_openglwidget_super_input_method_query(const void* self, int32_t para
     return QOpenGLWidget_SuperInputMethodQuery((QOpenGLWidget*)self, param1);
 }
 
-void q_openglwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QOpenGLWidget_OnInputMethodQuery((const QOpenGLWidget*)self, (intptr_t)callback);
+void q_openglwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QOpenGLWidget_OnInputMethodQuery((QOpenGLWidget*)self, (intptr_t)callback);
 }
 
 bool q_openglwidget_focus_next_prev_child(void* self, bool next) {

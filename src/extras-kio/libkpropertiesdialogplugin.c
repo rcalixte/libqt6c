@@ -13,7 +13,7 @@ const QMetaObject* k_propertiesdialogplugin_meta_object(const void* self) {
     return KPropertiesDialogPlugin_MetaObject((KPropertiesDialogPlugin*)self);
 }
 
-void k_propertiesdialogplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_propertiesdialogplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPropertiesDialogPlugin_OnMetaObject((KPropertiesDialogPlugin*)self, (intptr_t)callback);
 }
 

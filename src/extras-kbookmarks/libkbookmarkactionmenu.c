@@ -19,11 +19,11 @@ KBookmarkActionMenu* k_bookmarkactionmenu_new2(const void* bm, const char* text,
     return KBookmarkActionMenu_New2((KBookmark*)bm, qstring(text), (QObject*)parent);
 }
 
-KBookmarkActionInterface* k_bookmarkactionmenu_as_k_bookmark_action_interface(void* self) {
+KBookmarkActionInterface* k_bookmarkactionmenu_as_k_bookmark_action_interface(const void* self) {
     return KBookmarkActionMenu_AsKBookmarkActionInterface((KBookmarkActionMenu*)self);
 }
 
-KBookmarkActionMenu* k_bookmarkactionmenu_from_k_bookmark_action_interface(void* _kbookmarkactioninterface) {
+KBookmarkActionMenu* k_bookmarkactionmenu_from_k_bookmark_action_interface(const void* _kbookmarkactioninterface) {
     return (KBookmarkActionMenu*)KBookmarkActionMenu_FromKBookmarkActionInterface((KBookmarkActionInterface*)_kbookmarkactioninterface);
 }
 
@@ -31,7 +31,7 @@ const QMetaObject* k_bookmarkactionmenu_meta_object(const void* self) {
     return KBookmarkActionMenu_MetaObject((KBookmarkActionMenu*)self);
 }
 
-void k_bookmarkactionmenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_bookmarkactionmenu_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KBookmarkActionMenu_OnMetaObject((KBookmarkActionMenu*)self, (intptr_t)callback);
 }
 

@@ -23,7 +23,7 @@ const QMetaObject* q_sslserver_meta_object(const void* self) {
     return QSslServer_MetaObject((QSslServer*)self);
 }
 
-void q_sslserver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_sslserver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSslServer_OnMetaObject((QSslServer*)self, (intptr_t)callback);
 }
 
@@ -492,8 +492,8 @@ bool q_sslserver_super_has_pending_connections(const void* self) {
     return QSslServer_SuperHasPendingConnections((QSslServer*)self);
 }
 
-void q_sslserver_on_has_pending_connections(const void* self, bool (*callback)(const void*)) {
-    QSslServer_OnHasPendingConnections((const QSslServer*)self, (intptr_t)callback);
+void q_sslserver_on_has_pending_connections(void* self, bool (*callback)(const void*)) {
+    QSslServer_OnHasPendingConnections((QSslServer*)self, (intptr_t)callback);
 }
 
 QTcpSocket* q_sslserver_next_pending_connection(void* self) {

@@ -11,7 +11,7 @@ bool q_designerformeditorplugininterface_is_initialized(const void* self) {
     return QDesignerFormEditorPluginInterface_IsInitialized((QDesignerFormEditorPluginInterface*)self);
 }
 
-void q_designerformeditorplugininterface_on_is_initialized(const void* self, bool (*callback)(const void*)) {
+void q_designerformeditorplugininterface_on_is_initialized(void* self, bool (*callback)(const void*)) {
     QDesignerFormEditorPluginInterface_OnIsInitialized((QDesignerFormEditorPluginInterface*)self, (intptr_t)callback);
 }
 
@@ -27,7 +27,7 @@ QAction* q_designerformeditorplugininterface_action(const void* self) {
     return QDesignerFormEditorPluginInterface_Action((QDesignerFormEditorPluginInterface*)self);
 }
 
-void q_designerformeditorplugininterface_on_action(const void* self, QAction* (*callback)(const void*)) {
+void q_designerformeditorplugininterface_on_action(void* self, QAction* (*callback)(const void*)) {
     QDesignerFormEditorPluginInterface_OnAction((QDesignerFormEditorPluginInterface*)self, (intptr_t)callback);
 }
 
@@ -35,7 +35,7 @@ QDesignerFormEditorInterface* q_designerformeditorplugininterface_core(const voi
     return QDesignerFormEditorPluginInterface_Core((QDesignerFormEditorPluginInterface*)self);
 }
 
-void q_designerformeditorplugininterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
+void q_designerformeditorplugininterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)(const void*)) {
     QDesignerFormEditorPluginInterface_OnCore((QDesignerFormEditorPluginInterface*)self, (intptr_t)callback);
 }
 

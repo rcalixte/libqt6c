@@ -89,8 +89,8 @@ QEvent* k_parts__openurlevent_super_clone(const void* self) {
     return KParts__OpenUrlEvent_SuperClone((KParts__OpenUrlEvent*)self);
 }
 
-void k_parts__openurlevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
-    KParts__OpenUrlEvent_OnClone((const KParts__OpenUrlEvent*)self, (intptr_t)callback);
+void k_parts__openurlevent_on_clone(void* self, QEvent* (*callback)(const void*)) {
+    KParts__OpenUrlEvent_OnClone((KParts__OpenUrlEvent*)self, (intptr_t)callback);
 }
 
 void k_parts__openurlevent_delete(void* self) {

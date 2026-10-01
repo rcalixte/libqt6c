@@ -27,7 +27,7 @@ const QMetaObject* q_rubberband_meta_object(const void* self) {
     return QRubberBand_MetaObject((QRubberBand*)self);
 }
 
-void q_rubberband_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_rubberband_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QRubberBand_OnMetaObject((QRubberBand*)self, (intptr_t)callback);
 }
 
@@ -170,7 +170,7 @@ void q_rubberband_init_style_option(const void* self, void* option) {
     QRubberBand_InitStyleOption((QRubberBand*)self, (QStyleOptionRubberBand*)option);
 }
 
-void q_rubberband_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+void q_rubberband_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
     QRubberBand_OnInitStyleOption((QRubberBand*)self, (intptr_t)callback);
 }
 
@@ -192,11 +192,11 @@ const char* q_rubberband_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* q_rubberband_as_q_paint_device(void* self) {
+QPaintDevice* q_rubberband_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QRubberBand* q_rubberband_from_q_paint_device(void* _qpaintdevice) {
+QRubberBand* q_rubberband_from_q_paint_device(const void* _qpaintdevice) {
     return (QRubberBand*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1563,8 +1563,8 @@ int32_t q_rubberband_super_dev_type(const void* self) {
     return QRubberBand_SuperDevType((QRubberBand*)self);
 }
 
-void q_rubberband_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QRubberBand_OnDevType((const QRubberBand*)self, (intptr_t)callback);
+void q_rubberband_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QRubberBand_OnDevType((QRubberBand*)self, (intptr_t)callback);
 }
 
 void q_rubberband_set_visible(void* self, bool visible) {
@@ -1587,8 +1587,8 @@ QSize* q_rubberband_super_size_hint(const void* self) {
     return QRubberBand_SuperSizeHint((QRubberBand*)self);
 }
 
-void q_rubberband_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QRubberBand_OnSizeHint((const QRubberBand*)self, (intptr_t)callback);
+void q_rubberband_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QRubberBand_OnSizeHint((QRubberBand*)self, (intptr_t)callback);
 }
 
 QSize* q_rubberband_minimum_size_hint(const void* self) {
@@ -1599,8 +1599,8 @@ QSize* q_rubberband_super_minimum_size_hint(const void* self) {
     return QRubberBand_SuperMinimumSizeHint((QRubberBand*)self);
 }
 
-void q_rubberband_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QRubberBand_OnMinimumSizeHint((const QRubberBand*)self, (intptr_t)callback);
+void q_rubberband_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QRubberBand_OnMinimumSizeHint((QRubberBand*)self, (intptr_t)callback);
 }
 
 int32_t q_rubberband_height_for_width(const void* self, int param1) {
@@ -1611,8 +1611,8 @@ int32_t q_rubberband_super_height_for_width(const void* self, int param1) {
     return QRubberBand_SuperHeightForWidth((QRubberBand*)self, param1);
 }
 
-void q_rubberband_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QRubberBand_OnHeightForWidth((const QRubberBand*)self, (intptr_t)callback);
+void q_rubberband_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QRubberBand_OnHeightForWidth((QRubberBand*)self, (intptr_t)callback);
 }
 
 bool q_rubberband_has_height_for_width(const void* self) {
@@ -1623,8 +1623,8 @@ bool q_rubberband_super_has_height_for_width(const void* self) {
     return QRubberBand_SuperHasHeightForWidth((QRubberBand*)self);
 }
 
-void q_rubberband_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QRubberBand_OnHasHeightForWidth((const QRubberBand*)self, (intptr_t)callback);
+void q_rubberband_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QRubberBand_OnHasHeightForWidth((QRubberBand*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_rubberband_paint_engine(const void* self) {
@@ -1635,8 +1635,8 @@ QPaintEngine* q_rubberband_super_paint_engine(const void* self) {
     return QRubberBand_SuperPaintEngine((QRubberBand*)self);
 }
 
-void q_rubberband_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QRubberBand_OnPaintEngine((const QRubberBand*)self, (intptr_t)callback);
+void q_rubberband_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QRubberBand_OnPaintEngine((QRubberBand*)self, (intptr_t)callback);
 }
 
 void q_rubberband_mouse_press_event(void* self, void* event) {
@@ -1899,8 +1899,8 @@ int32_t q_rubberband_super_metric(const void* self, int32_t param1) {
     return QRubberBand_SuperMetric((QRubberBand*)self, param1);
 }
 
-void q_rubberband_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QRubberBand_OnMetric((const QRubberBand*)self, (intptr_t)callback);
+void q_rubberband_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QRubberBand_OnMetric((QRubberBand*)self, (intptr_t)callback);
 }
 
 void q_rubberband_init_painter(const void* self, void* painter) {
@@ -1911,8 +1911,8 @@ void q_rubberband_super_init_painter(const void* self, void* painter) {
     QRubberBand_SuperInitPainter((QRubberBand*)self, (QPainter*)painter);
 }
 
-void q_rubberband_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QRubberBand_OnInitPainter((const QRubberBand*)self, (intptr_t)callback);
+void q_rubberband_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QRubberBand_OnInitPainter((QRubberBand*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_rubberband_redirected(const void* self, void* offset) {
@@ -1923,8 +1923,8 @@ QPaintDevice* q_rubberband_super_redirected(const void* self, void* offset) {
     return QRubberBand_SuperRedirected((QRubberBand*)self, (QPoint*)offset);
 }
 
-void q_rubberband_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QRubberBand_OnRedirected((const QRubberBand*)self, (intptr_t)callback);
+void q_rubberband_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QRubberBand_OnRedirected((QRubberBand*)self, (intptr_t)callback);
 }
 
 QPainter* q_rubberband_shared_painter(const void* self) {
@@ -1935,8 +1935,8 @@ QPainter* q_rubberband_super_shared_painter(const void* self) {
     return QRubberBand_SuperSharedPainter((QRubberBand*)self);
 }
 
-void q_rubberband_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QRubberBand_OnSharedPainter((const QRubberBand*)self, (intptr_t)callback);
+void q_rubberband_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QRubberBand_OnSharedPainter((QRubberBand*)self, (intptr_t)callback);
 }
 
 void q_rubberband_input_method_event(void* self, void* param1) {
@@ -1959,8 +1959,8 @@ QVariant* q_rubberband_super_input_method_query(const void* self, int32_t param1
     return QRubberBand_SuperInputMethodQuery((QRubberBand*)self, param1);
 }
 
-void q_rubberband_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QRubberBand_OnInputMethodQuery((const QRubberBand*)self, (intptr_t)callback);
+void q_rubberband_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QRubberBand_OnInputMethodQuery((QRubberBand*)self, (intptr_t)callback);
 }
 
 bool q_rubberband_focus_next_prev_child(void* self, bool next) {

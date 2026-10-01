@@ -32,10 +32,10 @@ const QMetaObject* k_texttranslator__translatormenu_meta_object(const void* self
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextTranslator__TranslatorMenu*
+/// @param self TextTranslator__TranslatorMenu*
 /// @param callback const QMetaObject* func(const TextTranslator__TranslatorMenu* self)
 ///
-void k_texttranslator__translatormenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_texttranslator__translatormenu_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextTranslator_1_1TranslatorMenu.html)
 ///
@@ -867,10 +867,10 @@ QObject* k_texttranslator__translatormenu_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorMenu*
+/// @param self TextTranslator__TranslatorMenu*
 /// @param callback QObject* func(TextTranslator__TranslatorMenu* self)
 ///
-void k_texttranslator__translatormenu_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_texttranslator__translatormenu_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -898,10 +898,10 @@ int32_t k_texttranslator__translatormenu_super_sender_signal_index(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorMenu*
+/// @param self TextTranslator__TranslatorMenu*
 /// @param callback int32_t func(TextTranslator__TranslatorMenu* self)
 ///
-void k_texttranslator__translatormenu_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_texttranslator__translatormenu_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -931,10 +931,10 @@ int32_t k_texttranslator__translatormenu_super_receivers(const void* self, const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorMenu*
+/// @param self TextTranslator__TranslatorMenu*
 /// @param callback int32_t func(TextTranslator__TranslatorMenu* self, const char* signal)
 ///
-void k_texttranslator__translatormenu_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_texttranslator__translatormenu_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -964,10 +964,10 @@ bool k_texttranslator__translatormenu_super_is_signal_connected(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextTranslator__TranslatorMenu*
+/// @param self TextTranslator__TranslatorMenu*
 /// @param callback bool func(TextTranslator__TranslatorMenu* self, QMetaMethod* signal)
 ///
-void k_texttranslator__translatormenu_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_texttranslator__translatormenu_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

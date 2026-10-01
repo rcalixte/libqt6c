@@ -27,7 +27,7 @@ const QMetaObject* k_textgrammarcheck__grammarresultwidget_meta_object(const voi
     return TextGrammarCheck__GrammarResultWidget_MetaObject((TextGrammarCheck__GrammarResultWidget*)self);
 }
 
-void k_textgrammarcheck__grammarresultwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textgrammarcheck__grammarresultwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextGrammarCheck__GrammarResultWidget_OnMetaObject((TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
 }
 
@@ -140,11 +140,11 @@ const char* k_textgrammarcheck__grammarresultwidget_tr3(const char* s, const cha
     return _ret;
 }
 
-QPaintDevice* k_textgrammarcheck__grammarresultwidget_as_q_paint_device(void* self) {
+QPaintDevice* k_textgrammarcheck__grammarresultwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextGrammarCheck__GrammarResultWidget* k_textgrammarcheck__grammarresultwidget_from_q_paint_device(void* _qpaintdevice) {
+TextGrammarCheck__GrammarResultWidget* k_textgrammarcheck__grammarresultwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (TextGrammarCheck__GrammarResultWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1535,8 +1535,8 @@ int32_t k_textgrammarcheck__grammarresultwidget_super_dev_type(const void* self)
     return TextGrammarCheck__GrammarResultWidget_SuperDevType((TextGrammarCheck__GrammarResultWidget*)self);
 }
 
-void k_textgrammarcheck__grammarresultwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextGrammarCheck__GrammarResultWidget_OnDevType((const TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__grammarresultwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextGrammarCheck__GrammarResultWidget_OnDevType((TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__grammarresultwidget_set_visible(void* self, bool visible) {
@@ -1559,8 +1559,8 @@ QSize* k_textgrammarcheck__grammarresultwidget_super_size_hint(const void* self)
     return TextGrammarCheck__GrammarResultWidget_SuperSizeHint((TextGrammarCheck__GrammarResultWidget*)self);
 }
 
-void k_textgrammarcheck__grammarresultwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextGrammarCheck__GrammarResultWidget_OnSizeHint((const TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__grammarresultwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextGrammarCheck__GrammarResultWidget_OnSizeHint((TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
 }
 
 QSize* k_textgrammarcheck__grammarresultwidget_minimum_size_hint(const void* self) {
@@ -1571,8 +1571,8 @@ QSize* k_textgrammarcheck__grammarresultwidget_super_minimum_size_hint(const voi
     return TextGrammarCheck__GrammarResultWidget_SuperMinimumSizeHint((TextGrammarCheck__GrammarResultWidget*)self);
 }
 
-void k_textgrammarcheck__grammarresultwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextGrammarCheck__GrammarResultWidget_OnMinimumSizeHint((const TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__grammarresultwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextGrammarCheck__GrammarResultWidget_OnMinimumSizeHint((TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
 }
 
 int32_t k_textgrammarcheck__grammarresultwidget_height_for_width(const void* self, int param1) {
@@ -1583,8 +1583,8 @@ int32_t k_textgrammarcheck__grammarresultwidget_super_height_for_width(const voi
     return TextGrammarCheck__GrammarResultWidget_SuperHeightForWidth((TextGrammarCheck__GrammarResultWidget*)self, param1);
 }
 
-void k_textgrammarcheck__grammarresultwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextGrammarCheck__GrammarResultWidget_OnHeightForWidth((const TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__grammarresultwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextGrammarCheck__GrammarResultWidget_OnHeightForWidth((TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
 }
 
 bool k_textgrammarcheck__grammarresultwidget_has_height_for_width(const void* self) {
@@ -1595,8 +1595,8 @@ bool k_textgrammarcheck__grammarresultwidget_super_has_height_for_width(const vo
     return TextGrammarCheck__GrammarResultWidget_SuperHasHeightForWidth((TextGrammarCheck__GrammarResultWidget*)self);
 }
 
-void k_textgrammarcheck__grammarresultwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextGrammarCheck__GrammarResultWidget_OnHasHeightForWidth((const TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__grammarresultwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextGrammarCheck__GrammarResultWidget_OnHasHeightForWidth((TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textgrammarcheck__grammarresultwidget_paint_engine(const void* self) {
@@ -1607,8 +1607,8 @@ QPaintEngine* k_textgrammarcheck__grammarresultwidget_super_paint_engine(const v
     return TextGrammarCheck__GrammarResultWidget_SuperPaintEngine((TextGrammarCheck__GrammarResultWidget*)self);
 }
 
-void k_textgrammarcheck__grammarresultwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextGrammarCheck__GrammarResultWidget_OnPaintEngine((const TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__grammarresultwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextGrammarCheck__GrammarResultWidget_OnPaintEngine((TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
 }
 
 bool k_textgrammarcheck__grammarresultwidget_event(void* self, void* event) {
@@ -1943,8 +1943,8 @@ int32_t k_textgrammarcheck__grammarresultwidget_super_metric(const void* self, i
     return TextGrammarCheck__GrammarResultWidget_SuperMetric((TextGrammarCheck__GrammarResultWidget*)self, param1);
 }
 
-void k_textgrammarcheck__grammarresultwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextGrammarCheck__GrammarResultWidget_OnMetric((const TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__grammarresultwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextGrammarCheck__GrammarResultWidget_OnMetric((TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__grammarresultwidget_init_painter(const void* self, void* painter) {
@@ -1955,8 +1955,8 @@ void k_textgrammarcheck__grammarresultwidget_super_init_painter(const void* self
     TextGrammarCheck__GrammarResultWidget_SuperInitPainter((TextGrammarCheck__GrammarResultWidget*)self, (QPainter*)painter);
 }
 
-void k_textgrammarcheck__grammarresultwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextGrammarCheck__GrammarResultWidget_OnInitPainter((const TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__grammarresultwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextGrammarCheck__GrammarResultWidget_OnInitPainter((TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textgrammarcheck__grammarresultwidget_redirected(const void* self, void* offset) {
@@ -1967,8 +1967,8 @@ QPaintDevice* k_textgrammarcheck__grammarresultwidget_super_redirected(const voi
     return TextGrammarCheck__GrammarResultWidget_SuperRedirected((TextGrammarCheck__GrammarResultWidget*)self, (QPoint*)offset);
 }
 
-void k_textgrammarcheck__grammarresultwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextGrammarCheck__GrammarResultWidget_OnRedirected((const TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__grammarresultwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextGrammarCheck__GrammarResultWidget_OnRedirected((TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
 }
 
 QPainter* k_textgrammarcheck__grammarresultwidget_shared_painter(const void* self) {
@@ -1979,8 +1979,8 @@ QPainter* k_textgrammarcheck__grammarresultwidget_super_shared_painter(const voi
     return TextGrammarCheck__GrammarResultWidget_SuperSharedPainter((TextGrammarCheck__GrammarResultWidget*)self);
 }
 
-void k_textgrammarcheck__grammarresultwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextGrammarCheck__GrammarResultWidget_OnSharedPainter((const TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__grammarresultwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextGrammarCheck__GrammarResultWidget_OnSharedPainter((TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__grammarresultwidget_input_method_event(void* self, void* param1) {
@@ -2003,8 +2003,8 @@ QVariant* k_textgrammarcheck__grammarresultwidget_super_input_method_query(const
     return TextGrammarCheck__GrammarResultWidget_SuperInputMethodQuery((TextGrammarCheck__GrammarResultWidget*)self, param1);
 }
 
-void k_textgrammarcheck__grammarresultwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextGrammarCheck__GrammarResultWidget_OnInputMethodQuery((const TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__grammarresultwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextGrammarCheck__GrammarResultWidget_OnInputMethodQuery((TextGrammarCheck__GrammarResultWidget*)self, (intptr_t)callback);
 }
 
 bool k_textgrammarcheck__grammarresultwidget_focus_next_prev_child(void* self, bool next) {

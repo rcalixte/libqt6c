@@ -25,7 +25,7 @@ const QMetaObject* q_socketnotifier_meta_object(const void* self) {
     return QSocketNotifier_MetaObject((QSocketNotifier*)self);
 }
 
-void q_socketnotifier_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_socketnotifier_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSocketNotifier_OnMetaObject((QSocketNotifier*)self, (intptr_t)callback);
 }
 

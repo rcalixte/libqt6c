@@ -33,9 +33,9 @@ KTextEditor__Attribute* k_texteditor__attribute_new3(const void* a);
 
 /// Upcasts to a QSharedData object
 ///
-/// @param self KTextEditor__Attribute*
+/// @param self const KTextEditor__Attribute*
 ///
-QSharedData* k_texteditor__attribute_as_q_shared_data(void* self);
+QSharedData* k_texteditor__attribute_as_q_shared_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-attribute.html#name)
 ///

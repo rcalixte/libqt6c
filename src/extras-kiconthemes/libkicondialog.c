@@ -26,7 +26,7 @@ const QMetaObject* k_icondialog_meta_object(const void* self) {
     return KIconDialog_MetaObject((KIconDialog*)self);
 }
 
-void k_icondialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_icondialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIconDialog_OnMetaObject((KIconDialog*)self, (intptr_t)callback);
 }
 
@@ -266,11 +266,11 @@ void k_icondialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_icondialog_as_q_paint_device(void* self) {
+QPaintDevice* k_icondialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KIconDialog* k_icondialog_from_q_paint_device(void* _qpaintdevice) {
+KIconDialog* k_icondialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KIconDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1673,8 +1673,8 @@ QSize* k_icondialog_super_size_hint(const void* self) {
     return KIconDialog_SuperSizeHint((KIconDialog*)self);
 }
 
-void k_icondialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KIconDialog_OnSizeHint((const KIconDialog*)self, (intptr_t)callback);
+void k_icondialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KIconDialog_OnSizeHint((KIconDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_icondialog_minimum_size_hint(const void* self) {
@@ -1685,8 +1685,8 @@ QSize* k_icondialog_super_minimum_size_hint(const void* self) {
     return KIconDialog_SuperMinimumSizeHint((KIconDialog*)self);
 }
 
-void k_icondialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KIconDialog_OnMinimumSizeHint((const KIconDialog*)self, (intptr_t)callback);
+void k_icondialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KIconDialog_OnMinimumSizeHint((KIconDialog*)self, (intptr_t)callback);
 }
 
 void k_icondialog_open(void* self) {
@@ -1817,8 +1817,8 @@ int32_t k_icondialog_super_dev_type(const void* self) {
     return KIconDialog_SuperDevType((KIconDialog*)self);
 }
 
-void k_icondialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KIconDialog_OnDevType((const KIconDialog*)self, (intptr_t)callback);
+void k_icondialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KIconDialog_OnDevType((KIconDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_icondialog_height_for_width(const void* self, int param1) {
@@ -1829,8 +1829,8 @@ int32_t k_icondialog_super_height_for_width(const void* self, int param1) {
     return KIconDialog_SuperHeightForWidth((KIconDialog*)self, param1);
 }
 
-void k_icondialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KIconDialog_OnHeightForWidth((const KIconDialog*)self, (intptr_t)callback);
+void k_icondialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KIconDialog_OnHeightForWidth((KIconDialog*)self, (intptr_t)callback);
 }
 
 bool k_icondialog_has_height_for_width(const void* self) {
@@ -1841,8 +1841,8 @@ bool k_icondialog_super_has_height_for_width(const void* self) {
     return KIconDialog_SuperHasHeightForWidth((KIconDialog*)self);
 }
 
-void k_icondialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KIconDialog_OnHasHeightForWidth((const KIconDialog*)self, (intptr_t)callback);
+void k_icondialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KIconDialog_OnHasHeightForWidth((KIconDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_icondialog_paint_engine(const void* self) {
@@ -1853,8 +1853,8 @@ QPaintEngine* k_icondialog_super_paint_engine(const void* self) {
     return KIconDialog_SuperPaintEngine((KIconDialog*)self);
 }
 
-void k_icondialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KIconDialog_OnPaintEngine((const KIconDialog*)self, (intptr_t)callback);
+void k_icondialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KIconDialog_OnPaintEngine((KIconDialog*)self, (intptr_t)callback);
 }
 
 bool k_icondialog_event(void* self, void* event) {
@@ -2129,8 +2129,8 @@ int32_t k_icondialog_super_metric(const void* self, int32_t param1) {
     return KIconDialog_SuperMetric((KIconDialog*)self, param1);
 }
 
-void k_icondialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KIconDialog_OnMetric((const KIconDialog*)self, (intptr_t)callback);
+void k_icondialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KIconDialog_OnMetric((KIconDialog*)self, (intptr_t)callback);
 }
 
 void k_icondialog_init_painter(const void* self, void* painter) {
@@ -2141,8 +2141,8 @@ void k_icondialog_super_init_painter(const void* self, void* painter) {
     KIconDialog_SuperInitPainter((KIconDialog*)self, (QPainter*)painter);
 }
 
-void k_icondialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KIconDialog_OnInitPainter((const KIconDialog*)self, (intptr_t)callback);
+void k_icondialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KIconDialog_OnInitPainter((KIconDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_icondialog_redirected(const void* self, void* offset) {
@@ -2153,8 +2153,8 @@ QPaintDevice* k_icondialog_super_redirected(const void* self, void* offset) {
     return KIconDialog_SuperRedirected((KIconDialog*)self, (QPoint*)offset);
 }
 
-void k_icondialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KIconDialog_OnRedirected((const KIconDialog*)self, (intptr_t)callback);
+void k_icondialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KIconDialog_OnRedirected((KIconDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_icondialog_shared_painter(const void* self) {
@@ -2165,8 +2165,8 @@ QPainter* k_icondialog_super_shared_painter(const void* self) {
     return KIconDialog_SuperSharedPainter((KIconDialog*)self);
 }
 
-void k_icondialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KIconDialog_OnSharedPainter((const KIconDialog*)self, (intptr_t)callback);
+void k_icondialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KIconDialog_OnSharedPainter((KIconDialog*)self, (intptr_t)callback);
 }
 
 void k_icondialog_input_method_event(void* self, void* param1) {
@@ -2189,8 +2189,8 @@ QVariant* k_icondialog_super_input_method_query(const void* self, int32_t param1
     return KIconDialog_SuperInputMethodQuery((KIconDialog*)self, param1);
 }
 
-void k_icondialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KIconDialog_OnInputMethodQuery((const KIconDialog*)self, (intptr_t)callback);
+void k_icondialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KIconDialog_OnInputMethodQuery((KIconDialog*)self, (intptr_t)callback);
 }
 
 bool k_icondialog_focus_next_prev_child(void* self, bool next) {

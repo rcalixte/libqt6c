@@ -56,7 +56,7 @@ const QMetaObject* q_quickview_meta_object(const void* self) {
     return QQuickView_MetaObject((QQuickView*)self);
 }
 
-void q_quickview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quickview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickView_OnMetaObject((QQuickView*)self, (intptr_t)callback);
 }
 
@@ -589,11 +589,11 @@ void q_quickview_release_resources(void* self) {
     QQuickWindow_ReleaseResources((QQuickWindow*)self);
 }
 
-QSurface* q_quickview_as_q_surface(void* self) {
+QSurface* q_quickview_as_q_surface(const void* self) {
     return QWindow_AsQSurface((QWindow*)self);
 }
 
-QQuickView* q_quickview_from_q_surface(void* _qsurface) {
+QQuickView* q_quickview_from_q_surface(const void* _qsurface) {
     return (QQuickView*)QWindow_FromQSurface((QSurface*)_qsurface);
 }
 
@@ -1404,8 +1404,8 @@ QObject* q_quickview_super_focus_object(const void* self) {
     return QQuickView_SuperFocusObject((QQuickView*)self);
 }
 
-void q_quickview_on_focus_object(const void* self, QObject* (*callback)(const void*)) {
-    QQuickView_OnFocusObject((const QQuickView*)self, (intptr_t)callback);
+void q_quickview_on_focus_object(void* self, QObject* (*callback)(const void*)) {
+    QQuickView_OnFocusObject((QQuickView*)self, (intptr_t)callback);
 }
 
 QAccessibleInterface* q_quickview_accessible_root(const void* self) {
@@ -1416,8 +1416,8 @@ QAccessibleInterface* q_quickview_super_accessible_root(const void* self) {
     return QQuickView_SuperAccessibleRoot((QQuickView*)self);
 }
 
-void q_quickview_on_accessible_root(const void* self, QAccessibleInterface* (*callback)(const void*)) {
-    QQuickView_OnAccessibleRoot((const QQuickView*)self, (intptr_t)callback);
+void q_quickview_on_accessible_root(void* self, QAccessibleInterface* (*callback)(const void*)) {
+    QQuickView_OnAccessibleRoot((QQuickView*)self, (intptr_t)callback);
 }
 
 void q_quickview_expose_event(void* self, void* param1) {
@@ -1548,8 +1548,8 @@ int32_t q_quickview_super_surface_type(const void* self) {
     return QQuickView_SuperSurfaceType((QQuickView*)self);
 }
 
-void q_quickview_on_surface_type(const void* self, int32_t (*callback)(const void*)) {
-    QQuickView_OnSurfaceType((const QQuickView*)self, (intptr_t)callback);
+void q_quickview_on_surface_type(void* self, int32_t (*callback)(const void*)) {
+    QQuickView_OnSurfaceType((QQuickView*)self, (intptr_t)callback);
 }
 
 QSurfaceFormat* q_quickview_format(const void* self) {
@@ -1560,8 +1560,8 @@ QSurfaceFormat* q_quickview_super_format(const void* self) {
     return QQuickView_SuperFormat((QQuickView*)self);
 }
 
-void q_quickview_on_format(const void* self, QSurfaceFormat* (*callback)(const void*)) {
-    QQuickView_OnFormat((const QQuickView*)self, (intptr_t)callback);
+void q_quickview_on_format(void* self, QSurfaceFormat* (*callback)(const void*)) {
+    QQuickView_OnFormat((QQuickView*)self, (intptr_t)callback);
 }
 
 QSize* q_quickview_size(const void* self) {
@@ -1572,8 +1572,8 @@ QSize* q_quickview_super_size(const void* self) {
     return QQuickView_SuperSize((QQuickView*)self);
 }
 
-void q_quickview_on_size(const void* self, QSize* (*callback)(const void*)) {
-    QQuickView_OnSize((const QQuickView*)self, (intptr_t)callback);
+void q_quickview_on_size(void* self, QSize* (*callback)(const void*)) {
+    QQuickView_OnSize((QQuickView*)self, (intptr_t)callback);
 }
 
 void q_quickview_paint_event(void* self, void* param1) {

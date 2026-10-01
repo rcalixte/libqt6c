@@ -26,7 +26,7 @@ const QMetaObject* k_sonnet__backgroundchecker_meta_object(const void* self) {
     return Sonnet__BackgroundChecker_MetaObject((Sonnet__BackgroundChecker*)self);
 }
 
-void k_sonnet__backgroundchecker_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_sonnet__backgroundchecker_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Sonnet__BackgroundChecker_OnMetaObject((Sonnet__BackgroundChecker*)self, (intptr_t)callback);
 }
 

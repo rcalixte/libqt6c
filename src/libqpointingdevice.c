@@ -80,7 +80,7 @@ const QMetaObject* q_pointingdevice_meta_object(const void* self) {
     return QPointingDevice_MetaObject((QPointingDevice*)self);
 }
 
-void q_pointingdevice_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pointingdevice_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPointingDevice_OnMetaObject((QPointingDevice*)self, (intptr_t)callback);
 }
 
@@ -159,8 +159,8 @@ void q_pointingdevice_grab_changed(const void* self, void* grabber, int32_t tran
     QPointingDevice_GrabChanged((QPointingDevice*)self, (QObject*)grabber, transition, (QPointerEvent*)event, (QEventPoint*)point);
 }
 
-void q_pointingdevice_on_grab_changed(const void* self, void (*callback)(const void*, void*, int32_t, const void*, const void*)) {
-    QPointingDevice_Connect_GrabChanged((const QPointingDevice*)self, (intptr_t)callback);
+void q_pointingdevice_on_grab_changed(void* self, void (*callback)(const void*, void*, int32_t, const void*, const void*)) {
+    QPointingDevice_Connect_GrabChanged((QPointingDevice*)self, (intptr_t)callback);
 }
 
 const char* q_pointingdevice_tr2(const char* s, const char* c) {

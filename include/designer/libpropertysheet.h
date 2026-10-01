@@ -26,10 +26,10 @@ int32_t q_designerpropertysheetextension_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertySheetExtension*
+/// @param self QDesignerPropertySheetExtension*
 /// @param callback int32_t func(const QDesignerPropertySheetExtension* self)
 ///
-void q_designerpropertysheetextension_on_count(const void* self, int32_t (*callback)(const void*));
+void q_designerpropertysheetextension_on_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#indexOf)
 ///
@@ -44,10 +44,10 @@ int32_t q_designerpropertysheetextension_index_of(const void* self, const char* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertySheetExtension*
+/// @param self QDesignerPropertySheetExtension*
 /// @param callback int32_t func(const QDesignerPropertySheetExtension* self, const char* name)
 ///
-void q_designerpropertysheetextension_on_index_of(const void* self, int32_t (*callback)(const void*, const char*));
+void q_designerpropertysheetextension_on_index_of(void* self, int32_t (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#propertyName)
 ///
@@ -64,10 +64,10 @@ const char* q_designerpropertysheetextension_property_name(const void* self, int
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertySheetExtension*
+/// @param self QDesignerPropertySheetExtension*
 /// @param callback const char* func(const QDesignerPropertySheetExtension* self, int index)
 ///
-void q_designerpropertysheetextension_on_property_name(const void* self, const char* (*callback)(const void*, int));
+void q_designerpropertysheetextension_on_property_name(void* self, const char* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#propertyGroup)
 ///
@@ -84,10 +84,10 @@ const char* q_designerpropertysheetextension_property_group(const void* self, in
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertySheetExtension*
+/// @param self QDesignerPropertySheetExtension*
 /// @param callback const char* func(const QDesignerPropertySheetExtension* self, int index)
 ///
-void q_designerpropertysheetextension_on_property_group(const void* self, const char* (*callback)(const void*, int));
+void q_designerpropertysheetextension_on_property_group(void* self, const char* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#setPropertyGroup)
 ///
@@ -121,10 +121,10 @@ bool q_designerpropertysheetextension_has_reset(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertySheetExtension*
+/// @param self QDesignerPropertySheetExtension*
 /// @param callback bool func(const QDesignerPropertySheetExtension* self, int index)
 ///
-void q_designerpropertysheetextension_on_has_reset(const void* self, bool (*callback)(const void*, int));
+void q_designerpropertysheetextension_on_has_reset(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#reset)
 ///
@@ -157,10 +157,10 @@ bool q_designerpropertysheetextension_is_visible(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertySheetExtension*
+/// @param self QDesignerPropertySheetExtension*
 /// @param callback bool func(const QDesignerPropertySheetExtension* self, int index)
 ///
-void q_designerpropertysheetextension_on_is_visible(const void* self, bool (*callback)(const void*, int));
+void q_designerpropertysheetextension_on_is_visible(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#setVisible)
 ///
@@ -194,10 +194,10 @@ bool q_designerpropertysheetextension_is_attribute(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertySheetExtension*
+/// @param self QDesignerPropertySheetExtension*
 /// @param callback bool func(const QDesignerPropertySheetExtension* self, int index)
 ///
-void q_designerpropertysheetextension_on_is_attribute(const void* self, bool (*callback)(const void*, int));
+void q_designerpropertysheetextension_on_is_attribute(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#setAttribute)
 ///
@@ -231,12 +231,12 @@ QVariant* q_designerpropertysheetextension_property(const void* self, int index)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertySheetExtension*
+/// @param self QDesignerPropertySheetExtension*
 /// @param callback QVariant* func(const QDesignerPropertySheetExtension* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerpropertysheetextension_on_property(const void* self, QVariant* (*callback)(const void*, int));
+void q_designerpropertysheetextension_on_property(void* self, QVariant* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#setProperty)
 ///
@@ -270,10 +270,10 @@ bool q_designerpropertysheetextension_is_changed(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertySheetExtension*
+/// @param self QDesignerPropertySheetExtension*
 /// @param callback bool func(const QDesignerPropertySheetExtension* self, int index)
 ///
-void q_designerpropertysheetextension_on_is_changed(const void* self, bool (*callback)(const void*, int));
+void q_designerpropertysheetextension_on_is_changed(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#setChanged)
 ///
@@ -307,10 +307,10 @@ bool q_designerpropertysheetextension_is_enabled(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertySheetExtension*
+/// @param self QDesignerPropertySheetExtension*
 /// @param callback bool func(const QDesignerPropertySheetExtension* self, int index)
 ///
-void q_designerpropertysheetextension_on_is_enabled(const void* self, bool (*callback)(const void*, int));
+void q_designerpropertysheetextension_on_is_enabled(void* self, bool (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertysheetextension.html#dtor.QDesignerPropertySheetExtension)
 ///

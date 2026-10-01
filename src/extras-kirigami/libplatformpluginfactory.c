@@ -19,7 +19,7 @@ const QMetaObject* k_irigami__platform__platformpluginfactory_meta_object(const 
     return Kirigami__Platform__PlatformPluginFactory_MetaObject((Kirigami__Platform__PlatformPluginFactory*)self);
 }
 
-void k_irigami__platform__platformpluginfactory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_irigami__platform__platformpluginfactory_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Kirigami__Platform__PlatformPluginFactory_OnMetaObject((Kirigami__Platform__PlatformPluginFactory*)self, (intptr_t)callback);
 }
 

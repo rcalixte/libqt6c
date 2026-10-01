@@ -15,7 +15,7 @@ const QMetaObject* k_parts__listingfilterextension_meta_object(const void* self)
     return KParts__ListingFilterExtension_MetaObject((KParts__ListingFilterExtension*)self);
 }
 
-void k_parts__listingfilterextension_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_parts__listingfilterextension_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KParts__ListingFilterExtension_OnMetaObject((KParts__ListingFilterExtension*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ int32_t k_parts__listingfilterextension_supported_filter_modes(const void* self)
     return KParts__ListingFilterExtension_SupportedFilterModes((KParts__ListingFilterExtension*)self);
 }
 
-void k_parts__listingfilterextension_on_supported_filter_modes(const void* self, int32_t (*callback)(const void*)) {
+void k_parts__listingfilterextension_on_supported_filter_modes(void* self, int32_t (*callback)(const void*)) {
     KParts__ListingFilterExtension_OnSupportedFilterModes((KParts__ListingFilterExtension*)self, (intptr_t)callback);
 }
 
@@ -74,7 +74,7 @@ bool k_parts__listingfilterextension_supports_multiple_filters(const void* self,
     return KParts__ListingFilterExtension_SupportsMultipleFilters((KParts__ListingFilterExtension*)self, mode);
 }
 
-void k_parts__listingfilterextension_on_supports_multiple_filters(const void* self, bool (*callback)(const void*, int32_t)) {
+void k_parts__listingfilterextension_on_supports_multiple_filters(void* self, bool (*callback)(const void*, int32_t)) {
     KParts__ListingFilterExtension_OnSupportsMultipleFilters((KParts__ListingFilterExtension*)self, (intptr_t)callback);
 }
 
@@ -86,7 +86,7 @@ QVariant* k_parts__listingfilterextension_filter(const void* self, int32_t mode)
     return KParts__ListingFilterExtension_Filter((KParts__ListingFilterExtension*)self, mode);
 }
 
-void k_parts__listingfilterextension_on_filter(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+void k_parts__listingfilterextension_on_filter(void* self, QVariant* (*callback)(const void*, int32_t)) {
     KParts__ListingFilterExtension_OnFilter((KParts__ListingFilterExtension*)self, (intptr_t)callback);
 }
 

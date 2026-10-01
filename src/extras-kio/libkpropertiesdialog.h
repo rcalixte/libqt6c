@@ -124,10 +124,10 @@ const QMetaObject* k_propertiesdialog_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback const QMetaObject* func(const KPropertiesDialog* self)
 ///
-void k_propertiesdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_propertiesdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -727,9 +727,9 @@ void k_propertiesdialog_on_rejected(void* self, void (*callback)(void*));
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self KPropertiesDialog*
+/// @param self const KPropertiesDialog*
 ///
-QPaintDevice* k_propertiesdialog_as_q_paint_device(void* self);
+QPaintDevice* k_propertiesdialog_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -737,7 +737,7 @@ QPaintDevice* k_propertiesdialog_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-KPropertiesDialog* k_propertiesdialog_from_q_paint_device(void* _qpaintdevice);
+KPropertiesDialog* k_propertiesdialog_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3755,12 +3755,12 @@ QSize* k_propertiesdialog_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback QSize* func(KPropertiesDialog* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_propertiesdialog_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_propertiesdialog_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3788,12 +3788,12 @@ QSize* k_propertiesdialog_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback QSize* func(KPropertiesDialog* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_propertiesdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_propertiesdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -4116,10 +4116,10 @@ int32_t k_propertiesdialog_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback int32_t func(KPropertiesDialog* self)
 ///
-void k_propertiesdialog_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_propertiesdialog_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4149,10 +4149,10 @@ int32_t k_propertiesdialog_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback int32_t func(KPropertiesDialog* self, int param1)
 ///
-void k_propertiesdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_propertiesdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4180,10 +4180,10 @@ bool k_propertiesdialog_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback bool func(KPropertiesDialog* self)
 ///
-void k_propertiesdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_propertiesdialog_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4211,10 +4211,10 @@ QPaintEngine* k_propertiesdialog_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback QPaintEngine* func(KPropertiesDialog* self)
 ///
-void k_propertiesdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_propertiesdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4974,10 +4974,10 @@ int32_t k_propertiesdialog_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback int32_t func(KPropertiesDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_propertiesdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_propertiesdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5007,10 +5007,10 @@ void k_propertiesdialog_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback void func(KPropertiesDialog* self, QPainter* painter)
 ///
-void k_propertiesdialog_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_propertiesdialog_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5040,10 +5040,10 @@ QPaintDevice* k_propertiesdialog_super_redirected(const void* self, void* offset
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback QPaintDevice* func(KPropertiesDialog* self, QPoint* offset)
 ///
-void k_propertiesdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_propertiesdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5071,10 +5071,10 @@ QPainter* k_propertiesdialog_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback QPainter* func(KPropertiesDialog* self)
 ///
-void k_propertiesdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_propertiesdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5137,12 +5137,12 @@ QVariant* k_propertiesdialog_super_input_method_query(const void* self, int32_t 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback QVariant* func(KPropertiesDialog* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_propertiesdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_propertiesdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5684,10 +5684,10 @@ QObject* k_propertiesdialog_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback QObject* func(KPropertiesDialog* self)
 ///
-void k_propertiesdialog_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_propertiesdialog_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5715,10 +5715,10 @@ int32_t k_propertiesdialog_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback int32_t func(KPropertiesDialog* self)
 ///
-void k_propertiesdialog_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_propertiesdialog_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5748,10 +5748,10 @@ int32_t k_propertiesdialog_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback int32_t func(KPropertiesDialog* self, const char* signal)
 ///
-void k_propertiesdialog_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_propertiesdialog_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5781,10 +5781,10 @@ bool k_propertiesdialog_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback bool func(KPropertiesDialog* self, QMetaMethod* signal)
 ///
-void k_propertiesdialog_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_propertiesdialog_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5816,10 +5816,10 @@ double k_propertiesdialog_super_get_decoded_metric_f(const void* self, int32_t m
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KPropertiesDialog*
+/// @param self KPropertiesDialog*
 /// @param callback double func(KPropertiesDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_propertiesdialog_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_propertiesdialog_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

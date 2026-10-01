@@ -29,7 +29,7 @@ const QMetaObject* k_colorcombo_meta_object(const void* self) {
     return KColorCombo_MetaObject((KColorCombo*)self);
 }
 
-void k_colorcombo_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_colorcombo_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KColorCombo_OnMetaObject((KColorCombo*)self, (intptr_t)callback);
 }
 
@@ -488,11 +488,11 @@ void k_colorcombo_set_item_data3(void* self, int index, const void* value, int r
     QComboBox_SetItemData3((QComboBox*)self, index, (QVariant*)value, role);
 }
 
-QPaintDevice* k_colorcombo_as_q_paint_device(void* self) {
+QPaintDevice* k_colorcombo_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KColorCombo* k_colorcombo_from_q_paint_device(void* _qpaintdevice) {
+KColorCombo* k_colorcombo_from_q_paint_device(const void* _qpaintdevice) {
     return (KColorCombo*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1895,8 +1895,8 @@ QSize* k_colorcombo_super_size_hint(const void* self) {
     return KColorCombo_SuperSizeHint((KColorCombo*)self);
 }
 
-void k_colorcombo_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KColorCombo_OnSizeHint((const KColorCombo*)self, (intptr_t)callback);
+void k_colorcombo_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KColorCombo_OnSizeHint((KColorCombo*)self, (intptr_t)callback);
 }
 
 QSize* k_colorcombo_minimum_size_hint(const void* self) {
@@ -1907,8 +1907,8 @@ QSize* k_colorcombo_super_minimum_size_hint(const void* self) {
     return KColorCombo_SuperMinimumSizeHint((KColorCombo*)self);
 }
 
-void k_colorcombo_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KColorCombo_OnMinimumSizeHint((const KColorCombo*)self, (intptr_t)callback);
+void k_colorcombo_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KColorCombo_OnMinimumSizeHint((KColorCombo*)self, (intptr_t)callback);
 }
 
 void k_colorcombo_show_popup(void* self) {
@@ -1955,8 +1955,8 @@ QVariant* k_colorcombo_super_input_method_query(const void* self, int32_t param1
     return KColorCombo_SuperInputMethodQuery((KColorCombo*)self, param1);
 }
 
-void k_colorcombo_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KColorCombo_OnInputMethodQuery((const KColorCombo*)self, (intptr_t)callback);
+void k_colorcombo_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KColorCombo_OnInputMethodQuery((KColorCombo*)self, (intptr_t)callback);
 }
 
 void k_colorcombo_focus_in_event(void* self, void* e) {
@@ -2123,8 +2123,8 @@ void k_colorcombo_super_init_style_option(const void* self, void* option) {
     KColorCombo_SuperInitStyleOption((KColorCombo*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_colorcombo_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KColorCombo_OnInitStyleOption((const KColorCombo*)self, (intptr_t)callback);
+void k_colorcombo_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KColorCombo_OnInitStyleOption((KColorCombo*)self, (intptr_t)callback);
 }
 
 int32_t k_colorcombo_dev_type(const void* self) {
@@ -2135,8 +2135,8 @@ int32_t k_colorcombo_super_dev_type(const void* self) {
     return KColorCombo_SuperDevType((KColorCombo*)self);
 }
 
-void k_colorcombo_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KColorCombo_OnDevType((const KColorCombo*)self, (intptr_t)callback);
+void k_colorcombo_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KColorCombo_OnDevType((KColorCombo*)self, (intptr_t)callback);
 }
 
 void k_colorcombo_set_visible(void* self, bool visible) {
@@ -2159,8 +2159,8 @@ int32_t k_colorcombo_super_height_for_width(const void* self, int param1) {
     return KColorCombo_SuperHeightForWidth((KColorCombo*)self, param1);
 }
 
-void k_colorcombo_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KColorCombo_OnHeightForWidth((const KColorCombo*)self, (intptr_t)callback);
+void k_colorcombo_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KColorCombo_OnHeightForWidth((KColorCombo*)self, (intptr_t)callback);
 }
 
 bool k_colorcombo_has_height_for_width(const void* self) {
@@ -2171,8 +2171,8 @@ bool k_colorcombo_super_has_height_for_width(const void* self) {
     return KColorCombo_SuperHasHeightForWidth((KColorCombo*)self);
 }
 
-void k_colorcombo_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KColorCombo_OnHasHeightForWidth((const KColorCombo*)self, (intptr_t)callback);
+void k_colorcombo_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KColorCombo_OnHasHeightForWidth((KColorCombo*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_colorcombo_paint_engine(const void* self) {
@@ -2183,8 +2183,8 @@ QPaintEngine* k_colorcombo_super_paint_engine(const void* self) {
     return KColorCombo_SuperPaintEngine((KColorCombo*)self);
 }
 
-void k_colorcombo_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KColorCombo_OnPaintEngine((const KColorCombo*)self, (intptr_t)callback);
+void k_colorcombo_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KColorCombo_OnPaintEngine((KColorCombo*)self, (intptr_t)callback);
 }
 
 void k_colorcombo_mouse_double_click_event(void* self, void* event) {
@@ -2351,8 +2351,8 @@ int32_t k_colorcombo_super_metric(const void* self, int32_t param1) {
     return KColorCombo_SuperMetric((KColorCombo*)self, param1);
 }
 
-void k_colorcombo_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KColorCombo_OnMetric((const KColorCombo*)self, (intptr_t)callback);
+void k_colorcombo_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KColorCombo_OnMetric((KColorCombo*)self, (intptr_t)callback);
 }
 
 void k_colorcombo_init_painter(const void* self, void* painter) {
@@ -2363,8 +2363,8 @@ void k_colorcombo_super_init_painter(const void* self, void* painter) {
     KColorCombo_SuperInitPainter((KColorCombo*)self, (QPainter*)painter);
 }
 
-void k_colorcombo_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KColorCombo_OnInitPainter((const KColorCombo*)self, (intptr_t)callback);
+void k_colorcombo_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KColorCombo_OnInitPainter((KColorCombo*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_colorcombo_redirected(const void* self, void* offset) {
@@ -2375,8 +2375,8 @@ QPaintDevice* k_colorcombo_super_redirected(const void* self, void* offset) {
     return KColorCombo_SuperRedirected((KColorCombo*)self, (QPoint*)offset);
 }
 
-void k_colorcombo_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KColorCombo_OnRedirected((const KColorCombo*)self, (intptr_t)callback);
+void k_colorcombo_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KColorCombo_OnRedirected((KColorCombo*)self, (intptr_t)callback);
 }
 
 QPainter* k_colorcombo_shared_painter(const void* self) {
@@ -2387,8 +2387,8 @@ QPainter* k_colorcombo_super_shared_painter(const void* self) {
     return KColorCombo_SuperSharedPainter((KColorCombo*)self);
 }
 
-void k_colorcombo_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KColorCombo_OnSharedPainter((const KColorCombo*)self, (intptr_t)callback);
+void k_colorcombo_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KColorCombo_OnSharedPainter((KColorCombo*)self, (intptr_t)callback);
 }
 
 bool k_colorcombo_focus_next_prev_child(void* self, bool next) {

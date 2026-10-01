@@ -20,7 +20,7 @@ const QMetaObject* q_datawidgetmapper_meta_object(const void* self) {
     return QDataWidgetMapper_MetaObject((QDataWidgetMapper*)self);
 }
 
-void q_datawidgetmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_datawidgetmapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDataWidgetMapper_OnMetaObject((QDataWidgetMapper*)self, (intptr_t)callback);
 }
 

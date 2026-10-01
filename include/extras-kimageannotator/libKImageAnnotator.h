@@ -30,10 +30,10 @@ const QMetaObject* k_imageannotator__kimageannotator_meta_object(const void* sel
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback const QMetaObject* func(const kImageAnnotator__KImageAnnotator* self)
 ///
-void k_imageannotator__kimageannotator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_imageannotator__kimageannotator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -128,12 +128,12 @@ QSize* k_imageannotator__kimageannotator_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback QSize* func(const kImageAnnotator__KImageAnnotator* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_imageannotator__kimageannotator_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_imageannotator__kimageannotator_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://github.com/ksnip/kImageAnnotator)
 ///
@@ -333,10 +333,10 @@ void k_imageannotator__kimageannotator_image_changed(const void* self);
 
 /// [Upstream resources](https://github.com/ksnip/kImageAnnotator)
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback void func(const kImageAnnotator__KImageAnnotator* self)
 ///
-void k_imageannotator__kimageannotator_on_image_changed(const void* self, void (*callback)(const void*));
+void k_imageannotator__kimageannotator_on_image_changed(void* self, void (*callback)(const void*));
 
 /// [Upstream resources](https://github.com/ksnip/kImageAnnotator)
 ///
@@ -347,10 +347,10 @@ void k_imageannotator__kimageannotator_current_tab_changed(const void* self, int
 
 /// [Upstream resources](https://github.com/ksnip/kImageAnnotator)
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback void func(const kImageAnnotator__KImageAnnotator* self, int index)
 ///
-void k_imageannotator__kimageannotator_on_current_tab_changed(const void* self, void (*callback)(const void*, int));
+void k_imageannotator__kimageannotator_on_current_tab_changed(void* self, void (*callback)(const void*, int));
 
 /// [Upstream resources](https://github.com/ksnip/kImageAnnotator)
 ///
@@ -361,10 +361,10 @@ void k_imageannotator__kimageannotator_tab_close_requested(const void* self, int
 
 /// [Upstream resources](https://github.com/ksnip/kImageAnnotator)
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback void func(const kImageAnnotator__KImageAnnotator* self, int index)
 ///
-void k_imageannotator__kimageannotator_on_tab_close_requested(const void* self, void (*callback)(const void*, int));
+void k_imageannotator__kimageannotator_on_tab_close_requested(void* self, void (*callback)(const void*, int));
 
 /// [Upstream resources](https://github.com/ksnip/kImageAnnotator)
 ///
@@ -390,10 +390,10 @@ void k_imageannotator__kimageannotator_tab_context_menu_opened(const void* self,
 
 /// [Upstream resources](https://github.com/ksnip/kImageAnnotator)
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback void func(const kImageAnnotator__KImageAnnotator* self, int index)
 ///
-void k_imageannotator__kimageannotator_on_tab_context_menu_opened(const void* self, void (*callback)(const void*, int));
+void k_imageannotator__kimageannotator_on_tab_context_menu_opened(void* self, void (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -418,9 +418,9 @@ const char* k_imageannotator__kimageannotator_tr3(const char* s, const char* c, 
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self kImageAnnotator__KImageAnnotator*
+/// @param self const kImageAnnotator__KImageAnnotator*
 ///
-QPaintDevice* k_imageannotator__kimageannotator_as_q_paint_device(void* self);
+QPaintDevice* k_imageannotator__kimageannotator_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -428,7 +428,7 @@ QPaintDevice* k_imageannotator__kimageannotator_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-kImageAnnotator__KImageAnnotator* k_imageannotator__kimageannotator_from_q_paint_device(void* _qpaintdevice);
+kImageAnnotator__KImageAnnotator* k_imageannotator__kimageannotator_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3413,10 +3413,10 @@ int32_t k_imageannotator__kimageannotator_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback int32_t func(kImageAnnotator__KImageAnnotator* self)
 ///
-void k_imageannotator__kimageannotator_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_imageannotator__kimageannotator_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3477,12 +3477,12 @@ QSize* k_imageannotator__kimageannotator_super_minimum_size_hint(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback QSize* func(kImageAnnotator__KImageAnnotator* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_imageannotator__kimageannotator_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_imageannotator__kimageannotator_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3512,10 +3512,10 @@ int32_t k_imageannotator__kimageannotator_super_height_for_width(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback int32_t func(kImageAnnotator__KImageAnnotator* self, int param1)
 ///
-void k_imageannotator__kimageannotator_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_imageannotator__kimageannotator_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3543,10 +3543,10 @@ bool k_imageannotator__kimageannotator_super_has_height_for_width(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback bool func(kImageAnnotator__KImageAnnotator* self)
 ///
-void k_imageannotator__kimageannotator_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_imageannotator__kimageannotator_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3574,10 +3574,10 @@ QPaintEngine* k_imageannotator__kimageannotator_super_paint_engine(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback QPaintEngine* func(kImageAnnotator__KImageAnnotator* self)
 ///
-void k_imageannotator__kimageannotator_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_imageannotator__kimageannotator_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4502,10 +4502,10 @@ int32_t k_imageannotator__kimageannotator_super_metric(const void* self, int32_t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback int32_t func(kImageAnnotator__KImageAnnotator* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_imageannotator__kimageannotator_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_imageannotator__kimageannotator_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4535,10 +4535,10 @@ void k_imageannotator__kimageannotator_super_init_painter(const void* self, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback void func(kImageAnnotator__KImageAnnotator* self, QPainter* painter)
 ///
-void k_imageannotator__kimageannotator_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_imageannotator__kimageannotator_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4568,10 +4568,10 @@ QPaintDevice* k_imageannotator__kimageannotator_super_redirected(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback QPaintDevice* func(kImageAnnotator__KImageAnnotator* self, QPoint* offset)
 ///
-void k_imageannotator__kimageannotator_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_imageannotator__kimageannotator_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4599,10 +4599,10 @@ QPainter* k_imageannotator__kimageannotator_super_shared_painter(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback QPainter* func(kImageAnnotator__KImageAnnotator* self)
 ///
-void k_imageannotator__kimageannotator_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_imageannotator__kimageannotator_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4665,12 +4665,12 @@ QVariant* k_imageannotator__kimageannotator_super_input_method_query(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback QVariant* func(kImageAnnotator__KImageAnnotator* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_imageannotator__kimageannotator_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_imageannotator__kimageannotator_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5086,10 +5086,10 @@ QObject* k_imageannotator__kimageannotator_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback QObject* func(kImageAnnotator__KImageAnnotator* self)
 ///
-void k_imageannotator__kimageannotator_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_imageannotator__kimageannotator_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5117,10 +5117,10 @@ int32_t k_imageannotator__kimageannotator_super_sender_signal_index(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback int32_t func(kImageAnnotator__KImageAnnotator* self)
 ///
-void k_imageannotator__kimageannotator_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_imageannotator__kimageannotator_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5150,10 +5150,10 @@ int32_t k_imageannotator__kimageannotator_super_receivers(const void* self, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback int32_t func(kImageAnnotator__KImageAnnotator* self, const char* signal)
 ///
-void k_imageannotator__kimageannotator_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_imageannotator__kimageannotator_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5183,10 +5183,10 @@ bool k_imageannotator__kimageannotator_super_is_signal_connected(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback bool func(kImageAnnotator__KImageAnnotator* self, QMetaMethod* signal)
 ///
-void k_imageannotator__kimageannotator_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_imageannotator__kimageannotator_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5218,10 +5218,10 @@ double k_imageannotator__kimageannotator_super_get_decoded_metric_f(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const kImageAnnotator__KImageAnnotator*
+/// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback double func(kImageAnnotator__KImageAnnotator* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_imageannotator__kimageannotator_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_imageannotator__kimageannotator_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

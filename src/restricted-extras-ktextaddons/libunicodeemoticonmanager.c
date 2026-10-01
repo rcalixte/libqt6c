@@ -19,7 +19,7 @@ const QMetaObject* k_textemoticonscore__unicodeemoticonmanager_meta_object(const
     return TextEmoticonsCore__UnicodeEmoticonManager_MetaObject((TextEmoticonsCore__UnicodeEmoticonManager*)self);
 }
 
-void k_textemoticonscore__unicodeemoticonmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textemoticonscore__unicodeemoticonmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextEmoticonsCore__UnicodeEmoticonManager_OnMetaObject((TextEmoticonsCore__UnicodeEmoticonManager*)self, (intptr_t)callback);
 }
 

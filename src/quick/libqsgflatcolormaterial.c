@@ -12,7 +12,7 @@ QSGMaterialType* q_sgflatcolormaterial_type(const void* self) {
     return QSGFlatColorMaterial_Type((QSGFlatColorMaterial*)self);
 }
 
-void q_sgflatcolormaterial_on_type(const void* self, QSGMaterialType* (*callback)(const void*)) {
+void q_sgflatcolormaterial_on_type(void* self, QSGMaterialType* (*callback)(const void*)) {
     QSGFlatColorMaterial_OnType((QSGFlatColorMaterial*)self, (intptr_t)callback);
 }
 
@@ -24,7 +24,7 @@ QSGMaterialShader* q_sgflatcolormaterial_create_shader(const void* self, int32_t
     return QSGFlatColorMaterial_CreateShader((QSGFlatColorMaterial*)self, renderMode);
 }
 
-void q_sgflatcolormaterial_on_create_shader(const void* self, QSGMaterialShader* (*callback)(const void*, int32_t)) {
+void q_sgflatcolormaterial_on_create_shader(void* self, QSGMaterialShader* (*callback)(const void*, int32_t)) {
     QSGFlatColorMaterial_OnCreateShader((QSGFlatColorMaterial*)self, (intptr_t)callback);
 }
 
@@ -44,7 +44,7 @@ int32_t q_sgflatcolormaterial_compare(const void* self, const void* other) {
     return QSGFlatColorMaterial_Compare((QSGFlatColorMaterial*)self, (QSGMaterial*)other);
 }
 
-void q_sgflatcolormaterial_on_compare(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_sgflatcolormaterial_on_compare(void* self, int32_t (*callback)(const void*, const void*)) {
     QSGFlatColorMaterial_OnCompare((QSGFlatColorMaterial*)self, (intptr_t)callback);
 }
 

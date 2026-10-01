@@ -18,7 +18,7 @@ const QMetaObject* k_hamburgermenu_meta_object(const void* self) {
     return KHamburgerMenu_MetaObject((KHamburgerMenu*)self);
 }
 
-void k_hamburgermenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_hamburgermenu_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KHamburgerMenu_OnMetaObject((KHamburgerMenu*)self, (intptr_t)callback);
 }
 

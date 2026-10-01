@@ -19,7 +19,7 @@ const QMetaObject* q_parallelanimationgroup_meta_object(const void* self) {
     return QParallelAnimationGroup_MetaObject((QParallelAnimationGroup*)self);
 }
 
-void q_parallelanimationgroup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_parallelanimationgroup_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QParallelAnimationGroup_OnMetaObject((QParallelAnimationGroup*)self, (intptr_t)callback);
 }
 
@@ -62,7 +62,7 @@ int32_t q_parallelanimationgroup_duration(const void* self) {
     return QParallelAnimationGroup_Duration((QParallelAnimationGroup*)self);
 }
 
-void q_parallelanimationgroup_on_duration(const void* self, int32_t (*callback)(const void*)) {
+void q_parallelanimationgroup_on_duration(void* self, int32_t (*callback)(const void*)) {
     QParallelAnimationGroup_OnDuration((QParallelAnimationGroup*)self, (intptr_t)callback);
 }
 

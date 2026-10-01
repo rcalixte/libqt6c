@@ -10,7 +10,7 @@ KModifierKeyInfoProvider* k_modifierkeyinfoprovider_new() {
     return KModifierKeyInfoProvider_New();
 }
 
-QSharedData* k_modifierkeyinfoprovider_as_q_shared_data(void* self) {
+QSharedData* k_modifierkeyinfoprovider_as_q_shared_data(const void* self) {
     return KModifierKeyInfoProvider_AsQSharedData((KModifierKeyInfoProvider*)self);
 }
 
@@ -18,7 +18,7 @@ const QMetaObject* k_modifierkeyinfoprovider_meta_object(const void* self) {
     return KModifierKeyInfoProvider_MetaObject((KModifierKeyInfoProvider*)self);
 }
 
-void k_modifierkeyinfoprovider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_modifierkeyinfoprovider_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KModifierKeyInfoProvider_OnMetaObject((KModifierKeyInfoProvider*)self, (intptr_t)callback);
 }
 

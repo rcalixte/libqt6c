@@ -42,7 +42,7 @@ const QMetaObject* q_quickwindow_meta_object(const void* self) {
     return QQuickWindow_MetaObject((QQuickWindow*)self);
 }
 
-void q_quickwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_quickwindow_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickWindow_OnMetaObject((QQuickWindow*)self, (intptr_t)callback);
 }
 
@@ -93,7 +93,7 @@ QObject* q_quickwindow_focus_object(const void* self) {
     return QQuickWindow_FocusObject((QQuickWindow*)self);
 }
 
-void q_quickwindow_on_focus_object(const void* self, QObject* (*callback)(const void*)) {
+void q_quickwindow_on_focus_object(void* self, QObject* (*callback)(const void*)) {
     QQuickWindow_OnFocusObject((QQuickWindow*)self, (intptr_t)callback);
 }
 
@@ -137,7 +137,7 @@ QAccessibleInterface* q_quickwindow_accessible_root(const void* self) {
     return QQuickWindow_AccessibleRoot((QQuickWindow*)self);
 }
 
-void q_quickwindow_on_accessible_root(const void* self, QAccessibleInterface* (*callback)(const void*)) {
+void q_quickwindow_on_accessible_root(void* self, QAccessibleInterface* (*callback)(const void*)) {
     QQuickWindow_OnAccessibleRoot((QQuickWindow*)self, (intptr_t)callback);
 }
 
@@ -618,11 +618,11 @@ const char* q_quickwindow_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QSurface* q_quickwindow_as_q_surface(void* self) {
+QSurface* q_quickwindow_as_q_surface(const void* self) {
     return QWindow_AsQSurface((QWindow*)self);
 }
 
-QQuickWindow* q_quickwindow_from_q_surface(void* _qsurface) {
+QQuickWindow* q_quickwindow_from_q_surface(const void* _qsurface) {
     return (QQuickWindow*)QWindow_FromQSurface((QSurface*)_qsurface);
 }
 
@@ -1433,8 +1433,8 @@ int32_t q_quickwindow_super_surface_type(const void* self) {
     return QQuickWindow_SuperSurfaceType((QQuickWindow*)self);
 }
 
-void q_quickwindow_on_surface_type(const void* self, int32_t (*callback)(const void*)) {
-    QQuickWindow_OnSurfaceType((const QQuickWindow*)self, (intptr_t)callback);
+void q_quickwindow_on_surface_type(void* self, int32_t (*callback)(const void*)) {
+    QQuickWindow_OnSurfaceType((QQuickWindow*)self, (intptr_t)callback);
 }
 
 QSurfaceFormat* q_quickwindow_format(const void* self) {
@@ -1445,8 +1445,8 @@ QSurfaceFormat* q_quickwindow_super_format(const void* self) {
     return QQuickWindow_SuperFormat((QQuickWindow*)self);
 }
 
-void q_quickwindow_on_format(const void* self, QSurfaceFormat* (*callback)(const void*)) {
-    QQuickWindow_OnFormat((const QQuickWindow*)self, (intptr_t)callback);
+void q_quickwindow_on_format(void* self, QSurfaceFormat* (*callback)(const void*)) {
+    QQuickWindow_OnFormat((QQuickWindow*)self, (intptr_t)callback);
 }
 
 QSize* q_quickwindow_size(const void* self) {
@@ -1457,8 +1457,8 @@ QSize* q_quickwindow_super_size(const void* self) {
     return QQuickWindow_SuperSize((QQuickWindow*)self);
 }
 
-void q_quickwindow_on_size(const void* self, QSize* (*callback)(const void*)) {
-    QQuickWindow_OnSize((const QQuickWindow*)self, (intptr_t)callback);
+void q_quickwindow_on_size(void* self, QSize* (*callback)(const void*)) {
+    QQuickWindow_OnSize((QQuickWindow*)self, (intptr_t)callback);
 }
 
 void q_quickwindow_paint_event(void* self, void* param1) {

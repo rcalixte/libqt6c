@@ -18,7 +18,7 @@ const QMetaObject* k_emailvalidator_meta_object(const void* self) {
     return KEmailValidator_MetaObject((KEmailValidator*)self);
 }
 
-void k_emailvalidator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_emailvalidator_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KEmailValidator_OnMetaObject((KEmailValidator*)self, (intptr_t)callback);
 }
 
@@ -61,7 +61,7 @@ int32_t k_emailvalidator_validate(const void* self, const char* str, int* pos) {
     return KEmailValidator_Validate((KEmailValidator*)self, qstring(str), pos);
 }
 
-void k_emailvalidator_on_validate(const void* self, int32_t (*callback)(const void*, const char*, int*)) {
+void k_emailvalidator_on_validate(void* self, int32_t (*callback)(const void*, const char*, int*)) {
     KEmailValidator_OnValidate((KEmailValidator*)self, (intptr_t)callback);
 }
 
@@ -73,7 +73,7 @@ void k_emailvalidator_fixup(const void* self, const char* str) {
     KEmailValidator_Fixup((KEmailValidator*)self, qstring(str));
 }
 
-void k_emailvalidator_on_fixup(const void* self, void (*callback)(const void*, const char*)) {
+void k_emailvalidator_on_fixup(void* self, void (*callback)(const void*, const char*)) {
     KEmailValidator_OnFixup((KEmailValidator*)self, (intptr_t)callback);
 }
 

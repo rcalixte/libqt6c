@@ -22,7 +22,7 @@ const QMetaObject* k_previewwidgetbase_meta_object(const void* self) {
     return KPreviewWidgetBase_MetaObject((KPreviewWidgetBase*)self);
 }
 
-void k_previewwidgetbase_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_previewwidgetbase_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPreviewWidgetBase_OnMetaObject((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
@@ -122,11 +122,11 @@ const char* k_previewwidgetbase_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_previewwidgetbase_as_q_paint_device(void* self) {
+QPaintDevice* k_previewwidgetbase_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KPreviewWidgetBase* k_previewwidgetbase_from_q_paint_device(void* _qpaintdevice) {
+KPreviewWidgetBase* k_previewwidgetbase_from_q_paint_device(const void* _qpaintdevice) {
     return (KPreviewWidgetBase*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1517,8 +1517,8 @@ int32_t k_previewwidgetbase_super_dev_type(const void* self) {
     return KPreviewWidgetBase_SuperDevType((KPreviewWidgetBase*)self);
 }
 
-void k_previewwidgetbase_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KPreviewWidgetBase_OnDevType((const KPreviewWidgetBase*)self, (intptr_t)callback);
+void k_previewwidgetbase_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KPreviewWidgetBase_OnDevType((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
 void k_previewwidgetbase_set_visible(void* self, bool visible) {
@@ -1541,8 +1541,8 @@ QSize* k_previewwidgetbase_super_size_hint(const void* self) {
     return KPreviewWidgetBase_SuperSizeHint((KPreviewWidgetBase*)self);
 }
 
-void k_previewwidgetbase_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPreviewWidgetBase_OnSizeHint((const KPreviewWidgetBase*)self, (intptr_t)callback);
+void k_previewwidgetbase_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPreviewWidgetBase_OnSizeHint((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
 QSize* k_previewwidgetbase_minimum_size_hint(const void* self) {
@@ -1553,8 +1553,8 @@ QSize* k_previewwidgetbase_super_minimum_size_hint(const void* self) {
     return KPreviewWidgetBase_SuperMinimumSizeHint((KPreviewWidgetBase*)self);
 }
 
-void k_previewwidgetbase_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KPreviewWidgetBase_OnMinimumSizeHint((const KPreviewWidgetBase*)self, (intptr_t)callback);
+void k_previewwidgetbase_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KPreviewWidgetBase_OnMinimumSizeHint((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
 int32_t k_previewwidgetbase_height_for_width(const void* self, int param1) {
@@ -1565,8 +1565,8 @@ int32_t k_previewwidgetbase_super_height_for_width(const void* self, int param1)
     return KPreviewWidgetBase_SuperHeightForWidth((KPreviewWidgetBase*)self, param1);
 }
 
-void k_previewwidgetbase_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KPreviewWidgetBase_OnHeightForWidth((const KPreviewWidgetBase*)self, (intptr_t)callback);
+void k_previewwidgetbase_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KPreviewWidgetBase_OnHeightForWidth((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
 bool k_previewwidgetbase_has_height_for_width(const void* self) {
@@ -1577,8 +1577,8 @@ bool k_previewwidgetbase_super_has_height_for_width(const void* self) {
     return KPreviewWidgetBase_SuperHasHeightForWidth((KPreviewWidgetBase*)self);
 }
 
-void k_previewwidgetbase_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KPreviewWidgetBase_OnHasHeightForWidth((const KPreviewWidgetBase*)self, (intptr_t)callback);
+void k_previewwidgetbase_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KPreviewWidgetBase_OnHasHeightForWidth((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_previewwidgetbase_paint_engine(const void* self) {
@@ -1589,8 +1589,8 @@ QPaintEngine* k_previewwidgetbase_super_paint_engine(const void* self) {
     return KPreviewWidgetBase_SuperPaintEngine((KPreviewWidgetBase*)self);
 }
 
-void k_previewwidgetbase_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KPreviewWidgetBase_OnPaintEngine((const KPreviewWidgetBase*)self, (intptr_t)callback);
+void k_previewwidgetbase_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KPreviewWidgetBase_OnPaintEngine((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
 bool k_previewwidgetbase_event(void* self, void* event) {
@@ -1925,8 +1925,8 @@ int32_t k_previewwidgetbase_super_metric(const void* self, int32_t param1) {
     return KPreviewWidgetBase_SuperMetric((KPreviewWidgetBase*)self, param1);
 }
 
-void k_previewwidgetbase_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KPreviewWidgetBase_OnMetric((const KPreviewWidgetBase*)self, (intptr_t)callback);
+void k_previewwidgetbase_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KPreviewWidgetBase_OnMetric((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
 void k_previewwidgetbase_init_painter(const void* self, void* painter) {
@@ -1937,8 +1937,8 @@ void k_previewwidgetbase_super_init_painter(const void* self, void* painter) {
     KPreviewWidgetBase_SuperInitPainter((KPreviewWidgetBase*)self, (QPainter*)painter);
 }
 
-void k_previewwidgetbase_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KPreviewWidgetBase_OnInitPainter((const KPreviewWidgetBase*)self, (intptr_t)callback);
+void k_previewwidgetbase_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KPreviewWidgetBase_OnInitPainter((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_previewwidgetbase_redirected(const void* self, void* offset) {
@@ -1949,8 +1949,8 @@ QPaintDevice* k_previewwidgetbase_super_redirected(const void* self, void* offse
     return KPreviewWidgetBase_SuperRedirected((KPreviewWidgetBase*)self, (QPoint*)offset);
 }
 
-void k_previewwidgetbase_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KPreviewWidgetBase_OnRedirected((const KPreviewWidgetBase*)self, (intptr_t)callback);
+void k_previewwidgetbase_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KPreviewWidgetBase_OnRedirected((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
 QPainter* k_previewwidgetbase_shared_painter(const void* self) {
@@ -1961,8 +1961,8 @@ QPainter* k_previewwidgetbase_super_shared_painter(const void* self) {
     return KPreviewWidgetBase_SuperSharedPainter((KPreviewWidgetBase*)self);
 }
 
-void k_previewwidgetbase_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KPreviewWidgetBase_OnSharedPainter((const KPreviewWidgetBase*)self, (intptr_t)callback);
+void k_previewwidgetbase_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KPreviewWidgetBase_OnSharedPainter((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
 void k_previewwidgetbase_input_method_event(void* self, void* param1) {
@@ -1985,8 +1985,8 @@ QVariant* k_previewwidgetbase_super_input_method_query(const void* self, int32_t
     return KPreviewWidgetBase_SuperInputMethodQuery((KPreviewWidgetBase*)self, param1);
 }
 
-void k_previewwidgetbase_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KPreviewWidgetBase_OnInputMethodQuery((const KPreviewWidgetBase*)self, (intptr_t)callback);
+void k_previewwidgetbase_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KPreviewWidgetBase_OnInputMethodQuery((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
 bool k_previewwidgetbase_focus_next_prev_child(void* self, bool next) {

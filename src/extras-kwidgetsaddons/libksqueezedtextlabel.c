@@ -37,7 +37,7 @@ const QMetaObject* k_squeezedtextlabel_meta_object(const void* self) {
     return KSqueezedTextLabel_MetaObject((KSqueezedTextLabel*)self);
 }
 
-void k_squeezedtextlabel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_squeezedtextlabel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KSqueezedTextLabel_OnMetaObject((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
@@ -80,7 +80,7 @@ QSize* k_squeezedtextlabel_minimum_size_hint(const void* self) {
     return KSqueezedTextLabel_MinimumSizeHint((KSqueezedTextLabel*)self);
 }
 
-void k_squeezedtextlabel_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_squeezedtextlabel_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     KSqueezedTextLabel_OnMinimumSizeHint((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
@@ -92,7 +92,7 @@ QSize* k_squeezedtextlabel_size_hint(const void* self) {
     return KSqueezedTextLabel_SizeHint((KSqueezedTextLabel*)self);
 }
 
-void k_squeezedtextlabel_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_squeezedtextlabel_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KSqueezedTextLabel_OnSizeHint((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
@@ -403,11 +403,11 @@ void k_squeezedtextlabel_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_squeezedtextlabel_as_q_paint_device(void* self) {
+QPaintDevice* k_squeezedtextlabel_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KSqueezedTextLabel* k_squeezedtextlabel_from_q_paint_device(void* _qpaintdevice) {
+KSqueezedTextLabel* k_squeezedtextlabel_from_q_paint_device(const void* _qpaintdevice) {
     return (KSqueezedTextLabel*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1794,8 +1794,8 @@ int32_t k_squeezedtextlabel_super_height_for_width(const void* self, int param1)
     return KSqueezedTextLabel_SuperHeightForWidth((KSqueezedTextLabel*)self, param1);
 }
 
-void k_squeezedtextlabel_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KSqueezedTextLabel_OnHeightForWidth((const KSqueezedTextLabel*)self, (intptr_t)callback);
+void k_squeezedtextlabel_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KSqueezedTextLabel_OnHeightForWidth((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
 bool k_squeezedtextlabel_event(void* self, void* e) {
@@ -1914,8 +1914,8 @@ void k_squeezedtextlabel_super_init_style_option(const void* self, void* option)
     KSqueezedTextLabel_SuperInitStyleOption((KSqueezedTextLabel*)self, (QStyleOptionFrame*)option);
 }
 
-void k_squeezedtextlabel_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KSqueezedTextLabel_OnInitStyleOption((const KSqueezedTextLabel*)self, (intptr_t)callback);
+void k_squeezedtextlabel_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KSqueezedTextLabel_OnInitStyleOption((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
 int32_t k_squeezedtextlabel_dev_type(const void* self) {
@@ -1926,8 +1926,8 @@ int32_t k_squeezedtextlabel_super_dev_type(const void* self) {
     return KSqueezedTextLabel_SuperDevType((KSqueezedTextLabel*)self);
 }
 
-void k_squeezedtextlabel_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KSqueezedTextLabel_OnDevType((const KSqueezedTextLabel*)self, (intptr_t)callback);
+void k_squeezedtextlabel_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KSqueezedTextLabel_OnDevType((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
 void k_squeezedtextlabel_set_visible(void* self, bool visible) {
@@ -1950,8 +1950,8 @@ bool k_squeezedtextlabel_super_has_height_for_width(const void* self) {
     return KSqueezedTextLabel_SuperHasHeightForWidth((KSqueezedTextLabel*)self);
 }
 
-void k_squeezedtextlabel_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KSqueezedTextLabel_OnHasHeightForWidth((const KSqueezedTextLabel*)self, (intptr_t)callback);
+void k_squeezedtextlabel_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KSqueezedTextLabel_OnHasHeightForWidth((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_squeezedtextlabel_paint_engine(const void* self) {
@@ -1962,8 +1962,8 @@ QPaintEngine* k_squeezedtextlabel_super_paint_engine(const void* self) {
     return KSqueezedTextLabel_SuperPaintEngine((KSqueezedTextLabel*)self);
 }
 
-void k_squeezedtextlabel_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KSqueezedTextLabel_OnPaintEngine((const KSqueezedTextLabel*)self, (intptr_t)callback);
+void k_squeezedtextlabel_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KSqueezedTextLabel_OnPaintEngine((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
 void k_squeezedtextlabel_mouse_double_click_event(void* self, void* event) {
@@ -2166,8 +2166,8 @@ int32_t k_squeezedtextlabel_super_metric(const void* self, int32_t param1) {
     return KSqueezedTextLabel_SuperMetric((KSqueezedTextLabel*)self, param1);
 }
 
-void k_squeezedtextlabel_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KSqueezedTextLabel_OnMetric((const KSqueezedTextLabel*)self, (intptr_t)callback);
+void k_squeezedtextlabel_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KSqueezedTextLabel_OnMetric((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
 void k_squeezedtextlabel_init_painter(const void* self, void* painter) {
@@ -2178,8 +2178,8 @@ void k_squeezedtextlabel_super_init_painter(const void* self, void* painter) {
     KSqueezedTextLabel_SuperInitPainter((KSqueezedTextLabel*)self, (QPainter*)painter);
 }
 
-void k_squeezedtextlabel_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KSqueezedTextLabel_OnInitPainter((const KSqueezedTextLabel*)self, (intptr_t)callback);
+void k_squeezedtextlabel_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KSqueezedTextLabel_OnInitPainter((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_squeezedtextlabel_redirected(const void* self, void* offset) {
@@ -2190,8 +2190,8 @@ QPaintDevice* k_squeezedtextlabel_super_redirected(const void* self, void* offse
     return KSqueezedTextLabel_SuperRedirected((KSqueezedTextLabel*)self, (QPoint*)offset);
 }
 
-void k_squeezedtextlabel_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KSqueezedTextLabel_OnRedirected((const KSqueezedTextLabel*)self, (intptr_t)callback);
+void k_squeezedtextlabel_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KSqueezedTextLabel_OnRedirected((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
 QPainter* k_squeezedtextlabel_shared_painter(const void* self) {
@@ -2202,8 +2202,8 @@ QPainter* k_squeezedtextlabel_super_shared_painter(const void* self) {
     return KSqueezedTextLabel_SuperSharedPainter((KSqueezedTextLabel*)self);
 }
 
-void k_squeezedtextlabel_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KSqueezedTextLabel_OnSharedPainter((const KSqueezedTextLabel*)self, (intptr_t)callback);
+void k_squeezedtextlabel_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KSqueezedTextLabel_OnSharedPainter((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
 void k_squeezedtextlabel_input_method_event(void* self, void* param1) {
@@ -2226,8 +2226,8 @@ QVariant* k_squeezedtextlabel_super_input_method_query(const void* self, int32_t
     return KSqueezedTextLabel_SuperInputMethodQuery((KSqueezedTextLabel*)self, param1);
 }
 
-void k_squeezedtextlabel_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KSqueezedTextLabel_OnInputMethodQuery((const KSqueezedTextLabel*)self, (intptr_t)callback);
+void k_squeezedtextlabel_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KSqueezedTextLabel_OnInputMethodQuery((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
 bool k_squeezedtextlabel_event_filter(void* self, void* watched, void* event) {

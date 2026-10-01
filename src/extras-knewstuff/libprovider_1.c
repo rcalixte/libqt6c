@@ -17,7 +17,7 @@ const QMetaObject* k_nscore__provider_meta_object(const void* self) {
     return KNSCore__Provider_MetaObject((KNSCore__Provider*)self);
 }
 
-void k_nscore__provider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_nscore__provider_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KNSCore__Provider_OnMetaObject((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
@@ -63,7 +63,7 @@ const char* k_nscore__provider_id(const void* self) {
     return _ret;
 }
 
-void k_nscore__provider_on_id(const void* self, const char* (*callback)(const void*)) {
+void k_nscore__provider_on_id(void* self, const char* (*callback)(const void*)) {
     KNSCore__Provider_OnId((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
@@ -79,7 +79,7 @@ bool k_nscore__provider_is_initialized(const void* self) {
     return KNSCore__Provider_IsInitialized((KNSCore__Provider*)self);
 }
 
-void k_nscore__provider_on_is_initialized(const void* self, bool (*callback)(const void*)) {
+void k_nscore__provider_on_is_initialized(void* self, bool (*callback)(const void*)) {
     KNSCore__Provider_OnIsInitialized((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
@@ -98,7 +98,7 @@ const char* k_nscore__provider_name(const void* self) {
     return _ret;
 }
 
-void k_nscore__provider_on_name(const void* self, const char* (*callback)(const void*)) {
+void k_nscore__provider_on_name(void* self, const char* (*callback)(const void*)) {
     KNSCore__Provider_OnName((KNSCore__Provider*)self, (intptr_t)callback);
 }
 
@@ -113,7 +113,7 @@ QUrl* k_nscore__provider_icon(const void* self) {
     return KNSCore__Provider_Icon((KNSCore__Provider*)self);
 }
 
-void k_nscore__provider_on_icon(const void* self, QUrl* (*callback)(const void*)) {
+void k_nscore__provider_on_icon(void* self, QUrl* (*callback)(const void*)) {
     KNSCore__Provider_OnIcon((KNSCore__Provider*)self, (intptr_t)callback);
 }
 

@@ -63,7 +63,7 @@ QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new2(const void* call, void* p
     return QDBusPendingCallWatcher_New2((QDBusPendingCall*)call, (QObject*)parent);
 }
 
-QDBusPendingCall* q_dbuspendingcallwatcher_as_q_d_bus_pending_call(void* self) {
+QDBusPendingCall* q_dbuspendingcallwatcher_as_q_d_bus_pending_call(const void* self) {
     return QDBusPendingCallWatcher_AsQDBusPendingCall((QDBusPendingCallWatcher*)self);
 }
 
@@ -71,7 +71,7 @@ const QMetaObject* q_dbuspendingcallwatcher_meta_object(const void* self) {
     return QDBusPendingCallWatcher_MetaObject((QDBusPendingCallWatcher*)self);
 }
 
-void q_dbuspendingcallwatcher_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_dbuspendingcallwatcher_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDBusPendingCallWatcher_OnMetaObject((QDBusPendingCallWatcher*)self, (intptr_t)callback);
 }
 

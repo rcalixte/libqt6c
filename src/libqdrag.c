@@ -16,7 +16,7 @@ const QMetaObject* q_drag_meta_object(const void* self) {
     return QDrag_MetaObject((QDrag*)self);
 }
 
-void q_drag_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_drag_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QDrag_OnMetaObject((QDrag*)self, (intptr_t)callback);
 }
 

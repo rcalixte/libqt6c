@@ -17,7 +17,7 @@ const QMetaObject* k_textgrammarcheck__grammalectegenerateconfigoptionjob_meta_o
     return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_MetaObject((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self);
 }
 
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob_OnMetaObject((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (intptr_t)callback);
 }
 

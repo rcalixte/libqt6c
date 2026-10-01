@@ -273,10 +273,10 @@ const char* k_iconengine_key(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KIconEngine*
+/// @param self KIconEngine*
 /// @param callback const char* func(const KIconEngine* self)
 ///
-void k_iconengine_on_key(const void* self, const char* (*callback)(const void*));
+void k_iconengine_on_key(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#key)
 ///
@@ -296,10 +296,10 @@ QIconEngine* k_iconengine_clone(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KIconEngine*
+/// @param self KIconEngine*
 /// @param callback QIconEngine* func(const KIconEngine* self)
 ///
-void k_iconengine_on_clone(const void* self, QIconEngine* (*callback)(const void*));
+void k_iconengine_on_clone(void* self, QIconEngine* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#clone)
 ///
@@ -345,10 +345,10 @@ bool k_iconengine_write(const void* self, void* out);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KIconEngine*
+/// @param self KIconEngine*
 /// @param callback bool func(const KIconEngine* self, QDataStream* out)
 ///
-void k_iconengine_on_write(const void* self, bool (*callback)(const void*, void*));
+void k_iconengine_on_write(void* self, bool (*callback)(const void*, void*));
 
 /// [Upstream resources](https://api.kde.org/kiconengine.html#write)
 ///

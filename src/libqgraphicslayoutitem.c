@@ -133,7 +133,7 @@ void q_graphicslayoutitem_get_contents_margins(const void* self, double* left, d
     QGraphicsLayoutItem_GetContentsMargins((QGraphicsLayoutItem*)self, left, top, right, bottom);
 }
 
-void q_graphicslayoutitem_on_get_contents_margins(const void* self, void (*callback)(const void*, double*, double*, double*, double*)) {
+void q_graphicslayoutitem_on_get_contents_margins(void* self, void (*callback)(const void*, double*, double*, double*, double*)) {
     QGraphicsLayoutItem_OnGetContentsMargins((QGraphicsLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -165,7 +165,7 @@ bool q_graphicslayoutitem_is_empty(const void* self) {
     return QGraphicsLayoutItem_IsEmpty((QGraphicsLayoutItem*)self);
 }
 
-void q_graphicslayoutitem_on_is_empty(const void* self, bool (*callback)(const void*)) {
+void q_graphicslayoutitem_on_is_empty(void* self, bool (*callback)(const void*)) {
     QGraphicsLayoutItem_OnIsEmpty((QGraphicsLayoutItem*)self, (intptr_t)callback);
 }
 
@@ -205,7 +205,7 @@ QSizeF* q_graphicslayoutitem_size_hint(const void* self, int32_t which, const vo
     return QGraphicsLayoutItem_SizeHint((QGraphicsLayoutItem*)self, which, (QSizeF*)constraint);
 }
 
-void q_graphicslayoutitem_on_size_hint(const void* self, QSizeF* (*callback)(const void*, int32_t, const void*)) {
+void q_graphicslayoutitem_on_size_hint(void* self, QSizeF* (*callback)(const void*, int32_t, const void*)) {
     QGraphicsLayoutItem_OnSizeHint((QGraphicsLayoutItem*)self, (intptr_t)callback);
 }
 

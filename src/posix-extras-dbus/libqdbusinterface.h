@@ -60,10 +60,10 @@ const QMetaObject* q_dbusinterface_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDBusInterface*
+/// @param self QDBusInterface*
 /// @param callback const QMetaObject* func(const QDBusInterface* self)
 ///
-void q_dbusinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_dbusinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1018,12 +1018,12 @@ QVariant* q_dbusinterface_super_internal_prop_get(const void* self, const char* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusInterface*
+/// @param self QDBusInterface*
 /// @param callback QVariant* func(QDBusInterface* self, const char* propname)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_dbusinterface_on_internal_prop_get(const void* self, QVariant* (*callback)(const void*, const char*));
+void q_dbusinterface_on_internal_prop_get(void* self, QVariant* (*callback)(const void*, const char*));
 
 /// Inherited from QDBusAbstractInterface
 ///
@@ -1090,12 +1090,12 @@ QDBusMessage* q_dbusinterface_super_internal_const_call(const void* self, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusInterface*
+/// @param self QDBusInterface*
 /// @param callback QDBusMessage* func(QDBusInterface* self, enum QDBus__CallMode mode, const char* method)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_dbusinterface_on_internal_const_call(const void* self, QDBusMessage* (*callback)(const void*, int32_t, const char*));
+void q_dbusinterface_on_internal_const_call(void* self, QDBusMessage* (*callback)(const void*, int32_t, const char*));
 
 /// Inherited from QObject
 ///
@@ -1123,10 +1123,10 @@ QObject* q_dbusinterface_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusInterface*
+/// @param self QDBusInterface*
 /// @param callback QObject* func(QDBusInterface* self)
 ///
-void q_dbusinterface_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_dbusinterface_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1154,10 +1154,10 @@ int32_t q_dbusinterface_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusInterface*
+/// @param self QDBusInterface*
 /// @param callback int32_t func(QDBusInterface* self)
 ///
-void q_dbusinterface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_dbusinterface_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1187,10 +1187,10 @@ int32_t q_dbusinterface_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusInterface*
+/// @param self QDBusInterface*
 /// @param callback int32_t func(QDBusInterface* self, const char* signal)
 ///
-void q_dbusinterface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_dbusinterface_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1220,10 +1220,10 @@ bool q_dbusinterface_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusInterface*
+/// @param self QDBusInterface*
 /// @param callback bool func(QDBusInterface* self, QMetaMethod* signal)
 ///
-void q_dbusinterface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_dbusinterface_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

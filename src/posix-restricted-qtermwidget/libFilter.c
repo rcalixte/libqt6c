@@ -281,8 +281,8 @@ const QMetaObject* k_onsole__filter_super_meta_object(const void* self) {
     return Konsole__Filter_SuperMetaObject((Konsole__Filter*)self);
 }
 
-void k_onsole__filter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    Konsole__Filter_OnMetaObject((const Konsole__Filter*)self, (intptr_t)callback);
+void k_onsole__filter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    Konsole__Filter_OnMetaObject((Konsole__Filter*)self, (intptr_t)callback);
 }
 
 void* k_onsole__filter_metacast(void* self, const char* param1) {
@@ -699,8 +699,8 @@ const QMetaObject* k_onsole__regexpfilter_super_meta_object(const void* self) {
     return Konsole__RegExpFilter_SuperMetaObject((Konsole__RegExpFilter*)self);
 }
 
-void k_onsole__regexpfilter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
-    Konsole__RegExpFilter_OnMetaObject((const Konsole__RegExpFilter*)self, (intptr_t)callback);
+void k_onsole__regexpfilter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
+    Konsole__RegExpFilter_OnMetaObject((Konsole__RegExpFilter*)self, (intptr_t)callback);
 }
 
 void* k_onsole__regexpfilter_metacast(void* self, const char* param1) {
@@ -858,7 +858,7 @@ const QMetaObject* k_onsole__urlfilter_meta_object(const void* self) {
     return Konsole__UrlFilter_MetaObject((Konsole__UrlFilter*)self);
 }
 
-void k_onsole__urlfilter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_onsole__urlfilter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Konsole__UrlFilter_OnMetaObject((Konsole__UrlFilter*)self, (intptr_t)callback);
 }
 
@@ -1299,7 +1299,7 @@ const QMetaObject* k_onsole__filterobject_meta_object(const void* self) {
     return Konsole__FilterObject_MetaObject((Konsole__FilterObject*)self);
 }
 
-void k_onsole__filterobject_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_onsole__filterobject_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Konsole__FilterObject_OnMetaObject((Konsole__FilterObject*)self, (intptr_t)callback);
 }
 

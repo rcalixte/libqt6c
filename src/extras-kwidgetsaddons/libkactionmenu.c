@@ -25,7 +25,7 @@ const QMetaObject* k_actionmenu_meta_object(const void* self) {
     return KActionMenu_MetaObject((KActionMenu*)self);
 }
 
-void k_actionmenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_actionmenu_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KActionMenu_OnMetaObject((KActionMenu*)self, (intptr_t)callback);
 }
 

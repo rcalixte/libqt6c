@@ -35,10 +35,10 @@ const QMetaObject* q_bluetoothserver_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QBluetoothServer*
+/// @param self QBluetoothServer*
 /// @param callback const QMetaObject* func(const QBluetoothServer* self)
 ///
-void q_bluetoothserver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_bluetoothserver_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -966,10 +966,10 @@ QObject* q_bluetoothserver_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QBluetoothServer*
+/// @param self QBluetoothServer*
 /// @param callback QObject* func(QBluetoothServer* self)
 ///
-void q_bluetoothserver_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_bluetoothserver_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -997,10 +997,10 @@ int32_t q_bluetoothserver_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QBluetoothServer*
+/// @param self QBluetoothServer*
 /// @param callback int32_t func(QBluetoothServer* self)
 ///
-void q_bluetoothserver_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_bluetoothserver_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1030,10 +1030,10 @@ int32_t q_bluetoothserver_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QBluetoothServer*
+/// @param self QBluetoothServer*
 /// @param callback int32_t func(QBluetoothServer* self, const char* signal)
 ///
-void q_bluetoothserver_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_bluetoothserver_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1063,10 +1063,10 @@ bool q_bluetoothserver_super_is_signal_connected(const void* self, const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QBluetoothServer*
+/// @param self QBluetoothServer*
 /// @param callback bool func(QBluetoothServer* self, QMetaMethod* signal)
 ///
-void q_bluetoothserver_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_bluetoothserver_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -20,7 +20,7 @@ const QMetaObject* q_arealegendmarker_meta_object(const void* self) {
     return QAreaLegendMarker_MetaObject((QAreaLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_arealegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAreaLegendMarker_OnMetaObject((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 

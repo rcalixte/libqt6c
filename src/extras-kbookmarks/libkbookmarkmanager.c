@@ -19,7 +19,7 @@ const QMetaObject* k_bookmarkmanager_meta_object(const void* self) {
     return KBookmarkManager_MetaObject((KBookmarkManager*)self);
 }
 
-void k_bookmarkmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_bookmarkmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KBookmarkManager_OnMetaObject((KBookmarkManager*)self, (intptr_t)callback);
 }
 

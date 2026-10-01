@@ -24,15 +24,15 @@ QExtensionFactory* q_extensionfactory_new2(void* parent);
 
 /// Upcasts to a QAbstractExtensionFactory object
 ///
-/// @param self QExtensionFactory*
+/// @param self const QExtensionFactory*
 ///
-QAbstractExtensionFactory* q_extensionfactory_as_q_abstract_extension_factory(void* self);
+QAbstractExtensionFactory* q_extensionfactory_as_q_abstract_extension_factory(const void* self);
 
 /// Downcasts to a QExtensionFactory object
 ///
 /// @param _qabstractextensionfactory QAbstractExtensionFactory*
 ///
-QExtensionFactory* q_extensionfactory_from_q_abstract_extension_factory(void* _qabstractextensionfactory);
+QExtensionFactory* q_extensionfactory_from_q_abstract_extension_factory(const void* _qabstractextensionfactory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -44,10 +44,10 @@ const QMetaObject* q_extensionfactory_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QExtensionFactory*
+/// @param self QExtensionFactory*
 /// @param callback const QMetaObject* func(const QExtensionFactory* self)
 ///
-void q_extensionfactory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_extensionfactory_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -119,10 +119,10 @@ QObject* q_extensionfactory_extension(const void* self, void* object, const char
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QExtensionFactory*
+/// @param self QExtensionFactory*
 /// @param callback QObject* func(const QExtensionFactory* self, QObject* object, const char* iid)
 ///
-void q_extensionfactory_on_extension(const void* self, QObject* (*callback)(const void*, void*, const char*));
+void q_extensionfactory_on_extension(void* self, QObject* (*callback)(const void*, void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qextensionfactory.html#extension)
 ///
@@ -153,10 +153,10 @@ QObject* q_extensionfactory_create_extension(const void* self, void* object, con
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QExtensionFactory*
+/// @param self QExtensionFactory*
 /// @param callback QObject* func(const QExtensionFactory* self, QObject* object, const char* iid, QObject* parent)
 ///
-void q_extensionfactory_on_create_extension(const void* self, QObject* (*callback)(const void*, void*, const char*, void*));
+void q_extensionfactory_on_create_extension(void* self, QObject* (*callback)(const void*, void*, const char*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qextensionfactory.html#createExtension)
 ///
@@ -903,10 +903,10 @@ QObject* q_extensionfactory_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QExtensionFactory*
+/// @param self QExtensionFactory*
 /// @param callback QObject* func(QExtensionFactory* self)
 ///
-void q_extensionfactory_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_extensionfactory_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -934,10 +934,10 @@ int32_t q_extensionfactory_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QExtensionFactory*
+/// @param self QExtensionFactory*
 /// @param callback int32_t func(QExtensionFactory* self)
 ///
-void q_extensionfactory_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_extensionfactory_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -967,10 +967,10 @@ int32_t q_extensionfactory_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QExtensionFactory*
+/// @param self QExtensionFactory*
 /// @param callback int32_t func(QExtensionFactory* self, const char* signal)
 ///
-void q_extensionfactory_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_extensionfactory_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1000,10 +1000,10 @@ bool q_extensionfactory_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QExtensionFactory*
+/// @param self QExtensionFactory*
 /// @param callback bool func(QExtensionFactory* self, QMetaMethod* signal)
 ///
-void q_extensionfactory_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_extensionfactory_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

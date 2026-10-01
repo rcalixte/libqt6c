@@ -209,10 +209,10 @@ int32_t q_graphicslinearlayout_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsLinearLayout*
+/// @param self QGraphicsLinearLayout*
 /// @param callback int32_t func(const QGraphicsLinearLayout* self)
 ///
-void q_graphicslinearlayout_on_count(const void* self, int32_t (*callback)(const void*));
+void q_graphicslinearlayout_on_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#count)
 ///
@@ -233,10 +233,10 @@ QGraphicsLayoutItem* q_graphicslinearlayout_item_at(const void* self, int index)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsLinearLayout*
+/// @param self QGraphicsLinearLayout*
 /// @param callback QGraphicsLayoutItem* func(const QGraphicsLinearLayout* self, int index)
 ///
-void q_graphicslinearlayout_on_item_at(const void* self, QGraphicsLayoutItem* (*callback)(const void*, int));
+void q_graphicslinearlayout_on_item_at(void* self, QGraphicsLayoutItem* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#itemAt)
 ///
@@ -282,12 +282,12 @@ QSizeF* q_graphicslinearlayout_size_hint(const void* self, int32_t which, const 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsLinearLayout*
+/// @param self QGraphicsLinearLayout*
 /// @param callback QSizeF* func(const QGraphicsLinearLayout* self, enum Qt__SizeHint which, QSizeF* constraint)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicslinearlayout_on_size_hint(const void* self, QSizeF* (*callback)(const void*, int32_t, const void*));
+void q_graphicslinearlayout_on_size_hint(void* self, QSizeF* (*callback)(const void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#sizeHint)
 ///
@@ -700,10 +700,10 @@ void q_graphicslinearlayout_super_get_contents_margins(const void* self, double*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsLinearLayout*
+/// @param self QGraphicsLinearLayout*
 /// @param callback void func(QGraphicsLinearLayout* self, double* left, double* top, double* right, double* bottom)
 ///
-void q_graphicslinearlayout_on_get_contents_margins(const void* self, void (*callback)(const void*, double*, double*, double*, double*));
+void q_graphicslinearlayout_on_get_contents_margins(void* self, void (*callback)(const void*, double*, double*, double*, double*));
 
 /// Inherited from QGraphicsLayout
 ///
@@ -795,10 +795,10 @@ bool q_graphicslinearlayout_super_is_empty(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsLinearLayout*
+/// @param self QGraphicsLinearLayout*
 /// @param callback bool func(QGraphicsLinearLayout* self)
 ///
-void q_graphicslinearlayout_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_graphicslinearlayout_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// Inherited from QGraphicsLayout
 ///

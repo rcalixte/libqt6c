@@ -62,10 +62,10 @@ bool q_designersettingsinterface_contains(const void* self, const char* key);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerSettingsInterface*
+/// @param self QDesignerSettingsInterface*
 /// @param callback bool func(const QDesignerSettingsInterface* self, const char* key)
 ///
-void q_designersettingsinterface_on_contains(const void* self, bool (*callback)(const void*, const char*));
+void q_designersettingsinterface_on_contains(void* self, bool (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#setValue)
 ///
@@ -100,12 +100,12 @@ QVariant* q_designersettingsinterface_value(const void* self, const char* key, c
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerSettingsInterface*
+/// @param self QDesignerSettingsInterface*
 /// @param callback QVariant* func(const QDesignerSettingsInterface* self, const char* key, QVariant* defaultValue)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designersettingsinterface_on_value(const void* self, QVariant* (*callback)(const void*, const char*, const void*));
+void q_designersettingsinterface_on_value(void* self, QVariant* (*callback)(const void*, const char*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#remove)
 ///

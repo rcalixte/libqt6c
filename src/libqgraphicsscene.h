@@ -72,10 +72,10 @@ const QMetaObject* q_graphicsscene_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsScene*
+/// @param self QGraphicsScene*
 /// @param callback const QMetaObject* func(const QGraphicsScene* self)
 ///
-void q_graphicsscene_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_graphicsscene_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -532,12 +532,12 @@ QVariant* q_graphicsscene_input_method_query(const void* self, int32_t query);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsScene*
+/// @param self QGraphicsScene*
 /// @param callback QVariant* func(const QGraphicsScene* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsscene_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_graphicsscene_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#inputMethodQuery)
 ///
@@ -2414,10 +2414,10 @@ QObject* q_graphicsscene_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsScene*
+/// @param self QGraphicsScene*
 /// @param callback QObject* func(QGraphicsScene* self)
 ///
-void q_graphicsscene_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_graphicsscene_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2445,10 +2445,10 @@ int32_t q_graphicsscene_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsScene*
+/// @param self QGraphicsScene*
 /// @param callback int32_t func(QGraphicsScene* self)
 ///
-void q_graphicsscene_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_graphicsscene_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2478,10 +2478,10 @@ int32_t q_graphicsscene_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsScene*
+/// @param self QGraphicsScene*
 /// @param callback int32_t func(QGraphicsScene* self, const char* signal)
 ///
-void q_graphicsscene_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_graphicsscene_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2511,10 +2511,10 @@ bool q_graphicsscene_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsScene*
+/// @param self QGraphicsScene*
 /// @param callback bool func(QGraphicsScene* self, QMetaMethod* signal)
 ///
-void q_graphicsscene_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_graphicsscene_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

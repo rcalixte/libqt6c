@@ -35,7 +35,7 @@ const QMetaObject* k_aboutapplicationdialog_meta_object(const void* self) {
     return KAboutApplicationDialog_MetaObject((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_aboutapplicationdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KAboutApplicationDialog_OnMetaObject((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
@@ -132,11 +132,11 @@ void k_aboutapplicationdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_aboutapplicationdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_aboutapplicationdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KAboutApplicationDialog* k_aboutapplicationdialog_from_q_paint_device(void* _qpaintdevice) {
+KAboutApplicationDialog* k_aboutapplicationdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KAboutApplicationDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1539,8 +1539,8 @@ QSize* k_aboutapplicationdialog_super_size_hint(const void* self) {
     return KAboutApplicationDialog_SuperSizeHint((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KAboutApplicationDialog_OnSizeHint((const KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KAboutApplicationDialog_OnSizeHint((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_aboutapplicationdialog_minimum_size_hint(const void* self) {
@@ -1551,8 +1551,8 @@ QSize* k_aboutapplicationdialog_super_minimum_size_hint(const void* self) {
     return KAboutApplicationDialog_SuperMinimumSizeHint((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KAboutApplicationDialog_OnMinimumSizeHint((const KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KAboutApplicationDialog_OnMinimumSizeHint((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 void k_aboutapplicationdialog_open(void* self) {
@@ -1695,8 +1695,8 @@ int32_t k_aboutapplicationdialog_super_dev_type(const void* self) {
     return KAboutApplicationDialog_SuperDevType((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KAboutApplicationDialog_OnDevType((const KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KAboutApplicationDialog_OnDevType((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_aboutapplicationdialog_height_for_width(const void* self, int param1) {
@@ -1707,8 +1707,8 @@ int32_t k_aboutapplicationdialog_super_height_for_width(const void* self, int pa
     return KAboutApplicationDialog_SuperHeightForWidth((KAboutApplicationDialog*)self, param1);
 }
 
-void k_aboutapplicationdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KAboutApplicationDialog_OnHeightForWidth((const KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KAboutApplicationDialog_OnHeightForWidth((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 bool k_aboutapplicationdialog_has_height_for_width(const void* self) {
@@ -1719,8 +1719,8 @@ bool k_aboutapplicationdialog_super_has_height_for_width(const void* self) {
     return KAboutApplicationDialog_SuperHasHeightForWidth((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KAboutApplicationDialog_OnHasHeightForWidth((const KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KAboutApplicationDialog_OnHasHeightForWidth((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_aboutapplicationdialog_paint_engine(const void* self) {
@@ -1731,8 +1731,8 @@ QPaintEngine* k_aboutapplicationdialog_super_paint_engine(const void* self) {
     return KAboutApplicationDialog_SuperPaintEngine((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KAboutApplicationDialog_OnPaintEngine((const KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KAboutApplicationDialog_OnPaintEngine((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 bool k_aboutapplicationdialog_event(void* self, void* event) {
@@ -2007,8 +2007,8 @@ int32_t k_aboutapplicationdialog_super_metric(const void* self, int32_t param1) 
     return KAboutApplicationDialog_SuperMetric((KAboutApplicationDialog*)self, param1);
 }
 
-void k_aboutapplicationdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KAboutApplicationDialog_OnMetric((const KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KAboutApplicationDialog_OnMetric((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 void k_aboutapplicationdialog_init_painter(const void* self, void* painter) {
@@ -2019,8 +2019,8 @@ void k_aboutapplicationdialog_super_init_painter(const void* self, void* painter
     KAboutApplicationDialog_SuperInitPainter((KAboutApplicationDialog*)self, (QPainter*)painter);
 }
 
-void k_aboutapplicationdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KAboutApplicationDialog_OnInitPainter((const KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KAboutApplicationDialog_OnInitPainter((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_aboutapplicationdialog_redirected(const void* self, void* offset) {
@@ -2031,8 +2031,8 @@ QPaintDevice* k_aboutapplicationdialog_super_redirected(const void* self, void* 
     return KAboutApplicationDialog_SuperRedirected((KAboutApplicationDialog*)self, (QPoint*)offset);
 }
 
-void k_aboutapplicationdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KAboutApplicationDialog_OnRedirected((const KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KAboutApplicationDialog_OnRedirected((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_aboutapplicationdialog_shared_painter(const void* self) {
@@ -2043,8 +2043,8 @@ QPainter* k_aboutapplicationdialog_super_shared_painter(const void* self) {
     return KAboutApplicationDialog_SuperSharedPainter((KAboutApplicationDialog*)self);
 }
 
-void k_aboutapplicationdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KAboutApplicationDialog_OnSharedPainter((const KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KAboutApplicationDialog_OnSharedPainter((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 void k_aboutapplicationdialog_input_method_event(void* self, void* param1) {
@@ -2067,8 +2067,8 @@ QVariant* k_aboutapplicationdialog_super_input_method_query(const void* self, in
     return KAboutApplicationDialog_SuperInputMethodQuery((KAboutApplicationDialog*)self, param1);
 }
 
-void k_aboutapplicationdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KAboutApplicationDialog_OnInputMethodQuery((const KAboutApplicationDialog*)self, (intptr_t)callback);
+void k_aboutapplicationdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KAboutApplicationDialog_OnInputMethodQuery((KAboutApplicationDialog*)self, (intptr_t)callback);
 }
 
 bool k_aboutapplicationdialog_focus_next_prev_child(void* self, bool next) {

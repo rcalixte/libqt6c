@@ -22,7 +22,7 @@ const QMetaObject* q_timeline_meta_object(const void* self) {
     return QTimeLine_MetaObject((QTimeLine*)self);
 }
 
-void q_timeline_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_timeline_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTimeLine_OnMetaObject((QTimeLine*)self, (intptr_t)callback);
 }
 
@@ -145,7 +145,7 @@ double q_timeline_value_for_time(const void* self, int msec) {
     return QTimeLine_ValueForTime((QTimeLine*)self, msec);
 }
 
-void q_timeline_on_value_for_time(const void* self, double (*callback)(const void*, int)) {
+void q_timeline_on_value_for_time(void* self, double (*callback)(const void*, int)) {
     QTimeLine_OnValueForTime((QTimeLine*)self, (intptr_t)callback);
 }
 

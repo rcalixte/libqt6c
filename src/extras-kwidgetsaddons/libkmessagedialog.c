@@ -32,7 +32,7 @@ const QMetaObject* k_messagedialog_meta_object(const void* self) {
     return KMessageDialog_MetaObject((KMessageDialog*)self);
 }
 
-void k_messagedialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_messagedialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KMessageDialog_OnMetaObject((KMessageDialog*)self, (intptr_t)callback);
 }
 
@@ -219,11 +219,11 @@ void k_messagedialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_messagedialog_as_q_paint_device(void* self) {
+QPaintDevice* k_messagedialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KMessageDialog* k_messagedialog_from_q_paint_device(void* _qpaintdevice) {
+KMessageDialog* k_messagedialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KMessageDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1626,8 +1626,8 @@ QSize* k_messagedialog_super_size_hint(const void* self) {
     return KMessageDialog_SuperSizeHint((KMessageDialog*)self);
 }
 
-void k_messagedialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KMessageDialog_OnSizeHint((const KMessageDialog*)self, (intptr_t)callback);
+void k_messagedialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KMessageDialog_OnSizeHint((KMessageDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_messagedialog_minimum_size_hint(const void* self) {
@@ -1638,8 +1638,8 @@ QSize* k_messagedialog_super_minimum_size_hint(const void* self) {
     return KMessageDialog_SuperMinimumSizeHint((KMessageDialog*)self);
 }
 
-void k_messagedialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KMessageDialog_OnMinimumSizeHint((const KMessageDialog*)self, (intptr_t)callback);
+void k_messagedialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KMessageDialog_OnMinimumSizeHint((KMessageDialog*)self, (intptr_t)callback);
 }
 
 void k_messagedialog_open(void* self) {
@@ -1770,8 +1770,8 @@ int32_t k_messagedialog_super_dev_type(const void* self) {
     return KMessageDialog_SuperDevType((KMessageDialog*)self);
 }
 
-void k_messagedialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KMessageDialog_OnDevType((const KMessageDialog*)self, (intptr_t)callback);
+void k_messagedialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KMessageDialog_OnDevType((KMessageDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_messagedialog_height_for_width(const void* self, int param1) {
@@ -1782,8 +1782,8 @@ int32_t k_messagedialog_super_height_for_width(const void* self, int param1) {
     return KMessageDialog_SuperHeightForWidth((KMessageDialog*)self, param1);
 }
 
-void k_messagedialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KMessageDialog_OnHeightForWidth((const KMessageDialog*)self, (intptr_t)callback);
+void k_messagedialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KMessageDialog_OnHeightForWidth((KMessageDialog*)self, (intptr_t)callback);
 }
 
 bool k_messagedialog_has_height_for_width(const void* self) {
@@ -1794,8 +1794,8 @@ bool k_messagedialog_super_has_height_for_width(const void* self) {
     return KMessageDialog_SuperHasHeightForWidth((KMessageDialog*)self);
 }
 
-void k_messagedialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KMessageDialog_OnHasHeightForWidth((const KMessageDialog*)self, (intptr_t)callback);
+void k_messagedialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KMessageDialog_OnHasHeightForWidth((KMessageDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_messagedialog_paint_engine(const void* self) {
@@ -1806,8 +1806,8 @@ QPaintEngine* k_messagedialog_super_paint_engine(const void* self) {
     return KMessageDialog_SuperPaintEngine((KMessageDialog*)self);
 }
 
-void k_messagedialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KMessageDialog_OnPaintEngine((const KMessageDialog*)self, (intptr_t)callback);
+void k_messagedialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KMessageDialog_OnPaintEngine((KMessageDialog*)self, (intptr_t)callback);
 }
 
 bool k_messagedialog_event(void* self, void* event) {
@@ -2082,8 +2082,8 @@ int32_t k_messagedialog_super_metric(const void* self, int32_t param1) {
     return KMessageDialog_SuperMetric((KMessageDialog*)self, param1);
 }
 
-void k_messagedialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KMessageDialog_OnMetric((const KMessageDialog*)self, (intptr_t)callback);
+void k_messagedialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KMessageDialog_OnMetric((KMessageDialog*)self, (intptr_t)callback);
 }
 
 void k_messagedialog_init_painter(const void* self, void* painter) {
@@ -2094,8 +2094,8 @@ void k_messagedialog_super_init_painter(const void* self, void* painter) {
     KMessageDialog_SuperInitPainter((KMessageDialog*)self, (QPainter*)painter);
 }
 
-void k_messagedialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KMessageDialog_OnInitPainter((const KMessageDialog*)self, (intptr_t)callback);
+void k_messagedialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KMessageDialog_OnInitPainter((KMessageDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_messagedialog_redirected(const void* self, void* offset) {
@@ -2106,8 +2106,8 @@ QPaintDevice* k_messagedialog_super_redirected(const void* self, void* offset) {
     return KMessageDialog_SuperRedirected((KMessageDialog*)self, (QPoint*)offset);
 }
 
-void k_messagedialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KMessageDialog_OnRedirected((const KMessageDialog*)self, (intptr_t)callback);
+void k_messagedialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KMessageDialog_OnRedirected((KMessageDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_messagedialog_shared_painter(const void* self) {
@@ -2118,8 +2118,8 @@ QPainter* k_messagedialog_super_shared_painter(const void* self) {
     return KMessageDialog_SuperSharedPainter((KMessageDialog*)self);
 }
 
-void k_messagedialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KMessageDialog_OnSharedPainter((const KMessageDialog*)self, (intptr_t)callback);
+void k_messagedialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KMessageDialog_OnSharedPainter((KMessageDialog*)self, (intptr_t)callback);
 }
 
 void k_messagedialog_input_method_event(void* self, void* param1) {
@@ -2142,8 +2142,8 @@ QVariant* k_messagedialog_super_input_method_query(const void* self, int32_t par
     return KMessageDialog_SuperInputMethodQuery((KMessageDialog*)self, param1);
 }
 
-void k_messagedialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KMessageDialog_OnInputMethodQuery((const KMessageDialog*)self, (intptr_t)callback);
+void k_messagedialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KMessageDialog_OnInputMethodQuery((KMessageDialog*)self, (intptr_t)callback);
 }
 
 bool k_messagedialog_focus_next_prev_child(void* self, bool next) {

@@ -33,7 +33,7 @@ const QMetaObject* k_sonnet__highlighter_meta_object(const void* self) {
     return Sonnet__Highlighter_MetaObject((Sonnet__Highlighter*)self);
 }
 
-void k_sonnet__highlighter_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_sonnet__highlighter_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Sonnet__Highlighter_OnMetaObject((Sonnet__Highlighter*)self, (intptr_t)callback);
 }
 

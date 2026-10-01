@@ -14,7 +14,7 @@ const char* k_bookmarkowner_current_title(const void* self) {
     return _ret;
 }
 
-void k_bookmarkowner_on_current_title(const void* self, const char* (*callback)(const void*)) {
+void k_bookmarkowner_on_current_title(void* self, const char* (*callback)(const void*)) {
     KBookmarkOwner_OnCurrentTitle((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
@@ -29,7 +29,7 @@ QUrl* k_bookmarkowner_current_url(const void* self) {
     return KBookmarkOwner_CurrentUrl((KBookmarkOwner*)self);
 }
 
-void k_bookmarkowner_on_current_url(const void* self, QUrl* (*callback)(const void*)) {
+void k_bookmarkowner_on_current_url(void* self, QUrl* (*callback)(const void*)) {
     KBookmarkOwner_OnCurrentUrl((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
@@ -44,7 +44,7 @@ const char* k_bookmarkowner_current_icon(const void* self) {
     return _ret;
 }
 
-void k_bookmarkowner_on_current_icon(const void* self, const char* (*callback)(const void*)) {
+void k_bookmarkowner_on_current_icon(void* self, const char* (*callback)(const void*)) {
     KBookmarkOwner_OnCurrentIcon((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
@@ -59,7 +59,7 @@ bool k_bookmarkowner_supports_tabs(const void* self) {
     return KBookmarkOwner_SupportsTabs((KBookmarkOwner*)self);
 }
 
-void k_bookmarkowner_on_supports_tabs(const void* self, bool (*callback)(const void*)) {
+void k_bookmarkowner_on_supports_tabs(void* self, bool (*callback)(const void*)) {
     KBookmarkOwner_OnSupportsTabs((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
@@ -72,7 +72,7 @@ libqt_list /* of KBookmarkOwner__FutureBookmark* */ k_bookmarkowner_current_book
     return _arr;
 }
 
-void k_bookmarkowner_on_current_bookmark_list(const void* self, libqt_list /* of KBookmarkOwner__FutureBookmark* */ (*callback)(const void*)) {
+void k_bookmarkowner_on_current_bookmark_list(void* self, libqt_list /* of KBookmarkOwner__FutureBookmark* */ (*callback)(const void*)) {
     KBookmarkOwner_OnCurrentBookmarkList((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
@@ -85,7 +85,7 @@ bool k_bookmarkowner_enable_option(const void* self, int32_t option) {
     return KBookmarkOwner_EnableOption((KBookmarkOwner*)self, option);
 }
 
-void k_bookmarkowner_on_enable_option(const void* self, bool (*callback)(const void*, int32_t)) {
+void k_bookmarkowner_on_enable_option(void* self, bool (*callback)(const void*, int32_t)) {
     KBookmarkOwner_OnEnableOption((KBookmarkOwner*)self, (intptr_t)callback);
 }
 

@@ -18,7 +18,7 @@ const QMetaObject* q_accessibleplugin_meta_object(const void* self) {
     return QAccessiblePlugin_MetaObject((QAccessiblePlugin*)self);
 }
 
-void q_accessibleplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_accessibleplugin_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QAccessiblePlugin_OnMetaObject((QAccessiblePlugin*)self, (intptr_t)callback);
 }
 

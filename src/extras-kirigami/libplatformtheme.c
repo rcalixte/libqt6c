@@ -21,7 +21,7 @@ const QMetaObject* k_irigami__platform__platformtheme_meta_object(const void* se
     return Kirigami__Platform__PlatformTheme_MetaObject((Kirigami__Platform__PlatformTheme*)self);
 }
 
-void k_irigami__platform__platformtheme_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_irigami__platform__platformtheme_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Kirigami__Platform__PlatformTheme_OnMetaObject((Kirigami__Platform__PlatformTheme*)self, (intptr_t)callback);
 }
 

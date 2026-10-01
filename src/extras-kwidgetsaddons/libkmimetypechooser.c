@@ -136,7 +136,7 @@ const QMetaObject* k_mimetypechooser_meta_object(const void* self) {
     return KMimeTypeChooser_MetaObject((KMimeTypeChooser*)self);
 }
 
-void k_mimetypechooser_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_mimetypechooser_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KMimeTypeChooser_OnMetaObject((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
@@ -223,11 +223,11 @@ const char* k_mimetypechooser_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPaintDevice* k_mimetypechooser_as_q_paint_device(void* self) {
+QPaintDevice* k_mimetypechooser_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KMimeTypeChooser* k_mimetypechooser_from_q_paint_device(void* _qpaintdevice) {
+KMimeTypeChooser* k_mimetypechooser_from_q_paint_device(const void* _qpaintdevice) {
     return (KMimeTypeChooser*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1618,8 +1618,8 @@ int32_t k_mimetypechooser_super_dev_type(const void* self) {
     return KMimeTypeChooser_SuperDevType((KMimeTypeChooser*)self);
 }
 
-void k_mimetypechooser_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KMimeTypeChooser_OnDevType((const KMimeTypeChooser*)self, (intptr_t)callback);
+void k_mimetypechooser_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KMimeTypeChooser_OnDevType((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
 void k_mimetypechooser_set_visible(void* self, bool visible) {
@@ -1642,8 +1642,8 @@ QSize* k_mimetypechooser_super_size_hint(const void* self) {
     return KMimeTypeChooser_SuperSizeHint((KMimeTypeChooser*)self);
 }
 
-void k_mimetypechooser_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KMimeTypeChooser_OnSizeHint((const KMimeTypeChooser*)self, (intptr_t)callback);
+void k_mimetypechooser_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KMimeTypeChooser_OnSizeHint((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
 QSize* k_mimetypechooser_minimum_size_hint(const void* self) {
@@ -1654,8 +1654,8 @@ QSize* k_mimetypechooser_super_minimum_size_hint(const void* self) {
     return KMimeTypeChooser_SuperMinimumSizeHint((KMimeTypeChooser*)self);
 }
 
-void k_mimetypechooser_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KMimeTypeChooser_OnMinimumSizeHint((const KMimeTypeChooser*)self, (intptr_t)callback);
+void k_mimetypechooser_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KMimeTypeChooser_OnMinimumSizeHint((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
 int32_t k_mimetypechooser_height_for_width(const void* self, int param1) {
@@ -1666,8 +1666,8 @@ int32_t k_mimetypechooser_super_height_for_width(const void* self, int param1) {
     return KMimeTypeChooser_SuperHeightForWidth((KMimeTypeChooser*)self, param1);
 }
 
-void k_mimetypechooser_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KMimeTypeChooser_OnHeightForWidth((const KMimeTypeChooser*)self, (intptr_t)callback);
+void k_mimetypechooser_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KMimeTypeChooser_OnHeightForWidth((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
 bool k_mimetypechooser_has_height_for_width(const void* self) {
@@ -1678,8 +1678,8 @@ bool k_mimetypechooser_super_has_height_for_width(const void* self) {
     return KMimeTypeChooser_SuperHasHeightForWidth((KMimeTypeChooser*)self);
 }
 
-void k_mimetypechooser_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KMimeTypeChooser_OnHasHeightForWidth((const KMimeTypeChooser*)self, (intptr_t)callback);
+void k_mimetypechooser_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KMimeTypeChooser_OnHasHeightForWidth((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_mimetypechooser_paint_engine(const void* self) {
@@ -1690,8 +1690,8 @@ QPaintEngine* k_mimetypechooser_super_paint_engine(const void* self) {
     return KMimeTypeChooser_SuperPaintEngine((KMimeTypeChooser*)self);
 }
 
-void k_mimetypechooser_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KMimeTypeChooser_OnPaintEngine((const KMimeTypeChooser*)self, (intptr_t)callback);
+void k_mimetypechooser_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KMimeTypeChooser_OnPaintEngine((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
 bool k_mimetypechooser_event(void* self, void* event) {
@@ -2026,8 +2026,8 @@ int32_t k_mimetypechooser_super_metric(const void* self, int32_t param1) {
     return KMimeTypeChooser_SuperMetric((KMimeTypeChooser*)self, param1);
 }
 
-void k_mimetypechooser_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KMimeTypeChooser_OnMetric((const KMimeTypeChooser*)self, (intptr_t)callback);
+void k_mimetypechooser_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KMimeTypeChooser_OnMetric((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
 void k_mimetypechooser_init_painter(const void* self, void* painter) {
@@ -2038,8 +2038,8 @@ void k_mimetypechooser_super_init_painter(const void* self, void* painter) {
     KMimeTypeChooser_SuperInitPainter((KMimeTypeChooser*)self, (QPainter*)painter);
 }
 
-void k_mimetypechooser_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KMimeTypeChooser_OnInitPainter((const KMimeTypeChooser*)self, (intptr_t)callback);
+void k_mimetypechooser_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KMimeTypeChooser_OnInitPainter((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_mimetypechooser_redirected(const void* self, void* offset) {
@@ -2050,8 +2050,8 @@ QPaintDevice* k_mimetypechooser_super_redirected(const void* self, void* offset)
     return KMimeTypeChooser_SuperRedirected((KMimeTypeChooser*)self, (QPoint*)offset);
 }
 
-void k_mimetypechooser_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KMimeTypeChooser_OnRedirected((const KMimeTypeChooser*)self, (intptr_t)callback);
+void k_mimetypechooser_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KMimeTypeChooser_OnRedirected((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
 QPainter* k_mimetypechooser_shared_painter(const void* self) {
@@ -2062,8 +2062,8 @@ QPainter* k_mimetypechooser_super_shared_painter(const void* self) {
     return KMimeTypeChooser_SuperSharedPainter((KMimeTypeChooser*)self);
 }
 
-void k_mimetypechooser_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KMimeTypeChooser_OnSharedPainter((const KMimeTypeChooser*)self, (intptr_t)callback);
+void k_mimetypechooser_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KMimeTypeChooser_OnSharedPainter((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
 void k_mimetypechooser_input_method_event(void* self, void* param1) {
@@ -2086,8 +2086,8 @@ QVariant* k_mimetypechooser_super_input_method_query(const void* self, int32_t p
     return KMimeTypeChooser_SuperInputMethodQuery((KMimeTypeChooser*)self, param1);
 }
 
-void k_mimetypechooser_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KMimeTypeChooser_OnInputMethodQuery((const KMimeTypeChooser*)self, (intptr_t)callback);
+void k_mimetypechooser_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KMimeTypeChooser_OnInputMethodQuery((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
 bool k_mimetypechooser_focus_next_prev_child(void* self, bool next) {
@@ -2380,7 +2380,7 @@ const QMetaObject* k_mimetypechooserdialog_meta_object(const void* self) {
     return KMimeTypeChooserDialog_MetaObject((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_mimetypechooserdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KMimeTypeChooserDialog_OnMetaObject((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
@@ -2427,7 +2427,7 @@ QSize* k_mimetypechooserdialog_size_hint(const void* self) {
     return KMimeTypeChooserDialog_SizeHint((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void k_mimetypechooserdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     KMimeTypeChooserDialog_OnSizeHint((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
@@ -2493,11 +2493,11 @@ void k_mimetypechooserdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_mimetypechooserdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_mimetypechooserdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KMimeTypeChooserDialog* k_mimetypechooserdialog_from_q_paint_device(void* _qpaintdevice) {
+KMimeTypeChooserDialog* k_mimetypechooserdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KMimeTypeChooserDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -3900,8 +3900,8 @@ QSize* k_mimetypechooserdialog_super_minimum_size_hint(const void* self) {
     return KMimeTypeChooserDialog_SuperMinimumSizeHint((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KMimeTypeChooserDialog_OnMinimumSizeHint((const KMimeTypeChooserDialog*)self, (intptr_t)callback);
+void k_mimetypechooserdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KMimeTypeChooserDialog_OnMinimumSizeHint((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
 void k_mimetypechooserdialog_open(void* self) {
@@ -4044,8 +4044,8 @@ int32_t k_mimetypechooserdialog_super_dev_type(const void* self) {
     return KMimeTypeChooserDialog_SuperDevType((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KMimeTypeChooserDialog_OnDevType((const KMimeTypeChooserDialog*)self, (intptr_t)callback);
+void k_mimetypechooserdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KMimeTypeChooserDialog_OnDevType((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_mimetypechooserdialog_height_for_width(const void* self, int param1) {
@@ -4056,8 +4056,8 @@ int32_t k_mimetypechooserdialog_super_height_for_width(const void* self, int par
     return KMimeTypeChooserDialog_SuperHeightForWidth((KMimeTypeChooserDialog*)self, param1);
 }
 
-void k_mimetypechooserdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KMimeTypeChooserDialog_OnHeightForWidth((const KMimeTypeChooserDialog*)self, (intptr_t)callback);
+void k_mimetypechooserdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KMimeTypeChooserDialog_OnHeightForWidth((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
 bool k_mimetypechooserdialog_has_height_for_width(const void* self) {
@@ -4068,8 +4068,8 @@ bool k_mimetypechooserdialog_super_has_height_for_width(const void* self) {
     return KMimeTypeChooserDialog_SuperHasHeightForWidth((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KMimeTypeChooserDialog_OnHasHeightForWidth((const KMimeTypeChooserDialog*)self, (intptr_t)callback);
+void k_mimetypechooserdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KMimeTypeChooserDialog_OnHasHeightForWidth((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_mimetypechooserdialog_paint_engine(const void* self) {
@@ -4080,8 +4080,8 @@ QPaintEngine* k_mimetypechooserdialog_super_paint_engine(const void* self) {
     return KMimeTypeChooserDialog_SuperPaintEngine((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KMimeTypeChooserDialog_OnPaintEngine((const KMimeTypeChooserDialog*)self, (intptr_t)callback);
+void k_mimetypechooserdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KMimeTypeChooserDialog_OnPaintEngine((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
 bool k_mimetypechooserdialog_event(void* self, void* event) {
@@ -4356,8 +4356,8 @@ int32_t k_mimetypechooserdialog_super_metric(const void* self, int32_t param1) {
     return KMimeTypeChooserDialog_SuperMetric((KMimeTypeChooserDialog*)self, param1);
 }
 
-void k_mimetypechooserdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KMimeTypeChooserDialog_OnMetric((const KMimeTypeChooserDialog*)self, (intptr_t)callback);
+void k_mimetypechooserdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KMimeTypeChooserDialog_OnMetric((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
 void k_mimetypechooserdialog_init_painter(const void* self, void* painter) {
@@ -4368,8 +4368,8 @@ void k_mimetypechooserdialog_super_init_painter(const void* self, void* painter)
     KMimeTypeChooserDialog_SuperInitPainter((KMimeTypeChooserDialog*)self, (QPainter*)painter);
 }
 
-void k_mimetypechooserdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KMimeTypeChooserDialog_OnInitPainter((const KMimeTypeChooserDialog*)self, (intptr_t)callback);
+void k_mimetypechooserdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KMimeTypeChooserDialog_OnInitPainter((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_mimetypechooserdialog_redirected(const void* self, void* offset) {
@@ -4380,8 +4380,8 @@ QPaintDevice* k_mimetypechooserdialog_super_redirected(const void* self, void* o
     return KMimeTypeChooserDialog_SuperRedirected((KMimeTypeChooserDialog*)self, (QPoint*)offset);
 }
 
-void k_mimetypechooserdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KMimeTypeChooserDialog_OnRedirected((const KMimeTypeChooserDialog*)self, (intptr_t)callback);
+void k_mimetypechooserdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KMimeTypeChooserDialog_OnRedirected((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_mimetypechooserdialog_shared_painter(const void* self) {
@@ -4392,8 +4392,8 @@ QPainter* k_mimetypechooserdialog_super_shared_painter(const void* self) {
     return KMimeTypeChooserDialog_SuperSharedPainter((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KMimeTypeChooserDialog_OnSharedPainter((const KMimeTypeChooserDialog*)self, (intptr_t)callback);
+void k_mimetypechooserdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KMimeTypeChooserDialog_OnSharedPainter((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
 void k_mimetypechooserdialog_input_method_event(void* self, void* param1) {
@@ -4416,8 +4416,8 @@ QVariant* k_mimetypechooserdialog_super_input_method_query(const void* self, int
     return KMimeTypeChooserDialog_SuperInputMethodQuery((KMimeTypeChooserDialog*)self, param1);
 }
 
-void k_mimetypechooserdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KMimeTypeChooserDialog_OnInputMethodQuery((const KMimeTypeChooserDialog*)self, (intptr_t)callback);
+void k_mimetypechooserdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KMimeTypeChooserDialog_OnInputMethodQuery((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
 bool k_mimetypechooserdialog_focus_next_prev_child(void* self, bool next) {

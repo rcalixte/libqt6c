@@ -22,7 +22,7 @@ const QMetaObject* k_xmlguifactory_meta_object(const void* self) {
     return KXMLGUIFactory_MetaObject((KXMLGUIFactory*)self);
 }
 
-void k_xmlguifactory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_xmlguifactory_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KXMLGUIFactory_OnMetaObject((KXMLGUIFactory*)self, (intptr_t)callback);
 }
 

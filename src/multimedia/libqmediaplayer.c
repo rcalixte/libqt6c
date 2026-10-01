@@ -24,7 +24,7 @@ const QMetaObject* q_mediaplayer_meta_object(const void* self) {
     return QMediaPlayer_MetaObject((QMediaPlayer*)self);
 }
 
-void q_mediaplayer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_mediaplayer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QMediaPlayer_OnMetaObject((QMediaPlayer*)self, (intptr_t)callback);
 }
 

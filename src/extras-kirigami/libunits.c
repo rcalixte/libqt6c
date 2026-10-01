@@ -15,7 +15,7 @@ const QMetaObject* k_irigami__platform__iconsizes_meta_object(const void* self) 
     return Kirigami__Platform__IconSizes_MetaObject((Kirigami__Platform__IconSizes*)self);
 }
 
-void k_irigami__platform__iconsizes_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_irigami__platform__iconsizes_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Kirigami__Platform__IconSizes_OnMetaObject((Kirigami__Platform__IconSizes*)self, (intptr_t)callback);
 }
 

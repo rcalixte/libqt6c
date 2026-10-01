@@ -25,7 +25,7 @@ const QMetaObject* q_application_meta_object(const void* self) {
     return QApplication_MetaObject((QApplication*)self);
 }
 
-void q_application_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_application_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QApplication_OnMetaObject((QApplication*)self, (intptr_t)callback);
 }
 

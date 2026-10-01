@@ -32,10 +32,10 @@ const QMetaObject* k_textgrammarcheck__languagetoolmanager_meta_object(const voi
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextGrammarCheck__LanguageToolManager*
+/// @param self TextGrammarCheck__LanguageToolManager*
 /// @param callback const QMetaObject* func(const TextGrammarCheck__LanguageToolManager* self)
 ///
-void k_textgrammarcheck__languagetoolmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textgrammarcheck__languagetoolmanager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1LanguageToolManager.html)
 ///
@@ -922,10 +922,10 @@ QObject* k_textgrammarcheck__languagetoolmanager_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolManager*
+/// @param self TextGrammarCheck__LanguageToolManager*
 /// @param callback QObject* func(TextGrammarCheck__LanguageToolManager* self)
 ///
-void k_textgrammarcheck__languagetoolmanager_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textgrammarcheck__languagetoolmanager_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -953,10 +953,10 @@ int32_t k_textgrammarcheck__languagetoolmanager_super_sender_signal_index(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolManager*
+/// @param self TextGrammarCheck__LanguageToolManager*
 /// @param callback int32_t func(TextGrammarCheck__LanguageToolManager* self)
 ///
-void k_textgrammarcheck__languagetoolmanager_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textgrammarcheck__languagetoolmanager_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -986,10 +986,10 @@ int32_t k_textgrammarcheck__languagetoolmanager_super_receivers(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolManager*
+/// @param self TextGrammarCheck__LanguageToolManager*
 /// @param callback int32_t func(TextGrammarCheck__LanguageToolManager* self, const char* signal)
 ///
-void k_textgrammarcheck__languagetoolmanager_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textgrammarcheck__languagetoolmanager_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1019,10 +1019,10 @@ bool k_textgrammarcheck__languagetoolmanager_super_is_signal_connected(const voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextGrammarCheck__LanguageToolManager*
+/// @param self TextGrammarCheck__LanguageToolManager*
 /// @param callback bool func(TextGrammarCheck__LanguageToolManager* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__languagetoolmanager_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textgrammarcheck__languagetoolmanager_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

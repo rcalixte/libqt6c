@@ -21,7 +21,7 @@ const QMetaObject* q_barset_meta_object(const void* self) {
     return QBarSet_MetaObject((QBarSet*)self);
 }
 
-void q_barset_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_barset_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QBarSet_OnMetaObject((QBarSet*)self, (intptr_t)callback);
 }
 

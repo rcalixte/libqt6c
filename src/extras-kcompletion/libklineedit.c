@@ -38,11 +38,11 @@ KLineEdit* k_lineedit_new4(const char* string, void* parent) {
     return KLineEdit_New4(qstring(string), (QWidget*)parent);
 }
 
-KCompletionBase* k_lineedit_as_k_completion_base(void* self) {
+KCompletionBase* k_lineedit_as_k_completion_base(const void* self) {
     return KLineEdit_AsKCompletionBase((KLineEdit*)self);
 }
 
-KLineEdit* k_lineedit_from_k_completion_base(void* _kcompletionbase) {
+KLineEdit* k_lineedit_from_k_completion_base(const void* _kcompletionbase) {
     return (KLineEdit*)KLineEdit_FromKCompletionBase((KCompletionBase*)_kcompletionbase);
 }
 
@@ -50,7 +50,7 @@ const QMetaObject* k_lineedit_meta_object(const void* self) {
     return KLineEdit_MetaObject((KLineEdit*)self);
 }
 
-void k_lineedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_lineedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KLineEdit_OnMetaObject((KLineEdit*)self, (intptr_t)callback);
 }
 
@@ -149,7 +149,7 @@ void k_lineedit_copy(const void* self) {
     KLineEdit_Copy((KLineEdit*)self);
 }
 
-void k_lineedit_on_copy(const void* self, void (*callback)(const void*)) {
+void k_lineedit_on_copy(void* self, void (*callback)(const void*)) {
     KLineEdit_OnCopy((KLineEdit*)self, (intptr_t)callback);
 }
 
@@ -807,11 +807,11 @@ void k_lineedit_cursor_backward2(void* self, bool mark, int steps) {
     QLineEdit_CursorBackward2((QLineEdit*)self, mark, steps);
 }
 
-QPaintDevice* k_lineedit_as_q_paint_device(void* self) {
+QPaintDevice* k_lineedit_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KLineEdit* k_lineedit_from_q_paint_device(void* _qpaintdevice) {
+KLineEdit* k_lineedit_from_q_paint_device(const void* _qpaintdevice) {
     return (KLineEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2247,8 +2247,8 @@ QSize* k_lineedit_super_size_hint(const void* self) {
     return KLineEdit_SuperSizeHint((KLineEdit*)self);
 }
 
-void k_lineedit_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KLineEdit_OnSizeHint((const KLineEdit*)self, (intptr_t)callback);
+void k_lineedit_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KLineEdit_OnSizeHint((KLineEdit*)self, (intptr_t)callback);
 }
 
 QSize* k_lineedit_minimum_size_hint(const void* self) {
@@ -2259,8 +2259,8 @@ QSize* k_lineedit_super_minimum_size_hint(const void* self) {
     return KLineEdit_SuperMinimumSizeHint((KLineEdit*)self);
 }
 
-void k_lineedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KLineEdit_OnMinimumSizeHint((const KLineEdit*)self, (intptr_t)callback);
+void k_lineedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KLineEdit_OnMinimumSizeHint((KLineEdit*)self, (intptr_t)callback);
 }
 
 void k_lineedit_mouse_move_event(void* self, void* param1) {
@@ -2391,8 +2391,8 @@ void k_lineedit_super_init_style_option(const void* self, void* option) {
     KLineEdit_SuperInitStyleOption((KLineEdit*)self, (QStyleOptionFrame*)option);
 }
 
-void k_lineedit_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KLineEdit_OnInitStyleOption((const KLineEdit*)self, (intptr_t)callback);
+void k_lineedit_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KLineEdit_OnInitStyleOption((KLineEdit*)self, (intptr_t)callback);
 }
 
 QVariant* k_lineedit_input_method_query(const void* self, int32_t param1) {
@@ -2403,8 +2403,8 @@ QVariant* k_lineedit_super_input_method_query(const void* self, int32_t param1) 
     return KLineEdit_SuperInputMethodQuery((KLineEdit*)self, param1);
 }
 
-void k_lineedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KLineEdit_OnInputMethodQuery((const KLineEdit*)self, (intptr_t)callback);
+void k_lineedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KLineEdit_OnInputMethodQuery((KLineEdit*)self, (intptr_t)callback);
 }
 
 void k_lineedit_timer_event(void* self, void* param1) {
@@ -2427,8 +2427,8 @@ int32_t k_lineedit_super_dev_type(const void* self) {
     return KLineEdit_SuperDevType((KLineEdit*)self);
 }
 
-void k_lineedit_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KLineEdit_OnDevType((const KLineEdit*)self, (intptr_t)callback);
+void k_lineedit_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KLineEdit_OnDevType((KLineEdit*)self, (intptr_t)callback);
 }
 
 void k_lineedit_set_visible(void* self, bool visible) {
@@ -2451,8 +2451,8 @@ int32_t k_lineedit_super_height_for_width(const void* self, int param1) {
     return KLineEdit_SuperHeightForWidth((KLineEdit*)self, param1);
 }
 
-void k_lineedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KLineEdit_OnHeightForWidth((const KLineEdit*)self, (intptr_t)callback);
+void k_lineedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KLineEdit_OnHeightForWidth((KLineEdit*)self, (intptr_t)callback);
 }
 
 bool k_lineedit_has_height_for_width(const void* self) {
@@ -2463,8 +2463,8 @@ bool k_lineedit_super_has_height_for_width(const void* self) {
     return KLineEdit_SuperHasHeightForWidth((KLineEdit*)self);
 }
 
-void k_lineedit_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KLineEdit_OnHasHeightForWidth((const KLineEdit*)self, (intptr_t)callback);
+void k_lineedit_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KLineEdit_OnHasHeightForWidth((KLineEdit*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_lineedit_paint_engine(const void* self) {
@@ -2475,8 +2475,8 @@ QPaintEngine* k_lineedit_super_paint_engine(const void* self) {
     return KLineEdit_SuperPaintEngine((KLineEdit*)self);
 }
 
-void k_lineedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KLineEdit_OnPaintEngine((const KLineEdit*)self, (intptr_t)callback);
+void k_lineedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KLineEdit_OnPaintEngine((KLineEdit*)self, (intptr_t)callback);
 }
 
 void k_lineedit_wheel_event(void* self, void* event) {
@@ -2607,8 +2607,8 @@ int32_t k_lineedit_super_metric(const void* self, int32_t param1) {
     return KLineEdit_SuperMetric((KLineEdit*)self, param1);
 }
 
-void k_lineedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KLineEdit_OnMetric((const KLineEdit*)self, (intptr_t)callback);
+void k_lineedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KLineEdit_OnMetric((KLineEdit*)self, (intptr_t)callback);
 }
 
 void k_lineedit_init_painter(const void* self, void* painter) {
@@ -2619,8 +2619,8 @@ void k_lineedit_super_init_painter(const void* self, void* painter) {
     KLineEdit_SuperInitPainter((KLineEdit*)self, (QPainter*)painter);
 }
 
-void k_lineedit_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KLineEdit_OnInitPainter((const KLineEdit*)self, (intptr_t)callback);
+void k_lineedit_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KLineEdit_OnInitPainter((KLineEdit*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_lineedit_redirected(const void* self, void* offset) {
@@ -2631,8 +2631,8 @@ QPaintDevice* k_lineedit_super_redirected(const void* self, void* offset) {
     return KLineEdit_SuperRedirected((KLineEdit*)self, (QPoint*)offset);
 }
 
-void k_lineedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KLineEdit_OnRedirected((const KLineEdit*)self, (intptr_t)callback);
+void k_lineedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KLineEdit_OnRedirected((KLineEdit*)self, (intptr_t)callback);
 }
 
 QPainter* k_lineedit_shared_painter(const void* self) {
@@ -2643,8 +2643,8 @@ QPainter* k_lineedit_super_shared_painter(const void* self) {
     return KLineEdit_SuperSharedPainter((KLineEdit*)self);
 }
 
-void k_lineedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KLineEdit_OnSharedPainter((const KLineEdit*)self, (intptr_t)callback);
+void k_lineedit_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KLineEdit_OnSharedPainter((KLineEdit*)self, (intptr_t)callback);
 }
 
 bool k_lineedit_focus_next_prev_child(void* self, bool next) {

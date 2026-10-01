@@ -21,7 +21,7 @@ const QMetaObject* q_texttospeechengine_meta_object(const void* self) {
     return QTextToSpeechEngine_MetaObject((QTextToSpeechEngine*)self);
 }
 
-void q_texttospeechengine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_texttospeechengine_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QTextToSpeechEngine_OnMetaObject((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 
@@ -64,7 +64,7 @@ int32_t q_texttospeechengine_capabilities(const void* self) {
     return QTextToSpeechEngine_Capabilities((QTextToSpeechEngine*)self);
 }
 
-void q_texttospeechengine_on_capabilities(const void* self, int32_t (*callback)(const void*)) {
+void q_texttospeechengine_on_capabilities(void* self, int32_t (*callback)(const void*)) {
     QTextToSpeechEngine_OnCapabilities((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 
@@ -77,7 +77,7 @@ libqt_list /* of QLocale* */ q_texttospeechengine_available_locales(const void* 
     return _arr;
 }
 
-void q_texttospeechengine_on_available_locales(const void* self, libqt_list /* of QLocale* */ (*callback)(const void*)) {
+void q_texttospeechengine_on_available_locales(void* self, libqt_list /* of QLocale* */ (*callback)(const void*)) {
     QTextToSpeechEngine_OnAvailableLocales((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 
@@ -86,7 +86,7 @@ libqt_list /* of QVoice* */ q_texttospeechengine_available_voices(const void* se
     return _arr;
 }
 
-void q_texttospeechengine_on_available_voices(const void* self, libqt_list /* of QVoice* */ (*callback)(const void*)) {
+void q_texttospeechengine_on_available_voices(void* self, libqt_list /* of QVoice* */ (*callback)(const void*)) {
     QTextToSpeechEngine_OnAvailableVoices((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 
@@ -134,7 +134,7 @@ double q_texttospeechengine_rate(const void* self) {
     return QTextToSpeechEngine_Rate((QTextToSpeechEngine*)self);
 }
 
-void q_texttospeechengine_on_rate(const void* self, double (*callback)(const void*)) {
+void q_texttospeechengine_on_rate(void* self, double (*callback)(const void*)) {
     QTextToSpeechEngine_OnRate((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 
@@ -150,7 +150,7 @@ double q_texttospeechengine_pitch(const void* self) {
     return QTextToSpeechEngine_Pitch((QTextToSpeechEngine*)self);
 }
 
-void q_texttospeechengine_on_pitch(const void* self, double (*callback)(const void*)) {
+void q_texttospeechengine_on_pitch(void* self, double (*callback)(const void*)) {
     QTextToSpeechEngine_OnPitch((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 
@@ -166,7 +166,7 @@ QLocale* q_texttospeechengine_locale(const void* self) {
     return QTextToSpeechEngine_Locale((QTextToSpeechEngine*)self);
 }
 
-void q_texttospeechengine_on_locale(const void* self, QLocale* (*callback)(const void*)) {
+void q_texttospeechengine_on_locale(void* self, QLocale* (*callback)(const void*)) {
     QTextToSpeechEngine_OnLocale((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 
@@ -182,7 +182,7 @@ double q_texttospeechengine_volume(const void* self) {
     return QTextToSpeechEngine_Volume((QTextToSpeechEngine*)self);
 }
 
-void q_texttospeechengine_on_volume(const void* self, double (*callback)(const void*)) {
+void q_texttospeechengine_on_volume(void* self, double (*callback)(const void*)) {
     QTextToSpeechEngine_OnVolume((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 
@@ -198,7 +198,7 @@ QVoice* q_texttospeechengine_voice(const void* self) {
     return QTextToSpeechEngine_Voice((QTextToSpeechEngine*)self);
 }
 
-void q_texttospeechengine_on_voice(const void* self, QVoice* (*callback)(const void*)) {
+void q_texttospeechengine_on_voice(void* self, QVoice* (*callback)(const void*)) {
     QTextToSpeechEngine_OnVoice((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 
@@ -214,7 +214,7 @@ int32_t q_texttospeechengine_state(const void* self) {
     return QTextToSpeechEngine_State((QTextToSpeechEngine*)self);
 }
 
-void q_texttospeechengine_on_state(const void* self, int32_t (*callback)(const void*)) {
+void q_texttospeechengine_on_state(void* self, int32_t (*callback)(const void*)) {
     QTextToSpeechEngine_OnState((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 
@@ -222,7 +222,7 @@ int32_t q_texttospeechengine_error_reason(const void* self) {
     return QTextToSpeechEngine_ErrorReason((QTextToSpeechEngine*)self);
 }
 
-void q_texttospeechengine_on_error_reason(const void* self, int32_t (*callback)(const void*)) {
+void q_texttospeechengine_on_error_reason(void* self, int32_t (*callback)(const void*)) {
     QTextToSpeechEngine_OnErrorReason((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 
@@ -233,7 +233,7 @@ const char* q_texttospeechengine_error_string(const void* self) {
     return _ret;
 }
 
-void q_texttospeechengine_on_error_string(const void* self, const char* (*callback)(const void*)) {
+void q_texttospeechengine_on_error_string(void* self, const char* (*callback)(const void*)) {
     QTextToSpeechEngine_OnErrorString((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 

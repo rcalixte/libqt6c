@@ -322,10 +322,10 @@ int32_t q_graphicsgridlayout_count(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsGridLayout*
+/// @param self QGraphicsGridLayout*
 /// @param callback int32_t func(const QGraphicsGridLayout* self)
 ///
-void q_graphicsgridlayout_on_count(const void* self, int32_t (*callback)(const void*));
+void q_graphicsgridlayout_on_count(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#count)
 ///
@@ -346,10 +346,10 @@ QGraphicsLayoutItem* q_graphicsgridlayout_item_at2(const void* self, int index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsGridLayout*
+/// @param self QGraphicsGridLayout*
 /// @param callback QGraphicsLayoutItem* func(const QGraphicsGridLayout* self, int index)
 ///
-void q_graphicsgridlayout_on_item_at2(const void* self, QGraphicsLayoutItem* (*callback)(const void*, int));
+void q_graphicsgridlayout_on_item_at2(void* self, QGraphicsLayoutItem* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#itemAt)
 ///
@@ -452,12 +452,12 @@ QSizeF* q_graphicsgridlayout_size_hint(const void* self, int32_t which, const vo
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsGridLayout*
+/// @param self QGraphicsGridLayout*
 /// @param callback QSizeF* func(const QGraphicsGridLayout* self, enum Qt__SizeHint which, QSizeF* constraint)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsgridlayout_on_size_hint(const void* self, QSizeF* (*callback)(const void*, int32_t, const void*));
+void q_graphicsgridlayout_on_size_hint(void* self, QSizeF* (*callback)(const void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#sizeHint)
 ///
@@ -864,10 +864,10 @@ void q_graphicsgridlayout_super_get_contents_margins(const void* self, double* l
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsGridLayout*
+/// @param self QGraphicsGridLayout*
 /// @param callback void func(QGraphicsGridLayout* self, double* left, double* top, double* right, double* bottom)
 ///
-void q_graphicsgridlayout_on_get_contents_margins(const void* self, void (*callback)(const void*, double*, double*, double*, double*));
+void q_graphicsgridlayout_on_get_contents_margins(void* self, void (*callback)(const void*, double*, double*, double*, double*));
 
 /// Inherited from QGraphicsLayout
 ///
@@ -959,10 +959,10 @@ bool q_graphicsgridlayout_super_is_empty(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsGridLayout*
+/// @param self QGraphicsGridLayout*
 /// @param callback bool func(QGraphicsGridLayout* self)
 ///
-void q_graphicsgridlayout_on_is_empty(const void* self, bool (*callback)(const void*));
+void q_graphicsgridlayout_on_is_empty(void* self, bool (*callback)(const void*));
 
 /// Inherited from QGraphicsLayout
 ///

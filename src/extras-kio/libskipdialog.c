@@ -22,7 +22,7 @@ const QMetaObject* k_io__skipdialog_meta_object(const void* self) {
     return KIO__SkipDialog_MetaObject((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__skipdialog_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__SkipDialog_OnMetaObject((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
@@ -119,11 +119,11 @@ void k_io__skipdialog_on_rejected(void* self, void (*callback)(void*)) {
     QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_io__skipdialog_as_q_paint_device(void* self) {
+QPaintDevice* k_io__skipdialog_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KIO__SkipDialog* k_io__skipdialog_from_q_paint_device(void* _qpaintdevice) {
+KIO__SkipDialog* k_io__skipdialog_from_q_paint_device(const void* _qpaintdevice) {
     return (KIO__SkipDialog*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1526,8 +1526,8 @@ QSize* k_io__skipdialog_super_size_hint(const void* self) {
     return KIO__SkipDialog_SuperSizeHint((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KIO__SkipDialog_OnSizeHint((const KIO__SkipDialog*)self, (intptr_t)callback);
+void k_io__skipdialog_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KIO__SkipDialog_OnSizeHint((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
 QSize* k_io__skipdialog_minimum_size_hint(const void* self) {
@@ -1538,8 +1538,8 @@ QSize* k_io__skipdialog_super_minimum_size_hint(const void* self) {
     return KIO__SkipDialog_SuperMinimumSizeHint((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KIO__SkipDialog_OnMinimumSizeHint((const KIO__SkipDialog*)self, (intptr_t)callback);
+void k_io__skipdialog_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KIO__SkipDialog_OnMinimumSizeHint((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
 void k_io__skipdialog_open(void* self) {
@@ -1682,8 +1682,8 @@ int32_t k_io__skipdialog_super_dev_type(const void* self) {
     return KIO__SkipDialog_SuperDevType((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KIO__SkipDialog_OnDevType((const KIO__SkipDialog*)self, (intptr_t)callback);
+void k_io__skipdialog_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KIO__SkipDialog_OnDevType((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
 int32_t k_io__skipdialog_height_for_width(const void* self, int param1) {
@@ -1694,8 +1694,8 @@ int32_t k_io__skipdialog_super_height_for_width(const void* self, int param1) {
     return KIO__SkipDialog_SuperHeightForWidth((KIO__SkipDialog*)self, param1);
 }
 
-void k_io__skipdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KIO__SkipDialog_OnHeightForWidth((const KIO__SkipDialog*)self, (intptr_t)callback);
+void k_io__skipdialog_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KIO__SkipDialog_OnHeightForWidth((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
 bool k_io__skipdialog_has_height_for_width(const void* self) {
@@ -1706,8 +1706,8 @@ bool k_io__skipdialog_super_has_height_for_width(const void* self) {
     return KIO__SkipDialog_SuperHasHeightForWidth((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KIO__SkipDialog_OnHasHeightForWidth((const KIO__SkipDialog*)self, (intptr_t)callback);
+void k_io__skipdialog_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KIO__SkipDialog_OnHasHeightForWidth((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_io__skipdialog_paint_engine(const void* self) {
@@ -1718,8 +1718,8 @@ QPaintEngine* k_io__skipdialog_super_paint_engine(const void* self) {
     return KIO__SkipDialog_SuperPaintEngine((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KIO__SkipDialog_OnPaintEngine((const KIO__SkipDialog*)self, (intptr_t)callback);
+void k_io__skipdialog_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KIO__SkipDialog_OnPaintEngine((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
 bool k_io__skipdialog_event(void* self, void* event) {
@@ -1994,8 +1994,8 @@ int32_t k_io__skipdialog_super_metric(const void* self, int32_t param1) {
     return KIO__SkipDialog_SuperMetric((KIO__SkipDialog*)self, param1);
 }
 
-void k_io__skipdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KIO__SkipDialog_OnMetric((const KIO__SkipDialog*)self, (intptr_t)callback);
+void k_io__skipdialog_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KIO__SkipDialog_OnMetric((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
 void k_io__skipdialog_init_painter(const void* self, void* painter) {
@@ -2006,8 +2006,8 @@ void k_io__skipdialog_super_init_painter(const void* self, void* painter) {
     KIO__SkipDialog_SuperInitPainter((KIO__SkipDialog*)self, (QPainter*)painter);
 }
 
-void k_io__skipdialog_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KIO__SkipDialog_OnInitPainter((const KIO__SkipDialog*)self, (intptr_t)callback);
+void k_io__skipdialog_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KIO__SkipDialog_OnInitPainter((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_io__skipdialog_redirected(const void* self, void* offset) {
@@ -2018,8 +2018,8 @@ QPaintDevice* k_io__skipdialog_super_redirected(const void* self, void* offset) 
     return KIO__SkipDialog_SuperRedirected((KIO__SkipDialog*)self, (QPoint*)offset);
 }
 
-void k_io__skipdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KIO__SkipDialog_OnRedirected((const KIO__SkipDialog*)self, (intptr_t)callback);
+void k_io__skipdialog_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KIO__SkipDialog_OnRedirected((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
 QPainter* k_io__skipdialog_shared_painter(const void* self) {
@@ -2030,8 +2030,8 @@ QPainter* k_io__skipdialog_super_shared_painter(const void* self) {
     return KIO__SkipDialog_SuperSharedPainter((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KIO__SkipDialog_OnSharedPainter((const KIO__SkipDialog*)self, (intptr_t)callback);
+void k_io__skipdialog_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KIO__SkipDialog_OnSharedPainter((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
 void k_io__skipdialog_input_method_event(void* self, void* param1) {
@@ -2054,8 +2054,8 @@ QVariant* k_io__skipdialog_super_input_method_query(const void* self, int32_t pa
     return KIO__SkipDialog_SuperInputMethodQuery((KIO__SkipDialog*)self, param1);
 }
 
-void k_io__skipdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KIO__SkipDialog_OnInputMethodQuery((const KIO__SkipDialog*)self, (intptr_t)callback);
+void k_io__skipdialog_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KIO__SkipDialog_OnInputMethodQuery((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
 bool k_io__skipdialog_focus_next_prev_child(void* self, bool next) {

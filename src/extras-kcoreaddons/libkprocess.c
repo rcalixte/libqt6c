@@ -20,7 +20,7 @@ const QMetaObject* k_process_meta_object(const void* self) {
     return KProcess_MetaObject((KProcess*)self);
 }
 
-void k_process_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_process_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KProcess_OnMetaObject((KProcess*)self, (intptr_t)callback);
 }
 
@@ -650,7 +650,7 @@ void k_process_on_finished2(void* self, void (*callback)(void*, int, int32_t)) {
     QProcess_Connect_Finished2((QProcess*)self, (intptr_t)callback);
 }
 
-QIODeviceBase* k_process_as_q_i_o_device_base(void* self) {
+QIODeviceBase* k_process_as_q_i_o_device_base(const void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
@@ -1101,8 +1101,8 @@ int64_t k_process_super_bytes_to_write(const void* self) {
     return KProcess_SuperBytesToWrite((KProcess*)self);
 }
 
-void k_process_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
-    KProcess_OnBytesToWrite((const KProcess*)self, (intptr_t)callback);
+void k_process_on_bytes_to_write(void* self, int64_t (*callback)(const void*)) {
+    KProcess_OnBytesToWrite((KProcess*)self, (intptr_t)callback);
 }
 
 bool k_process_is_sequential(const void* self) {
@@ -1113,8 +1113,8 @@ bool k_process_super_is_sequential(const void* self) {
     return KProcess_SuperIsSequential((KProcess*)self);
 }
 
-void k_process_on_is_sequential(const void* self, bool (*callback)(const void*)) {
-    KProcess_OnIsSequential((const KProcess*)self, (intptr_t)callback);
+void k_process_on_is_sequential(void* self, bool (*callback)(const void*)) {
+    KProcess_OnIsSequential((KProcess*)self, (intptr_t)callback);
 }
 
 void k_process_close(void* self) {
@@ -1161,8 +1161,8 @@ int64_t k_process_super_pos(const void* self) {
     return KProcess_SuperPos((KProcess*)self);
 }
 
-void k_process_on_pos(const void* self, int64_t (*callback)(const void*)) {
-    KProcess_OnPos((const KProcess*)self, (intptr_t)callback);
+void k_process_on_pos(void* self, int64_t (*callback)(const void*)) {
+    KProcess_OnPos((KProcess*)self, (intptr_t)callback);
 }
 
 int64_t k_process_size(const void* self) {
@@ -1173,8 +1173,8 @@ int64_t k_process_super_size(const void* self) {
     return KProcess_SuperSize((KProcess*)self);
 }
 
-void k_process_on_size(const void* self, int64_t (*callback)(const void*)) {
-    KProcess_OnSize((const KProcess*)self, (intptr_t)callback);
+void k_process_on_size(void* self, int64_t (*callback)(const void*)) {
+    KProcess_OnSize((KProcess*)self, (intptr_t)callback);
 }
 
 bool k_process_seek(void* self, int64_t pos) {
@@ -1197,8 +1197,8 @@ bool k_process_super_at_end(const void* self) {
     return KProcess_SuperAtEnd((KProcess*)self);
 }
 
-void k_process_on_at_end(const void* self, bool (*callback)(const void*)) {
-    KProcess_OnAtEnd((const KProcess*)self, (intptr_t)callback);
+void k_process_on_at_end(void* self, bool (*callback)(const void*)) {
+    KProcess_OnAtEnd((KProcess*)self, (intptr_t)callback);
 }
 
 bool k_process_reset(void* self) {
@@ -1221,8 +1221,8 @@ int64_t k_process_super_bytes_available(const void* self) {
     return KProcess_SuperBytesAvailable((KProcess*)self);
 }
 
-void k_process_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
-    KProcess_OnBytesAvailable((const KProcess*)self, (intptr_t)callback);
+void k_process_on_bytes_available(void* self, int64_t (*callback)(const void*)) {
+    KProcess_OnBytesAvailable((KProcess*)self, (intptr_t)callback);
 }
 
 bool k_process_can_read_line(const void* self) {
@@ -1233,8 +1233,8 @@ bool k_process_super_can_read_line(const void* self) {
     return KProcess_SuperCanReadLine((KProcess*)self);
 }
 
-void k_process_on_can_read_line(const void* self, bool (*callback)(const void*)) {
-    KProcess_OnCanReadLine((const KProcess*)self, (intptr_t)callback);
+void k_process_on_can_read_line(void* self, bool (*callback)(const void*)) {
+    KProcess_OnCanReadLine((KProcess*)self, (intptr_t)callback);
 }
 
 int64_t k_process_read_line_data(void* self, char* data, int64_t maxlen) {

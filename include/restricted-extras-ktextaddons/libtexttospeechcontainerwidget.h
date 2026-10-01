@@ -32,10 +32,10 @@ const QMetaObject* k_textedittexttospeech__texttospeechcontainerwidget_meta_obje
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback const QMetaObject* func(const TextEditTextToSpeech__TextToSpeechContainerWidget* self)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEditTextToSpeech_1_1TextToSpeechContainerWidget.html)
 ///
@@ -125,9 +125,9 @@ const char* k_textedittexttospeech__texttospeechcontainerwidget_tr3(const char* 
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
 ///
-QPaintDevice* k_textedittexttospeech__texttospeechcontainerwidget_as_q_paint_device(void* self);
+QPaintDevice* k_textedittexttospeech__texttospeechcontainerwidget_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -135,7 +135,7 @@ QPaintDevice* k_textedittexttospeech__texttospeechcontainerwidget_as_q_paint_dev
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-TextEditTextToSpeech__TextToSpeechContainerWidget* k_textedittexttospeech__texttospeechcontainerwidget_from_q_paint_device(void* _qpaintdevice);
+TextEditTextToSpeech__TextToSpeechContainerWidget* k_textedittexttospeech__texttospeechcontainerwidget_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3120,10 +3120,10 @@ int32_t k_textedittexttospeech__texttospeechcontainerwidget_super_dev_type(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback int32_t func(TextEditTextToSpeech__TextToSpeechContainerWidget* self)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3184,12 +3184,12 @@ QSize* k_textedittexttospeech__texttospeechcontainerwidget_super_size_hint(const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback QSize* func(TextEditTextToSpeech__TextToSpeechContainerWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3217,12 +3217,12 @@ QSize* k_textedittexttospeech__texttospeechcontainerwidget_super_minimum_size_hi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback QSize* func(TextEditTextToSpeech__TextToSpeechContainerWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3252,10 +3252,10 @@ int32_t k_textedittexttospeech__texttospeechcontainerwidget_super_height_for_wid
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback int32_t func(TextEditTextToSpeech__TextToSpeechContainerWidget* self, int param1)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3283,10 +3283,10 @@ bool k_textedittexttospeech__texttospeechcontainerwidget_super_has_height_for_wi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback bool func(TextEditTextToSpeech__TextToSpeechContainerWidget* self)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3314,10 +3314,10 @@ QPaintEngine* k_textedittexttospeech__texttospeechcontainerwidget_super_paint_en
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback QPaintEngine* func(TextEditTextToSpeech__TextToSpeechContainerWidget* self)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4242,10 +4242,10 @@ int32_t k_textedittexttospeech__texttospeechcontainerwidget_super_metric(const v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback int32_t func(TextEditTextToSpeech__TextToSpeechContainerWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4275,10 +4275,10 @@ void k_textedittexttospeech__texttospeechcontainerwidget_super_init_painter(cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback void func(TextEditTextToSpeech__TextToSpeechContainerWidget* self, QPainter* painter)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4308,10 +4308,10 @@ QPaintDevice* k_textedittexttospeech__texttospeechcontainerwidget_super_redirect
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback QPaintDevice* func(TextEditTextToSpeech__TextToSpeechContainerWidget* self, QPoint* offset)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4339,10 +4339,10 @@ QPainter* k_textedittexttospeech__texttospeechcontainerwidget_super_shared_paint
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback QPainter* func(TextEditTextToSpeech__TextToSpeechContainerWidget* self)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4405,12 +4405,12 @@ QVariant* k_textedittexttospeech__texttospeechcontainerwidget_super_input_method
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback QVariant* func(TextEditTextToSpeech__TextToSpeechContainerWidget* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4826,10 +4826,10 @@ QObject* k_textedittexttospeech__texttospeechcontainerwidget_super_sender(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback QObject* func(TextEditTextToSpeech__TextToSpeechContainerWidget* self)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4857,10 +4857,10 @@ int32_t k_textedittexttospeech__texttospeechcontainerwidget_super_sender_signal_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback int32_t func(TextEditTextToSpeech__TextToSpeechContainerWidget* self)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4890,10 +4890,10 @@ int32_t k_textedittexttospeech__texttospeechcontainerwidget_super_receivers(cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback int32_t func(TextEditTextToSpeech__TextToSpeechContainerWidget* self, const char* signal)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4923,10 +4923,10 @@ bool k_textedittexttospeech__texttospeechcontainerwidget_super_is_signal_connect
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback bool func(TextEditTextToSpeech__TextToSpeechContainerWidget* self, QMetaMethod* signal)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4958,10 +4958,10 @@ double k_textedittexttospeech__texttospeechcontainerwidget_super_get_decoded_met
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const TextEditTextToSpeech__TextToSpeechContainerWidget*
+/// @param self TextEditTextToSpeech__TextToSpeechContainerWidget*
 /// @param callback double func(TextEditTextToSpeech__TextToSpeechContainerWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_textedittexttospeech__texttospeechcontainerwidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void k_textedittexttospeech__texttospeechcontainerwidget_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -87,7 +87,7 @@ const QMetaObject* q_placemanagerengine_meta_object(const void* self) {
     return QPlaceManagerEngine_MetaObject((QPlaceManagerEngine*)self);
 }
 
-void q_placemanagerengine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_placemanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPlaceManagerEngine_OnMetaObject((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
@@ -252,7 +252,7 @@ const char* q_placemanagerengine_parent_category_id(const void* self, const char
     return _ret;
 }
 
-void q_placemanagerengine_on_parent_category_id(const void* self, const char* (*callback)(const void*, const char*)) {
+void q_placemanagerengine_on_parent_category_id(void* self, const char* (*callback)(const void*, const char*)) {
     QPlaceManagerEngine_OnParentCategoryId((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
@@ -280,7 +280,7 @@ const char** q_placemanagerengine_child_category_ids(const void* self, const cha
     return _ret;
 }
 
-void q_placemanagerengine_on_child_category_ids(const void* self, const char** (*callback)(const void*, const char*)) {
+void q_placemanagerengine_on_child_category_ids(void* self, const char** (*callback)(const void*, const char*)) {
     QPlaceManagerEngine_OnChildCategoryIds((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
@@ -305,7 +305,7 @@ QPlaceCategory* q_placemanagerengine_category(const void* self, const char* cate
     return QPlaceManagerEngine_Category((QPlaceManagerEngine*)self, qstring(categoryId));
 }
 
-void q_placemanagerengine_on_category(const void* self, QPlaceCategory* (*callback)(const void*, const char*)) {
+void q_placemanagerengine_on_category(void* self, QPlaceCategory* (*callback)(const void*, const char*)) {
     QPlaceManagerEngine_OnCategory((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
@@ -318,7 +318,7 @@ libqt_list /* of QPlaceCategory* */ q_placemanagerengine_child_categories(const 
     return _arr;
 }
 
-void q_placemanagerengine_on_child_categories(const void* self, libqt_list /* of QPlaceCategory* */ (*callback)(const void*, const char*)) {
+void q_placemanagerengine_on_child_categories(void* self, libqt_list /* of QPlaceCategory* */ (*callback)(const void*, const char*)) {
     QPlaceManagerEngine_OnChildCategories((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
@@ -332,7 +332,7 @@ libqt_list /* of QLocale* */ q_placemanagerengine_locales(const void* self) {
     return _arr;
 }
 
-void q_placemanagerengine_on_locales(const void* self, libqt_list /* of QLocale* */ (*callback)(const void*)) {
+void q_placemanagerengine_on_locales(void* self, libqt_list /* of QLocale* */ (*callback)(const void*)) {
     QPlaceManagerEngine_OnLocales((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
@@ -357,7 +357,7 @@ QUrl* q_placemanagerengine_construct_icon_url(const void* self, const void* icon
     return QPlaceManagerEngine_ConstructIconUrl((QPlaceManagerEngine*)self, (QPlaceIcon*)icon, (QSize*)size);
 }
 
-void q_placemanagerengine_on_construct_icon_url(const void* self, QUrl* (*callback)(const void*, const void*, const void*)) {
+void q_placemanagerengine_on_construct_icon_url(void* self, QUrl* (*callback)(const void*, const void*, const void*)) {
     QPlaceManagerEngine_OnConstructIconUrl((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 
@@ -369,7 +369,7 @@ QPlace* q_placemanagerengine_compatible_place(const void* self, const void* orig
     return QPlaceManagerEngine_CompatiblePlace((QPlaceManagerEngine*)self, (QPlace*)original);
 }
 
-void q_placemanagerengine_on_compatible_place(const void* self, QPlace* (*callback)(const void*, const void*)) {
+void q_placemanagerengine_on_compatible_place(void* self, QPlace* (*callback)(const void*, const void*)) {
     QPlaceManagerEngine_OnCompatiblePlace((QPlaceManagerEngine*)self, (intptr_t)callback);
 }
 

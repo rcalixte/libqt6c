@@ -18,7 +18,7 @@ const QMetaObject* k_dirwatch_meta_object(const void* self) {
     return KDirWatch_MetaObject((KDirWatch*)self);
 }
 
-void k_dirwatch_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_dirwatch_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KDirWatch_OnMetaObject((KDirWatch*)self, (intptr_t)callback);
 }
 

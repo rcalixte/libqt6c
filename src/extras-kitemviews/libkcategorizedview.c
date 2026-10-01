@@ -37,7 +37,7 @@ const QMetaObject* k_categorizedview_meta_object(const void* self) {
     return KCategorizedView_MetaObject((KCategorizedView*)self);
 }
 
-void k_categorizedview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_categorizedview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KCategorizedView_OnMetaObject((KCategorizedView*)self, (intptr_t)callback);
 }
 
@@ -100,7 +100,7 @@ QRect* k_categorizedview_visual_rect(const void* self, const void* index) {
     return KCategorizedView_VisualRect((KCategorizedView*)self, (QModelIndex*)index);
 }
 
-void k_categorizedview_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*)) {
+void k_categorizedview_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*)) {
     KCategorizedView_OnVisualRect((KCategorizedView*)self, (intptr_t)callback);
 }
 
@@ -154,7 +154,7 @@ QModelIndex* k_categorizedview_index_at(const void* self, const void* point) {
     return KCategorizedView_IndexAt((KCategorizedView*)self, (QPoint*)point);
 }
 
-void k_categorizedview_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void k_categorizedview_on_index_at(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     KCategorizedView_OnIndexAt((KCategorizedView*)self, (intptr_t)callback);
 }
 
@@ -973,11 +973,11 @@ void k_categorizedview_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_categorizedview_as_q_paint_device(void* self) {
+QPaintDevice* k_categorizedview_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KCategorizedView* k_categorizedview_from_q_paint_device(void* _qpaintdevice) {
+KCategorizedView* k_categorizedview_from_q_paint_device(const void* _qpaintdevice) {
     return (KCategorizedView*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2448,8 +2448,8 @@ void k_categorizedview_super_init_view_item_option(const void* self, void* optio
     KCategorizedView_SuperInitViewItemOption((KCategorizedView*)self, (QStyleOptionViewItem*)option);
 }
 
-void k_categorizedview_on_init_view_item_option(const void* self, void (*callback)(const void*, void*)) {
-    KCategorizedView_OnInitViewItemOption((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_init_view_item_option(void* self, void (*callback)(const void*, void*)) {
+    KCategorizedView_OnInitViewItemOption((KCategorizedView*)self, (intptr_t)callback);
 }
 
 int32_t k_categorizedview_horizontal_offset(const void* self) {
@@ -2460,8 +2460,8 @@ int32_t k_categorizedview_super_horizontal_offset(const void* self) {
     return KCategorizedView_SuperHorizontalOffset((KCategorizedView*)self);
 }
 
-void k_categorizedview_on_horizontal_offset(const void* self, int32_t (*callback)(const void*)) {
-    KCategorizedView_OnHorizontalOffset((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_horizontal_offset(void* self, int32_t (*callback)(const void*)) {
+    KCategorizedView_OnHorizontalOffset((KCategorizedView*)self, (intptr_t)callback);
 }
 
 int32_t k_categorizedview_vertical_offset(const void* self) {
@@ -2472,8 +2472,8 @@ int32_t k_categorizedview_super_vertical_offset(const void* self) {
     return KCategorizedView_SuperVerticalOffset((KCategorizedView*)self);
 }
 
-void k_categorizedview_on_vertical_offset(const void* self, int32_t (*callback)(const void*)) {
-    KCategorizedView_OnVerticalOffset((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_vertical_offset(void* self, int32_t (*callback)(const void*)) {
+    KCategorizedView_OnVerticalOffset((KCategorizedView*)self, (intptr_t)callback);
 }
 
 QRegion* k_categorizedview_visual_region_for_selection(const void* self, const void* selection) {
@@ -2484,8 +2484,8 @@ QRegion* k_categorizedview_super_visual_region_for_selection(const void* self, c
     return KCategorizedView_SuperVisualRegionForSelection((KCategorizedView*)self, (QItemSelection*)selection);
 }
 
-void k_categorizedview_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*)) {
-    KCategorizedView_OnVisualRegionForSelection((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_visual_region_for_selection(void* self, QRegion* (*callback)(const void*, const void*)) {
+    KCategorizedView_OnVisualRegionForSelection((KCategorizedView*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ k_categorizedview_selected_indexes(const void* self) {
@@ -2498,8 +2498,8 @@ libqt_list /* of QModelIndex* */ k_categorizedview_super_selected_indexes(const 
     return _arr;
 }
 
-void k_categorizedview_on_selected_indexes(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
-    KCategorizedView_OnSelectedIndexes((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*)) {
+    KCategorizedView_OnSelectedIndexes((KCategorizedView*)self, (intptr_t)callback);
 }
 
 bool k_categorizedview_is_index_hidden(const void* self, const void* index) {
@@ -2510,8 +2510,8 @@ bool k_categorizedview_super_is_index_hidden(const void* self, const void* index
     return KCategorizedView_SuperIsIndexHidden((KCategorizedView*)self, (QModelIndex*)index);
 }
 
-void k_categorizedview_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*)) {
-    KCategorizedView_OnIsIndexHidden((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_is_index_hidden(void* self, bool (*callback)(const void*, const void*)) {
+    KCategorizedView_OnIsIndexHidden((KCategorizedView*)self, (intptr_t)callback);
 }
 
 void k_categorizedview_selection_changed(void* self, const void* selected, const void* deselected) {
@@ -2534,8 +2534,8 @@ QSize* k_categorizedview_super_viewport_size_hint(const void* self) {
     return KCategorizedView_SuperViewportSizeHint((KCategorizedView*)self);
 }
 
-void k_categorizedview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KCategorizedView_OnViewportSizeHint((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KCategorizedView_OnViewportSizeHint((KCategorizedView*)self, (intptr_t)callback);
 }
 
 void k_categorizedview_set_selection_model(void* self, void* selectionModel) {
@@ -2570,8 +2570,8 @@ int32_t k_categorizedview_super_size_hint_for_row(const void* self, int row) {
     return KCategorizedView_SuperSizeHintForRow((KCategorizedView*)self, row);
 }
 
-void k_categorizedview_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int)) {
-    KCategorizedView_OnSizeHintForRow((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_size_hint_for_row(void* self, int32_t (*callback)(const void*, int)) {
+    KCategorizedView_OnSizeHintForRow((KCategorizedView*)self, (intptr_t)callback);
 }
 
 int32_t k_categorizedview_size_hint_for_column(const void* self, int column) {
@@ -2582,8 +2582,8 @@ int32_t k_categorizedview_super_size_hint_for_column(const void* self, int colum
     return KCategorizedView_SuperSizeHintForColumn((KCategorizedView*)self, column);
 }
 
-void k_categorizedview_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int)) {
-    KCategorizedView_OnSizeHintForColumn((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_size_hint_for_column(void* self, int32_t (*callback)(const void*, int)) {
+    KCategorizedView_OnSizeHintForColumn((KCategorizedView*)self, (intptr_t)callback);
 }
 
 QAbstractItemDelegate* k_categorizedview_item_delegate_for_index(const void* self, const void* index) {
@@ -2594,8 +2594,8 @@ QAbstractItemDelegate* k_categorizedview_super_item_delegate_for_index(const voi
     return KCategorizedView_SuperItemDelegateForIndex((KCategorizedView*)self, (QModelIndex*)index);
 }
 
-void k_categorizedview_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
-    KCategorizedView_OnItemDelegateForIndex((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(const void*, const void*)) {
+    KCategorizedView_OnItemDelegateForIndex((KCategorizedView*)self, (intptr_t)callback);
 }
 
 QVariant* k_categorizedview_input_method_query(const void* self, int32_t query) {
@@ -2606,8 +2606,8 @@ QVariant* k_categorizedview_super_input_method_query(const void* self, int32_t q
     return KCategorizedView_SuperInputMethodQuery((KCategorizedView*)self, query);
 }
 
-void k_categorizedview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KCategorizedView_OnInputMethodQuery((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KCategorizedView_OnInputMethodQuery((KCategorizedView*)self, (intptr_t)callback);
 }
 
 void k_categorizedview_select_all(void* self) {
@@ -2750,8 +2750,8 @@ int32_t k_categorizedview_super_selection_command(const void* self, const void* 
     return KCategorizedView_SuperSelectionCommand((KCategorizedView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void k_categorizedview_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*)) {
-    KCategorizedView_OnSelectionCommand((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_selection_command(void* self, int32_t (*callback)(const void*, const void*, const void*)) {
+    KCategorizedView_OnSelectionCommand((KCategorizedView*)self, (intptr_t)callback);
 }
 
 bool k_categorizedview_focus_next_prev_child(void* self, bool next) {
@@ -2858,8 +2858,8 @@ QSize* k_categorizedview_super_minimum_size_hint(const void* self) {
     return KCategorizedView_SuperMinimumSizeHint((KCategorizedView*)self);
 }
 
-void k_categorizedview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KCategorizedView_OnMinimumSizeHint((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KCategorizedView_OnMinimumSizeHint((KCategorizedView*)self, (intptr_t)callback);
 }
 
 QSize* k_categorizedview_size_hint(const void* self) {
@@ -2870,8 +2870,8 @@ QSize* k_categorizedview_super_size_hint(const void* self) {
     return KCategorizedView_SuperSizeHint((KCategorizedView*)self);
 }
 
-void k_categorizedview_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KCategorizedView_OnSizeHint((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KCategorizedView_OnSizeHint((KCategorizedView*)self, (intptr_t)callback);
 }
 
 void k_categorizedview_setup_viewport(void* self, void* viewport) {
@@ -2918,8 +2918,8 @@ void k_categorizedview_super_init_style_option(const void* self, void* option) {
     KCategorizedView_SuperInitStyleOption((KCategorizedView*)self, (QStyleOptionFrame*)option);
 }
 
-void k_categorizedview_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KCategorizedView_OnInitStyleOption((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KCategorizedView_OnInitStyleOption((KCategorizedView*)self, (intptr_t)callback);
 }
 
 int32_t k_categorizedview_dev_type(const void* self) {
@@ -2930,8 +2930,8 @@ int32_t k_categorizedview_super_dev_type(const void* self) {
     return KCategorizedView_SuperDevType((KCategorizedView*)self);
 }
 
-void k_categorizedview_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KCategorizedView_OnDevType((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KCategorizedView_OnDevType((KCategorizedView*)self, (intptr_t)callback);
 }
 
 void k_categorizedview_set_visible(void* self, bool visible) {
@@ -2954,8 +2954,8 @@ int32_t k_categorizedview_super_height_for_width(const void* self, int param1) {
     return KCategorizedView_SuperHeightForWidth((KCategorizedView*)self, param1);
 }
 
-void k_categorizedview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KCategorizedView_OnHeightForWidth((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KCategorizedView_OnHeightForWidth((KCategorizedView*)self, (intptr_t)callback);
 }
 
 bool k_categorizedview_has_height_for_width(const void* self) {
@@ -2966,8 +2966,8 @@ bool k_categorizedview_super_has_height_for_width(const void* self) {
     return KCategorizedView_SuperHasHeightForWidth((KCategorizedView*)self);
 }
 
-void k_categorizedview_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KCategorizedView_OnHasHeightForWidth((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KCategorizedView_OnHasHeightForWidth((KCategorizedView*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_categorizedview_paint_engine(const void* self) {
@@ -2978,8 +2978,8 @@ QPaintEngine* k_categorizedview_super_paint_engine(const void* self) {
     return KCategorizedView_SuperPaintEngine((KCategorizedView*)self);
 }
 
-void k_categorizedview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KCategorizedView_OnPaintEngine((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KCategorizedView_OnPaintEngine((KCategorizedView*)self, (intptr_t)callback);
 }
 
 void k_categorizedview_key_release_event(void* self, void* event) {
@@ -3098,8 +3098,8 @@ int32_t k_categorizedview_super_metric(const void* self, int32_t param1) {
     return KCategorizedView_SuperMetric((KCategorizedView*)self, param1);
 }
 
-void k_categorizedview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KCategorizedView_OnMetric((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KCategorizedView_OnMetric((KCategorizedView*)self, (intptr_t)callback);
 }
 
 void k_categorizedview_init_painter(const void* self, void* painter) {
@@ -3110,8 +3110,8 @@ void k_categorizedview_super_init_painter(const void* self, void* painter) {
     KCategorizedView_SuperInitPainter((KCategorizedView*)self, (QPainter*)painter);
 }
 
-void k_categorizedview_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KCategorizedView_OnInitPainter((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KCategorizedView_OnInitPainter((KCategorizedView*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_categorizedview_redirected(const void* self, void* offset) {
@@ -3122,8 +3122,8 @@ QPaintDevice* k_categorizedview_super_redirected(const void* self, void* offset)
     return KCategorizedView_SuperRedirected((KCategorizedView*)self, (QPoint*)offset);
 }
 
-void k_categorizedview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KCategorizedView_OnRedirected((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KCategorizedView_OnRedirected((KCategorizedView*)self, (intptr_t)callback);
 }
 
 QPainter* k_categorizedview_shared_painter(const void* self) {
@@ -3134,8 +3134,8 @@ QPainter* k_categorizedview_super_shared_painter(const void* self) {
     return KCategorizedView_SuperSharedPainter((KCategorizedView*)self);
 }
 
-void k_categorizedview_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KCategorizedView_OnSharedPainter((const KCategorizedView*)self, (intptr_t)callback);
+void k_categorizedview_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KCategorizedView_OnSharedPainter((KCategorizedView*)self, (intptr_t)callback);
 }
 
 void k_categorizedview_child_event(void* self, void* event) {

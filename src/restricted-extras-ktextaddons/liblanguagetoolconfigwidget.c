@@ -25,7 +25,7 @@ const QMetaObject* k_textgrammarcheck__languagetoolconfigwidget_meta_object(cons
     return TextGrammarCheck__LanguageToolConfigWidget_MetaObject((TextGrammarCheck__LanguageToolConfigWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolconfigwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textgrammarcheck__languagetoolconfigwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     TextGrammarCheck__LanguageToolConfigWidget_OnMetaObject((TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
 }
 
@@ -94,11 +94,11 @@ const char* k_textgrammarcheck__languagetoolconfigwidget_tr3(const char* s, cons
     return _ret;
 }
 
-QPaintDevice* k_textgrammarcheck__languagetoolconfigwidget_as_q_paint_device(void* self) {
+QPaintDevice* k_textgrammarcheck__languagetoolconfigwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-TextGrammarCheck__LanguageToolConfigWidget* k_textgrammarcheck__languagetoolconfigwidget_from_q_paint_device(void* _qpaintdevice) {
+TextGrammarCheck__LanguageToolConfigWidget* k_textgrammarcheck__languagetoolconfigwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (TextGrammarCheck__LanguageToolConfigWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1489,8 +1489,8 @@ int32_t k_textgrammarcheck__languagetoolconfigwidget_super_dev_type(const void* 
     return TextGrammarCheck__LanguageToolConfigWidget_SuperDevType((TextGrammarCheck__LanguageToolConfigWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolconfigwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    TextGrammarCheck__LanguageToolConfigWidget_OnDevType((const TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolconfigwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    TextGrammarCheck__LanguageToolConfigWidget_OnDevType((TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__languagetoolconfigwidget_set_visible(void* self, bool visible) {
@@ -1513,8 +1513,8 @@ QSize* k_textgrammarcheck__languagetoolconfigwidget_super_size_hint(const void* 
     return TextGrammarCheck__LanguageToolConfigWidget_SuperSizeHint((TextGrammarCheck__LanguageToolConfigWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolconfigwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextGrammarCheck__LanguageToolConfigWidget_OnSizeHint((const TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolconfigwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextGrammarCheck__LanguageToolConfigWidget_OnSizeHint((TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
 }
 
 QSize* k_textgrammarcheck__languagetoolconfigwidget_minimum_size_hint(const void* self) {
@@ -1525,8 +1525,8 @@ QSize* k_textgrammarcheck__languagetoolconfigwidget_super_minimum_size_hint(cons
     return TextGrammarCheck__LanguageToolConfigWidget_SuperMinimumSizeHint((TextGrammarCheck__LanguageToolConfigWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolconfigwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    TextGrammarCheck__LanguageToolConfigWidget_OnMinimumSizeHint((const TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolconfigwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    TextGrammarCheck__LanguageToolConfigWidget_OnMinimumSizeHint((TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
 }
 
 int32_t k_textgrammarcheck__languagetoolconfigwidget_height_for_width(const void* self, int param1) {
@@ -1537,8 +1537,8 @@ int32_t k_textgrammarcheck__languagetoolconfigwidget_super_height_for_width(cons
     return TextGrammarCheck__LanguageToolConfigWidget_SuperHeightForWidth((TextGrammarCheck__LanguageToolConfigWidget*)self, param1);
 }
 
-void k_textgrammarcheck__languagetoolconfigwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    TextGrammarCheck__LanguageToolConfigWidget_OnHeightForWidth((const TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolconfigwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    TextGrammarCheck__LanguageToolConfigWidget_OnHeightForWidth((TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
 }
 
 bool k_textgrammarcheck__languagetoolconfigwidget_has_height_for_width(const void* self) {
@@ -1549,8 +1549,8 @@ bool k_textgrammarcheck__languagetoolconfigwidget_super_has_height_for_width(con
     return TextGrammarCheck__LanguageToolConfigWidget_SuperHasHeightForWidth((TextGrammarCheck__LanguageToolConfigWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolconfigwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    TextGrammarCheck__LanguageToolConfigWidget_OnHasHeightForWidth((const TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolconfigwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    TextGrammarCheck__LanguageToolConfigWidget_OnHasHeightForWidth((TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textgrammarcheck__languagetoolconfigwidget_paint_engine(const void* self) {
@@ -1561,8 +1561,8 @@ QPaintEngine* k_textgrammarcheck__languagetoolconfigwidget_super_paint_engine(co
     return TextGrammarCheck__LanguageToolConfigWidget_SuperPaintEngine((TextGrammarCheck__LanguageToolConfigWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolconfigwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    TextGrammarCheck__LanguageToolConfigWidget_OnPaintEngine((const TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolconfigwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    TextGrammarCheck__LanguageToolConfigWidget_OnPaintEngine((TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
 }
 
 bool k_textgrammarcheck__languagetoolconfigwidget_event(void* self, void* event) {
@@ -1897,8 +1897,8 @@ int32_t k_textgrammarcheck__languagetoolconfigwidget_super_metric(const void* se
     return TextGrammarCheck__LanguageToolConfigWidget_SuperMetric((TextGrammarCheck__LanguageToolConfigWidget*)self, param1);
 }
 
-void k_textgrammarcheck__languagetoolconfigwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    TextGrammarCheck__LanguageToolConfigWidget_OnMetric((const TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolconfigwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    TextGrammarCheck__LanguageToolConfigWidget_OnMetric((TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__languagetoolconfigwidget_init_painter(const void* self, void* painter) {
@@ -1909,8 +1909,8 @@ void k_textgrammarcheck__languagetoolconfigwidget_super_init_painter(const void*
     TextGrammarCheck__LanguageToolConfigWidget_SuperInitPainter((TextGrammarCheck__LanguageToolConfigWidget*)self, (QPainter*)painter);
 }
 
-void k_textgrammarcheck__languagetoolconfigwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    TextGrammarCheck__LanguageToolConfigWidget_OnInitPainter((const TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolconfigwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    TextGrammarCheck__LanguageToolConfigWidget_OnInitPainter((TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textgrammarcheck__languagetoolconfigwidget_redirected(const void* self, void* offset) {
@@ -1921,8 +1921,8 @@ QPaintDevice* k_textgrammarcheck__languagetoolconfigwidget_super_redirected(cons
     return TextGrammarCheck__LanguageToolConfigWidget_SuperRedirected((TextGrammarCheck__LanguageToolConfigWidget*)self, (QPoint*)offset);
 }
 
-void k_textgrammarcheck__languagetoolconfigwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    TextGrammarCheck__LanguageToolConfigWidget_OnRedirected((const TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolconfigwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    TextGrammarCheck__LanguageToolConfigWidget_OnRedirected((TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
 }
 
 QPainter* k_textgrammarcheck__languagetoolconfigwidget_shared_painter(const void* self) {
@@ -1933,8 +1933,8 @@ QPainter* k_textgrammarcheck__languagetoolconfigwidget_super_shared_painter(cons
     return TextGrammarCheck__LanguageToolConfigWidget_SuperSharedPainter((TextGrammarCheck__LanguageToolConfigWidget*)self);
 }
 
-void k_textgrammarcheck__languagetoolconfigwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    TextGrammarCheck__LanguageToolConfigWidget_OnSharedPainter((const TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolconfigwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    TextGrammarCheck__LanguageToolConfigWidget_OnSharedPainter((TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__languagetoolconfigwidget_input_method_event(void* self, void* param1) {
@@ -1957,8 +1957,8 @@ QVariant* k_textgrammarcheck__languagetoolconfigwidget_super_input_method_query(
     return TextGrammarCheck__LanguageToolConfigWidget_SuperInputMethodQuery((TextGrammarCheck__LanguageToolConfigWidget*)self, param1);
 }
 
-void k_textgrammarcheck__languagetoolconfigwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    TextGrammarCheck__LanguageToolConfigWidget_OnInputMethodQuery((const TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
+void k_textgrammarcheck__languagetoolconfigwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    TextGrammarCheck__LanguageToolConfigWidget_OnInputMethodQuery((TextGrammarCheck__LanguageToolConfigWidget*)self, (intptr_t)callback);
 }
 
 bool k_textgrammarcheck__languagetoolconfigwidget_focus_next_prev_child(void* self, bool next) {

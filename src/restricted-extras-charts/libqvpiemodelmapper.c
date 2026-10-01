@@ -20,7 +20,7 @@ const QMetaObject* q_vpiemodelmapper_meta_object(const void* self) {
     return QVPieModelMapper_MetaObject((QVPieModelMapper*)self);
 }
 
-void q_vpiemodelmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_vpiemodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVPieModelMapper_OnMetaObject((QVPieModelMapper*)self, (intptr_t)callback);
 }
 

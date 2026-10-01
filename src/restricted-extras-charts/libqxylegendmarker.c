@@ -20,7 +20,7 @@ const QMetaObject* q_xylegendmarker_meta_object(const void* self) {
     return QXYLegendMarker_MetaObject((QXYLegendMarker*)self);
 }
 
-void q_xylegendmarker_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_xylegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QXYLegendMarker_OnMetaObject((QXYLegendMarker*)self, (intptr_t)callback);
 }
 

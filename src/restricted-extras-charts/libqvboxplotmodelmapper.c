@@ -20,7 +20,7 @@ const QMetaObject* q_vboxplotmodelmapper_meta_object(const void* self) {
     return QVBoxPlotModelMapper_MetaObject((QVBoxPlotModelMapper*)self);
 }
 
-void q_vboxplotmodelmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_vboxplotmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVBoxPlotModelMapper_OnMetaObject((QVBoxPlotModelMapper*)self, (intptr_t)callback);
 }
 

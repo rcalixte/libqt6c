@@ -24,11 +24,11 @@
 #include "libview.hpp"
 #include "libview.h"
 
-KXMLGUIClient* k_texteditor__view_as_k_x_m_l_g_u_i_client(void* self) {
+KXMLGUIClient* k_texteditor__view_as_k_x_m_l_g_u_i_client(const void* self) {
     return KTextEditor__View_AsKXMLGUIClient((KTextEditor__View*)self);
 }
 
-KTextEditor__View* k_texteditor__view_from_k_x_m_l_g_u_i_client(void* _kxmlguiclient) {
+KTextEditor__View* k_texteditor__view_from_k_x_m_l_g_u_i_client(const void* _kxmlguiclient) {
     return (KTextEditor__View*)KTextEditor__View_FromKXMLGUIClient((KXMLGUIClient*)_kxmlguiclient);
 }
 
@@ -539,11 +539,11 @@ int32_t k_texteditor__view_last_displayed_line1(const void* self, int32_t lineTy
     return KTextEditor__View_LastDisplayedLine1((KTextEditor__View*)self, lineType);
 }
 
-QPaintDevice* k_texteditor__view_as_q_paint_device(void* self) {
+QPaintDevice* k_texteditor__view_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KTextEditor__View* k_texteditor__view_from_q_paint_device(void* _qpaintdevice) {
+KTextEditor__View* k_texteditor__view_from_q_paint_device(const void* _qpaintdevice) {
     return (KTextEditor__View*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 

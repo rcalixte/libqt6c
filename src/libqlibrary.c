@@ -41,7 +41,7 @@ const QMetaObject* q_library_meta_object(const void* self) {
     return QLibrary_MetaObject((QLibrary*)self);
 }
 
-void q_library_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_library_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QLibrary_OnMetaObject((QLibrary*)self, (intptr_t)callback);
 }
 

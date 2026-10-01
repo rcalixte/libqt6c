@@ -29,7 +29,7 @@ const QMetaObject* k_iconbutton_meta_object(const void* self) {
     return KIconButton_MetaObject((KIconButton*)self);
 }
 
-void k_iconbutton_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_iconbutton_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIconButton_OnMetaObject((KIconButton*)self, (intptr_t)callback);
 }
 
@@ -308,11 +308,11 @@ void k_iconbutton_on_clicked1(void* self, void (*callback)(void*, bool)) {
     QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_iconbutton_as_q_paint_device(void* self) {
+QPaintDevice* k_iconbutton_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KIconButton* k_iconbutton_from_q_paint_device(void* _qpaintdevice) {
+KIconButton* k_iconbutton_from_q_paint_device(const void* _qpaintdevice) {
     return (KIconButton*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1703,8 +1703,8 @@ QSize* k_iconbutton_super_size_hint(const void* self) {
     return KIconButton_SuperSizeHint((KIconButton*)self);
 }
 
-void k_iconbutton_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KIconButton_OnSizeHint((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KIconButton_OnSizeHint((KIconButton*)self, (intptr_t)callback);
 }
 
 QSize* k_iconbutton_minimum_size_hint(const void* self) {
@@ -1715,8 +1715,8 @@ QSize* k_iconbutton_super_minimum_size_hint(const void* self) {
     return KIconButton_SuperMinimumSizeHint((KIconButton*)self);
 }
 
-void k_iconbutton_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KIconButton_OnMinimumSizeHint((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KIconButton_OnMinimumSizeHint((KIconButton*)self, (intptr_t)callback);
 }
 
 bool k_iconbutton_event(void* self, void* e) {
@@ -1799,8 +1799,8 @@ void k_iconbutton_super_init_style_option(const void* self, void* option) {
     KIconButton_SuperInitStyleOption((KIconButton*)self, (QStyleOptionButton*)option);
 }
 
-void k_iconbutton_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KIconButton_OnInitStyleOption((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KIconButton_OnInitStyleOption((KIconButton*)self, (intptr_t)callback);
 }
 
 bool k_iconbutton_hit_button(const void* self, const void* pos) {
@@ -1811,8 +1811,8 @@ bool k_iconbutton_super_hit_button(const void* self, const void* pos) {
     return KIconButton_SuperHitButton((KIconButton*)self, (QPoint*)pos);
 }
 
-void k_iconbutton_on_hit_button(const void* self, bool (*callback)(const void*, const void*)) {
-    KIconButton_OnHitButton((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_hit_button(void* self, bool (*callback)(const void*, const void*)) {
+    KIconButton_OnHitButton((KIconButton*)self, (intptr_t)callback);
 }
 
 void k_iconbutton_check_state_set(void* self) {
@@ -1907,8 +1907,8 @@ int32_t k_iconbutton_super_dev_type(const void* self) {
     return KIconButton_SuperDevType((KIconButton*)self);
 }
 
-void k_iconbutton_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KIconButton_OnDevType((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KIconButton_OnDevType((KIconButton*)self, (intptr_t)callback);
 }
 
 void k_iconbutton_set_visible(void* self, bool visible) {
@@ -1931,8 +1931,8 @@ int32_t k_iconbutton_super_height_for_width(const void* self, int param1) {
     return KIconButton_SuperHeightForWidth((KIconButton*)self, param1);
 }
 
-void k_iconbutton_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KIconButton_OnHeightForWidth((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KIconButton_OnHeightForWidth((KIconButton*)self, (intptr_t)callback);
 }
 
 bool k_iconbutton_has_height_for_width(const void* self) {
@@ -1943,8 +1943,8 @@ bool k_iconbutton_super_has_height_for_width(const void* self) {
     return KIconButton_SuperHasHeightForWidth((KIconButton*)self);
 }
 
-void k_iconbutton_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KIconButton_OnHasHeightForWidth((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KIconButton_OnHasHeightForWidth((KIconButton*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_iconbutton_paint_engine(const void* self) {
@@ -1955,8 +1955,8 @@ QPaintEngine* k_iconbutton_super_paint_engine(const void* self) {
     return KIconButton_SuperPaintEngine((KIconButton*)self);
 }
 
-void k_iconbutton_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KIconButton_OnPaintEngine((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KIconButton_OnPaintEngine((KIconButton*)self, (intptr_t)callback);
 }
 
 void k_iconbutton_mouse_double_click_event(void* self, void* event) {
@@ -2171,8 +2171,8 @@ int32_t k_iconbutton_super_metric(const void* self, int32_t param1) {
     return KIconButton_SuperMetric((KIconButton*)self, param1);
 }
 
-void k_iconbutton_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KIconButton_OnMetric((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KIconButton_OnMetric((KIconButton*)self, (intptr_t)callback);
 }
 
 void k_iconbutton_init_painter(const void* self, void* painter) {
@@ -2183,8 +2183,8 @@ void k_iconbutton_super_init_painter(const void* self, void* painter) {
     KIconButton_SuperInitPainter((KIconButton*)self, (QPainter*)painter);
 }
 
-void k_iconbutton_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KIconButton_OnInitPainter((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KIconButton_OnInitPainter((KIconButton*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_iconbutton_redirected(const void* self, void* offset) {
@@ -2195,8 +2195,8 @@ QPaintDevice* k_iconbutton_super_redirected(const void* self, void* offset) {
     return KIconButton_SuperRedirected((KIconButton*)self, (QPoint*)offset);
 }
 
-void k_iconbutton_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KIconButton_OnRedirected((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KIconButton_OnRedirected((KIconButton*)self, (intptr_t)callback);
 }
 
 QPainter* k_iconbutton_shared_painter(const void* self) {
@@ -2207,8 +2207,8 @@ QPainter* k_iconbutton_super_shared_painter(const void* self) {
     return KIconButton_SuperSharedPainter((KIconButton*)self);
 }
 
-void k_iconbutton_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KIconButton_OnSharedPainter((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KIconButton_OnSharedPainter((KIconButton*)self, (intptr_t)callback);
 }
 
 void k_iconbutton_input_method_event(void* self, void* param1) {
@@ -2231,8 +2231,8 @@ QVariant* k_iconbutton_super_input_method_query(const void* self, int32_t param1
     return KIconButton_SuperInputMethodQuery((KIconButton*)self, param1);
 }
 
-void k_iconbutton_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KIconButton_OnInputMethodQuery((const KIconButton*)self, (intptr_t)callback);
+void k_iconbutton_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KIconButton_OnInputMethodQuery((KIconButton*)self, (intptr_t)callback);
 }
 
 bool k_iconbutton_focus_next_prev_child(void* self, bool next) {

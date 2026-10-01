@@ -20,7 +20,7 @@ const QMetaObject* q_vbarmodelmapper_meta_object(const void* self) {
     return QVBarModelMapper_MetaObject((QVBarModelMapper*)self);
 }
 
-void q_vbarmodelmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_vbarmodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QVBarModelMapper_OnMetaObject((QVBarModelMapper*)self, (intptr_t)callback);
 }
 

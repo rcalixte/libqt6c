@@ -32,10 +32,10 @@ const QMetaObject* q_fontcombobox_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback const QMetaObject* func(const QFontComboBox* self)
 ///
-void q_fontcombobox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_fontcombobox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -141,12 +141,12 @@ QSize* q_fontcombobox_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback QSize* func(const QFontComboBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_fontcombobox_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_fontcombobox_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontcombobox.html#sizeHint)
 ///
@@ -1051,9 +1051,9 @@ void q_fontcombobox_set_item_data3(void* self, int index, const void* value, int
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QFontComboBox*
+/// @param self const QFontComboBox*
 ///
-QPaintDevice* q_fontcombobox_as_q_paint_device(void* self);
+QPaintDevice* q_fontcombobox_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1061,7 +1061,7 @@ QPaintDevice* q_fontcombobox_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QFontComboBox* q_fontcombobox_from_q_paint_device(void* _qpaintdevice);
+QFontComboBox* q_fontcombobox_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -4079,12 +4079,12 @@ QSize* q_fontcombobox_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback QSize* func(QFontComboBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_fontcombobox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_fontcombobox_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QComboBox
 ///
@@ -4176,12 +4176,12 @@ QVariant* q_fontcombobox_super_input_method_query(const void* self, int32_t para
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback QVariant* func(QFontComboBox* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_fontcombobox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_fontcombobox_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QComboBox
 ///
@@ -4673,10 +4673,10 @@ void q_fontcombobox_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback void func(QFontComboBox* self, QStyleOptionComboBox* option)
 ///
-void q_fontcombobox_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_fontcombobox_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4704,10 +4704,10 @@ int32_t q_fontcombobox_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback int32_t func(QFontComboBox* self)
 ///
-void q_fontcombobox_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_fontcombobox_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4770,10 +4770,10 @@ int32_t q_fontcombobox_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback int32_t func(QFontComboBox* self, int param1)
 ///
-void q_fontcombobox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_fontcombobox_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4801,10 +4801,10 @@ bool q_fontcombobox_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback bool func(QFontComboBox* self)
 ///
-void q_fontcombobox_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_fontcombobox_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4832,10 +4832,10 @@ QPaintEngine* q_fontcombobox_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback QPaintEngine* func(QFontComboBox* self)
 ///
-void q_fontcombobox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_fontcombobox_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5298,10 +5298,10 @@ int32_t q_fontcombobox_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback int32_t func(QFontComboBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_fontcombobox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_fontcombobox_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5331,10 +5331,10 @@ void q_fontcombobox_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback void func(QFontComboBox* self, QPainter* painter)
 ///
-void q_fontcombobox_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_fontcombobox_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5364,10 +5364,10 @@ QPaintDevice* q_fontcombobox_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback QPaintDevice* func(QFontComboBox* self, QPoint* offset)
 ///
-void q_fontcombobox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_fontcombobox_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5395,10 +5395,10 @@ QPainter* q_fontcombobox_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback QPainter* func(QFontComboBox* self)
 ///
-void q_fontcombobox_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_fontcombobox_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5814,10 +5814,10 @@ QObject* q_fontcombobox_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback QObject* func(QFontComboBox* self)
 ///
-void q_fontcombobox_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_fontcombobox_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5845,10 +5845,10 @@ int32_t q_fontcombobox_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback int32_t func(QFontComboBox* self)
 ///
-void q_fontcombobox_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_fontcombobox_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5878,10 +5878,10 @@ int32_t q_fontcombobox_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback int32_t func(QFontComboBox* self, const char* signal)
 ///
-void q_fontcombobox_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_fontcombobox_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5911,10 +5911,10 @@ bool q_fontcombobox_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback bool func(QFontComboBox* self, QMetaMethod* signal)
 ///
-void q_fontcombobox_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_fontcombobox_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5946,10 +5946,10 @@ double q_fontcombobox_super_get_decoded_metric_f(const void* self, int32_t metri
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFontComboBox*
+/// @param self QFontComboBox*
 /// @param callback double func(QFontComboBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_fontcombobox_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_fontcombobox_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -37,7 +37,7 @@ const QMetaObject* q_menu_meta_object(const void* self) {
     return QMenu_MetaObject((QMenu*)self);
 }
 
-void q_menu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_menu_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QMenu_OnMetaObject((QMenu*)self, (intptr_t)callback);
 }
 
@@ -184,7 +184,7 @@ QSize* q_menu_size_hint(const void* self) {
     return QMenu_SizeHint((QMenu*)self);
 }
 
-void q_menu_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_menu_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QMenu_OnSizeHint((QMenu*)self, (intptr_t)callback);
 }
 
@@ -467,7 +467,7 @@ void q_menu_init_style_option(const void* self, void* option, const void* action
     QMenu_InitStyleOption((QMenu*)self, (QStyleOptionMenuItem*)option, (QAction*)action);
 }
 
-void q_menu_on_init_style_option(const void* self, void (*callback)(const void*, void*, const void*)) {
+void q_menu_on_init_style_option(void* self, void (*callback)(const void*, void*, const void*)) {
     QMenu_OnInitStyleOption((QMenu*)self, (intptr_t)callback);
 }
 
@@ -505,11 +505,11 @@ QAction* q_menu_exec4(libqt_list /* of QAction* */ actions, const void* pos, voi
     return QMenu_Exec4(actions, (QPoint*)pos, (QAction*)at, (QWidget*)parent);
 }
 
-QPaintDevice* q_menu_as_q_paint_device(void* self) {
+QPaintDevice* q_menu_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QMenu* q_menu_from_q_paint_device(void* _qpaintdevice) {
+QMenu* q_menu_from_q_paint_device(const void* _qpaintdevice) {
     return (QMenu*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1900,8 +1900,8 @@ int32_t q_menu_super_dev_type(const void* self) {
     return QMenu_SuperDevType((QMenu*)self);
 }
 
-void q_menu_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QMenu_OnDevType((const QMenu*)self, (intptr_t)callback);
+void q_menu_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QMenu_OnDevType((QMenu*)self, (intptr_t)callback);
 }
 
 void q_menu_set_visible(void* self, bool visible) {
@@ -1924,8 +1924,8 @@ QSize* q_menu_super_minimum_size_hint(const void* self) {
     return QMenu_SuperMinimumSizeHint((QMenu*)self);
 }
 
-void q_menu_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QMenu_OnMinimumSizeHint((const QMenu*)self, (intptr_t)callback);
+void q_menu_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QMenu_OnMinimumSizeHint((QMenu*)self, (intptr_t)callback);
 }
 
 int32_t q_menu_height_for_width(const void* self, int param1) {
@@ -1936,8 +1936,8 @@ int32_t q_menu_super_height_for_width(const void* self, int param1) {
     return QMenu_SuperHeightForWidth((QMenu*)self, param1);
 }
 
-void q_menu_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QMenu_OnHeightForWidth((const QMenu*)self, (intptr_t)callback);
+void q_menu_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QMenu_OnHeightForWidth((QMenu*)self, (intptr_t)callback);
 }
 
 bool q_menu_has_height_for_width(const void* self) {
@@ -1948,8 +1948,8 @@ bool q_menu_super_has_height_for_width(const void* self) {
     return QMenu_SuperHasHeightForWidth((QMenu*)self);
 }
 
-void q_menu_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QMenu_OnHasHeightForWidth((const QMenu*)self, (intptr_t)callback);
+void q_menu_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QMenu_OnHasHeightForWidth((QMenu*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_menu_paint_engine(const void* self) {
@@ -1960,8 +1960,8 @@ QPaintEngine* q_menu_super_paint_engine(const void* self) {
     return QMenu_SuperPaintEngine((QMenu*)self);
 }
 
-void q_menu_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QMenu_OnPaintEngine((const QMenu*)self, (intptr_t)callback);
+void q_menu_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QMenu_OnPaintEngine((QMenu*)self, (intptr_t)callback);
 }
 
 void q_menu_mouse_double_click_event(void* self, void* event) {
@@ -2152,8 +2152,8 @@ int32_t q_menu_super_metric(const void* self, int32_t param1) {
     return QMenu_SuperMetric((QMenu*)self, param1);
 }
 
-void q_menu_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QMenu_OnMetric((const QMenu*)self, (intptr_t)callback);
+void q_menu_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QMenu_OnMetric((QMenu*)self, (intptr_t)callback);
 }
 
 void q_menu_init_painter(const void* self, void* painter) {
@@ -2164,8 +2164,8 @@ void q_menu_super_init_painter(const void* self, void* painter) {
     QMenu_SuperInitPainter((QMenu*)self, (QPainter*)painter);
 }
 
-void q_menu_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QMenu_OnInitPainter((const QMenu*)self, (intptr_t)callback);
+void q_menu_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QMenu_OnInitPainter((QMenu*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_menu_redirected(const void* self, void* offset) {
@@ -2176,8 +2176,8 @@ QPaintDevice* q_menu_super_redirected(const void* self, void* offset) {
     return QMenu_SuperRedirected((QMenu*)self, (QPoint*)offset);
 }
 
-void q_menu_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QMenu_OnRedirected((const QMenu*)self, (intptr_t)callback);
+void q_menu_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QMenu_OnRedirected((QMenu*)self, (intptr_t)callback);
 }
 
 QPainter* q_menu_shared_painter(const void* self) {
@@ -2188,8 +2188,8 @@ QPainter* q_menu_super_shared_painter(const void* self) {
     return QMenu_SuperSharedPainter((QMenu*)self);
 }
 
-void q_menu_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QMenu_OnSharedPainter((const QMenu*)self, (intptr_t)callback);
+void q_menu_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QMenu_OnSharedPainter((QMenu*)self, (intptr_t)callback);
 }
 
 void q_menu_input_method_event(void* self, void* param1) {
@@ -2212,8 +2212,8 @@ QVariant* q_menu_super_input_method_query(const void* self, int32_t param1) {
     return QMenu_SuperInputMethodQuery((QMenu*)self, param1);
 }
 
-void q_menu_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QMenu_OnInputMethodQuery((const QMenu*)self, (intptr_t)callback);
+void q_menu_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QMenu_OnInputMethodQuery((QMenu*)self, (intptr_t)callback);
 }
 
 bool q_menu_event_filter(void* self, void* watched, void* event) {

@@ -23,7 +23,7 @@ const QMetaObject* k_actioncollection_meta_object(const void* self) {
     return KActionCollection_MetaObject((KActionCollection*)self);
 }
 
-void k_actioncollection_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_actioncollection_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KActionCollection_OnMetaObject((KActionCollection*)self, (intptr_t)callback);
 }
 

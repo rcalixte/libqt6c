@@ -181,8 +181,8 @@ bool q_formbuilder_super_check_property(const void* self, void* obj, const char*
     return QFormBuilder_SuperCheckProperty((QFormBuilder*)self, (QObject*)obj, qstring(prop));
 }
 
-void q_formbuilder_on_check_property(const void* self, bool (*callback)(const void*, void*, const char*)) {
-    QFormBuilder_OnCheckProperty((const QFormBuilder*)self, (intptr_t)callback);
+void q_formbuilder_on_check_property(void* self, bool (*callback)(const void*, void*, const char*)) {
+    QFormBuilder_OnCheckProperty((QFormBuilder*)self, (intptr_t)callback);
 }
 
 bool q_formbuilder_apply_property_internally(void* self, void* o, const char* propertyName, const void* value) {

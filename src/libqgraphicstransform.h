@@ -32,10 +32,10 @@ const QMetaObject* q_graphicstransform_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsTransform*
+/// @param self QGraphicsTransform*
 /// @param callback const QMetaObject* func(const QGraphicsTransform* self)
 ///
-void q_graphicstransform_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_graphicstransform_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -108,10 +108,10 @@ void q_graphicstransform_apply_to(const void* self, void* matrix);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsTransform*
+/// @param self QGraphicsTransform*
 /// @param callback void func(const QGraphicsTransform* self, QMatrix4x4* matrix)
 ///
-void q_graphicstransform_on_apply_to(const void* self, void (*callback)(const void*, void*));
+void q_graphicstransform_on_apply_to(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicstransform.html#update)
 ///
@@ -844,10 +844,10 @@ QObject* q_graphicstransform_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsTransform*
+/// @param self QGraphicsTransform*
 /// @param callback QObject* func(QGraphicsTransform* self)
 ///
-void q_graphicstransform_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_graphicstransform_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -875,10 +875,10 @@ int32_t q_graphicstransform_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsTransform*
+/// @param self QGraphicsTransform*
 /// @param callback int32_t func(QGraphicsTransform* self)
 ///
-void q_graphicstransform_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_graphicstransform_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -908,10 +908,10 @@ int32_t q_graphicstransform_super_receivers(const void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsTransform*
+/// @param self QGraphicsTransform*
 /// @param callback int32_t func(QGraphicsTransform* self, const char* signal)
 ///
-void q_graphicstransform_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_graphicstransform_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -941,10 +941,10 @@ bool q_graphicstransform_super_is_signal_connected(const void* self, const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsTransform*
+/// @param self QGraphicsTransform*
 /// @param callback bool func(QGraphicsTransform* self, QMetaMethod* signal)
 ///
-void q_graphicstransform_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_graphicstransform_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -989,10 +989,10 @@ const QMetaObject* q_graphicsscale_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsScale*
+/// @param self QGraphicsScale*
 /// @param callback const QMetaObject* func(const QGraphicsScale* self)
 ///
-void q_graphicsscale_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_graphicsscale_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1115,10 +1115,10 @@ void q_graphicsscale_apply_to(const void* self, void* matrix);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsScale*
+/// @param self QGraphicsScale*
 /// @param callback void func(const QGraphicsScale* self, QMatrix4x4* matrix)
 ///
-void q_graphicsscale_on_apply_to(const void* self, void (*callback)(const void*, void*));
+void q_graphicsscale_on_apply_to(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscale.html#applyTo)
 ///
@@ -1950,10 +1950,10 @@ QObject* q_graphicsscale_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsScale*
+/// @param self QGraphicsScale*
 /// @param callback QObject* func(QGraphicsScale* self)
 ///
-void q_graphicsscale_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_graphicsscale_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1981,10 +1981,10 @@ int32_t q_graphicsscale_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsScale*
+/// @param self QGraphicsScale*
 /// @param callback int32_t func(QGraphicsScale* self)
 ///
-void q_graphicsscale_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_graphicsscale_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2014,10 +2014,10 @@ int32_t q_graphicsscale_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsScale*
+/// @param self QGraphicsScale*
 /// @param callback int32_t func(QGraphicsScale* self, const char* signal)
 ///
-void q_graphicsscale_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_graphicsscale_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2047,10 +2047,10 @@ bool q_graphicsscale_super_is_signal_connected(const void* self, const void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsScale*
+/// @param self QGraphicsScale*
 /// @param callback bool func(QGraphicsScale* self, QMetaMethod* signal)
 ///
-void q_graphicsscale_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_graphicsscale_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2095,10 +2095,10 @@ const QMetaObject* q_graphicsrotation_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsRotation*
+/// @param self QGraphicsRotation*
 /// @param callback const QMetaObject* func(const QGraphicsRotation* self)
 ///
-void q_graphicsrotation_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_graphicsrotation_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -2215,10 +2215,10 @@ void q_graphicsrotation_apply_to(const void* self, void* matrix);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QGraphicsRotation*
+/// @param self QGraphicsRotation*
 /// @param callback void func(const QGraphicsRotation* self, QMatrix4x4* matrix)
 ///
-void q_graphicsrotation_on_apply_to(const void* self, void (*callback)(const void*, void*));
+void q_graphicsrotation_on_apply_to(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsrotation.html#applyTo)
 ///
@@ -3024,10 +3024,10 @@ QObject* q_graphicsrotation_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsRotation*
+/// @param self QGraphicsRotation*
 /// @param callback QObject* func(QGraphicsRotation* self)
 ///
-void q_graphicsrotation_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_graphicsrotation_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3055,10 +3055,10 @@ int32_t q_graphicsrotation_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsRotation*
+/// @param self QGraphicsRotation*
 /// @param callback int32_t func(QGraphicsRotation* self)
 ///
-void q_graphicsrotation_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_graphicsrotation_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3088,10 +3088,10 @@ int32_t q_graphicsrotation_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsRotation*
+/// @param self QGraphicsRotation*
 /// @param callback int32_t func(QGraphicsRotation* self, const char* signal)
 ///
-void q_graphicsrotation_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_graphicsrotation_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3121,10 +3121,10 @@ bool q_graphicsrotation_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QGraphicsRotation*
+/// @param self QGraphicsRotation*
 /// @param callback bool func(QGraphicsRotation* self, QMetaMethod* signal)
 ///
-void q_graphicsrotation_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_graphicsrotation_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

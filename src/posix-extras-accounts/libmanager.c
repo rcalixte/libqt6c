@@ -39,7 +39,7 @@ const QMetaObject* q_accounts__manager_meta_object(const void* self) {
     return Accounts__Manager_MetaObject((Accounts__Manager*)self);
 }
 
-void q_accounts__manager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_accounts__manager_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     Accounts__Manager_OnMetaObject((Accounts__Manager*)self, (intptr_t)callback);
 }
 

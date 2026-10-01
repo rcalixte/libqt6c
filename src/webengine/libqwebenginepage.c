@@ -56,7 +56,7 @@ const QMetaObject* q_webenginepage_meta_object(const void* self) {
     return QWebEnginePage_MetaObject((QWebEnginePage*)self);
 }
 
-void q_webenginepage_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_webenginepage_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QWebEnginePage_OnMetaObject((QWebEnginePage*)self, (intptr_t)callback);
 }
 

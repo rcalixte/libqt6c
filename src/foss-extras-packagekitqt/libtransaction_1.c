@@ -15,7 +15,7 @@ const QMetaObject* q_packagekit__transaction_meta_object(const void* self) {
     return PackageKit__Transaction_MetaObject((PackageKit__Transaction*)self);
 }
 
-void q_packagekit__transaction_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_packagekit__transaction_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     PackageKit__Transaction_OnMetaObject((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 

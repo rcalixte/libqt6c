@@ -16,7 +16,7 @@ const QMetaObject* k_pluginfactory_meta_object(const void* self) {
     return KPluginFactory_MetaObject((KPluginFactory*)self);
 }
 
-void k_pluginfactory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_pluginfactory_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KPluginFactory_OnMetaObject((KPluginFactory*)self, (intptr_t)callback);
 }
 

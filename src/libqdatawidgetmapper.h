@@ -32,10 +32,10 @@ const QMetaObject* q_datawidgetmapper_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDataWidgetMapper*
+/// @param self QDataWidgetMapper*
 /// @param callback const QMetaObject* func(const QDataWidgetMapper* self)
 ///
-void q_datawidgetmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_datawidgetmapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1030,10 +1030,10 @@ QObject* q_datawidgetmapper_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDataWidgetMapper*
+/// @param self QDataWidgetMapper*
 /// @param callback QObject* func(QDataWidgetMapper* self)
 ///
-void q_datawidgetmapper_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_datawidgetmapper_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1061,10 +1061,10 @@ int32_t q_datawidgetmapper_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDataWidgetMapper*
+/// @param self QDataWidgetMapper*
 /// @param callback int32_t func(QDataWidgetMapper* self)
 ///
-void q_datawidgetmapper_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_datawidgetmapper_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1094,10 +1094,10 @@ int32_t q_datawidgetmapper_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDataWidgetMapper*
+/// @param self QDataWidgetMapper*
 /// @param callback int32_t func(QDataWidgetMapper* self, const char* signal)
 ///
-void q_datawidgetmapper_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_datawidgetmapper_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1127,10 +1127,10 @@ bool q_datawidgetmapper_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDataWidgetMapper*
+/// @param self QDataWidgetMapper*
 /// @param callback bool func(QDataWidgetMapper* self, QMetaMethod* signal)
 ///
-void q_datawidgetmapper_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_datawidgetmapper_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

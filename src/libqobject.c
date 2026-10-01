@@ -40,7 +40,7 @@ const QMetaObject* q_object_meta_object(const void* self) {
     return QObject_MetaObject((QObject*)self);
 }
 
-void q_object_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_object_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QObject_OnMetaObject((QObject*)self, (intptr_t)callback);
 }
 

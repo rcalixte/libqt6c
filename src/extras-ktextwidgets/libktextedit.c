@@ -44,7 +44,7 @@ const QMetaObject* k_textedit_meta_object(const void* self) {
     return KTextEdit_MetaObject((KTextEdit*)self);
 }
 
-void k_textedit_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_textedit_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KTextEdit_OnMetaObject((KTextEdit*)self, (intptr_t)callback);
 }
 
@@ -111,7 +111,7 @@ bool k_textedit_check_spelling_enabled(const void* self) {
     return KTextEdit_CheckSpellingEnabled((KTextEdit*)self);
 }
 
-void k_textedit_on_check_spelling_enabled(const void* self, bool (*callback)(const void*)) {
+void k_textedit_on_check_spelling_enabled(void* self, bool (*callback)(const void*)) {
     KTextEdit_OnCheckSpellingEnabled((KTextEdit*)self, (intptr_t)callback);
 }
 
@@ -123,7 +123,7 @@ bool k_textedit_should_block_be_spell_checked(const void* self, const char* bloc
     return KTextEdit_ShouldBlockBeSpellChecked((KTextEdit*)self, qstring(block));
 }
 
-void k_textedit_on_should_block_be_spell_checked(const void* self, bool (*callback)(const void*, const char*)) {
+void k_textedit_on_should_block_be_spell_checked(void* self, bool (*callback)(const void*, const char*)) {
     KTextEdit_OnShouldBlockBeSpellChecked((KTextEdit*)self, (intptr_t)callback);
 }
 
@@ -966,11 +966,11 @@ void k_textedit_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* k_textedit_as_q_paint_device(void* self) {
+QPaintDevice* k_textedit_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-KTextEdit* k_textedit_from_q_paint_device(void* _qpaintdevice) {
+KTextEdit* k_textedit_from_q_paint_device(const void* _qpaintdevice) {
     return (KTextEdit*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -2369,8 +2369,8 @@ QVariant* k_textedit_super_input_method_query(const void* self, int32_t property
     return KTextEdit_SuperInputMethodQuery((KTextEdit*)self, property);
 }
 
-void k_textedit_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    KTextEdit_OnInputMethodQuery((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KTextEdit_OnInputMethodQuery((KTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textedit_timer_event(void* self, void* e) {
@@ -2585,8 +2585,8 @@ QMimeData* k_textedit_super_create_mime_data_from_selection(const void* self) {
     return KTextEdit_SuperCreateMimeDataFromSelection((KTextEdit*)self);
 }
 
-void k_textedit_on_create_mime_data_from_selection(const void* self, QMimeData* (*callback)(const void*)) {
-    KTextEdit_OnCreateMimeDataFromSelection((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)(const void*)) {
+    KTextEdit_OnCreateMimeDataFromSelection((KTextEdit*)self, (intptr_t)callback);
 }
 
 bool k_textedit_can_insert_from_mime_data(const void* self, const void* source) {
@@ -2597,8 +2597,8 @@ bool k_textedit_super_can_insert_from_mime_data(const void* self, const void* so
     return KTextEdit_SuperCanInsertFromMimeData((KTextEdit*)self, (QMimeData*)source);
 }
 
-void k_textedit_on_can_insert_from_mime_data(const void* self, bool (*callback)(const void*, const void*)) {
-    KTextEdit_OnCanInsertFromMimeData((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_can_insert_from_mime_data(void* self, bool (*callback)(const void*, const void*)) {
+    KTextEdit_OnCanInsertFromMimeData((KTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textedit_insert_from_mime_data(void* self, const void* source) {
@@ -2657,8 +2657,8 @@ QSize* k_textedit_super_minimum_size_hint(const void* self) {
     return KTextEdit_SuperMinimumSizeHint((KTextEdit*)self);
 }
 
-void k_textedit_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KTextEdit_OnMinimumSizeHint((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KTextEdit_OnMinimumSizeHint((KTextEdit*)self, (intptr_t)callback);
 }
 
 QSize* k_textedit_size_hint(const void* self) {
@@ -2669,8 +2669,8 @@ QSize* k_textedit_super_size_hint(const void* self) {
     return KTextEdit_SuperSizeHint((KTextEdit*)self);
 }
 
-void k_textedit_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KTextEdit_OnSizeHint((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KTextEdit_OnSizeHint((KTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textedit_setup_viewport(void* self, void* viewport) {
@@ -2717,8 +2717,8 @@ QSize* k_textedit_super_viewport_size_hint(const void* self) {
     return KTextEdit_SuperViewportSizeHint((KTextEdit*)self);
 }
 
-void k_textedit_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    KTextEdit_OnViewportSizeHint((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_viewport_size_hint(void* self, QSize* (*callback)(const void*)) {
+    KTextEdit_OnViewportSizeHint((KTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textedit_init_style_option(const void* self, void* option) {
@@ -2729,8 +2729,8 @@ void k_textedit_super_init_style_option(const void* self, void* option) {
     KTextEdit_SuperInitStyleOption((KTextEdit*)self, (QStyleOptionFrame*)option);
 }
 
-void k_textedit_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    KTextEdit_OnInitStyleOption((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    KTextEdit_OnInitStyleOption((KTextEdit*)self, (intptr_t)callback);
 }
 
 int32_t k_textedit_dev_type(const void* self) {
@@ -2741,8 +2741,8 @@ int32_t k_textedit_super_dev_type(const void* self) {
     return KTextEdit_SuperDevType((KTextEdit*)self);
 }
 
-void k_textedit_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    KTextEdit_OnDevType((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    KTextEdit_OnDevType((KTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textedit_set_visible(void* self, bool visible) {
@@ -2765,8 +2765,8 @@ int32_t k_textedit_super_height_for_width(const void* self, int param1) {
     return KTextEdit_SuperHeightForWidth((KTextEdit*)self, param1);
 }
 
-void k_textedit_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    KTextEdit_OnHeightForWidth((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    KTextEdit_OnHeightForWidth((KTextEdit*)self, (intptr_t)callback);
 }
 
 bool k_textedit_has_height_for_width(const void* self) {
@@ -2777,8 +2777,8 @@ bool k_textedit_super_has_height_for_width(const void* self) {
     return KTextEdit_SuperHasHeightForWidth((KTextEdit*)self);
 }
 
-void k_textedit_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    KTextEdit_OnHasHeightForWidth((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    KTextEdit_OnHasHeightForWidth((KTextEdit*)self, (intptr_t)callback);
 }
 
 QPaintEngine* k_textedit_paint_engine(const void* self) {
@@ -2789,8 +2789,8 @@ QPaintEngine* k_textedit_super_paint_engine(const void* self) {
     return KTextEdit_SuperPaintEngine((KTextEdit*)self);
 }
 
-void k_textedit_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    KTextEdit_OnPaintEngine((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    KTextEdit_OnPaintEngine((KTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textedit_enter_event(void* self, void* event) {
@@ -2897,8 +2897,8 @@ int32_t k_textedit_super_metric(const void* self, int32_t param1) {
     return KTextEdit_SuperMetric((KTextEdit*)self, param1);
 }
 
-void k_textedit_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    KTextEdit_OnMetric((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    KTextEdit_OnMetric((KTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textedit_init_painter(const void* self, void* painter) {
@@ -2909,8 +2909,8 @@ void k_textedit_super_init_painter(const void* self, void* painter) {
     KTextEdit_SuperInitPainter((KTextEdit*)self, (QPainter*)painter);
 }
 
-void k_textedit_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    KTextEdit_OnInitPainter((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    KTextEdit_OnInitPainter((KTextEdit*)self, (intptr_t)callback);
 }
 
 QPaintDevice* k_textedit_redirected(const void* self, void* offset) {
@@ -2921,8 +2921,8 @@ QPaintDevice* k_textedit_super_redirected(const void* self, void* offset) {
     return KTextEdit_SuperRedirected((KTextEdit*)self, (QPoint*)offset);
 }
 
-void k_textedit_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    KTextEdit_OnRedirected((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KTextEdit_OnRedirected((KTextEdit*)self, (intptr_t)callback);
 }
 
 QPainter* k_textedit_shared_painter(const void* self) {
@@ -2933,8 +2933,8 @@ QPainter* k_textedit_super_shared_painter(const void* self) {
     return KTextEdit_SuperSharedPainter((KTextEdit*)self);
 }
 
-void k_textedit_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    KTextEdit_OnSharedPainter((const KTextEdit*)self, (intptr_t)callback);
+void k_textedit_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    KTextEdit_OnSharedPainter((KTextEdit*)self, (intptr_t)callback);
 }
 
 void k_textedit_child_event(void* self, void* event) {

@@ -1292,7 +1292,7 @@ void q_cpabstractpaintbuffer_draw(const void* self, void* painter) {
     QCPAbstractPaintBuffer_Draw((QCPAbstractPaintBuffer*)self, (QCPPainter*)painter);
 }
 
-void q_cpabstractpaintbuffer_on_draw(const void* self, void (*callback)(const void*, void*)) {
+void q_cpabstractpaintbuffer_on_draw(void* self, void (*callback)(const void*, void*)) {
     QCPAbstractPaintBuffer_OnDraw((QCPAbstractPaintBuffer*)self, (intptr_t)callback);
 }
 
@@ -1348,7 +1348,7 @@ void q_cppaintbufferpixmap_draw(const void* self, void* painter) {
     QCPPaintBufferPixmap_Draw((QCPPaintBufferPixmap*)self, (QCPPainter*)painter);
 }
 
-void q_cppaintbufferpixmap_on_draw(const void* self, void (*callback)(const void*, void*)) {
+void q_cppaintbufferpixmap_on_draw(void* self, void (*callback)(const void*, void*)) {
     QCPPaintBufferPixmap_OnDraw((QCPPaintBufferPixmap*)self, (intptr_t)callback);
 }
 
@@ -1436,7 +1436,7 @@ const QMetaObject* q_cplayer_meta_object(const void* self) {
     return QCPLayer_MetaObject((QCPLayer*)self);
 }
 
-void q_cplayer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cplayer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPLayer_OnMetaObject((QCPLayer*)self, (intptr_t)callback);
 }
 
@@ -1873,7 +1873,7 @@ const QMetaObject* q_cplayerable_meta_object(const void* self) {
     return QCPLayerable_MetaObject((QCPLayerable*)self);
 }
 
-void q_cplayerable_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cplayerable_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPLayerable_OnMetaObject((QCPLayerable*)self, (intptr_t)callback);
 }
 
@@ -1952,7 +1952,7 @@ double q_cplayerable_select_test(const void* self, const void* pos, bool onlySel
     return QCPLayerable_SelectTest((QCPLayerable*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cplayerable_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cplayerable_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPLayerable_OnSelectTest((QCPLayerable*)self, (intptr_t)callback);
 }
 
@@ -1988,7 +1988,7 @@ int32_t q_cplayerable_selection_category(const void* self) {
     return QCPLayerable_SelectionCategory((QCPLayerable*)self);
 }
 
-void q_cplayerable_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
+void q_cplayerable_on_selection_category(void* self, int32_t (*callback)(const void*)) {
     QCPLayerable_OnSelectionCategory((QCPLayerable*)self, (intptr_t)callback);
 }
 
@@ -2000,7 +2000,7 @@ QRect* q_cplayerable_clip_rect(const void* self) {
     return QCPLayerable_ClipRect((QCPLayerable*)self);
 }
 
-void q_cplayerable_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
+void q_cplayerable_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
     QCPLayerable_OnClipRect((QCPLayerable*)self, (intptr_t)callback);
 }
 
@@ -2012,7 +2012,7 @@ void q_cplayerable_apply_default_antialiasing_hint(const void* self, void* paint
     QCPLayerable_ApplyDefaultAntialiasingHint((QCPLayerable*)self, (QCPPainter*)painter);
 }
 
-void q_cplayerable_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cplayerable_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPLayerable_OnApplyDefaultAntialiasingHint((QCPLayerable*)self, (intptr_t)callback);
 }
 
@@ -2788,7 +2788,7 @@ const QMetaObject* q_cpselectionrect_meta_object(const void* self) {
     return QCPSelectionRect_MetaObject((QCPSelectionRect*)self);
 }
 
-void q_cpselectionrect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpselectionrect_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPSelectionRect_OnMetaObject((QCPSelectionRect*)self, (intptr_t)callback);
 }
 
@@ -2943,7 +2943,7 @@ void q_cpselectionrect_apply_default_antialiasing_hint(const void* self, void* p
     QCPSelectionRect_ApplyDefaultAntialiasingHint((QCPSelectionRect*)self, (QCPPainter*)painter);
 }
 
-void q_cpselectionrect_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cpselectionrect_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPSelectionRect_OnApplyDefaultAntialiasingHint((QCPSelectionRect*)self, (intptr_t)callback);
 }
 
@@ -3242,8 +3242,8 @@ double q_cpselectionrect_super_select_test(const void* self, const void* pos, bo
     return QCPSelectionRect_SuperSelectTest((QCPSelectionRect*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpselectionrect_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
-    QCPSelectionRect_OnSelectTest((const QCPSelectionRect*)self, (intptr_t)callback);
+void q_cpselectionrect_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
+    QCPSelectionRect_OnSelectTest((QCPSelectionRect*)self, (intptr_t)callback);
 }
 
 void q_cpselectionrect_parent_plot_initialized(void* self, void* parentPlot) {
@@ -3266,8 +3266,8 @@ int32_t q_cpselectionrect_super_selection_category(const void* self) {
     return QCPSelectionRect_SuperSelectionCategory((QCPSelectionRect*)self);
 }
 
-void q_cpselectionrect_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPSelectionRect_OnSelectionCategory((const QCPSelectionRect*)self, (intptr_t)callback);
+void q_cpselectionrect_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPSelectionRect_OnSelectionCategory((QCPSelectionRect*)self, (intptr_t)callback);
 }
 
 QRect* q_cpselectionrect_clip_rect(const void* self) {
@@ -3278,8 +3278,8 @@ QRect* q_cpselectionrect_super_clip_rect(const void* self) {
     return QCPSelectionRect_SuperClipRect((QCPSelectionRect*)self);
 }
 
-void q_cpselectionrect_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPSelectionRect_OnClipRect((const QCPSelectionRect*)self, (intptr_t)callback);
+void q_cpselectionrect_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPSelectionRect_OnClipRect((QCPSelectionRect*)self, (intptr_t)callback);
 }
 
 void q_cpselectionrect_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -3498,7 +3498,7 @@ const QMetaObject* q_cpmargingroup_meta_object(const void* self) {
     return QCPMarginGroup_MetaObject((QCPMarginGroup*)self);
 }
 
-void q_cpmargingroup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpmargingroup_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPMarginGroup_OnMetaObject((QCPMarginGroup*)self, (intptr_t)callback);
 }
 
@@ -3554,7 +3554,7 @@ int32_t q_cpmargingroup_common_margin(const void* self, int32_t side) {
     return QCPMarginGroup_CommonMargin((QCPMarginGroup*)self, side);
 }
 
-void q_cpmargingroup_on_common_margin(const void* self, int32_t (*callback)(const void*, int32_t)) {
+void q_cpmargingroup_on_common_margin(void* self, int32_t (*callback)(const void*, int32_t)) {
     QCPMarginGroup_OnCommonMargin((QCPMarginGroup*)self, (intptr_t)callback);
 }
 
@@ -3913,7 +3913,7 @@ const QMetaObject* q_cplayoutelement_meta_object(const void* self) {
     return QCPLayoutElement_MetaObject((QCPLayoutElement*)self);
 }
 
-void q_cplayoutelement_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cplayoutelement_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPLayoutElement_OnMetaObject((QCPLayoutElement*)self, (intptr_t)callback);
 }
 
@@ -4058,7 +4058,7 @@ QSize* q_cplayoutelement_minimum_outer_size_hint(const void* self) {
     return QCPLayoutElement_MinimumOuterSizeHint((QCPLayoutElement*)self);
 }
 
-void q_cplayoutelement_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_cplayoutelement_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCPLayoutElement_OnMinimumOuterSizeHint((QCPLayoutElement*)self, (intptr_t)callback);
 }
 
@@ -4070,7 +4070,7 @@ QSize* q_cplayoutelement_maximum_outer_size_hint(const void* self) {
     return QCPLayoutElement_MaximumOuterSizeHint((QCPLayoutElement*)self);
 }
 
-void q_cplayoutelement_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_cplayoutelement_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCPLayoutElement_OnMaximumOuterSizeHint((QCPLayoutElement*)self, (intptr_t)callback);
 }
 
@@ -4083,7 +4083,7 @@ libqt_list /* of QCPLayoutElement* */ q_cplayoutelement_elements(const void* sel
     return _arr;
 }
 
-void q_cplayoutelement_on_elements(const void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
+void q_cplayoutelement_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
     QCPLayoutElement_OnElements((QCPLayoutElement*)self, (intptr_t)callback);
 }
 
@@ -4096,7 +4096,7 @@ double q_cplayoutelement_select_test(const void* self, const void* pos, bool onl
     return QCPLayoutElement_SelectTest((QCPLayoutElement*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cplayoutelement_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cplayoutelement_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPLayoutElement_OnSelectTest((QCPLayoutElement*)self, (intptr_t)callback);
 }
 
@@ -4132,7 +4132,7 @@ void q_cplayoutelement_apply_default_antialiasing_hint(const void* self, void* p
     QCPLayoutElement_ApplyDefaultAntialiasingHint((QCPLayoutElement*)self, (QCPPainter*)painter);
 }
 
-void q_cplayoutelement_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cplayoutelement_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPLayoutElement_OnApplyDefaultAntialiasingHint((QCPLayoutElement*)self, (intptr_t)callback);
 }
 
@@ -4443,8 +4443,8 @@ int32_t q_cplayoutelement_super_selection_category(const void* self) {
     return QCPLayoutElement_SuperSelectionCategory((QCPLayoutElement*)self);
 }
 
-void q_cplayoutelement_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPLayoutElement_OnSelectionCategory((const QCPLayoutElement*)self, (intptr_t)callback);
+void q_cplayoutelement_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPLayoutElement_OnSelectionCategory((QCPLayoutElement*)self, (intptr_t)callback);
 }
 
 QRect* q_cplayoutelement_clip_rect(const void* self) {
@@ -4455,8 +4455,8 @@ QRect* q_cplayoutelement_super_clip_rect(const void* self) {
     return QCPLayoutElement_SuperClipRect((QCPLayoutElement*)self);
 }
 
-void q_cplayoutelement_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPLayoutElement_OnClipRect((const QCPLayoutElement*)self, (intptr_t)callback);
+void q_cplayoutelement_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPLayoutElement_OnClipRect((QCPLayoutElement*)self, (intptr_t)callback);
 }
 
 void q_cplayoutelement_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -4675,7 +4675,7 @@ const QMetaObject* q_cplayout_meta_object(const void* self) {
     return QCPLayout_MetaObject((QCPLayout*)self);
 }
 
-void q_cplayout_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cplayout_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPLayout_OnMetaObject((QCPLayout*)self, (intptr_t)callback);
 }
 
@@ -4731,7 +4731,7 @@ libqt_list /* of QCPLayoutElement* */ q_cplayout_elements(const void* self, bool
     return _arr;
 }
 
-void q_cplayout_on_elements(const void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
+void q_cplayout_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
     QCPLayout_OnElements((QCPLayout*)self, (intptr_t)callback);
 }
 
@@ -4744,7 +4744,7 @@ int32_t q_cplayout_element_count(const void* self) {
     return QCPLayout_ElementCount((QCPLayout*)self);
 }
 
-void q_cplayout_on_element_count(const void* self, int32_t (*callback)(const void*)) {
+void q_cplayout_on_element_count(void* self, int32_t (*callback)(const void*)) {
     QCPLayout_OnElementCount((QCPLayout*)self, (intptr_t)callback);
 }
 
@@ -4752,7 +4752,7 @@ QCPLayoutElement* q_cplayout_element_at(const void* self, int index) {
     return QCPLayout_ElementAt((QCPLayout*)self, index);
 }
 
-void q_cplayout_on_element_at(const void* self, QCPLayoutElement* (*callback)(const void*, int)) {
+void q_cplayout_on_element_at(void* self, QCPLayoutElement* (*callback)(const void*, int)) {
     QCPLayout_OnElementAt((QCPLayout*)self, (intptr_t)callback);
 }
 
@@ -5194,8 +5194,8 @@ QSize* q_cplayout_super_minimum_outer_size_hint(const void* self) {
     return QCPLayout_SuperMinimumOuterSizeHint((QCPLayout*)self);
 }
 
-void q_cplayout_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPLayout_OnMinimumOuterSizeHint((const QCPLayout*)self, (intptr_t)callback);
+void q_cplayout_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPLayout_OnMinimumOuterSizeHint((QCPLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_cplayout_maximum_outer_size_hint(const void* self) {
@@ -5206,8 +5206,8 @@ QSize* q_cplayout_super_maximum_outer_size_hint(const void* self) {
     return QCPLayout_SuperMaximumOuterSizeHint((QCPLayout*)self);
 }
 
-void q_cplayout_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPLayout_OnMaximumOuterSizeHint((const QCPLayout*)self, (intptr_t)callback);
+void q_cplayout_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPLayout_OnMaximumOuterSizeHint((QCPLayout*)self, (intptr_t)callback);
 }
 
 double q_cplayout_select_test(const void* self, const void* pos, bool onlySelectable, void* details) {
@@ -5218,8 +5218,8 @@ double q_cplayout_super_select_test(const void* self, const void* pos, bool only
     return QCPLayout_SuperSelectTest((QCPLayout*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cplayout_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
-    QCPLayout_OnSelectTest((const QCPLayout*)self, (intptr_t)callback);
+void q_cplayout_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
+    QCPLayout_OnSelectTest((QCPLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_cplayout_calculate_auto_margin(void* self, int32_t side) {
@@ -5254,8 +5254,8 @@ void q_cplayout_super_apply_default_antialiasing_hint(const void* self, void* pa
     QCPLayout_SuperApplyDefaultAntialiasingHint((QCPLayout*)self, (QCPPainter*)painter);
 }
 
-void q_cplayout_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPLayout_OnApplyDefaultAntialiasingHint((const QCPLayout*)self, (intptr_t)callback);
+void q_cplayout_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPLayout_OnApplyDefaultAntialiasingHint((QCPLayout*)self, (intptr_t)callback);
 }
 
 void q_cplayout_draw(void* self, void* painter) {
@@ -5290,8 +5290,8 @@ int32_t q_cplayout_super_selection_category(const void* self) {
     return QCPLayout_SuperSelectionCategory((QCPLayout*)self);
 }
 
-void q_cplayout_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPLayout_OnSelectionCategory((const QCPLayout*)self, (intptr_t)callback);
+void q_cplayout_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPLayout_OnSelectionCategory((QCPLayout*)self, (intptr_t)callback);
 }
 
 QRect* q_cplayout_clip_rect(const void* self) {
@@ -5302,8 +5302,8 @@ QRect* q_cplayout_super_clip_rect(const void* self) {
     return QCPLayout_SuperClipRect((QCPLayout*)self);
 }
 
-void q_cplayout_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPLayout_OnClipRect((const QCPLayout*)self, (intptr_t)callback);
+void q_cplayout_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPLayout_OnClipRect((QCPLayout*)self, (intptr_t)callback);
 }
 
 void q_cplayout_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -5522,7 +5522,7 @@ const QMetaObject* q_cplayoutgrid_meta_object(const void* self) {
     return QCPLayoutGrid_MetaObject((QCPLayoutGrid*)self);
 }
 
-void q_cplayoutgrid_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cplayoutgrid_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPLayoutGrid_OnMetaObject((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
@@ -5643,7 +5643,7 @@ int32_t q_cplayoutgrid_element_count(const void* self) {
     return QCPLayoutGrid_ElementCount((QCPLayoutGrid*)self);
 }
 
-void q_cplayoutgrid_on_element_count(const void* self, int32_t (*callback)(const void*)) {
+void q_cplayoutgrid_on_element_count(void* self, int32_t (*callback)(const void*)) {
     QCPLayoutGrid_OnElementCount((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
@@ -5655,7 +5655,7 @@ QCPLayoutElement* q_cplayoutgrid_element_at(const void* self, int index) {
     return QCPLayoutGrid_ElementAt((QCPLayoutGrid*)self, index);
 }
 
-void q_cplayoutgrid_on_element_at(const void* self, QCPLayoutElement* (*callback)(const void*, int)) {
+void q_cplayoutgrid_on_element_at(void* self, QCPLayoutElement* (*callback)(const void*, int)) {
     QCPLayoutGrid_OnElementAt((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
@@ -5692,7 +5692,7 @@ libqt_list /* of QCPLayoutElement* */ q_cplayoutgrid_elements(const void* self, 
     return _arr;
 }
 
-void q_cplayoutgrid_on_elements(const void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
+void q_cplayoutgrid_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
     QCPLayoutGrid_OnElements((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
@@ -5717,7 +5717,7 @@ QSize* q_cplayoutgrid_minimum_outer_size_hint(const void* self) {
     return QCPLayoutGrid_MinimumOuterSizeHint((QCPLayoutGrid*)self);
 }
 
-void q_cplayoutgrid_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_cplayoutgrid_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCPLayoutGrid_OnMinimumOuterSizeHint((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
@@ -5729,7 +5729,7 @@ QSize* q_cplayoutgrid_maximum_outer_size_hint(const void* self) {
     return QCPLayoutGrid_MaximumOuterSizeHint((QCPLayoutGrid*)self);
 }
 
-void q_cplayoutgrid_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_cplayoutgrid_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCPLayoutGrid_OnMaximumOuterSizeHint((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
@@ -6178,8 +6178,8 @@ double q_cplayoutgrid_super_select_test(const void* self, const void* pos, bool 
     return QCPLayoutGrid_SuperSelectTest((QCPLayoutGrid*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cplayoutgrid_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
-    QCPLayoutGrid_OnSelectTest((const QCPLayoutGrid*)self, (intptr_t)callback);
+void q_cplayoutgrid_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
+    QCPLayoutGrid_OnSelectTest((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
 int32_t q_cplayoutgrid_calculate_auto_margin(void* self, int32_t side) {
@@ -6214,8 +6214,8 @@ void q_cplayoutgrid_super_apply_default_antialiasing_hint(const void* self, void
     QCPLayoutGrid_SuperApplyDefaultAntialiasingHint((QCPLayoutGrid*)self, (QCPPainter*)painter);
 }
 
-void q_cplayoutgrid_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPLayoutGrid_OnApplyDefaultAntialiasingHint((const QCPLayoutGrid*)self, (intptr_t)callback);
+void q_cplayoutgrid_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPLayoutGrid_OnApplyDefaultAntialiasingHint((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
 void q_cplayoutgrid_draw(void* self, void* painter) {
@@ -6250,8 +6250,8 @@ int32_t q_cplayoutgrid_super_selection_category(const void* self) {
     return QCPLayoutGrid_SuperSelectionCategory((QCPLayoutGrid*)self);
 }
 
-void q_cplayoutgrid_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPLayoutGrid_OnSelectionCategory((const QCPLayoutGrid*)self, (intptr_t)callback);
+void q_cplayoutgrid_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPLayoutGrid_OnSelectionCategory((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
 QRect* q_cplayoutgrid_clip_rect(const void* self) {
@@ -6262,8 +6262,8 @@ QRect* q_cplayoutgrid_super_clip_rect(const void* self) {
     return QCPLayoutGrid_SuperClipRect((QCPLayoutGrid*)self);
 }
 
-void q_cplayoutgrid_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPLayoutGrid_OnClipRect((const QCPLayoutGrid*)self, (intptr_t)callback);
+void q_cplayoutgrid_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPLayoutGrid_OnClipRect((QCPLayoutGrid*)self, (intptr_t)callback);
 }
 
 void q_cplayoutgrid_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -6499,7 +6499,7 @@ const QMetaObject* q_cplayoutinset_meta_object(const void* self) {
     return QCPLayoutInset_MetaObject((QCPLayoutInset*)self);
 }
 
-void q_cplayoutinset_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cplayoutinset_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPLayoutInset_OnMetaObject((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
@@ -6578,7 +6578,7 @@ int32_t q_cplayoutinset_element_count(const void* self) {
     return QCPLayoutInset_ElementCount((QCPLayoutInset*)self);
 }
 
-void q_cplayoutinset_on_element_count(const void* self, int32_t (*callback)(const void*)) {
+void q_cplayoutinset_on_element_count(void* self, int32_t (*callback)(const void*)) {
     QCPLayoutInset_OnElementCount((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
@@ -6590,7 +6590,7 @@ QCPLayoutElement* q_cplayoutinset_element_at(const void* self, int index) {
     return QCPLayoutInset_ElementAt((QCPLayoutInset*)self, index);
 }
 
-void q_cplayoutinset_on_element_at(const void* self, QCPLayoutElement* (*callback)(const void*, int)) {
+void q_cplayoutinset_on_element_at(void* self, QCPLayoutElement* (*callback)(const void*, int)) {
     QCPLayoutInset_OnElementAt((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
@@ -6638,7 +6638,7 @@ double q_cplayoutinset_select_test(const void* self, const void* pos, bool onlyS
     return QCPLayoutInset_SelectTest((QCPLayoutInset*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cplayoutinset_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cplayoutinset_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPLayoutInset_OnSelectTest((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
@@ -7049,8 +7049,8 @@ libqt_list /* of QCPLayoutElement* */ q_cplayoutinset_super_elements(const void*
     return _arr;
 }
 
-void q_cplayoutinset_on_elements(const void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
-    QCPLayoutInset_OnElements((const QCPLayoutInset*)self, (intptr_t)callback);
+void q_cplayoutinset_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
+    QCPLayoutInset_OnElements((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
 QSize* q_cplayoutinset_minimum_outer_size_hint(const void* self) {
@@ -7061,8 +7061,8 @@ QSize* q_cplayoutinset_super_minimum_outer_size_hint(const void* self) {
     return QCPLayoutInset_SuperMinimumOuterSizeHint((QCPLayoutInset*)self);
 }
 
-void q_cplayoutinset_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPLayoutInset_OnMinimumOuterSizeHint((const QCPLayoutInset*)self, (intptr_t)callback);
+void q_cplayoutinset_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPLayoutInset_OnMinimumOuterSizeHint((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
 QSize* q_cplayoutinset_maximum_outer_size_hint(const void* self) {
@@ -7073,8 +7073,8 @@ QSize* q_cplayoutinset_super_maximum_outer_size_hint(const void* self) {
     return QCPLayoutInset_SuperMaximumOuterSizeHint((QCPLayoutInset*)self);
 }
 
-void q_cplayoutinset_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPLayoutInset_OnMaximumOuterSizeHint((const QCPLayoutInset*)self, (intptr_t)callback);
+void q_cplayoutinset_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPLayoutInset_OnMaximumOuterSizeHint((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
 int32_t q_cplayoutinset_calculate_auto_margin(void* self, int32_t side) {
@@ -7109,8 +7109,8 @@ void q_cplayoutinset_super_apply_default_antialiasing_hint(const void* self, voi
     QCPLayoutInset_SuperApplyDefaultAntialiasingHint((QCPLayoutInset*)self, (QCPPainter*)painter);
 }
 
-void q_cplayoutinset_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPLayoutInset_OnApplyDefaultAntialiasingHint((const QCPLayoutInset*)self, (intptr_t)callback);
+void q_cplayoutinset_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPLayoutInset_OnApplyDefaultAntialiasingHint((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
 void q_cplayoutinset_draw(void* self, void* painter) {
@@ -7145,8 +7145,8 @@ int32_t q_cplayoutinset_super_selection_category(const void* self) {
     return QCPLayoutInset_SuperSelectionCategory((QCPLayoutInset*)self);
 }
 
-void q_cplayoutinset_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPLayoutInset_OnSelectionCategory((const QCPLayoutInset*)self, (intptr_t)callback);
+void q_cplayoutinset_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPLayoutInset_OnSelectionCategory((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
 QRect* q_cplayoutinset_clip_rect(const void* self) {
@@ -7157,8 +7157,8 @@ QRect* q_cplayoutinset_super_clip_rect(const void* self) {
     return QCPLayoutInset_SuperClipRect((QCPLayoutInset*)self);
 }
 
-void q_cplayoutinset_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPLayoutInset_OnClipRect((const QCPLayoutInset*)self, (intptr_t)callback);
+void q_cplayoutinset_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPLayoutInset_OnClipRect((QCPLayoutInset*)self, (intptr_t)callback);
 }
 
 void q_cplayoutinset_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -9111,7 +9111,7 @@ const QMetaObject* q_cpgrid_meta_object(const void* self) {
     return QCPGrid_MetaObject((QCPGrid*)self);
 }
 
-void q_cpgrid_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpgrid_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPGrid_OnMetaObject((QCPGrid*)self, (intptr_t)callback);
 }
 
@@ -9202,7 +9202,7 @@ void q_cpgrid_apply_default_antialiasing_hint(const void* self, void* painter) {
     QCPGrid_ApplyDefaultAntialiasingHint((QCPGrid*)self, (QCPPainter*)painter);
 }
 
-void q_cpgrid_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cpgrid_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPGrid_OnApplyDefaultAntialiasingHint((QCPGrid*)self, (intptr_t)callback);
 }
 
@@ -9509,8 +9509,8 @@ double q_cpgrid_super_select_test(const void* self, const void* pos, bool onlySe
     return QCPGrid_SuperSelectTest((QCPGrid*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpgrid_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
-    QCPGrid_OnSelectTest((const QCPGrid*)self, (intptr_t)callback);
+void q_cpgrid_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
+    QCPGrid_OnSelectTest((QCPGrid*)self, (intptr_t)callback);
 }
 
 void q_cpgrid_parent_plot_initialized(void* self, void* parentPlot) {
@@ -9533,8 +9533,8 @@ int32_t q_cpgrid_super_selection_category(const void* self) {
     return QCPGrid_SuperSelectionCategory((QCPGrid*)self);
 }
 
-void q_cpgrid_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPGrid_OnSelectionCategory((const QCPGrid*)self, (intptr_t)callback);
+void q_cpgrid_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPGrid_OnSelectionCategory((QCPGrid*)self, (intptr_t)callback);
 }
 
 QRect* q_cpgrid_clip_rect(const void* self) {
@@ -9545,8 +9545,8 @@ QRect* q_cpgrid_super_clip_rect(const void* self) {
     return QCPGrid_SuperClipRect((QCPGrid*)self);
 }
 
-void q_cpgrid_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPGrid_OnClipRect((const QCPGrid*)self, (intptr_t)callback);
+void q_cpgrid_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPGrid_OnClipRect((QCPGrid*)self, (intptr_t)callback);
 }
 
 void q_cpgrid_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -9765,7 +9765,7 @@ const QMetaObject* q_cpaxis_meta_object(const void* self) {
     return QCPAxis_MetaObject((QCPAxis*)self);
 }
 
-void q_cpaxis_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpaxis_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPAxis_OnMetaObject((QCPAxis*)self, (intptr_t)callback);
 }
 
@@ -10168,7 +10168,7 @@ double q_cpaxis_select_test(const void* self, const void* pos, bool onlySelectab
     return QCPAxis_SelectTest((QCPAxis*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpaxis_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpaxis_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPAxis_OnSelectTest((QCPAxis*)self, (intptr_t)callback);
 }
 
@@ -10299,7 +10299,7 @@ void q_cpaxis_apply_default_antialiasing_hint(const void* self, void* painter) {
     QCPAxis_ApplyDefaultAntialiasingHint((QCPAxis*)self, (QCPPainter*)painter);
 }
 
-void q_cpaxis_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cpaxis_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPAxis_OnApplyDefaultAntialiasingHint((QCPAxis*)self, (intptr_t)callback);
 }
 
@@ -10323,7 +10323,7 @@ int32_t q_cpaxis_selection_category(const void* self) {
     return QCPAxis_SelectionCategory((QCPAxis*)self);
 }
 
-void q_cpaxis_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
+void q_cpaxis_on_selection_category(void* self, int32_t (*callback)(const void*)) {
     QCPAxis_OnSelectionCategory((QCPAxis*)self, (intptr_t)callback);
 }
 
@@ -10742,8 +10742,8 @@ QRect* q_cpaxis_super_clip_rect(const void* self) {
     return QCPAxis_SuperClipRect((QCPAxis*)self);
 }
 
-void q_cpaxis_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPAxis_OnClipRect((const QCPAxis*)self, (intptr_t)callback);
+void q_cpaxis_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPAxis_OnClipRect((QCPAxis*)self, (intptr_t)callback);
 }
 
 void q_cpaxis_mouse_double_click_event(void* self, void* event, const void* details) {
@@ -11110,7 +11110,7 @@ const QMetaObject* q_cpabstractplottable_meta_object(const void* self) {
     return QCPAbstractPlottable_MetaObject((QCPAbstractPlottable*)self);
 }
 
-void q_cpabstractplottable_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpabstractplottable_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPAbstractPlottable_OnMetaObject((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
@@ -11240,7 +11240,7 @@ double q_cpabstractplottable_select_test(const void* self, const void* pos, bool
     return QCPAbstractPlottable_SelectTest((QCPAbstractPlottable*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpabstractplottable_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpabstractplottable_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPAbstractPlottable_OnSelectTest((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
@@ -11260,7 +11260,7 @@ QCPRange* q_cpabstractplottable_get_key_range(const void* self, bool* foundRange
     return QCPAbstractPlottable_GetKeyRange((QCPAbstractPlottable*)self, (bool*)foundRange, inSignDomain);
 }
 
-void q_cpabstractplottable_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
+void q_cpabstractplottable_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
     QCPAbstractPlottable_OnGetKeyRange((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
@@ -11268,7 +11268,7 @@ QCPRange* q_cpabstractplottable_get_value_range(const void* self, bool* foundRan
     return QCPAbstractPlottable_GetValueRange((QCPAbstractPlottable*)self, (bool*)foundRange, inSignDomain, (QCPRange*)inKeyRange);
 }
 
-void q_cpabstractplottable_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
+void q_cpabstractplottable_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
     QCPAbstractPlottable_OnGetValueRange((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
@@ -11344,7 +11344,7 @@ QRect* q_cpabstractplottable_clip_rect(const void* self) {
     return QCPAbstractPlottable_ClipRect((QCPAbstractPlottable*)self);
 }
 
-void q_cpabstractplottable_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
+void q_cpabstractplottable_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
     QCPAbstractPlottable_OnClipRect((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
@@ -11364,7 +11364,7 @@ int32_t q_cpabstractplottable_selection_category(const void* self) {
     return QCPAbstractPlottable_SelectionCategory((QCPAbstractPlottable*)self);
 }
 
-void q_cpabstractplottable_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
+void q_cpabstractplottable_on_selection_category(void* self, int32_t (*callback)(const void*)) {
     QCPAbstractPlottable_OnSelectionCategory((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
@@ -11376,7 +11376,7 @@ void q_cpabstractplottable_apply_default_antialiasing_hint(const void* self, voi
     QCPAbstractPlottable_ApplyDefaultAntialiasingHint((QCPAbstractPlottable*)self, (QCPPainter*)painter);
 }
 
-void q_cpabstractplottable_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cpabstractplottable_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPAbstractPlottable_OnApplyDefaultAntialiasingHint((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
@@ -11412,7 +11412,7 @@ void q_cpabstractplottable_draw_legend_icon(const void* self, void* painter, con
     QCPAbstractPlottable_DrawLegendIcon((QCPAbstractPlottable*)self, (QCPPainter*)painter, (QRectF*)rect);
 }
 
-void q_cpabstractplottable_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*)) {
+void q_cpabstractplottable_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*)) {
     QCPAbstractPlottable_OnDrawLegendIcon((QCPAbstractPlottable*)self, (intptr_t)callback);
 }
 
@@ -11926,7 +11926,7 @@ QPointF* q_cpitemanchor_pixel_position(const void* self) {
     return QCPItemAnchor_PixelPosition((QCPItemAnchor*)self);
 }
 
-void q_cpitemanchor_on_pixel_position(const void* self, QPointF* (*callback)(const void*)) {
+void q_cpitemanchor_on_pixel_position(void* self, QPointF* (*callback)(const void*)) {
     QCPItemAnchor_OnPixelPosition((QCPItemAnchor*)self, (intptr_t)callback);
 }
 
@@ -12022,7 +12022,7 @@ QPointF* q_cpitemposition_pixel_position(const void* self) {
     return QCPItemPosition_PixelPosition((QCPItemPosition*)self);
 }
 
-void q_cpitemposition_on_pixel_position(const void* self, QPointF* (*callback)(const void*)) {
+void q_cpitemposition_on_pixel_position(void* self, QPointF* (*callback)(const void*)) {
     QCPItemPosition_OnPixelPosition((QCPItemPosition*)self, (intptr_t)callback);
 }
 
@@ -12133,7 +12133,7 @@ const QMetaObject* q_cpabstractitem_meta_object(const void* self) {
     return QCPAbstractItem_MetaObject((QCPAbstractItem*)self);
 }
 
-void q_cpabstractitem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpabstractitem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPAbstractItem_OnMetaObject((QCPAbstractItem*)self, (intptr_t)callback);
 }
 
@@ -12208,7 +12208,7 @@ double q_cpabstractitem_select_test(const void* self, const void* pos, bool only
     return QCPAbstractItem_SelectTest((QCPAbstractItem*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpabstractitem_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpabstractitem_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPAbstractItem_OnSelectTest((QCPAbstractItem*)self, (intptr_t)callback);
 }
 
@@ -12254,7 +12254,7 @@ int32_t q_cpabstractitem_selection_category(const void* self) {
     return QCPAbstractItem_SelectionCategory((QCPAbstractItem*)self);
 }
 
-void q_cpabstractitem_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
+void q_cpabstractitem_on_selection_category(void* self, int32_t (*callback)(const void*)) {
     QCPAbstractItem_OnSelectionCategory((QCPAbstractItem*)self, (intptr_t)callback);
 }
 
@@ -12266,7 +12266,7 @@ QRect* q_cpabstractitem_clip_rect(const void* self) {
     return QCPAbstractItem_ClipRect((QCPAbstractItem*)self);
 }
 
-void q_cpabstractitem_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
+void q_cpabstractitem_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
     QCPAbstractItem_OnClipRect((QCPAbstractItem*)self, (intptr_t)callback);
 }
 
@@ -12278,7 +12278,7 @@ void q_cpabstractitem_apply_default_antialiasing_hint(const void* self, void* pa
     QCPAbstractItem_ApplyDefaultAntialiasingHint((QCPAbstractItem*)self, (QCPPainter*)painter);
 }
 
-void q_cpabstractitem_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cpabstractitem_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPAbstractItem_OnApplyDefaultAntialiasingHint((QCPAbstractItem*)self, (intptr_t)callback);
 }
 
@@ -12322,7 +12322,7 @@ QPointF* q_cpabstractitem_anchor_pixel_position(const void* self, int anchorId) 
     return QCPAbstractItem_AnchorPixelPosition((QCPAbstractItem*)self, anchorId);
 }
 
-void q_cpabstractitem_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
+void q_cpabstractitem_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
     QCPAbstractItem_OnAnchorPixelPosition((QCPAbstractItem*)self, (intptr_t)callback);
 }
 
@@ -12821,7 +12821,7 @@ const QMetaObject* q_customplot_meta_object(const void* self) {
     return QCustomPlot_MetaObject((QCustomPlot*)self);
 }
 
-void q_customplot_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_customplot_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCustomPlot_OnMetaObject((QCustomPlot*)self, (intptr_t)callback);
 }
 
@@ -13414,7 +13414,7 @@ QSize* q_customplot_minimum_size_hint(const void* self) {
     return QCustomPlot_MinimumSizeHint((QCustomPlot*)self);
 }
 
-void q_customplot_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_customplot_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCustomPlot_OnMinimumSizeHint((QCustomPlot*)self, (intptr_t)callback);
 }
 
@@ -13426,7 +13426,7 @@ QSize* q_customplot_size_hint(const void* self) {
     return QCustomPlot_SizeHint((QCustomPlot*)self);
 }
 
-void q_customplot_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_customplot_on_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCustomPlot_OnSizeHint((QCustomPlot*)self, (intptr_t)callback);
 }
 
@@ -13866,11 +13866,11 @@ libqt_list /* of QCPLayerable* */ q_customplot_layerable_list_at3(const void* se
     return _arr;
 }
 
-QPaintDevice* q_customplot_as_q_paint_device(void* self) {
+QPaintDevice* q_customplot_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QCustomPlot* q_customplot_from_q_paint_device(void* _qpaintdevice) {
+QCustomPlot* q_customplot_from_q_paint_device(const void* _qpaintdevice) {
     return (QCustomPlot*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -15261,8 +15261,8 @@ int32_t q_customplot_super_dev_type(const void* self) {
     return QCustomPlot_SuperDevType((QCustomPlot*)self);
 }
 
-void q_customplot_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QCustomPlot_OnDevType((const QCustomPlot*)self, (intptr_t)callback);
+void q_customplot_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QCustomPlot_OnDevType((QCustomPlot*)self, (intptr_t)callback);
 }
 
 void q_customplot_set_visible(void* self, bool visible) {
@@ -15285,8 +15285,8 @@ int32_t q_customplot_super_height_for_width(const void* self, int param1) {
     return QCustomPlot_SuperHeightForWidth((QCustomPlot*)self, param1);
 }
 
-void q_customplot_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QCustomPlot_OnHeightForWidth((const QCustomPlot*)self, (intptr_t)callback);
+void q_customplot_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QCustomPlot_OnHeightForWidth((QCustomPlot*)self, (intptr_t)callback);
 }
 
 bool q_customplot_has_height_for_width(const void* self) {
@@ -15297,8 +15297,8 @@ bool q_customplot_super_has_height_for_width(const void* self) {
     return QCustomPlot_SuperHasHeightForWidth((QCustomPlot*)self);
 }
 
-void q_customplot_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QCustomPlot_OnHasHeightForWidth((const QCustomPlot*)self, (intptr_t)callback);
+void q_customplot_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QCustomPlot_OnHasHeightForWidth((QCustomPlot*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_customplot_paint_engine(const void* self) {
@@ -15309,8 +15309,8 @@ QPaintEngine* q_customplot_super_paint_engine(const void* self) {
     return QCustomPlot_SuperPaintEngine((QCustomPlot*)self);
 }
 
-void q_customplot_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QCustomPlot_OnPaintEngine((const QCustomPlot*)self, (intptr_t)callback);
+void q_customplot_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QCustomPlot_OnPaintEngine((QCustomPlot*)self, (intptr_t)callback);
 }
 
 bool q_customplot_event(void* self, void* event) {
@@ -15561,8 +15561,8 @@ int32_t q_customplot_super_metric(const void* self, int32_t param1) {
     return QCustomPlot_SuperMetric((QCustomPlot*)self, param1);
 }
 
-void q_customplot_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QCustomPlot_OnMetric((const QCustomPlot*)self, (intptr_t)callback);
+void q_customplot_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QCustomPlot_OnMetric((QCustomPlot*)self, (intptr_t)callback);
 }
 
 void q_customplot_init_painter(const void* self, void* painter) {
@@ -15573,8 +15573,8 @@ void q_customplot_super_init_painter(const void* self, void* painter) {
     QCustomPlot_SuperInitPainter((QCustomPlot*)self, (QPainter*)painter);
 }
 
-void q_customplot_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QCustomPlot_OnInitPainter((const QCustomPlot*)self, (intptr_t)callback);
+void q_customplot_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QCustomPlot_OnInitPainter((QCustomPlot*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_customplot_redirected(const void* self, void* offset) {
@@ -15585,8 +15585,8 @@ QPaintDevice* q_customplot_super_redirected(const void* self, void* offset) {
     return QCustomPlot_SuperRedirected((QCustomPlot*)self, (QPoint*)offset);
 }
 
-void q_customplot_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QCustomPlot_OnRedirected((const QCustomPlot*)self, (intptr_t)callback);
+void q_customplot_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QCustomPlot_OnRedirected((QCustomPlot*)self, (intptr_t)callback);
 }
 
 QPainter* q_customplot_shared_painter(const void* self) {
@@ -15597,8 +15597,8 @@ QPainter* q_customplot_super_shared_painter(const void* self) {
     return QCustomPlot_SuperSharedPainter((QCustomPlot*)self);
 }
 
-void q_customplot_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QCustomPlot_OnSharedPainter((const QCustomPlot*)self, (intptr_t)callback);
+void q_customplot_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QCustomPlot_OnSharedPainter((QCustomPlot*)self, (intptr_t)callback);
 }
 
 void q_customplot_input_method_event(void* self, void* param1) {
@@ -15621,8 +15621,8 @@ QVariant* q_customplot_super_input_method_query(const void* self, int32_t param1
     return QCustomPlot_SuperInputMethodQuery((QCustomPlot*)self, param1);
 }
 
-void q_customplot_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QCustomPlot_OnInputMethodQuery((const QCustomPlot*)self, (intptr_t)callback);
+void q_customplot_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QCustomPlot_OnInputMethodQuery((QCustomPlot*)self, (intptr_t)callback);
 }
 
 bool q_customplot_focus_next_prev_child(void* self, bool next) {
@@ -16019,7 +16019,7 @@ void q_cpselectiondecoratorbracket_draw_bracket(const void* self, void* painter,
     QCPSelectionDecoratorBracket_DrawBracket((QCPSelectionDecoratorBracket*)self, (QCPPainter*)painter, direction);
 }
 
-void q_cpselectiondecoratorbracket_on_draw_bracket(const void* self, void (*callback)(const void*, void*, int)) {
+void q_cpselectiondecoratorbracket_on_draw_bracket(void* self, void (*callback)(const void*, void*, int)) {
     QCPSelectionDecoratorBracket_OnDrawBracket((QCPSelectionDecoratorBracket*)self, (intptr_t)callback);
 }
 
@@ -16135,7 +16135,7 @@ const QMetaObject* q_cpaxisrect_meta_object(const void* self) {
     return QCPAxisRect_MetaObject((QCPAxisRect*)self);
 }
 
-void q_cpaxisrect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpaxisrect_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPAxisRect_OnMetaObject((QCPAxisRect*)self, (intptr_t)callback);
 }
 
@@ -16407,7 +16407,7 @@ libqt_list /* of QCPLayoutElement* */ q_cpaxisrect_elements(const void* self, bo
     return _arr;
 }
 
-void q_cpaxisrect_on_elements(const void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
+void q_cpaxisrect_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
     QCPAxisRect_OnElements((QCPAxisRect*)self, (intptr_t)callback);
 }
 
@@ -16420,7 +16420,7 @@ void q_cpaxisrect_apply_default_antialiasing_hint(const void* self, void* painte
     QCPAxisRect_ApplyDefaultAntialiasingHint((QCPAxisRect*)self, (QCPPainter*)painter);
 }
 
-void q_cpaxisrect_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cpaxisrect_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPAxisRect_OnApplyDefaultAntialiasingHint((QCPAxisRect*)self, (intptr_t)callback);
 }
 
@@ -16905,8 +16905,8 @@ QSize* q_cpaxisrect_super_minimum_outer_size_hint(const void* self) {
     return QCPAxisRect_SuperMinimumOuterSizeHint((QCPAxisRect*)self);
 }
 
-void q_cpaxisrect_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPAxisRect_OnMinimumOuterSizeHint((const QCPAxisRect*)self, (intptr_t)callback);
+void q_cpaxisrect_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPAxisRect_OnMinimumOuterSizeHint((QCPAxisRect*)self, (intptr_t)callback);
 }
 
 QSize* q_cpaxisrect_maximum_outer_size_hint(const void* self) {
@@ -16917,8 +16917,8 @@ QSize* q_cpaxisrect_super_maximum_outer_size_hint(const void* self) {
     return QCPAxisRect_SuperMaximumOuterSizeHint((QCPAxisRect*)self);
 }
 
-void q_cpaxisrect_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPAxisRect_OnMaximumOuterSizeHint((const QCPAxisRect*)self, (intptr_t)callback);
+void q_cpaxisrect_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPAxisRect_OnMaximumOuterSizeHint((QCPAxisRect*)self, (intptr_t)callback);
 }
 
 double q_cpaxisrect_select_test(const void* self, const void* pos, bool onlySelectable, void* details) {
@@ -16929,8 +16929,8 @@ double q_cpaxisrect_super_select_test(const void* self, const void* pos, bool on
     return QCPAxisRect_SuperSelectTest((QCPAxisRect*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpaxisrect_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
-    QCPAxisRect_OnSelectTest((const QCPAxisRect*)self, (intptr_t)callback);
+void q_cpaxisrect_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
+    QCPAxisRect_OnSelectTest((QCPAxisRect*)self, (intptr_t)callback);
 }
 
 void q_cpaxisrect_parent_plot_initialized(void* self, void* parentPlot) {
@@ -16953,8 +16953,8 @@ int32_t q_cpaxisrect_super_selection_category(const void* self) {
     return QCPAxisRect_SuperSelectionCategory((QCPAxisRect*)self);
 }
 
-void q_cpaxisrect_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPAxisRect_OnSelectionCategory((const QCPAxisRect*)self, (intptr_t)callback);
+void q_cpaxisrect_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPAxisRect_OnSelectionCategory((QCPAxisRect*)self, (intptr_t)callback);
 }
 
 QRect* q_cpaxisrect_clip_rect(const void* self) {
@@ -16965,8 +16965,8 @@ QRect* q_cpaxisrect_super_clip_rect(const void* self) {
     return QCPAxisRect_SuperClipRect((QCPAxisRect*)self);
 }
 
-void q_cpaxisrect_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPAxisRect_OnClipRect((const QCPAxisRect*)self, (intptr_t)callback);
+void q_cpaxisrect_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPAxisRect_OnClipRect((QCPAxisRect*)self, (intptr_t)callback);
 }
 
 void q_cpaxisrect_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -17137,7 +17137,7 @@ const QMetaObject* q_cpabstractlegenditem_meta_object(const void* self) {
     return QCPAbstractLegendItem_MetaObject((QCPAbstractLegendItem*)self);
 }
 
-void q_cpabstractlegenditem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpabstractlegenditem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPAbstractLegendItem_OnMetaObject((QCPAbstractLegendItem*)self, (intptr_t)callback);
 }
 
@@ -17232,7 +17232,7 @@ double q_cpabstractlegenditem_select_test(const void* self, const void* pos, boo
     return QCPAbstractLegendItem_SelectTest((QCPAbstractLegendItem*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpabstractlegenditem_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpabstractlegenditem_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPAbstractLegendItem_OnSelectTest((QCPAbstractLegendItem*)self, (intptr_t)callback);
 }
 
@@ -17260,7 +17260,7 @@ int32_t q_cpabstractlegenditem_selection_category(const void* self) {
     return QCPAbstractLegendItem_SelectionCategory((QCPAbstractLegendItem*)self);
 }
 
-void q_cpabstractlegenditem_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
+void q_cpabstractlegenditem_on_selection_category(void* self, int32_t (*callback)(const void*)) {
     QCPAbstractLegendItem_OnSelectionCategory((QCPAbstractLegendItem*)self, (intptr_t)callback);
 }
 
@@ -17272,7 +17272,7 @@ void q_cpabstractlegenditem_apply_default_antialiasing_hint(const void* self, vo
     QCPAbstractLegendItem_ApplyDefaultAntialiasingHint((QCPAbstractLegendItem*)self, (QCPPainter*)painter);
 }
 
-void q_cpabstractlegenditem_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cpabstractlegenditem_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPAbstractLegendItem_OnApplyDefaultAntialiasingHint((QCPAbstractLegendItem*)self, (intptr_t)callback);
 }
 
@@ -17284,7 +17284,7 @@ QRect* q_cpabstractlegenditem_clip_rect(const void* self) {
     return QCPAbstractLegendItem_ClipRect((QCPAbstractLegendItem*)self);
 }
 
-void q_cpabstractlegenditem_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
+void q_cpabstractlegenditem_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
     QCPAbstractLegendItem_OnClipRect((QCPAbstractLegendItem*)self, (intptr_t)callback);
 }
 
@@ -17705,8 +17705,8 @@ QSize* q_cpabstractlegenditem_super_minimum_outer_size_hint(const void* self) {
     return QCPAbstractLegendItem_SuperMinimumOuterSizeHint((QCPAbstractLegendItem*)self);
 }
 
-void q_cpabstractlegenditem_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPAbstractLegendItem_OnMinimumOuterSizeHint((const QCPAbstractLegendItem*)self, (intptr_t)callback);
+void q_cpabstractlegenditem_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPAbstractLegendItem_OnMinimumOuterSizeHint((QCPAbstractLegendItem*)self, (intptr_t)callback);
 }
 
 QSize* q_cpabstractlegenditem_maximum_outer_size_hint(const void* self) {
@@ -17717,8 +17717,8 @@ QSize* q_cpabstractlegenditem_super_maximum_outer_size_hint(const void* self) {
     return QCPAbstractLegendItem_SuperMaximumOuterSizeHint((QCPAbstractLegendItem*)self);
 }
 
-void q_cpabstractlegenditem_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPAbstractLegendItem_OnMaximumOuterSizeHint((const QCPAbstractLegendItem*)self, (intptr_t)callback);
+void q_cpabstractlegenditem_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPAbstractLegendItem_OnMaximumOuterSizeHint((QCPAbstractLegendItem*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QCPLayoutElement* */ q_cpabstractlegenditem_elements(const void* self, bool recursive) {
@@ -17731,8 +17731,8 @@ libqt_list /* of QCPLayoutElement* */ q_cpabstractlegenditem_super_elements(cons
     return _arr;
 }
 
-void q_cpabstractlegenditem_on_elements(const void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
-    QCPAbstractLegendItem_OnElements((const QCPAbstractLegendItem*)self, (intptr_t)callback);
+void q_cpabstractlegenditem_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
+    QCPAbstractLegendItem_OnElements((QCPAbstractLegendItem*)self, (intptr_t)callback);
 }
 
 int32_t q_cpabstractlegenditem_calculate_auto_margin(void* self, int32_t side) {
@@ -17963,7 +17963,7 @@ const QMetaObject* q_cpplottablelegenditem_meta_object(const void* self) {
     return QCPPlottableLegendItem_MetaObject((QCPPlottableLegendItem*)self);
 }
 
-void q_cpplottablelegenditem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpplottablelegenditem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPPlottableLegendItem_OnMetaObject((QCPPlottableLegendItem*)self, (intptr_t)callback);
 }
 
@@ -18022,7 +18022,7 @@ QSize* q_cpplottablelegenditem_minimum_outer_size_hint(const void* self) {
     return QCPPlottableLegendItem_MinimumOuterSizeHint((QCPPlottableLegendItem*)self);
 }
 
-void q_cpplottablelegenditem_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_cpplottablelegenditem_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCPPlottableLegendItem_OnMinimumOuterSizeHint((QCPPlottableLegendItem*)self, (intptr_t)callback);
 }
 
@@ -18479,8 +18479,8 @@ double q_cpplottablelegenditem_super_select_test(const void* self, const void* p
     return QCPPlottableLegendItem_SuperSelectTest((QCPPlottableLegendItem*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpplottablelegenditem_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
-    QCPPlottableLegendItem_OnSelectTest((const QCPPlottableLegendItem*)self, (intptr_t)callback);
+void q_cpplottablelegenditem_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
+    QCPPlottableLegendItem_OnSelectTest((QCPPlottableLegendItem*)self, (intptr_t)callback);
 }
 
 int32_t q_cpplottablelegenditem_selection_category(const void* self) {
@@ -18491,8 +18491,8 @@ int32_t q_cpplottablelegenditem_super_selection_category(const void* self) {
     return QCPPlottableLegendItem_SuperSelectionCategory((QCPPlottableLegendItem*)self);
 }
 
-void q_cpplottablelegenditem_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPPlottableLegendItem_OnSelectionCategory((const QCPPlottableLegendItem*)self, (intptr_t)callback);
+void q_cpplottablelegenditem_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPPlottableLegendItem_OnSelectionCategory((QCPPlottableLegendItem*)self, (intptr_t)callback);
 }
 
 void q_cpplottablelegenditem_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -18503,8 +18503,8 @@ void q_cpplottablelegenditem_super_apply_default_antialiasing_hint(const void* s
     QCPPlottableLegendItem_SuperApplyDefaultAntialiasingHint((QCPPlottableLegendItem*)self, (QCPPainter*)painter);
 }
 
-void q_cpplottablelegenditem_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPPlottableLegendItem_OnApplyDefaultAntialiasingHint((const QCPPlottableLegendItem*)self, (intptr_t)callback);
+void q_cpplottablelegenditem_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPPlottableLegendItem_OnApplyDefaultAntialiasingHint((QCPPlottableLegendItem*)self, (intptr_t)callback);
 }
 
 QRect* q_cpplottablelegenditem_clip_rect(const void* self) {
@@ -18515,8 +18515,8 @@ QRect* q_cpplottablelegenditem_super_clip_rect(const void* self) {
     return QCPPlottableLegendItem_SuperClipRect((QCPPlottableLegendItem*)self);
 }
 
-void q_cpplottablelegenditem_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPPlottableLegendItem_OnClipRect((const QCPPlottableLegendItem*)self, (intptr_t)callback);
+void q_cpplottablelegenditem_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPPlottableLegendItem_OnClipRect((QCPPlottableLegendItem*)self, (intptr_t)callback);
 }
 
 void q_cpplottablelegenditem_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -18563,8 +18563,8 @@ QSize* q_cpplottablelegenditem_super_maximum_outer_size_hint(const void* self) {
     return QCPPlottableLegendItem_SuperMaximumOuterSizeHint((QCPPlottableLegendItem*)self);
 }
 
-void q_cpplottablelegenditem_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPPlottableLegendItem_OnMaximumOuterSizeHint((const QCPPlottableLegendItem*)self, (intptr_t)callback);
+void q_cpplottablelegenditem_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPPlottableLegendItem_OnMaximumOuterSizeHint((QCPPlottableLegendItem*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QCPLayoutElement* */ q_cpplottablelegenditem_elements(const void* self, bool recursive) {
@@ -18577,8 +18577,8 @@ libqt_list /* of QCPLayoutElement* */ q_cpplottablelegenditem_super_elements(con
     return _arr;
 }
 
-void q_cpplottablelegenditem_on_elements(const void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
-    QCPPlottableLegendItem_OnElements((const QCPPlottableLegendItem*)self, (intptr_t)callback);
+void q_cpplottablelegenditem_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
+    QCPPlottableLegendItem_OnElements((QCPPlottableLegendItem*)self, (intptr_t)callback);
 }
 
 int32_t q_cpplottablelegenditem_calculate_auto_margin(void* self, int32_t side) {
@@ -18809,7 +18809,7 @@ const QMetaObject* q_cplegend_meta_object(const void* self) {
     return QCPLegend_MetaObject((QCPLegend*)self);
 }
 
-void q_cplegend_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cplegend_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPLegend_OnMetaObject((QCPLegend*)self, (intptr_t)callback);
 }
 
@@ -18968,7 +18968,7 @@ double q_cplegend_select_test(const void* self, const void* pos, bool onlySelect
     return QCPLegend_SelectTest((QCPLegend*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cplegend_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cplegend_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPLegend_OnSelectTest((QCPLegend*)self, (intptr_t)callback);
 }
 
@@ -19049,7 +19049,7 @@ int32_t q_cplegend_selection_category(const void* self) {
     return QCPLegend_SelectionCategory((QCPLegend*)self);
 }
 
-void q_cplegend_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
+void q_cplegend_on_selection_category(void* self, int32_t (*callback)(const void*)) {
     QCPLegend_OnSelectionCategory((QCPLegend*)self, (intptr_t)callback);
 }
 
@@ -19061,7 +19061,7 @@ void q_cplegend_apply_default_antialiasing_hint(const void* self, void* painter)
     QCPLegend_ApplyDefaultAntialiasingHint((QCPLegend*)self, (QCPPainter*)painter);
 }
 
-void q_cplegend_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cplegend_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPLegend_OnApplyDefaultAntialiasingHint((QCPLegend*)self, (intptr_t)callback);
 }
 
@@ -19612,8 +19612,8 @@ int32_t q_cplegend_super_element_count(const void* self) {
     return QCPLegend_SuperElementCount((QCPLegend*)self);
 }
 
-void q_cplegend_on_element_count(const void* self, int32_t (*callback)(const void*)) {
-    QCPLegend_OnElementCount((const QCPLegend*)self, (intptr_t)callback);
+void q_cplegend_on_element_count(void* self, int32_t (*callback)(const void*)) {
+    QCPLegend_OnElementCount((QCPLegend*)self, (intptr_t)callback);
 }
 
 QCPLayoutElement* q_cplegend_element_at(const void* self, int index) {
@@ -19624,8 +19624,8 @@ QCPLayoutElement* q_cplegend_super_element_at(const void* self, int index) {
     return QCPLegend_SuperElementAt((QCPLegend*)self, index);
 }
 
-void q_cplegend_on_element_at(const void* self, QCPLayoutElement* (*callback)(const void*, int)) {
-    QCPLegend_OnElementAt((const QCPLegend*)self, (intptr_t)callback);
+void q_cplegend_on_element_at(void* self, QCPLayoutElement* (*callback)(const void*, int)) {
+    QCPLegend_OnElementAt((QCPLegend*)self, (intptr_t)callback);
 }
 
 QCPLayoutElement* q_cplegend_take_at(void* self, int index) {
@@ -19662,8 +19662,8 @@ libqt_list /* of QCPLayoutElement* */ q_cplegend_super_elements(const void* self
     return _arr;
 }
 
-void q_cplegend_on_elements(const void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
-    QCPLegend_OnElements((const QCPLegend*)self, (intptr_t)callback);
+void q_cplegend_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
+    QCPLegend_OnElements((QCPLegend*)self, (intptr_t)callback);
 }
 
 void q_cplegend_simplify(void* self) {
@@ -19686,8 +19686,8 @@ QSize* q_cplegend_super_minimum_outer_size_hint(const void* self) {
     return QCPLegend_SuperMinimumOuterSizeHint((QCPLegend*)self);
 }
 
-void q_cplegend_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPLegend_OnMinimumOuterSizeHint((const QCPLegend*)self, (intptr_t)callback);
+void q_cplegend_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPLegend_OnMinimumOuterSizeHint((QCPLegend*)self, (intptr_t)callback);
 }
 
 QSize* q_cplegend_maximum_outer_size_hint(const void* self) {
@@ -19698,8 +19698,8 @@ QSize* q_cplegend_super_maximum_outer_size_hint(const void* self) {
     return QCPLegend_SuperMaximumOuterSizeHint((QCPLegend*)self);
 }
 
-void q_cplegend_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPLegend_OnMaximumOuterSizeHint((const QCPLegend*)self, (intptr_t)callback);
+void q_cplegend_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPLegend_OnMaximumOuterSizeHint((QCPLegend*)self, (intptr_t)callback);
 }
 
 void q_cplegend_update(void* self, int32_t phase) {
@@ -19746,8 +19746,8 @@ QRect* q_cplegend_super_clip_rect(const void* self) {
     return QCPLegend_SuperClipRect((QCPLegend*)self);
 }
 
-void q_cplegend_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPLegend_OnClipRect((const QCPLegend*)self, (intptr_t)callback);
+void q_cplegend_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPLegend_OnClipRect((QCPLegend*)self, (intptr_t)callback);
 }
 
 void q_cplegend_mouse_press_event(void* self, void* event, const void* details) {
@@ -19983,7 +19983,7 @@ const QMetaObject* q_cptextelement_meta_object(const void* self) {
     return QCPTextElement_MetaObject((QCPTextElement*)self);
 }
 
-void q_cptextelement_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cptextelement_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPTextElement_OnMetaObject((QCPTextElement*)self, (intptr_t)callback);
 }
 
@@ -20093,7 +20093,7 @@ double q_cptextelement_select_test(const void* self, const void* pos, bool onlyS
     return QCPTextElement_SelectTest((QCPTextElement*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cptextelement_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cptextelement_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPTextElement_OnSelectTest((QCPTextElement*)self, (intptr_t)callback);
 }
 
@@ -20173,7 +20173,7 @@ void q_cptextelement_apply_default_antialiasing_hint(const void* self, void* pai
     QCPTextElement_ApplyDefaultAntialiasingHint((QCPTextElement*)self, (QCPPainter*)painter);
 }
 
-void q_cptextelement_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cptextelement_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPTextElement_OnApplyDefaultAntialiasingHint((QCPTextElement*)self, (intptr_t)callback);
 }
 
@@ -20197,7 +20197,7 @@ QSize* q_cptextelement_minimum_outer_size_hint(const void* self) {
     return QCPTextElement_MinimumOuterSizeHint((QCPTextElement*)self);
 }
 
-void q_cptextelement_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_cptextelement_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCPTextElement_OnMinimumOuterSizeHint((QCPTextElement*)self, (intptr_t)callback);
 }
 
@@ -20209,7 +20209,7 @@ QSize* q_cptextelement_maximum_outer_size_hint(const void* self) {
     return QCPTextElement_MaximumOuterSizeHint((QCPTextElement*)self);
 }
 
-void q_cptextelement_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_cptextelement_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCPTextElement_OnMaximumOuterSizeHint((QCPTextElement*)self, (intptr_t)callback);
 }
 
@@ -20632,8 +20632,8 @@ libqt_list /* of QCPLayoutElement* */ q_cptextelement_super_elements(const void*
     return _arr;
 }
 
-void q_cptextelement_on_elements(const void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
-    QCPTextElement_OnElements((const QCPTextElement*)self, (intptr_t)callback);
+void q_cptextelement_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
+    QCPTextElement_OnElements((QCPTextElement*)self, (intptr_t)callback);
 }
 
 int32_t q_cptextelement_calculate_auto_margin(void* self, int32_t side) {
@@ -20680,8 +20680,8 @@ int32_t q_cptextelement_super_selection_category(const void* self) {
     return QCPTextElement_SuperSelectionCategory((QCPTextElement*)self);
 }
 
-void q_cptextelement_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPTextElement_OnSelectionCategory((const QCPTextElement*)self, (intptr_t)callback);
+void q_cptextelement_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPTextElement_OnSelectionCategory((QCPTextElement*)self, (intptr_t)callback);
 }
 
 QRect* q_cptextelement_clip_rect(const void* self) {
@@ -20692,8 +20692,8 @@ QRect* q_cptextelement_super_clip_rect(const void* self) {
     return QCPTextElement_SuperClipRect((QCPTextElement*)self);
 }
 
-void q_cptextelement_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPTextElement_OnClipRect((const QCPTextElement*)self, (intptr_t)callback);
+void q_cptextelement_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPTextElement_OnClipRect((QCPTextElement*)self, (intptr_t)callback);
 }
 
 void q_cptextelement_mouse_move_event(void* self, void* event, const void* startPos) {
@@ -20852,7 +20852,7 @@ const QMetaObject* q_cpcolorscale_meta_object(const void* self) {
     return QCPColorScale_MetaObject((QCPColorScale*)self);
 }
 
-void q_cpcolorscale_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpcolorscale_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPColorScale_OnMetaObject((QCPColorScale*)self, (intptr_t)callback);
 }
 
@@ -21011,7 +21011,7 @@ void q_cpcolorscale_apply_default_antialiasing_hint(const void* self, void* pain
     QCPColorScale_ApplyDefaultAntialiasingHint((QCPColorScale*)self, (QCPPainter*)painter);
 }
 
-void q_cpcolorscale_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cpcolorscale_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPColorScale_OnApplyDefaultAntialiasingHint((QCPColorScale*)self, (intptr_t)callback);
 }
 
@@ -21436,8 +21436,8 @@ QSize* q_cpcolorscale_super_minimum_outer_size_hint(const void* self) {
     return QCPColorScale_SuperMinimumOuterSizeHint((QCPColorScale*)self);
 }
 
-void q_cpcolorscale_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPColorScale_OnMinimumOuterSizeHint((const QCPColorScale*)self, (intptr_t)callback);
+void q_cpcolorscale_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPColorScale_OnMinimumOuterSizeHint((QCPColorScale*)self, (intptr_t)callback);
 }
 
 QSize* q_cpcolorscale_maximum_outer_size_hint(const void* self) {
@@ -21448,8 +21448,8 @@ QSize* q_cpcolorscale_super_maximum_outer_size_hint(const void* self) {
     return QCPColorScale_SuperMaximumOuterSizeHint((QCPColorScale*)self);
 }
 
-void q_cpcolorscale_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPColorScale_OnMaximumOuterSizeHint((const QCPColorScale*)self, (intptr_t)callback);
+void q_cpcolorscale_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPColorScale_OnMaximumOuterSizeHint((QCPColorScale*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QCPLayoutElement* */ q_cpcolorscale_elements(const void* self, bool recursive) {
@@ -21462,8 +21462,8 @@ libqt_list /* of QCPLayoutElement* */ q_cpcolorscale_super_elements(const void* 
     return _arr;
 }
 
-void q_cpcolorscale_on_elements(const void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
-    QCPColorScale_OnElements((const QCPColorScale*)self, (intptr_t)callback);
+void q_cpcolorscale_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
+    QCPColorScale_OnElements((QCPColorScale*)self, (intptr_t)callback);
 }
 
 double q_cpcolorscale_select_test(const void* self, const void* pos, bool onlySelectable, void* details) {
@@ -21474,8 +21474,8 @@ double q_cpcolorscale_super_select_test(const void* self, const void* pos, bool 
     return QCPColorScale_SuperSelectTest((QCPColorScale*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpcolorscale_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
-    QCPColorScale_OnSelectTest((const QCPColorScale*)self, (intptr_t)callback);
+void q_cpcolorscale_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
+    QCPColorScale_OnSelectTest((QCPColorScale*)self, (intptr_t)callback);
 }
 
 int32_t q_cpcolorscale_calculate_auto_margin(void* self, int32_t side) {
@@ -21534,8 +21534,8 @@ int32_t q_cpcolorscale_super_selection_category(const void* self) {
     return QCPColorScale_SuperSelectionCategory((QCPColorScale*)self);
 }
 
-void q_cpcolorscale_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPColorScale_OnSelectionCategory((const QCPColorScale*)self, (intptr_t)callback);
+void q_cpcolorscale_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPColorScale_OnSelectionCategory((QCPColorScale*)self, (intptr_t)callback);
 }
 
 QRect* q_cpcolorscale_clip_rect(const void* self) {
@@ -21546,8 +21546,8 @@ QRect* q_cpcolorscale_super_clip_rect(const void* self) {
     return QCPColorScale_SuperClipRect((QCPColorScale*)self);
 }
 
-void q_cpcolorscale_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPColorScale_OnClipRect((const QCPColorScale*)self, (intptr_t)callback);
+void q_cpcolorscale_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPColorScale_OnClipRect((QCPColorScale*)self, (intptr_t)callback);
 }
 
 void q_cpcolorscale_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -21790,7 +21790,7 @@ const QMetaObject* q_cpgraph_meta_object(const void* self) {
     return QCPGraph_MetaObject((QCPGraph*)self);
 }
 
-void q_cpgraph_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpgraph_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPGraph_OnMetaObject((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -21885,7 +21885,7 @@ double q_cpgraph_select_test(const void* self, const void* pos, bool onlySelecta
     return QCPGraph_SelectTest((QCPGraph*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpgraph_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpgraph_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPGraph_OnSelectTest((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -21897,7 +21897,7 @@ QCPRange* q_cpgraph_get_key_range(const void* self, bool* foundRange, int32_t in
     return QCPGraph_GetKeyRange((QCPGraph*)self, (bool*)foundRange, inSignDomain);
 }
 
-void q_cpgraph_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
+void q_cpgraph_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
     QCPGraph_OnGetKeyRange((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -21909,7 +21909,7 @@ QCPRange* q_cpgraph_get_value_range(const void* self, bool* foundRange, int32_t 
     return QCPGraph_GetValueRange((QCPGraph*)self, (bool*)foundRange, inSignDomain, (QCPRange*)inKeyRange);
 }
 
-void q_cpgraph_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
+void q_cpgraph_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
     QCPGraph_OnGetValueRange((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -21933,7 +21933,7 @@ void q_cpgraph_draw_legend_icon(const void* self, void* painter, const void* rec
     QCPGraph_DrawLegendIcon((QCPGraph*)self, (QCPPainter*)painter, (QRectF*)rect);
 }
 
-void q_cpgraph_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*)) {
+void q_cpgraph_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*)) {
     QCPGraph_OnDrawLegendIcon((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -21945,7 +21945,7 @@ void q_cpgraph_draw_fill(const void* self, void* painter, libqt_list /* of QPoin
     QCPGraph_DrawFill((QCPGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cpgraph_on_draw_fill(const void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */)) {
+void q_cpgraph_on_draw_fill(void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */)) {
     QCPGraph_OnDrawFill((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -21957,7 +21957,7 @@ void q_cpgraph_draw_scatter_plot(const void* self, void* painter, libqt_list /* 
     QCPGraph_DrawScatterPlot((QCPGraph*)self, (QCPPainter*)painter, scatters, (QCPScatterStyle*)style);
 }
 
-void q_cpgraph_on_draw_scatter_plot(const void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */, const void*)) {
+void q_cpgraph_on_draw_scatter_plot(void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */, const void*)) {
     QCPGraph_OnDrawScatterPlot((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -21969,7 +21969,7 @@ void q_cpgraph_draw_line_plot(const void* self, void* painter, libqt_list /* of 
     QCPGraph_DrawLinePlot((QCPGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cpgraph_on_draw_line_plot(const void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */)) {
+void q_cpgraph_on_draw_line_plot(void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */)) {
     QCPGraph_OnDrawLinePlot((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -21981,7 +21981,7 @@ void q_cpgraph_draw_impulse_plot(const void* self, void* painter, libqt_list /* 
     QCPGraph_DrawImpulsePlot((QCPGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cpgraph_on_draw_impulse_plot(const void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */)) {
+void q_cpgraph_on_draw_impulse_plot(void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */)) {
     QCPGraph_OnDrawImpulsePlot((QCPGraph*)self, (intptr_t)callback);
 }
 
@@ -22521,80 +22521,80 @@ int32_t q_cpgraph_data_count(const void* self) {
     return QCPGraph_DataCount((QCPGraph*)self);
 }
 
-void q_cpgraph_on_data_count(const void* self, int32_t (*callback)(const void*)) {
-    QCPGraph_OnDataCount((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_data_count(void* self, int32_t (*callback)(const void*)) {
+    QCPGraph_OnDataCount((QCPGraph*)self, (intptr_t)callback);
 }
 
 double q_cpgraph_data_main_key(const void* self, int index) {
     return QCPGraph_DataMainKey((QCPGraph*)self, index);
 }
 
-void q_cpgraph_on_data_main_key(const void* self, double (*callback)(const void*, int)) {
-    QCPGraph_OnDataMainKey((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_data_main_key(void* self, double (*callback)(const void*, int)) {
+    QCPGraph_OnDataMainKey((QCPGraph*)self, (intptr_t)callback);
 }
 
 double q_cpgraph_data_sort_key(const void* self, int index) {
     return QCPGraph_DataSortKey((QCPGraph*)self, index);
 }
 
-void q_cpgraph_on_data_sort_key(const void* self, double (*callback)(const void*, int)) {
-    QCPGraph_OnDataSortKey((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_data_sort_key(void* self, double (*callback)(const void*, int)) {
+    QCPGraph_OnDataSortKey((QCPGraph*)self, (intptr_t)callback);
 }
 
 double q_cpgraph_data_main_value(const void* self, int index) {
     return QCPGraph_DataMainValue((QCPGraph*)self, index);
 }
 
-void q_cpgraph_on_data_main_value(const void* self, double (*callback)(const void*, int)) {
-    QCPGraph_OnDataMainValue((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_data_main_value(void* self, double (*callback)(const void*, int)) {
+    QCPGraph_OnDataMainValue((QCPGraph*)self, (intptr_t)callback);
 }
 
 QCPRange* q_cpgraph_data_value_range(const void* self, int index) {
     return QCPGraph_DataValueRange((QCPGraph*)self, index);
 }
 
-void q_cpgraph_on_data_value_range(const void* self, QCPRange* (*callback)(const void*, int)) {
-    QCPGraph_OnDataValueRange((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_data_value_range(void* self, QCPRange* (*callback)(const void*, int)) {
+    QCPGraph_OnDataValueRange((QCPGraph*)self, (intptr_t)callback);
 }
 
 QPointF* q_cpgraph_data_pixel_position(const void* self, int index) {
     return QCPGraph_DataPixelPosition((QCPGraph*)self, index);
 }
 
-void q_cpgraph_on_data_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
-    QCPGraph_OnDataPixelPosition((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_data_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
+    QCPGraph_OnDataPixelPosition((QCPGraph*)self, (intptr_t)callback);
 }
 
 bool q_cpgraph_sort_key_is_main_key(const void* self) {
     return QCPGraph_SortKeyIsMainKey((QCPGraph*)self);
 }
 
-void q_cpgraph_on_sort_key_is_main_key(const void* self, bool (*callback)(const void*)) {
-    QCPGraph_OnSortKeyIsMainKey((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_sort_key_is_main_key(void* self, bool (*callback)(const void*)) {
+    QCPGraph_OnSortKeyIsMainKey((QCPGraph*)self, (intptr_t)callback);
 }
 
 QCPDataSelection* q_cpgraph_select_test_rect(const void* self, const void* rect, bool onlySelectable) {
     return QCPGraph_SelectTestRect((QCPGraph*)self, (QRectF*)rect, onlySelectable);
 }
 
-void q_cpgraph_on_select_test_rect(const void* self, QCPDataSelection* (*callback)(const void*, const void*, bool)) {
-    QCPGraph_OnSelectTestRect((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_select_test_rect(void* self, QCPDataSelection* (*callback)(const void*, const void*, bool)) {
+    QCPGraph_OnSelectTestRect((QCPGraph*)self, (intptr_t)callback);
 }
 
 int32_t q_cpgraph_find_begin(const void* self, double sortKey, bool expandedRange) {
     return QCPGraph_FindBegin((QCPGraph*)self, sortKey, expandedRange);
 }
 
-void q_cpgraph_on_find_begin(const void* self, int32_t (*callback)(const void*, double, bool)) {
-    QCPGraph_OnFindBegin((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_find_begin(void* self, int32_t (*callback)(const void*, double, bool)) {
+    QCPGraph_OnFindBegin((QCPGraph*)self, (intptr_t)callback);
 }
 
 int32_t q_cpgraph_find_end(const void* self, double sortKey, bool expandedRange) {
     return QCPGraph_FindEnd((QCPGraph*)self, sortKey, expandedRange);
 }
 
-void q_cpgraph_on_find_end(const void* self, int32_t (*callback)(const void*, double, bool)) {
-    QCPGraph_OnFindEnd((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_find_end(void* self, int32_t (*callback)(const void*, double, bool)) {
+    QCPGraph_OnFindEnd((QCPGraph*)self, (intptr_t)callback);
 }
 
 QCPPlottableInterface1D* q_cpgraph_interface1_d(void* self) {
@@ -22617,8 +22617,8 @@ QRect* q_cpgraph_super_clip_rect(const void* self) {
     return QCPGraph_SuperClipRect((QCPGraph*)self);
 }
 
-void q_cpgraph_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPGraph_OnClipRect((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPGraph_OnClipRect((QCPGraph*)self, (intptr_t)callback);
 }
 
 int32_t q_cpgraph_selection_category(const void* self) {
@@ -22629,8 +22629,8 @@ int32_t q_cpgraph_super_selection_category(const void* self) {
     return QCPGraph_SuperSelectionCategory((QCPGraph*)self);
 }
 
-void q_cpgraph_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPGraph_OnSelectionCategory((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPGraph_OnSelectionCategory((QCPGraph*)self, (intptr_t)callback);
 }
 
 void q_cpgraph_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -22641,8 +22641,8 @@ void q_cpgraph_super_apply_default_antialiasing_hint(const void* self, void* pai
     QCPGraph_SuperApplyDefaultAntialiasingHint((QCPGraph*)self, (QCPPainter*)painter);
 }
 
-void q_cpgraph_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPGraph_OnApplyDefaultAntialiasingHint((const QCPGraph*)self, (intptr_t)callback);
+void q_cpgraph_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPGraph_OnApplyDefaultAntialiasingHint((QCPGraph*)self, (intptr_t)callback);
 }
 
 void q_cpgraph_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -22961,7 +22961,7 @@ const QMetaObject* q_cpcurve_meta_object(const void* self) {
     return QCPCurve_MetaObject((QCPCurve*)self);
 }
 
-void q_cpcurve_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpcurve_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPCurve_OnMetaObject((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -23052,7 +23052,7 @@ double q_cpcurve_select_test(const void* self, const void* pos, bool onlySelecta
     return QCPCurve_SelectTest((QCPCurve*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpcurve_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpcurve_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPCurve_OnSelectTest((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -23064,7 +23064,7 @@ QCPRange* q_cpcurve_get_key_range(const void* self, bool* foundRange, int32_t in
     return QCPCurve_GetKeyRange((QCPCurve*)self, (bool*)foundRange, inSignDomain);
 }
 
-void q_cpcurve_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
+void q_cpcurve_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
     QCPCurve_OnGetKeyRange((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -23076,7 +23076,7 @@ QCPRange* q_cpcurve_get_value_range(const void* self, bool* foundRange, int32_t 
     return QCPCurve_GetValueRange((QCPCurve*)self, (bool*)foundRange, inSignDomain, (QCPRange*)inKeyRange);
 }
 
-void q_cpcurve_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
+void q_cpcurve_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
     QCPCurve_OnGetValueRange((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -23100,7 +23100,7 @@ void q_cpcurve_draw_legend_icon(const void* self, void* painter, const void* rec
     QCPCurve_DrawLegendIcon((QCPCurve*)self, (QCPPainter*)painter, (QRectF*)rect);
 }
 
-void q_cpcurve_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*)) {
+void q_cpcurve_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*)) {
     QCPCurve_OnDrawLegendIcon((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -23112,7 +23112,7 @@ void q_cpcurve_draw_curve_line(const void* self, void* painter, libqt_list /* of
     QCPCurve_DrawCurveLine((QCPCurve*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cpcurve_on_draw_curve_line(const void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */)) {
+void q_cpcurve_on_draw_curve_line(void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */)) {
     QCPCurve_OnDrawCurveLine((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -23124,7 +23124,7 @@ void q_cpcurve_draw_scatter_plot(const void* self, void* painter, libqt_list /* 
     QCPCurve_DrawScatterPlot((QCPCurve*)self, (QCPPainter*)painter, points, (QCPScatterStyle*)style);
 }
 
-void q_cpcurve_on_draw_scatter_plot(const void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */, const void*)) {
+void q_cpcurve_on_draw_scatter_plot(void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */, const void*)) {
     QCPCurve_OnDrawScatterPlot((QCPCurve*)self, (intptr_t)callback);
 }
 
@@ -23623,80 +23623,80 @@ int32_t q_cpcurve_data_count(const void* self) {
     return QCPCurve_DataCount((QCPCurve*)self);
 }
 
-void q_cpcurve_on_data_count(const void* self, int32_t (*callback)(const void*)) {
-    QCPCurve_OnDataCount((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_data_count(void* self, int32_t (*callback)(const void*)) {
+    QCPCurve_OnDataCount((QCPCurve*)self, (intptr_t)callback);
 }
 
 double q_cpcurve_data_main_key(const void* self, int index) {
     return QCPCurve_DataMainKey((QCPCurve*)self, index);
 }
 
-void q_cpcurve_on_data_main_key(const void* self, double (*callback)(const void*, int)) {
-    QCPCurve_OnDataMainKey((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_data_main_key(void* self, double (*callback)(const void*, int)) {
+    QCPCurve_OnDataMainKey((QCPCurve*)self, (intptr_t)callback);
 }
 
 double q_cpcurve_data_sort_key(const void* self, int index) {
     return QCPCurve_DataSortKey((QCPCurve*)self, index);
 }
 
-void q_cpcurve_on_data_sort_key(const void* self, double (*callback)(const void*, int)) {
-    QCPCurve_OnDataSortKey((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_data_sort_key(void* self, double (*callback)(const void*, int)) {
+    QCPCurve_OnDataSortKey((QCPCurve*)self, (intptr_t)callback);
 }
 
 double q_cpcurve_data_main_value(const void* self, int index) {
     return QCPCurve_DataMainValue((QCPCurve*)self, index);
 }
 
-void q_cpcurve_on_data_main_value(const void* self, double (*callback)(const void*, int)) {
-    QCPCurve_OnDataMainValue((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_data_main_value(void* self, double (*callback)(const void*, int)) {
+    QCPCurve_OnDataMainValue((QCPCurve*)self, (intptr_t)callback);
 }
 
 QCPRange* q_cpcurve_data_value_range(const void* self, int index) {
     return QCPCurve_DataValueRange((QCPCurve*)self, index);
 }
 
-void q_cpcurve_on_data_value_range(const void* self, QCPRange* (*callback)(const void*, int)) {
-    QCPCurve_OnDataValueRange((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_data_value_range(void* self, QCPRange* (*callback)(const void*, int)) {
+    QCPCurve_OnDataValueRange((QCPCurve*)self, (intptr_t)callback);
 }
 
 QPointF* q_cpcurve_data_pixel_position(const void* self, int index) {
     return QCPCurve_DataPixelPosition((QCPCurve*)self, index);
 }
 
-void q_cpcurve_on_data_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
-    QCPCurve_OnDataPixelPosition((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_data_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
+    QCPCurve_OnDataPixelPosition((QCPCurve*)self, (intptr_t)callback);
 }
 
 bool q_cpcurve_sort_key_is_main_key(const void* self) {
     return QCPCurve_SortKeyIsMainKey((QCPCurve*)self);
 }
 
-void q_cpcurve_on_sort_key_is_main_key(const void* self, bool (*callback)(const void*)) {
-    QCPCurve_OnSortKeyIsMainKey((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_sort_key_is_main_key(void* self, bool (*callback)(const void*)) {
+    QCPCurve_OnSortKeyIsMainKey((QCPCurve*)self, (intptr_t)callback);
 }
 
 QCPDataSelection* q_cpcurve_select_test_rect(const void* self, const void* rect, bool onlySelectable) {
     return QCPCurve_SelectTestRect((QCPCurve*)self, (QRectF*)rect, onlySelectable);
 }
 
-void q_cpcurve_on_select_test_rect(const void* self, QCPDataSelection* (*callback)(const void*, const void*, bool)) {
-    QCPCurve_OnSelectTestRect((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_select_test_rect(void* self, QCPDataSelection* (*callback)(const void*, const void*, bool)) {
+    QCPCurve_OnSelectTestRect((QCPCurve*)self, (intptr_t)callback);
 }
 
 int32_t q_cpcurve_find_begin(const void* self, double sortKey, bool expandedRange) {
     return QCPCurve_FindBegin((QCPCurve*)self, sortKey, expandedRange);
 }
 
-void q_cpcurve_on_find_begin(const void* self, int32_t (*callback)(const void*, double, bool)) {
-    QCPCurve_OnFindBegin((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_find_begin(void* self, int32_t (*callback)(const void*, double, bool)) {
+    QCPCurve_OnFindBegin((QCPCurve*)self, (intptr_t)callback);
 }
 
 int32_t q_cpcurve_find_end(const void* self, double sortKey, bool expandedRange) {
     return QCPCurve_FindEnd((QCPCurve*)self, sortKey, expandedRange);
 }
 
-void q_cpcurve_on_find_end(const void* self, int32_t (*callback)(const void*, double, bool)) {
-    QCPCurve_OnFindEnd((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_find_end(void* self, int32_t (*callback)(const void*, double, bool)) {
+    QCPCurve_OnFindEnd((QCPCurve*)self, (intptr_t)callback);
 }
 
 QCPPlottableInterface1D* q_cpcurve_interface1_d(void* self) {
@@ -23719,8 +23719,8 @@ QRect* q_cpcurve_super_clip_rect(const void* self) {
     return QCPCurve_SuperClipRect((QCPCurve*)self);
 }
 
-void q_cpcurve_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPCurve_OnClipRect((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPCurve_OnClipRect((QCPCurve*)self, (intptr_t)callback);
 }
 
 int32_t q_cpcurve_selection_category(const void* self) {
@@ -23731,8 +23731,8 @@ int32_t q_cpcurve_super_selection_category(const void* self) {
     return QCPCurve_SuperSelectionCategory((QCPCurve*)self);
 }
 
-void q_cpcurve_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPCurve_OnSelectionCategory((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPCurve_OnSelectionCategory((QCPCurve*)self, (intptr_t)callback);
 }
 
 void q_cpcurve_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -23743,8 +23743,8 @@ void q_cpcurve_super_apply_default_antialiasing_hint(const void* self, void* pai
     QCPCurve_SuperApplyDefaultAntialiasingHint((QCPCurve*)self, (QCPPainter*)painter);
 }
 
-void q_cpcurve_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPCurve_OnApplyDefaultAntialiasingHint((const QCPCurve*)self, (intptr_t)callback);
+void q_cpcurve_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPCurve_OnApplyDefaultAntialiasingHint((QCPCurve*)self, (intptr_t)callback);
 }
 
 void q_cpcurve_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -23983,7 +23983,7 @@ const QMetaObject* q_cpbarsgroup_meta_object(const void* self) {
     return QCPBarsGroup_MetaObject((QCPBarsGroup*)self);
 }
 
-void q_cpbarsgroup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpbarsgroup_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPBarsGroup_OnMetaObject((QCPBarsGroup*)self, (intptr_t)callback);
 }
 
@@ -24502,7 +24502,7 @@ const QMetaObject* q_cpbars_meta_object(const void* self) {
     return QCPBars_MetaObject((QCPBars*)self);
 }
 
-void q_cpbars_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpbars_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPBars_OnMetaObject((QCPBars*)self, (intptr_t)callback);
 }
 
@@ -24613,7 +24613,7 @@ QCPDataSelection* q_cpbars_select_test_rect(const void* self, const void* rect, 
     return QCPBars_SelectTestRect((QCPBars*)self, (QRectF*)rect, onlySelectable);
 }
 
-void q_cpbars_on_select_test_rect(const void* self, QCPDataSelection* (*callback)(const void*, const void*, bool)) {
+void q_cpbars_on_select_test_rect(void* self, QCPDataSelection* (*callback)(const void*, const void*, bool)) {
     QCPBars_OnSelectTestRect((QCPBars*)self, (intptr_t)callback);
 }
 
@@ -24625,7 +24625,7 @@ double q_cpbars_select_test(const void* self, const void* pos, bool onlySelectab
     return QCPBars_SelectTest((QCPBars*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpbars_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpbars_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPBars_OnSelectTest((QCPBars*)self, (intptr_t)callback);
 }
 
@@ -24637,7 +24637,7 @@ QCPRange* q_cpbars_get_key_range(const void* self, bool* foundRange, int32_t inS
     return QCPBars_GetKeyRange((QCPBars*)self, (bool*)foundRange, inSignDomain);
 }
 
-void q_cpbars_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
+void q_cpbars_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
     QCPBars_OnGetKeyRange((QCPBars*)self, (intptr_t)callback);
 }
 
@@ -24649,7 +24649,7 @@ QCPRange* q_cpbars_get_value_range(const void* self, bool* foundRange, int32_t i
     return QCPBars_GetValueRange((QCPBars*)self, (bool*)foundRange, inSignDomain, (QCPRange*)inKeyRange);
 }
 
-void q_cpbars_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
+void q_cpbars_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
     QCPBars_OnGetValueRange((QCPBars*)self, (intptr_t)callback);
 }
 
@@ -24661,7 +24661,7 @@ QPointF* q_cpbars_data_pixel_position(const void* self, int index) {
     return QCPBars_DataPixelPosition((QCPBars*)self, index);
 }
 
-void q_cpbars_on_data_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
+void q_cpbars_on_data_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
     QCPBars_OnDataPixelPosition((QCPBars*)self, (intptr_t)callback);
 }
 
@@ -24685,7 +24685,7 @@ void q_cpbars_draw_legend_icon(const void* self, void* painter, const void* rect
     QCPBars_DrawLegendIcon((QCPBars*)self, (QCPPainter*)painter, (QRectF*)rect);
 }
 
-void q_cpbars_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*)) {
+void q_cpbars_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*)) {
     QCPBars_OnDrawLegendIcon((QCPBars*)self, (intptr_t)callback);
 }
 
@@ -25167,64 +25167,64 @@ int32_t q_cpbars_data_count(const void* self) {
     return QCPBars_DataCount((QCPBars*)self);
 }
 
-void q_cpbars_on_data_count(const void* self, int32_t (*callback)(const void*)) {
-    QCPBars_OnDataCount((const QCPBars*)self, (intptr_t)callback);
+void q_cpbars_on_data_count(void* self, int32_t (*callback)(const void*)) {
+    QCPBars_OnDataCount((QCPBars*)self, (intptr_t)callback);
 }
 
 double q_cpbars_data_main_key(const void* self, int index) {
     return QCPBars_DataMainKey((QCPBars*)self, index);
 }
 
-void q_cpbars_on_data_main_key(const void* self, double (*callback)(const void*, int)) {
-    QCPBars_OnDataMainKey((const QCPBars*)self, (intptr_t)callback);
+void q_cpbars_on_data_main_key(void* self, double (*callback)(const void*, int)) {
+    QCPBars_OnDataMainKey((QCPBars*)self, (intptr_t)callback);
 }
 
 double q_cpbars_data_sort_key(const void* self, int index) {
     return QCPBars_DataSortKey((QCPBars*)self, index);
 }
 
-void q_cpbars_on_data_sort_key(const void* self, double (*callback)(const void*, int)) {
-    QCPBars_OnDataSortKey((const QCPBars*)self, (intptr_t)callback);
+void q_cpbars_on_data_sort_key(void* self, double (*callback)(const void*, int)) {
+    QCPBars_OnDataSortKey((QCPBars*)self, (intptr_t)callback);
 }
 
 double q_cpbars_data_main_value(const void* self, int index) {
     return QCPBars_DataMainValue((QCPBars*)self, index);
 }
 
-void q_cpbars_on_data_main_value(const void* self, double (*callback)(const void*, int)) {
-    QCPBars_OnDataMainValue((const QCPBars*)self, (intptr_t)callback);
+void q_cpbars_on_data_main_value(void* self, double (*callback)(const void*, int)) {
+    QCPBars_OnDataMainValue((QCPBars*)self, (intptr_t)callback);
 }
 
 QCPRange* q_cpbars_data_value_range(const void* self, int index) {
     return QCPBars_DataValueRange((QCPBars*)self, index);
 }
 
-void q_cpbars_on_data_value_range(const void* self, QCPRange* (*callback)(const void*, int)) {
-    QCPBars_OnDataValueRange((const QCPBars*)self, (intptr_t)callback);
+void q_cpbars_on_data_value_range(void* self, QCPRange* (*callback)(const void*, int)) {
+    QCPBars_OnDataValueRange((QCPBars*)self, (intptr_t)callback);
 }
 
 bool q_cpbars_sort_key_is_main_key(const void* self) {
     return QCPBars_SortKeyIsMainKey((QCPBars*)self);
 }
 
-void q_cpbars_on_sort_key_is_main_key(const void* self, bool (*callback)(const void*)) {
-    QCPBars_OnSortKeyIsMainKey((const QCPBars*)self, (intptr_t)callback);
+void q_cpbars_on_sort_key_is_main_key(void* self, bool (*callback)(const void*)) {
+    QCPBars_OnSortKeyIsMainKey((QCPBars*)self, (intptr_t)callback);
 }
 
 int32_t q_cpbars_find_begin(const void* self, double sortKey, bool expandedRange) {
     return QCPBars_FindBegin((QCPBars*)self, sortKey, expandedRange);
 }
 
-void q_cpbars_on_find_begin(const void* self, int32_t (*callback)(const void*, double, bool)) {
-    QCPBars_OnFindBegin((const QCPBars*)self, (intptr_t)callback);
+void q_cpbars_on_find_begin(void* self, int32_t (*callback)(const void*, double, bool)) {
+    QCPBars_OnFindBegin((QCPBars*)self, (intptr_t)callback);
 }
 
 int32_t q_cpbars_find_end(const void* self, double sortKey, bool expandedRange) {
     return QCPBars_FindEnd((QCPBars*)self, sortKey, expandedRange);
 }
 
-void q_cpbars_on_find_end(const void* self, int32_t (*callback)(const void*, double, bool)) {
-    QCPBars_OnFindEnd((const QCPBars*)self, (intptr_t)callback);
+void q_cpbars_on_find_end(void* self, int32_t (*callback)(const void*, double, bool)) {
+    QCPBars_OnFindEnd((QCPBars*)self, (intptr_t)callback);
 }
 
 QCPPlottableInterface1D* q_cpbars_interface1_d(void* self) {
@@ -25247,8 +25247,8 @@ QRect* q_cpbars_super_clip_rect(const void* self) {
     return QCPBars_SuperClipRect((QCPBars*)self);
 }
 
-void q_cpbars_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPBars_OnClipRect((const QCPBars*)self, (intptr_t)callback);
+void q_cpbars_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPBars_OnClipRect((QCPBars*)self, (intptr_t)callback);
 }
 
 int32_t q_cpbars_selection_category(const void* self) {
@@ -25259,8 +25259,8 @@ int32_t q_cpbars_super_selection_category(const void* self) {
     return QCPBars_SuperSelectionCategory((QCPBars*)self);
 }
 
-void q_cpbars_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPBars_OnSelectionCategory((const QCPBars*)self, (intptr_t)callback);
+void q_cpbars_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPBars_OnSelectionCategory((QCPBars*)self, (intptr_t)callback);
 }
 
 void q_cpbars_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -25271,8 +25271,8 @@ void q_cpbars_super_apply_default_antialiasing_hint(const void* self, void* pain
     QCPBars_SuperApplyDefaultAntialiasingHint((QCPBars*)self, (QCPPainter*)painter);
 }
 
-void q_cpbars_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPBars_OnApplyDefaultAntialiasingHint((const QCPBars*)self, (intptr_t)callback);
+void q_cpbars_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPBars_OnApplyDefaultAntialiasingHint((QCPBars*)self, (intptr_t)callback);
 }
 
 void q_cpbars_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -25612,7 +25612,7 @@ const QMetaObject* q_cpstatisticalbox_meta_object(const void* self) {
     return QCPStatisticalBox_MetaObject((QCPStatisticalBox*)self);
 }
 
-void q_cpstatisticalbox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpstatisticalbox_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPStatisticalBox_OnMetaObject((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
@@ -25723,7 +25723,7 @@ QCPDataSelection* q_cpstatisticalbox_select_test_rect(const void* self, const vo
     return QCPStatisticalBox_SelectTestRect((QCPStatisticalBox*)self, (QRectF*)rect, onlySelectable);
 }
 
-void q_cpstatisticalbox_on_select_test_rect(const void* self, QCPDataSelection* (*callback)(const void*, const void*, bool)) {
+void q_cpstatisticalbox_on_select_test_rect(void* self, QCPDataSelection* (*callback)(const void*, const void*, bool)) {
     QCPStatisticalBox_OnSelectTestRect((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
@@ -25735,7 +25735,7 @@ double q_cpstatisticalbox_select_test(const void* self, const void* pos, bool on
     return QCPStatisticalBox_SelectTest((QCPStatisticalBox*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpstatisticalbox_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpstatisticalbox_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPStatisticalBox_OnSelectTest((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
@@ -25747,7 +25747,7 @@ QCPRange* q_cpstatisticalbox_get_key_range(const void* self, bool* foundRange, i
     return QCPStatisticalBox_GetKeyRange((QCPStatisticalBox*)self, (bool*)foundRange, inSignDomain);
 }
 
-void q_cpstatisticalbox_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
+void q_cpstatisticalbox_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
     QCPStatisticalBox_OnGetKeyRange((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
@@ -25759,7 +25759,7 @@ QCPRange* q_cpstatisticalbox_get_value_range(const void* self, bool* foundRange,
     return QCPStatisticalBox_GetValueRange((QCPStatisticalBox*)self, (bool*)foundRange, inSignDomain, (QCPRange*)inKeyRange);
 }
 
-void q_cpstatisticalbox_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
+void q_cpstatisticalbox_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
     QCPStatisticalBox_OnGetValueRange((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
@@ -25783,7 +25783,7 @@ void q_cpstatisticalbox_draw_legend_icon(const void* self, void* painter, const 
     QCPStatisticalBox_DrawLegendIcon((QCPStatisticalBox*)self, (QCPPainter*)painter, (QRectF*)rect);
 }
 
-void q_cpstatisticalbox_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*)) {
+void q_cpstatisticalbox_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*)) {
     QCPStatisticalBox_OnDrawLegendIcon((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
@@ -26253,72 +26253,72 @@ int32_t q_cpstatisticalbox_data_count(const void* self) {
     return QCPStatisticalBox_DataCount((QCPStatisticalBox*)self);
 }
 
-void q_cpstatisticalbox_on_data_count(const void* self, int32_t (*callback)(const void*)) {
-    QCPStatisticalBox_OnDataCount((const QCPStatisticalBox*)self, (intptr_t)callback);
+void q_cpstatisticalbox_on_data_count(void* self, int32_t (*callback)(const void*)) {
+    QCPStatisticalBox_OnDataCount((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
 double q_cpstatisticalbox_data_main_key(const void* self, int index) {
     return QCPStatisticalBox_DataMainKey((QCPStatisticalBox*)self, index);
 }
 
-void q_cpstatisticalbox_on_data_main_key(const void* self, double (*callback)(const void*, int)) {
-    QCPStatisticalBox_OnDataMainKey((const QCPStatisticalBox*)self, (intptr_t)callback);
+void q_cpstatisticalbox_on_data_main_key(void* self, double (*callback)(const void*, int)) {
+    QCPStatisticalBox_OnDataMainKey((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
 double q_cpstatisticalbox_data_sort_key(const void* self, int index) {
     return QCPStatisticalBox_DataSortKey((QCPStatisticalBox*)self, index);
 }
 
-void q_cpstatisticalbox_on_data_sort_key(const void* self, double (*callback)(const void*, int)) {
-    QCPStatisticalBox_OnDataSortKey((const QCPStatisticalBox*)self, (intptr_t)callback);
+void q_cpstatisticalbox_on_data_sort_key(void* self, double (*callback)(const void*, int)) {
+    QCPStatisticalBox_OnDataSortKey((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
 double q_cpstatisticalbox_data_main_value(const void* self, int index) {
     return QCPStatisticalBox_DataMainValue((QCPStatisticalBox*)self, index);
 }
 
-void q_cpstatisticalbox_on_data_main_value(const void* self, double (*callback)(const void*, int)) {
-    QCPStatisticalBox_OnDataMainValue((const QCPStatisticalBox*)self, (intptr_t)callback);
+void q_cpstatisticalbox_on_data_main_value(void* self, double (*callback)(const void*, int)) {
+    QCPStatisticalBox_OnDataMainValue((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
 QCPRange* q_cpstatisticalbox_data_value_range(const void* self, int index) {
     return QCPStatisticalBox_DataValueRange((QCPStatisticalBox*)self, index);
 }
 
-void q_cpstatisticalbox_on_data_value_range(const void* self, QCPRange* (*callback)(const void*, int)) {
-    QCPStatisticalBox_OnDataValueRange((const QCPStatisticalBox*)self, (intptr_t)callback);
+void q_cpstatisticalbox_on_data_value_range(void* self, QCPRange* (*callback)(const void*, int)) {
+    QCPStatisticalBox_OnDataValueRange((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
 QPointF* q_cpstatisticalbox_data_pixel_position(const void* self, int index) {
     return QCPStatisticalBox_DataPixelPosition((QCPStatisticalBox*)self, index);
 }
 
-void q_cpstatisticalbox_on_data_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
-    QCPStatisticalBox_OnDataPixelPosition((const QCPStatisticalBox*)self, (intptr_t)callback);
+void q_cpstatisticalbox_on_data_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
+    QCPStatisticalBox_OnDataPixelPosition((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
 bool q_cpstatisticalbox_sort_key_is_main_key(const void* self) {
     return QCPStatisticalBox_SortKeyIsMainKey((QCPStatisticalBox*)self);
 }
 
-void q_cpstatisticalbox_on_sort_key_is_main_key(const void* self, bool (*callback)(const void*)) {
-    QCPStatisticalBox_OnSortKeyIsMainKey((const QCPStatisticalBox*)self, (intptr_t)callback);
+void q_cpstatisticalbox_on_sort_key_is_main_key(void* self, bool (*callback)(const void*)) {
+    QCPStatisticalBox_OnSortKeyIsMainKey((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
 int32_t q_cpstatisticalbox_find_begin(const void* self, double sortKey, bool expandedRange) {
     return QCPStatisticalBox_FindBegin((QCPStatisticalBox*)self, sortKey, expandedRange);
 }
 
-void q_cpstatisticalbox_on_find_begin(const void* self, int32_t (*callback)(const void*, double, bool)) {
-    QCPStatisticalBox_OnFindBegin((const QCPStatisticalBox*)self, (intptr_t)callback);
+void q_cpstatisticalbox_on_find_begin(void* self, int32_t (*callback)(const void*, double, bool)) {
+    QCPStatisticalBox_OnFindBegin((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
 int32_t q_cpstatisticalbox_find_end(const void* self, double sortKey, bool expandedRange) {
     return QCPStatisticalBox_FindEnd((QCPStatisticalBox*)self, sortKey, expandedRange);
 }
 
-void q_cpstatisticalbox_on_find_end(const void* self, int32_t (*callback)(const void*, double, bool)) {
-    QCPStatisticalBox_OnFindEnd((const QCPStatisticalBox*)self, (intptr_t)callback);
+void q_cpstatisticalbox_on_find_end(void* self, int32_t (*callback)(const void*, double, bool)) {
+    QCPStatisticalBox_OnFindEnd((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
 QCPPlottableInterface1D* q_cpstatisticalbox_interface1_d(void* self) {
@@ -26341,8 +26341,8 @@ QRect* q_cpstatisticalbox_super_clip_rect(const void* self) {
     return QCPStatisticalBox_SuperClipRect((QCPStatisticalBox*)self);
 }
 
-void q_cpstatisticalbox_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPStatisticalBox_OnClipRect((const QCPStatisticalBox*)self, (intptr_t)callback);
+void q_cpstatisticalbox_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPStatisticalBox_OnClipRect((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
 int32_t q_cpstatisticalbox_selection_category(const void* self) {
@@ -26353,8 +26353,8 @@ int32_t q_cpstatisticalbox_super_selection_category(const void* self) {
     return QCPStatisticalBox_SuperSelectionCategory((QCPStatisticalBox*)self);
 }
 
-void q_cpstatisticalbox_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPStatisticalBox_OnSelectionCategory((const QCPStatisticalBox*)self, (intptr_t)callback);
+void q_cpstatisticalbox_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPStatisticalBox_OnSelectionCategory((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
 void q_cpstatisticalbox_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -26365,8 +26365,8 @@ void q_cpstatisticalbox_super_apply_default_antialiasing_hint(const void* self, 
     QCPStatisticalBox_SuperApplyDefaultAntialiasingHint((QCPStatisticalBox*)self, (QCPPainter*)painter);
 }
 
-void q_cpstatisticalbox_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPStatisticalBox_OnApplyDefaultAntialiasingHint((const QCPStatisticalBox*)self, (intptr_t)callback);
+void q_cpstatisticalbox_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPStatisticalBox_OnApplyDefaultAntialiasingHint((QCPStatisticalBox*)self, (intptr_t)callback);
 }
 
 void q_cpstatisticalbox_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -26721,7 +26721,7 @@ const QMetaObject* q_cpcolormap_meta_object(const void* self) {
     return QCPColorMap_MetaObject((QCPColorMap*)self);
 }
 
-void q_cpcolormap_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpcolormap_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPColorMap_OnMetaObject((QCPColorMap*)self, (intptr_t)callback);
 }
 
@@ -26828,7 +26828,7 @@ double q_cpcolormap_select_test(const void* self, const void* pos, bool onlySele
     return QCPColorMap_SelectTest((QCPColorMap*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpcolormap_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpcolormap_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPColorMap_OnSelectTest((QCPColorMap*)self, (intptr_t)callback);
 }
 
@@ -26840,7 +26840,7 @@ QCPRange* q_cpcolormap_get_key_range(const void* self, bool* foundRange, int32_t
     return QCPColorMap_GetKeyRange((QCPColorMap*)self, (bool*)foundRange, inSignDomain);
 }
 
-void q_cpcolormap_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
+void q_cpcolormap_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
     QCPColorMap_OnGetKeyRange((QCPColorMap*)self, (intptr_t)callback);
 }
 
@@ -26852,7 +26852,7 @@ QCPRange* q_cpcolormap_get_value_range(const void* self, bool* foundRange, int32
     return QCPColorMap_GetValueRange((QCPColorMap*)self, (bool*)foundRange, inSignDomain, (QCPRange*)inKeyRange);
 }
 
-void q_cpcolormap_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
+void q_cpcolormap_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
     QCPColorMap_OnGetValueRange((QCPColorMap*)self, (intptr_t)callback);
 }
 
@@ -26912,7 +26912,7 @@ void q_cpcolormap_draw_legend_icon(const void* self, void* painter, const void* 
     QCPColorMap_DrawLegendIcon((QCPColorMap*)self, (QCPPainter*)painter, (QRectF*)rect);
 }
 
-void q_cpcolormap_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*)) {
+void q_cpcolormap_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*)) {
     QCPColorMap_OnDrawLegendIcon((QCPColorMap*)self, (intptr_t)callback);
 }
 
@@ -27398,8 +27398,8 @@ QRect* q_cpcolormap_super_clip_rect(const void* self) {
     return QCPColorMap_SuperClipRect((QCPColorMap*)self);
 }
 
-void q_cpcolormap_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPColorMap_OnClipRect((const QCPColorMap*)self, (intptr_t)callback);
+void q_cpcolormap_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPColorMap_OnClipRect((QCPColorMap*)self, (intptr_t)callback);
 }
 
 int32_t q_cpcolormap_selection_category(const void* self) {
@@ -27410,8 +27410,8 @@ int32_t q_cpcolormap_super_selection_category(const void* self) {
     return QCPColorMap_SuperSelectionCategory((QCPColorMap*)self);
 }
 
-void q_cpcolormap_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPColorMap_OnSelectionCategory((const QCPColorMap*)self, (intptr_t)callback);
+void q_cpcolormap_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPColorMap_OnSelectionCategory((QCPColorMap*)self, (intptr_t)callback);
 }
 
 void q_cpcolormap_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -27422,8 +27422,8 @@ void q_cpcolormap_super_apply_default_antialiasing_hint(const void* self, void* 
     QCPColorMap_SuperApplyDefaultAntialiasingHint((QCPColorMap*)self, (QCPPainter*)painter);
 }
 
-void q_cpcolormap_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPColorMap_OnApplyDefaultAntialiasingHint((const QCPColorMap*)self, (intptr_t)callback);
+void q_cpcolormap_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPColorMap_OnApplyDefaultAntialiasingHint((QCPColorMap*)self, (intptr_t)callback);
 }
 
 void q_cpcolormap_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -27758,7 +27758,7 @@ const QMetaObject* q_cpfinancial_meta_object(const void* self) {
     return QCPFinancial_MetaObject((QCPFinancial*)self);
 }
 
-void q_cpfinancial_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpfinancial_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPFinancial_OnMetaObject((QCPFinancial*)self, (intptr_t)callback);
 }
 
@@ -27877,7 +27877,7 @@ QCPDataSelection* q_cpfinancial_select_test_rect(const void* self, const void* r
     return QCPFinancial_SelectTestRect((QCPFinancial*)self, (QRectF*)rect, onlySelectable);
 }
 
-void q_cpfinancial_on_select_test_rect(const void* self, QCPDataSelection* (*callback)(const void*, const void*, bool)) {
+void q_cpfinancial_on_select_test_rect(void* self, QCPDataSelection* (*callback)(const void*, const void*, bool)) {
     QCPFinancial_OnSelectTestRect((QCPFinancial*)self, (intptr_t)callback);
 }
 
@@ -27889,7 +27889,7 @@ double q_cpfinancial_select_test(const void* self, const void* pos, bool onlySel
     return QCPFinancial_SelectTest((QCPFinancial*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpfinancial_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpfinancial_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPFinancial_OnSelectTest((QCPFinancial*)self, (intptr_t)callback);
 }
 
@@ -27901,7 +27901,7 @@ QCPRange* q_cpfinancial_get_key_range(const void* self, bool* foundRange, int32_
     return QCPFinancial_GetKeyRange((QCPFinancial*)self, (bool*)foundRange, inSignDomain);
 }
 
-void q_cpfinancial_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
+void q_cpfinancial_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
     QCPFinancial_OnGetKeyRange((QCPFinancial*)self, (intptr_t)callback);
 }
 
@@ -27913,7 +27913,7 @@ QCPRange* q_cpfinancial_get_value_range(const void* self, bool* foundRange, int3
     return QCPFinancial_GetValueRange((QCPFinancial*)self, (bool*)foundRange, inSignDomain, (QCPRange*)inKeyRange);
 }
 
-void q_cpfinancial_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
+void q_cpfinancial_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
     QCPFinancial_OnGetValueRange((QCPFinancial*)self, (intptr_t)callback);
 }
 
@@ -27937,7 +27937,7 @@ void q_cpfinancial_draw_legend_icon(const void* self, void* painter, const void*
     QCPFinancial_DrawLegendIcon((QCPFinancial*)self, (QCPPainter*)painter, (QRectF*)rect);
 }
 
-void q_cpfinancial_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*)) {
+void q_cpfinancial_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*)) {
     QCPFinancial_OnDrawLegendIcon((QCPFinancial*)self, (intptr_t)callback);
 }
 
@@ -28407,72 +28407,72 @@ int32_t q_cpfinancial_data_count(const void* self) {
     return QCPFinancial_DataCount((QCPFinancial*)self);
 }
 
-void q_cpfinancial_on_data_count(const void* self, int32_t (*callback)(const void*)) {
-    QCPFinancial_OnDataCount((const QCPFinancial*)self, (intptr_t)callback);
+void q_cpfinancial_on_data_count(void* self, int32_t (*callback)(const void*)) {
+    QCPFinancial_OnDataCount((QCPFinancial*)self, (intptr_t)callback);
 }
 
 double q_cpfinancial_data_main_key(const void* self, int index) {
     return QCPFinancial_DataMainKey((QCPFinancial*)self, index);
 }
 
-void q_cpfinancial_on_data_main_key(const void* self, double (*callback)(const void*, int)) {
-    QCPFinancial_OnDataMainKey((const QCPFinancial*)self, (intptr_t)callback);
+void q_cpfinancial_on_data_main_key(void* self, double (*callback)(const void*, int)) {
+    QCPFinancial_OnDataMainKey((QCPFinancial*)self, (intptr_t)callback);
 }
 
 double q_cpfinancial_data_sort_key(const void* self, int index) {
     return QCPFinancial_DataSortKey((QCPFinancial*)self, index);
 }
 
-void q_cpfinancial_on_data_sort_key(const void* self, double (*callback)(const void*, int)) {
-    QCPFinancial_OnDataSortKey((const QCPFinancial*)self, (intptr_t)callback);
+void q_cpfinancial_on_data_sort_key(void* self, double (*callback)(const void*, int)) {
+    QCPFinancial_OnDataSortKey((QCPFinancial*)self, (intptr_t)callback);
 }
 
 double q_cpfinancial_data_main_value(const void* self, int index) {
     return QCPFinancial_DataMainValue((QCPFinancial*)self, index);
 }
 
-void q_cpfinancial_on_data_main_value(const void* self, double (*callback)(const void*, int)) {
-    QCPFinancial_OnDataMainValue((const QCPFinancial*)self, (intptr_t)callback);
+void q_cpfinancial_on_data_main_value(void* self, double (*callback)(const void*, int)) {
+    QCPFinancial_OnDataMainValue((QCPFinancial*)self, (intptr_t)callback);
 }
 
 QCPRange* q_cpfinancial_data_value_range(const void* self, int index) {
     return QCPFinancial_DataValueRange((QCPFinancial*)self, index);
 }
 
-void q_cpfinancial_on_data_value_range(const void* self, QCPRange* (*callback)(const void*, int)) {
-    QCPFinancial_OnDataValueRange((const QCPFinancial*)self, (intptr_t)callback);
+void q_cpfinancial_on_data_value_range(void* self, QCPRange* (*callback)(const void*, int)) {
+    QCPFinancial_OnDataValueRange((QCPFinancial*)self, (intptr_t)callback);
 }
 
 QPointF* q_cpfinancial_data_pixel_position(const void* self, int index) {
     return QCPFinancial_DataPixelPosition((QCPFinancial*)self, index);
 }
 
-void q_cpfinancial_on_data_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
-    QCPFinancial_OnDataPixelPosition((const QCPFinancial*)self, (intptr_t)callback);
+void q_cpfinancial_on_data_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
+    QCPFinancial_OnDataPixelPosition((QCPFinancial*)self, (intptr_t)callback);
 }
 
 bool q_cpfinancial_sort_key_is_main_key(const void* self) {
     return QCPFinancial_SortKeyIsMainKey((QCPFinancial*)self);
 }
 
-void q_cpfinancial_on_sort_key_is_main_key(const void* self, bool (*callback)(const void*)) {
-    QCPFinancial_OnSortKeyIsMainKey((const QCPFinancial*)self, (intptr_t)callback);
+void q_cpfinancial_on_sort_key_is_main_key(void* self, bool (*callback)(const void*)) {
+    QCPFinancial_OnSortKeyIsMainKey((QCPFinancial*)self, (intptr_t)callback);
 }
 
 int32_t q_cpfinancial_find_begin(const void* self, double sortKey, bool expandedRange) {
     return QCPFinancial_FindBegin((QCPFinancial*)self, sortKey, expandedRange);
 }
 
-void q_cpfinancial_on_find_begin(const void* self, int32_t (*callback)(const void*, double, bool)) {
-    QCPFinancial_OnFindBegin((const QCPFinancial*)self, (intptr_t)callback);
+void q_cpfinancial_on_find_begin(void* self, int32_t (*callback)(const void*, double, bool)) {
+    QCPFinancial_OnFindBegin((QCPFinancial*)self, (intptr_t)callback);
 }
 
 int32_t q_cpfinancial_find_end(const void* self, double sortKey, bool expandedRange) {
     return QCPFinancial_FindEnd((QCPFinancial*)self, sortKey, expandedRange);
 }
 
-void q_cpfinancial_on_find_end(const void* self, int32_t (*callback)(const void*, double, bool)) {
-    QCPFinancial_OnFindEnd((const QCPFinancial*)self, (intptr_t)callback);
+void q_cpfinancial_on_find_end(void* self, int32_t (*callback)(const void*, double, bool)) {
+    QCPFinancial_OnFindEnd((QCPFinancial*)self, (intptr_t)callback);
 }
 
 QCPPlottableInterface1D* q_cpfinancial_interface1_d(void* self) {
@@ -28495,8 +28495,8 @@ QRect* q_cpfinancial_super_clip_rect(const void* self) {
     return QCPFinancial_SuperClipRect((QCPFinancial*)self);
 }
 
-void q_cpfinancial_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPFinancial_OnClipRect((const QCPFinancial*)self, (intptr_t)callback);
+void q_cpfinancial_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPFinancial_OnClipRect((QCPFinancial*)self, (intptr_t)callback);
 }
 
 int32_t q_cpfinancial_selection_category(const void* self) {
@@ -28507,8 +28507,8 @@ int32_t q_cpfinancial_super_selection_category(const void* self) {
     return QCPFinancial_SuperSelectionCategory((QCPFinancial*)self);
 }
 
-void q_cpfinancial_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPFinancial_OnSelectionCategory((const QCPFinancial*)self, (intptr_t)callback);
+void q_cpfinancial_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPFinancial_OnSelectionCategory((QCPFinancial*)self, (intptr_t)callback);
 }
 
 void q_cpfinancial_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -28519,8 +28519,8 @@ void q_cpfinancial_super_apply_default_antialiasing_hint(const void* self, void*
     QCPFinancial_SuperApplyDefaultAntialiasingHint((QCPFinancial*)self, (QCPPainter*)painter);
 }
 
-void q_cpfinancial_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPFinancial_OnApplyDefaultAntialiasingHint((const QCPFinancial*)self, (intptr_t)callback);
+void q_cpfinancial_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPFinancial_OnApplyDefaultAntialiasingHint((QCPFinancial*)self, (intptr_t)callback);
 }
 
 void q_cpfinancial_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -28807,11 +28807,11 @@ QCPErrorBars* q_cperrorbars_new(void* keyAxis, void* valueAxis) {
     return QCPErrorBars_New((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
 }
 
-QCPPlottableInterface1D* q_cperrorbars_as_q_c_p_plottable_interface1_d(void* self) {
+QCPPlottableInterface1D* q_cperrorbars_as_q_c_p_plottable_interface1_d(const void* self) {
     return QCPErrorBars_AsQCPPlottableInterface1D((QCPErrorBars*)self);
 }
 
-QCPErrorBars* q_cperrorbars_from_q_c_p_plottable_interface1_d(void* _qcpplottableinterface1d) {
+QCPErrorBars* q_cperrorbars_from_q_c_p_plottable_interface1_d(const void* _qcpplottableinterface1d) {
     return (QCPErrorBars*)QCPErrorBars_FromQCPPlottableInterface1D((QCPPlottableInterface1D*)_qcpplottableinterface1d);
 }
 
@@ -28819,7 +28819,7 @@ const QMetaObject* q_cperrorbars_meta_object(const void* self) {
     return QCPErrorBars_MetaObject((QCPErrorBars*)self);
 }
 
-void q_cperrorbars_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cperrorbars_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPErrorBars_OnMetaObject((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -28918,7 +28918,7 @@ int32_t q_cperrorbars_data_count(const void* self) {
     return QCPErrorBars_DataCount((QCPErrorBars*)self);
 }
 
-void q_cperrorbars_on_data_count(const void* self, int32_t (*callback)(const void*)) {
+void q_cperrorbars_on_data_count(void* self, int32_t (*callback)(const void*)) {
     QCPErrorBars_OnDataCount((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -28930,7 +28930,7 @@ double q_cperrorbars_data_main_key(const void* self, int index) {
     return QCPErrorBars_DataMainKey((QCPErrorBars*)self, index);
 }
 
-void q_cperrorbars_on_data_main_key(const void* self, double (*callback)(const void*, int)) {
+void q_cperrorbars_on_data_main_key(void* self, double (*callback)(const void*, int)) {
     QCPErrorBars_OnDataMainKey((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -28942,7 +28942,7 @@ double q_cperrorbars_data_sort_key(const void* self, int index) {
     return QCPErrorBars_DataSortKey((QCPErrorBars*)self, index);
 }
 
-void q_cperrorbars_on_data_sort_key(const void* self, double (*callback)(const void*, int)) {
+void q_cperrorbars_on_data_sort_key(void* self, double (*callback)(const void*, int)) {
     QCPErrorBars_OnDataSortKey((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -28954,7 +28954,7 @@ double q_cperrorbars_data_main_value(const void* self, int index) {
     return QCPErrorBars_DataMainValue((QCPErrorBars*)self, index);
 }
 
-void q_cperrorbars_on_data_main_value(const void* self, double (*callback)(const void*, int)) {
+void q_cperrorbars_on_data_main_value(void* self, double (*callback)(const void*, int)) {
     QCPErrorBars_OnDataMainValue((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -28966,7 +28966,7 @@ QCPRange* q_cperrorbars_data_value_range(const void* self, int index) {
     return QCPErrorBars_DataValueRange((QCPErrorBars*)self, index);
 }
 
-void q_cperrorbars_on_data_value_range(const void* self, QCPRange* (*callback)(const void*, int)) {
+void q_cperrorbars_on_data_value_range(void* self, QCPRange* (*callback)(const void*, int)) {
     QCPErrorBars_OnDataValueRange((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -28978,7 +28978,7 @@ QPointF* q_cperrorbars_data_pixel_position(const void* self, int index) {
     return QCPErrorBars_DataPixelPosition((QCPErrorBars*)self, index);
 }
 
-void q_cperrorbars_on_data_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
+void q_cperrorbars_on_data_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
     QCPErrorBars_OnDataPixelPosition((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -28990,7 +28990,7 @@ bool q_cperrorbars_sort_key_is_main_key(const void* self) {
     return QCPErrorBars_SortKeyIsMainKey((QCPErrorBars*)self);
 }
 
-void q_cperrorbars_on_sort_key_is_main_key(const void* self, bool (*callback)(const void*)) {
+void q_cperrorbars_on_sort_key_is_main_key(void* self, bool (*callback)(const void*)) {
     QCPErrorBars_OnSortKeyIsMainKey((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -29002,7 +29002,7 @@ QCPDataSelection* q_cperrorbars_select_test_rect(const void* self, const void* r
     return QCPErrorBars_SelectTestRect((QCPErrorBars*)self, (QRectF*)rect, onlySelectable);
 }
 
-void q_cperrorbars_on_select_test_rect(const void* self, QCPDataSelection* (*callback)(const void*, const void*, bool)) {
+void q_cperrorbars_on_select_test_rect(void* self, QCPDataSelection* (*callback)(const void*, const void*, bool)) {
     QCPErrorBars_OnSelectTestRect((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -29014,7 +29014,7 @@ int32_t q_cperrorbars_find_begin(const void* self, double sortKey, bool expanded
     return QCPErrorBars_FindBegin((QCPErrorBars*)self, sortKey, expandedRange);
 }
 
-void q_cperrorbars_on_find_begin(const void* self, int32_t (*callback)(const void*, double, bool)) {
+void q_cperrorbars_on_find_begin(void* self, int32_t (*callback)(const void*, double, bool)) {
     QCPErrorBars_OnFindBegin((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -29026,7 +29026,7 @@ int32_t q_cperrorbars_find_end(const void* self, double sortKey, bool expandedRa
     return QCPErrorBars_FindEnd((QCPErrorBars*)self, sortKey, expandedRange);
 }
 
-void q_cperrorbars_on_find_end(const void* self, int32_t (*callback)(const void*, double, bool)) {
+void q_cperrorbars_on_find_end(void* self, int32_t (*callback)(const void*, double, bool)) {
     QCPErrorBars_OnFindEnd((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -29038,7 +29038,7 @@ double q_cperrorbars_select_test(const void* self, const void* pos, bool onlySel
     return QCPErrorBars_SelectTest((QCPErrorBars*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cperrorbars_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cperrorbars_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPErrorBars_OnSelectTest((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -29074,7 +29074,7 @@ void q_cperrorbars_draw_legend_icon(const void* self, void* painter, const void*
     QCPErrorBars_DrawLegendIcon((QCPErrorBars*)self, (QCPPainter*)painter, (QRectF*)rect);
 }
 
-void q_cperrorbars_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*)) {
+void q_cperrorbars_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*)) {
     QCPErrorBars_OnDrawLegendIcon((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -29086,7 +29086,7 @@ QCPRange* q_cperrorbars_get_key_range(const void* self, bool* foundRange, int32_
     return QCPErrorBars_GetKeyRange((QCPErrorBars*)self, (bool*)foundRange, inSignDomain);
 }
 
-void q_cperrorbars_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
+void q_cperrorbars_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
     QCPErrorBars_OnGetKeyRange((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -29098,7 +29098,7 @@ QCPRange* q_cperrorbars_get_value_range(const void* self, bool* foundRange, int3
     return QCPErrorBars_GetValueRange((QCPErrorBars*)self, (bool*)foundRange, inSignDomain, (QCPRange*)inKeyRange);
 }
 
-void q_cperrorbars_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
+void q_cperrorbars_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
     QCPErrorBars_OnGetValueRange((QCPErrorBars*)self, (intptr_t)callback);
 }
 
@@ -29572,8 +29572,8 @@ QRect* q_cperrorbars_super_clip_rect(const void* self) {
     return QCPErrorBars_SuperClipRect((QCPErrorBars*)self);
 }
 
-void q_cperrorbars_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPErrorBars_OnClipRect((const QCPErrorBars*)self, (intptr_t)callback);
+void q_cperrorbars_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPErrorBars_OnClipRect((QCPErrorBars*)self, (intptr_t)callback);
 }
 
 int32_t q_cperrorbars_selection_category(const void* self) {
@@ -29584,8 +29584,8 @@ int32_t q_cperrorbars_super_selection_category(const void* self) {
     return QCPErrorBars_SuperSelectionCategory((QCPErrorBars*)self);
 }
 
-void q_cperrorbars_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPErrorBars_OnSelectionCategory((const QCPErrorBars*)self, (intptr_t)callback);
+void q_cperrorbars_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPErrorBars_OnSelectionCategory((QCPErrorBars*)self, (intptr_t)callback);
 }
 
 void q_cperrorbars_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -29596,8 +29596,8 @@ void q_cperrorbars_super_apply_default_antialiasing_hint(const void* self, void*
     QCPErrorBars_SuperApplyDefaultAntialiasingHint((QCPErrorBars*)self, (QCPPainter*)painter);
 }
 
-void q_cperrorbars_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPErrorBars_OnApplyDefaultAntialiasingHint((const QCPErrorBars*)self, (intptr_t)callback);
+void q_cperrorbars_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPErrorBars_OnApplyDefaultAntialiasingHint((QCPErrorBars*)self, (intptr_t)callback);
 }
 
 void q_cperrorbars_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -29836,7 +29836,7 @@ const QMetaObject* q_cpitemstraightline_meta_object(const void* self) {
     return QCPItemStraightLine_MetaObject((QCPItemStraightLine*)self);
 }
 
-void q_cpitemstraightline_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpitemstraightline_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPItemStraightLine_OnMetaObject((QCPItemStraightLine*)self, (intptr_t)callback);
 }
 
@@ -29895,7 +29895,7 @@ double q_cpitemstraightline_select_test(const void* self, const void* pos, bool 
     return QCPItemStraightLine_SelectTest((QCPItemStraightLine*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpitemstraightline_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpitemstraightline_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPItemStraightLine_OnSelectTest((QCPItemStraightLine*)self, (intptr_t)callback);
 }
 
@@ -30280,8 +30280,8 @@ int32_t q_cpitemstraightline_super_selection_category(const void* self) {
     return QCPItemStraightLine_SuperSelectionCategory((QCPItemStraightLine*)self);
 }
 
-void q_cpitemstraightline_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPItemStraightLine_OnSelectionCategory((const QCPItemStraightLine*)self, (intptr_t)callback);
+void q_cpitemstraightline_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPItemStraightLine_OnSelectionCategory((QCPItemStraightLine*)self, (intptr_t)callback);
 }
 
 QRect* q_cpitemstraightline_clip_rect(const void* self) {
@@ -30292,8 +30292,8 @@ QRect* q_cpitemstraightline_super_clip_rect(const void* self) {
     return QCPItemStraightLine_SuperClipRect((QCPItemStraightLine*)self);
 }
 
-void q_cpitemstraightline_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPItemStraightLine_OnClipRect((const QCPItemStraightLine*)self, (intptr_t)callback);
+void q_cpitemstraightline_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPItemStraightLine_OnClipRect((QCPItemStraightLine*)self, (intptr_t)callback);
 }
 
 void q_cpitemstraightline_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -30304,8 +30304,8 @@ void q_cpitemstraightline_super_apply_default_antialiasing_hint(const void* self
     QCPItemStraightLine_SuperApplyDefaultAntialiasingHint((QCPItemStraightLine*)self, (QCPPainter*)painter);
 }
 
-void q_cpitemstraightline_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPItemStraightLine_OnApplyDefaultAntialiasingHint((const QCPItemStraightLine*)self, (intptr_t)callback);
+void q_cpitemstraightline_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPItemStraightLine_OnApplyDefaultAntialiasingHint((QCPItemStraightLine*)self, (intptr_t)callback);
 }
 
 void q_cpitemstraightline_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -30340,8 +30340,8 @@ QPointF* q_cpitemstraightline_super_anchor_pixel_position(const void* self, int 
     return QCPItemStraightLine_SuperAnchorPixelPosition((QCPItemStraightLine*)self, anchorId);
 }
 
-void q_cpitemstraightline_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
-    QCPItemStraightLine_OnAnchorPixelPosition((const QCPItemStraightLine*)self, (intptr_t)callback);
+void q_cpitemstraightline_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
+    QCPItemStraightLine_OnAnchorPixelPosition((QCPItemStraightLine*)self, (intptr_t)callback);
 }
 
 void q_cpitemstraightline_parent_plot_initialized(void* self, void* parentPlot) {
@@ -30560,7 +30560,7 @@ const QMetaObject* q_cpitemline_meta_object(const void* self) {
     return QCPItemLine_MetaObject((QCPItemLine*)self);
 }
 
-void q_cpitemline_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpitemline_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPItemLine_OnMetaObject((QCPItemLine*)self, (intptr_t)callback);
 }
 
@@ -30635,7 +30635,7 @@ double q_cpitemline_select_test(const void* self, const void* pos, bool onlySele
     return QCPItemLine_SelectTest((QCPItemLine*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpitemline_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpitemline_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPItemLine_OnSelectTest((QCPItemLine*)self, (intptr_t)callback);
 }
 
@@ -31020,8 +31020,8 @@ int32_t q_cpitemline_super_selection_category(const void* self) {
     return QCPItemLine_SuperSelectionCategory((QCPItemLine*)self);
 }
 
-void q_cpitemline_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPItemLine_OnSelectionCategory((const QCPItemLine*)self, (intptr_t)callback);
+void q_cpitemline_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPItemLine_OnSelectionCategory((QCPItemLine*)self, (intptr_t)callback);
 }
 
 QRect* q_cpitemline_clip_rect(const void* self) {
@@ -31032,8 +31032,8 @@ QRect* q_cpitemline_super_clip_rect(const void* self) {
     return QCPItemLine_SuperClipRect((QCPItemLine*)self);
 }
 
-void q_cpitemline_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPItemLine_OnClipRect((const QCPItemLine*)self, (intptr_t)callback);
+void q_cpitemline_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPItemLine_OnClipRect((QCPItemLine*)self, (intptr_t)callback);
 }
 
 void q_cpitemline_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -31044,8 +31044,8 @@ void q_cpitemline_super_apply_default_antialiasing_hint(const void* self, void* 
     QCPItemLine_SuperApplyDefaultAntialiasingHint((QCPItemLine*)self, (QCPPainter*)painter);
 }
 
-void q_cpitemline_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPItemLine_OnApplyDefaultAntialiasingHint((const QCPItemLine*)self, (intptr_t)callback);
+void q_cpitemline_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPItemLine_OnApplyDefaultAntialiasingHint((QCPItemLine*)self, (intptr_t)callback);
 }
 
 void q_cpitemline_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -31080,8 +31080,8 @@ QPointF* q_cpitemline_super_anchor_pixel_position(const void* self, int anchorId
     return QCPItemLine_SuperAnchorPixelPosition((QCPItemLine*)self, anchorId);
 }
 
-void q_cpitemline_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
-    QCPItemLine_OnAnchorPixelPosition((const QCPItemLine*)self, (intptr_t)callback);
+void q_cpitemline_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
+    QCPItemLine_OnAnchorPixelPosition((QCPItemLine*)self, (intptr_t)callback);
 }
 
 void q_cpitemline_parent_plot_initialized(void* self, void* parentPlot) {
@@ -31300,7 +31300,7 @@ const QMetaObject* q_cpitemcurve_meta_object(const void* self) {
     return QCPItemCurve_MetaObject((QCPItemCurve*)self);
 }
 
-void q_cpitemcurve_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpitemcurve_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPItemCurve_OnMetaObject((QCPItemCurve*)self, (intptr_t)callback);
 }
 
@@ -31375,7 +31375,7 @@ double q_cpitemcurve_select_test(const void* self, const void* pos, bool onlySel
     return QCPItemCurve_SelectTest((QCPItemCurve*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpitemcurve_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpitemcurve_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPItemCurve_OnSelectTest((QCPItemCurve*)self, (intptr_t)callback);
 }
 
@@ -31764,8 +31764,8 @@ int32_t q_cpitemcurve_super_selection_category(const void* self) {
     return QCPItemCurve_SuperSelectionCategory((QCPItemCurve*)self);
 }
 
-void q_cpitemcurve_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPItemCurve_OnSelectionCategory((const QCPItemCurve*)self, (intptr_t)callback);
+void q_cpitemcurve_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPItemCurve_OnSelectionCategory((QCPItemCurve*)self, (intptr_t)callback);
 }
 
 QRect* q_cpitemcurve_clip_rect(const void* self) {
@@ -31776,8 +31776,8 @@ QRect* q_cpitemcurve_super_clip_rect(const void* self) {
     return QCPItemCurve_SuperClipRect((QCPItemCurve*)self);
 }
 
-void q_cpitemcurve_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPItemCurve_OnClipRect((const QCPItemCurve*)self, (intptr_t)callback);
+void q_cpitemcurve_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPItemCurve_OnClipRect((QCPItemCurve*)self, (intptr_t)callback);
 }
 
 void q_cpitemcurve_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -31788,8 +31788,8 @@ void q_cpitemcurve_super_apply_default_antialiasing_hint(const void* self, void*
     QCPItemCurve_SuperApplyDefaultAntialiasingHint((QCPItemCurve*)self, (QCPPainter*)painter);
 }
 
-void q_cpitemcurve_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPItemCurve_OnApplyDefaultAntialiasingHint((const QCPItemCurve*)self, (intptr_t)callback);
+void q_cpitemcurve_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPItemCurve_OnApplyDefaultAntialiasingHint((QCPItemCurve*)self, (intptr_t)callback);
 }
 
 void q_cpitemcurve_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -31824,8 +31824,8 @@ QPointF* q_cpitemcurve_super_anchor_pixel_position(const void* self, int anchorI
     return QCPItemCurve_SuperAnchorPixelPosition((QCPItemCurve*)self, anchorId);
 }
 
-void q_cpitemcurve_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
-    QCPItemCurve_OnAnchorPixelPosition((const QCPItemCurve*)self, (intptr_t)callback);
+void q_cpitemcurve_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
+    QCPItemCurve_OnAnchorPixelPosition((QCPItemCurve*)self, (intptr_t)callback);
 }
 
 void q_cpitemcurve_parent_plot_initialized(void* self, void* parentPlot) {
@@ -32044,7 +32044,7 @@ const QMetaObject* q_cpitemrect_meta_object(const void* self) {
     return QCPItemRect_MetaObject((QCPItemRect*)self);
 }
 
-void q_cpitemrect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpitemrect_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPItemRect_OnMetaObject((QCPItemRect*)self, (intptr_t)callback);
 }
 
@@ -32119,7 +32119,7 @@ double q_cpitemrect_select_test(const void* self, const void* pos, bool onlySele
     return QCPItemRect_SelectTest((QCPItemRect*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpitemrect_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpitemrect_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPItemRect_OnSelectTest((QCPItemRect*)self, (intptr_t)callback);
 }
 
@@ -32175,7 +32175,7 @@ QPointF* q_cpitemrect_anchor_pixel_position(const void* self, int anchorId) {
     return QCPItemRect_AnchorPixelPosition((QCPItemRect*)self, anchorId);
 }
 
-void q_cpitemrect_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
+void q_cpitemrect_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
     QCPItemRect_OnAnchorPixelPosition((QCPItemRect*)self, (intptr_t)callback);
 }
 
@@ -32540,8 +32540,8 @@ int32_t q_cpitemrect_super_selection_category(const void* self) {
     return QCPItemRect_SuperSelectionCategory((QCPItemRect*)self);
 }
 
-void q_cpitemrect_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPItemRect_OnSelectionCategory((const QCPItemRect*)self, (intptr_t)callback);
+void q_cpitemrect_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPItemRect_OnSelectionCategory((QCPItemRect*)self, (intptr_t)callback);
 }
 
 QRect* q_cpitemrect_clip_rect(const void* self) {
@@ -32552,8 +32552,8 @@ QRect* q_cpitemrect_super_clip_rect(const void* self) {
     return QCPItemRect_SuperClipRect((QCPItemRect*)self);
 }
 
-void q_cpitemrect_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPItemRect_OnClipRect((const QCPItemRect*)self, (intptr_t)callback);
+void q_cpitemrect_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPItemRect_OnClipRect((QCPItemRect*)self, (intptr_t)callback);
 }
 
 void q_cpitemrect_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -32564,8 +32564,8 @@ void q_cpitemrect_super_apply_default_antialiasing_hint(const void* self, void* 
     QCPItemRect_SuperApplyDefaultAntialiasingHint((QCPItemRect*)self, (QCPPainter*)painter);
 }
 
-void q_cpitemrect_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPItemRect_OnApplyDefaultAntialiasingHint((const QCPItemRect*)self, (intptr_t)callback);
+void q_cpitemrect_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPItemRect_OnApplyDefaultAntialiasingHint((QCPItemRect*)self, (intptr_t)callback);
 }
 
 void q_cpitemrect_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -32808,7 +32808,7 @@ const QMetaObject* q_cpitemtext_meta_object(const void* self) {
     return QCPItemText_MetaObject((QCPItemText*)self);
 }
 
-void q_cpitemtext_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpitemtext_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPItemText_OnMetaObject((QCPItemText*)self, (intptr_t)callback);
 }
 
@@ -32958,7 +32958,7 @@ double q_cpitemtext_select_test(const void* self, const void* pos, bool onlySele
     return QCPItemText_SelectTest((QCPItemText*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpitemtext_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpitemtext_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPItemText_OnSelectTest((QCPItemText*)self, (intptr_t)callback);
 }
 
@@ -33018,7 +33018,7 @@ QPointF* q_cpitemtext_anchor_pixel_position(const void* self, int anchorId) {
     return QCPItemText_AnchorPixelPosition((QCPItemText*)self, anchorId);
 }
 
-void q_cpitemtext_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
+void q_cpitemtext_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
     QCPItemText_OnAnchorPixelPosition((QCPItemText*)self, (intptr_t)callback);
 }
 
@@ -33391,8 +33391,8 @@ int32_t q_cpitemtext_super_selection_category(const void* self) {
     return QCPItemText_SuperSelectionCategory((QCPItemText*)self);
 }
 
-void q_cpitemtext_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPItemText_OnSelectionCategory((const QCPItemText*)self, (intptr_t)callback);
+void q_cpitemtext_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPItemText_OnSelectionCategory((QCPItemText*)self, (intptr_t)callback);
 }
 
 QRect* q_cpitemtext_clip_rect(const void* self) {
@@ -33403,8 +33403,8 @@ QRect* q_cpitemtext_super_clip_rect(const void* self) {
     return QCPItemText_SuperClipRect((QCPItemText*)self);
 }
 
-void q_cpitemtext_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPItemText_OnClipRect((const QCPItemText*)self, (intptr_t)callback);
+void q_cpitemtext_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPItemText_OnClipRect((QCPItemText*)self, (intptr_t)callback);
 }
 
 void q_cpitemtext_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -33415,8 +33415,8 @@ void q_cpitemtext_super_apply_default_antialiasing_hint(const void* self, void* 
     QCPItemText_SuperApplyDefaultAntialiasingHint((QCPItemText*)self, (QCPPainter*)painter);
 }
 
-void q_cpitemtext_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPItemText_OnApplyDefaultAntialiasingHint((const QCPItemText*)self, (intptr_t)callback);
+void q_cpitemtext_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPItemText_OnApplyDefaultAntialiasingHint((QCPItemText*)self, (intptr_t)callback);
 }
 
 void q_cpitemtext_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -33659,7 +33659,7 @@ const QMetaObject* q_cpitemellipse_meta_object(const void* self) {
     return QCPItemEllipse_MetaObject((QCPItemEllipse*)self);
 }
 
-void q_cpitemellipse_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpitemellipse_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPItemEllipse_OnMetaObject((QCPItemEllipse*)self, (intptr_t)callback);
 }
 
@@ -33734,7 +33734,7 @@ double q_cpitemellipse_select_test(const void* self, const void* pos, bool onlyS
     return QCPItemEllipse_SelectTest((QCPItemEllipse*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpitemellipse_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpitemellipse_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPItemEllipse_OnSelectTest((QCPItemEllipse*)self, (intptr_t)callback);
 }
 
@@ -33802,7 +33802,7 @@ QPointF* q_cpitemellipse_anchor_pixel_position(const void* self, int anchorId) {
     return QCPItemEllipse_AnchorPixelPosition((QCPItemEllipse*)self, anchorId);
 }
 
-void q_cpitemellipse_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
+void q_cpitemellipse_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
     QCPItemEllipse_OnAnchorPixelPosition((QCPItemEllipse*)self, (intptr_t)callback);
 }
 
@@ -34167,8 +34167,8 @@ int32_t q_cpitemellipse_super_selection_category(const void* self) {
     return QCPItemEllipse_SuperSelectionCategory((QCPItemEllipse*)self);
 }
 
-void q_cpitemellipse_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPItemEllipse_OnSelectionCategory((const QCPItemEllipse*)self, (intptr_t)callback);
+void q_cpitemellipse_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPItemEllipse_OnSelectionCategory((QCPItemEllipse*)self, (intptr_t)callback);
 }
 
 QRect* q_cpitemellipse_clip_rect(const void* self) {
@@ -34179,8 +34179,8 @@ QRect* q_cpitemellipse_super_clip_rect(const void* self) {
     return QCPItemEllipse_SuperClipRect((QCPItemEllipse*)self);
 }
 
-void q_cpitemellipse_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPItemEllipse_OnClipRect((const QCPItemEllipse*)self, (intptr_t)callback);
+void q_cpitemellipse_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPItemEllipse_OnClipRect((QCPItemEllipse*)self, (intptr_t)callback);
 }
 
 void q_cpitemellipse_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -34191,8 +34191,8 @@ void q_cpitemellipse_super_apply_default_antialiasing_hint(const void* self, voi
     QCPItemEllipse_SuperApplyDefaultAntialiasingHint((QCPItemEllipse*)self, (QCPPainter*)painter);
 }
 
-void q_cpitemellipse_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPItemEllipse_OnApplyDefaultAntialiasingHint((const QCPItemEllipse*)self, (intptr_t)callback);
+void q_cpitemellipse_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPItemEllipse_OnApplyDefaultAntialiasingHint((QCPItemEllipse*)self, (intptr_t)callback);
 }
 
 void q_cpitemellipse_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -34435,7 +34435,7 @@ const QMetaObject* q_cpitempixmap_meta_object(const void* self) {
     return QCPItemPixmap_MetaObject((QCPItemPixmap*)self);
 }
 
-void q_cpitempixmap_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpitempixmap_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPItemPixmap_OnMetaObject((QCPItemPixmap*)self, (intptr_t)callback);
 }
 
@@ -34518,7 +34518,7 @@ double q_cpitempixmap_select_test(const void* self, const void* pos, bool onlySe
     return QCPItemPixmap_SelectTest((QCPItemPixmap*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpitempixmap_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpitempixmap_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPItemPixmap_OnSelectTest((QCPItemPixmap*)self, (intptr_t)callback);
 }
 
@@ -34574,7 +34574,7 @@ QPointF* q_cpitempixmap_anchor_pixel_position(const void* self, int anchorId) {
     return QCPItemPixmap_AnchorPixelPosition((QCPItemPixmap*)self, anchorId);
 }
 
-void q_cpitempixmap_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
+void q_cpitempixmap_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
     QCPItemPixmap_OnAnchorPixelPosition((QCPItemPixmap*)self, (intptr_t)callback);
 }
 
@@ -34971,8 +34971,8 @@ int32_t q_cpitempixmap_super_selection_category(const void* self) {
     return QCPItemPixmap_SuperSelectionCategory((QCPItemPixmap*)self);
 }
 
-void q_cpitempixmap_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPItemPixmap_OnSelectionCategory((const QCPItemPixmap*)self, (intptr_t)callback);
+void q_cpitempixmap_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPItemPixmap_OnSelectionCategory((QCPItemPixmap*)self, (intptr_t)callback);
 }
 
 QRect* q_cpitempixmap_clip_rect(const void* self) {
@@ -34983,8 +34983,8 @@ QRect* q_cpitempixmap_super_clip_rect(const void* self) {
     return QCPItemPixmap_SuperClipRect((QCPItemPixmap*)self);
 }
 
-void q_cpitempixmap_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPItemPixmap_OnClipRect((const QCPItemPixmap*)self, (intptr_t)callback);
+void q_cpitempixmap_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPItemPixmap_OnClipRect((QCPItemPixmap*)self, (intptr_t)callback);
 }
 
 void q_cpitempixmap_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -34995,8 +34995,8 @@ void q_cpitempixmap_super_apply_default_antialiasing_hint(const void* self, void
     QCPItemPixmap_SuperApplyDefaultAntialiasingHint((QCPItemPixmap*)self, (QCPPainter*)painter);
 }
 
-void q_cpitempixmap_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPItemPixmap_OnApplyDefaultAntialiasingHint((const QCPItemPixmap*)self, (intptr_t)callback);
+void q_cpitempixmap_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPItemPixmap_OnApplyDefaultAntialiasingHint((QCPItemPixmap*)self, (intptr_t)callback);
 }
 
 void q_cpitempixmap_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -35239,7 +35239,7 @@ const QMetaObject* q_cpitemtracer_meta_object(const void* self) {
     return QCPItemTracer_MetaObject((QCPItemTracer*)self);
 }
 
-void q_cpitemtracer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpitemtracer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPItemTracer_OnMetaObject((QCPItemTracer*)self, (intptr_t)callback);
 }
 
@@ -35354,7 +35354,7 @@ double q_cpitemtracer_select_test(const void* self, const void* pos, bool onlySe
     return QCPItemTracer_SelectTest((QCPItemTracer*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpitemtracer_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpitemtracer_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPItemTracer_OnSelectTest((QCPItemTracer*)self, (intptr_t)callback);
 }
 
@@ -35735,8 +35735,8 @@ int32_t q_cpitemtracer_super_selection_category(const void* self) {
     return QCPItemTracer_SuperSelectionCategory((QCPItemTracer*)self);
 }
 
-void q_cpitemtracer_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPItemTracer_OnSelectionCategory((const QCPItemTracer*)self, (intptr_t)callback);
+void q_cpitemtracer_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPItemTracer_OnSelectionCategory((QCPItemTracer*)self, (intptr_t)callback);
 }
 
 QRect* q_cpitemtracer_clip_rect(const void* self) {
@@ -35747,8 +35747,8 @@ QRect* q_cpitemtracer_super_clip_rect(const void* self) {
     return QCPItemTracer_SuperClipRect((QCPItemTracer*)self);
 }
 
-void q_cpitemtracer_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPItemTracer_OnClipRect((const QCPItemTracer*)self, (intptr_t)callback);
+void q_cpitemtracer_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPItemTracer_OnClipRect((QCPItemTracer*)self, (intptr_t)callback);
 }
 
 void q_cpitemtracer_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -35759,8 +35759,8 @@ void q_cpitemtracer_super_apply_default_antialiasing_hint(const void* self, void
     QCPItemTracer_SuperApplyDefaultAntialiasingHint((QCPItemTracer*)self, (QCPPainter*)painter);
 }
 
-void q_cpitemtracer_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPItemTracer_OnApplyDefaultAntialiasingHint((const QCPItemTracer*)self, (intptr_t)callback);
+void q_cpitemtracer_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPItemTracer_OnApplyDefaultAntialiasingHint((QCPItemTracer*)self, (intptr_t)callback);
 }
 
 void q_cpitemtracer_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -35795,8 +35795,8 @@ QPointF* q_cpitemtracer_super_anchor_pixel_position(const void* self, int anchor
     return QCPItemTracer_SuperAnchorPixelPosition((QCPItemTracer*)self, anchorId);
 }
 
-void q_cpitemtracer_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
-    QCPItemTracer_OnAnchorPixelPosition((const QCPItemTracer*)self, (intptr_t)callback);
+void q_cpitemtracer_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
+    QCPItemTracer_OnAnchorPixelPosition((QCPItemTracer*)self, (intptr_t)callback);
 }
 
 void q_cpitemtracer_parent_plot_initialized(void* self, void* parentPlot) {
@@ -36015,7 +36015,7 @@ const QMetaObject* q_cpitembracket_meta_object(const void* self) {
     return QCPItemBracket_MetaObject((QCPItemBracket*)self);
 }
 
-void q_cpitembracket_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cpitembracket_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPItemBracket_OnMetaObject((QCPItemBracket*)self, (intptr_t)callback);
 }
 
@@ -36090,7 +36090,7 @@ double q_cpitembracket_select_test(const void* self, const void* pos, bool onlyS
     return QCPItemBracket_SelectTest((QCPItemBracket*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cpitembracket_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cpitembracket_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPItemBracket_OnSelectTest((QCPItemBracket*)self, (intptr_t)callback);
 }
 
@@ -36126,7 +36126,7 @@ QPointF* q_cpitembracket_anchor_pixel_position(const void* self, int anchorId) {
     return QCPItemBracket_AnchorPixelPosition((QCPItemBracket*)self, anchorId);
 }
 
-void q_cpitembracket_on_anchor_pixel_position(const void* self, QPointF* (*callback)(const void*, int)) {
+void q_cpitembracket_on_anchor_pixel_position(void* self, QPointF* (*callback)(const void*, int)) {
     QCPItemBracket_OnAnchorPixelPosition((QCPItemBracket*)self, (intptr_t)callback);
 }
 
@@ -36487,8 +36487,8 @@ int32_t q_cpitembracket_super_selection_category(const void* self) {
     return QCPItemBracket_SuperSelectionCategory((QCPItemBracket*)self);
 }
 
-void q_cpitembracket_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPItemBracket_OnSelectionCategory((const QCPItemBracket*)self, (intptr_t)callback);
+void q_cpitembracket_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPItemBracket_OnSelectionCategory((QCPItemBracket*)self, (intptr_t)callback);
 }
 
 QRect* q_cpitembracket_clip_rect(const void* self) {
@@ -36499,8 +36499,8 @@ QRect* q_cpitembracket_super_clip_rect(const void* self) {
     return QCPItemBracket_SuperClipRect((QCPItemBracket*)self);
 }
 
-void q_cpitembracket_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPItemBracket_OnClipRect((const QCPItemBracket*)self, (intptr_t)callback);
+void q_cpitembracket_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPItemBracket_OnClipRect((QCPItemBracket*)self, (intptr_t)callback);
 }
 
 void q_cpitembracket_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -36511,8 +36511,8 @@ void q_cpitembracket_super_apply_default_antialiasing_hint(const void* self, voi
     QCPItemBracket_SuperApplyDefaultAntialiasingHint((QCPItemBracket*)self, (QCPPainter*)painter);
 }
 
-void q_cpitembracket_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPItemBracket_OnApplyDefaultAntialiasingHint((const QCPItemBracket*)self, (intptr_t)callback);
+void q_cpitembracket_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPItemBracket_OnApplyDefaultAntialiasingHint((QCPItemBracket*)self, (intptr_t)callback);
 }
 
 void q_cpitembracket_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -36755,7 +36755,7 @@ const QMetaObject* q_cppolaraxisradial_meta_object(const void* self) {
     return QCPPolarAxisRadial_MetaObject((QCPPolarAxisRadial*)self);
 }
 
-void q_cppolaraxisradial_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cppolaraxisradial_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPPolarAxisRadial_OnMetaObject((QCPPolarAxisRadial*)self, (intptr_t)callback);
 }
 
@@ -37163,7 +37163,7 @@ double q_cppolaraxisradial_select_test(const void* self, const void* pos, bool o
     return QCPPolarAxisRadial_SelectTest((QCPPolarAxisRadial*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cppolaraxisradial_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cppolaraxisradial_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPPolarAxisRadial_OnSelectTest((QCPPolarAxisRadial*)self, (intptr_t)callback);
 }
 
@@ -37251,7 +37251,7 @@ void q_cppolaraxisradial_apply_default_antialiasing_hint(const void* self, void*
     QCPPolarAxisRadial_ApplyDefaultAntialiasingHint((QCPPolarAxisRadial*)self, (QCPPainter*)painter);
 }
 
-void q_cppolaraxisradial_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cppolaraxisradial_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPPolarAxisRadial_OnApplyDefaultAntialiasingHint((QCPPolarAxisRadial*)self, (intptr_t)callback);
 }
 
@@ -37275,7 +37275,7 @@ int32_t q_cppolaraxisradial_selection_category(const void* self) {
     return QCPPolarAxisRadial_SelectionCategory((QCPPolarAxisRadial*)self);
 }
 
-void q_cppolaraxisradial_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
+void q_cppolaraxisradial_on_selection_category(void* self, int32_t (*callback)(const void*)) {
     QCPPolarAxisRadial_OnSelectionCategory((QCPPolarAxisRadial*)self, (intptr_t)callback);
 }
 
@@ -37694,8 +37694,8 @@ QRect* q_cppolaraxisradial_super_clip_rect(const void* self) {
     return QCPPolarAxisRadial_SuperClipRect((QCPPolarAxisRadial*)self);
 }
 
-void q_cppolaraxisradial_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPPolarAxisRadial_OnClipRect((const QCPPolarAxisRadial*)self, (intptr_t)callback);
+void q_cppolaraxisradial_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPPolarAxisRadial_OnClipRect((QCPPolarAxisRadial*)self, (intptr_t)callback);
 }
 
 void q_cppolaraxisradial_mouse_double_click_event(void* self, void* event, const void* details) {
@@ -37842,7 +37842,7 @@ const QMetaObject* q_cppolaraxisangular_meta_object(const void* self) {
     return QCPPolarAxisAngular_MetaObject((QCPPolarAxisAngular*)self);
 }
 
-void q_cppolaraxisangular_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cppolaraxisangular_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPPolarAxisAngular_OnMetaObject((QCPPolarAxisAngular*)self, (intptr_t)callback);
 }
 
@@ -38265,7 +38265,7 @@ double q_cppolaraxisangular_select_test(const void* self, const void* pos, bool 
     return QCPPolarAxisAngular_SelectTest((QCPPolarAxisAngular*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cppolaraxisangular_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cppolaraxisangular_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPPolarAxisAngular_OnSelectTest((QCPPolarAxisAngular*)self, (intptr_t)callback);
 }
 
@@ -38290,7 +38290,7 @@ libqt_list /* of QCPLayoutElement* */ q_cppolaraxisangular_elements(const void* 
     return _arr;
 }
 
-void q_cppolaraxisangular_on_elements(const void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
+void q_cppolaraxisangular_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
     QCPPolarAxisAngular_OnElements((QCPPolarAxisAngular*)self, (intptr_t)callback);
 }
 
@@ -38456,7 +38456,7 @@ void q_cppolaraxisangular_apply_default_antialiasing_hint(const void* self, void
     QCPPolarAxisAngular_ApplyDefaultAntialiasingHint((QCPPolarAxisAngular*)self, (QCPPainter*)painter);
 }
 
-void q_cppolaraxisangular_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cppolaraxisangular_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPPolarAxisAngular_OnApplyDefaultAntialiasingHint((QCPPolarAxisAngular*)self, (intptr_t)callback);
 }
 
@@ -38480,7 +38480,7 @@ int32_t q_cppolaraxisangular_selection_category(const void* self) {
     return QCPPolarAxisAngular_SelectionCategory((QCPPolarAxisAngular*)self);
 }
 
-void q_cppolaraxisangular_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
+void q_cppolaraxisangular_on_selection_category(void* self, int32_t (*callback)(const void*)) {
     QCPPolarAxisAngular_OnSelectionCategory((QCPPolarAxisAngular*)self, (intptr_t)callback);
 }
 
@@ -38969,8 +38969,8 @@ QSize* q_cppolaraxisangular_super_minimum_outer_size_hint(const void* self) {
     return QCPPolarAxisAngular_SuperMinimumOuterSizeHint((QCPPolarAxisAngular*)self);
 }
 
-void q_cppolaraxisangular_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPPolarAxisAngular_OnMinimumOuterSizeHint((const QCPPolarAxisAngular*)self, (intptr_t)callback);
+void q_cppolaraxisangular_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPPolarAxisAngular_OnMinimumOuterSizeHint((QCPPolarAxisAngular*)self, (intptr_t)callback);
 }
 
 QSize* q_cppolaraxisangular_maximum_outer_size_hint(const void* self) {
@@ -38981,8 +38981,8 @@ QSize* q_cppolaraxisangular_super_maximum_outer_size_hint(const void* self) {
     return QCPPolarAxisAngular_SuperMaximumOuterSizeHint((QCPPolarAxisAngular*)self);
 }
 
-void q_cppolaraxisangular_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPPolarAxisAngular_OnMaximumOuterSizeHint((const QCPPolarAxisAngular*)self, (intptr_t)callback);
+void q_cppolaraxisangular_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPPolarAxisAngular_OnMaximumOuterSizeHint((QCPPolarAxisAngular*)self, (intptr_t)callback);
 }
 
 int32_t q_cppolaraxisangular_calculate_auto_margin(void* self, int32_t side) {
@@ -39029,8 +39029,8 @@ QRect* q_cppolaraxisangular_super_clip_rect(const void* self) {
     return QCPPolarAxisAngular_SuperClipRect((QCPPolarAxisAngular*)self);
 }
 
-void q_cppolaraxisangular_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPPolarAxisAngular_OnClipRect((const QCPPolarAxisAngular*)self, (intptr_t)callback);
+void q_cppolaraxisangular_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPPolarAxisAngular_OnClipRect((QCPPolarAxisAngular*)self, (intptr_t)callback);
 }
 
 void q_cppolaraxisangular_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -39201,7 +39201,7 @@ const QMetaObject* q_cppolargrid_meta_object(const void* self) {
     return QCPPolarGrid_MetaObject((QCPPolarGrid*)self);
 }
 
-void q_cppolargrid_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cppolargrid_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPPolarGrid_OnMetaObject((QCPPolarGrid*)self, (intptr_t)callback);
 }
 
@@ -39324,7 +39324,7 @@ void q_cppolargrid_apply_default_antialiasing_hint(const void* self, void* paint
     QCPPolarGrid_ApplyDefaultAntialiasingHint((QCPPolarGrid*)self, (QCPPainter*)painter);
 }
 
-void q_cppolargrid_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
+void q_cppolargrid_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
     QCPPolarGrid_OnApplyDefaultAntialiasingHint((QCPPolarGrid*)self, (intptr_t)callback);
 }
 
@@ -39635,8 +39635,8 @@ double q_cppolargrid_super_select_test(const void* self, const void* pos, bool o
     return QCPPolarGrid_SuperSelectTest((QCPPolarGrid*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cppolargrid_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
-    QCPPolarGrid_OnSelectTest((const QCPPolarGrid*)self, (intptr_t)callback);
+void q_cppolargrid_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
+    QCPPolarGrid_OnSelectTest((QCPPolarGrid*)self, (intptr_t)callback);
 }
 
 void q_cppolargrid_parent_plot_initialized(void* self, void* parentPlot) {
@@ -39659,8 +39659,8 @@ int32_t q_cppolargrid_super_selection_category(const void* self) {
     return QCPPolarGrid_SuperSelectionCategory((QCPPolarGrid*)self);
 }
 
-void q_cppolargrid_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPPolarGrid_OnSelectionCategory((const QCPPolarGrid*)self, (intptr_t)callback);
+void q_cppolargrid_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPPolarGrid_OnSelectionCategory((QCPPolarGrid*)self, (intptr_t)callback);
 }
 
 QRect* q_cppolargrid_clip_rect(const void* self) {
@@ -39671,8 +39671,8 @@ QRect* q_cppolargrid_super_clip_rect(const void* self) {
     return QCPPolarGrid_SuperClipRect((QCPPolarGrid*)self);
 }
 
-void q_cppolargrid_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPPolarGrid_OnClipRect((const QCPPolarGrid*)self, (intptr_t)callback);
+void q_cppolargrid_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPPolarGrid_OnClipRect((QCPPolarGrid*)self, (intptr_t)callback);
 }
 
 void q_cppolargrid_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -39891,7 +39891,7 @@ const QMetaObject* q_cppolarlegenditem_meta_object(const void* self) {
     return QCPPolarLegendItem_MetaObject((QCPPolarLegendItem*)self);
 }
 
-void q_cppolarlegenditem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cppolarlegenditem_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPPolarLegendItem_OnMetaObject((QCPPolarLegendItem*)self, (intptr_t)callback);
 }
 
@@ -39950,7 +39950,7 @@ QSize* q_cppolarlegenditem_minimum_outer_size_hint(const void* self) {
     return QCPPolarLegendItem_MinimumOuterSizeHint((QCPPolarLegendItem*)self);
 }
 
-void q_cppolarlegenditem_on_minimum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
+void q_cppolarlegenditem_on_minimum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
     QCPPolarLegendItem_OnMinimumOuterSizeHint((QCPPolarLegendItem*)self, (intptr_t)callback);
 }
 
@@ -40407,8 +40407,8 @@ double q_cppolarlegenditem_super_select_test(const void* self, const void* pos, 
     return QCPPolarLegendItem_SuperSelectTest((QCPPolarLegendItem*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cppolarlegenditem_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
-    QCPPolarLegendItem_OnSelectTest((const QCPPolarLegendItem*)self, (intptr_t)callback);
+void q_cppolarlegenditem_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
+    QCPPolarLegendItem_OnSelectTest((QCPPolarLegendItem*)self, (intptr_t)callback);
 }
 
 int32_t q_cppolarlegenditem_selection_category(const void* self) {
@@ -40419,8 +40419,8 @@ int32_t q_cppolarlegenditem_super_selection_category(const void* self) {
     return QCPPolarLegendItem_SuperSelectionCategory((QCPPolarLegendItem*)self);
 }
 
-void q_cppolarlegenditem_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
-    QCPPolarLegendItem_OnSelectionCategory((const QCPPolarLegendItem*)self, (intptr_t)callback);
+void q_cppolarlegenditem_on_selection_category(void* self, int32_t (*callback)(const void*)) {
+    QCPPolarLegendItem_OnSelectionCategory((QCPPolarLegendItem*)self, (intptr_t)callback);
 }
 
 void q_cppolarlegenditem_apply_default_antialiasing_hint(const void* self, void* painter) {
@@ -40431,8 +40431,8 @@ void q_cppolarlegenditem_super_apply_default_antialiasing_hint(const void* self,
     QCPPolarLegendItem_SuperApplyDefaultAntialiasingHint((QCPPolarLegendItem*)self, (QCPPainter*)painter);
 }
 
-void q_cppolarlegenditem_on_apply_default_antialiasing_hint(const void* self, void (*callback)(const void*, void*)) {
-    QCPPolarLegendItem_OnApplyDefaultAntialiasingHint((const QCPPolarLegendItem*)self, (intptr_t)callback);
+void q_cppolarlegenditem_on_apply_default_antialiasing_hint(void* self, void (*callback)(const void*, void*)) {
+    QCPPolarLegendItem_OnApplyDefaultAntialiasingHint((QCPPolarLegendItem*)self, (intptr_t)callback);
 }
 
 QRect* q_cppolarlegenditem_clip_rect(const void* self) {
@@ -40443,8 +40443,8 @@ QRect* q_cppolarlegenditem_super_clip_rect(const void* self) {
     return QCPPolarLegendItem_SuperClipRect((QCPPolarLegendItem*)self);
 }
 
-void q_cppolarlegenditem_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
-    QCPPolarLegendItem_OnClipRect((const QCPPolarLegendItem*)self, (intptr_t)callback);
+void q_cppolarlegenditem_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
+    QCPPolarLegendItem_OnClipRect((QCPPolarLegendItem*)self, (intptr_t)callback);
 }
 
 void q_cppolarlegenditem_select_event(void* self, void* event, bool additive, const void* details, bool* selectionStateChanged) {
@@ -40491,8 +40491,8 @@ QSize* q_cppolarlegenditem_super_maximum_outer_size_hint(const void* self) {
     return QCPPolarLegendItem_SuperMaximumOuterSizeHint((QCPPolarLegendItem*)self);
 }
 
-void q_cppolarlegenditem_on_maximum_outer_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QCPPolarLegendItem_OnMaximumOuterSizeHint((const QCPPolarLegendItem*)self, (intptr_t)callback);
+void q_cppolarlegenditem_on_maximum_outer_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QCPPolarLegendItem_OnMaximumOuterSizeHint((QCPPolarLegendItem*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QCPLayoutElement* */ q_cppolarlegenditem_elements(const void* self, bool recursive) {
@@ -40505,8 +40505,8 @@ libqt_list /* of QCPLayoutElement* */ q_cppolarlegenditem_super_elements(const v
     return _arr;
 }
 
-void q_cppolarlegenditem_on_elements(const void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
-    QCPPolarLegendItem_OnElements((const QCPPolarLegendItem*)self, (intptr_t)callback);
+void q_cppolarlegenditem_on_elements(void* self, libqt_list /* of QCPLayoutElement* */ (*callback)(const void*, bool)) {
+    QCPPolarLegendItem_OnElements((QCPPolarLegendItem*)self, (intptr_t)callback);
 }
 
 int32_t q_cppolarlegenditem_calculate_auto_margin(void* self, int32_t side) {
@@ -40737,7 +40737,7 @@ const QMetaObject* q_cppolargraph_meta_object(const void* self) {
     return QCPPolarGraph_MetaObject((QCPPolarGraph*)self);
 }
 
-void q_cppolargraph_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_cppolargraph_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QCPPolarGraph_OnMetaObject((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -40939,7 +40939,7 @@ double q_cppolargraph_select_test(const void* self, const void* pos, bool onlySe
     return QCPPolarGraph_SelectTest((QCPPolarGraph*)self, (QPointF*)pos, onlySelectable, (QVariant*)details);
 }
 
-void q_cppolargraph_on_select_test(const void* self, double (*callback)(const void*, const void*, bool, void*)) {
+void q_cppolargraph_on_select_test(void* self, double (*callback)(const void*, const void*, bool, void*)) {
     QCPPolarGraph_OnSelectTest((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -40963,7 +40963,7 @@ QCPRange* q_cppolargraph_get_key_range(const void* self, bool* foundRange, int32
     return QCPPolarGraph_GetKeyRange((QCPPolarGraph*)self, (bool*)foundRange, inSignDomain);
 }
 
-void q_cppolargraph_on_get_key_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
+void q_cppolargraph_on_get_key_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t)) {
     QCPPolarGraph_OnGetKeyRange((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -40975,7 +40975,7 @@ QCPRange* q_cppolargraph_get_value_range(const void* self, bool* foundRange, int
     return QCPPolarGraph_GetValueRange((QCPPolarGraph*)self, (bool*)foundRange, inSignDomain, (QCPRange*)inKeyRange);
 }
 
-void q_cppolargraph_on_get_value_range(const void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
+void q_cppolargraph_on_get_value_range(void* self, QCPRange* (*callback)(const void*, bool*, int32_t, const void*)) {
     QCPPolarGraph_OnGetValueRange((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -41011,7 +41011,7 @@ QRect* q_cppolargraph_clip_rect(const void* self) {
     return QCPPolarGraph_ClipRect((QCPPolarGraph*)self);
 }
 
-void q_cppolargraph_on_clip_rect(const void* self, QRect* (*callback)(const void*)) {
+void q_cppolargraph_on_clip_rect(void* self, QRect* (*callback)(const void*)) {
     QCPPolarGraph_OnClipRect((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -41035,7 +41035,7 @@ int32_t q_cppolargraph_selection_category(const void* self) {
     return QCPPolarGraph_SelectionCategory((QCPPolarGraph*)self);
 }
 
-void q_cppolargraph_on_selection_category(const void* self, int32_t (*callback)(const void*)) {
+void q_cppolargraph_on_selection_category(void* self, int32_t (*callback)(const void*)) {
     QCPPolarGraph_OnSelectionCategory((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -41075,7 +41075,7 @@ void q_cppolargraph_draw_line_plot(const void* self, void* painter, libqt_list /
     QCPPolarGraph_DrawLinePlot((QCPPolarGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cppolargraph_on_draw_line_plot(const void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */)) {
+void q_cppolargraph_on_draw_line_plot(void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */)) {
     QCPPolarGraph_OnDrawLinePlot((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -41087,7 +41087,7 @@ void q_cppolargraph_draw_fill(const void* self, void* painter, libqt_list /* of 
     QCPPolarGraph_DrawFill((QCPPolarGraph*)self, (QCPPainter*)painter, lines);
 }
 
-void q_cppolargraph_on_draw_fill(const void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */)) {
+void q_cppolargraph_on_draw_fill(void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */)) {
     QCPPolarGraph_OnDrawFill((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -41099,7 +41099,7 @@ void q_cppolargraph_draw_scatter_plot(const void* self, void* painter, libqt_lis
     QCPPolarGraph_DrawScatterPlot((QCPPolarGraph*)self, (QCPPainter*)painter, scatters, (QCPScatterStyle*)style);
 }
 
-void q_cppolargraph_on_draw_scatter_plot(const void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */, const void*)) {
+void q_cppolargraph_on_draw_scatter_plot(void* self, void (*callback)(const void*, void*, libqt_list /* of QPointF* */, const void*)) {
     QCPPolarGraph_OnDrawScatterPlot((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -41111,7 +41111,7 @@ void q_cppolargraph_draw_legend_icon(const void* self, void* painter, const void
     QCPPolarGraph_DrawLegendIcon((QCPPolarGraph*)self, (QCPPainter*)painter, (QRectF*)rect);
 }
 
-void q_cppolargraph_on_draw_legend_icon(const void* self, void (*callback)(const void*, void*, const void*)) {
+void q_cppolargraph_on_draw_legend_icon(void* self, void (*callback)(const void*, void*, const void*)) {
     QCPPolarGraph_OnDrawLegendIcon((QCPPolarGraph*)self, (intptr_t)callback);
 }
 
@@ -41131,7 +41131,7 @@ int32_t q_cppolargraph_data_count(const void* self) {
     return QCPPolarGraph_DataCount((QCPPolarGraph*)self);
 }
 
-void q_cppolargraph_on_data_count(const void* self, int32_t (*callback)(const void*)) {
+void q_cppolargraph_on_data_count(void* self, int32_t (*callback)(const void*)) {
     QCPPolarGraph_OnDataCount((QCPPolarGraph*)self, (intptr_t)callback);
 }
 

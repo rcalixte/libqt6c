@@ -489,11 +489,11 @@ void q_designerformwindowinterface_activate_resource_file_paths2(void* self, con
     free(paths_qstr);
 }
 
-QPaintDevice* q_designerformwindowinterface_as_q_paint_device(void* self) {
+QPaintDevice* q_designerformwindowinterface_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QDesignerFormWindowInterface* q_designerformwindowinterface_from_q_paint_device(void* _qpaintdevice) {
+QDesignerFormWindowInterface* q_designerformwindowinterface_from_q_paint_device(const void* _qpaintdevice) {
     return (QDesignerFormWindowInterface*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 

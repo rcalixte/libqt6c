@@ -13,11 +13,11 @@ KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_new(char* protocol, char* 
     return KIO__ForwardingWorkerBase_New(qstring(protocol), qstring(poolSocket), qstring(appSocket));
 }
 
-KIO__WorkerBase* k_io__forwardingworkerbase_as_k_i_o___worker_base(void* self) {
+KIO__WorkerBase* k_io__forwardingworkerbase_as_k_i_o___worker_base(const void* self) {
     return KIO__ForwardingWorkerBase_AsKIO__WorkerBase((KIO__ForwardingWorkerBase*)self);
 }
 
-KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_from_k_i_o___worker_base(void* _kio__workerbase) {
+KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_from_k_i_o___worker_base(const void* _kio__workerbase) {
     return (KIO__ForwardingWorkerBase*)KIO__ForwardingWorkerBase_FromKIO__WorkerBase((KIO__WorkerBase*)_kio__workerbase);
 }
 
@@ -25,7 +25,7 @@ const QMetaObject* k_io__forwardingworkerbase_meta_object(const void* self) {
     return KIO__ForwardingWorkerBase_MetaObject((KIO__ForwardingWorkerBase*)self);
 }
 
-void k_io__forwardingworkerbase_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_io__forwardingworkerbase_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__ForwardingWorkerBase_OnMetaObject((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 
@@ -220,7 +220,7 @@ void k_io__forwardingworkerbase_adjust_u_d_s_entry(const void* self, void* entry
     KIO__ForwardingWorkerBase_AdjustUDSEntry((KIO__ForwardingWorkerBase*)self, (KIO__UDSEntry*)entry, creationMode);
 }
 
-void k_io__forwardingworkerbase_on_adjust_u_d_s_entry(const void* self, void (*callback)(const void*, void*, int32_t)) {
+void k_io__forwardingworkerbase_on_adjust_u_d_s_entry(void* self, void (*callback)(const void*, void*, int32_t)) {
     KIO__ForwardingWorkerBase_OnAdjustUDSEntry((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 

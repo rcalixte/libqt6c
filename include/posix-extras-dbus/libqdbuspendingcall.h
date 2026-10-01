@@ -105,9 +105,9 @@ QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new2(const void* call, void* p
 
 /// Upcasts to a QDBusPendingCall object
 ///
-/// @param self QDBusPendingCallWatcher*
+/// @param self const QDBusPendingCallWatcher*
 ///
-QDBusPendingCall* q_dbuspendingcallwatcher_as_q_d_bus_pending_call(void* self);
+QDBusPendingCall* q_dbuspendingcallwatcher_as_q_d_bus_pending_call(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -119,10 +119,10 @@ const QMetaObject* q_dbuspendingcallwatcher_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDBusPendingCallWatcher*
+/// @param self QDBusPendingCallWatcher*
 /// @param callback const QMetaObject* func(const QDBusPendingCallWatcher* self)
 ///
-void q_dbuspendingcallwatcher_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_dbuspendingcallwatcher_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1014,10 +1014,10 @@ QObject* q_dbuspendingcallwatcher_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusPendingCallWatcher*
+/// @param self QDBusPendingCallWatcher*
 /// @param callback QObject* func(QDBusPendingCallWatcher* self)
 ///
-void q_dbuspendingcallwatcher_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_dbuspendingcallwatcher_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1045,10 +1045,10 @@ int32_t q_dbuspendingcallwatcher_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusPendingCallWatcher*
+/// @param self QDBusPendingCallWatcher*
 /// @param callback int32_t func(QDBusPendingCallWatcher* self)
 ///
-void q_dbuspendingcallwatcher_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_dbuspendingcallwatcher_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1078,10 +1078,10 @@ int32_t q_dbuspendingcallwatcher_super_receivers(const void* self, const char* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusPendingCallWatcher*
+/// @param self QDBusPendingCallWatcher*
 /// @param callback int32_t func(QDBusPendingCallWatcher* self, const char* signal)
 ///
-void q_dbuspendingcallwatcher_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_dbuspendingcallwatcher_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1111,10 +1111,10 @@ bool q_dbuspendingcallwatcher_super_is_signal_connected(const void* self, const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDBusPendingCallWatcher*
+/// @param self QDBusPendingCallWatcher*
 /// @param callback bool func(QDBusPendingCallWatcher* self, QMetaMethod* signal)
 ///
-void q_dbuspendingcallwatcher_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_dbuspendingcallwatcher_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

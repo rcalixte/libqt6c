@@ -19,7 +19,7 @@ const QMetaObject* q_qmlfileselector_meta_object(const void* self) {
     return QQmlFileSelector_MetaObject((QQmlFileSelector*)self);
 }
 
-void q_qmlfileselector_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_qmlfileselector_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlFileSelector_OnMetaObject((QQmlFileSelector*)self, (intptr_t)callback);
 }
 

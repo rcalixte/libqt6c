@@ -23,7 +23,7 @@ const QMetaObject* q_pdfbookmarkmodel_meta_object(const void* self) {
     return QPdfBookmarkModel_MetaObject((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_pdfbookmarkmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QPdfBookmarkModel_OnMetaObject((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
@@ -74,7 +74,7 @@ QVariant* q_pdfbookmarkmodel_data(const void* self, const void* index, int role)
     return QPdfBookmarkModel_Data((QPdfBookmarkModel*)self, (QModelIndex*)index, role);
 }
 
-void q_pdfbookmarkmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
+void q_pdfbookmarkmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int)) {
     QPdfBookmarkModel_OnData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
@@ -86,7 +86,7 @@ QModelIndex* q_pdfbookmarkmodel_index(const void* self, int row, int column, con
     return QPdfBookmarkModel_Index((QPdfBookmarkModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+void q_pdfbookmarkmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     QPdfBookmarkModel_OnIndex((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
@@ -98,7 +98,7 @@ QModelIndex* q_pdfbookmarkmodel_parent(const void* self, const void* index) {
     return QPdfBookmarkModel_Parent((QPdfBookmarkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdfbookmarkmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+void q_pdfbookmarkmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QPdfBookmarkModel_OnParent((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
@@ -110,7 +110,7 @@ int32_t q_pdfbookmarkmodel_row_count(const void* self, const void* parent) {
     return QPdfBookmarkModel_RowCount((QPdfBookmarkModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_pdfbookmarkmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QPdfBookmarkModel_OnRowCount((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
@@ -122,7 +122,7 @@ int32_t q_pdfbookmarkmodel_column_count(const void* self, const void* parent) {
     return QPdfBookmarkModel_ColumnCount((QPdfBookmarkModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+void q_pdfbookmarkmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*)) {
     QPdfBookmarkModel_OnColumnCount((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
@@ -163,7 +163,7 @@ libqt_map /* of int to char* */ q_pdfbookmarkmodel_role_names(const void* self) 
     return _ret;
 }
 
-void q_pdfbookmarkmodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_pdfbookmarkmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
     QPdfBookmarkModel_OnRoleNames((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
@@ -563,8 +563,8 @@ QModelIndex* q_pdfbookmarkmodel_super_sibling(const void* self, int row, int col
     return QPdfBookmarkModel_SuperSibling((QPdfBookmarkModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void q_pdfbookmarkmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
-    QPdfBookmarkModel_OnSibling((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    QPdfBookmarkModel_OnSibling((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_has_children(const void* self, const void* parent) {
@@ -575,8 +575,8 @@ bool q_pdfbookmarkmodel_super_has_children(const void* self, const void* parent)
     return QPdfBookmarkModel_SuperHasChildren((QPdfBookmarkModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
-    QPdfBookmarkModel_OnHasChildren((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_has_children(void* self, bool (*callback)(const void*, const void*)) {
+    QPdfBookmarkModel_OnHasChildren((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_set_data(void* self, const void* index, const void* value, int role) {
@@ -599,8 +599,8 @@ QVariant* q_pdfbookmarkmodel_super_header_data(const void* self, int section, in
     return QPdfBookmarkModel_SuperHeaderData((QPdfBookmarkModel*)self, section, orientation, role);
 }
 
-void q_pdfbookmarkmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
-    QPdfBookmarkModel_OnHeaderData((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
+    QPdfBookmarkModel_OnHeaderData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
@@ -635,8 +635,8 @@ libqt_map /* of int to QVariant* */ q_pdfbookmarkmodel_super_item_data(const voi
     return _ret;
 }
 
-void q_pdfbookmarkmodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
-    QPdfBookmarkModel_OnItemData((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    QPdfBookmarkModel_OnItemData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
@@ -747,8 +747,8 @@ const char** q_pdfbookmarkmodel_super_mime_types(const void* self) {
     return _ret;
 }
 
-void q_pdfbookmarkmodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
-    QPdfBookmarkModel_OnMimeTypes((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_mime_types(void* self, const char** (*callback)(const void*)) {
+    QPdfBookmarkModel_OnMimeTypes((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 QMimeData* q_pdfbookmarkmodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -759,8 +759,8 @@ QMimeData* q_pdfbookmarkmodel_super_mime_data(const void* self, libqt_list /* of
     return QPdfBookmarkModel_SuperMimeData((QPdfBookmarkModel*)self, indexes);
 }
 
-void q_pdfbookmarkmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
-    QPdfBookmarkModel_OnMimeData((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    QPdfBookmarkModel_OnMimeData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -771,8 +771,8 @@ bool q_pdfbookmarkmodel_super_can_drop_mime_data(const void* self, const void* d
     return QPdfBookmarkModel_SuperCanDropMimeData((QPdfBookmarkModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
-    QPdfBookmarkModel_OnCanDropMimeData((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    QPdfBookmarkModel_OnCanDropMimeData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
@@ -795,8 +795,8 @@ int32_t q_pdfbookmarkmodel_super_supported_drop_actions(const void* self) {
     return QPdfBookmarkModel_SuperSupportedDropActions((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
-    QPdfBookmarkModel_OnSupportedDropActions((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*)) {
+    QPdfBookmarkModel_OnSupportedDropActions((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 int32_t q_pdfbookmarkmodel_supported_drag_actions(const void* self) {
@@ -807,8 +807,8 @@ int32_t q_pdfbookmarkmodel_super_supported_drag_actions(const void* self) {
     return QPdfBookmarkModel_SuperSupportedDragActions((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
-    QPdfBookmarkModel_OnSupportedDragActions((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*)) {
+    QPdfBookmarkModel_OnSupportedDragActions((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_insert_rows(void* self, int row, int count, const void* parent) {
@@ -903,8 +903,8 @@ bool q_pdfbookmarkmodel_super_can_fetch_more(const void* self, const void* paren
     return QPdfBookmarkModel_SuperCanFetchMore((QPdfBookmarkModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
-    QPdfBookmarkModel_OnCanFetchMore((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*)) {
+    QPdfBookmarkModel_OnCanFetchMore((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 int32_t q_pdfbookmarkmodel_flags(const void* self, const void* index) {
@@ -915,8 +915,8 @@ int32_t q_pdfbookmarkmodel_super_flags(const void* self, const void* index) {
     return QPdfBookmarkModel_SuperFlags((QPdfBookmarkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdfbookmarkmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
-    QPdfBookmarkModel_OnFlags((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*)) {
+    QPdfBookmarkModel_OnFlags((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_sort(void* self, int column, int32_t order) {
@@ -939,8 +939,8 @@ QModelIndex* q_pdfbookmarkmodel_super_buddy(const void* self, const void* index)
     return QPdfBookmarkModel_SuperBuddy((QPdfBookmarkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdfbookmarkmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
-    QPdfBookmarkModel_OnBuddy((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    QPdfBookmarkModel_OnBuddy((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_pdfbookmarkmodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
@@ -953,8 +953,8 @@ libqt_list /* of QModelIndex* */ q_pdfbookmarkmodel_super_match(const void* self
     return _arr;
 }
 
-void q_pdfbookmarkmodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
-    QPdfBookmarkModel_OnMatch((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    QPdfBookmarkModel_OnMatch((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 QSize* q_pdfbookmarkmodel_span(const void* self, const void* index) {
@@ -965,8 +965,8 @@ QSize* q_pdfbookmarkmodel_super_span(const void* self, const void* index) {
     return QPdfBookmarkModel_SuperSpan((QPdfBookmarkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdfbookmarkmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
-    QPdfBookmarkModel_OnSpan((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_span(void* self, QSize* (*callback)(const void*, const void*)) {
+    QPdfBookmarkModel_OnSpan((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
@@ -977,8 +977,8 @@ void q_pdfbookmarkmodel_super_multi_data(const void* self, const void* index, vo
     QPdfBookmarkModel_SuperMultiData((QPdfBookmarkModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_pdfbookmarkmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
-    QPdfBookmarkModel_OnMultiData((const QPdfBookmarkModel*)self, (intptr_t)callback);
+void q_pdfbookmarkmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*)) {
+    QPdfBookmarkModel_OnMultiData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_submit(void* self) {

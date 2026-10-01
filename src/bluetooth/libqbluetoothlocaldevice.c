@@ -27,7 +27,7 @@ const QMetaObject* q_bluetoothlocaldevice_meta_object(const void* self) {
     return QBluetoothLocalDevice_MetaObject((QBluetoothLocalDevice*)self);
 }
 
-void q_bluetoothlocaldevice_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_bluetoothlocaldevice_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QBluetoothLocalDevice_OnMetaObject((QBluetoothLocalDevice*)self, (intptr_t)callback);
 }
 

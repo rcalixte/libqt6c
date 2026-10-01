@@ -28,7 +28,7 @@ const QMetaObject* q_systemtrayicon_meta_object(const void* self) {
     return QSystemTrayIcon_MetaObject((QSystemTrayIcon*)self);
 }
 
-void q_systemtrayicon_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_systemtrayicon_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QSystemTrayIcon_OnMetaObject((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 

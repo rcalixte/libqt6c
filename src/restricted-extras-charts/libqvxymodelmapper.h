@@ -32,10 +32,10 @@ const QMetaObject* q_vxymodelmapper_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QVXYModelMapper*
+/// @param self QVXYModelMapper*
 /// @param callback const QMetaObject* func(const QVXYModelMapper* self)
 ///
-void q_vxymodelmapper_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_vxymodelmapper_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -976,10 +976,10 @@ int32_t q_vxymodelmapper_super_first(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVXYModelMapper*
+/// @param self QVXYModelMapper*
 /// @param callback int32_t func(QVXYModelMapper* self)
 ///
-void q_vxymodelmapper_on_first(const void* self, int32_t (*callback)(const void*));
+void q_vxymodelmapper_on_first(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QXYModelMapper
 ///
@@ -1040,10 +1040,10 @@ int32_t q_vxymodelmapper_super_count(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVXYModelMapper*
+/// @param self QVXYModelMapper*
 /// @param callback int32_t func(QVXYModelMapper* self)
 ///
-void q_vxymodelmapper_on_count(const void* self, int32_t (*callback)(const void*));
+void q_vxymodelmapper_on_count(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QXYModelMapper
 ///
@@ -1108,10 +1108,10 @@ int32_t q_vxymodelmapper_super_orientation(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVXYModelMapper*
+/// @param self QVXYModelMapper*
 /// @param callback int32_t func(QVXYModelMapper* self)
 ///
-void q_vxymodelmapper_on_orientation(const void* self, int32_t (*callback)(const void*));
+void q_vxymodelmapper_on_orientation(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QXYModelMapper
 ///
@@ -1172,10 +1172,10 @@ int32_t q_vxymodelmapper_super_x_section(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVXYModelMapper*
+/// @param self QVXYModelMapper*
 /// @param callback int32_t func(QVXYModelMapper* self)
 ///
-void q_vxymodelmapper_on_x_section(const void* self, int32_t (*callback)(const void*));
+void q_vxymodelmapper_on_x_section(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QXYModelMapper
 ///
@@ -1236,10 +1236,10 @@ int32_t q_vxymodelmapper_super_y_section(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVXYModelMapper*
+/// @param self QVXYModelMapper*
 /// @param callback int32_t func(QVXYModelMapper* self)
 ///
-void q_vxymodelmapper_on_y_section(const void* self, int32_t (*callback)(const void*));
+void q_vxymodelmapper_on_y_section(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QXYModelMapper
 ///
@@ -1300,10 +1300,10 @@ QObject* q_vxymodelmapper_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVXYModelMapper*
+/// @param self QVXYModelMapper*
 /// @param callback QObject* func(QVXYModelMapper* self)
 ///
-void q_vxymodelmapper_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_vxymodelmapper_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1331,10 +1331,10 @@ int32_t q_vxymodelmapper_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVXYModelMapper*
+/// @param self QVXYModelMapper*
 /// @param callback int32_t func(QVXYModelMapper* self)
 ///
-void q_vxymodelmapper_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_vxymodelmapper_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1364,10 +1364,10 @@ int32_t q_vxymodelmapper_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVXYModelMapper*
+/// @param self QVXYModelMapper*
 /// @param callback int32_t func(QVXYModelMapper* self, const char* signal)
 ///
-void q_vxymodelmapper_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_vxymodelmapper_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1397,10 +1397,10 @@ bool q_vxymodelmapper_super_is_signal_connected(const void* self, const void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVXYModelMapper*
+/// @param self QVXYModelMapper*
 /// @param callback bool func(QVXYModelMapper* self, QMetaMethod* signal)
 ///
-void q_vxymodelmapper_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_vxymodelmapper_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

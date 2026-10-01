@@ -6,11 +6,11 @@
 #include "libplatformdependent_v3.hpp"
 #include "libplatformdependent_v3.h"
 
-Attica__PlatformDependentV2* k_attica__platformdependentv3_as_attica___platform_dependent_v2(void* self) {
+Attica__PlatformDependentV2* k_attica__platformdependentv3_as_attica___platform_dependent_v2(const void* self) {
     return Attica__PlatformDependentV3_AsAttica__PlatformDependentV2((Attica__PlatformDependentV3*)self);
 }
 
-Attica__PlatformDependentV3* k_attica__platformdependentv3_from_attica___platform_dependent_v2(void* _attica__platformdependentv2) {
+Attica__PlatformDependentV3* k_attica__platformdependentv3_from_attica___platform_dependent_v2(const void* _attica__platformdependentv2) {
     return (Attica__PlatformDependentV3*)Attica__PlatformDependentV3_FromAttica__PlatformDependentV2((Attica__PlatformDependentV2*)_attica__platformdependentv2);
 }
 

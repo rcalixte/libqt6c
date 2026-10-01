@@ -26,10 +26,10 @@ const QMetaObject* k_parts__listingfilterextension_meta_object(const void* self)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KParts__ListingFilterExtension*
+/// @param self KParts__ListingFilterExtension*
 /// @param callback const QMetaObject* func(const KParts__ListingFilterExtension* self)
 ///
-void k_parts__listingfilterextension_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_parts__listingfilterextension_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -107,10 +107,10 @@ int32_t k_parts__listingfilterextension_supported_filter_modes(const void* self)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KParts__ListingFilterExtension*
+/// @param self KParts__ListingFilterExtension*
 /// @param callback int32_t func(const KParts__ListingFilterExtension* self)
 ///
-void k_parts__listingfilterextension_on_supported_filter_modes(const void* self, int32_t (*callback)(const void*));
+void k_parts__listingfilterextension_on_supported_filter_modes(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-listingfilterextension.html#supportedFilterModes)
 ///
@@ -133,10 +133,10 @@ bool k_parts__listingfilterextension_supports_multiple_filters(const void* self,
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KParts__ListingFilterExtension*
+/// @param self KParts__ListingFilterExtension*
 /// @param callback bool func(const KParts__ListingFilterExtension* self, enum KParts__ListingFilterExtension__FilterMode mode)
 ///
-void k_parts__listingfilterextension_on_supports_multiple_filters(const void* self, bool (*callback)(const void*, int32_t));
+void k_parts__listingfilterextension_on_supports_multiple_filters(void* self, bool (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kparts-listingfilterextension.html#supportsMultipleFilters)
 ///
@@ -160,12 +160,12 @@ QVariant* k_parts__listingfilterextension_filter(const void* self, int32_t mode)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KParts__ListingFilterExtension*
+/// @param self KParts__ListingFilterExtension*
 /// @param callback QVariant* func(const KParts__ListingFilterExtension* self, enum KParts__ListingFilterExtension__FilterMode mode)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_parts__listingfilterextension_on_filter(const void* self, QVariant* (*callback)(const void*, int32_t));
+void k_parts__listingfilterextension_on_filter(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kparts-listingfilterextension.html#setFilter)
 ///
@@ -911,10 +911,10 @@ QObject* k_parts__listingfilterextension_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ListingFilterExtension*
+/// @param self KParts__ListingFilterExtension*
 /// @param callback QObject* func(KParts__ListingFilterExtension* self)
 ///
-void k_parts__listingfilterextension_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_parts__listingfilterextension_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -942,10 +942,10 @@ int32_t k_parts__listingfilterextension_super_sender_signal_index(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ListingFilterExtension*
+/// @param self KParts__ListingFilterExtension*
 /// @param callback int32_t func(KParts__ListingFilterExtension* self)
 ///
-void k_parts__listingfilterextension_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_parts__listingfilterextension_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -975,10 +975,10 @@ int32_t k_parts__listingfilterextension_super_receivers(const void* self, const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ListingFilterExtension*
+/// @param self KParts__ListingFilterExtension*
 /// @param callback int32_t func(KParts__ListingFilterExtension* self, const char* signal)
 ///
-void k_parts__listingfilterextension_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_parts__listingfilterextension_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1008,10 +1008,10 @@ bool k_parts__listingfilterextension_super_is_signal_connected(const void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KParts__ListingFilterExtension*
+/// @param self KParts__ListingFilterExtension*
 /// @param callback bool func(KParts__ListingFilterExtension* self, QMetaMethod* signal)
 ///
-void k_parts__listingfilterextension_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_parts__listingfilterextension_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

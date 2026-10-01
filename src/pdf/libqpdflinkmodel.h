@@ -32,10 +32,10 @@ const QMetaObject* q_pdflinkmodel_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback const QMetaObject* func(const QPdfLinkModel* self)
 ///
-void q_pdflinkmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_pdflinkmodel_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -124,10 +124,10 @@ libqt_map q_pdflinkmodel_role_names(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback libqt_map of int to char* func(const QPdfLinkModel* self)
 ///
-void q_pdflinkmodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
+void q_pdflinkmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflinkmodel.html#roleNames)
 ///
@@ -150,10 +150,10 @@ int32_t q_pdflinkmodel_row_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback int32_t func(const QPdfLinkModel* self, QModelIndex* parent)
 ///
-void q_pdflinkmodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_pdflinkmodel_on_row_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflinkmodel.html#rowCount)
 ///
@@ -176,12 +176,12 @@ QVariant* q_pdflinkmodel_data(const void* self, const void* index, int role);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback QVariant* func(const QPdfLinkModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_pdflinkmodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
+void q_pdflinkmodel_on_data(void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdflinkmodel.html#data)
 ///
@@ -293,12 +293,12 @@ QModelIndex* q_pdflinkmodel_parent(const void* self, const void* child);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback QModelIndex* func(const QPdfLinkModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_pdflinkmodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_pdflinkmodel_on_parent(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -317,10 +317,10 @@ int32_t q_pdflinkmodel_column_count(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback int32_t func(const QPdfLinkModel* self, QModelIndex* parent)
 ///
-void q_pdflinkmodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
+void q_pdflinkmodel_on_column_count(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -337,10 +337,10 @@ bool q_pdflinkmodel_has_children(const void* self, const void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback bool func(const QPdfLinkModel* self, QModelIndex* parent)
 ///
-void q_pdflinkmodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
+void q_pdflinkmodel_on_has_children(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1121,12 +1121,12 @@ QModelIndex* q_pdflinkmodel_super_index(const void* self, int row, int column, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback QModelIndex* func(QPdfLinkModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_pdflinkmodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_pdflinkmodel_on_index(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractListModel
 ///
@@ -1160,12 +1160,12 @@ QModelIndex* q_pdflinkmodel_super_sibling(const void* self, int row, int column,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback QModelIndex* func(QPdfLinkModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_pdflinkmodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
+void q_pdflinkmodel_on_sibling(void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractListModel
 ///
@@ -1240,10 +1240,10 @@ int32_t q_pdflinkmodel_super_flags(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback int32_t func(QPdfLinkModel* self, QModelIndex* index)
 ///
-void q_pdflinkmodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
+void q_pdflinkmodel_on_flags(void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1314,12 +1314,12 @@ QVariant* q_pdflinkmodel_super_header_data(const void* self, int section, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback QVariant* func(QPdfLinkModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_pdflinkmodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
+void q_pdflinkmodel_on_header_data(void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1414,10 +1414,10 @@ libqt_map q_pdflinkmodel_super_item_data(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback libqt_map of int to QVariant* func(QPdfLinkModel* self, QModelIndex* index)
 ///
-void q_pdflinkmodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
+void q_pdflinkmodel_on_item_data(void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1517,10 +1517,10 @@ const char** q_pdflinkmodel_super_mime_types(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback const char** func(QPdfLinkModel* self)
 ///
-void q_pdflinkmodel_on_mime_types(const void* self, const char** (*callback)(const void*));
+void q_pdflinkmodel_on_mime_types(void* self, const char** (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1550,10 +1550,10 @@ QMimeData* q_pdflinkmodel_super_mime_data(const void* self, libqt_list indexes);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback QMimeData* func(QPdfLinkModel* self, libqt_list of QModelIndex* indexes)
 ///
-void q_pdflinkmodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
+void q_pdflinkmodel_on_mime_data(void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1591,10 +1591,10 @@ bool q_pdflinkmodel_super_can_drop_mime_data(const void* self, const void* data,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback bool func(QPdfLinkModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void q_pdflinkmodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
+void q_pdflinkmodel_on_can_drop_mime_data(void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1626,10 +1626,10 @@ int32_t q_pdflinkmodel_super_supported_drop_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback int32_t func(QPdfLinkModel* self)
 ///
-void q_pdflinkmodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
+void q_pdflinkmodel_on_supported_drop_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1661,10 +1661,10 @@ int32_t q_pdflinkmodel_super_supported_drag_actions(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback int32_t func(QPdfLinkModel* self)
 ///
-void q_pdflinkmodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
+void q_pdflinkmodel_on_supported_drag_actions(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1957,10 +1957,10 @@ bool q_pdflinkmodel_super_can_fetch_more(const void* self, const void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback bool func(QPdfLinkModel* self, QModelIndex* parent)
 ///
-void q_pdflinkmodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
+void q_pdflinkmodel_on_can_fetch_more(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2025,12 +2025,12 @@ QModelIndex* q_pdflinkmodel_super_buddy(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback QModelIndex* func(QPdfLinkModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_pdflinkmodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_pdflinkmodel_on_buddy(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2072,10 +2072,10 @@ libqt_list q_pdflinkmodel_super_match(const void* self, const void* start, int r
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback libqt_list of QModelIndex* func(QPdfLinkModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void q_pdflinkmodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
+void q_pdflinkmodel_on_match(void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2105,12 +2105,12 @@ QSize* q_pdflinkmodel_super_span(const void* self, const void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback QSize* func(QPdfLinkModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_pdflinkmodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
+void q_pdflinkmodel_on_span(void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2142,10 +2142,10 @@ void q_pdflinkmodel_super_multi_data(const void* self, const void* index, void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback void func(QPdfLinkModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void q_pdflinkmodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
+void q_pdflinkmodel_on_multi_data(void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2503,12 +2503,12 @@ QModelIndex* q_pdflinkmodel_super_create_index(const void* self, int row, int co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback QModelIndex* func(QPdfLinkModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_pdflinkmodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
+void q_pdflinkmodel_on_create_index(void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2540,10 +2540,10 @@ void q_pdflinkmodel_super_encode_data(const void* self, libqt_list indexes, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback void func(QPdfLinkModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void q_pdflinkmodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
+void q_pdflinkmodel_on_encode_data(void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3162,10 +3162,10 @@ libqt_list q_pdflinkmodel_super_persistent_index_list(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback libqt_list of QModelIndex* func(QPdfLinkModel* self)
 ///
-void q_pdflinkmodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
+void q_pdflinkmodel_on_persistent_index_list(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3193,10 +3193,10 @@ QObject* q_pdflinkmodel_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback QObject* func(QPdfLinkModel* self)
 ///
-void q_pdflinkmodel_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_pdflinkmodel_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3224,10 +3224,10 @@ int32_t q_pdflinkmodel_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback int32_t func(QPdfLinkModel* self)
 ///
-void q_pdflinkmodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_pdflinkmodel_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3257,10 +3257,10 @@ int32_t q_pdflinkmodel_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback int32_t func(QPdfLinkModel* self, const char* signal)
 ///
-void q_pdflinkmodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_pdflinkmodel_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3290,10 +3290,10 @@ bool q_pdflinkmodel_super_is_signal_connected(const void* self, const void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QPdfLinkModel*
+/// @param self QPdfLinkModel*
 /// @param callback bool func(QPdfLinkModel* self, QMetaMethod* signal)
 ///
-void q_pdflinkmodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_pdflinkmodel_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///

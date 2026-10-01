@@ -29,15 +29,15 @@ KBookmarkActionMenu* k_bookmarkactionmenu_new2(const void* bm, const char* text,
 
 /// Upcasts to a KBookmarkActionInterface object
 ///
-/// @param self KBookmarkActionMenu*
+/// @param self const KBookmarkActionMenu*
 ///
-KBookmarkActionInterface* k_bookmarkactionmenu_as_k_bookmark_action_interface(void* self);
+KBookmarkActionInterface* k_bookmarkactionmenu_as_k_bookmark_action_interface(const void* self);
 
 /// Downcasts to a KBookmarkActionMenu object
 ///
 /// @param _kbookmarkactioninterface KBookmarkActionInterface*
 ///
-KBookmarkActionMenu* k_bookmarkactionmenu_from_k_bookmark_action_interface(void* _kbookmarkactioninterface);
+KBookmarkActionMenu* k_bookmarkactionmenu_from_k_bookmark_action_interface(const void* _kbookmarkactioninterface);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -49,10 +49,10 @@ const QMetaObject* k_bookmarkactionmenu_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KBookmarkActionMenu*
+/// @param self KBookmarkActionMenu*
 /// @param callback const QMetaObject* func(const KBookmarkActionMenu* self)
 ///
-void k_bookmarkactionmenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_bookmarkactionmenu_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1632,10 +1632,10 @@ libqt_list k_bookmarkactionmenu_super_created_widgets(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KBookmarkActionMenu*
+/// @param self KBookmarkActionMenu*
 /// @param callback libqt_list of QWidget* func(KBookmarkActionMenu* self)
 ///
-void k_bookmarkactionmenu_on_created_widgets(const void* self, libqt_list (*callback)(const void*));
+void k_bookmarkactionmenu_on_created_widgets(void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1663,10 +1663,10 @@ QObject* k_bookmarkactionmenu_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KBookmarkActionMenu*
+/// @param self KBookmarkActionMenu*
 /// @param callback QObject* func(KBookmarkActionMenu* self)
 ///
-void k_bookmarkactionmenu_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_bookmarkactionmenu_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1694,10 +1694,10 @@ int32_t k_bookmarkactionmenu_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KBookmarkActionMenu*
+/// @param self KBookmarkActionMenu*
 /// @param callback int32_t func(KBookmarkActionMenu* self)
 ///
-void k_bookmarkactionmenu_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_bookmarkactionmenu_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1727,10 +1727,10 @@ int32_t k_bookmarkactionmenu_super_receivers(const void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KBookmarkActionMenu*
+/// @param self KBookmarkActionMenu*
 /// @param callback int32_t func(KBookmarkActionMenu* self, const char* signal)
 ///
-void k_bookmarkactionmenu_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_bookmarkactionmenu_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1760,10 +1760,10 @@ bool k_bookmarkactionmenu_super_is_signal_connected(const void* self, const void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KBookmarkActionMenu*
+/// @param self KBookmarkActionMenu*
 /// @param callback bool func(KBookmarkActionMenu* self, QMetaMethod* signal)
 ///
-void k_bookmarkactionmenu_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_bookmarkactionmenu_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

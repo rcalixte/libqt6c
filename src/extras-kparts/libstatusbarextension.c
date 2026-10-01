@@ -21,7 +21,7 @@ const QMetaObject* k_parts__statusbarextension_meta_object(const void* self) {
     return KParts__StatusBarExtension_MetaObject((KParts__StatusBarExtension*)self);
 }
 
-void k_parts__statusbarextension_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_parts__statusbarextension_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KParts__StatusBarExtension_OnMetaObject((KParts__StatusBarExtension*)self, (intptr_t)callback);
 }
 

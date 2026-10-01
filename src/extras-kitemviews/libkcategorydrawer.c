@@ -19,7 +19,7 @@ const QMetaObject* k_categorydrawer_meta_object(const void* self) {
     return KCategoryDrawer_MetaObject((KCategoryDrawer*)self);
 }
 
-void k_categorydrawer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void k_categorydrawer_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     KCategoryDrawer_OnMetaObject((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
@@ -66,7 +66,7 @@ void k_categorydrawer_draw_category(const void* self, const void* index, int sor
     KCategoryDrawer_DrawCategory((KCategoryDrawer*)self, (QModelIndex*)index, sortRole, (QStyleOption*)option, (QPainter*)painter);
 }
 
-void k_categorydrawer_on_draw_category(const void* self, void (*callback)(const void*, const void*, int, const void*, void*)) {
+void k_categorydrawer_on_draw_category(void* self, void (*callback)(const void*, const void*, int, const void*, void*)) {
     KCategoryDrawer_OnDrawCategory((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
@@ -78,7 +78,7 @@ int32_t k_categorydrawer_category_height(const void* self, const void* index, co
     return KCategoryDrawer_CategoryHeight((KCategoryDrawer*)self, (QModelIndex*)index, (QStyleOption*)option);
 }
 
-void k_categorydrawer_on_category_height(const void* self, int32_t (*callback)(const void*, const void*, const void*)) {
+void k_categorydrawer_on_category_height(void* self, int32_t (*callback)(const void*, const void*, const void*)) {
     KCategoryDrawer_OnCategoryHeight((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
@@ -90,7 +90,7 @@ int32_t k_categorydrawer_left_margin(const void* self) {
     return KCategoryDrawer_LeftMargin((KCategoryDrawer*)self);
 }
 
-void k_categorydrawer_on_left_margin(const void* self, int32_t (*callback)(const void*)) {
+void k_categorydrawer_on_left_margin(void* self, int32_t (*callback)(const void*)) {
     KCategoryDrawer_OnLeftMargin((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
@@ -102,7 +102,7 @@ int32_t k_categorydrawer_right_margin(const void* self) {
     return KCategoryDrawer_RightMargin((KCategoryDrawer*)self);
 }
 
-void k_categorydrawer_on_right_margin(const void* self, int32_t (*callback)(const void*)) {
+void k_categorydrawer_on_right_margin(void* self, int32_t (*callback)(const void*)) {
     KCategoryDrawer_OnRightMargin((KCategoryDrawer*)self, (intptr_t)callback);
 }
 

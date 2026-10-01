@@ -27,7 +27,7 @@ const QMetaObject* q_stackedwidget_meta_object(const void* self) {
     return QStackedWidget_MetaObject((QStackedWidget*)self);
 }
 
-void q_stackedwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
+void q_stackedwidget_on_meta_object(void* self, const QMetaObject* (*callback)(const void*)) {
     QStackedWidget_OnMetaObject((QStackedWidget*)self, (intptr_t)callback);
 }
 
@@ -200,11 +200,11 @@ void q_stackedwidget_set_frame_rect(void* self, const void* frameRect) {
     QFrame_SetFrameRect((QFrame*)self, (QRect*)frameRect);
 }
 
-QPaintDevice* q_stackedwidget_as_q_paint_device(void* self) {
+QPaintDevice* q_stackedwidget_as_q_paint_device(const void* self) {
     return QWidget_AsQPaintDevice((QWidget*)self);
 }
 
-QStackedWidget* q_stackedwidget_from_q_paint_device(void* _qpaintdevice) {
+QStackedWidget* q_stackedwidget_from_q_paint_device(const void* _qpaintdevice) {
     return (QStackedWidget*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
@@ -1595,8 +1595,8 @@ QSize* q_stackedwidget_super_size_hint(const void* self) {
     return QStackedWidget_SuperSizeHint((QStackedWidget*)self);
 }
 
-void q_stackedwidget_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QStackedWidget_OnSizeHint((const QStackedWidget*)self, (intptr_t)callback);
+void q_stackedwidget_on_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QStackedWidget_OnSizeHint((QStackedWidget*)self, (intptr_t)callback);
 }
 
 void q_stackedwidget_paint_event(void* self, void* param1) {
@@ -1631,8 +1631,8 @@ void q_stackedwidget_super_init_style_option(const void* self, void* option) {
     QStackedWidget_SuperInitStyleOption((QStackedWidget*)self, (QStyleOptionFrame*)option);
 }
 
-void q_stackedwidget_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
-    QStackedWidget_OnInitStyleOption((const QStackedWidget*)self, (intptr_t)callback);
+void q_stackedwidget_on_init_style_option(void* self, void (*callback)(const void*, void*)) {
+    QStackedWidget_OnInitStyleOption((QStackedWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_stackedwidget_dev_type(const void* self) {
@@ -1643,8 +1643,8 @@ int32_t q_stackedwidget_super_dev_type(const void* self) {
     return QStackedWidget_SuperDevType((QStackedWidget*)self);
 }
 
-void q_stackedwidget_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
-    QStackedWidget_OnDevType((const QStackedWidget*)self, (intptr_t)callback);
+void q_stackedwidget_on_dev_type(void* self, int32_t (*callback)(const void*)) {
+    QStackedWidget_OnDevType((QStackedWidget*)self, (intptr_t)callback);
 }
 
 void q_stackedwidget_set_visible(void* self, bool visible) {
@@ -1667,8 +1667,8 @@ QSize* q_stackedwidget_super_minimum_size_hint(const void* self) {
     return QStackedWidget_SuperMinimumSizeHint((QStackedWidget*)self);
 }
 
-void q_stackedwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
-    QStackedWidget_OnMinimumSizeHint((const QStackedWidget*)self, (intptr_t)callback);
+void q_stackedwidget_on_minimum_size_hint(void* self, QSize* (*callback)(const void*)) {
+    QStackedWidget_OnMinimumSizeHint((QStackedWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_stackedwidget_height_for_width(const void* self, int param1) {
@@ -1679,8 +1679,8 @@ int32_t q_stackedwidget_super_height_for_width(const void* self, int param1) {
     return QStackedWidget_SuperHeightForWidth((QStackedWidget*)self, param1);
 }
 
-void q_stackedwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
-    QStackedWidget_OnHeightForWidth((const QStackedWidget*)self, (intptr_t)callback);
+void q_stackedwidget_on_height_for_width(void* self, int32_t (*callback)(const void*, int)) {
+    QStackedWidget_OnHeightForWidth((QStackedWidget*)self, (intptr_t)callback);
 }
 
 bool q_stackedwidget_has_height_for_width(const void* self) {
@@ -1691,8 +1691,8 @@ bool q_stackedwidget_super_has_height_for_width(const void* self) {
     return QStackedWidget_SuperHasHeightForWidth((QStackedWidget*)self);
 }
 
-void q_stackedwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
-    QStackedWidget_OnHasHeightForWidth((const QStackedWidget*)self, (intptr_t)callback);
+void q_stackedwidget_on_has_height_for_width(void* self, bool (*callback)(const void*)) {
+    QStackedWidget_OnHasHeightForWidth((QStackedWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_stackedwidget_paint_engine(const void* self) {
@@ -1703,8 +1703,8 @@ QPaintEngine* q_stackedwidget_super_paint_engine(const void* self) {
     return QStackedWidget_SuperPaintEngine((QStackedWidget*)self);
 }
 
-void q_stackedwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
-    QStackedWidget_OnPaintEngine((const QStackedWidget*)self, (intptr_t)callback);
+void q_stackedwidget_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*)) {
+    QStackedWidget_OnPaintEngine((QStackedWidget*)self, (intptr_t)callback);
 }
 
 void q_stackedwidget_mouse_press_event(void* self, void* event) {
@@ -2003,8 +2003,8 @@ int32_t q_stackedwidget_super_metric(const void* self, int32_t param1) {
     return QStackedWidget_SuperMetric((QStackedWidget*)self, param1);
 }
 
-void q_stackedwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
-    QStackedWidget_OnMetric((const QStackedWidget*)self, (intptr_t)callback);
+void q_stackedwidget_on_metric(void* self, int32_t (*callback)(const void*, int32_t)) {
+    QStackedWidget_OnMetric((QStackedWidget*)self, (intptr_t)callback);
 }
 
 void q_stackedwidget_init_painter(const void* self, void* painter) {
@@ -2015,8 +2015,8 @@ void q_stackedwidget_super_init_painter(const void* self, void* painter) {
     QStackedWidget_SuperInitPainter((QStackedWidget*)self, (QPainter*)painter);
 }
 
-void q_stackedwidget_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
-    QStackedWidget_OnInitPainter((const QStackedWidget*)self, (intptr_t)callback);
+void q_stackedwidget_on_init_painter(void* self, void (*callback)(const void*, void*)) {
+    QStackedWidget_OnInitPainter((QStackedWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_stackedwidget_redirected(const void* self, void* offset) {
@@ -2027,8 +2027,8 @@ QPaintDevice* q_stackedwidget_super_redirected(const void* self, void* offset) {
     return QStackedWidget_SuperRedirected((QStackedWidget*)self, (QPoint*)offset);
 }
 
-void q_stackedwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
-    QStackedWidget_OnRedirected((const QStackedWidget*)self, (intptr_t)callback);
+void q_stackedwidget_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    QStackedWidget_OnRedirected((QStackedWidget*)self, (intptr_t)callback);
 }
 
 QPainter* q_stackedwidget_shared_painter(const void* self) {
@@ -2039,8 +2039,8 @@ QPainter* q_stackedwidget_super_shared_painter(const void* self) {
     return QStackedWidget_SuperSharedPainter((QStackedWidget*)self);
 }
 
-void q_stackedwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
-    QStackedWidget_OnSharedPainter((const QStackedWidget*)self, (intptr_t)callback);
+void q_stackedwidget_on_shared_painter(void* self, QPainter* (*callback)(const void*)) {
+    QStackedWidget_OnSharedPainter((QStackedWidget*)self, (intptr_t)callback);
 }
 
 void q_stackedwidget_input_method_event(void* self, void* param1) {
@@ -2063,8 +2063,8 @@ QVariant* q_stackedwidget_super_input_method_query(const void* self, int32_t par
     return QStackedWidget_SuperInputMethodQuery((QStackedWidget*)self, param1);
 }
 
-void q_stackedwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
-    QStackedWidget_OnInputMethodQuery((const QStackedWidget*)self, (intptr_t)callback);
+void q_stackedwidget_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t)) {
+    QStackedWidget_OnInputMethodQuery((QStackedWidget*)self, (intptr_t)callback);
 }
 
 bool q_stackedwidget_focus_next_prev_child(void* self, bool next) {

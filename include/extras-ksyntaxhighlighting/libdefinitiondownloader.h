@@ -35,10 +35,10 @@ const QMetaObject* k_syntaxhighlighting__definitiondownloader_meta_object(const 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KSyntaxHighlighting__DefinitionDownloader*
+/// @param self KSyntaxHighlighting__DefinitionDownloader*
 /// @param callback const QMetaObject* func(const KSyntaxHighlighting__DefinitionDownloader* self)
 ///
-void k_syntaxhighlighting__definitiondownloader_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_syntaxhighlighting__definitiondownloader_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -856,10 +856,10 @@ QObject* k_syntaxhighlighting__definitiondownloader_super_sender(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSyntaxHighlighting__DefinitionDownloader*
+/// @param self KSyntaxHighlighting__DefinitionDownloader*
 /// @param callback QObject* func(KSyntaxHighlighting__DefinitionDownloader* self)
 ///
-void k_syntaxhighlighting__definitiondownloader_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_syntaxhighlighting__definitiondownloader_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -887,10 +887,10 @@ int32_t k_syntaxhighlighting__definitiondownloader_super_sender_signal_index(con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSyntaxHighlighting__DefinitionDownloader*
+/// @param self KSyntaxHighlighting__DefinitionDownloader*
 /// @param callback int32_t func(KSyntaxHighlighting__DefinitionDownloader* self)
 ///
-void k_syntaxhighlighting__definitiondownloader_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_syntaxhighlighting__definitiondownloader_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -920,10 +920,10 @@ int32_t k_syntaxhighlighting__definitiondownloader_super_receivers(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSyntaxHighlighting__DefinitionDownloader*
+/// @param self KSyntaxHighlighting__DefinitionDownloader*
 /// @param callback int32_t func(KSyntaxHighlighting__DefinitionDownloader* self, const char* signal)
 ///
-void k_syntaxhighlighting__definitiondownloader_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_syntaxhighlighting__definitiondownloader_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -953,10 +953,10 @@ bool k_syntaxhighlighting__definitiondownloader_super_is_signal_connected(const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KSyntaxHighlighting__DefinitionDownloader*
+/// @param self KSyntaxHighlighting__DefinitionDownloader*
 /// @param callback bool func(KSyntaxHighlighting__DefinitionDownloader* self, QMetaMethod* signal)
 ///
-void k_syntaxhighlighting__definitiondownloader_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_syntaxhighlighting__definitiondownloader_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

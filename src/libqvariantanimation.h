@@ -44,10 +44,10 @@ const QMetaObject* q_variantanimation_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QVariantAnimation*
+/// @param self QVariantAnimation*
 /// @param callback const QMetaObject* func(const QVariantAnimation* self)
 ///
-void q_variantanimation_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_variantanimation_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -179,10 +179,10 @@ int32_t q_variantanimation_duration(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QVariantAnimation*
+/// @param self QVariantAnimation*
 /// @param callback int32_t func(const QVariantAnimation* self)
 ///
-void q_variantanimation_on_duration(const void* self, int32_t (*callback)(const void*));
+void q_variantanimation_on_duration(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#duration)
 ///
@@ -341,12 +341,12 @@ QVariant* q_variantanimation_interpolated(const void* self, const void* from, co
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QVariantAnimation*
+/// @param self QVariantAnimation*
 /// @param callback QVariant* func(const QVariantAnimation* self, QVariant* from, QVariant* to, double progress)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_variantanimation_on_interpolated(const void* self, QVariant* (*callback)(const void*, const void*, const void*, double));
+void q_variantanimation_on_interpolated(void* self, QVariant* (*callback)(const void*, const void*, const void*, double));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariantanimation.html#interpolated)
 ///
@@ -1301,10 +1301,10 @@ QObject* q_variantanimation_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVariantAnimation*
+/// @param self QVariantAnimation*
 /// @param callback QObject* func(QVariantAnimation* self)
 ///
-void q_variantanimation_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_variantanimation_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1332,10 +1332,10 @@ int32_t q_variantanimation_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVariantAnimation*
+/// @param self QVariantAnimation*
 /// @param callback int32_t func(QVariantAnimation* self)
 ///
-void q_variantanimation_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_variantanimation_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1365,10 +1365,10 @@ int32_t q_variantanimation_super_receivers(const void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVariantAnimation*
+/// @param self QVariantAnimation*
 /// @param callback int32_t func(QVariantAnimation* self, const char* signal)
 ///
-void q_variantanimation_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_variantanimation_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1398,10 +1398,10 @@ bool q_variantanimation_super_is_signal_connected(const void* self, const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QVariantAnimation*
+/// @param self QVariantAnimation*
 /// @param callback bool func(QVariantAnimation* self, QMetaMethod* signal)
 ///
-void q_variantanimation_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_variantanimation_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

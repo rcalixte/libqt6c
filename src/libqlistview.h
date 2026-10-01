@@ -32,10 +32,10 @@ const QMetaObject* q_listview_meta_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback const QMetaObject* func(const QListView* self)
 ///
-void q_listview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_listview_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -321,12 +321,12 @@ QRect* q_listview_visual_rect(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QRect* func(const QListView* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listview_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*));
+void q_listview_on_visual_rect(void* self, QRect* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#visualRect)
 ///
@@ -375,12 +375,12 @@ QModelIndex* q_listview_index_at(const void* self, const void* p);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QModelIndex* func(const QListView* self, QPoint* p)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listview_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*));
+void q_listview_on_index_at(void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#indexAt)
 ///
@@ -865,10 +865,10 @@ void q_listview_init_view_item_option(const void* self, void* option);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback void func(const QListView* self, QStyleOptionViewItem* option)
 ///
-void q_listview_on_init_view_item_option(const void* self, void (*callback)(const void*, void*));
+void q_listview_on_init_view_item_option(void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#initViewItemOption)
 ///
@@ -914,10 +914,10 @@ int32_t q_listview_horizontal_offset(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback int32_t func(const QListView* self)
 ///
-void q_listview_on_horizontal_offset(const void* self, int32_t (*callback)(const void*));
+void q_listview_on_horizontal_offset(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#horizontalOffset)
 ///
@@ -937,10 +937,10 @@ int32_t q_listview_vertical_offset(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback int32_t func(const QListView* self)
 ///
-void q_listview_on_vertical_offset(const void* self, int32_t (*callback)(const void*));
+void q_listview_on_vertical_offset(void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#verticalOffset)
 ///
@@ -1032,12 +1032,12 @@ QRegion* q_listview_visual_region_for_selection(const void* self, const void* se
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QRegion* func(const QListView* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listview_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*));
+void q_listview_on_visual_region_for_selection(void* self, QRegion* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#visualRegionForSelection)
 ///
@@ -1060,10 +1060,10 @@ libqt_list q_listview_selected_indexes(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback libqt_list of QModelIndex* func(const QListView* self)
 ///
-void q_listview_on_selected_indexes(const void* self, libqt_list (*callback)(const void*));
+void q_listview_on_selected_indexes(void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#selectedIndexes)
 ///
@@ -1109,10 +1109,10 @@ bool q_listview_is_index_hidden(const void* self, const void* index);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback bool func(const QListView* self, QModelIndex* index)
 ///
-void q_listview_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*));
+void q_listview_on_is_index_hidden(void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isIndexHidden)
 ///
@@ -1187,12 +1187,12 @@ QSize* q_listview_viewport_size_hint(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QSize* func(const QListView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_listview_on_viewport_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#viewportSizeHint)
 ///
@@ -2124,9 +2124,9 @@ void q_listview_set_frame_rect(void* self, const void* frameRect);
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QListView*
+/// @param self const QListView*
 ///
-QPaintDevice* q_listview_as_q_paint_device(void* self);
+QPaintDevice* q_listview_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2134,7 +2134,7 @@ QPaintDevice* q_listview_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QListView* q_listview_from_q_paint_device(void* _qpaintdevice);
+QListView* q_listview_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -5212,10 +5212,10 @@ int32_t q_listview_super_size_hint_for_row(const void* self, int row);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback int32_t func(QListView* self, int row)
 ///
-void q_listview_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int));
+void q_listview_on_size_hint_for_row(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5245,10 +5245,10 @@ int32_t q_listview_super_size_hint_for_column(const void* self, int column);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback int32_t func(QListView* self, int column)
 ///
-void q_listview_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int));
+void q_listview_on_size_hint_for_column(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5278,10 +5278,10 @@ QAbstractItemDelegate* q_listview_super_item_delegate_for_index(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QAbstractItemDelegate* func(QListView* self, QModelIndex* index)
 ///
-void q_listview_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
+void q_listview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5311,12 +5311,12 @@ QVariant* q_listview_super_input_method_query(const void* self, int32_t query);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QVariant* func(QListView* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_listview_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5715,10 +5715,10 @@ int32_t q_listview_super_selection_command(const void* self, const void* index, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback int32_t func(QListView* self, QModelIndex* index, QEvent* event)
 ///
-void q_listview_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*));
+void q_listview_on_selection_command(void* self, int32_t (*callback)(const void*, const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6078,12 +6078,12 @@ QSize* q_listview_super_minimum_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QSize* func(QListView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_listview_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6111,12 +6111,12 @@ QSize* q_listview_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QSize* func(QListView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listview_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_listview_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6245,10 +6245,10 @@ void q_listview_super_init_style_option(const void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback void func(QListView* self, QStyleOptionFrame* option)
 ///
-void q_listview_on_init_style_option(const void* self, void (*callback)(const void*, void*));
+void q_listview_on_init_style_option(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6276,10 +6276,10 @@ int32_t q_listview_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback int32_t func(QListView* self)
 ///
-void q_listview_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_listview_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6342,10 +6342,10 @@ int32_t q_listview_super_height_for_width(const void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback int32_t func(QListView* self, int param1)
 ///
-void q_listview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_listview_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -6373,10 +6373,10 @@ bool q_listview_super_has_height_for_width(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback bool func(QListView* self)
 ///
-void q_listview_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_listview_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6404,10 +6404,10 @@ QPaintEngine* q_listview_super_paint_engine(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QPaintEngine* func(QListView* self)
 ///
-void q_listview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_listview_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6771,10 +6771,10 @@ int32_t q_listview_super_metric(const void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback int32_t func(QListView* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_listview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_listview_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6804,10 +6804,10 @@ void q_listview_super_init_painter(const void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback void func(QListView* self, QPainter* painter)
 ///
-void q_listview_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_listview_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6837,10 +6837,10 @@ QPaintDevice* q_listview_super_redirected(const void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QPaintDevice* func(QListView* self, QPoint* offset)
 ///
-void q_listview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_listview_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6868,10 +6868,10 @@ QPainter* q_listview_super_shared_painter(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QPainter* func(QListView* self)
 ///
-void q_listview_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_listview_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7035,10 +7035,10 @@ int32_t q_listview_super_state(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback int32_t func(QListView* self)
 ///
-void q_listview_on_state(const void* self, int32_t (*callback)(const void*));
+void q_listview_on_state(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7229,12 +7229,12 @@ QPoint* q_listview_super_dirty_region_offset(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QPoint* func(QListView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listview_on_dirty_region_offset(const void* self, QPoint* (*callback)(const void*));
+void q_listview_on_dirty_region_offset(void* self, QPoint* (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7359,10 +7359,10 @@ int32_t q_listview_super_drop_indicator_position(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback int32_t func(QListView* self)
 ///
-void q_listview_on_drop_indicator_position(const void* self, int32_t (*callback)(const void*));
+void q_listview_on_drop_indicator_position(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7429,12 +7429,12 @@ QMargins* q_listview_super_viewport_margins(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QMargins* func(QListView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listview_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
+void q_listview_on_viewport_margins(void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -7650,10 +7650,10 @@ QObject* q_listview_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback QObject* func(QListView* self)
 ///
-void q_listview_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_listview_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7681,10 +7681,10 @@ int32_t q_listview_super_sender_signal_index(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback int32_t func(QListView* self)
 ///
-void q_listview_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_listview_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7714,10 +7714,10 @@ int32_t q_listview_super_receivers(const void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback int32_t func(QListView* self, const char* signal)
 ///
-void q_listview_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_listview_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -7747,10 +7747,10 @@ bool q_listview_super_is_signal_connected(const void* self, const void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback bool func(QListView* self, QMetaMethod* signal)
 ///
-void q_listview_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_listview_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -7782,10 +7782,10 @@ double q_listview_super_get_decoded_metric_f(const void* self, int32_t metricA, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QListView*
+/// @param self QListView*
 /// @param callback double func(QListView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_listview_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_listview_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

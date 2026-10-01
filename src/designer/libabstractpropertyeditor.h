@@ -35,10 +35,10 @@ const QMetaObject* q_designerpropertyeditorinterface_meta_object(const void* sel
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback const QMetaObject* func(const QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -108,10 +108,10 @@ QDesignerFormEditorInterface* q_designerpropertyeditorinterface_core(const void*
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback QDesignerFormEditorInterface* func(const QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#core)
 ///
@@ -133,10 +133,10 @@ bool q_designerpropertyeditorinterface_is_read_only(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback bool func(const QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_is_read_only(const void* self, bool (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_is_read_only(void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#object)
 ///
@@ -150,10 +150,10 @@ QObject* q_designerpropertyeditorinterface_object(const void* self);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback QObject* func(const QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_object(const void* self, QObject* (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_object(void* self, QObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#currentPropertyName)
 ///
@@ -169,10 +169,10 @@ const char* q_designerpropertyeditorinterface_current_property_name(const void* 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback const char* func(const QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_current_property_name(const void* self, const char* (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_current_property_name(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#propertyChanged)
 ///
@@ -268,9 +268,9 @@ const char* q_designerpropertyeditorinterface_tr3(const char* s, const char* c, 
 ///
 /// Upcasts to a QPaintDevice object
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QPaintDevice* q_designerpropertyeditorinterface_as_q_paint_device(void* self);
+QPaintDevice* q_designerpropertyeditorinterface_as_q_paint_device(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -278,7 +278,7 @@ QPaintDevice* q_designerpropertyeditorinterface_as_q_paint_device(void* self);
 ///
 /// @param _qpaintdevice QPaintDevice*
 ///
-QDesignerPropertyEditorInterface* q_designerpropertyeditorinterface_from_q_paint_device(void* _qpaintdevice);
+QDesignerPropertyEditorInterface* q_designerpropertyeditorinterface_from_q_paint_device(const void* _qpaintdevice);
 
 /// Inherited from QWidget
 ///
@@ -3263,10 +3263,10 @@ int32_t q_designerpropertyeditorinterface_super_dev_type(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback int32_t func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_dev_type(const void* self, int32_t (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_dev_type(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3327,12 +3327,12 @@ QSize* q_designerpropertyeditorinterface_super_size_hint(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback QSize* func(QDesignerPropertyEditorInterface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerpropertyeditorinterface_on_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3360,12 +3360,12 @@ QSize* q_designerpropertyeditorinterface_super_minimum_size_hint(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback QSize* func(QDesignerPropertyEditorInterface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerpropertyeditorinterface_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_minimum_size_hint(void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3395,10 +3395,10 @@ int32_t q_designerpropertyeditorinterface_super_height_for_width(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback int32_t func(QDesignerPropertyEditorInterface* self, int param1)
 ///
-void q_designerpropertyeditorinterface_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
+void q_designerpropertyeditorinterface_on_height_for_width(void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3426,10 +3426,10 @@ bool q_designerpropertyeditorinterface_super_has_height_for_width(const void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback bool func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_has_height_for_width(const void* self, bool (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_has_height_for_width(void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3457,10 +3457,10 @@ QPaintEngine* q_designerpropertyeditorinterface_super_paint_engine(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback QPaintEngine* func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_paint_engine(void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4385,10 +4385,10 @@ int32_t q_designerpropertyeditorinterface_super_metric(const void* self, int32_t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback int32_t func(QDesignerPropertyEditorInterface* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_designerpropertyeditorinterface_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
+void q_designerpropertyeditorinterface_on_metric(void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4418,10 +4418,10 @@ void q_designerpropertyeditorinterface_super_init_painter(const void* self, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback void func(QDesignerPropertyEditorInterface* self, QPainter* painter)
 ///
-void q_designerpropertyeditorinterface_on_init_painter(const void* self, void (*callback)(const void*, void*));
+void q_designerpropertyeditorinterface_on_init_painter(void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4451,10 +4451,10 @@ QPaintDevice* q_designerpropertyeditorinterface_super_redirected(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback QPaintDevice* func(QDesignerPropertyEditorInterface* self, QPoint* offset)
 ///
-void q_designerpropertyeditorinterface_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
+void q_designerpropertyeditorinterface_on_redirected(void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4482,10 +4482,10 @@ QPainter* q_designerpropertyeditorinterface_super_shared_painter(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback QPainter* func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_shared_painter(void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4548,12 +4548,12 @@ QVariant* q_designerpropertyeditorinterface_super_input_method_query(const void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback QVariant* func(QDesignerPropertyEditorInterface* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerpropertyeditorinterface_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
+void q_designerpropertyeditorinterface_on_input_method_query(void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4969,10 +4969,10 @@ QObject* q_designerpropertyeditorinterface_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback QObject* func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_sender(const void* self, QObject* (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5000,10 +5000,10 @@ int32_t q_designerpropertyeditorinterface_super_sender_signal_index(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback int32_t func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void q_designerpropertyeditorinterface_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5033,10 +5033,10 @@ int32_t q_designerpropertyeditorinterface_super_receivers(const void* self, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback int32_t func(QDesignerPropertyEditorInterface* self, const char* signal)
 ///
-void q_designerpropertyeditorinterface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void q_designerpropertyeditorinterface_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5066,10 +5066,10 @@ bool q_designerpropertyeditorinterface_super_is_signal_connected(const void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback bool func(QDesignerPropertyEditorInterface* self, QMetaMethod* signal)
 ///
-void q_designerpropertyeditorinterface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void q_designerpropertyeditorinterface_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5101,10 +5101,10 @@ double q_designerpropertyeditorinterface_super_get_decoded_metric_f(const void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QDesignerPropertyEditorInterface*
+/// @param self QDesignerPropertyEditorInterface*
 /// @param callback double func(QDesignerPropertyEditorInterface* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_designerpropertyeditorinterface_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
+void q_designerpropertyeditorinterface_on_get_decoded_metric_f(void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

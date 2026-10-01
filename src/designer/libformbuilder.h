@@ -369,10 +369,10 @@ bool q_formbuilder_super_check_property(const void* self, void* obj, const char*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const QFormBuilder*
+/// @param self QFormBuilder*
 /// @param callback bool func(QFormBuilder* self, QObject* obj, const char* prop)
 ///
-void q_formbuilder_on_check_property(const void* self, bool (*callback)(const void*, void*, const char*));
+void q_formbuilder_on_check_property(void* self, bool (*callback)(const void*, void*, const char*));
 
 /// Inherited from QAbstractFormBuilder
 ///

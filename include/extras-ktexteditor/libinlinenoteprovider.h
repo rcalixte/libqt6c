@@ -24,10 +24,10 @@ const QMetaObject* k_texteditor__inlinenoteprovider_meta_object(const void* self
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KTextEditor__InlineNoteProvider*
+/// @param self KTextEditor__InlineNoteProvider*
 /// @param callback const QMetaObject* func(const KTextEditor__InlineNoteProvider* self)
 ///
-void k_texteditor__inlinenoteprovider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
+void k_texteditor__inlinenoteprovider_on_meta_object(void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -102,10 +102,10 @@ libqt_list k_texteditor__inlinenoteprovider_inline_notes(const void* self, int l
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KTextEditor__InlineNoteProvider*
+/// @param self KTextEditor__InlineNoteProvider*
 /// @param callback libqt_list of int func(const KTextEditor__InlineNoteProvider* self, int line)
 ///
-void k_texteditor__inlinenoteprovider_on_inline_notes(const void* self, libqt_list (*callback)(const void*, int));
+void k_texteditor__inlinenoteprovider_on_inline_notes(void* self, libqt_list (*callback)(const void*, int));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNoteSize)
 ///
@@ -120,12 +120,12 @@ QSize* k_texteditor__inlinenoteprovider_inline_note_size(const void* self, const
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KTextEditor__InlineNoteProvider*
+/// @param self KTextEditor__InlineNoteProvider*
 /// @param callback QSize* func(const KTextEditor__InlineNoteProvider* self, KTextEditor__InlineNote* note)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_texteditor__inlinenoteprovider_on_inline_note_size(const void* self, QSize* (*callback)(const void*, const void*));
+void k_texteditor__inlinenoteprovider_on_inline_note_size(void* self, QSize* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#paintInlineNote)
 ///
@@ -142,10 +142,10 @@ void k_texteditor__inlinenoteprovider_paint_inline_note(const void* self, const 
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self const KTextEditor__InlineNoteProvider*
+/// @param self KTextEditor__InlineNoteProvider*
 /// @param callback void func(const KTextEditor__InlineNoteProvider* self, KTextEditor__InlineNote* note, QPainter* painter, enum Qt__LayoutDirection direction)
 ///
-void k_texteditor__inlinenoteprovider_on_paint_inline_note(const void* self, void (*callback)(const void*, const void*, void*, int32_t));
+void k_texteditor__inlinenoteprovider_on_paint_inline_note(void* self, void (*callback)(const void*, const void*, void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenoteprovider.html#inlineNoteActivated)
 ///
@@ -1007,10 +1007,10 @@ QObject* k_texteditor__inlinenoteprovider_super_sender(const void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KTextEditor__InlineNoteProvider*
+/// @param self KTextEditor__InlineNoteProvider*
 /// @param callback QObject* func(KTextEditor__InlineNoteProvider* self)
 ///
-void k_texteditor__inlinenoteprovider_on_sender(const void* self, QObject* (*callback)(const void*));
+void k_texteditor__inlinenoteprovider_on_sender(void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1038,10 +1038,10 @@ int32_t k_texteditor__inlinenoteprovider_super_sender_signal_index(const void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KTextEditor__InlineNoteProvider*
+/// @param self KTextEditor__InlineNoteProvider*
 /// @param callback int32_t func(KTextEditor__InlineNoteProvider* self)
 ///
-void k_texteditor__inlinenoteprovider_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
+void k_texteditor__inlinenoteprovider_on_sender_signal_index(void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1071,10 +1071,10 @@ int32_t k_texteditor__inlinenoteprovider_super_receivers(const void* self, const
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KTextEditor__InlineNoteProvider*
+/// @param self KTextEditor__InlineNoteProvider*
 /// @param callback int32_t func(KTextEditor__InlineNoteProvider* self, const char* signal)
 ///
-void k_texteditor__inlinenoteprovider_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
+void k_texteditor__inlinenoteprovider_on_receivers(void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1104,10 +1104,10 @@ bool k_texteditor__inlinenoteprovider_super_is_signal_connected(const void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self const KTextEditor__InlineNoteProvider*
+/// @param self KTextEditor__InlineNoteProvider*
 /// @param callback bool func(KTextEditor__InlineNoteProvider* self, QMetaMethod* signal)
 ///
-void k_texteditor__inlinenoteprovider_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
+void k_texteditor__inlinenoteprovider_on_is_signal_connected(void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
