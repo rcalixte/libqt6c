@@ -10,10 +10,6 @@ KFileMetaData__UserMetaData* k_filemetadata__usermetadata_new2(const void* rhs) 
     return KFileMetaData__UserMetaData_New2((KFileMetaData__UserMetaData*)rhs);
 }
 
-void k_filemetadata__usermetadata_operator_assign(void* self, const void* rhs) {
-    KFileMetaData__UserMetaData_OperatorAssign((KFileMetaData__UserMetaData*)self, (KFileMetaData__UserMetaData*)rhs);
-}
-
 const char* k_filemetadata__usermetadata_file_path(const void* self) {
     libqt_string _str = KFileMetaData__UserMetaData_FilePath((KFileMetaData__UserMetaData*)self);
     char* _ret = qstring_to_char(_str);

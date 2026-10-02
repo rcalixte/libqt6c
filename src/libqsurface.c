@@ -23,10 +23,6 @@ QSize* q_surface_size(const void* self) {
     return QSurface_Size((QSurface*)self);
 }
 
-void q_surface_operator_assign(void* self, const void* param1) {
-    QSurface_OperatorAssign((QSurface*)self, (QSurface*)param1);
-}
-
 void q_surface_delete(void* self) {
     QSurface_Delete((QSurface*)(self));
 }

@@ -404,10 +404,6 @@ void q_accessible__state_delete(void* self) {
     QAccessible__State_Delete((QAccessible__State*)(self));
 }
 
-void q_accessible__activationobserver_operator_assign(void* self, const void* param1) {
-    QAccessible__ActivationObserver_OperatorAssign((QAccessible__ActivationObserver*)self, (QAccessible__ActivationObserver*)param1);
-}
-
 void q_accessible__activationobserver_delete(void* self) {
     QAccessible__ActivationObserver_Delete((QAccessible__ActivationObserver*)(self));
 }

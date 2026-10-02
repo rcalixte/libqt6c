@@ -30,13 +30,6 @@ KFileItemListProperties* k_fileitemlistproperties_new2(const void* items);
 ///
 KFileItemListProperties* k_fileitemlistproperties_new3(const void* param1);
 
-/// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#operator-eq)
-///
-/// @param self KFileItemListProperties*
-/// @param other KFileItemListProperties*
-///
-void k_fileitemlistproperties_operator_assign(void* self, const void* other);
-
 /// [Upstream resources](https://api.kde.org/kfileitemlistproperties.html#setItems)
 ///
 /// @param self KFileItemListProperties*

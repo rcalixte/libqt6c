@@ -38,13 +38,6 @@ KACL* k_acl_new3(mode_t basicPermissions);
 ///
 KACL* k_acl_new4();
 
-/// [Upstream resources](https://api.kde.org/kacl.html#operator-eq)
-///
-/// @param self KACL*
-/// @param rhs KACL*
-///
-void k_acl_operator_assign(void* self, const void* rhs);
-
 /// [Upstream resources](https://api.kde.org/kacl.html#operator-eq-eq)
 ///
 /// @param self const KACL*

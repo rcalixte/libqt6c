@@ -3010,13 +3010,6 @@ void q_cpabstractpaintbuffer_on_reallocate_buffer(void* self, void (*callback)(v
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
 ///
 /// @param self QCPAbstractPaintBuffer*
-/// @param param1 QCPAbstractPaintBuffer*
-///
-void q_cpabstractpaintbuffer_operator_assign(void* self, const void* param1);
-
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPaintBuffer.html)
-///
-/// @param self QCPAbstractPaintBuffer*
 /// @param invalidated bool
 ///
 void q_cpabstractpaintbuffer_set_invalidated1(void* self, bool invalidated);
@@ -3141,13 +3134,6 @@ void q_cppaintbufferpixmap_on_reallocate_buffer(void* self, void (*callback)(voi
 /// @param self QCPPaintBufferPixmap*
 ///
 void q_cppaintbufferpixmap_super_reallocate_buffer(void* self);
-
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPaintBufferPixmap.html)
-///
-/// @param self QCPPaintBufferPixmap*
-/// @param param1 QCPPaintBufferPixmap*
-///
-void q_cppaintbufferpixmap_operator_assign(void* self, const void* param1);
 
 /// Inherited from QCPAbstractPaintBuffer
 ///
@@ -36855,13 +36841,6 @@ int32_t q_cpplottableinterface1d_find_end(const void* self, double sortKey, bool
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
 ///
-/// @param self QCPPlottableInterface1D*
-/// @param param1 QCPPlottableInterface1D*
-///
-void q_cpplottableinterface1d_operator_assign(void* self, const void* param1);
-
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QCPPlottableInterface1D*
@@ -52017,15 +51996,6 @@ void q_cpgraph_set_data3(void* self, libqt_list keys, libqt_list values, bool al
 ///
 void q_cpgraph_add_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted);
 
-/// Inherited from QCPPlottableInterface1D
-///
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
-///
-/// @param self QCPGraph*
-/// @param param1 QCPPlottableInterface1D*
-///
-void q_cpgraph_operator_assign(void* self, const void* param1);
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -54837,15 +54807,6 @@ void q_cpcurve_set_data4(void* self, libqt_list t, libqt_list keys, libqt_list v
 /// @param alreadySorted bool
 ///
 void q_cpcurve_add_data42(void* self, libqt_list t, libqt_list keys, libqt_list values, bool alreadySorted);
-
-/// Inherited from QCPPlottableInterface1D
-///
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
-///
-/// @param self QCPCurve*
-/// @param param1 QCPPlottableInterface1D*
-///
-void q_cpcurve_operator_assign(void* self, const void* param1);
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -58647,15 +58608,6 @@ void q_cpbars_set_data3(void* self, libqt_list keys, libqt_list values, bool alr
 ///
 void q_cpbars_add_data3(void* self, libqt_list keys, libqt_list values, bool alreadySorted);
 
-/// Inherited from QCPPlottableInterface1D
-///
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
-///
-/// @param self QCPBars*
-/// @param param1 QCPPlottableInterface1D*
-///
-void q_cpbars_operator_assign(void* self, const void* param1);
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -61381,15 +61333,6 @@ void q_cpstatisticalbox_add_data7(void* self, libqt_list keys, libqt_list minimu
 /// @param outliers libqt_list of double
 ///
 void q_cpstatisticalbox_add_data72(void* self, double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, libqt_list outliers);
-
-/// Inherited from QCPPlottableInterface1D
-///
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
-///
-/// @param self QCPStatisticalBox*
-/// @param param1 QCPPlottableInterface1D*
-///
-void q_cpstatisticalbox_operator_assign(void* self, const void* param1);
 
 /// Inherited from QCPAbstractPlottable
 ///
@@ -66715,15 +66658,6 @@ void q_cpfinancial_set_data6(void* self, libqt_list keys, libqt_list open, libqt
 ///
 void q_cpfinancial_add_data6(void* self, libqt_list keys, libqt_list open, libqt_list high, libqt_list low, libqt_list close, bool alreadySorted);
 
-/// Inherited from QCPPlottableInterface1D
-///
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
-///
-/// @param self QCPFinancial*
-/// @param param1 QCPPlottableInterface1D*
-///
-void q_cpfinancial_operator_assign(void* self, const void* param1);
-
 /// Inherited from QCPAbstractPlottable
 ///
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAbstractPlottable.html)
@@ -70539,15 +70473,6 @@ void q_cperrorbars_destroyed1(void* self, void* param1);
 /// @param callback void func(QCPErrorBars* self, QObject* param1)
 ///
 void q_cperrorbars_on_destroyed1(void* self, void (*callback)(void*, void*));
-
-/// Inherited from QCPPlottableInterface1D
-///
-/// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPlottableInterface1D.html)
-///
-/// @param self QCPErrorBars*
-/// @param param1 QCPPlottableInterface1D*
-///
-void q_cperrorbars_operator_assign(void* self, const void* param1);
 
 /// Inherited from QCPAbstractPlottable
 ///

@@ -17,10 +17,6 @@ void q_geoserviceproviderfactory_super_set_qml_engine(void* self, void* engine) 
     QGeoServiceProviderFactory_SuperSetQmlEngine((QGeoServiceProviderFactory*)self, (QQmlEngine*)engine);
 }
 
-void q_geoserviceproviderfactory_operator_assign(void* self, const void* param1) {
-    QGeoServiceProviderFactory_OperatorAssign((QGeoServiceProviderFactory*)self, (QGeoServiceProviderFactory*)param1);
-}
-
 void q_geoserviceproviderfactory_delete(void* self) {
     QGeoServiceProviderFactory_Delete((QGeoServiceProviderFactory*)(self));
 }

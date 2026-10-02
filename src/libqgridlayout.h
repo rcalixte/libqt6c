@@ -1491,15 +1491,6 @@ void q_gridlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_gridlayout_alignment(const void* self);
 
-/// Inherited from QLayoutItem
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
-///
-/// @param self QGridLayout*
-/// @param param1 QLayoutItem*
-///
-void q_gridlayout_operator_assign(void* self, const void* param1);
-
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#geometry)

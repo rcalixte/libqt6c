@@ -41,13 +41,6 @@ Accounts__Error* q_accounts__error_new4(int32_t type, const char* message);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
 ///
-/// @param self Accounts__Error*
-/// @param src Accounts__Error*
-///
-void q_accounts__error_operator_assign(void* self, const void* src);
-
-/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1Error.html)
-///
 /// @param self const Accounts__Error*
 ///
 /// @return enum Accounts__Error__ErrorType

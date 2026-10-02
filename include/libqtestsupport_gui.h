@@ -68,13 +68,6 @@ QTest__QTouchEventSequence* q_test__qtoucheventsequence_stationary(void* self, i
 ///
 bool q_test__qtoucheventsequence_commit(void* self, bool processEvents);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#operator-eq)
-///
-/// @param self QTest__QTouchEventSequence*
-/// @param param1 QTest__QTouchEventSequence*
-///
-void q_test__qtoucheventsequence_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#press)
 ///
 /// @param self QTest__QTouchEventSequence*

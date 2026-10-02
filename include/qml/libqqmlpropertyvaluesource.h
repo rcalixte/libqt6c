@@ -32,13 +32,6 @@ void q_qmlpropertyvaluesource_set_target(void* self, const void* target);
 ///
 void q_qmlpropertyvaluesource_on_set_target(void* self, void (*callback)(void*, const void*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlpropertyvaluesource.html#operator-eq)
-///
-/// @param self QQmlPropertyValueSource*
-/// @param param1 QQmlPropertyValueSource*
-///
-void q_qmlpropertyvaluesource_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlpropertyvaluesource.html#dtor.QQmlPropertyValueSource)
 ///
 /// Delete this object from C++ memory.

@@ -1149,15 +1149,6 @@ void k_twofingertaprecognizer_unregister_recognizer(int32_t type);
 
 /// Inherited from QGestureRecognizer
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#operator-eq)
-///
-/// @param self KTwoFingerTapRecognizer*
-/// @param param1 QGestureRecognizer*
-///
-void k_twofingertaprecognizer_operator_assign(void* self, const void* param1);
-
-/// Inherited from QGestureRecognizer
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#reset)
 ///
 /// Wrapper to allow calling virtual or protected method

@@ -1967,15 +1967,6 @@ int32_t q_rasterwindow_surface_class(const void* self);
 ///
 bool q_rasterwindow_supports_open_g_l(const void* self);
 
-/// Inherited from QSurface
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#operator-eq)
-///
-/// @param self QRasterWindow*
-/// @param param1 QSurface*
-///
-void q_rasterwindow_operator_assign(void* self, const void* param1);
-
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)

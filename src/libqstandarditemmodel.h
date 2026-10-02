@@ -782,13 +782,6 @@ void q_standarditem_on_operator_lesser(void* self, bool (*callback)(const void*,
 ///
 bool q_standarditem_super_operator_lesser(const void* self, const void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#operator-eq)
-///
-/// @param self QStandardItem*
-/// @param other QStandardItem*
-///
-void q_standarditem_operator_assign(void* self, const void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditem.html#emitDataChanged)
 ///
 /// @param self QStandardItem*

@@ -10,13 +10,6 @@
 
 /// [Upstream resources](https://api.kde.org/terminalinterface.html)
 
-/// [Upstream resources](https://api.kde.org/terminalinterface.html#operator-eq)
-///
-/// @param self TerminalInterface*
-/// @param param1 TerminalInterface*
-///
-void k_terminalinterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://api.kde.org/terminalinterface.html#dtor.TerminalInterface)
 ///
 /// Delete this object from C++ memory.

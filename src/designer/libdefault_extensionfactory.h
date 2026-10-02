@@ -635,15 +635,6 @@ void q_extensionfactory_destroyed1(void* self, void* param1);
 ///
 void q_extensionfactory_on_destroyed1(void* self, void (*callback)(void*, void*));
 
-/// Inherited from QAbstractExtensionFactory
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionfactory.html#operator-eq)
-///
-/// @param self QExtensionFactory*
-/// @param param1 QAbstractExtensionFactory*
-///
-void q_extensionfactory_operator_assign(void* self, const void* param1);
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)

@@ -22,13 +22,6 @@ QPlaceSearchResult* q_placesearchresult_new();
 ///
 QPlaceSearchResult* q_placesearchresult_new2(const void* other);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#operator-eq)
-///
-/// @param self QPlaceSearchResult*
-/// @param other QPlaceSearchResult*
-///
-void q_placesearchresult_operator_assign(void* self, const void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#operator-eq-eq)
 ///
 /// @param self const QPlaceSearchResult*

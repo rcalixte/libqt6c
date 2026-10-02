@@ -237,13 +237,6 @@ void q_accessibleinterface_virtual_hook(void* self, int id, void* data);
 ///
 void* q_accessibleinterface_interface_cast(void* self, int32_t param1);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html#operator-eq)
-///
-/// @param self QAccessibleInterface*
-/// @param param1 QAccessibleInterface*
-///
-void q_accessibleinterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextinterface.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextinterface.html#selection)
@@ -409,13 +402,6 @@ void q_accessibletextinterface_scroll_to_substring(void* self, int startIndex, i
 ///
 const char* q_accessibletextinterface_attributes(const void* self, int offset, int* startOffset, int* endOffset);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextinterface.html#operator-eq)
-///
-/// @param self QAccessibleTextInterface*
-/// @param param1 QAccessibleTextInterface*
-///
-void q_accessibletextinterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletextinterface.html#dtor.QAccessibleTextInterface)
 ///
 /// Delete this object from C++ memory.
@@ -456,13 +442,6 @@ void q_accessibleeditabletextinterface_insert_text(void* self, int offset, const
 /// @param text const char*
 ///
 void q_accessibleeditabletextinterface_replace_text(void* self, int startOffset, int endOffset, const char* text);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleeditabletextinterface.html#operator-eq)
-///
-/// @param self QAccessibleEditableTextInterface*
-/// @param param1 QAccessibleEditableTextInterface*
-///
-void q_accessibleeditabletextinterface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleeditabletextinterface.html#dtor.QAccessibleEditableTextInterface)
 ///
@@ -514,13 +493,6 @@ QVariant* q_accessiblevalueinterface_minimum_value(const void* self);
 /// @param self const QAccessibleValueInterface*
 ///
 QVariant* q_accessiblevalueinterface_minimum_step_size(const void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblevalueinterface.html#operator-eq)
-///
-/// @param self QAccessibleValueInterface*
-/// @param param1 QAccessibleValueInterface*
-///
-void q_accessiblevalueinterface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblevalueinterface.html#dtor.QAccessibleValueInterface)
 ///
@@ -599,13 +571,6 @@ int32_t q_accessibletablecellinterface_row_extent(const void* self);
 /// @param self const QAccessibleTableCellInterface*
 ///
 QAccessibleInterface* q_accessibletablecellinterface_table(const void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletablecellinterface.html#operator-eq)
-///
-/// @param self QAccessibleTableCellInterface*
-/// @param param1 QAccessibleTableCellInterface*
-///
-void q_accessibletablecellinterface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletablecellinterface.html#dtor.QAccessibleTableCellInterface)
 ///
@@ -798,13 +763,6 @@ bool q_accessibletableinterface_unselect_column(void* self, int column);
 ///
 void q_accessibletableinterface_model_change(void* self, void* event);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletableinterface.html#operator-eq)
-///
-/// @param self QAccessibleTableInterface*
-/// @param param1 QAccessibleTableInterface*
-///
-void q_accessibletableinterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibletableinterface.html#dtor.QAccessibleTableInterface)
 ///
 /// Delete this object from C++ memory.
@@ -943,13 +901,6 @@ const char* q_accessibleactioninterface_next_page_action();
 ///
 const char* q_accessibleactioninterface_previous_page_action();
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#operator-eq)
-///
-/// @param self QAccessibleActionInterface*
-/// @param param1 QAccessibleActionInterface*
-///
-void q_accessibleactioninterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -1005,13 +956,6 @@ QSize* q_accessibleimageinterface_image_size(const void* self);
 ///
 QPoint* q_accessibleimageinterface_image_position(const void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleimageinterface.html#operator-eq)
-///
-/// @param self QAccessibleImageInterface*
-/// @param param1 QAccessibleImageInterface*
-///
-void q_accessibleimageinterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleimageinterface.html#dtor.QAccessibleImageInterface)
 ///
 /// Delete this object from C++ memory.
@@ -1065,13 +1009,6 @@ int32_t q_accessiblehyperlinkinterface_end_index(const void* self);
 /// @param self const QAccessibleHyperlinkInterface*
 ///
 bool q_accessiblehyperlinkinterface_is_valid(const void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblehyperlinkinterface.html#operator-eq)
-///
-/// @param self QAccessibleHyperlinkInterface*
-/// @param param1 QAccessibleHyperlinkInterface*
-///
-void q_accessiblehyperlinkinterface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblehyperlinkinterface.html#dtor.QAccessibleHyperlinkInterface)
 ///
@@ -1149,13 +1086,6 @@ bool q_accessibleselectioninterface_select_all(void* self);
 ///
 bool q_accessibleselectioninterface_clear(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#operator-eq)
-///
-/// @param self QAccessibleSelectionInterface*
-/// @param param1 QAccessibleSelectionInterface*
-///
-void q_accessibleselectioninterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#dtor.QAccessibleSelectionInterface)
 ///
 /// Delete this object from C++ memory.
@@ -1184,13 +1114,6 @@ libqt_list q_accessibleattributesinterface_attribute_keys(const void* self);
 /// @param key enum QAccessible__Attribute
 ///
 QVariant* q_accessibleattributesinterface_attribute_value(const void* self, int32_t key);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleattributesinterface.html#operator-eq)
-///
-/// @param self QAccessibleAttributesInterface*
-/// @param param1 QAccessibleAttributesInterface*
-///
-void q_accessibleattributesinterface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleattributesinterface.html#dtor.QAccessibleAttributesInterface)
 ///

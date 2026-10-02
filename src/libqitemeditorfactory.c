@@ -2,10 +2,6 @@
 #include "libqitemeditorfactory.hpp"
 #include "libqitemeditorfactory.h"
 
-void q_itemeditorcreatorbase_operator_assign(void* self, const void* param1) {
-    QItemEditorCreatorBase_OperatorAssign((QItemEditorCreatorBase*)self, (QItemEditorCreatorBase*)param1);
-}
-
 void q_itemeditorcreatorbase_delete(void* self) {
     QItemEditorCreatorBase_Delete((QItemEditorCreatorBase*)(self));
 }
@@ -58,10 +54,6 @@ const QItemEditorFactory* q_itemeditorfactory_default_factory() {
 
 void q_itemeditorfactory_set_default_factory(void* factory) {
     QItemEditorFactory_SetDefaultFactory((QItemEditorFactory*)factory);
-}
-
-void q_itemeditorfactory_operator_assign(void* self, const void* param1) {
-    QItemEditorFactory_OperatorAssign((QItemEditorFactory*)self, (QItemEditorFactory*)param1);
 }
 
 void q_itemeditorfactory_delete(void* self) {

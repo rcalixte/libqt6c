@@ -62,10 +62,6 @@ void k_messageboxdontaskagaininterface_on_set_config(void* self, void (*callback
     KMessageBoxDontAskAgainInterface_OnSetConfig((KMessageBoxDontAskAgainInterface*)self, (intptr_t)callback);
 }
 
-void k_messageboxdontaskagaininterface_operator_assign(void* self, const void* param1) {
-    KMessageBoxDontAskAgainInterface_OperatorAssign((KMessageBoxDontAskAgainInterface*)self, (KMessageBoxDontAskAgainInterface*)param1);
-}
-
 void k_messageboxdontaskagaininterface_delete(void* self) {
     KMessageBoxDontAskAgainInterface_Delete((KMessageBoxDontAskAgainInterface*)(self));
 }

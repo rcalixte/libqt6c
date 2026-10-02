@@ -30,7 +30,6 @@ KFileMetaData__SimpleExtractionResult* KFileMetaData__SimpleExtractionResult_New
 KFileMetaData__SimpleExtractionResult* KFileMetaData__SimpleExtractionResult_New2(const KFileMetaData__SimpleExtractionResult* rhs);
 KFileMetaData__SimpleExtractionResult* KFileMetaData__SimpleExtractionResult_New3(const libqt_string url, const libqt_string mimetype);
 KFileMetaData__SimpleExtractionResult* KFileMetaData__SimpleExtractionResult_New4(const libqt_string url, const libqt_string mimetype, const int* flags);
-void KFileMetaData__SimpleExtractionResult_OperatorAssign(KFileMetaData__SimpleExtractionResult* self, const KFileMetaData__SimpleExtractionResult* rhs);
 bool KFileMetaData__SimpleExtractionResult_OperatorEqual(const KFileMetaData__SimpleExtractionResult* self, const KFileMetaData__SimpleExtractionResult* rhs);
 void KFileMetaData__SimpleExtractionResult_Add(KFileMetaData__SimpleExtractionResult* self, int property, const QVariant* value);
 void KFileMetaData__SimpleExtractionResult_AddType(KFileMetaData__SimpleExtractionResult* self, int type);

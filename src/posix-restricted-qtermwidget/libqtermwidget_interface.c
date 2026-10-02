@@ -305,10 +305,6 @@ QTermWidgetInterface* q_termwidgetinterface_create_widget(const void* self, int 
     return QTermWidgetInterface_CreateWidget((QTermWidgetInterface*)self, startnow);
 }
 
-void q_termwidgetinterface_operator_assign(void* self, const void* param1) {
-    QTermWidgetInterface_OperatorAssign((QTermWidgetInterface*)self, (QTermWidgetInterface*)param1);
-}
-
 void q_termwidgetinterface_delete(void* self) {
     QTermWidgetInterface_Delete((QTermWidgetInterface*)(self));
 }

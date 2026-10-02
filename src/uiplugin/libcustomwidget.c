@@ -26,16 +26,8 @@ const char* q_designercustomwidgetinterface_code_template(const void* self) {
     return _ret;
 }
 
-void q_designercustomwidgetinterface_operator_assign(void* self, const void* param1) {
-    QDesignerCustomWidgetInterface_OperatorAssign((QDesignerCustomWidgetInterface*)self, (QDesignerCustomWidgetInterface*)param1);
-}
-
 void q_designercustomwidgetinterface_delete(void* self) {
     QDesignerCustomWidgetInterface_Delete((QDesignerCustomWidgetInterface*)(self));
-}
-
-void q_designercustomwidgetcollectioninterface_operator_assign(void* self, const void* param1) {
-    QDesignerCustomWidgetCollectionInterface_OperatorAssign((QDesignerCustomWidgetCollectionInterface*)self, (QDesignerCustomWidgetCollectionInterface*)param1);
 }
 
 void q_designercustomwidgetcollectioninterface_delete(void* self) {

@@ -30,13 +30,6 @@ QFutureInterfaceBase* q_futureinterfacebase_new2(const void* other);
 ///
 QFutureInterfaceBase* q_futureinterfacebase_new3(int32_t initialState);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator-eq)
-///
-/// @param self QFutureInterfaceBase*
-/// @param other QFutureInterfaceBase*
-///
-void q_futureinterfacebase_operator_assign(void* self, const void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qfutureinterfacebase.html#reportStarted)
 ///
 /// @param self QFutureInterfaceBase*

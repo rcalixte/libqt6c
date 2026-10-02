@@ -141,13 +141,6 @@ void k_messageboxdontaskagaininterface_set_config(void* self, void* config);
 ///
 void k_messageboxdontaskagaininterface_on_set_config(void* self, void (*callback)(void*, void*));
 
-/// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#operator-eq)
-///
-/// @param self KMessageBoxDontAskAgainInterface*
-/// @param param1 KMessageBoxDontAskAgainInterface*
-///
-void k_messageboxdontaskagaininterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#dtor.KMessageBoxDontAskAgainInterface)
 ///
 /// Delete this object from C++ memory.

@@ -14,10 +14,6 @@ void q_qmlabstracturlinterceptor_on_intercept(void* self, QUrl* (*callback)(void
     QQmlAbstractUrlInterceptor_OnIntercept((QQmlAbstractUrlInterceptor*)self, (intptr_t)callback);
 }
 
-void q_qmlabstracturlinterceptor_operator_assign(void* self, const void* param1) {
-    QQmlAbstractUrlInterceptor_OperatorAssign((QQmlAbstractUrlInterceptor*)self, (QQmlAbstractUrlInterceptor*)param1);
-}
-
 void q_qmlabstracturlinterceptor_delete(void* self) {
     QQmlAbstractUrlInterceptor_Delete((QQmlAbstractUrlInterceptor*)(self));
 }

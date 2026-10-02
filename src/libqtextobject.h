@@ -2173,13 +2173,6 @@ void q_textframe_delete(void* self);
 ///
 QTextBlockUserData* q_textblockuserdata_new();
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextblockuserdata.html#operator-eq)
-///
-/// @param self QTextBlockUserData*
-/// @param param1 QTextBlockUserData*
-///
-void q_textblockuserdata_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextblockuserdata.html#dtor.QTextBlockUserData)
 ///
 /// Delete this object from C++ memory.

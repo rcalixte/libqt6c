@@ -1726,10 +1726,6 @@ libqt_list /* of Konsole__Filter__HotSpot* */ k_onsole__filterchain_hot_spots(co
     return _arr;
 }
 
-void k_onsole__filterchain_operator_assign(void* self, const void* param1) {
-    Konsole__FilterChain_OperatorAssign((Konsole__FilterChain*)self, (Konsole__FilterChain*)param1);
-}
-
 void k_onsole__filterchain_delete(void* self) {
     Konsole__FilterChain_Delete((Konsole__FilterChain*)(self));
 }
@@ -1740,10 +1736,6 @@ Konsole__TerminalImageFilterChain* k_onsole__terminalimagefilterchain_new() {
 
 Konsole__TerminalImageFilterChain* k_onsole__terminalimagefilterchain_new2(const void* param1) {
     return Konsole__TerminalImageFilterChain_New2((Konsole__TerminalImageFilterChain*)param1);
-}
-
-void k_onsole__terminalimagefilterchain_operator_assign(void* self, const void* param1) {
-    Konsole__TerminalImageFilterChain_OperatorAssign((Konsole__TerminalImageFilterChain*)self, (Konsole__TerminalImageFilterChain*)param1);
 }
 
 void k_onsole__terminalimagefilterchain_add_filter(void* self, void* filter) {
@@ -1837,10 +1829,6 @@ void k_onsole__filter__hotspot_set_type(void* self, int32_t type) {
     Konsole__Filter__HotSpot_SetType((Konsole__Filter__HotSpot*)self, type);
 }
 
-void k_onsole__filter__hotspot_operator_assign(void* self, const void* param1) {
-    Konsole__Filter__HotSpot_OperatorAssign((Konsole__Filter__HotSpot*)self, (Konsole__Filter__HotSpot*)param1);
-}
-
 void k_onsole__filter__hotspot_delete(void* self) {
     Konsole__Filter__HotSpot_Delete((Konsole__Filter__HotSpot*)(self));
 }
@@ -1894,10 +1882,6 @@ const char** k_onsole__regexpfilter__hotspot_captured_texts(const void* self) {
     _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
-}
-
-void k_onsole__regexpfilter__hotspot_operator_assign(void* self, const void* param1) {
-    Konsole__RegExpFilter__HotSpot_OperatorAssign((Konsole__RegExpFilter__HotSpot*)self, (Konsole__RegExpFilter__HotSpot*)param1);
 }
 
 int32_t k_onsole__regexpfilter__hotspot_start_line(const void* self) {
@@ -2005,10 +1989,6 @@ const char** k_onsole__urlfilter__hotspot_captured_texts(const void* self) {
     _ret[_arr.len] = NULL;
     libqt_free(_arr.data.ptr);
     return _ret;
-}
-
-void k_onsole__urlfilter__hotspot_operator_assign(void* self, const void* param1) {
-    Konsole__RegExpFilter__HotSpot_OperatorAssign((Konsole__RegExpFilter__HotSpot*)self, (Konsole__RegExpFilter__HotSpot*)param1);
 }
 
 int32_t k_onsole__urlfilter__hotspot_start_line(const void* self) {

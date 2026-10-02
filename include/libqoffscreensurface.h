@@ -743,15 +743,6 @@ int32_t q_offscreensurface_surface_class(const void* self);
 ///
 bool q_offscreensurface_supports_open_g_l(const void* self);
 
-/// Inherited from QSurface
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#operator-eq)
-///
-/// @param self QOffscreenSurface*
-/// @param param1 QSurface*
-///
-void q_offscreensurface_operator_assign(void* self, const void* param1);
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)

@@ -462,13 +462,6 @@ void q_listwidgetitem_on_write(void* self, void (*callback)(const void*, void*))
 ///
 void q_listwidgetitem_super_write(const void* self, void* out);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator-eq)
-///
-/// @param self QListWidgetItem*
-/// @param other QListWidgetItem*
-///
-void q_listwidgetitem_operator_assign(void* self, const void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#type)
 ///
 /// @param self const QListWidgetItem*

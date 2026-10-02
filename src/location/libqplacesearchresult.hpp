@@ -21,7 +21,6 @@ typedef struct QPlaceSearchResult QPlaceSearchResult;
 
 QPlaceSearchResult* QPlaceSearchResult_New();
 QPlaceSearchResult* QPlaceSearchResult_New2(const QPlaceSearchResult* other);
-void QPlaceSearchResult_OperatorAssign(QPlaceSearchResult* self, const QPlaceSearchResult* other);
 bool QPlaceSearchResult_OperatorEqual(const QPlaceSearchResult* self, const QPlaceSearchResult* other);
 bool QPlaceSearchResult_OperatorNotEqual(const QPlaceSearchResult* self, const QPlaceSearchResult* other);
 int QPlaceSearchResult_Type(const QPlaceSearchResult* self);

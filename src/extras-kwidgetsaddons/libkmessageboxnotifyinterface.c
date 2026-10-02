@@ -14,10 +14,6 @@ void k_messageboxnotifyinterface_on_send_notification(void* self, void (*callbac
     KMessageBoxNotifyInterface_OnSendNotification((KMessageBoxNotifyInterface*)self, (intptr_t)callback);
 }
 
-void k_messageboxnotifyinterface_operator_assign(void* self, const void* param1) {
-    KMessageBoxNotifyInterface_OperatorAssign((KMessageBoxNotifyInterface*)self, (KMessageBoxNotifyInterface*)param1);
-}
-
 void k_messageboxnotifyinterface_delete(void* self) {
     KMessageBoxNotifyInterface_Delete((KMessageBoxNotifyInterface*)(self));
 }

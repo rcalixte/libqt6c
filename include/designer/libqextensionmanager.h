@@ -654,15 +654,6 @@ void q_extensionmanager_destroyed1(void* self, void* param1);
 ///
 void q_extensionmanager_on_destroyed1(void* self, void (*callback)(void*, void*));
 
-/// Inherited from QAbstractExtensionManager
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionmanager.html#operator-eq)
-///
-/// @param self QExtensionManager*
-/// @param param1 QAbstractExtensionManager*
-///
-void q_extensionmanager_operator_assign(void* self, const void* param1);
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)

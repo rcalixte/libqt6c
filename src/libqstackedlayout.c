@@ -572,10 +572,6 @@ int32_t q_stackedlayout_alignment(const void* self) {
     return QLayoutItem_Alignment(q_stackedlayout_as_q_layout_item(self));
 }
 
-void q_stackedlayout_operator_assign(void* self, const void* param1) {
-    QLayoutItem_OperatorAssign(q_stackedlayout_as_q_layout_item(self), (QLayoutItem*)param1);
-}
-
 int32_t q_stackedlayout_spacing(const void* self) {
     return QStackedLayout_Spacing((QStackedLayout*)self);
 }

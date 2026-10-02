@@ -259,13 +259,6 @@ void k_bookmarkowner_on_open_in_new_window(void* self, void (*callback)(void*, c
 ///
 void k_bookmarkowner_super_open_in_new_window(void* self, const void* bm);
 
-/// [Upstream resources](https://api.kde.org/kbookmarkowner.html#operator-eq)
-///
-/// @param self KBookmarkOwner*
-/// @param param1 KBookmarkOwner*
-///
-void k_bookmarkowner_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://api.kde.org/kbookmarkowner.html#dtor.KBookmarkOwner)
 ///
 /// Delete this object from C++ memory.

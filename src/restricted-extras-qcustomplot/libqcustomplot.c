@@ -1312,10 +1312,6 @@ void q_cpabstractpaintbuffer_on_reallocate_buffer(void* self, void (*callback)(v
     QCPAbstractPaintBuffer_OnReallocateBuffer((QCPAbstractPaintBuffer*)self, (intptr_t)callback);
 }
 
-void q_cpabstractpaintbuffer_operator_assign(void* self, const void* param1) {
-    QCPAbstractPaintBuffer_OperatorAssign((QCPAbstractPaintBuffer*)self, (QCPAbstractPaintBuffer*)param1);
-}
-
 void q_cpabstractpaintbuffer_set_invalidated1(void* self, bool invalidated) {
     QCPAbstractPaintBuffer_SetInvalidated1((QCPAbstractPaintBuffer*)self, invalidated);
 }
@@ -1378,10 +1374,6 @@ void q_cppaintbufferpixmap_on_reallocate_buffer(void* self, void (*callback)(voi
 
 void q_cppaintbufferpixmap_super_reallocate_buffer(void* self) {
     QCPPaintBufferPixmap_SuperReallocateBuffer((QCPPaintBufferPixmap*)self);
-}
-
-void q_cppaintbufferpixmap_operator_assign(void* self, const void* param1) {
-    QCPPaintBufferPixmap_OperatorAssign((QCPPaintBufferPixmap*)self, (QCPPaintBufferPixmap*)param1);
 }
 
 QSize* q_cppaintbufferpixmap_size(const void* self) {
@@ -15797,10 +15789,6 @@ int32_t q_cpplottableinterface1d_find_end(const void* self, double sortKey, bool
     return QCPPlottableInterface1D_FindEnd((QCPPlottableInterface1D*)self, sortKey, expandedRange);
 }
 
-void q_cpplottableinterface1d_operator_assign(void* self, const void* param1) {
-    QCPPlottableInterface1D_OperatorAssign((QCPPlottableInterface1D*)self, (QCPPlottableInterface1D*)param1);
-}
-
 void q_cpplottableinterface1d_delete(void* self) {
     QCPPlottableInterface1D_Delete((QCPPlottableInterface1D*)(self));
 }
@@ -22085,10 +22073,6 @@ void q_cpgraph_add_data3(void* self, libqt_list /* of double */ keys, libqt_list
     QCPGraph_AddData3((QCPGraph*)self, keys, values, alreadySorted);
 }
 
-void q_cpgraph_operator_assign(void* self, const void* param1) {
-    QCPPlottableInterface1D_OperatorAssign((QCPPlottableInterface1D*)self, (QCPPlottableInterface1D*)param1);
-}
-
 const char* q_cpgraph_name(const void* self) {
     libqt_string _str = QCPAbstractPlottable_Name((QCPAbstractPlottable*)self);
     char* _ret = qstring_to_char(_str);
@@ -23185,10 +23169,6 @@ void q_cpcurve_set_data4(void* self, libqt_list /* of double */ t, libqt_list /*
 
 void q_cpcurve_add_data42(void* self, libqt_list /* of double */ t, libqt_list /* of double */ keys, libqt_list /* of double */ values, bool alreadySorted) {
     QCPCurve_AddData42((QCPCurve*)self, t, keys, values, alreadySorted);
-}
-
-void q_cpcurve_operator_assign(void* self, const void* param1) {
-    QCPPlottableInterface1D_OperatorAssign((QCPPlottableInterface1D*)self, (QCPPlottableInterface1D*)param1);
 }
 
 const char* q_cpcurve_name(const void* self) {
@@ -24731,10 +24711,6 @@ void q_cpbars_add_data3(void* self, libqt_list /* of double */ keys, libqt_list 
     QCPBars_AddData3((QCPBars*)self, keys, values, alreadySorted);
 }
 
-void q_cpbars_operator_assign(void* self, const void* param1) {
-    QCPPlottableInterface1D_OperatorAssign((QCPPlottableInterface1D*)self, (QCPPlottableInterface1D*)param1);
-}
-
 const char* q_cpbars_name(const void* self) {
     libqt_string _str = QCPAbstractPlottable_Name((QCPAbstractPlottable*)self);
     char* _ret = qstring_to_char(_str);
@@ -25815,10 +25791,6 @@ void q_cpstatisticalbox_add_data7(void* self, libqt_list /* of double */ keys, l
 
 void q_cpstatisticalbox_add_data72(void* self, double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, libqt_list /* of double */ outliers) {
     QCPStatisticalBox_AddData72((QCPStatisticalBox*)self, key, minimum, lowerQuartile, median, upperQuartile, maximum, outliers);
-}
-
-void q_cpstatisticalbox_operator_assign(void* self, const void* param1) {
-    QCPPlottableInterface1D_OperatorAssign((QCPPlottableInterface1D*)self, (QCPPlottableInterface1D*)param1);
 }
 
 const char* q_cpstatisticalbox_name(const void* self) {
@@ -27971,10 +27943,6 @@ void q_cpfinancial_add_data6(void* self, libqt_list /* of double */ keys, libqt_
     QCPFinancial_AddData6((QCPFinancial*)self, keys, open, high, low, close, alreadySorted);
 }
 
-void q_cpfinancial_operator_assign(void* self, const void* param1) {
-    QCPPlottableInterface1D_OperatorAssign((QCPPlottableInterface1D*)self, (QCPPlottableInterface1D*)param1);
-}
-
 const char* q_cpfinancial_name(const void* self) {
     libqt_string _str = QCPAbstractPlottable_Name((QCPAbstractPlottable*)self);
     char* _ret = qstring_to_char(_str);
@@ -29558,10 +29526,6 @@ void q_cperrorbars_destroyed1(void* self, void* param1) {
 
 void q_cperrorbars_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
-}
-
-void q_cperrorbars_operator_assign(void* self, const void* param1) {
-    QCPPlottableInterface1D_OperatorAssign(q_cperrorbars_as_q_c_p_plottable_interface1_d(self), (QCPPlottableInterface1D*)param1);
 }
 
 QRect* q_cperrorbars_clip_rect(const void* self) {

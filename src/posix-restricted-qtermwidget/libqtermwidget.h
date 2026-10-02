@@ -4992,15 +4992,6 @@ double q_termwidget_device_pixel_ratio_f_scale();
 ///
 int32_t q_termwidget_encode_metric_f(int32_t metric, double value);
 
-/// Inherited from QTermWidgetInterface
-///
-/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
-///
-/// @param self QTermWidget*
-/// @param param1 QTermWidgetInterface*
-///
-void q_termwidget_operator_assign(void* self, const void* param1);
-
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)

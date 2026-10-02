@@ -277,10 +277,6 @@ void q_listwidgetitem_super_write(const void* self, void* out) {
     QListWidgetItem_SuperWrite((QListWidgetItem*)self, (QDataStream*)out);
 }
 
-void q_listwidgetitem_operator_assign(void* self, const void* other) {
-    QListWidgetItem_OperatorAssign((QListWidgetItem*)self, (QListWidgetItem*)other);
-}
-
 int32_t q_listwidgetitem_type(const void* self) {
     return QListWidgetItem_Type((QListWidgetItem*)self);
 }

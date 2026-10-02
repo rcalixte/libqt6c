@@ -2356,15 +2356,6 @@ void q_quickframebufferobject_destroyed1(void* self, void* param1);
 ///
 void q_quickframebufferobject_on_destroyed1(void* self, void (*callback)(void*, void*));
 
-/// Inherited from QQmlParserStatus
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlparserstatus.html#operator-eq)
-///
-/// @param self QQuickFramebufferObject*
-/// @param param1 QQmlParserStatus*
-///
-void q_quickframebufferobject_operator_assign(void* self, const void* param1);
-
 /// Inherited from QQuickItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#boundingRect)
@@ -3858,11 +3849,4 @@ void q_quickframebufferobject_on_object_name_changed(void* self, void (*callback
 void q_quickframebufferobject_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickframebufferobject-renderer.html)
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickframebufferobject-renderer.html#operator-eq)
-///
-/// @param self QQuickFramebufferObject__Renderer*
-/// @param param1 QQuickFramebufferObject__Renderer*
-///
-void q_quickframebufferobject__renderer_operator_assign(void* self, const void* param1);
 #endif

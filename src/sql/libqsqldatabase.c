@@ -7,10 +7,6 @@
 #include "libqsqldatabase.hpp"
 #include "libqsqldatabase.h"
 
-void q_sqldrivercreatorbase_operator_assign(void* self, const void* param1) {
-    QSqlDriverCreatorBase_OperatorAssign((QSqlDriverCreatorBase*)self, (QSqlDriverCreatorBase*)param1);
-}
-
 void q_sqldrivercreatorbase_delete(void* self) {
     QSqlDriverCreatorBase_Delete((QSqlDriverCreatorBase*)(self));
 }

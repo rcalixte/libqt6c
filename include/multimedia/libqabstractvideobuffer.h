@@ -16,13 +16,6 @@
 ///
 void q_abstractvideobuffer_unmap(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#operator-eq)
-///
-/// @param self QAbstractVideoBuffer*
-/// @param param1 QAbstractVideoBuffer*
-///
-void q_abstractvideobuffer_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#dtor.QAbstractVideoBuffer)
 ///
 /// Delete this object from C++ memory.

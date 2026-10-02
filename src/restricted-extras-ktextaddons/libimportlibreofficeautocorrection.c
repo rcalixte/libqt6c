@@ -22,10 +22,6 @@ bool k_textautocorrectioncore__importlibreofficeautocorrection_super_import(void
     return TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_SuperImport((TextAutoCorrectionCore__ImportLibreOfficeAutocorrection*)self, qstring(fileName), qstring(errorMessage), loadAttribute);
 }
 
-void k_textautocorrectioncore__importlibreofficeautocorrection_operator_assign(void* self, const void* param1) {
-    TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_OperatorAssign((TextAutoCorrectionCore__ImportLibreOfficeAutocorrection*)self, (TextAutoCorrectionCore__ImportLibreOfficeAutocorrection*)param1);
-}
-
 libqt_list /* set of const char* */ k_textautocorrectioncore__importlibreofficeautocorrection_upper_case_exceptions(const void* self) {
     return TextAutoCorrectionCore__ImportAbstractAutocorrection_UpperCaseExceptions((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self);
 }

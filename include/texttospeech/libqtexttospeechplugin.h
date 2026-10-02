@@ -14,13 +14,6 @@
 ///
 QTextToSpeechPlugin* q_texttospeechplugin_new();
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechplugin.html#operator-eq)
-///
-/// @param self QTextToSpeechPlugin*
-/// @param param1 QTextToSpeechPlugin*
-///
-void q_texttospeechplugin_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechplugin.html#dtor.QTextToSpeechPlugin)
 ///
 /// Delete this object from C++ memory.

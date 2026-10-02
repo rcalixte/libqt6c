@@ -10,13 +10,6 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldrivercreatorbase.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsqldrivercreatorbase.html#operator-eq)
-///
-/// @param self QSqlDriverCreatorBase*
-/// @param param1 QSqlDriverCreatorBase*
-///
-void q_sqldrivercreatorbase_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldrivercreatorbase.html#dtor.QSqlDriverCreatorBase)
 ///
 /// Delete this object from C++ memory.

@@ -10,13 +10,6 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#operator-eq)
-///
-/// @param self QPrintEngine*
-/// @param param1 QPrintEngine*
-///
-void q_printengine_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qprintengine.html#dtor.QPrintEngine)
 ///
 /// Delete this object from C++ memory.

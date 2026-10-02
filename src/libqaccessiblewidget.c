@@ -355,10 +355,6 @@ QAccessibleAttributesInterface* q_accessiblewidget_attributes_interface(void* se
     return QAccessibleInterface_AttributesInterface((QAccessibleInterface*)self);
 }
 
-void q_accessiblewidget_operator_assign(void* self, const void* param1) {
-    QAccessibleInterface_OperatorAssign((QAccessibleInterface*)self, (QAccessibleInterface*)param1);
-}
-
 const char* q_accessiblewidget_tr(const char* sourceText) {
     libqt_string _str = QObject_Tr(sourceText);
     char* _ret = qstring_to_char(_str);

@@ -939,10 +939,6 @@ bool q_rasterwindow_supports_open_g_l(const void* self) {
     return QSurface_SupportsOpenGL(q_rasterwindow_as_q_surface(self));
 }
 
-void q_rasterwindow_operator_assign(void* self, const void* param1) {
-    QSurface_OperatorAssign(q_rasterwindow_as_q_surface(self), (QSurface*)param1);
-}
-
 bool q_rasterwindow_painting_active(const void* self) {
     return QPaintDevice_PaintingActive(q_rasterwindow_as_q_paint_device(self));
 }

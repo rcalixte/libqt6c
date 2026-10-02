@@ -522,13 +522,6 @@ void q_tablewidgetitem_on_write(void* self, void (*callback)(const void*, void*)
 ///
 void q_tablewidgetitem_super_write(const void* self, void* out);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator-eq)
-///
-/// @param self QTableWidgetItem*
-/// @param other QTableWidgetItem*
-///
-void q_tablewidgetitem_operator_assign(void* self, const void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtablewidgetitem.html#type)
 ///
 /// @param self const QTableWidgetItem*

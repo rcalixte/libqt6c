@@ -99,10 +99,6 @@ KTextEditor__Attribute* k_texteditor__attribute_operator_plus_assign(void* self,
     return KTextEditor__Attribute_OperatorPlusAssign((KTextEditor__Attribute*)self, (KTextEditor__Attribute*)a);
 }
 
-void k_texteditor__attribute_operator_assign(void* self, const void* a) {
-    KTextEditor__Attribute_OperatorAssign((KTextEditor__Attribute*)self, (KTextEditor__Attribute*)a);
-}
-
 void k_texteditor__attribute_set_font_bold1(void* self, bool bold) {
     KTextEditor__Attribute_SetFontBold1((KTextEditor__Attribute*)self, bold);
 }
@@ -415,6 +411,10 @@ void k_texteditor__attribute_set_table_cell_column_span(void* self, int tableCel
 
 int32_t k_texteditor__attribute_table_cell_column_span(const void* self) {
     return QTextCharFormat_TableCellColumnSpan((QTextCharFormat*)self);
+}
+
+void k_texteditor__attribute_operator_assign(void* self, const void* param1) {
+    QTextCharFormat_OperatorAssign((QTextCharFormat*)self, (QTextCharFormat*)param1);
 }
 
 void k_texteditor__attribute_set_font2(void* self, const void* font, int32_t behavior) {

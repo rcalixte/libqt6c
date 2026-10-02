@@ -74,13 +74,6 @@ QPixmap* q_pixmap_new7(const char* fileName, const char* format);
 ///
 QPixmap* q_pixmap_new8(const char* fileName, const char* format, int32_t flags);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#operator-eq)
-///
-/// @param self QPixmap*
-/// @param param1 QPixmap*
-///
-void q_pixmap_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#swap)
 ///
 /// @param self QPixmap*

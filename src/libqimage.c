@@ -90,10 +90,6 @@ QImage* q_image_new19(const char* fileName, const char* format) {
     return QImage_New19(qstring(fileName), format);
 }
 
-void q_image_operator_assign(void* self, const void* param1) {
-    QImage_OperatorAssign((QImage*)self, (QImage*)param1);
-}
-
 void q_image_swap(void* self, void* other) {
     QImage_Swap((QImage*)self, (QImage*)other);
 }

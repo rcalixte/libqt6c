@@ -235,15 +235,6 @@ QAccessibleAttributesInterface* q_accessibleobject_attributes_interface(void* se
 
 /// Inherited from QAccessibleInterface
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html#operator-eq)
-///
-/// @param self QAccessibleObject*
-/// @param param1 QAccessibleInterface*
-///
-void q_accessibleobject_operator_assign(void* self, const void* param1);
-
-/// Inherited from QAccessibleInterface
-///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html#window)
 ///
 /// Wrapper to allow calling virtual or protected method
@@ -951,15 +942,6 @@ QAccessibleSelectionInterface* q_accessibleapplication_selection_interface(void*
 /// @param self QAccessibleApplication*
 ///
 QAccessibleAttributesInterface* q_accessibleapplication_attributes_interface(void* self);
-
-/// Inherited from QAccessibleInterface
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessibleinterface.html#operator-eq)
-///
-/// @param self QAccessibleApplication*
-/// @param param1 QAccessibleInterface*
-///
-void q_accessibleapplication_operator_assign(void* self, const void* param1);
 
 /// Inherited from QAccessibleObject
 ///

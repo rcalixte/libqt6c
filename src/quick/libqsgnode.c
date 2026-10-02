@@ -1149,10 +1149,6 @@ void q_sgnodevisitor_super_visit_children(void* self, void* n) {
     QSGNodeVisitor_SuperVisitChildren((QSGNodeVisitor*)self, (QSGNode*)n);
 }
 
-void q_sgnodevisitor_operator_assign(void* self, const void* param1) {
-    QSGNodeVisitor_OperatorAssign((QSGNodeVisitor*)self, (QSGNodeVisitor*)param1);
-}
-
 void q_sgnodevisitor_delete(void* self) {
     QSGNodeVisitor_Delete((QSGNodeVisitor*)(self));
 }

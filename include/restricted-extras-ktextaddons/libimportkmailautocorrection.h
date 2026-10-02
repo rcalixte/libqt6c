@@ -51,13 +51,6 @@ void k_textautocorrectioncore__importkmailautocorrection_on_import(void* self, b
 ///
 bool k_textautocorrectioncore__importkmailautocorrection_super_import(void* self, const char* fileName, const char* errorMessage, int32_t loadAttribute);
 
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportKMailAutocorrection.html)
-///
-/// @param self TextAutoCorrectionCore__ImportKMailAutocorrection*
-/// @param param1 TextAutoCorrectionCore__ImportKMailAutocorrection*
-///
-void k_textautocorrectioncore__importkmailautocorrection_operator_assign(void* self, const void* param1);
-
 /// Inherited from TextAutoCorrectionCore::ImportAbstractAutocorrection
 ///
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)

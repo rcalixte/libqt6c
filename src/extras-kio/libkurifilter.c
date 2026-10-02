@@ -67,10 +67,6 @@ const char* k_urifiltersearchprovider_default_key(const void* self) {
     return _ret;
 }
 
-void k_urifiltersearchprovider_operator_assign(void* self, const void* param1) {
-    KUriFilterSearchProvider_OperatorAssign((KUriFilterSearchProvider*)self, (KUriFilterSearchProvider*)param1);
-}
-
 void k_urifiltersearchprovider_set_desktop_entry_name(void* self, const char* desktopEntryName) {
     KUriFilterSearchProvider_SetDesktopEntryName((KUriFilterSearchProvider*)self, qstring(desktopEntryName));
 }

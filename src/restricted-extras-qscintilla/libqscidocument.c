@@ -9,10 +9,6 @@ QsciDocument* q_scidocument_new2(const void* param1) {
     return QsciDocument_New2((QsciDocument*)param1);
 }
 
-void q_scidocument_operator_assign(void* self, const void* param1) {
-    QsciDocument_OperatorAssign((QsciDocument*)self, (QsciDocument*)param1);
-}
-
 void q_scidocument_delete(void* self) {
     QsciDocument_Delete((QsciDocument*)(self));
 }

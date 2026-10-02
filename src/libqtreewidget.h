@@ -605,13 +605,6 @@ void q_treewidgetitem_on_write(void* self, void (*callback)(const void*, void*))
 ///
 void q_treewidgetitem_super_write(const void* self, void* out);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitem.html#operator-eq)
-///
-/// @param self QTreeWidgetItem*
-/// @param other QTreeWidgetItem*
-///
-void q_treewidgetitem_operator_assign(void* self, const void* other);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtreewidgetitem.html#parent)
 ///
 /// @param self const QTreeWidgetItem*

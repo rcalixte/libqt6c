@@ -2540,15 +2540,6 @@ void q_quickrhiitem_destroyed1(void* self, void* param1);
 ///
 void q_quickrhiitem_on_destroyed1(void* self, void (*callback)(void*, void*));
 
-/// Inherited from QQmlParserStatus
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlparserstatus.html#operator-eq)
-///
-/// @param self QQuickRhiItem*
-/// @param param1 QQmlParserStatus*
-///
-void q_quickrhiitem_operator_assign(void* self, const void* param1);
-
 /// Inherited from QQuickItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#boundingRect)

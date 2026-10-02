@@ -379,10 +379,6 @@ bool q_offscreensurface_supports_open_g_l(const void* self) {
     return QSurface_SupportsOpenGL(q_offscreensurface_as_q_surface(self));
 }
 
-void q_offscreensurface_operator_assign(void* self, const void* param1) {
-    QSurface_OperatorAssign(q_offscreensurface_as_q_surface(self), (QSurface*)param1);
-}
-
 bool q_offscreensurface_event(void* self, void* event) {
     return QOffscreenSurface_Event((QOffscreenSurface*)self, (QEvent*)event);
 }

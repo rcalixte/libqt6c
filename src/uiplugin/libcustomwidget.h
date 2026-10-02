@@ -39,13 +39,6 @@ const char* q_designercustomwidgetinterface_dom_xml(const void* self);
 ///
 const char* q_designercustomwidgetinterface_code_template(const void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#operator-eq)
-///
-/// @param self QDesignerCustomWidgetInterface*
-/// @param param1 QDesignerCustomWidgetInterface*
-///
-void q_designercustomwidgetinterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#dtor.QDesignerCustomWidgetInterface)
 ///
 /// Delete this object from C++ memory.
@@ -55,13 +48,6 @@ void q_designercustomwidgetinterface_operator_assign(void* self, const void* par
 void q_designercustomwidgetinterface_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetcollectioninterface.html)
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetcollectioninterface.html#operator-eq)
-///
-/// @param self QDesignerCustomWidgetCollectionInterface*
-/// @param param1 QDesignerCustomWidgetCollectionInterface*
-///
-void q_designercustomwidgetcollectioninterface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetcollectioninterface.html#dtor.QDesignerCustomWidgetCollectionInterface)
 ///

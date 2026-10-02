@@ -787,15 +787,6 @@ void q_quick3dtexturedata_destroyed1(void* self, void* param1);
 ///
 void q_quick3dtexturedata_on_destroyed1(void* self, void (*callback)(void*, void*));
 
-/// Inherited from QQmlParserStatus
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlparserstatus.html#operator-eq)
-///
-/// @param self QQuick3DTextureData*
-/// @param param1 QQmlParserStatus*
-///
-void q_quick3dtexturedata_operator_assign(void* self, const void* param1);
-
 /// Inherited from QQuick3DObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dobject.html#itemChange)

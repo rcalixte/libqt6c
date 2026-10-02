@@ -317,10 +317,6 @@ void q_tablewidgetitem_super_write(const void* self, void* out) {
     QTableWidgetItem_SuperWrite((QTableWidgetItem*)self, (QDataStream*)out);
 }
 
-void q_tablewidgetitem_operator_assign(void* self, const void* other) {
-    QTableWidgetItem_OperatorAssign((QTableWidgetItem*)self, (QTableWidgetItem*)other);
-}
-
 int32_t q_tablewidgetitem_type(const void* self) {
     return QTableWidgetItem_Type((QTableWidgetItem*)self);
 }

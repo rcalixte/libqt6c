@@ -48,13 +48,6 @@ void q_qmlparserstatus_component_complete(void* self);
 ///
 void q_qmlparserstatus_on_component_complete(void* self, void (*callback)(void*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlparserstatus.html#operator-eq)
-///
-/// @param self QQmlParserStatus*
-/// @param param1 QQmlParserStatus*
-///
-void q_qmlparserstatus_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlparserstatus.html#dtor.QQmlParserStatus)
 ///
 /// Delete this object from C++ memory.

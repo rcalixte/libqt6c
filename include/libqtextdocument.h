@@ -10,13 +10,6 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractundoitem.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractundoitem.html#operator-eq)
-///
-/// @param self QAbstractUndoItem*
-/// @param param1 QAbstractUndoItem*
-///
-void q_abstractundoitem_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractundoitem.html#dtor.QAbstractUndoItem)
 ///
 /// Delete this object from C++ memory.

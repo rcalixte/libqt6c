@@ -14,10 +14,6 @@ void q_qmlpropertyvaluesource_on_set_target(void* self, void (*callback)(void*, 
     QQmlPropertyValueSource_OnSetTarget((QQmlPropertyValueSource*)self, (intptr_t)callback);
 }
 
-void q_qmlpropertyvaluesource_operator_assign(void* self, const void* param1) {
-    QQmlPropertyValueSource_OperatorAssign((QQmlPropertyValueSource*)self, (QQmlPropertyValueSource*)param1);
-}
-
 void q_qmlpropertyvaluesource_delete(void* self) {
     QQmlPropertyValueSource_Delete((QQmlPropertyValueSource*)(self));
 }

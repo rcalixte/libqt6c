@@ -21,10 +21,6 @@ void q_qmlparserstatus_on_component_complete(void* self, void (*callback)(void*)
     QQmlParserStatus_OnComponentComplete((QQmlParserStatus*)self, (intptr_t)callback);
 }
 
-void q_qmlparserstatus_operator_assign(void* self, const void* param1) {
-    QQmlParserStatus_OperatorAssign((QQmlParserStatus*)self, (QQmlParserStatus*)param1);
-}
-
 void q_qmlparserstatus_delete(void* self) {
     QQmlParserStatus_Delete((QQmlParserStatus*)(self));
 }

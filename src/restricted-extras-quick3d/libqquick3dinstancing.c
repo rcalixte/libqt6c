@@ -466,10 +466,6 @@ void q_quick3dinstancing_on_destroyed1(void* self, void (*callback)(void*, void*
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_quick3dinstancing_operator_assign(void* self, const void* param1) {
-    QQmlParserStatus_OperatorAssign(q_quick3dinstancing_as_q_qml_parser_status(self), (QQmlParserStatus*)param1);
-}
-
 void q_quick3dinstancing_mark_all_dirty(void* self) {
     QQuick3DInstancing_MarkAllDirty((QQuick3DInstancing*)self);
 }

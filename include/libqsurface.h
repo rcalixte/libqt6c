@@ -50,13 +50,6 @@ bool q_surface_supports_open_g_l(const void* self);
 ///
 QSize* q_surface_size(const void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#operator-eq)
-///
-/// @param self QSurface*
-/// @param param1 QSurface*
-///
-void q_surface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#dtor.QSurface)
 ///
 /// Delete this object from C++ memory.

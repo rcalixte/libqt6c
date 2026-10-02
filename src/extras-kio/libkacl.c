@@ -17,10 +17,6 @@ KACL* k_acl_new4() {
     return KACL_New4();
 }
 
-void k_acl_operator_assign(void* self, const void* rhs) {
-    KACL_OperatorAssign((KACL*)self, (KACL*)rhs);
-}
-
 bool k_acl_operator_equal(const void* self, const void* rhs) {
     return KACL_OperatorEqual((KACL*)self, (KACL*)rhs);
 }

@@ -143,13 +143,6 @@ void k_attica__platformdependent_set_nam(void* self, void* nam);
 ///
 QNetworkAccessManager* k_attica__platformdependent_nam(void* self);
 
-/// [Upstream resources](https://api.kde.org/attica-platformdependent.html#operator-eq)
-///
-/// @param self Attica__PlatformDependent*
-/// @param param1 Attica__PlatformDependent*
-///
-void k_attica__platformdependent_operator_assign(void* self, const void* param1);
-
 /// Delete this object from C++ memory.
 ///
 /// @param self Attica__PlatformDependent*

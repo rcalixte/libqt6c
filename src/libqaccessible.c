@@ -128,10 +128,6 @@ void* q_accessibleinterface_interface_cast(void* self, int32_t param1) {
     return QAccessibleInterface_InterfaceCast((QAccessibleInterface*)self, param1);
 }
 
-void q_accessibleinterface_operator_assign(void* self, const void* param1) {
-    QAccessibleInterface_OperatorAssign((QAccessibleInterface*)self, (QAccessibleInterface*)param1);
-}
-
 void q_accessibletextinterface_selection(const void* self, int selectionIndex, int* startOffset, int* endOffset) {
     QAccessibleTextInterface_Selection((QAccessibleTextInterface*)self, selectionIndex, startOffset, endOffset);
 }
@@ -211,10 +207,6 @@ const char* q_accessibletextinterface_attributes(const void* self, int offset, i
     return _ret;
 }
 
-void q_accessibletextinterface_operator_assign(void* self, const void* param1) {
-    QAccessibleTextInterface_OperatorAssign((QAccessibleTextInterface*)self, (QAccessibleTextInterface*)param1);
-}
-
 void q_accessibletextinterface_delete(void* self) {
     QAccessibleTextInterface_Delete((QAccessibleTextInterface*)(self));
 }
@@ -229,10 +221,6 @@ void q_accessibleeditabletextinterface_insert_text(void* self, int offset, const
 
 void q_accessibleeditabletextinterface_replace_text(void* self, int startOffset, int endOffset, const char* text) {
     QAccessibleEditableTextInterface_ReplaceText((QAccessibleEditableTextInterface*)self, startOffset, endOffset, qstring(text));
-}
-
-void q_accessibleeditabletextinterface_operator_assign(void* self, const void* param1) {
-    QAccessibleEditableTextInterface_OperatorAssign((QAccessibleEditableTextInterface*)self, (QAccessibleEditableTextInterface*)param1);
 }
 
 void q_accessibleeditabletextinterface_delete(void* self) {
@@ -257,10 +245,6 @@ QVariant* q_accessiblevalueinterface_minimum_value(const void* self) {
 
 QVariant* q_accessiblevalueinterface_minimum_step_size(const void* self) {
     return QAccessibleValueInterface_MinimumStepSize((QAccessibleValueInterface*)self);
-}
-
-void q_accessiblevalueinterface_operator_assign(void* self, const void* param1) {
-    QAccessibleValueInterface_OperatorAssign((QAccessibleValueInterface*)self, (QAccessibleValueInterface*)param1);
 }
 
 void q_accessiblevalueinterface_delete(void* self) {
@@ -299,10 +283,6 @@ int32_t q_accessibletablecellinterface_row_extent(const void* self) {
 
 QAccessibleInterface* q_accessibletablecellinterface_table(const void* self) {
     return QAccessibleTableCellInterface_Table((QAccessibleTableCellInterface*)self);
-}
-
-void q_accessibletablecellinterface_operator_assign(void* self, const void* param1) {
-    QAccessibleTableCellInterface_OperatorAssign((QAccessibleTableCellInterface*)self, (QAccessibleTableCellInterface*)param1);
 }
 
 void q_accessibletablecellinterface_delete(void* self) {
@@ -396,10 +376,6 @@ bool q_accessibletableinterface_unselect_column(void* self, int column) {
 
 void q_accessibletableinterface_model_change(void* self, void* event) {
     QAccessibleTableInterface_ModelChange((QAccessibleTableInterface*)self, (QAccessibleTableModelChangeEvent*)event);
-}
-
-void q_accessibletableinterface_operator_assign(void* self, const void* param1) {
-    QAccessibleTableInterface_OperatorAssign((QAccessibleTableInterface*)self, (QAccessibleTableInterface*)param1);
 }
 
 void q_accessibletableinterface_delete(void* self) {
@@ -549,10 +525,6 @@ const char* q_accessibleactioninterface_previous_page_action() {
     return _ret;
 }
 
-void q_accessibleactioninterface_operator_assign(void* self, const void* param1) {
-    QAccessibleActionInterface_OperatorAssign((QAccessibleActionInterface*)self, (QAccessibleActionInterface*)param1);
-}
-
 const char* q_accessibleactioninterface_tr2(const char* sourceText, const char* disambiguation) {
     libqt_string _str = QObject_Tr2(sourceText, disambiguation);
     char* _ret = qstring_to_char(_str);
@@ -586,10 +558,6 @@ QPoint* q_accessibleimageinterface_image_position(const void* self) {
     return QAccessibleImageInterface_ImagePosition((QAccessibleImageInterface*)self);
 }
 
-void q_accessibleimageinterface_operator_assign(void* self, const void* param1) {
-    QAccessibleImageInterface_OperatorAssign((QAccessibleImageInterface*)self, (QAccessibleImageInterface*)param1);
-}
-
 void q_accessibleimageinterface_delete(void* self) {
     QAccessibleImageInterface_Delete((QAccessibleImageInterface*)(self));
 }
@@ -618,10 +586,6 @@ int32_t q_accessiblehyperlinkinterface_end_index(const void* self) {
 
 bool q_accessiblehyperlinkinterface_is_valid(const void* self) {
     return QAccessibleHyperlinkInterface_IsValid((QAccessibleHyperlinkInterface*)self);
-}
-
-void q_accessiblehyperlinkinterface_operator_assign(void* self, const void* param1) {
-    QAccessibleHyperlinkInterface_OperatorAssign((QAccessibleHyperlinkInterface*)self, (QAccessibleHyperlinkInterface*)param1);
 }
 
 void q_accessiblehyperlinkinterface_delete(void* self) {
@@ -661,10 +625,6 @@ bool q_accessibleselectioninterface_clear(void* self) {
     return QAccessibleSelectionInterface_Clear((QAccessibleSelectionInterface*)self);
 }
 
-void q_accessibleselectioninterface_operator_assign(void* self, const void* param1) {
-    QAccessibleSelectionInterface_OperatorAssign((QAccessibleSelectionInterface*)self, (QAccessibleSelectionInterface*)param1);
-}
-
 void q_accessibleselectioninterface_delete(void* self) {
     QAccessibleSelectionInterface_Delete((QAccessibleSelectionInterface*)(self));
 }
@@ -676,10 +636,6 @@ libqt_list /* of enum QAccessible__Attribute */ q_accessibleattributesinterface_
 
 QVariant* q_accessibleattributesinterface_attribute_value(const void* self, int32_t key) {
     return QAccessibleAttributesInterface_AttributeValue((QAccessibleAttributesInterface*)self, key);
-}
-
-void q_accessibleattributesinterface_operator_assign(void* self, const void* param1) {
-    QAccessibleAttributesInterface_OperatorAssign((QAccessibleAttributesInterface*)self, (QAccessibleAttributesInterface*)param1);
 }
 
 void q_accessibleattributesinterface_delete(void* self) {

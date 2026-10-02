@@ -782,13 +782,6 @@ void k_io__fileundomanager__uiinterface_on_virtual_hook(void* self, void (*callb
 ///
 void k_io__fileundomanager__uiinterface_super_virtual_hook(void* self, int id, void* data);
 
-/// [Upstream resources](https://api.kde.org/kio-fileundomanager-uiinterface.html#operator-eq)
-///
-/// @param self KIO__FileUndoManager__UiInterface*
-/// @param param1 KIO__FileUndoManager__UiInterface*
-///
-void k_io__fileundomanager__uiinterface_operator_assign(void* self, const void* param1);
-
 /// Delete this object from C++ memory.
 ///
 /// @param self KIO__FileUndoManager__UiInterface*

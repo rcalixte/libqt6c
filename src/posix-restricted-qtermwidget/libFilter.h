@@ -4346,13 +4346,6 @@ Konsole__Filter__HotSpot* k_onsole__filterchain_hot_spot_at(const void* self, in
 ///
 libqt_list k_onsole__filterchain_hot_spots(const void* self);
 
-/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
-///
-/// @param self Konsole__FilterChain*
-/// @param param1 Konsole__FilterChain*
-///
-void k_onsole__filterchain_operator_assign(void* self, const void* param1);
-
 /// Delete this object from C++ memory.
 ///
 /// @param self Konsole__FilterChain*
@@ -4372,13 +4365,6 @@ Konsole__TerminalImageFilterChain* k_onsole__terminalimagefilterchain_new();
 /// @param param1 Konsole__TerminalImageFilterChain*
 ///
 Konsole__TerminalImageFilterChain* k_onsole__terminalimagefilterchain_new2(const void* param1);
-
-/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
-///
-/// @param self Konsole__TerminalImageFilterChain*
-/// @param param1 Konsole__TerminalImageFilterChain*
-///
-void k_onsole__terminalimagefilterchain_operator_assign(void* self, const void* param1);
 
 /// Inherited from Konsole::FilterChain
 ///
@@ -4560,13 +4546,6 @@ libqt_list k_onsole__filter__hotspot_super_actions(void* self);
 ///
 void k_onsole__filter__hotspot_set_type(void* self, int32_t type);
 
-/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
-///
-/// @param self Konsole__Filter__HotSpot*
-/// @param param1 Konsole__Filter__HotSpot*
-///
-void k_onsole__filter__hotspot_operator_assign(void* self, const void* param1);
-
 /// Delete this object from C++ memory.
 ///
 /// @param self Konsole__Filter__HotSpot*
@@ -4631,13 +4610,6 @@ void k_onsole__regexpfilter__hotspot_set_captured_texts(void* self, const char* 
 /// @param self const Konsole__RegExpFilter__HotSpot*
 ///
 const char** k_onsole__regexpfilter__hotspot_captured_texts(const void* self);
-
-/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
-///
-/// @param self Konsole__RegExpFilter__HotSpot*
-/// @param param1 Konsole__RegExpFilter__HotSpot*
-///
-void k_onsole__regexpfilter__hotspot_operator_assign(void* self, const void* param1);
 
 /// Inherited from Konsole::Filter::HotSpot
 ///
@@ -4842,15 +4814,6 @@ void k_onsole__urlfilter__hotspot_set_captured_texts(void* self, const char* tex
 /// @param self const Konsole__UrlFilter__HotSpot*
 ///
 const char** k_onsole__urlfilter__hotspot_captured_texts(const void* self);
-
-/// Inherited from Konsole::RegExpFilter::HotSpot
-///
-/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
-///
-/// @param self Konsole__UrlFilter__HotSpot*
-/// @param param1 Konsole__RegExpFilter__HotSpot*
-///
-void k_onsole__urlfilter__hotspot_operator_assign(void* self, const void* param1);
 
 /// Inherited from Konsole::Filter::HotSpot
 ///

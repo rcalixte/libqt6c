@@ -697,10 +697,6 @@ libqt_list /* of QVariant* */ q_statemachine__signalevent_arguments(const void* 
     return _arr;
 }
 
-void q_statemachine__signalevent_operator_assign(void* self, const void* param1) {
-    QStateMachine__SignalEvent_OperatorAssign((QStateMachine__SignalEvent*)self, (QStateMachine__SignalEvent*)param1);
-}
-
 int32_t q_statemachine__signalevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }
@@ -783,10 +779,6 @@ QObject* q_statemachine__wrappedevent_object(const void* self) {
 
 QEvent* q_statemachine__wrappedevent_event(const void* self) {
     return QStateMachine__WrappedEvent_Event((QStateMachine__WrappedEvent*)self);
-}
-
-void q_statemachine__wrappedevent_operator_assign(void* self, const void* param1) {
-    QStateMachine__WrappedEvent_OperatorAssign((QStateMachine__WrappedEvent*)self, (QStateMachine__WrappedEvent*)param1);
 }
 
 int32_t q_statemachine__wrappedevent_type(const void* self) {

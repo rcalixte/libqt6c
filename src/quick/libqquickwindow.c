@@ -1421,10 +1421,6 @@ bool q_quickwindow_supports_open_g_l(const void* self) {
     return QSurface_SupportsOpenGL(q_quickwindow_as_q_surface(self));
 }
 
-void q_quickwindow_operator_assign(void* self, const void* param1) {
-    QSurface_OperatorAssign(q_quickwindow_as_q_surface(self), (QSurface*)param1);
-}
-
 int32_t q_quickwindow_surface_type(const void* self) {
     return QQuickWindow_SurfaceType((QQuickWindow*)self);
 }

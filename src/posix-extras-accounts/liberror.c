@@ -17,10 +17,6 @@ Accounts__Error* q_accounts__error_new4(int32_t type, const char* message) {
     return Accounts__Error_New4(type, qstring(message));
 }
 
-void q_accounts__error_operator_assign(void* self, const void* src) {
-    Accounts__Error_OperatorAssign((Accounts__Error*)self, (Accounts__Error*)src);
-}
-
 int32_t q_accounts__error_type(const void* self) {
     return Accounts__Error_Type((Accounts__Error*)self);
 }

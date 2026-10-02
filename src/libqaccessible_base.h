@@ -676,13 +676,6 @@ void q_accessible__state_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-activationobserver.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-activationobserver.html#operator-eq)
-///
-/// @param self QAccessible__ActivationObserver*
-/// @param param1 QAccessible__ActivationObserver*
-///
-void q_accessible__activationobserver_operator_assign(void* self, const void* param1);
-
 /// Delete this object from C++ memory.
 ///
 /// @param self QAccessible__ActivationObserver*

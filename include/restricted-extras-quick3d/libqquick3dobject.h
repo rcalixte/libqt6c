@@ -779,15 +779,6 @@ void q_quick3dobject_destroyed1(void* self, void* param1);
 ///
 void q_quick3dobject_on_destroyed1(void* self, void (*callback)(void*, void*));
 
-/// Inherited from QQmlParserStatus
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlparserstatus.html#operator-eq)
-///
-/// @param self QQuick3DObject*
-/// @param param1 QQmlParserStatus*
-///
-void q_quick3dobject_operator_assign(void* self, const void* param1);
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)

@@ -267,13 +267,6 @@ void k_texteditor__codecompletionmodelcontrollerinterface_on_should_hide_items_w
 ///
 bool k_texteditor__codecompletionmodelcontrollerinterface_super_should_hide_items_with_equal_names(const void* self);
 
-/// [Upstream resources](https://api.kde.org/ktexteditor-codecompletionmodelcontrollerinterface.html#operator-eq)
-///
-/// @param self KTextEditor__CodeCompletionModelControllerInterface*
-/// @param param1 KTextEditor__CodeCompletionModelControllerInterface*
-///
-void k_texteditor__codecompletionmodelcontrollerinterface_operator_assign(void* self, const void* param1);
-
 /// Delete this object from C++ memory.
 ///
 /// @param self KTextEditor__CodeCompletionModelControllerInterface*

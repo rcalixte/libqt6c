@@ -10,13 +10,6 @@
 
 /// [Upstream resources](https://api.kde.org/attica-platformdependentv2.html)
 
-/// [Upstream resources](https://api.kde.org/attica-platformdependentv2.html#operator-eq)
-///
-/// @param self Attica__PlatformDependentV2*
-/// @param param1 Attica__PlatformDependentV2*
-///
-void k_attica__platformdependentv2_operator_assign(void* self, const void* param1);
-
 /// Inherited from Attica::PlatformDependent
 ///
 /// [Upstream resources](https://api.kde.org/attica-platformdependent.html#setNam)
