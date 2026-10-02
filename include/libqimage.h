@@ -216,13 +216,6 @@ QImage* q_image_new18(unsigned char* data, int width, int height, intptr_t bytes
 ///
 QImage* q_image_new19(const char* fileName, const char* format);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#operator-eq)
-///
-/// @param self QImage*
-/// @param param1 QImage*
-///
-void q_image_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#swap)
 ///
 /// @param self QImage*

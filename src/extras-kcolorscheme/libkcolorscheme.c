@@ -20,10 +20,6 @@ KColorScheme* k_colorscheme_new4(int32_t param1, int32_t param2) {
     return KColorScheme_New4(param1, param2);
 }
 
-void k_colorscheme_operator_assign(void* self, const void* param1) {
-    KColorScheme_OperatorAssign((KColorScheme*)self, (KColorScheme*)param1);
-}
-
 QBrush* k_colorscheme_background(const void* self) {
     return KColorScheme_Background((KColorScheme*)self);
 }

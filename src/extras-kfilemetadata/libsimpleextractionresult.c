@@ -19,10 +19,6 @@ KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_ne
     return KFileMetaData__SimpleExtractionResult_New4(qstring(url), qstring(mimetype), flags);
 }
 
-void k_filemetadata__simpleextractionresult_operator_assign(void* self, const void* rhs) {
-    KFileMetaData__SimpleExtractionResult_OperatorAssign((KFileMetaData__SimpleExtractionResult*)self, (KFileMetaData__SimpleExtractionResult*)rhs);
-}
-
 bool k_filemetadata__simpleextractionresult_operator_equal(const void* self, const void* rhs) {
     return KFileMetaData__SimpleExtractionResult_OperatorEqual((KFileMetaData__SimpleExtractionResult*)self, (KFileMetaData__SimpleExtractionResult*)rhs);
 }

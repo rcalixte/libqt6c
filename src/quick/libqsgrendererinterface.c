@@ -30,10 +30,6 @@ bool q_sgrendererinterface_is_api_rhi_based(int32_t api) {
     return QSGRendererInterface_IsApiRhiBased(api);
 }
 
-void q_sgrendererinterface_operator_assign(void* self, const void* param1) {
-    QSGRendererInterface_OperatorAssign((QSGRendererInterface*)self, (QSGRendererInterface*)param1);
-}
-
 void q_sgrendererinterface_delete(void* self) {
     QSGRendererInterface_Delete((QSGRendererInterface*)(self));
 }

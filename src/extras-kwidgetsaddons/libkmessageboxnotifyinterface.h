@@ -34,13 +34,6 @@ void k_messageboxnotifyinterface_send_notification(void* self, int32_t notificat
 ///
 void k_messageboxnotifyinterface_on_send_notification(void* self, void (*callback)(void*, int32_t, const char*, void*));
 
-/// [Upstream resources](https://api.kde.org/kmessageboxnotifyinterface.html#operator-eq)
-///
-/// @param self KMessageBoxNotifyInterface*
-/// @param param1 KMessageBoxNotifyInterface*
-///
-void k_messageboxnotifyinterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://api.kde.org/kmessageboxnotifyinterface.html#dtor.KMessageBoxNotifyInterface)
 ///
 /// Delete this object from C++ memory.

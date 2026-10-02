@@ -14,10 +14,6 @@ KFileItemListProperties* k_fileitemlistproperties_new3(const void* param1) {
     return KFileItemListProperties_New3((KFileItemListProperties*)param1);
 }
 
-void k_fileitemlistproperties_operator_assign(void* self, const void* other) {
-    KFileItemListProperties_OperatorAssign((KFileItemListProperties*)self, (KFileItemListProperties*)other);
-}
-
 void k_fileitemlistproperties_set_items(void* self, const void* items) {
     KFileItemListProperties_SetItems((KFileItemListProperties*)self, (KFileItemList*)items);
 }

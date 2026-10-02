@@ -2426,13 +2426,6 @@ void q_sgnodevisitor_on_visit_children(void* self, void (*callback)(void*, void*
 ///
 void q_sgnodevisitor_super_visit_children(void* self, void* n);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgnodevisitor.html#operator-eq)
-///
-/// @param self QSGNodeVisitor*
-/// @param param1 QSGNodeVisitor*
-///
-void q_sgnodevisitor_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnodevisitor.html#dtor.QSGNodeVisitor)
 ///
 /// Delete this object from C++ memory.

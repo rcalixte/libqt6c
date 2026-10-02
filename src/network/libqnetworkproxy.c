@@ -322,10 +322,6 @@ libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_system_proxy_for_query(
     return _arr;
 }
 
-void q_networkproxyfactory_operator_assign(void* self, const void* param1) {
-    QNetworkProxyFactory_OperatorAssign((QNetworkProxyFactory*)self, (QNetworkProxyFactory*)param1);
-}
-
 libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_system_proxy_for_query1(const void* query) {
     libqt_list _arr = QNetworkProxyFactory_SystemProxyForQuery1((QNetworkProxyQuery*)query);
     return _arr;

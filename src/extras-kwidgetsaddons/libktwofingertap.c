@@ -490,10 +490,6 @@ void k_twofingertaprecognizer_unregister_recognizer(int32_t type) {
     QGestureRecognizer_UnregisterRecognizer(type);
 }
 
-void k_twofingertaprecognizer_operator_assign(void* self, const void* param1) {
-    QGestureRecognizer_OperatorAssign((QGestureRecognizer*)self, (QGestureRecognizer*)param1);
-}
-
 void k_twofingertaprecognizer_reset(void* self, void* state) {
     KTwoFingerTapRecognizer_Reset((KTwoFingerTapRecognizer*)self, (QGesture*)state);
 }

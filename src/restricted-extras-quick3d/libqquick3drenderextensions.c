@@ -341,10 +341,6 @@ void q_quick3drenderextension_on_destroyed1(void* self, void (*callback)(void*, 
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_quick3drenderextension_operator_assign(void* self, const void* param1) {
-    QQmlParserStatus_OperatorAssign(q_quick3drenderextension_as_q_qml_parser_status(self), (QQmlParserStatus*)param1);
-}
-
 void q_quick3drenderextension_mark_all_dirty(void* self) {
     QQuick3DRenderExtension_MarkAllDirty((QQuick3DRenderExtension*)self);
 }

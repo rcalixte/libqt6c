@@ -409,10 +409,6 @@ void q_treewidgetitem_super_write(const void* self, void* out) {
     QTreeWidgetItem_SuperWrite((QTreeWidgetItem*)self, (QDataStream*)out);
 }
 
-void q_treewidgetitem_operator_assign(void* self, const void* other) {
-    QTreeWidgetItem_OperatorAssign((QTreeWidgetItem*)self, (QTreeWidgetItem*)other);
-}
-
 QTreeWidgetItem* q_treewidgetitem_parent(const void* self) {
     return QTreeWidgetItem_Parent((QTreeWidgetItem*)self);
 }

@@ -152,10 +152,6 @@ int32_t k_textautocorrectioncore__importabstractautocorrection_min_find_string_l
     return TextAutoCorrectionCore__ImportAbstractAutocorrection_MinFindStringLenght((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self);
 }
 
-void k_textautocorrectioncore__importabstractautocorrection_operator_assign(void* self, const void* param1) {
-    TextAutoCorrectionCore__ImportAbstractAutocorrection_OperatorAssign((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self, (TextAutoCorrectionCore__ImportAbstractAutocorrection*)param1);
-}
-
 void k_textautocorrectioncore__importabstractautocorrection_delete(void* self) {
     TextAutoCorrectionCore__ImportAbstractAutocorrection_Delete((TextAutoCorrectionCore__ImportAbstractAutocorrection*)(self));
 }

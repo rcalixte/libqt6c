@@ -6404,13 +6404,6 @@ QWidget* q_gestureevent_widget(const void* self);
 ///
 QPointF* q_gestureevent_map_to_graphics_scene(const void* self, const void* gesturePoint);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#operator-eq)
-///
-/// @param self QGestureEvent*
-/// @param param1 QGestureEvent*
-///
-void q_gestureevent_operator_assign(void* self, const void* param1);
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)

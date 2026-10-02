@@ -1350,13 +1350,6 @@ QSizeF* q_textobjectinterface_intrinsic_size(void* self, void* doc, int posInDoc
 ///
 void q_textobjectinterface_draw_object(void* self, void* painter, const void* rect, void* doc, int posInDocument, const void* format);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtextobjectinterface.html#operator-eq)
-///
-/// @param self QTextObjectInterface*
-/// @param param1 QTextObjectInterface*
-///
-void q_textobjectinterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextobjectinterface.html#dtor.QTextObjectInterface)
 ///
 /// Delete this object from C++ memory.

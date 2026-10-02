@@ -35,13 +35,6 @@ QUrl* q_qmlabstracturlinterceptor_intercept(void* self, const void* path, int32_
 ///
 void q_qmlabstracturlinterceptor_on_intercept(void* self, QUrl* (*callback)(void*, const void*, int32_t));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlabstracturlinterceptor.html#operator-eq)
-///
-/// @param self QQmlAbstractUrlInterceptor*
-/// @param param1 QQmlAbstractUrlInterceptor*
-///
-void q_qmlabstracturlinterceptor_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlabstracturlinterceptor.html#dtor.QQmlAbstractUrlInterceptor)
 ///
 /// Delete this object from C++ memory.

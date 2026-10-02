@@ -10,13 +10,6 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#operator-eq)
-///
-/// @param self QItemEditorCreatorBase*
-/// @param param1 QItemEditorCreatorBase*
-///
-void q_itemeditorcreatorbase_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#dtor.QItemEditorCreatorBase)
 ///
 /// Delete this object from C++ memory.
@@ -110,13 +103,6 @@ const QItemEditorFactory* q_itemeditorfactory_default_factory();
 /// @param factory QItemEditorFactory*
 ///
 void q_itemeditorfactory_set_default_factory(void* factory);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#operator-eq)
-///
-/// @param self QItemEditorFactory*
-/// @param param1 QItemEditorFactory*
-///
-void q_itemeditorfactory_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#dtor.QItemEditorFactory)
 ///

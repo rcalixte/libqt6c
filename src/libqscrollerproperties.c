@@ -10,10 +10,6 @@ QScrollerProperties* q_scrollerproperties_new2(const void* sp) {
     return QScrollerProperties_New2((QScrollerProperties*)sp);
 }
 
-void q_scrollerproperties_operator_assign(void* self, const void* sp) {
-    QScrollerProperties_OperatorAssign((QScrollerProperties*)self, (QScrollerProperties*)sp);
-}
-
 bool q_scrollerproperties_operator_equal(const void* self, const void* sp) {
     return QScrollerProperties_OperatorEqual((QScrollerProperties*)self, (QScrollerProperties*)sp);
 }

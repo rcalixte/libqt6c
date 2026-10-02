@@ -72,13 +72,6 @@ int32_t q_sgrendererinterface_shader_source_type(const void* self);
 ///
 bool q_sgrendererinterface_is_api_rhi_based(int32_t api);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgrendererinterface.html#operator-eq)
-///
-/// @param self QSGRendererInterface*
-/// @param param1 QSGRendererInterface*
-///
-void q_sgrendererinterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgrendererinterface.html#dtor.QSGRendererInterface)
 ///
 /// Delete this object from C++ memory.

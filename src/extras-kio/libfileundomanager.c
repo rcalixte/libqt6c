@@ -402,10 +402,6 @@ void k_io__fileundomanager__uiinterface_super_virtual_hook(void* self, int id, v
     KIO__FileUndoManager__UiInterface_SuperVirtualHook((KIO__FileUndoManager__UiInterface*)self, id, data);
 }
 
-void k_io__fileundomanager__uiinterface_operator_assign(void* self, const void* param1) {
-    KIO__FileUndoManager__UiInterface_OperatorAssign((KIO__FileUndoManager__UiInterface*)self, (KIO__FileUndoManager__UiInterface*)param1);
-}
-
 void k_io__fileundomanager__uiinterface_delete(void* self) {
     KIO__FileUndoManager__UiInterface_Delete((KIO__FileUndoManager__UiInterface*)(self));
 }

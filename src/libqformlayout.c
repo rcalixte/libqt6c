@@ -752,10 +752,6 @@ int32_t q_formlayout_alignment(const void* self) {
     return QLayoutItem_Alignment(q_formlayout_as_q_layout_item(self));
 }
 
-void q_formlayout_operator_assign(void* self, const void* param1) {
-    QLayoutItem_OperatorAssign(q_formlayout_as_q_layout_item(self), (QLayoutItem*)param1);
-}
-
 QRect* q_formlayout_geometry(const void* self) {
     return QFormLayout_Geometry((QFormLayout*)self);
 }

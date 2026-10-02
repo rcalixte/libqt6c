@@ -682,15 +682,6 @@ void q_quick3drenderextension_destroyed1(void* self, void* param1);
 ///
 void q_quick3drenderextension_on_destroyed1(void* self, void (*callback)(void*, void*));
 
-/// Inherited from QQmlParserStatus
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlparserstatus.html#operator-eq)
-///
-/// @param self QQuick3DRenderExtension*
-/// @param param1 QQmlParserStatus*
-///
-void q_quick3drenderextension_operator_assign(void* self, const void* param1);
-
 /// Inherited from QQuick3DObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dobject.html#markAllDirty)

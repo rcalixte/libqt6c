@@ -39,13 +39,6 @@ KColorScheme* k_colorscheme_new3(int32_t param1);
 ///
 KColorScheme* k_colorscheme_new4(int32_t param1, int32_t param2);
 
-/// [Upstream resources](https://api.kde.org/kcolorscheme.html#operator-eq)
-///
-/// @param self KColorScheme*
-/// @param param1 KColorScheme*
-///
-void k_colorscheme_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#background)
 ///
 /// @param self const KColorScheme*

@@ -25,13 +25,6 @@ KFileMetaData__WriteData* k_filemetadata__writedata_new(const char* url, const c
 ///
 KFileMetaData__WriteData* k_filemetadata__writedata_new2(const void* rhs);
 
-/// [Upstream resources](https://api.kde.org/kfilemetadata-writedata.html#operator-eq)
-///
-/// @param self KFileMetaData__WriteData*
-/// @param rhs KFileMetaData__WriteData*
-///
-void k_filemetadata__writedata_operator_assign(void* self, const void* rhs);
-
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writedata.html#operator-eq-eq)
 ///
 /// @param self const KFileMetaData__WriteData*

@@ -63,10 +63,6 @@ QNetworkAccessManager* k_attica__platformdependent_nam(void* self) {
     return Attica__PlatformDependent_Nam((Attica__PlatformDependent*)self);
 }
 
-void k_attica__platformdependent_operator_assign(void* self, const void* param1) {
-    Attica__PlatformDependent_OperatorAssign((Attica__PlatformDependent*)self, (Attica__PlatformDependent*)param1);
-}
-
 void k_attica__platformdependent_delete(void* self) {
     Attica__PlatformDependent_Delete((Attica__PlatformDependent*)(self));
 }

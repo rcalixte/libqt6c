@@ -43,13 +43,6 @@ KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_ne
 ///
 KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_new4(const char* url, const char* mimetype, const int32_t* flags);
 
-/// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#operator-eq)
-///
-/// @param self KFileMetaData__SimpleExtractionResult*
-/// @param rhs KFileMetaData__SimpleExtractionResult*
-///
-void k_filemetadata__simpleextractionresult_operator_assign(void* self, const void* rhs);
-
 /// [Upstream resources](https://api.kde.org/kfilemetadata-simpleextractionresult.html#operator-eq-eq)
 ///
 /// @param self const KFileMetaData__SimpleExtractionResult*

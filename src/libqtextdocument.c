@@ -19,10 +19,6 @@
 #include "libqtextdocument.hpp"
 #include "libqtextdocument.h"
 
-void q_abstractundoitem_operator_assign(void* self, const void* param1) {
-    QAbstractUndoItem_OperatorAssign((QAbstractUndoItem*)self, (QAbstractUndoItem*)param1);
-}
-
 void q_abstractundoitem_delete(void* self) {
     QAbstractUndoItem_Delete((QAbstractUndoItem*)(self));
 }

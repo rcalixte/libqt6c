@@ -100,13 +100,6 @@ int32_t q_gesturerecognizer_register_recognizer(void* recognizer);
 ///
 void q_gesturerecognizer_unregister_recognizer(int32_t type);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#operator-eq)
-///
-/// @param self QGestureRecognizer*
-/// @param param1 QGestureRecognizer*
-///
-void q_gesturerecognizer_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#dtor.QGestureRecognizer)
 ///
 /// Delete this object from C++ memory.

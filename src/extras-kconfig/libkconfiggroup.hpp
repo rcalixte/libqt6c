@@ -25,7 +25,6 @@ KConfigGroup* KConfigGroup_New();
 KConfigGroup* KConfigGroup_New2(KConfigBase* master, const libqt_string group);
 KConfigGroup* KConfigGroup_New3(const KConfigBase* master, const libqt_string group);
 KConfigGroup* KConfigGroup_New4(const KConfigGroup* param1);
-void KConfigGroup_OperatorAssign(KConfigGroup* self, const KConfigGroup* param1);
 bool KConfigGroup_IsValid(const KConfigGroup* self);
 libqt_string KConfigGroup_Name(const KConfigGroup* self);
 bool KConfigGroup_Exists(const KConfigGroup* self);

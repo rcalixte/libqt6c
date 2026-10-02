@@ -41,7 +41,6 @@ QPixmap* QPixmap_New5(const char** xpm);
 QPixmap* QPixmap_New6(const QPixmap* param1);
 QPixmap* QPixmap_New7(const libqt_string fileName, const char* format);
 QPixmap* QPixmap_New8(const libqt_string fileName, const char* format, int flags);
-void QPixmap_OperatorAssign(QPixmap* self, const QPixmap* param1);
 void QPixmap_Swap(QPixmap* self, QPixmap* other);
 QVariant* QPixmap_ToQVariant(const QPixmap* self);
 bool QPixmap_IsNull(const QPixmap* self);

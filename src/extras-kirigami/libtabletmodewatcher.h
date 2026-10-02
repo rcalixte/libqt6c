@@ -37,13 +37,6 @@ bool k_kirigami__platform__tabletmodechangedevent_tablet_mode(const void* self);
 ///
 void k_kirigami__platform__tabletmodechangedevent_set_tablet_mode(void* self, bool tabletMode);
 
-/// [Upstream resources](https://api.kde.org/kirigami-platform-tabletmodechangedevent.html#operator-eq)
-///
-/// @param self Kirigami__Platform__TabletModeChangedEvent*
-/// @param param1 Kirigami__Platform__TabletModeChangedEvent*
-///
-void k_kirigami__platform__tabletmodechangedevent_operator_assign(void* self, const void* param1);
-
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)

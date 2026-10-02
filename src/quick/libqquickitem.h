@@ -3677,15 +3677,6 @@ void q_quickitem_destroyed1(void* self, void* param1);
 ///
 void q_quickitem_on_destroyed1(void* self, void (*callback)(void*, void*));
 
-/// Inherited from QQmlParserStatus
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlparserstatus.html#operator-eq)
-///
-/// @param self QQuickItem*
-/// @param param1 QQmlParserStatus*
-///
-void q_quickitem_operator_assign(void* self, const void* param1);
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)

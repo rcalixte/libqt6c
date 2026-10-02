@@ -34,13 +34,6 @@ void q_qmltypesextensioninterface_register_types(void* self, const char* uri);
 ///
 void q_qmltypesextensioninterface_on_register_types(void* self, void (*callback)(void*, const char*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmltypesextensioninterface.html#operator-eq)
-///
-/// @param self QQmlTypesExtensionInterface*
-/// @param param1 QQmlTypesExtensionInterface*
-///
-void q_qmltypesextensioninterface_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmltypesextensioninterface.html#dtor.QQmlTypesExtensionInterface)
 ///
 /// Delete this object from C++ memory.
@@ -76,13 +69,6 @@ void q_qmlextensioninterface_initialize_engine(void* self, void* engine, const c
 ///
 void q_qmlextensioninterface_on_initialize_engine(void* self, void (*callback)(void*, void*, const char*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlextensioninterface.html#operator-eq)
-///
-/// @param self QQmlExtensionInterface*
-/// @param param1 QQmlExtensionInterface*
-///
-void q_qmlextensioninterface_operator_assign(void* self, const void* param1);
-
 /// Inherited from QQmlTypesExtensionInterface
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmltypesextensioninterface.html#registerTypes)
@@ -116,13 +102,6 @@ void q_qmlextensioninterface_on_register_types(void* self, void (*callback)(void
 void q_qmlextensioninterface_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengineextensioninterface.html)
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlengineextensioninterface.html#operator-eq)
-///
-/// @param self QQmlEngineExtensionInterface*
-/// @param param1 QQmlEngineExtensionInterface*
-///
-void q_qmlengineextensioninterface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengineextensioninterface.html#dtor.QQmlEngineExtensionInterface)
 ///

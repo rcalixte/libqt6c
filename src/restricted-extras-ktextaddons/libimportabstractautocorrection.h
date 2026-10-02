@@ -124,13 +124,6 @@ int32_t k_textautocorrectioncore__importabstractautocorrection_min_find_string_l
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
 ///
-/// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*
-/// @param param1 TextAutoCorrectionCore__ImportAbstractAutocorrection*
-///
-void k_textautocorrectioncore__importabstractautocorrection_operator_assign(void* self, const void* param1);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1ImportAbstractAutocorrection.html)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self TextAutoCorrectionCore__ImportAbstractAutocorrection*

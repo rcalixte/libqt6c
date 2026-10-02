@@ -1121,10 +1121,6 @@ void q_quickframebufferobject_on_destroyed1(void* self, void (*callback)(void*, 
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_quickframebufferobject_operator_assign(void* self, const void* param1) {
-    QQmlParserStatus_OperatorAssign(q_quickframebufferobject_as_q_qml_parser_status(self), (QQmlParserStatus*)param1);
-}
-
 QRectF* q_quickframebufferobject_bounding_rect(const void* self) {
     return QQuickFramebufferObject_BoundingRect((QQuickFramebufferObject*)self);
 }
@@ -1599,8 +1595,4 @@ void q_quickframebufferobject_on_object_name_changed(void* self, void (*callback
 
 void q_quickframebufferobject_delete(void* self) {
     QQuickFramebufferObject_Delete((QQuickFramebufferObject*)(self));
-}
-
-void q_quickframebufferobject__renderer_operator_assign(void* self, const void* param1) {
-    QQuickFramebufferObject__Renderer_OperatorAssign((QQuickFramebufferObject__Renderer*)self, (QQuickFramebufferObject__Renderer*)param1);
 }

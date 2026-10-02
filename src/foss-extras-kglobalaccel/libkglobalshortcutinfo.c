@@ -57,10 +57,6 @@ const char* k_globalshortcutinfo_tr(const char* s) {
     return _ret;
 }
 
-void k_globalshortcutinfo_operator_assign(void* self, const void* rhs) {
-    KGlobalShortcutInfo_OperatorAssign((KGlobalShortcutInfo*)self, (KGlobalShortcutInfo*)rhs);
-}
-
 const char* k_globalshortcutinfo_context_friendly_name(const void* self) {
     libqt_string _str = KGlobalShortcutInfo_ContextFriendlyName((KGlobalShortcutInfo*)self);
     char* _ret = qstring_to_char(_str);

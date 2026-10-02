@@ -443,15 +443,6 @@ bool k_desktopfile_is_group_immutable(const void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
-/// [Upstream resources](https://api.kde.org/kconfigbase.html#operator-eq)
-///
-/// @param self KDesktopFile*
-/// @param param1 KConfigBase*
-///
-void k_desktopfile_operator_assign(void* self, const void* param1);
-
-/// Inherited from KConfigBase
-///
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#deleteGroup)
 ///
 /// @param self KDesktopFile*

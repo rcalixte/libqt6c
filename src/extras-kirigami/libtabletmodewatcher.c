@@ -21,10 +21,6 @@ void k_irigami__platform__tabletmodechangedevent_set_tablet_mode(void* self, boo
     Kirigami__Platform__TabletModeChangedEvent_SetTabletMode((Kirigami__Platform__TabletModeChangedEvent*)self, tabletMode);
 }
 
-void k_irigami__platform__tabletmodechangedevent_operator_assign(void* self, const void* param1) {
-    Kirigami__Platform__TabletModeChangedEvent_OperatorAssign((Kirigami__Platform__TabletModeChangedEvent*)self, (Kirigami__Platform__TabletModeChangedEvent*)param1);
-}
-
 int32_t k_irigami__platform__tabletmodechangedevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }

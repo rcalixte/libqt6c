@@ -1415,15 +1415,6 @@ void q_boxlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_boxlayout_alignment(const void* self);
 
-/// Inherited from QLayoutItem
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
-///
-/// @param self QBoxLayout*
-/// @param param1 QLayoutItem*
-///
-void q_boxlayout_operator_assign(void* self, const void* param1);
-
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#geometry)
@@ -3319,15 +3310,6 @@ void q_hboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @return flag of enum Qt__AlignmentFlag
 ///
 int32_t q_hboxlayout_alignment(const void* self);
-
-/// Inherited from QLayoutItem
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
-///
-/// @param self QHBoxLayout*
-/// @param param1 QLayoutItem*
-///
-void q_hboxlayout_operator_assign(void* self, const void* param1);
 
 /// Inherited from QBoxLayout
 ///
@@ -5713,15 +5695,6 @@ void q_vboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @return flag of enum Qt__AlignmentFlag
 ///
 int32_t q_vboxlayout_alignment(const void* self);
-
-/// Inherited from QLayoutItem
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
-///
-/// @param self QVBoxLayout*
-/// @param param1 QLayoutItem*
-///
-void q_vboxlayout_operator_assign(void* self, const void* param1);
 
 /// Inherited from QBoxLayout
 ///

@@ -20,13 +20,6 @@
 ///
 QObject* q_abstractextensionfactory_extension(const void* self, void* object, const char* iid);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionfactory.html#operator-eq)
-///
-/// @param self QAbstractExtensionFactory*
-/// @param param1 QAbstractExtensionFactory*
-///
-void q_abstractextensionfactory_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionfactory.html#dtor.QAbstractExtensionFactory)
 ///
 /// Delete this object from C++ memory.
@@ -36,13 +29,6 @@ void q_abstractextensionfactory_operator_assign(void* self, const void* param1);
 void q_abstractextensionfactory_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionmanager.html)
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionmanager.html#operator-eq)
-///
-/// @param self QAbstractExtensionManager*
-/// @param param1 QAbstractExtensionManager*
-///
-void q_abstractextensionmanager_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractextensionmanager.html#dtor.QAbstractExtensionManager)
 ///

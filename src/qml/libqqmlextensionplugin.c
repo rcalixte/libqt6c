@@ -326,10 +326,6 @@ void q_qmlextensionplugin_on_destroyed1(void* self, void (*callback)(void*, void
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_qmlextensionplugin_operator_assign(void* self, const void* param1) {
-    QQmlExtensionInterface_OperatorAssign(q_qmlextensionplugin_as_q_qml_extension_interface(self), (QQmlExtensionInterface*)param1);
-}
-
 bool q_qmlextensionplugin_event(void* self, void* event) {
     return QQmlExtensionPlugin_Event((QQmlExtensionPlugin*)self, (QEvent*)event);
 }
@@ -730,10 +726,6 @@ void q_qmlengineextensionplugin_destroyed1(void* self, void* param1) {
 
 void q_qmlengineextensionplugin_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
-}
-
-void q_qmlengineextensionplugin_operator_assign(void* self, const void* param1) {
-    QQmlEngineExtensionInterface_OperatorAssign(q_qmlengineextensionplugin_as_q_qml_engine_extension_interface(self), (QQmlEngineExtensionInterface*)param1);
 }
 
 bool q_qmlengineextensionplugin_event(void* self, void* event) {

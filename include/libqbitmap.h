@@ -64,13 +64,6 @@ QBitmap* q_bitmap_new6(const void* param1);
 ///
 QBitmap* q_bitmap_new7(const char* fileName, const char* format);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qbitmap.html#operator-eq)
-///
-/// @param self QBitmap*
-/// @param param1 QPixmap*
-///
-void q_bitmap_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitmap.html#swap)
 ///
 /// @param self QBitmap*
@@ -115,13 +108,6 @@ QBitmap* q_bitmap_from_pixmap(const void* pixmap);
 /// @param matrix QTransform*
 ///
 QBitmap* q_bitmap_transformed(const void* self, const void* matrix);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qbitmap.html#operator-eq)
-///
-/// @param self QBitmap*
-/// @param param1 QBitmap*
-///
-void q_bitmap_operator_assign2(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitmap.html#fromImage)
 ///

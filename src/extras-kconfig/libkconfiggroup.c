@@ -20,10 +20,6 @@ KConfigGroup* k_configgroup_new4(const void* param1) {
     return KConfigGroup_New4((KConfigGroup*)param1);
 }
 
-void k_configgroup_operator_assign(void* self, const void* param1) {
-    KConfigGroup_OperatorAssign((KConfigGroup*)self, (KConfigGroup*)param1);
-}
-
 bool k_configgroup_is_valid(const void* self) {
     return KConfigGroup_IsValid((KConfigGroup*)self);
 }

@@ -28,13 +28,6 @@ void q_accessiblebridge_set_root_object(void* self, void* rootObject);
 ///
 void q_accessiblebridge_notify_accessibility_update(void* self, void* event);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblebridge.html#operator-eq)
-///
-/// @param self QAccessibleBridge*
-/// @param param1 QAccessibleBridge*
-///
-void q_accessiblebridge_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblebridge.html#dtor.QAccessibleBridge)
 ///
 /// Delete this object from C++ memory.

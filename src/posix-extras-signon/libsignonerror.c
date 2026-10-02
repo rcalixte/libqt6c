@@ -17,10 +17,6 @@ SignOn__Error* q_signon__error_new4(int type, const char* message) {
     return SignOn__Error_New4(type, qstring(message));
 }
 
-void q_signon__error_operator_assign(void* self, const void* src) {
-    SignOn__Error_OperatorAssign((SignOn__Error*)self, (SignOn__Error*)src);
-}
-
 void q_signon__error_set_type(void* self, int type) {
     SignOn__Error_SetType((SignOn__Error*)self, type);
 }

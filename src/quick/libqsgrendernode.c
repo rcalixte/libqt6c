@@ -217,10 +217,6 @@ void* q_sgrendernode__renderstate_get(const void* self, const char* state) {
     return QSGRenderNode__RenderState_Get((QSGRenderNode__RenderState*)self, state);
 }
 
-void q_sgrendernode__renderstate_operator_assign(void* self, const void* param1) {
-    QSGRenderNode__RenderState_OperatorAssign((QSGRenderNode__RenderState*)self, (QSGRenderNode__RenderState*)param1);
-}
-
 void q_sgrendernode__renderstate_delete(void* self) {
     QSGRenderNode__RenderState_Delete((QSGRenderNode__RenderState*)(self));
 }

@@ -632,10 +632,6 @@ int32_t q_layout_alignment(const void* self) {
     return QLayoutItem_Alignment(q_layout_as_q_layout_item(self));
 }
 
-void q_layout_operator_assign(void* self, const void* param1) {
-    QLayoutItem_OperatorAssign(q_layout_as_q_layout_item(self), (QLayoutItem*)param1);
-}
-
 bool q_layout_event(void* self, void* event) {
     return QLayout_Event((QLayout*)self, (QEvent*)event);
 }

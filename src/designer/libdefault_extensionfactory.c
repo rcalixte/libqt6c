@@ -317,10 +317,6 @@ void q_extensionfactory_on_destroyed1(void* self, void (*callback)(void*, void*)
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_extensionfactory_operator_assign(void* self, const void* param1) {
-    QAbstractExtensionFactory_OperatorAssign(q_extensionfactory_as_q_abstract_extension_factory(self), (QAbstractExtensionFactory*)param1);
-}
-
 bool q_extensionfactory_event(void* self, void* event) {
     return QExtensionFactory_Event((QExtensionFactory*)self, (QEvent*)event);
 }

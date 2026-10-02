@@ -1522,15 +1522,6 @@ void q_formlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_formlayout_alignment(const void* self);
 
-/// Inherited from QLayoutItem
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
-///
-/// @param self QFormLayout*
-/// @param param1 QLayoutItem*
-///
-void q_formlayout_operator_assign(void* self, const void* param1);
-
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#geometry)

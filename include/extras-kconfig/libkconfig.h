@@ -494,15 +494,6 @@ bool k_config_is_group_immutable(const void* self, const char* group);
 
 /// Inherited from KConfigBase
 ///
-/// [Upstream resources](https://api.kde.org/kconfigbase.html#operator-eq)
-///
-/// @param self KConfig*
-/// @param param1 KConfigBase*
-///
-void k_config_operator_assign(void* self, const void* param1);
-
-/// Inherited from KConfigBase
-///
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#deleteGroup)
 ///
 /// @param self KConfig*

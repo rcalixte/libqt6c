@@ -38,10 +38,6 @@ QBitmap* q_bitmap_new7(const char* fileName, const char* format) {
     return QBitmap_New7(qstring(fileName), format);
 }
 
-void q_bitmap_operator_assign(void* self, const void* param1) {
-    QBitmap_OperatorAssign((QBitmap*)self, (QPixmap*)param1);
-}
-
 void q_bitmap_swap(void* self, void* other) {
     QBitmap_Swap((QBitmap*)self, (QBitmap*)other);
 }
@@ -68,10 +64,6 @@ QBitmap* q_bitmap_from_pixmap(const void* pixmap) {
 
 QBitmap* q_bitmap_transformed(const void* self, const void* matrix) {
     return QBitmap_Transformed((QBitmap*)self, (QTransform*)matrix);
-}
-
-void q_bitmap_operator_assign2(void* self, const void* param1) {
-    QBitmap_OperatorAssign2((QBitmap*)self, (QBitmap*)param1);
 }
 
 QBitmap* q_bitmap_from_image2(const void* image, int32_t flags) {

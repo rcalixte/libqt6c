@@ -567,13 +567,6 @@ QTermWidgetInterface* q_termwidgetinterface_create_widget(const void* self, int 
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @param self QTermWidgetInterface*
-/// @param param1 QTermWidgetInterface*
-///
-void q_termwidgetinterface_operator_assign(void* self, const void* param1);
-
-/// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QTermWidgetInterface*

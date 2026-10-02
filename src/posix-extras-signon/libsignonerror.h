@@ -42,13 +42,6 @@ SignOn__Error* q_signon__error_new4(int type, const char* message);
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
 ///
 /// @param self SignOn__Error*
-/// @param src SignOn__Error*
-///
-void q_signon__error_operator_assign(void* self, const void* src);
-
-/// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1Error.html)
-///
-/// @param self SignOn__Error*
 /// @param type int
 ///
 void q_signon__error_set_type(void* self, int type);

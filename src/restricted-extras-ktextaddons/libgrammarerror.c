@@ -138,10 +138,6 @@ void k_textgrammarcheck__grammarerror_set_url(void* self, const char* url) {
     TextGrammarCheck__GrammarError_SetUrl((TextGrammarCheck__GrammarError*)self, qstring(url));
 }
 
-void k_textgrammarcheck__grammarerror_operator_assign(void* self, const void* param1) {
-    TextGrammarCheck__GrammarError_OperatorAssign((TextGrammarCheck__GrammarError*)self, (TextGrammarCheck__GrammarError*)param1);
-}
-
 void k_textgrammarcheck__grammarerror_delete(void* self) {
     TextGrammarCheck__GrammarError_Delete((TextGrammarCheck__GrammarError*)(self));
 }

@@ -51,7 +51,6 @@ QImage* QImage_New16(unsigned char* data, int width, int height, ptrdiff_t bytes
 QImage* QImage_New17(const unsigned char* data, int width, int height, ptrdiff_t bytesPerLine, int format, intptr_t cleanupFunction);
 QImage* QImage_New18(const unsigned char* data, int width, int height, ptrdiff_t bytesPerLine, int format, intptr_t cleanupFunction, void* cleanupInfo);
 QImage* QImage_New19(const libqt_string fileName, const char* format);
-void QImage_OperatorAssign(QImage* self, const QImage* param1);
 void QImage_Swap(QImage* self, QImage* other);
 bool QImage_IsNull(const QImage* self);
 int QImage_DevType(const QImage* self);

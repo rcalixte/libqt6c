@@ -10,10 +10,6 @@ KFileMetaData__WriteData* k_filemetadata__writedata_new2(const void* rhs) {
     return KFileMetaData__WriteData_New2((KFileMetaData__WriteData*)rhs);
 }
 
-void k_filemetadata__writedata_operator_assign(void* self, const void* rhs) {
-    KFileMetaData__WriteData_OperatorAssign((KFileMetaData__WriteData*)self, (KFileMetaData__WriteData*)rhs);
-}
-
 bool k_filemetadata__writedata_operator_equal(const void* self, const void* rhs) {
     return KFileMetaData__WriteData_OperatorEqual((KFileMetaData__WriteData*)self, (KFileMetaData__WriteData*)rhs);
 }

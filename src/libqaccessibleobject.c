@@ -111,10 +111,6 @@ QAccessibleAttributesInterface* q_accessibleobject_attributes_interface(void* se
     return QAccessibleInterface_AttributesInterface((QAccessibleInterface*)self);
 }
 
-void q_accessibleobject_operator_assign(void* self, const void* param1) {
-    QAccessibleInterface_OperatorAssign((QAccessibleInterface*)self, (QAccessibleInterface*)param1);
-}
-
 QWindow* q_accessibleobject_window(const void* self) {
     return QAccessibleObject_Window((QAccessibleObject*)self);
 }
@@ -414,10 +410,6 @@ QAccessibleSelectionInterface* q_accessibleapplication_selection_interface(void*
 
 QAccessibleAttributesInterface* q_accessibleapplication_attributes_interface(void* self) {
     return QAccessibleInterface_AttributesInterface((QAccessibleInterface*)self);
-}
-
-void q_accessibleapplication_operator_assign(void* self, const void* param1) {
-    QAccessibleInterface_OperatorAssign((QAccessibleInterface*)self, (QAccessibleInterface*)param1);
 }
 
 bool q_accessibleapplication_is_valid(const void* self) {

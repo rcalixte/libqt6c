@@ -24,13 +24,6 @@ KFileMetaData__UserMetaData* k_filemetadata__usermetadata_new(const char* filePa
 ///
 KFileMetaData__UserMetaData* k_filemetadata__usermetadata_new2(const void* rhs);
 
-/// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#operator-eq)
-///
-/// @param self KFileMetaData__UserMetaData*
-/// @param rhs KFileMetaData__UserMetaData*
-///
-void k_filemetadata__usermetadata_operator_assign(void* self, const void* rhs);
-
 /// [Upstream resources](https://api.kde.org/kfilemetadata-usermetadata.html#filePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

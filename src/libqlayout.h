@@ -1244,15 +1244,6 @@ void q_layout_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_layout_alignment(const void* self);
 
-/// Inherited from QLayoutItem
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
-///
-/// @param self QLayout*
-/// @param param1 QLayoutItem*
-///
-void q_layout_operator_assign(void* self, const void* param1);
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)

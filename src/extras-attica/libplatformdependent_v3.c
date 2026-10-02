@@ -288,10 +288,6 @@ QNetworkReply* k_attica__platformdependentv3_put2(void* self, const void* reques
     return Attica__PlatformDependentV2_Put2((Attica__PlatformDependentV2*)self, (QNetworkRequest*)request, qstring(data));
 }
 
-void k_attica__platformdependentv3_operator_assign(void* self, const void* param1) {
-    Attica__PlatformDependentV2_OperatorAssign((Attica__PlatformDependentV2*)self, (Attica__PlatformDependentV2*)param1);
-}
-
 libqt_list /* of QUrl* */ k_attica__platformdependentv3_get_default_provider_files(const void* self) {
     libqt_list _arr = Attica__PlatformDependent_GetDefaultProviderFiles((Attica__PlatformDependent*)self);
     return _arr;

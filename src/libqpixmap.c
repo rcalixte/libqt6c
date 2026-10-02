@@ -47,10 +47,6 @@ QPixmap* q_pixmap_new8(const char* fileName, const char* format, int32_t flags) 
     return QPixmap_New8(qstring(fileName), format, flags);
 }
 
-void q_pixmap_operator_assign(void* self, const void* param1) {
-    QPixmap_OperatorAssign((QPixmap*)self, (QPixmap*)param1);
-}
-
 void q_pixmap_swap(void* self, void* other) {
     QPixmap_Swap((QPixmap*)self, (QPixmap*)other);
 }

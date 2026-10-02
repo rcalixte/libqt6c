@@ -324,10 +324,6 @@ void q_extensionmanager_on_destroyed1(void* self, void (*callback)(void*, void*)
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_extensionmanager_operator_assign(void* self, const void* param1) {
-    QAbstractExtensionManager_OperatorAssign(q_extensionmanager_as_q_abstract_extension_manager(self), (QAbstractExtensionManager*)param1);
-}
-
 bool q_extensionmanager_event(void* self, void* event) {
     return QExtensionManager_Event((QExtensionManager*)self, (QEvent*)event);
 }

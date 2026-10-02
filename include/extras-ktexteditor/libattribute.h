@@ -163,13 +163,6 @@ bool k_texteditor__attribute_has_any_property(const void* self);
 ///
 KTextEditor__Attribute* k_texteditor__attribute_operator_plus_assign(void* self, const void* a);
 
-/// [Upstream resources](https://api.kde.org/ktexteditor-attribute.html#operator-eq)
-///
-/// @param self KTextEditor__Attribute*
-/// @param a KTextEditor__Attribute*
-///
-void k_texteditor__attribute_operator_assign(void* self, const void* a);
-
 /// [Upstream resources](https://api.kde.org/ktexteditor-attribute.html#setFontBold)
 ///
 /// @param self KTextEditor__Attribute*
@@ -767,6 +760,15 @@ void k_texteditor__attribute_set_table_cell_column_span(void* self, int tableCel
 /// @param self const KTextEditor__Attribute*
 ///
 int32_t k_texteditor__attribute_table_cell_column_span(const void* self);
+
+/// Inherited from QTextCharFormat
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextcharformat.html#operator-eq)
+///
+/// @param self KTextEditor__Attribute*
+/// @param param1 QTextCharFormat*
+///
+void k_texteditor__attribute_operator_assign(void* self, const void* param1);
 
 /// Inherited from QTextCharFormat
 ///

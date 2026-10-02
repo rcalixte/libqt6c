@@ -589,15 +589,6 @@ QNetworkReply* k_attica__platformdependentv3_put(void* self, const void* request
 ///
 QNetworkReply* k_attica__platformdependentv3_put2(void* self, const void* request, char* data);
 
-/// Inherited from Attica::PlatformDependentV2
-///
-/// [Upstream resources](https://api.kde.org/attica-platformdependentv2.html#operator-eq)
-///
-/// @param self Attica__PlatformDependentV3*
-/// @param param1 Attica__PlatformDependentV2*
-///
-void k_attica__platformdependentv3_operator_assign(void* self, const void* param1);
-
 /// Inherited from Attica::PlatformDependent
 ///
 /// [Upstream resources](https://api.kde.org/attica-platformdependent.html#getDefaultProviderFiles)

@@ -453,10 +453,6 @@ bool q_standarditem_super_operator_lesser(const void* self, const void* other) {
     return QStandardItem_SuperOperatorLesser((QStandardItem*)self, (QStandardItem*)other);
 }
 
-void q_standarditem_operator_assign(void* self, const void* other) {
-    QStandardItem_OperatorAssign((QStandardItem*)self, (QStandardItem*)other);
-}
-
 void q_standarditem_emit_data_changed(void* self) {
     QStandardItem_EmitDataChanged((QStandardItem*)self);
 }

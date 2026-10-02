@@ -79,13 +79,6 @@ const char** k_urifiltersearchprovider_keys(const void* self);
 ///
 const char* k_urifiltersearchprovider_default_key(const void* self);
 
-/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#operator-eq)
-///
-/// @param self KUriFilterSearchProvider*
-/// @param param1 KUriFilterSearchProvider*
-///
-void k_urifiltersearchprovider_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setDesktopEntryName)
 ///
 /// @param self KUriFilterSearchProvider*

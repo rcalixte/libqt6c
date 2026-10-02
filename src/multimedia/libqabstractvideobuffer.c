@@ -6,10 +6,6 @@ void q_abstractvideobuffer_unmap(void* self) {
     QAbstractVideoBuffer_Unmap((QAbstractVideoBuffer*)self);
 }
 
-void q_abstractvideobuffer_operator_assign(void* self, const void* param1) {
-    QAbstractVideoBuffer_OperatorAssign((QAbstractVideoBuffer*)self, (QAbstractVideoBuffer*)param1);
-}
-
 void q_abstractvideobuffer_delete(void* self) {
     QAbstractVideoBuffer_Delete((QAbstractVideoBuffer*)(self));
 }

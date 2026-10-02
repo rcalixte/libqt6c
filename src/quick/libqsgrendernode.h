@@ -463,13 +463,6 @@ void q_sgrendernode_delete(void* self);
 ///
 void* q_sgrendernode__renderstate_get(const void* self, const char* state);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgrendernode-renderstate.html#operator-eq)
-///
-/// @param self QSGRenderNode__RenderState*
-/// @param param1 QSGRenderNode__RenderState*
-///
-void q_sgrendernode__renderstate_operator_assign(void* self, const void* param1);
-
 /// Delete this object from C++ memory.
 ///
 /// @param self QSGRenderNode__RenderState*

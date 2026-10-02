@@ -518,10 +518,6 @@ void q_quick3dgeometry_on_destroyed1(void* self, void (*callback)(void*, void*))
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_quick3dgeometry_operator_assign(void* self, const void* param1) {
-    QQmlParserStatus_OperatorAssign(q_quick3dgeometry_as_q_qml_parser_status(self), (QQmlParserStatus*)param1);
-}
-
 void q_quick3dgeometry_item_change(void* self, int32_t param1, const void* param2) {
     QQuick3DGeometry_ItemChange((QQuick3DGeometry*)self, param1, (QQuick3DObject__ItemChangeData*)param2);
 }

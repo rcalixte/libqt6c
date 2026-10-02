@@ -2210,15 +2210,6 @@ int32_t q_openglwindow_surface_class(const void* self);
 ///
 bool q_openglwindow_supports_open_g_l(const void* self);
 
-/// Inherited from QSurface
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qsurface.html#operator-eq)
-///
-/// @param self QOpenGLWindow*
-/// @param param1 QSurface*
-///
-void q_openglwindow_operator_assign(void* self, const void* param1);
-
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)

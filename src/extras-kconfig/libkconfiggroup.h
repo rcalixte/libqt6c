@@ -40,13 +40,6 @@ KConfigGroup* k_configgroup_new3(const void* master, const char* group);
 ///
 KConfigGroup* k_configgroup_new4(const void* param1);
 
-/// [Upstream resources](https://api.kde.org/kconfiggroup.html#operator-eq)
-///
-/// @param self KConfigGroup*
-/// @param param1 KConfigGroup*
-///
-void k_configgroup_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#isValid)
 ///
 /// @param self const KConfigGroup*

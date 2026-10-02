@@ -19,13 +19,6 @@
 ///
 QNetworkAccessManager* q_qmlnetworkaccessmanagerfactory_create(void* self, void* parent);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlnetworkaccessmanagerfactory.html#operator-eq)
-///
-/// @param self QQmlNetworkAccessManagerFactory*
-/// @param param1 QQmlNetworkAccessManagerFactory*
-///
-void q_qmlnetworkaccessmanagerfactory_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlnetworkaccessmanagerfactory.html#dtor.QQmlNetworkAccessManagerFactory)
 ///
 /// Delete this object from C++ memory.

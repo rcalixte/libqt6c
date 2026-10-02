@@ -95,13 +95,6 @@ int32_t k_globalshortcutinfo_super_metacall(void* self, int32_t param1, int para
 ///
 const char* k_globalshortcutinfo_tr(const char* s);
 
-/// [Upstream resources](https://api.kde.org/kglobalshortcutinfo.html#operator-eq)
-///
-/// @param self KGlobalShortcutInfo*
-/// @param rhs KGlobalShortcutInfo*
-///
-void k_globalshortcutinfo_operator_assign(void* self, const void* rhs);
-
 /// [Upstream resources](https://api.kde.org/kglobalshortcutinfo.html#contextFriendlyName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

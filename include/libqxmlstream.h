@@ -321,35 +321,6 @@ void q_xmlstreamentitydeclaration_delete(void* self);
 ///
 QXmlStreamEntityResolver* q_xmlstreamentityresolver_new();
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveEntity)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self QXmlStreamEntityResolver*
-/// @param publicId const char*
-/// @param systemId const char*
-///
-const char* q_xmlstreamentityresolver_resolve_entity(void* self, const char* publicId, const char* systemId);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveEntity)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QXmlStreamEntityResolver*
-/// @param callback const char* func(QXmlStreamEntityResolver* self, const char* publicId, const char* systemId)
-///
-void q_xmlstreamentityresolver_on_resolve_entity(void* self, const char* (*callback)(void*, const char*, const char*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveEntity)
-///
-/// Base class method implementation
-///
-/// @param self QXmlStreamEntityResolver*
-/// @param publicId const char*
-/// @param systemId const char*
-///
-const char* q_xmlstreamentityresolver_super_resolve_entity(void* self, const char* publicId, const char* systemId);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveUndeclaredEntity)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

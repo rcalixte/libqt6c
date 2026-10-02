@@ -191,13 +191,6 @@ void k_textgrammarcheck__grammarerror_set_url(void* self, const char* url);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
-/// @param self TextGrammarCheck__GrammarError*
-/// @param param1 TextGrammarCheck__GrammarError*
-///
-void k_textgrammarcheck__grammarerror_operator_assign(void* self, const void* param1);
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self TextGrammarCheck__GrammarError*

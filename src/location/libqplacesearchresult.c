@@ -10,10 +10,6 @@ QPlaceSearchResult* q_placesearchresult_new2(const void* other) {
     return QPlaceSearchResult_New2((QPlaceSearchResult*)other);
 }
 
-void q_placesearchresult_operator_assign(void* self, const void* other) {
-    QPlaceSearchResult_OperatorAssign((QPlaceSearchResult*)self, (QPlaceSearchResult*)other);
-}
-
 bool q_placesearchresult_operator_equal(const void* self, const void* other) {
     return QPlaceSearchResult_OperatorEqual((QPlaceSearchResult*)self, (QPlaceSearchResult*)other);
 }

@@ -1870,10 +1870,6 @@ void q_quickitem_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_quickitem_operator_assign(void* self, const void* param1) {
-    QQmlParserStatus_OperatorAssign(q_quickitem_as_q_qml_parser_status(self), (QQmlParserStatus*)param1);
-}
-
 bool q_quickitem_event_filter(void* self, void* watched, void* event) {
     return QQuickItem_EventFilter((QQuickItem*)self, (QObject*)watched, (QEvent*)event);
 }

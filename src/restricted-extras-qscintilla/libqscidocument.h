@@ -24,13 +24,6 @@ QsciDocument* q_scidocument_new2(const void* param1);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciDocument.html)
 ///
-/// @param self QsciDocument*
-/// @param param1 QsciDocument*
-///
-void q_scidocument_operator_assign(void* self, const void* param1);
-
-/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciDocument.html)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QsciDocument*

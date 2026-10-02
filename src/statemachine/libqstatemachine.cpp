@@ -577,10 +577,6 @@ libqt_list /* of QVariant* */ QStateMachine__SignalEvent_Arguments(const QStateM
     return _out;
 }
 
-void QStateMachine__SignalEvent_OperatorAssign(QStateMachine__SignalEvent* self, const QStateMachine__SignalEvent* param1) {
-    self->operator=(*param1);
-}
-
 // Derived class handler implementation
 void QStateMachine__SignalEvent_SetAccepted(QStateMachine__SignalEvent* self, bool accepted) {
     self->setAccepted(accepted);
@@ -631,10 +627,6 @@ QObject* QStateMachine__WrappedEvent_Object(const QStateMachine__WrappedEvent* s
 
 QEvent* QStateMachine__WrappedEvent_Event(const QStateMachine__WrappedEvent* self) {
     return self->event();
-}
-
-void QStateMachine__WrappedEvent_OperatorAssign(QStateMachine__WrappedEvent* self, const QStateMachine__WrappedEvent* param1) {
-    self->operator=(*param1);
 }
 
 // Derived class handler implementation

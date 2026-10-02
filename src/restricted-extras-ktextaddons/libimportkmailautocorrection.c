@@ -22,10 +22,6 @@ bool k_textautocorrectioncore__importkmailautocorrection_super_import(void* self
     return TextAutoCorrectionCore__ImportKMailAutocorrection_SuperImport((TextAutoCorrectionCore__ImportKMailAutocorrection*)self, qstring(fileName), qstring(errorMessage), loadAttribute);
 }
 
-void k_textautocorrectioncore__importkmailautocorrection_operator_assign(void* self, const void* param1) {
-    TextAutoCorrectionCore__ImportKMailAutocorrection_OperatorAssign((TextAutoCorrectionCore__ImportKMailAutocorrection*)self, (TextAutoCorrectionCore__ImportKMailAutocorrection*)param1);
-}
-
 libqt_list /* set of const char* */ k_textautocorrectioncore__importkmailautocorrection_upper_case_exceptions(const void* self) {
     return TextAutoCorrectionCore__ImportAbstractAutocorrection_UpperCaseExceptions((TextAutoCorrectionCore__ImportAbstractAutocorrection*)self);
 }

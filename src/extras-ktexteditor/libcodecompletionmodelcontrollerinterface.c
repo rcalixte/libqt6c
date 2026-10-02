@@ -124,10 +124,6 @@ bool k_texteditor__codecompletionmodelcontrollerinterface_super_should_hide_item
     return KTextEditor__CodeCompletionModelControllerInterface_SuperShouldHideItemsWithEqualNames((KTextEditor__CodeCompletionModelControllerInterface*)self);
 }
 
-void k_texteditor__codecompletionmodelcontrollerinterface_operator_assign(void* self, const void* param1) {
-    KTextEditor__CodeCompletionModelControllerInterface_OperatorAssign((KTextEditor__CodeCompletionModelControllerInterface*)self, (KTextEditor__CodeCompletionModelControllerInterface*)param1);
-}
-
 void k_texteditor__codecompletionmodelcontrollerinterface_delete(void* self) {
     KTextEditor__CodeCompletionModelControllerInterface_Delete((KTextEditor__CodeCompletionModelControllerInterface*)(self));
 }

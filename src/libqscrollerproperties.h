@@ -22,13 +22,6 @@ QScrollerProperties* q_scrollerproperties_new();
 ///
 QScrollerProperties* q_scrollerproperties_new2(const void* sp);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-eq)
-///
-/// @param self QScrollerProperties*
-/// @param sp QScrollerProperties*
-///
-void q_scrollerproperties_operator_assign(void* self, const void* sp);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-eq-eq)
 ///
 /// @param self const QScrollerProperties*

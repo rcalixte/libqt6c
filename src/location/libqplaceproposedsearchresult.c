@@ -23,10 +23,6 @@ void q_placeproposedsearchresult_set_search_request(void* self, const void* requ
     QPlaceProposedSearchResult_SetSearchRequest((QPlaceProposedSearchResult*)self, (QPlaceSearchRequest*)request);
 }
 
-void q_placeproposedsearchresult_operator_assign(void* self, const void* param1) {
-    QPlaceProposedSearchResult_OperatorAssign((QPlaceProposedSearchResult*)self, (QPlaceProposedSearchResult*)param1);
-}
-
 bool q_placeproposedsearchresult_operator_equal(const void* self, const void* other) {
     return QPlaceSearchResult_OperatorEqual((QPlaceSearchResult*)self, (QPlaceSearchResult*)other);
 }

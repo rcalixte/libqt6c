@@ -48,10 +48,6 @@ void q_gesturerecognizer_unregister_recognizer(int32_t type) {
     QGestureRecognizer_UnregisterRecognizer(type);
 }
 
-void q_gesturerecognizer_operator_assign(void* self, const void* param1) {
-    QGestureRecognizer_OperatorAssign((QGestureRecognizer*)self, (QGestureRecognizer*)param1);
-}
-
 void q_gesturerecognizer_delete(void* self) {
     QGestureRecognizer_Delete((QGestureRecognizer*)(self));
 }

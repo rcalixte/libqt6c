@@ -92,13 +92,6 @@ void q_test__qtoucheventwidgetsequence_on_commit(void* self, bool (*callback)(vo
 ///
 bool q_test__qtoucheventwidgetsequence_super_commit(void* self, bool processEvents);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#operator-eq)
-///
-/// @param self QTest__QTouchEventWidgetSequence*
-/// @param param1 QTest__QTouchEventWidgetSequence*
-///
-void q_test__qtoucheventwidgetsequence_operator_assign(void* self, const void* param1);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#press)
 ///
 /// @param self QTest__QTouchEventWidgetSequence*

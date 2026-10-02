@@ -647,15 +647,6 @@ void q_qmlextensionplugin_destroyed1(void* self, void* param1);
 ///
 void q_qmlextensionplugin_on_destroyed1(void* self, void (*callback)(void*, void*));
 
-/// Inherited from QQmlExtensionInterface
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlextensioninterface.html#operator-eq)
-///
-/// @param self QQmlExtensionPlugin*
-/// @param param1 QQmlExtensionInterface*
-///
-void q_qmlextensionplugin_operator_assign(void* self, const void* param1);
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1627,15 +1618,6 @@ void q_qmlengineextensionplugin_destroyed1(void* self, void* param1);
 /// @param callback void func(QQmlEngineExtensionPlugin* self, QObject* param1)
 ///
 void q_qmlengineextensionplugin_on_destroyed1(void* self, void (*callback)(void*, void*));
-
-/// Inherited from QQmlEngineExtensionInterface
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlengineextensioninterface.html#operator-eq)
-///
-/// @param self QQmlEngineExtensionPlugin*
-/// @param param1 QQmlEngineExtensionInterface*
-///
-void q_qmlengineextensionplugin_operator_assign(void* self, const void* param1);
 
 /// Inherited from QObject
 ///

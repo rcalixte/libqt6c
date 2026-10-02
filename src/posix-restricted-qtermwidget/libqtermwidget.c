@@ -2559,10 +2559,6 @@ int32_t q_termwidget_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
-void q_termwidget_operator_assign(void* self, const void* param1) {
-    QTermWidgetInterface_OperatorAssign(q_termwidget_as_q_term_widget_interface(self), (QTermWidgetInterface*)param1);
-}
-
 int32_t q_termwidget_dev_type(const void* self) {
     return QTermWidget_DevType((QTermWidget*)self);
 }

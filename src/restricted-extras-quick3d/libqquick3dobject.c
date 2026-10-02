@@ -404,10 +404,6 @@ void q_quick3dobject_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_quick3dobject_operator_assign(void* self, const void* param1) {
-    QQmlParserStatus_OperatorAssign(q_quick3dobject_as_q_qml_parser_status(self), (QQmlParserStatus*)param1);
-}
-
 bool q_quick3dobject_event(void* self, void* event) {
     return QQuick3DObject_Event((QQuick3DObject*)self, (QEvent*)event);
 }

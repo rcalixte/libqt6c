@@ -14,10 +14,6 @@ void q_qmltypesextensioninterface_on_register_types(void* self, void (*callback)
     QQmlTypesExtensionInterface_OnRegisterTypes((QQmlTypesExtensionInterface*)self, (intptr_t)callback);
 }
 
-void q_qmltypesextensioninterface_operator_assign(void* self, const void* param1) {
-    QQmlTypesExtensionInterface_OperatorAssign((QQmlTypesExtensionInterface*)self, (QQmlTypesExtensionInterface*)param1);
-}
-
 void q_qmltypesextensioninterface_delete(void* self) {
     QQmlTypesExtensionInterface_Delete((QQmlTypesExtensionInterface*)(self));
 }
@@ -34,10 +30,6 @@ void q_qmlextensioninterface_on_initialize_engine(void* self, void (*callback)(v
     QQmlExtensionInterface_OnInitializeEngine((QQmlExtensionInterface*)self, (intptr_t)callback);
 }
 
-void q_qmlextensioninterface_operator_assign(void* self, const void* param1) {
-    QQmlExtensionInterface_OperatorAssign((QQmlExtensionInterface*)self, (QQmlExtensionInterface*)param1);
-}
-
 void q_qmlextensioninterface_register_types(void* self, const char* uri) {
     QQmlExtensionInterface_RegisterTypes((QQmlExtensionInterface*)self, uri);
 }
@@ -48,10 +40,6 @@ void q_qmlextensioninterface_on_register_types(void* self, void (*callback)(void
 
 void q_qmlextensioninterface_delete(void* self) {
     QQmlExtensionInterface_Delete((QQmlExtensionInterface*)(self));
-}
-
-void q_qmlengineextensioninterface_operator_assign(void* self, const void* param1) {
-    QQmlEngineExtensionInterface_OperatorAssign((QQmlEngineExtensionInterface*)self, (QQmlEngineExtensionInterface*)param1);
 }
 
 void q_qmlengineextensioninterface_delete(void* self) {
