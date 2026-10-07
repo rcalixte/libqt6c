@@ -284,7 +284,7 @@ QNetworkReply* k_attica__platformdependentv3_put(void* self, const void* request
     return Attica__PlatformDependentV2_Put((Attica__PlatformDependentV2*)self, (QNetworkRequest*)request, (QIODevice*)data);
 }
 
-QNetworkReply* k_attica__platformdependentv3_put2(void* self, const void* request, char* data) {
+QNetworkReply* k_attica__platformdependentv3_put2(void* self, const void* request, const char* data) {
     return Attica__PlatformDependentV2_Put2((Attica__PlatformDependentV2*)self, (QNetworkRequest*)request, qstring(data));
 }
 
@@ -333,7 +333,7 @@ QNetworkReply* k_attica__platformdependentv3_post(void* self, const void* reques
     return Attica__PlatformDependent_Post((Attica__PlatformDependent*)self, (QNetworkRequest*)request, (QIODevice*)data);
 }
 
-QNetworkReply* k_attica__platformdependentv3_post2(void* self, const void* request, char* data) {
+QNetworkReply* k_attica__platformdependentv3_post2(void* self, const void* request, const char* data) {
     return Attica__PlatformDependent_Post2((Attica__PlatformDependent*)self, (QNetworkRequest*)request, qstring(data));
 }
 

@@ -51,9 +51,9 @@ void q_ssldiffiehellmanparameters_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
-/// @param encoded char*
+/// @param encoded const char*
 ///
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded(char* encoded);
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded(const char* encoded);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
@@ -91,10 +91,10 @@ const char* q_ssldiffiehellmanparameters_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
-/// @param encoded char*
+/// @param encoded const char*
 /// @param format enum QSsl__EncodingFormat
 ///
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(char* encoded, int32_t format);
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(const char* encoded, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///

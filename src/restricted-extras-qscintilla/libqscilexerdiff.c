@@ -869,7 +869,7 @@ void q_scilexerdiff_on_disconnect_notify(void* self, void (*callback)(void*, con
     QsciLexerDiff_OnDisconnectNotify((QsciLexerDiff*)self, (intptr_t)callback);
 }
 
-char* q_scilexerdiff_text_as_bytes(const void* self, const char* text) {
+const char* q_scilexerdiff_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciLexerDiff_TextAsBytes((QsciLexerDiff*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

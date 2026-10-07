@@ -54,19 +54,19 @@ const char* q_stringconverter_name_for_encoding(int32_t e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForData)
 ///
-/// @param data char*
+/// @param data const char*
 ///
 /// @return enum QStringConverter__Encoding (Returns -1 for an invalid value)
 ///
-int32_t q_stringconverter_encoding_for_data(char* data);
+int32_t q_stringconverter_encoding_for_data(const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForHtml)
 ///
-/// @param data char*
+/// @param data const char*
 ///
 /// @return enum QStringConverter__Encoding (Returns -1 for an invalid value)
 ///
-int32_t q_stringconverter_encoding_for_html(char* data);
+int32_t q_stringconverter_encoding_for_html(const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
 ///

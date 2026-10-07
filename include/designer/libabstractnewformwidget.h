@@ -1748,20 +1748,20 @@ void q_designernewformwidgetinterface_set_geometry2(void* self, const void* geom
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QDesignerNewFormWidgetInterface*
 ///
-char* q_designernewformwidgetinterface_save_geometry(const void* self);
+const char* q_designernewformwidgetinterface_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QDesignerNewFormWidgetInterface*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_designernewformwidgetinterface_restore_geometry(void* self, char* geometry);
+bool q_designernewformwidgetinterface_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///

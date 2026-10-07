@@ -68,7 +68,7 @@ QPdfDocument* q_pdflinkmodel_document(const void* self) {
     return QPdfLinkModel_Document((QPdfLinkModel*)self);
 }
 
-libqt_map /* of int to char* */ q_pdflinkmodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_pdflinkmodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QPdfLinkModel_RoleNames((QPdfLinkModel*)self);
     libqt_map _ret;
@@ -101,11 +101,11 @@ libqt_map /* of int to char* */ q_pdflinkmodel_role_names(const void* self) {
     return _ret;
 }
 
-void q_pdflinkmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_pdflinkmodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     QPdfLinkModel_OnRoleNames((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_pdflinkmodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_pdflinkmodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QPdfLinkModel_SuperRoleNames((QPdfLinkModel*)self);
     libqt_map _ret;

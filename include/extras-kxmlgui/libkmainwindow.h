@@ -1047,20 +1047,20 @@ void k_mainwindow_resize_docks(void* self, libqt_list docks, libqt_list sizes, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#saveState)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KMainWindow*
 ///
-char* k_mainwindow_save_state(const void* self);
+const char* k_mainwindow_save_state(const void* self);
 
 /// Inherited from QMainWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#restoreState)
 ///
 /// @param self KMainWindow*
-/// @param state char*
+/// @param state const char*
 ///
-bool k_mainwindow_restore_state(void* self, char* state);
+bool k_mainwindow_restore_state(void* self, const char* state);
 
 /// Inherited from QMainWindow
 ///
@@ -1156,22 +1156,22 @@ void k_mainwindow_add_tool_bar_break1(void* self, int32_t area);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#saveState)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KMainWindow*
 /// @param version int
 ///
-char* k_mainwindow_save_state1(const void* self, int version);
+const char* k_mainwindow_save_state1(const void* self, int version);
 
 /// Inherited from QMainWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#restoreState)
 ///
 /// @param self KMainWindow*
-/// @param state char*
+/// @param state const char*
 /// @param version int
 ///
-bool k_mainwindow_restore_state2(void* self, char* state, int version);
+bool k_mainwindow_restore_state2(void* self, const char* state, int version);
 
 /// Inherited from QWidget
 ///
@@ -2801,20 +2801,20 @@ void k_mainwindow_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KMainWindow*
 ///
-char* k_mainwindow_save_geometry(const void* self);
+const char* k_mainwindow_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KMainWindow*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_mainwindow_restore_geometry(void* self, char* geometry);
+bool k_mainwindow_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -5135,11 +5135,11 @@ void k_mainwindow_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KMainWindow*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_mainwindow_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_mainwindow_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -5148,11 +5148,11 @@ bool k_mainwindow_native_event(void* self, char* eventType, void* message, intpt
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KMainWindow*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_mainwindow_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_mainwindow_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

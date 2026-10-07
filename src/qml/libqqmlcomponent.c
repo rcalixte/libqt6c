@@ -279,7 +279,7 @@ void q_qmlcomponent_load_from_module(void* self, const char* uri, const char* ty
     QQmlComponent_LoadFromModule((QQmlComponent*)self, uri, typeName);
 }
 
-void q_qmlcomponent_set_data(void* self, char* param1, const void* baseUrl) {
+void q_qmlcomponent_set_data(void* self, const char* param1, const void* baseUrl) {
     QQmlComponent_SetData((QQmlComponent*)self, qstring(param1), (QUrl*)baseUrl);
 }
 

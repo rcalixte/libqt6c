@@ -88,7 +88,7 @@ bool k_codecaction_set_current_codec(void* self, const char* codecName) {
     return KCodecAction_SetCurrentCodec((KCodecAction*)self, qstring(codecName));
 }
 
-void k_codecaction_codec_name_triggered(void* self, char* name) {
+void k_codecaction_codec_name_triggered(void* self, const char* name) {
     KCodecAction_CodecNameTriggered((KCodecAction*)self, qstring(name));
 }
 

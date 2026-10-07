@@ -850,14 +850,14 @@ void q_designernewformwidgetinterface_set_geometry2(void* self, const void* geom
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_designernewformwidgetinterface_save_geometry(const void* self) {
+const char* q_designernewformwidgetinterface_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_designernewformwidgetinterface_restore_geometry(void* self, char* geometry) {
+bool q_designernewformwidgetinterface_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 

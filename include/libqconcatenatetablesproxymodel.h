@@ -1964,7 +1964,7 @@ void q_concatenatetablesproxymodel_on_match(void* self, libqt_list (*callback)(c
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -1976,7 +1976,7 @@ void q_concatenatetablesproxymodel_on_match(void* self, libqt_list (*callback)(c
 ///
 /// @param self const QConcatenateTablesProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_concatenatetablesproxymodel_role_names(const void* self);
 
@@ -1987,7 +1987,7 @@ libqt_map q_concatenatetablesproxymodel_role_names(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -1999,7 +1999,7 @@ libqt_map q_concatenatetablesproxymodel_role_names(const void* self);
 ///
 /// @param self const QConcatenateTablesProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_concatenatetablesproxymodel_super_role_names(const void* self);
 
@@ -2010,7 +2010,7 @@ libqt_map q_concatenatetablesproxymodel_super_role_names(const void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QConcatenateTablesProxyModel*
-/// @param callback libqt_map of int to char* func(QConcatenateTablesProxyModel* self)
+/// @param callback libqt_map of int to const char* func(QConcatenateTablesProxyModel* self)
 ///
 void q_concatenatetablesproxymodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 

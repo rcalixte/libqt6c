@@ -1954,7 +1954,7 @@ void q_stringlistmodel_on_span(void* self, QSize* (*callback)(const void*, const
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -1966,7 +1966,7 @@ void q_stringlistmodel_on_span(void* self, QSize* (*callback)(const void*, const
 ///
 /// @param self const QStringListModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_stringlistmodel_role_names(const void* self);
 
@@ -1977,7 +1977,7 @@ libqt_map q_stringlistmodel_role_names(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -1989,7 +1989,7 @@ libqt_map q_stringlistmodel_role_names(const void* self);
 ///
 /// @param self const QStringListModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_stringlistmodel_super_role_names(const void* self);
 
@@ -2000,7 +2000,7 @@ libqt_map q_stringlistmodel_super_role_names(const void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback libqt_map of int to char* func(QStringListModel* self)
+/// @param callback libqt_map of int to const char* func(QStringListModel* self)
 ///
 void q_stringlistmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 

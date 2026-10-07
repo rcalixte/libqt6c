@@ -447,7 +447,7 @@ bool q_sciscintillabase_super_can_insert_from_mime_data(const void* self, const 
     return QsciScintillaBase_SuperCanInsertFromMimeData((QsciScintillaBase*)self, (QMimeData*)source);
 }
 
-char* q_sciscintillabase_from_mime_data(const void* self, const void* source, bool* rectangular) {
+const char* q_sciscintillabase_from_mime_data(const void* self, const void* source, bool* rectangular) {
     libqt_string _str = QsciScintillaBase_FromMimeData((QsciScintillaBase*)self, (QMimeData*)source, (bool*)rectangular);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -458,14 +458,14 @@ void q_sciscintillabase_on_from_mime_data(void* self, libqt_string (*callback)(c
     QsciScintillaBase_OnFromMimeData((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
-char* q_sciscintillabase_super_from_mime_data(const void* self, const void* source, bool* rectangular) {
+const char* q_sciscintillabase_super_from_mime_data(const void* self, const void* source, bool* rectangular) {
     libqt_string _str = QsciScintillaBase_SuperFromMimeData((QsciScintillaBase*)self, (QMimeData*)source, (bool*)rectangular);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QMimeData* q_sciscintillabase_to_mime_data(const void* self, char* text, bool rectangular) {
+QMimeData* q_sciscintillabase_to_mime_data(const void* self, const char* text, bool rectangular) {
     return QsciScintillaBase_ToMimeData((QsciScintillaBase*)self, qstring(text), rectangular);
 }
 
@@ -473,7 +473,7 @@ void q_sciscintillabase_on_to_mime_data(void* self, QMimeData* (*callback)(const
     QsciScintillaBase_OnToMimeData((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
-QMimeData* q_sciscintillabase_super_to_mime_data(const void* self, char* text, bool rectangular) {
+QMimeData* q_sciscintillabase_super_to_mime_data(const void* self, const char* text, bool rectangular) {
     return QsciScintillaBase_SuperToMimeData((QsciScintillaBase*)self, qstring(text), rectangular);
 }
 
@@ -709,7 +709,7 @@ void q_sciscintillabase_set_scroll_bars(void* self) {
     QsciScintillaBase_SetScrollBars((QsciScintillaBase*)self);
 }
 
-char* q_sciscintillabase_text_as_bytes(const void* self, const char* text) {
+const char* q_sciscintillabase_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciScintillaBase_TextAsBytes((QsciScintillaBase*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1644,14 +1644,14 @@ void q_sciscintillabase_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_sciscintillabase_save_geometry(const void* self) {
+const char* q_sciscintillabase_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_sciscintillabase_restore_geometry(void* self, char* geometry) {
+bool q_sciscintillabase_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2533,11 +2533,11 @@ void q_sciscintillabase_on_hide_event(void* self, void (*callback)(void*, void*)
     QsciScintillaBase_OnHideEvent((QsciScintillaBase*)self, (intptr_t)callback);
 }
 
-bool q_sciscintillabase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_sciscintillabase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QsciScintillaBase_NativeEvent((QsciScintillaBase*)self, qstring(eventType), message, result);
 }
 
-bool q_sciscintillabase_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_sciscintillabase_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QsciScintillaBase_SuperNativeEvent((QsciScintillaBase*)self, qstring(eventType), message, result);
 }
 

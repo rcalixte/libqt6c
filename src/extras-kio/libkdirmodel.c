@@ -322,7 +322,7 @@ void k_dirmodel_super_sort(void* self, int column, int32_t order) {
     KDirModel_SuperSort((KDirModel*)self, column, order);
 }
 
-libqt_map /* of int to char* */ k_dirmodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_dirmodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KDirModel_RoleNames((KDirModel*)self);
     libqt_map _ret;
@@ -355,11 +355,11 @@ libqt_map /* of int to char* */ k_dirmodel_role_names(const void* self) {
     return _ret;
 }
 
-void k_dirmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_dirmodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     KDirModel_OnRoleNames((KDirModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_dirmodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_dirmodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KDirModel_SuperRoleNames((KDirModel*)self);
     libqt_map _ret;

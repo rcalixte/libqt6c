@@ -819,7 +819,7 @@ QSize* q_abstractitemmodel_super_span(const void* self, const void* index) {
     return QAbstractItemModel_SuperSpan((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-libqt_map /* of int to char* */ q_abstractitemmodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_abstractitemmodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QAbstractItemModel_RoleNames((QAbstractItemModel*)self);
     libqt_map _ret;
@@ -852,11 +852,11 @@ libqt_map /* of int to char* */ q_abstractitemmodel_role_names(const void* self)
     return _ret;
 }
 
-void q_abstractitemmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_abstractitemmodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     QAbstractItemModel_OnRoleNames((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_abstractitemmodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_abstractitemmodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QAbstractItemModel_SuperRoleNames((QAbstractItemModel*)self);
     libqt_map _ret;
@@ -2365,7 +2365,7 @@ void q_abstracttablemodel_on_span(void* self, QSize* (*callback)(const void*, co
     QAbstractTableModel_OnSpan((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_abstracttablemodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_abstracttablemodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QAbstractTableModel_RoleNames((QAbstractTableModel*)self);
     libqt_map _ret;
@@ -2398,7 +2398,7 @@ libqt_map /* of int to char* */ q_abstracttablemodel_role_names(const void* self
     return _ret;
 }
 
-libqt_map /* of int to char* */ q_abstracttablemodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_abstracttablemodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QAbstractTableModel_SuperRoleNames((QAbstractTableModel*)self);
     libqt_map _ret;
@@ -2431,7 +2431,7 @@ libqt_map /* of int to char* */ q_abstracttablemodel_super_role_names(const void
     return _ret;
 }
 
-void q_abstracttablemodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_abstracttablemodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     QAbstractTableModel_OnRoleNames((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
@@ -3584,7 +3584,7 @@ void q_abstractlistmodel_on_span(void* self, QSize* (*callback)(const void*, con
     QAbstractListModel_OnSpan((QAbstractListModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_abstractlistmodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_abstractlistmodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QAbstractListModel_RoleNames((QAbstractListModel*)self);
     libqt_map _ret;
@@ -3617,7 +3617,7 @@ libqt_map /* of int to char* */ q_abstractlistmodel_role_names(const void* self)
     return _ret;
 }
 
-libqt_map /* of int to char* */ q_abstractlistmodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_abstractlistmodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QAbstractListModel_SuperRoleNames((QAbstractListModel*)self);
     libqt_map _ret;
@@ -3650,7 +3650,7 @@ libqt_map /* of int to char* */ q_abstractlistmodel_super_role_names(const void*
     return _ret;
 }
 
-void q_abstractlistmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_abstractlistmodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     QAbstractListModel_OnRoleNames((QAbstractListModel*)self, (intptr_t)callback);
 }
 

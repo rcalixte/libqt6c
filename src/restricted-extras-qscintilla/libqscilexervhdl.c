@@ -909,7 +909,7 @@ void q_scilexervhdl_on_disconnect_notify(void* self, void (*callback)(void*, con
     QsciLexerVHDL_OnDisconnectNotify((QsciLexerVHDL*)self, (intptr_t)callback);
 }
 
-char* q_scilexervhdl_text_as_bytes(const void* self, const char* text) {
+const char* q_scilexervhdl_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciLexerVHDL_TextAsBytes((QsciLexerVHDL*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

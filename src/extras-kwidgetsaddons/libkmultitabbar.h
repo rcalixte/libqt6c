@@ -1937,20 +1937,20 @@ void k_multitabbar_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KMultiTabBar*
 ///
-char* k_multitabbar_save_geometry(const void* self);
+const char* k_multitabbar_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KMultiTabBar*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_multitabbar_restore_geometry(void* self, char* geometry);
+bool k_multitabbar_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4306,11 +4306,11 @@ void k_multitabbar_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_multitabbar_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_multitabbar_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4319,11 +4319,11 @@ bool k_multitabbar_native_event(void* self, char* eventType, void* message, intp
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_multitabbar_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_multitabbar_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -7230,20 +7230,20 @@ void k_multitabbarbutton_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KMultiTabBarButton*
 ///
-char* k_multitabbarbutton_save_geometry(const void* self);
+const char* k_multitabbarbutton_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KMultiTabBarButton*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_multitabbarbutton_restore_geometry(void* self, char* geometry);
+bool k_multitabbarbutton_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -10747,20 +10747,20 @@ void k_multitabbartab_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KMultiTabBarTab*
 ///
-char* k_multitabbartab_save_geometry(const void* self);
+const char* k_multitabbartab_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KMultiTabBarTab*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_multitabbartab_restore_geometry(void* self, char* geometry);
+bool k_multitabbartab_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///

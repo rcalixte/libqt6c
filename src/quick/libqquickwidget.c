@@ -1207,14 +1207,14 @@ void q_quickwidget_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_quickwidget_save_geometry(const void* self) {
+const char* q_quickwidget_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_quickwidget_restore_geometry(void* self, char* geometry) {
+bool q_quickwidget_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1976,11 +1976,11 @@ void q_quickwidget_on_action_event(void* self, void (*callback)(void*, void*)) {
     QQuickWidget_OnActionEvent((QQuickWidget*)self, (intptr_t)callback);
 }
 
-bool q_quickwidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_quickwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QQuickWidget_NativeEvent((QQuickWidget*)self, qstring(eventType), message, result);
 }
 
-bool q_quickwidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_quickwidget_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QQuickWidget_SuperNativeEvent((QQuickWidget*)self, qstring(eventType), message, result);
 }
 

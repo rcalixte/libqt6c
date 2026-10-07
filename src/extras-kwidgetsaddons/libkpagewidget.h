@@ -1951,20 +1951,20 @@ void k_pagewidget_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KPageWidget*
 ///
-char* k_pagewidget_save_geometry(const void* self);
+const char* k_pagewidget_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KPageWidget*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_pagewidget_restore_geometry(void* self, char* geometry);
+bool k_pagewidget_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4450,11 +4450,11 @@ void k_pagewidget_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_pagewidget_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_pagewidget_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4463,11 +4463,11 @@ bool k_pagewidget_native_event(void* self, char* eventType, void* message, intpt
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_pagewidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_pagewidget_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

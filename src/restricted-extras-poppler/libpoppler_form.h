@@ -833,11 +833,11 @@ int32_t q_poppler__certificateinfo_version(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Poppler__CertificateInfo*
 ///
-char* q_poppler__certificateinfo_serial_number(const void* self);
+const char* q_poppler__certificateinfo_serial_number(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
@@ -887,11 +887,11 @@ int32_t q_poppler__certificateinfo_key_usage_extensions(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Poppler__CertificateInfo*
 ///
-char* q_poppler__certificateinfo_public_key(const void* self);
+const char* q_poppler__certificateinfo_public_key(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
@@ -929,11 +929,11 @@ int32_t q_poppler__certificateinfo_certificate_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Poppler__CertificateInfo*
 ///
-char* q_poppler__certificateinfo_certificate_data(const void* self);
+const char* q_poppler__certificateinfo_certificate_data(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
@@ -1037,11 +1037,11 @@ time_t q_poppler__signaturevalidationinfo_signing_time(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Poppler__SignatureValidationInfo*
 ///
-char* q_poppler__signaturevalidationinfo_signature(const void* self);
+const char* q_poppler__signaturevalidationinfo_signature(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///

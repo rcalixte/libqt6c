@@ -1892,20 +1892,20 @@ void q_designerpropertyeditorinterface_set_geometry2(void* self, const void* geo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QDesignerPropertyEditorInterface*
 ///
-char* q_designerpropertyeditorinterface_save_geometry(const void* self);
+const char* q_designerpropertyeditorinterface_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_designerpropertyeditorinterface_restore_geometry(void* self, char* geometry);
+bool q_designerpropertyeditorinterface_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4294,11 +4294,11 @@ void q_designerpropertyeditorinterface_on_hide_event(void* self, void (*callback
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_designerpropertyeditorinterface_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_designerpropertyeditorinterface_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4307,11 +4307,11 @@ bool q_designerpropertyeditorinterface_native_event(void* self, char* eventType,
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_designerpropertyeditorinterface_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_designerpropertyeditorinterface_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

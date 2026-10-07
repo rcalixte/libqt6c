@@ -50,7 +50,7 @@ const char* k_zipfileentry_path(const void* self) {
     return _ret;
 }
 
-char* k_zipfileentry_data(const void* self) {
+const char* k_zipfileentry_data(const void* self) {
     libqt_string _str = KZipFileEntry_Data((KZipFileEntry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -61,7 +61,7 @@ void k_zipfileentry_on_data(void* self, libqt_string (*callback)(const void*)) {
     KZipFileEntry_OnData((KZipFileEntry*)self, (intptr_t)callback);
 }
 
-char* k_zipfileentry_super_data(const void* self) {
+const char* k_zipfileentry_super_data(const void* self) {
     libqt_string _str = KZipFileEntry_SuperData((KZipFileEntry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

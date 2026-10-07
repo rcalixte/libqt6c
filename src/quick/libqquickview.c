@@ -1608,11 +1608,11 @@ void q_quickview_on_touch_event(void* self, void (*callback)(void*, void*)) {
     QQuickView_OnTouchEvent((QQuickView*)self, (intptr_t)callback);
 }
 
-bool q_quickview_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_quickview_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QQuickView_NativeEvent((QQuickView*)self, qstring(eventType), message, result);
 }
 
-bool q_quickview_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_quickview_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QQuickView_SuperNativeEvent((QQuickView*)self, qstring(eventType), message, result);
 }
 

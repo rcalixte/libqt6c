@@ -146,17 +146,17 @@ QVariant* q_jsondocument_to_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#fromJson)
 ///
-/// @param json char*
+/// @param json const char*
 ///
-QJsonDocument* q_jsondocument_from_json(char* json);
+QJsonDocument* q_jsondocument_from_json(const char* json);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QJsonDocument*
 ///
-char* q_jsondocument_to_json(const void* self);
+const char* q_jsondocument_to_json(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#isEmpty)
 ///
@@ -219,9 +219,9 @@ const QJsonValue* q_jsondocument_operator_subscript2(const void* self, const cha
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
 ///
 /// @param self const QJsonDocument*
-/// @param key char*
+/// @param key const char*
 ///
-const QJsonValue* q_jsondocument_operator_subscript3(const void* self, char* key);
+const QJsonValue* q_jsondocument_operator_subscript3(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
 ///
@@ -238,19 +238,19 @@ bool q_jsondocument_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#fromJson)
 ///
-/// @param json char*
+/// @param json const char*
 /// @param error QJsonParseError*
 ///
-QJsonDocument* q_jsondocument_from_json2(char* json, void* error);
+QJsonDocument* q_jsondocument_from_json2(const char* json, void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QJsonDocument*
 /// @param format enum QJsonDocument__JsonFormat
 ///
-char* q_jsondocument_to_json1(const void* self, int32_t format);
+const char* q_jsondocument_to_json1(const void* self, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#dtor.QJsonDocument)
 ///

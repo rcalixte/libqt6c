@@ -251,9 +251,9 @@ QNetworkReply* q_networkaccessmanager_get2(void* self, const void* request, void
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param data char*
+/// @param data const char*
 ///
-QNetworkReply* q_networkaccessmanager_get3(void* self, const void* request, char* data);
+QNetworkReply* q_networkaccessmanager_get3(void* self, const void* request, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#post)
 ///
@@ -267,9 +267,9 @@ QNetworkReply* q_networkaccessmanager_post(void* self, const void* request, void
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param data char*
+/// @param data const char*
 ///
-QNetworkReply* q_networkaccessmanager_post2(void* self, const void* request, char* data);
+QNetworkReply* q_networkaccessmanager_post2(void* self, const void* request, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#put)
 ///
@@ -283,9 +283,9 @@ QNetworkReply* q_networkaccessmanager_put(void* self, const void* request, void*
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param data char*
+/// @param data const char*
 ///
-QNetworkReply* q_networkaccessmanager_put2(void* self, const void* request, char* data);
+QNetworkReply* q_networkaccessmanager_put2(void* self, const void* request, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#deleteResource)
 ///
@@ -298,18 +298,18 @@ QNetworkReply* q_networkaccessmanager_delete_resource(void* self, const void* re
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param verb char*
+/// @param verb const char*
 ///
-QNetworkReply* q_networkaccessmanager_send_custom_request(void* self, const void* request, char* verb);
+QNetworkReply* q_networkaccessmanager_send_custom_request(void* self, const void* request, const char* verb);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#sendCustomRequest)
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param verb char*
-/// @param data char*
+/// @param verb const char*
+/// @param data const char*
 ///
-QNetworkReply* q_networkaccessmanager_send_custom_request2(void* self, const void* request, char* verb, char* data);
+QNetworkReply* q_networkaccessmanager_send_custom_request2(void* self, const void* request, const char* verb, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#post)
 ///
@@ -331,10 +331,10 @@ QNetworkReply* q_networkaccessmanager_put4(void* self, const void* request, void
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param verb char*
+/// @param verb const char*
 /// @param multiPart QHttpMultiPart*
 ///
-QNetworkReply* q_networkaccessmanager_send_custom_request3(void* self, const void* request, char* verb, void* multiPart);
+QNetworkReply* q_networkaccessmanager_send_custom_request3(void* self, const void* request, const char* verb, void* multiPart);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#connectToHostEncrypted)
 ///
@@ -571,10 +571,10 @@ void q_networkaccessmanager_enable_strict_transport_security_store2(void* self, 
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
-/// @param verb char*
+/// @param verb const char*
 /// @param data QIODevice*
 ///
-QNetworkReply* q_networkaccessmanager_send_custom_request32(void* self, const void* request, char* verb, void* data);
+QNetworkReply* q_networkaccessmanager_send_custom_request32(void* self, const void* request, const char* verb, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#connectToHostEncrypted)
 ///

@@ -909,14 +909,14 @@ void q_focusframe_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_focusframe_save_geometry(const void* self) {
+const char* q_focusframe_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_focusframe_restore_geometry(void* self, char* geometry) {
+bool q_focusframe_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1882,11 +1882,11 @@ void q_focusframe_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QFocusFrame_OnHideEvent((QFocusFrame*)self, (intptr_t)callback);
 }
 
-bool q_focusframe_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_focusframe_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QFocusFrame_NativeEvent((QFocusFrame*)self, qstring(eventType), message, result);
 }
 
-bool q_focusframe_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_focusframe_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QFocusFrame_SuperNativeEvent((QFocusFrame*)self, qstring(eventType), message, result);
 }
 

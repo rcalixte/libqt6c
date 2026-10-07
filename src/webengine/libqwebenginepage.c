@@ -170,7 +170,7 @@ void q_webenginepage_set_html(void* self, const char* html) {
     QWebEnginePage_SetHtml((QWebEnginePage*)self, qstring(html));
 }
 
-void q_webenginepage_set_content(void* self, char* data) {
+void q_webenginepage_set_content(void* self, const char* data) {
     QWebEnginePage_SetContent((QWebEnginePage*)self, qstring(data));
 }
 
@@ -281,7 +281,7 @@ void q_webenginepage_print_to_pdf(void* self, const char* filePath) {
     QWebEnginePage_PrintToPdf((QWebEnginePage*)self, qstring(filePath));
 }
 
-void q_webenginepage_print_to_pdf2(void* self, void (*resultCallback)(char* funcparam1)) {
+void q_webenginepage_print_to_pdf2(void* self, void (*resultCallback)(const char* funcparam1)) {
     QWebEnginePage_PrintToPdf2((QWebEnginePage*)self, (intptr_t)resultCallback);
 }
 
@@ -846,11 +846,11 @@ void q_webenginepage_set_html2(void* self, const char* html, const void* baseUrl
     QWebEnginePage_SetHtml2((QWebEnginePage*)self, qstring(html), (QUrl*)baseUrl);
 }
 
-void q_webenginepage_set_content2(void* self, char* data, const char* mimeType) {
+void q_webenginepage_set_content2(void* self, const char* data, const char* mimeType) {
     QWebEnginePage_SetContent2((QWebEnginePage*)self, qstring(data), qstring(mimeType));
 }
 
-void q_webenginepage_set_content3(void* self, char* data, const char* mimeType, const void* baseUrl) {
+void q_webenginepage_set_content3(void* self, const char* data, const char* mimeType, const void* baseUrl) {
     QWebEnginePage_SetContent3((QWebEnginePage*)self, qstring(data), qstring(mimeType), (QUrl*)baseUrl);
 }
 
@@ -878,11 +878,11 @@ void q_webenginepage_print_to_pdf3(void* self, const char* filePath, const void*
     QWebEnginePage_PrintToPdf3((QWebEnginePage*)self, qstring(filePath), (QPageLayout*)layout, (QPageRanges*)ranges);
 }
 
-void q_webenginepage_print_to_pdf23(void* self, void (*resultCallback)(char* funcparam1), const void* layout) {
+void q_webenginepage_print_to_pdf23(void* self, void (*resultCallback)(const char* funcparam1), const void* layout) {
     QWebEnginePage_PrintToPdf23((QWebEnginePage*)self, (intptr_t)resultCallback, (QPageLayout*)layout);
 }
 
-void q_webenginepage_print_to_pdf32(void* self, void (*resultCallback)(char* funcparam1), const void* layout, const void* ranges) {
+void q_webenginepage_print_to_pdf32(void* self, void (*resultCallback)(const char* funcparam1), const void* layout, const void* ranges) {
     QWebEnginePage_PrintToPdf32((QWebEnginePage*)self, (intptr_t)resultCallback, (QPageLayout*)layout, (QPageRanges*)ranges);
 }
 

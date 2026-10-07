@@ -388,7 +388,7 @@ const char* q_keychain__readpasswordjob_tr(const char* s) {
     return _ret;
 }
 
-char* q_keychain__readpasswordjob_binary_data(const void* self) {
+const char* q_keychain__readpasswordjob_binary_data(const void* self) {
     libqt_string _str = QKeychain__ReadPasswordJob_BinaryData((QKeychain__ReadPasswordJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -861,7 +861,7 @@ const char* q_keychain__writepasswordjob_tr(const char* s) {
     return _ret;
 }
 
-void q_keychain__writepasswordjob_set_binary_data(void* self, char* data) {
+void q_keychain__writepasswordjob_set_binary_data(void* self, const char* data) {
     QKeychain__WritePasswordJob_SetBinaryData((QKeychain__WritePasswordJob*)self, qstring(data));
 }
 

@@ -1908,20 +1908,20 @@ void q_abstractprintdialog_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QAbstractPrintDialog*
 ///
-char* q_abstractprintdialog_save_geometry(const void* self);
+const char* q_abstractprintdialog_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QAbstractPrintDialog*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_abstractprintdialog_restore_geometry(void* self, char* geometry);
+bool q_abstractprintdialog_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4502,11 +4502,11 @@ void q_abstractprintdialog_on_hide_event(void* self, void (*callback)(void*, voi
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QAbstractPrintDialog*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_abstractprintdialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_abstractprintdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4515,11 +4515,11 @@ bool q_abstractprintdialog_native_event(void* self, char* eventType, void* messa
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QAbstractPrintDialog*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_abstractprintdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_abstractprintdialog_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

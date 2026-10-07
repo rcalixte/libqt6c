@@ -53,11 +53,11 @@ void k_archivefile_set_size(void* self, int64_t s);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KArchiveFile*
 ///
-char* k_archivefile_data(const void* self);
+const char* k_archivefile_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#data)
 ///
@@ -74,7 +74,7 @@ void k_archivefile_on_data(void* self, libqt_string (*callback)(const void*));
 ///
 /// @param self const KArchiveFile*
 ///
-char* k_archivefile_super_data(const void* self);
+const char* k_archivefile_super_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#createDevice)
 ///

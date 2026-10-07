@@ -10,7 +10,7 @@ QAudioBuffer* q_audiobuffer_new2(const void* other) {
     return QAudioBuffer_New2((QAudioBuffer*)other);
 }
 
-QAudioBuffer* q_audiobuffer_new3(char* data, const void* format) {
+QAudioBuffer* q_audiobuffer_new3(const char* data, const void* format) {
     return QAudioBuffer_New3(qstring(data), (QAudioFormat*)format);
 }
 
@@ -18,7 +18,7 @@ QAudioBuffer* q_audiobuffer_new4(int numFrames, const void* format) {
     return QAudioBuffer_New4(numFrames, (QAudioFormat*)format);
 }
 
-QAudioBuffer* q_audiobuffer_new5(char* data, const void* format, int64_t startTime) {
+QAudioBuffer* q_audiobuffer_new5(const char* data, const void* format, int64_t startTime) {
     return QAudioBuffer_New5(qstring(data), (QAudioFormat*)format, startTime);
 }
 

@@ -946,7 +946,7 @@ void q_window_super_tablet_event(void* self, void* param1) {
     QWindow_SuperTabletEvent((QWindow*)self, (QTabletEvent*)param1);
 }
 
-bool q_window_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_window_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QWindow_NativeEvent((QWindow*)self, qstring(eventType), message, result);
 }
 
@@ -954,7 +954,7 @@ void q_window_on_native_event(void* self, bool (*callback)(void*, libqt_string, 
     QWindow_OnNativeEvent((QWindow*)self, (intptr_t)callback);
 }
 
-bool q_window_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_window_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QWindow_SuperNativeEvent((QWindow*)self, qstring(eventType), message, result);
 }
 

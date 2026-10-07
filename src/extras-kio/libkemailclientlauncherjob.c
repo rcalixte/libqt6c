@@ -112,7 +112,7 @@ void k_emailclientlauncherjob_set_attachments(void* self, libqt_list /* of QUrl*
     KEMailClientLauncherJob_SetAttachments((KEMailClientLauncherJob*)self, urls);
 }
 
-void k_emailclientlauncherjob_set_startup_id(void* self, char* startupId) {
+void k_emailclientlauncherjob_set_startup_id(void* self, const char* startupId) {
     KEMailClientLauncherJob_SetStartupId((KEMailClientLauncherJob*)self, qstring(startupId));
 }
 

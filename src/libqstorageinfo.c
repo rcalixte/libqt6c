@@ -37,21 +37,21 @@ const char* q_storageinfo_root_path(const void* self) {
     return _ret;
 }
 
-char* q_storageinfo_device(const void* self) {
+const char* q_storageinfo_device(const void* self) {
     libqt_string _str = QStorageInfo_Device((QStorageInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_storageinfo_subvolume(const void* self) {
+const char* q_storageinfo_subvolume(const void* self) {
     libqt_string _str = QStorageInfo_Subvolume((QStorageInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_storageinfo_file_system_type(const void* self) {
+const char* q_storageinfo_file_system_type(const void* self) {
     libqt_string _str = QStorageInfo_FileSystemType((QStorageInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

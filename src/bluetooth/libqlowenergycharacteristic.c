@@ -26,7 +26,7 @@ QBluetoothUuid* q_lowenergycharacteristic_uuid(const void* self) {
     return QLowEnergyCharacteristic_Uuid((QLowEnergyCharacteristic*)self);
 }
 
-char* q_lowenergycharacteristic_value(const void* self) {
+const char* q_lowenergycharacteristic_value(const void* self) {
     libqt_string _str = QLowEnergyCharacteristic_Value((QLowEnergyCharacteristic*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

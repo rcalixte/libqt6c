@@ -425,17 +425,17 @@ void k_configgroup_write_entry4(void* self, const char* key, const char* value);
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
-/// @param value char*
+/// @param value const char*
 ///
-void k_configgroup_write_entry5(void* self, const char* key, char* value);
+void k_configgroup_write_entry5(void* self, const char* key, const char* value);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
-/// @param value char*
+/// @param value const char*
 ///
-void k_configgroup_write_entry6(void* self, const char* key, char* value);
+void k_configgroup_write_entry6(void* self, const char* key, const char* value);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -863,19 +863,19 @@ void k_configgroup_write_entry35(void* self, const char* key, const char* value,
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
-/// @param value char*
+/// @param value const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_configgroup_write_entry36(void* self, const char* key, char* value, int32_t pFlags);
+void k_configgroup_write_entry36(void* self, const char* key, const char* value, int32_t pFlags);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
-/// @param value char*
+/// @param value const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_configgroup_write_entry37(void* self, const char* key, char* value, int32_t pFlags);
+void k_configgroup_write_entry37(void* self, const char* key, const char* value, int32_t pFlags);
 
 /// [Upstream resources](https://api.kde.org/kconfiggroup.html#writeEntry)
 ///

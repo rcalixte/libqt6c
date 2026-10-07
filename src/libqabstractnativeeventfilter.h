@@ -19,11 +19,11 @@ QAbstractNativeEventFilter* q_abstractnativeeventfilter_new();
 /// @warning This method must be implemented with `q_abstractnativeeventfilter_on_native_event_filter` before it can be called.
 ///
 /// @param self QAbstractNativeEventFilter*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_abstractnativeeventfilter_native_event_filter(void* self, char* eventType, void* message, intptr_t* result);
+bool q_abstractnativeeventfilter_native_event_filter(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)
 ///

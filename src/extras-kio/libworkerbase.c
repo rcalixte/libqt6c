@@ -53,7 +53,7 @@ void k_io__workerresult_delete(void* self) {
     KIO__WorkerResult_Delete((KIO__WorkerResult*)(self));
 }
 
-KIO__WorkerBase* k_io__workerbase_new(char* protocol, char* poolSocket, char* appSocket) {
+KIO__WorkerBase* k_io__workerbase_new(const char* protocol, const char* poolSocket, const char* appSocket) {
     return KIO__WorkerBase_New(qstring(protocol), qstring(poolSocket), qstring(appSocket));
 }
 
@@ -65,7 +65,7 @@ void k_io__workerbase_dispatch_loop(void* self) {
     KIO__WorkerBase_DispatchLoop((KIO__WorkerBase*)self);
 }
 
-void k_io__workerbase_data(void* self, char* data) {
+void k_io__workerbase_data(void* self, const char* data) {
     KIO__WorkerBase_Data((KIO__WorkerBase*)self, qstring(data));
 }
 
@@ -333,7 +333,7 @@ KIO__WorkerResult* k_io__workerbase_super_read(void* self, uintptr_t size) {
     return KIO__WorkerBase_SuperRead((KIO__WorkerBase*)self, size);
 }
 
-KIO__WorkerResult* k_io__workerbase_write(void* self, char* data) {
+KIO__WorkerResult* k_io__workerbase_write(void* self, const char* data) {
     return KIO__WorkerBase_Write((KIO__WorkerBase*)self, qstring(data));
 }
 
@@ -341,7 +341,7 @@ void k_io__workerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*,
     KIO__WorkerBase_OnWrite((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_super_write(void* self, char* data) {
+KIO__WorkerResult* k_io__workerbase_super_write(void* self, const char* data) {
     return KIO__WorkerBase_SuperWrite((KIO__WorkerBase*)self, qstring(data));
 }
 
@@ -525,7 +525,7 @@ KIO__WorkerResult* k_io__workerbase_super_del(void* self, const void* url, bool 
     return KIO__WorkerBase_SuperDel((KIO__WorkerBase*)self, (QUrl*)url, isfile);
 }
 
-KIO__WorkerResult* k_io__workerbase_special(void* self, char* data) {
+KIO__WorkerResult* k_io__workerbase_special(void* self, const char* data) {
     return KIO__WorkerBase_Special((KIO__WorkerBase*)self, qstring(data));
 }
 
@@ -533,7 +533,7 @@ void k_io__workerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void
     KIO__WorkerBase_OnSpecial((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_super_special(void* self, char* data) {
+KIO__WorkerResult* k_io__workerbase_super_special(void* self, const char* data) {
     return KIO__WorkerBase_SuperSpecial((KIO__WorkerBase*)self, qstring(data));
 }
 
@@ -593,7 +593,7 @@ void k_io__workerbase_set_timeout_special_command(void* self, int timeout) {
     KIO__WorkerBase_SetTimeoutSpecialCommand((KIO__WorkerBase*)self, timeout);
 }
 
-int32_t k_io__workerbase_read_data(void* self, char* buffer) {
+int32_t k_io__workerbase_read_data(void* self, const char* buffer) {
     return KIO__WorkerBase_ReadData((KIO__WorkerBase*)self, qstring(buffer));
 }
 
@@ -621,7 +621,7 @@ bool k_io__workerbase_cache_authentication(void* self, const void* info) {
     return KIO__WorkerBase_CacheAuthentication((KIO__WorkerBase*)self, (KIO__AuthInfo*)info);
 }
 
-int32_t k_io__workerbase_wait_for_answer(void* self, int expected1, int expected2, char* data) {
+int32_t k_io__workerbase_wait_for_answer(void* self, int expected1, int expected2, const char* data) {
     return KIO__WorkerBase_WaitForAnswer((KIO__WorkerBase*)self, expected1, expected2, qstring(data));
 }
 
@@ -692,7 +692,7 @@ const char* k_io__workerbase_config_value22(const void* self, const char* key, c
     return _ret;
 }
 
-void k_io__workerbase_set_timeout_special_command2(void* self, int timeout, char* data) {
+void k_io__workerbase_set_timeout_special_command2(void* self, int timeout, const char* data) {
     KIO__WorkerBase_SetTimeoutSpecialCommand2((KIO__WorkerBase*)self, timeout, qstring(data));
 }
 
@@ -700,7 +700,7 @@ int32_t k_io__workerbase_open_password_dialog2(void* self, void* info, const cha
     return KIO__WorkerBase_OpenPasswordDialog2((KIO__WorkerBase*)self, (KIO__AuthInfo*)info, qstring(errorMsg));
 }
 
-int32_t k_io__workerbase_wait_for_answer4(void* self, int expected1, int expected2, char* data, int* pCmd) {
+int32_t k_io__workerbase_wait_for_answer4(void* self, int expected1, int expected2, const char* data, int* pCmd) {
     return KIO__WorkerBase_WaitForAnswer4((KIO__WorkerBase*)self, expected1, expected2, qstring(data), pCmd);
 }
 

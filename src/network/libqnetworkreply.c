@@ -102,14 +102,14 @@ const char** q_networkreply_raw_header_list(const void* self) {
     return _ret;
 }
 
-char* q_networkreply_raw_header(const void* self, const char* headerName) {
+const char* q_networkreply_raw_header(const void* self, const char* headerName) {
     libqt_string _str = QNetworkReply_RawHeader((QNetworkReply*)self, headerName);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of libqt_pair tuple of char* and char* */ q_networkreply_raw_header_pairs(const void* self) {
+libqt_list /* of libqt_pair tuple of const char* and const char* */ q_networkreply_raw_header_pairs(const void* self) {
     libqt_list _arr = QNetworkReply_RawHeaderPairs((QNetworkReply*)self);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -351,14 +351,14 @@ int64_t q_networkreply_read(void* self, char* data, int64_t maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* q_networkreply_read2(void* self, int64_t maxlen) {
+const char* q_networkreply_read2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_networkreply_read_all(void* self) {
+const char* q_networkreply_read_all(void* self) {
     libqt_string _str = QIODevice_ReadAll((QIODevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -369,7 +369,7 @@ int64_t q_networkreply_read_line(void* self, char* data, int64_t maxlen) {
     return QIODevice_ReadLine((QIODevice*)self, data, maxlen);
 }
 
-char* q_networkreply_read_line2(void* self) {
+const char* q_networkreply_read_line2(void* self) {
     libqt_string _str = QIODevice_ReadLine2((QIODevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -404,7 +404,7 @@ int64_t q_networkreply_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-int64_t q_networkreply_write3(void* self, char* data) {
+int64_t q_networkreply_write3(void* self, const char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
@@ -412,7 +412,7 @@ int64_t q_networkreply_peek(void* self, char* data, int64_t maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* q_networkreply_peek2(void* self, int64_t maxlen) {
+const char* q_networkreply_peek2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -498,7 +498,7 @@ void q_networkreply_on_read_channel_finished(void* self, void (*callback)(void*)
     QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
-char* q_networkreply_read_line1(void* self, int64_t maxlen) {
+const char* q_networkreply_read_line1(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_ReadLine1((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

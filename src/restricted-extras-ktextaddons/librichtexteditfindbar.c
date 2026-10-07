@@ -986,14 +986,14 @@ void k_textcustomeditor__richtexteditfindbar_set_geometry2(void* self, const voi
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_textcustomeditor__richtexteditfindbar_save_geometry(const void* self) {
+const char* k_textcustomeditor__richtexteditfindbar_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_textcustomeditor__richtexteditfindbar_restore_geometry(void* self, char* geometry) {
+bool k_textcustomeditor__richtexteditfindbar_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1983,11 +1983,11 @@ void k_textcustomeditor__richtexteditfindbar_on_hide_event(void* self, void (*ca
     TextCustomEditor__RichTextEditFindBar_OnHideEvent((TextCustomEditor__RichTextEditFindBar*)self, (intptr_t)callback);
 }
 
-bool k_textcustomeditor__richtexteditfindbar_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_textcustomeditor__richtexteditfindbar_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return TextCustomEditor__RichTextEditFindBar_NativeEvent((TextCustomEditor__RichTextEditFindBar*)self, qstring(eventType), message, result);
 }
 
-bool k_textcustomeditor__richtexteditfindbar_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_textcustomeditor__richtexteditfindbar_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return TextCustomEditor__RichTextEditFindBar_SuperNativeEvent((TextCustomEditor__RichTextEditFindBar*)self, qstring(eventType), message, result);
 }
 

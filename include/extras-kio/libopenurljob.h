@@ -134,9 +134,9 @@ void k_io__openurljob_set_suggested_file_name(void* self, const char* suggestedF
 /// [Upstream resources](https://api.kde.org/kio-openurljob.html#setStartupId)
 ///
 /// @param self KIO__OpenUrlJob*
-/// @param startupId char*
+/// @param startupId const char*
 ///
-void k_io__openurljob_set_startup_id(void* self, char* startupId);
+void k_io__openurljob_set_startup_id(void* self, const char* startupId);
 
 /// [Upstream resources](https://api.kde.org/kio-openurljob.html#setRunExecutables)
 ///

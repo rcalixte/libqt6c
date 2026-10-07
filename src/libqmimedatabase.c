@@ -26,7 +26,7 @@ libqt_list /* of QMimeType* */ q_mimedatabase_mime_types_for_file_name(const voi
     return _arr;
 }
 
-QMimeType* q_mimedatabase_mime_type_for_data(const void* self, char* data) {
+QMimeType* q_mimedatabase_mime_type_for_data(const void* self, const char* data) {
     return QMimeDatabase_MimeTypeForData((QMimeDatabase*)self, qstring(data));
 }
 
@@ -42,7 +42,7 @@ QMimeType* q_mimedatabase_mime_type_for_file_name_and_data(const void* self, con
     return QMimeDatabase_MimeTypeForFileNameAndData((QMimeDatabase*)self, qstring(fileName), (QIODevice*)device);
 }
 
-QMimeType* q_mimedatabase_mime_type_for_file_name_and_data2(const void* self, const char* fileName, char* data) {
+QMimeType* q_mimedatabase_mime_type_for_file_name_and_data2(const void* self, const char* fileName, const char* data) {
     return QMimeDatabase_MimeTypeForFileNameAndData2((QMimeDatabase*)self, qstring(fileName), qstring(data));
 }
 

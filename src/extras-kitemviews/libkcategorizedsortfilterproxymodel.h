@@ -2758,7 +2758,7 @@ void k_categorizedsortfilterproxymodel_on_supported_drag_actions(void* self, int
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2770,7 +2770,7 @@ void k_categorizedsortfilterproxymodel_on_supported_drag_actions(void* self, int
 ///
 /// @param self const KCategorizedSortFilterProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_categorizedsortfilterproxymodel_role_names(const void* self);
 
@@ -2781,7 +2781,7 @@ libqt_map k_categorizedsortfilterproxymodel_role_names(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2793,7 +2793,7 @@ libqt_map k_categorizedsortfilterproxymodel_role_names(const void* self);
 ///
 /// @param self const KCategorizedSortFilterProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_categorizedsortfilterproxymodel_super_role_names(const void* self);
 
@@ -2804,7 +2804,7 @@ libqt_map k_categorizedsortfilterproxymodel_super_role_names(const void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback libqt_map of int to char* func(KCategorizedSortFilterProxyModel* self)
+/// @param callback libqt_map of int to const char* func(KCategorizedSortFilterProxyModel* self)
 ///
 void k_categorizedsortfilterproxymodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 

@@ -1,58 +1,58 @@
 #include "libkcodecs.hpp"
 #include "libkcodecs.h"
 
-char* k_codecs_quoted_printable_encode(char* in, bool useCRLF) {
+const char* k_codecs_quoted_printable_encode(const char* in, bool useCRLF) {
     libqt_string _str = KCodecs_QuotedPrintableEncode(qstring(in), useCRLF);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_codecs_quoted_printable_encode2(char* in, char* out, bool useCRLF) {
+void k_codecs_quoted_printable_encode2(const char* in, const char* out, bool useCRLF) {
     KCodecs_QuotedPrintableEncode2(qstring(in), qstring(out), useCRLF);
 }
 
-char* k_codecs_quoted_printable_decode(char* in) {
+const char* k_codecs_quoted_printable_decode(const char* in) {
     libqt_string _str = KCodecs_QuotedPrintableDecode(qstring(in));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_codecs_quoted_printable_decode2(char* in, char* out) {
+void k_codecs_quoted_printable_decode2(const char* in, const char* out) {
     KCodecs_QuotedPrintableDecode2(qstring(in), qstring(out));
 }
 
-char* k_codecs_uudecode(char* in) {
+const char* k_codecs_uudecode(const char* in) {
     libqt_string _str = KCodecs_Uudecode(qstring(in));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_codecs_uudecode2(char* in, char* out) {
+void k_codecs_uudecode2(const char* in, const char* out) {
     KCodecs_Uudecode2(qstring(in), qstring(out));
 }
 
-char* k_codecs_base64_encode(char* in) {
+const char* k_codecs_base64_encode(const char* in) {
     libqt_string _str = KCodecs_Base64Encode(qstring(in));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_codecs_base64_encode2(char* in, char* out, bool insertLFs) {
+void k_codecs_base64_encode2(const char* in, const char* out, bool insertLFs) {
     KCodecs_Base64Encode2(qstring(in), qstring(out), insertLFs);
 }
 
-char* k_codecs_base64_decode(char* in) {
+const char* k_codecs_base64_decode(const char* in) {
     libqt_string _str = KCodecs_Base64Decode(qstring(in));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_codecs_base64_decode2(char* in, char* out) {
+void k_codecs_base64_decode2(const char* in, const char* out) {
     KCodecs_Base64Decode2(qstring(in), qstring(out));
 }
 
@@ -63,21 +63,21 @@ const char* k_codecs_decode_r_f_c2047_string(const char* text) {
     return _ret;
 }
 
-char* k_codecs_encode_r_f_c2047_string(const char* src, char* charset) {
+const char* k_codecs_encode_r_f_c2047_string(const char* src, const char* charset) {
     libqt_string _str = KCodecs_EncodeRFC2047String(qstring(src), qstring(charset));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_codecs_base45_decode(char* in) {
+const char* k_codecs_base45_decode(const char* in) {
     libqt_string _str = KCodecs_Base45Decode(qstring(in));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-KCodecs__Codec* k_codecs__codec_codec_for_name(char* name) {
+KCodecs__Codec* k_codecs__codec_codec_for_name(const char* name) {
     return KCodecs__Codec_CodecForName(qstring(name));
 }
 
@@ -105,14 +105,14 @@ bool k_codecs__codec_decode(const void* self, const char* scursor, const char* s
     return KCodecs__Codec_Decode((KCodecs__Codec*)self, scursor, send, dcursor, dend, newline);
 }
 
-char* k_codecs__codec_encode2(const void* self, char* src) {
+const char* k_codecs__codec_encode2(const void* self, const char* src) {
     libqt_string _str = KCodecs__Codec_Encode2((KCodecs__Codec*)self, qstring(src));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_codecs__codec_decode2(const void* self, char* src) {
+const char* k_codecs__codec_decode2(const void* self, const char* src) {
     libqt_string _str = KCodecs__Codec_Decode2((KCodecs__Codec*)self, qstring(src));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -123,14 +123,14 @@ const char* k_codecs__codec_name(const void* self) {
     return KCodecs__Codec_Name((KCodecs__Codec*)self);
 }
 
-char* k_codecs__codec_encode22(const void* self, char* src, int32_t newline) {
+const char* k_codecs__codec_encode22(const void* self, const char* src, int32_t newline) {
     libqt_string _str = KCodecs__Codec_Encode22((KCodecs__Codec*)self, qstring(src), newline);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_codecs__codec_decode22(const void* self, char* src, int32_t newline) {
+const char* k_codecs__codec_decode22(const void* self, const char* src, int32_t newline) {
     libqt_string _str = KCodecs__Codec_Decode22((KCodecs__Codec*)self, qstring(src), newline);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

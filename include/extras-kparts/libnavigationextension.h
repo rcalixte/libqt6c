@@ -219,7 +219,7 @@ const char* k_parts__navigationextension_action_text(const void* self, const cha
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map* of char* to char*
+/// // libqt_map* of const char* to const char*
 /// for (size_t i = 0; i < map->len; ++i) {
 ///     libqt_free(map->keys[i]);
 ///     libqt_free(map->values[i]);
@@ -229,7 +229,7 @@ const char* k_parts__navigationextension_action_text(const void* self, const cha
 /// free(map);
 /// ```
 ///
-/// @return libqt_map* of char* to char*
+/// @return libqt_map* of const char* to const char*
 ///
 libqt_map* k_parts__navigationextension_action_slot_map();
 

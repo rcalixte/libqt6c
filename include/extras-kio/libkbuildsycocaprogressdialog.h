@@ -2066,20 +2066,20 @@ void k_buildsycocaprogressdialog_set_geometry2(void* self, const void* geometry)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KBuildSycocaProgressDialog*
 ///
-char* k_buildsycocaprogressdialog_save_geometry(const void* self);
+const char* k_buildsycocaprogressdialog_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KBuildSycocaProgressDialog*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_buildsycocaprogressdialog_restore_geometry(void* self, char* geometry);
+bool k_buildsycocaprogressdialog_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///

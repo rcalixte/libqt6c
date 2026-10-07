@@ -116,20 +116,20 @@ const char** q_networkrequest_raw_header_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequest.html#rawHeader)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QNetworkRequest*
 /// @param headerName const char*
 ///
-char* q_networkrequest_raw_header(const void* self, const char* headerName);
+const char* q_networkrequest_raw_header(const void* self, const char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequest.html#setRawHeader)
 ///
 /// @param self QNetworkRequest*
-/// @param headerName char*
-/// @param value char*
+/// @param headerName const char*
+/// @param value const char*
 ///
-void q_networkrequest_set_raw_header(void* self, char* headerName, char* value);
+void q_networkrequest_set_raw_header(void* self, const char* headerName, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequest.html#attribute)
 ///

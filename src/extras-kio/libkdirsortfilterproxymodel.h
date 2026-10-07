@@ -2818,7 +2818,7 @@ void k_dirsortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*c
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2830,7 +2830,7 @@ void k_dirsortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*c
 ///
 /// @param self const KDirSortFilterProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_dirsortfilterproxymodel_role_names(const void* self);
 
@@ -2841,7 +2841,7 @@ libqt_map k_dirsortfilterproxymodel_role_names(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2853,7 +2853,7 @@ libqt_map k_dirsortfilterproxymodel_role_names(const void* self);
 ///
 /// @param self const KDirSortFilterProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_dirsortfilterproxymodel_super_role_names(const void* self);
 
@@ -2864,7 +2864,7 @@ libqt_map k_dirsortfilterproxymodel_super_role_names(const void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirSortFilterProxyModel*
-/// @param callback libqt_map of int to char* func(KDirSortFilterProxyModel* self)
+/// @param callback libqt_map of int to const char* func(KDirSortFilterProxyModel* self)
 ///
 void k_dirsortfilterproxymodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 

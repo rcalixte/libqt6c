@@ -30,24 +30,24 @@ QIODevice* q_imageiohandler_device(const void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#setFormat)
 ///
 /// @param self QImageIOHandler*
-/// @param format char*
+/// @param format const char*
 ///
-void q_imageiohandler_set_format(void* self, char* format);
+void q_imageiohandler_set_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#setFormat)
 ///
 /// @param self const QImageIOHandler*
-/// @param format char*
+/// @param format const char*
 ///
-void q_imageiohandler_set_format2(const void* self, char* format);
+void q_imageiohandler_set_format2(const void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#format)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QImageIOHandler*
 ///
-char* q_imageiohandler_format(const void* self);
+const char* q_imageiohandler_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageiohandler.html#canRead)
 ///
@@ -462,11 +462,11 @@ const char* q_imageioplugin_tr(const char* s);
 ///
 /// @param self const QImageIOPlugin*
 /// @param device QIODevice*
-/// @param format char*
+/// @param format const char*
 ///
 /// @return flag of enum QImageIOPlugin__Capability
 ///
-int32_t q_imageioplugin_capabilities(const void* self, void* device, char* format);
+int32_t q_imageioplugin_capabilities(const void* self, void* device, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageioplugin.html#capabilities)
 ///
@@ -483,9 +483,9 @@ void q_imageioplugin_on_capabilities(void* self, int32_t (*callback)(const void*
 ///
 /// @param self const QImageIOPlugin*
 /// @param device QIODevice*
-/// @param format char*
+/// @param format const char*
 ///
-QImageIOHandler* q_imageioplugin_create(const void* self, void* device, char* format);
+QImageIOHandler* q_imageioplugin_create(const void* self, void* device, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimageioplugin.html#create)
 ///

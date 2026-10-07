@@ -13,11 +13,11 @@ QTextStream* q_textstream_new2(void* device) {
     return QTextStream_New2((QIODevice*)device);
 }
 
-QTextStream* q_textstream_new3(char* array) {
+QTextStream* q_textstream_new3(const char* array) {
     return QTextStream_New3(qstring(array));
 }
 
-QTextStream* q_textstream_new4(char* array, int32_t openMode) {
+QTextStream* q_textstream_new4(const char* array, int32_t openMode) {
     return QTextStream_New4(qstring(array), openMode);
 }
 
@@ -237,7 +237,7 @@ QTextStream* q_textstream_operator_shift_right14(void* self, const char* s) {
     return QTextStream_OperatorShiftRight14((QTextStream*)self, qstring(s));
 }
 
-QTextStream* q_textstream_operator_shift_right15(void* self, char* array) {
+QTextStream* q_textstream_operator_shift_right15(void* self, const char* array) {
     return QTextStream_OperatorShiftRight15((QTextStream*)self, qstring(array));
 }
 
@@ -301,11 +301,11 @@ QTextStream* q_textstream_operator_shift_left15(void* self, const char* s) {
     return QTextStream_OperatorShiftLeft15((QTextStream*)self, qstring(s));
 }
 
-QTextStream* q_textstream_operator_shift_left16(void* self, char* s) {
+QTextStream* q_textstream_operator_shift_left16(void* self, const char* s) {
     return QTextStream_OperatorShiftLeft16((QTextStream*)self, qstring(s));
 }
 
-QTextStream* q_textstream_operator_shift_left17(void* self, char* array) {
+QTextStream* q_textstream_operator_shift_left17(void* self, const char* array) {
     return QTextStream_OperatorShiftLeft17((QTextStream*)self, qstring(array));
 }
 

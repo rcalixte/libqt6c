@@ -67,7 +67,7 @@ void q_webengineframe_print_to_pdf(void* self, const char* filePath) {
     QWebEngineFrame_PrintToPdf((QWebEngineFrame*)self, qstring(filePath));
 }
 
-void q_webengineframe_print_to_pdf2(void* self, void (*callback)(char* funcparam1)) {
+void q_webengineframe_print_to_pdf2(void* self, void (*callback)(const char* funcparam1)) {
     QWebEngineFrame_PrintToPdf2((QWebEngineFrame*)self, (intptr_t)callback);
 }
 

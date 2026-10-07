@@ -869,7 +869,7 @@ int32_t q_abstractproxymodel_super_supported_drop_actions(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -879,7 +879,7 @@ int32_t q_abstractproxymodel_super_supported_drop_actions(const void* self);
 ///
 /// @param self const QAbstractProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_abstractproxymodel_role_names(const void* self);
 
@@ -888,7 +888,7 @@ libqt_map q_abstractproxymodel_role_names(const void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractProxyModel*
-/// @param callback libqt_map of int to char* func(const QAbstractProxyModel* self)
+/// @param callback libqt_map of int to const char* func(const QAbstractProxyModel* self)
 ///
 void q_abstractproxymodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
@@ -898,7 +898,7 @@ void q_abstractproxymodel_on_role_names(void* self, libqt_map (*callback)(const 
 ///
 /// @param self const QAbstractProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_abstractproxymodel_super_role_names(const void* self);
 

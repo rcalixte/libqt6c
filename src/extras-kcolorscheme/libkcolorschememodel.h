@@ -2021,7 +2021,7 @@ void k_colorschememodel_on_span(void* self, QSize* (*callback)(const void*, cons
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2033,7 +2033,7 @@ void k_colorschememodel_on_span(void* self, QSize* (*callback)(const void*, cons
 ///
 /// @param self const KColorSchemeModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_colorschememodel_role_names(const void* self);
 
@@ -2044,7 +2044,7 @@ libqt_map k_colorschememodel_role_names(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2056,7 +2056,7 @@ libqt_map k_colorschememodel_role_names(const void* self);
 ///
 /// @param self const KColorSchemeModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_colorschememodel_super_role_names(const void* self);
 
@@ -2067,7 +2067,7 @@ libqt_map k_colorschememodel_super_role_names(const void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorSchemeModel*
-/// @param callback libqt_map of int to char* func(KColorSchemeModel* self)
+/// @param callback libqt_map of int to const char* func(KColorSchemeModel* self)
 ///
 void k_colorschememodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 

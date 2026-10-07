@@ -59,7 +59,7 @@ void k_filemetadata__writedata_add(void* self, int32_t property, const void* val
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writedata.html#addImageData)
 ///
 /// @param self KFileMetaData__WriteData*
-/// @param images libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to char*
+/// @param images libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to const char*
 ///
 void k_filemetadata__writedata_add_image_data(void* self, libqt_map images);
 
@@ -89,7 +89,7 @@ libqt_map k_filemetadata__writedata_properties(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to char*
+/// // libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -99,7 +99,7 @@ libqt_map k_filemetadata__writedata_properties(const void* self);
 ///
 /// @param self const KFileMetaData__WriteData*
 ///
-/// @return libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to char*
+/// @return libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to const char*
 ///
 libqt_map k_filemetadata__writedata_image_data(const void* self);
 

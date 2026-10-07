@@ -265,11 +265,11 @@ float q_sgmaterialshader__renderstate_device_pixel_ratio(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterialshader-renderstate.html#uniformData)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QSGMaterialShader__RenderState*
 ///
-char* q_sgmaterialshader__renderstate_uniform_data(void* self);
+const char* q_sgmaterialshader__renderstate_uniform_data(void* self);
 
 /// Delete this object from C++ memory.
 ///

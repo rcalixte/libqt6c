@@ -244,7 +244,7 @@ bool k_parts__readwritepart_open_stream(void* self, const char* mimeType, const 
     return KParts__ReadOnlyPart_OpenStream((KParts__ReadOnlyPart*)self, qstring(mimeType), (QUrl*)url);
 }
 
-bool k_parts__readwritepart_write_stream(void* self, char* data) {
+bool k_parts__readwritepart_write_stream(void* self, const char* data) {
     return KParts__ReadOnlyPart_WriteStream((KParts__ReadOnlyPart*)self, qstring(data));
 }
 

@@ -140,9 +140,9 @@ void k_emailclientlauncherjob_set_attachments(void* self, libqt_list urls);
 /// [Upstream resources](https://api.kde.org/kemailclientlauncherjob.html#setStartupId)
 ///
 /// @param self KEMailClientLauncherJob*
-/// @param startupId char*
+/// @param startupId const char*
 ///
-void k_emailclientlauncherjob_set_startup_id(void* self, char* startupId);
+void k_emailclientlauncherjob_set_startup_id(void* self, const char* startupId);
 
 /// [Upstream resources](https://api.kde.org/kemailclientlauncherjob.html#start)
 ///

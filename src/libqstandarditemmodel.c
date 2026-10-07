@@ -532,7 +532,7 @@ const char* q_standarditemmodel_tr(const char* s) {
     return _ret;
 }
 
-void q_standarditemmodel_set_item_role_names(void* self, libqt_map /* of int to char* */ roleNames) {
+void q_standarditemmodel_set_item_role_names(void* self, libqt_map /* of int to const char* */ roleNames) {
     // Convert libqt_map to QHash<int,QByteArray>
     libqt_map roleNames_ret;
     roleNames_ret.len = roleNames.len;
@@ -549,7 +549,7 @@ void q_standarditemmodel_set_item_role_names(void* self, libqt_map /* of int to 
     }
     int* roleNames_karr = (int*)roleNames.keys;
     int* roleNames_kdest = (int*)roleNames_ret.keys;
-    char** roleNames_varr = (char**)roleNames.values;
+    const char** roleNames_varr = (const char**)roleNames.values;
     libqt_string* roleNames_vdest = (libqt_string*)roleNames_ret.values;
     for (size_t i = 0; i < roleNames_ret.len; ++i) {
         roleNames_kdest[i] = roleNames_karr[i];
@@ -560,7 +560,7 @@ void q_standarditemmodel_set_item_role_names(void* self, libqt_map /* of int to 
     free(roleNames_ret.values);
 }
 
-libqt_map /* of int to char* */ q_standarditemmodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_standarditemmodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QStandardItemModel_RoleNames((QStandardItemModel*)self);
     libqt_map _ret;
@@ -593,11 +593,11 @@ libqt_map /* of int to char* */ q_standarditemmodel_role_names(const void* self)
     return _ret;
 }
 
-void q_standarditemmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_standarditemmodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     QStandardItemModel_OnRoleNames((QStandardItemModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_standarditemmodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_standarditemmodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QStandardItemModel_SuperRoleNames((QStandardItemModel*)self);
     libqt_map _ret;

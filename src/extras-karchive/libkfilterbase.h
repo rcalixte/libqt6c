@@ -130,9 +130,9 @@ void k_filterbase_on_read_header(void* self, bool (*callback)(void*));
 /// @warning This method must be implemented with `k_filterbase_on_write_header` before it can be called.
 ///
 /// @param self KFilterBase*
-/// @param filename char*
+/// @param filename const char*
 ///
-bool k_filterbase_write_header(void* self, char* filename);
+bool k_filterbase_write_header(void* self, const char* filename);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#writeHeader)
 ///

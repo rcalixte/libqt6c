@@ -957,14 +957,14 @@ void k_multitabbar_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_multitabbar_save_geometry(const void* self) {
+const char* k_multitabbar_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_multitabbar_restore_geometry(void* self, char* geometry) {
+bool k_multitabbar_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1942,11 +1942,11 @@ void k_multitabbar_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KMultiTabBar_OnHideEvent((KMultiTabBar*)self, (intptr_t)callback);
 }
 
-bool k_multitabbar_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_multitabbar_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KMultiTabBar_NativeEvent((KMultiTabBar*)self, qstring(eventType), message, result);
 }
 
-bool k_multitabbar_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_multitabbar_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KMultiTabBar_SuperNativeEvent((KMultiTabBar*)self, qstring(eventType), message, result);
 }
 
@@ -3180,14 +3180,14 @@ void k_multitabbarbutton_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_multitabbarbutton_save_geometry(const void* self) {
+const char* k_multitabbarbutton_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_multitabbarbutton_restore_geometry(void* self, char* geometry) {
+bool k_multitabbarbutton_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -4839,14 +4839,14 @@ void k_multitabbartab_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_multitabbartab_save_geometry(const void* self) {
+const char* k_multitabbartab_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_multitabbartab_restore_geometry(void* self, char* geometry) {
+bool k_multitabbartab_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 

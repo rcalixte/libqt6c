@@ -900,7 +900,7 @@ void q_concatenatetablesproxymodel_on_match(void* self, libqt_list /* of QModelI
     QConcatenateTablesProxyModel_OnMatch((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_concatenatetablesproxymodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_concatenatetablesproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QConcatenateTablesProxyModel_RoleNames((QConcatenateTablesProxyModel*)self);
     libqt_map _ret;
@@ -933,7 +933,7 @@ libqt_map /* of int to char* */ q_concatenatetablesproxymodel_role_names(const v
     return _ret;
 }
 
-libqt_map /* of int to char* */ q_concatenatetablesproxymodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_concatenatetablesproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QConcatenateTablesProxyModel_SuperRoleNames((QConcatenateTablesProxyModel*)self);
     libqt_map _ret;
@@ -966,7 +966,7 @@ libqt_map /* of int to char* */ q_concatenatetablesproxymodel_super_role_names(c
     return _ret;
 }
 
-void q_concatenatetablesproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_concatenatetablesproxymodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     QConcatenateTablesProxyModel_OnRoleNames((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 

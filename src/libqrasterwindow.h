@@ -2836,11 +2836,11 @@ void q_rasterwindow_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_rasterwindow_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_rasterwindow_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWindow
 ///
@@ -2849,11 +2849,11 @@ bool q_rasterwindow_native_event(void* self, char* eventType, void* message, int
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_rasterwindow_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_rasterwindow_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWindow
 ///

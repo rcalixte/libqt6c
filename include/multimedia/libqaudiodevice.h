@@ -58,11 +58,11 @@ bool q_audiodevice_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QAudioDevice*
 ///
-char* q_audiodevice_id(const void* self);
+const char* q_audiodevice_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodevice.html#description)
 ///

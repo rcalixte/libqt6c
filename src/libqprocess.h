@@ -565,19 +565,19 @@ bool q_process_wait_for_finished(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#readAllStandardOutput)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QProcess*
 ///
-char* q_process_read_all_standard_output(void* self);
+const char* q_process_read_all_standard_output(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#readAllStandardError)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QProcess*
 ///
-char* q_process_read_all_standard_error(void* self);
+const char* q_process_read_all_standard_error(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#exitCode)
 ///
@@ -1062,22 +1062,22 @@ int64_t q_process_read(void* self, char* data, int64_t maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QProcess*
 /// @param maxlen int64_t
 ///
-char* q_process_read2(void* self, int64_t maxlen);
+const char* q_process_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QProcess*
 ///
-char* q_process_read_all(void* self);
+const char* q_process_read_all(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1093,11 +1093,11 @@ int64_t q_process_read_line(void* self, char* data, int64_t maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QProcess*
 ///
-char* q_process_read_line2(void* self);
+const char* q_process_read_line2(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1155,9 +1155,9 @@ int64_t q_process_write2(void* self, const char* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QProcess*
-/// @param data char*
+/// @param data const char*
 ///
-int64_t q_process_write3(void* self, char* data);
+int64_t q_process_write3(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -1173,12 +1173,12 @@ int64_t q_process_peek(void* self, char* data, int64_t maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QProcess*
 /// @param maxlen int64_t
 ///
-char* q_process_peek2(void* self, int64_t maxlen);
+const char* q_process_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1336,12 +1336,12 @@ void q_process_on_read_channel_finished(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QProcess*
 /// @param maxlen int64_t
 ///
-char* q_process_read_line1(void* self, int64_t maxlen);
+const char* q_process_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///

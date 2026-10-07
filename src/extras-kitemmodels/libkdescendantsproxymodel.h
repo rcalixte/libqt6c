@@ -479,7 +479,7 @@ int32_t k_descendantsproxymodel_super_column_count(const void* self, const void*
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -489,7 +489,7 @@ int32_t k_descendantsproxymodel_super_column_count(const void* self, const void*
 ///
 /// @param self const KDescendantsProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_descendantsproxymodel_role_names(const void* self);
 
@@ -498,7 +498,7 @@ libqt_map k_descendantsproxymodel_role_names(const void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDescendantsProxyModel*
-/// @param callback libqt_map of int to char* func(const KDescendantsProxyModel* self)
+/// @param callback libqt_map of int to const char* func(const KDescendantsProxyModel* self)
 ///
 void k_descendantsproxymodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
@@ -508,7 +508,7 @@ void k_descendantsproxymodel_on_role_names(void* self, libqt_map (*callback)(con
 ///
 /// @param self const KDescendantsProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_descendantsproxymodel_super_role_names(const void* self);
 

@@ -2100,7 +2100,7 @@ void k_texteditor__codecompletionmodel_on_span(void* self, QSize* (*callback)(co
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2112,7 +2112,7 @@ void k_texteditor__codecompletionmodel_on_span(void* self, QSize* (*callback)(co
 ///
 /// @param self const KTextEditor__CodeCompletionModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_texteditor__codecompletionmodel_role_names(const void* self);
 
@@ -2123,7 +2123,7 @@ libqt_map k_texteditor__codecompletionmodel_role_names(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2135,7 +2135,7 @@ libqt_map k_texteditor__codecompletionmodel_role_names(const void* self);
 ///
 /// @param self const KTextEditor__CodeCompletionModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_texteditor__codecompletionmodel_super_role_names(const void* self);
 
@@ -2146,7 +2146,7 @@ libqt_map k_texteditor__codecompletionmodel_super_role_names(const void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTextEditor__CodeCompletionModel*
-/// @param callback libqt_map of int to char* func(KTextEditor__CodeCompletionModel* self)
+/// @param callback libqt_map of int to const char* func(KTextEditor__CodeCompletionModel* self)
 ///
 void k_texteditor__codecompletionmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 

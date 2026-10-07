@@ -43,7 +43,7 @@ QColor* q_color_new10(const char* aname) {
     return QColor_New10(aname);
 }
 
-QColor* q_color_new11(char* name) {
+QColor* q_color_new11(const char* name) {
     return QColor_New11(qstring(name));
 }
 
@@ -102,7 +102,7 @@ void q_color_set_named_color2(void* self, const char* name) {
     QColor_SetNamedColor2((QColor*)self, qstring(name));
 }
 
-void q_color_set_named_color3(void* self, char* name) {
+void q_color_set_named_color3(void* self, const char* name) {
     QColor_SetNamedColor3((QColor*)self, qstring(name));
 }
 
@@ -475,7 +475,7 @@ bool q_color_is_valid_color2(const char* param1) {
     return QColor_IsValidColor2(qstring(param1));
 }
 
-bool q_color_is_valid_color3(char* param1) {
+bool q_color_is_valid_color3(const char* param1) {
     return QColor_IsValidColor3(qstring(param1));
 }
 

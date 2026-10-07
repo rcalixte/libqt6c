@@ -130,7 +130,7 @@ int32_t q_pdfbookmarkmodel_super_column_count(const void* self, const void* pare
     return QPdfBookmarkModel_SuperColumnCount((QPdfBookmarkModel*)self, (QModelIndex*)parent);
 }
 
-libqt_map /* of int to char* */ q_pdfbookmarkmodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_pdfbookmarkmodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QPdfBookmarkModel_RoleNames((QPdfBookmarkModel*)self);
     libqt_map _ret;
@@ -163,11 +163,11 @@ libqt_map /* of int to char* */ q_pdfbookmarkmodel_role_names(const void* self) 
     return _ret;
 }
 
-void q_pdfbookmarkmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_pdfbookmarkmodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     QPdfBookmarkModel_OnRoleNames((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_pdfbookmarkmodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_pdfbookmarkmodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QPdfBookmarkModel_SuperRoleNames((QPdfBookmarkModel*)self);
     libqt_map _ret;

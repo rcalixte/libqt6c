@@ -585,9 +585,9 @@ QNetworkReply* k_attica__platformdependentv3_put(void* self, const void* request
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param request QNetworkRequest*
-/// @param data char*
+/// @param data const char*
 ///
-QNetworkReply* k_attica__platformdependentv3_put2(void* self, const void* request, char* data);
+QNetworkReply* k_attica__platformdependentv3_put2(void* self, const void* request, const char* data);
 
 /// Inherited from Attica::PlatformDependent
 ///
@@ -727,9 +727,9 @@ QNetworkReply* k_attica__platformdependentv3_post(void* self, const void* reques
 ///
 /// @param self Attica__PlatformDependentV3*
 /// @param request QNetworkRequest*
-/// @param data char*
+/// @param data const char*
 ///
-QNetworkReply* k_attica__platformdependentv3_post2(void* self, const void* request, char* data);
+QNetworkReply* k_attica__platformdependentv3_post2(void* self, const void* request, const char* data);
 
 /// Inherited from Attica::PlatformDependent
 ///

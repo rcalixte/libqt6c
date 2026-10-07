@@ -1220,14 +1220,14 @@ void q_wizard_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_wizard_save_geometry(const void* self) {
+const char* q_wizard_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_wizard_restore_geometry(void* self, char* geometry) {
+bool q_wizard_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2217,11 +2217,11 @@ void q_wizard_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QWizard_OnHideEvent((QWizard*)self, (intptr_t)callback);
 }
 
-bool q_wizard_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_wizard_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QWizard_NativeEvent((QWizard*)self, qstring(eventType), message, result);
 }
 
-bool q_wizard_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_wizard_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QWizard_SuperNativeEvent((QWizard*)self, qstring(eventType), message, result);
 }
 
@@ -3425,14 +3425,14 @@ void q_wizardpage_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_wizardpage_save_geometry(const void* self) {
+const char* q_wizardpage_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_wizardpage_restore_geometry(void* self, char* geometry) {
+bool q_wizardpage_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -4422,11 +4422,11 @@ void q_wizardpage_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QWizardPage_OnHideEvent((QWizardPage*)self, (intptr_t)callback);
 }
 
-bool q_wizardpage_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_wizardpage_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QWizardPage_NativeEvent((QWizardPage*)self, qstring(eventType), message, result);
 }
 
-bool q_wizardpage_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_wizardpage_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QWizardPage_SuperNativeEvent((QWizardPage*)self, qstring(eventType), message, result);
 }
 

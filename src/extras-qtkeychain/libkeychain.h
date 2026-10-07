@@ -744,11 +744,11 @@ const char* q_keychain__readpasswordjob_tr(const char* s);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QKeychain__ReadPasswordJob*
 ///
-char* q_keychain__readpasswordjob_binary_data(const void* self);
+const char* q_keychain__readpasswordjob_binary_data(const void* self);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
@@ -1872,9 +1872,9 @@ const char* q_keychain__writepasswordjob_tr(const char* s);
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
 /// @param self QKeychain__WritePasswordJob*
-/// @param data char*
+/// @param data const char*
 ///
-void q_keychain__writepasswordjob_set_binary_data(void* self, char* data);
+void q_keychain__writepasswordjob_set_binary_data(void* self, const char* data);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///

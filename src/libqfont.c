@@ -550,7 +550,7 @@ uint32_t q_font__tag_value(const void* self) {
     return QFont__Tag_Value((QFont__Tag*)self);
 }
 
-char* q_font__tag_to_string(const void* self) {
+const char* q_font__tag_to_string(const void* self) {
     libqt_string _str = QFont__Tag_ToString((QFont__Tag*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -53,16 +53,16 @@ void q_cborstreamwriter_append3(void* self, uint64_t n);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///
 /// @param self QCborStreamWriter*
-/// @param ba char*
+/// @param ba const char*
 ///
-void q_cborstreamwriter_append4(void* self, char* ba);
+void q_cborstreamwriter_append4(void* self, const char* ba);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///
 /// @param self QCborStreamWriter*
-/// @param str char*
+/// @param str const char*
 ///
-void q_cborstreamwriter_append5(void* self, char* str);
+void q_cborstreamwriter_append5(void* self, const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///

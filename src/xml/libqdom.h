@@ -1570,10 +1570,10 @@ int32_t q_domdocument_node_type(const void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#setContent)
 ///
 /// @param self QDomDocument*
-/// @param text char*
+/// @param text const char*
 /// @param namespaceProcessing bool
 ///
-bool q_domdocument_set_content(void* self, char* text, bool namespaceProcessing);
+bool q_domdocument_set_content(void* self, const char* text, bool namespaceProcessing);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#setContent)
 ///
@@ -1630,11 +1630,11 @@ const char* q_domdocument_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QDomDocument*
 ///
-char* q_domdocument_to_byte_array(const void* self);
+const char* q_domdocument_to_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#setContent)
 ///
@@ -1671,12 +1671,12 @@ const char* q_domdocument_to_string1(const void* self, int indent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QDomDocument*
 /// @param indent int
 ///
-char* q_domdocument_to_byte_array1(const void* self, int indent);
+const char* q_domdocument_to_byte_array1(const void* self, int indent);
 
 /// Inherited from QDomNode
 ///

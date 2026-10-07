@@ -121,9 +121,9 @@ void q_lowenergyservice_read_characteristic(void* self, const void* characterist
 ///
 /// @param self QLowEnergyService*
 /// @param characteristic QLowEnergyCharacteristic*
-/// @param newValue char*
+/// @param newValue const char*
 ///
-void q_lowenergyservice_write_characteristic(void* self, const void* characteristic, char* newValue);
+void q_lowenergyservice_write_characteristic(void* self, const void* characteristic, const char* newValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#contains)
 ///
@@ -143,9 +143,9 @@ void q_lowenergyservice_read_descriptor(void* self, const void* descriptor);
 ///
 /// @param self QLowEnergyService*
 /// @param descriptor QLowEnergyDescriptor*
-/// @param newValue char*
+/// @param newValue const char*
 ///
-void q_lowenergyservice_write_descriptor(void* self, const void* descriptor, char* newValue);
+void q_lowenergyservice_write_descriptor(void* self, const void* descriptor, const char* newValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#stateChanged)
 ///
@@ -165,9 +165,9 @@ void q_lowenergyservice_on_state_changed(void* self, void (*callback)(void*, int
 ///
 /// @param self QLowEnergyService*
 /// @param info QLowEnergyCharacteristic*
-/// @param value char*
+/// @param value const char*
 ///
-void q_lowenergyservice_characteristic_changed(void* self, const void* info, char* value);
+void q_lowenergyservice_characteristic_changed(void* self, const void* info, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#characteristicChanged)
 ///
@@ -180,9 +180,9 @@ void q_lowenergyservice_on_characteristic_changed(void* self, void (*callback)(v
 ///
 /// @param self QLowEnergyService*
 /// @param info QLowEnergyCharacteristic*
-/// @param value char*
+/// @param value const char*
 ///
-void q_lowenergyservice_characteristic_read(void* self, const void* info, char* value);
+void q_lowenergyservice_characteristic_read(void* self, const void* info, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#characteristicRead)
 ///
@@ -195,9 +195,9 @@ void q_lowenergyservice_on_characteristic_read(void* self, void (*callback)(void
 ///
 /// @param self QLowEnergyService*
 /// @param info QLowEnergyCharacteristic*
-/// @param value char*
+/// @param value const char*
 ///
-void q_lowenergyservice_characteristic_written(void* self, const void* info, char* value);
+void q_lowenergyservice_characteristic_written(void* self, const void* info, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#characteristicWritten)
 ///
@@ -210,9 +210,9 @@ void q_lowenergyservice_on_characteristic_written(void* self, void (*callback)(v
 ///
 /// @param self QLowEnergyService*
 /// @param info QLowEnergyDescriptor*
-/// @param value char*
+/// @param value const char*
 ///
-void q_lowenergyservice_descriptor_read(void* self, const void* info, char* value);
+void q_lowenergyservice_descriptor_read(void* self, const void* info, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#descriptorRead)
 ///
@@ -225,9 +225,9 @@ void q_lowenergyservice_on_descriptor_read(void* self, void (*callback)(void*, c
 ///
 /// @param self QLowEnergyService*
 /// @param info QLowEnergyDescriptor*
-/// @param value char*
+/// @param value const char*
 ///
-void q_lowenergyservice_descriptor_written(void* self, const void* info, char* value);
+void q_lowenergyservice_descriptor_written(void* self, const void* info, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#descriptorWritten)
 ///
@@ -280,10 +280,10 @@ void q_lowenergyservice_discover_details1(void* self, int32_t mode);
 ///
 /// @param self QLowEnergyService*
 /// @param characteristic QLowEnergyCharacteristic*
-/// @param newValue char*
+/// @param newValue const char*
 /// @param mode enum QLowEnergyService__WriteMode
 ///
-void q_lowenergyservice_write_characteristic3(void* self, const void* characteristic, char* newValue, int32_t mode);
+void q_lowenergyservice_write_characteristic3(void* self, const void* characteristic, const char* newValue, int32_t mode);
 
 /// Inherited from QObject
 ///

@@ -92,9 +92,9 @@ QColor* q_color_new10(const char* aname);
 
 /// q_color_new11 constructs a new QColor object.
 ///
-/// @param name char*
+/// @param name const char*
 ///
-QColor* q_color_new11(char* name);
+QColor* q_color_new11(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html)
 
@@ -206,9 +206,9 @@ void q_color_set_named_color2(void* self, const char* name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setNamedColor)
 ///
 /// @param self QColor*
-/// @param name char*
+/// @param name const char*
 ///
-void q_color_set_named_color3(void* self, char* name);
+void q_color_set_named_color3(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#colorNames)
 ///
@@ -834,9 +834,9 @@ bool q_color_is_valid_color2(const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#isValidColor)
 ///
-/// @param param1 char*
+/// @param param1 const char*
 ///
-bool q_color_is_valid_color3(char* param1);
+bool q_color_is_valid_color3(const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#isValidColorName)
 ///

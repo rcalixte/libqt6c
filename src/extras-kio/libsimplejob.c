@@ -632,11 +632,11 @@ KIO__SimpleJob* k_io_symlink(const char* target, const void* dest, int32_t flags
     return KIO_Symlink(qstring(target), (QUrl*)dest, flags);
 }
 
-KIO__SimpleJob* k_io_special(const void* url, char* data, int32_t flags) {
+KIO__SimpleJob* k_io_special(const void* url, const char* data, int32_t flags) {
     return KIO_Special((QUrl*)url, qstring(data), flags);
 }
 
-KIO__SimpleJob* k_io_mount(bool ro, char* fstype, const char* dev, const char* point, int32_t flags) {
+KIO__SimpleJob* k_io_mount(bool ro, const char* fstype, const char* dev, const char* point, int32_t flags) {
     return KIO_Mount(ro, qstring(fstype), qstring(dev), qstring(point), flags);
 }
 

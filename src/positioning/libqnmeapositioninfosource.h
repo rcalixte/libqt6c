@@ -366,11 +366,11 @@ bool q_nmeapositioninfosource_super_parse_pos_info_from_nmea_data(void* self, co
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#parsePosInfoFromNmeaData)
 ///
 /// @param self QNmeaPositionInfoSource*
-/// @param data char*
+/// @param data const char*
 /// @param posInfo QGeoPositionInfo*
 /// @param hasFix bool*
 ///
-bool q_nmeapositioninfosource_parse_pos_info_from_nmea_data2(void* self, char* data, void* posInfo, bool* hasFix);
+bool q_nmeapositioninfosource_parse_pos_info_from_nmea_data2(void* self, const char* data, void* posInfo, bool* hasFix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnmeapositioninfosource.html#setError)
 ///

@@ -193,15 +193,15 @@ QWebEngineClientHints* q_webengineprofile_client_hints(const void* self) {
     return QWebEngineProfile_ClientHints((QWebEngineProfile*)self);
 }
 
-const QWebEngineUrlSchemeHandler* q_webengineprofile_url_scheme_handler(const void* self, char* param1) {
+const QWebEngineUrlSchemeHandler* q_webengineprofile_url_scheme_handler(const void* self, const char* param1) {
     return QWebEngineProfile_UrlSchemeHandler((QWebEngineProfile*)self, qstring(param1));
 }
 
-void q_webengineprofile_install_url_scheme_handler(void* self, char* scheme, void* param2) {
+void q_webengineprofile_install_url_scheme_handler(void* self, const char* scheme, void* param2) {
     QWebEngineProfile_InstallUrlSchemeHandler((QWebEngineProfile*)self, qstring(scheme), (QWebEngineUrlSchemeHandler*)param2);
 }
 
-void q_webengineprofile_remove_url_scheme(void* self, char* scheme) {
+void q_webengineprofile_remove_url_scheme(void* self, const char* scheme) {
     QWebEngineProfile_RemoveUrlScheme((QWebEngineProfile*)self, qstring(scheme));
 }
 

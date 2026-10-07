@@ -43,7 +43,7 @@ QVariant* q_virtualkeyboardselectionlistmodel_data(const void* self, const void*
     return QVirtualKeyboardSelectionListModel_Data((QVirtualKeyboardSelectionListModel*)self, (QModelIndex*)index, role);
 }
 
-libqt_map /* of int to char* */ q_virtualkeyboardselectionlistmodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_virtualkeyboardselectionlistmodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QVirtualKeyboardSelectionListModel_RoleNames((QVirtualKeyboardSelectionListModel*)self);
     libqt_map _ret;

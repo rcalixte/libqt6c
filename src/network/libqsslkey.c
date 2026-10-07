@@ -6,7 +6,7 @@ QSslKey* q_sslkey_new() {
     return QSslKey_New();
 }
 
-QSslKey* q_sslkey_new2(char* encoded, int32_t algorithm) {
+QSslKey* q_sslkey_new2(const char* encoded, int32_t algorithm) {
     return QSslKey_New2(qstring(encoded), algorithm);
 }
 
@@ -22,15 +22,15 @@ QSslKey* q_sslkey_new5(const void* other) {
     return QSslKey_New5((QSslKey*)other);
 }
 
-QSslKey* q_sslkey_new6(char* encoded, int32_t algorithm, int32_t format) {
+QSslKey* q_sslkey_new6(const char* encoded, int32_t algorithm, int32_t format) {
     return QSslKey_New6(qstring(encoded), algorithm, format);
 }
 
-QSslKey* q_sslkey_new7(char* encoded, int32_t algorithm, int32_t format, int32_t type) {
+QSslKey* q_sslkey_new7(const char* encoded, int32_t algorithm, int32_t format, int32_t type) {
     return QSslKey_New7(qstring(encoded), algorithm, format, type);
 }
 
-QSslKey* q_sslkey_new8(char* encoded, int32_t algorithm, int32_t format, int32_t type, char* passPhrase) {
+QSslKey* q_sslkey_new8(const char* encoded, int32_t algorithm, int32_t format, int32_t type, const char* passPhrase) {
     return QSslKey_New8(qstring(encoded), algorithm, format, type, qstring(passPhrase));
 }
 
@@ -42,7 +42,7 @@ QSslKey* q_sslkey_new10(void* device, int32_t algorithm, int32_t format, int32_t
     return QSslKey_New10((QIODevice*)device, algorithm, format, type);
 }
 
-QSslKey* q_sslkey_new11(void* device, int32_t algorithm, int32_t format, int32_t type, char* passPhrase) {
+QSslKey* q_sslkey_new11(void* device, int32_t algorithm, int32_t format, int32_t type, const char* passPhrase) {
     return QSslKey_New11((QIODevice*)device, algorithm, format, type, qstring(passPhrase));
 }
 
@@ -78,14 +78,14 @@ int32_t q_sslkey_algorithm(const void* self) {
     return QSslKey_Algorithm((QSslKey*)self);
 }
 
-char* q_sslkey_to_pem(const void* self) {
+const char* q_sslkey_to_pem(const void* self) {
     libqt_string _str = QSslKey_ToPem((QSslKey*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_sslkey_to_der(const void* self) {
+const char* q_sslkey_to_der(const void* self) {
     libqt_string _str = QSslKey_ToDer((QSslKey*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -104,14 +104,14 @@ bool q_sslkey_operator_not_equal(const void* self, const void* key) {
     return QSslKey_OperatorNotEqual((QSslKey*)self, (QSslKey*)key);
 }
 
-char* q_sslkey_to_pem1(const void* self, char* passPhrase) {
+const char* q_sslkey_to_pem1(const void* self, const char* passPhrase) {
     libqt_string _str = QSslKey_ToPem1((QSslKey*)self, qstring(passPhrase));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_sslkey_to_der1(const void* self, char* passPhrase) {
+const char* q_sslkey_to_der1(const void* self, const char* passPhrase) {
     libqt_string _str = QSslKey_ToDer1((QSslKey*)self, qstring(passPhrase));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -1030,14 +1030,14 @@ void q_colordialog_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_colordialog_save_geometry(const void* self) {
+const char* q_colordialog_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_colordialog_restore_geometry(void* self, char* geometry) {
+bool q_colordialog_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2075,11 +2075,11 @@ void q_colordialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QColorDialog_OnHideEvent((QColorDialog*)self, (intptr_t)callback);
 }
 
-bool q_colordialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_colordialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QColorDialog_NativeEvent((QColorDialog*)self, qstring(eventType), message, result);
 }
 
-bool q_colordialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_colordialog_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QColorDialog_SuperNativeEvent((QColorDialog*)self, qstring(eventType), message, result);
 }
 

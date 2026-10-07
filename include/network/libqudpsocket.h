@@ -191,11 +191,11 @@ int64_t q_udpsocket_write_datagram2(void* self, const char* data, int64_t lenVal
 /// [Upstream resources](https://doc.qt.io/qt-6/qudpsocket.html#writeDatagram)
 ///
 /// @param self QUdpSocket*
-/// @param datagram char*
+/// @param datagram const char*
 /// @param host QHostAddress*
 /// @param port uint16_t
 ///
-int64_t q_udpsocket_write_datagram3(void* self, char* datagram, const void* host, uint16_t port);
+int64_t q_udpsocket_write_datagram3(void* self, const char* datagram, const void* host, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -687,22 +687,22 @@ int64_t q_udpsocket_read(void* self, char* data, int64_t maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QUdpSocket*
 /// @param maxlen int64_t
 ///
-char* q_udpsocket_read2(void* self, int64_t maxlen);
+const char* q_udpsocket_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QUdpSocket*
 ///
-char* q_udpsocket_read_all(void* self);
+const char* q_udpsocket_read_all(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -718,11 +718,11 @@ int64_t q_udpsocket_read_line(void* self, char* data, int64_t maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QUdpSocket*
 ///
-char* q_udpsocket_read_line2(void* self);
+const char* q_udpsocket_read_line2(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -780,9 +780,9 @@ int64_t q_udpsocket_write2(void* self, const char* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QUdpSocket*
-/// @param data char*
+/// @param data const char*
 ///
-int64_t q_udpsocket_write3(void* self, char* data);
+int64_t q_udpsocket_write3(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -798,12 +798,12 @@ int64_t q_udpsocket_peek(void* self, char* data, int64_t maxlen);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QUdpSocket*
 /// @param maxlen int64_t
 ///
-char* q_udpsocket_peek2(void* self, int64_t maxlen);
+const char* q_udpsocket_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -961,12 +961,12 @@ void q_udpsocket_on_read_channel_finished(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QUdpSocket*
 /// @param maxlen int64_t
 ///
-char* q_udpsocket_read_line1(void* self, int64_t maxlen);
+const char* q_udpsocket_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///

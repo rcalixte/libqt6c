@@ -241,23 +241,23 @@ QDebug* q_debug_operator_shift_left20(void* self, const char* s);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// @param self QDebug*
-/// @param t char*
+/// @param t const char*
 ///
-QDebug* q_debug_operator_shift_left22(void* self, char* t);
+QDebug* q_debug_operator_shift_left22(void* self, const char* t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// @param self QDebug*
-/// @param t char*
+/// @param t const char*
 ///
-QDebug* q_debug_operator_shift_left23(void* self, char* t);
+QDebug* q_debug_operator_shift_left23(void* self, const char* t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// @param self QDebug*
-/// @param t char*
+/// @param t const char*
 ///
-QDebug* q_debug_operator_shift_left24(void* self, char* t);
+QDebug* q_debug_operator_shift_left24(void* self, const char* t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///

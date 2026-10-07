@@ -171,7 +171,7 @@ void q_dbusconnection_disconnect_from_peer(const char* name) {
     QDBusConnection_DisconnectFromPeer(qstring(name));
 }
 
-char* q_dbusconnection_local_machine_id() {
+const char* q_dbusconnection_local_machine_id() {
     libqt_string _str = QDBusConnection_LocalMachineId();
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

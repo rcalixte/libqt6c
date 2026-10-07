@@ -61,17 +61,17 @@ void q_httppart_set_header(void* self, int32_t header, const void* value);
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttppart.html#setRawHeader)
 ///
 /// @param self QHttpPart*
-/// @param headerName char*
-/// @param headerValue char*
+/// @param headerName const char*
+/// @param headerValue const char*
 ///
-void q_httppart_set_raw_header(void* self, char* headerName, char* headerValue);
+void q_httppart_set_raw_header(void* self, const char* headerName, const char* headerValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttppart.html#setBody)
 ///
 /// @param self QHttpPart*
-/// @param body char*
+/// @param body const char*
 ///
-void q_httppart_set_body(void* self, char* body);
+void q_httppart_set_body(void* self, const char* body);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttppart.html#setBodyDevice)
 ///
@@ -208,18 +208,18 @@ void q_httpmultipart_set_content_type(void* self, int32_t contentType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpmultipart.html#boundary)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QHttpMultiPart*
 ///
-char* q_httpmultipart_boundary(const void* self);
+const char* q_httpmultipart_boundary(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpmultipart.html#setBoundary)
 ///
 /// @param self QHttpMultiPart*
-/// @param boundary char*
+/// @param boundary const char*
 ///
-void q_httpmultipart_set_boundary(void* self, char* boundary);
+void q_httpmultipart_set_boundary(void* self, const char* boundary);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

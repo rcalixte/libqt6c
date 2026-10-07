@@ -78,7 +78,7 @@ void k_attica__metadata_set_resulting_id(void* self, const char* id) {
     Attica__Metadata_SetResultingId((Attica__Metadata*)self, qstring(id));
 }
 
-libqt_list /* of libqt_pair tuple of char* and char* */ k_attica__metadata_headers(const void* self) {
+libqt_list /* of libqt_pair tuple of const char* and const char* */ k_attica__metadata_headers(const void* self) {
     libqt_list _arr = Attica__Metadata_Headers((Attica__Metadata*)self);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -94,7 +94,7 @@ libqt_list /* of libqt_pair tuple of char* and char* */ k_attica__metadata_heade
     return _arr;
 }
 
-void k_attica__metadata_set_headers(void* self, libqt_list /* of libqt_pair tuple of char* and char* */ headers) {
+void k_attica__metadata_set_headers(void* self, libqt_list /* of libqt_pair tuple of const char* and const char* */ headers) {
     libqt_pair* headers_pairs = (libqt_pair*)malloc(headers.len * sizeof(libqt_pair));
     if (headers_pairs == NULL) {
         fprintf(stderr, "Failed to allocate memory for string pairs in k_attica__metadata_set_headers\n");

@@ -5,7 +5,7 @@ QAbstractNativeEventFilter* q_abstractnativeeventfilter_new() {
     return QAbstractNativeEventFilter_New();
 }
 
-bool q_abstractnativeeventfilter_native_event_filter(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_abstractnativeeventfilter_native_event_filter(void* self, const char* eventType, void* message, intptr_t* result) {
     return QAbstractNativeEventFilter_NativeEventFilter((QAbstractNativeEventFilter*)self, qstring(eventType), message, result);
 }
 

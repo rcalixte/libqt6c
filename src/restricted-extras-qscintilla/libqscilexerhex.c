@@ -889,7 +889,7 @@ void q_scilexerhex_on_disconnect_notify(void* self, void (*callback)(void*, cons
     QsciLexerHex_OnDisconnectNotify((QsciLexerHex*)self, (intptr_t)callback);
 }
 
-char* q_scilexerhex_text_as_bytes(const void* self, const char* text) {
+const char* q_scilexerhex_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciLexerHex_TextAsBytes((QsciLexerHex*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

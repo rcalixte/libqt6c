@@ -188,7 +188,7 @@ bool q_nmeapositioninfosource_super_parse_pos_info_from_nmea_data(void* self, co
     return QNmeaPositionInfoSource_SuperParsePosInfoFromNmeaData((QNmeaPositionInfoSource*)self, data, size, (QGeoPositionInfo*)posInfo, (bool*)hasFix);
 }
 
-bool q_nmeapositioninfosource_parse_pos_info_from_nmea_data2(void* self, char* data, void* posInfo, bool* hasFix) {
+bool q_nmeapositioninfosource_parse_pos_info_from_nmea_data2(void* self, const char* data, void* posInfo, bool* hasFix) {
     return QNmeaPositionInfoSource_ParsePosInfoFromNmeaData2((QNmeaPositionInfoSource*)self, qstring(data), (QGeoPositionInfo*)posInfo, (bool*)hasFix);
 }
 

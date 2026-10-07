@@ -11,11 +11,11 @@ QNetworkCookie* q_networkcookie_new2(const void* other) {
     return QNetworkCookie_New2((QNetworkCookie*)other);
 }
 
-QNetworkCookie* q_networkcookie_new3(char* name) {
+QNetworkCookie* q_networkcookie_new3(const char* name) {
     return QNetworkCookie_New3(qstring(name));
 }
 
-QNetworkCookie* q_networkcookie_new4(char* name, char* value) {
+QNetworkCookie* q_networkcookie_new4(const char* name, const char* value) {
     return QNetworkCookie_New4(qstring(name), qstring(value));
 }
 
@@ -93,29 +93,29 @@ void q_networkcookie_set_path(void* self, const char* path) {
     QNetworkCookie_SetPath((QNetworkCookie*)self, qstring(path));
 }
 
-char* q_networkcookie_name(const void* self) {
+const char* q_networkcookie_name(const void* self) {
     libqt_string _str = QNetworkCookie_Name((QNetworkCookie*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_networkcookie_set_name(void* self, char* cookieName) {
+void q_networkcookie_set_name(void* self, const char* cookieName) {
     QNetworkCookie_SetName((QNetworkCookie*)self, qstring(cookieName));
 }
 
-char* q_networkcookie_value(const void* self) {
+const char* q_networkcookie_value(const void* self) {
     libqt_string _str = QNetworkCookie_Value((QNetworkCookie*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_networkcookie_set_value(void* self, char* value) {
+void q_networkcookie_set_value(void* self, const char* value) {
     QNetworkCookie_SetValue((QNetworkCookie*)self, qstring(value));
 }
 
-char* q_networkcookie_to_raw_form(const void* self) {
+const char* q_networkcookie_to_raw_form(const void* self) {
     libqt_string _str = QNetworkCookie_ToRawForm((QNetworkCookie*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -130,12 +130,12 @@ void q_networkcookie_normalize(void* self, const void* url) {
     QNetworkCookie_Normalize((QNetworkCookie*)self, (QUrl*)url);
 }
 
-libqt_list /* of QNetworkCookie* */ q_networkcookie_parse_cookies(char* cookieString) {
+libqt_list /* of QNetworkCookie* */ q_networkcookie_parse_cookies(const char* cookieString) {
     libqt_list _arr = QNetworkCookie_ParseCookies(qstring(cookieString));
     return _arr;
 }
 
-char* q_networkcookie_to_raw_form1(const void* self, int32_t form) {
+const char* q_networkcookie_to_raw_form1(const void* self, int32_t form) {
     libqt_string _str = QNetworkCookie_ToRawForm1((QNetworkCookie*)self, form);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

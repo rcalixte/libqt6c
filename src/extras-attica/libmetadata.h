@@ -132,14 +132,14 @@ void k_attica__metadata_set_resulting_id(void* self, const char* id);
 ///
 /// @param self const Attica__Metadata*
 ///
-/// @return libqt_list of libqt_pair tuple of char* and char*
+/// @return libqt_list of libqt_pair tuple of const char* and const char*
 ///
 libqt_list k_attica__metadata_headers(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-metadata.html#setHeaders)
 ///
 /// @param self Attica__Metadata*
-/// @param headers libqt_list of libqt_pair tuple of char* and char*
+/// @param headers libqt_list of libqt_pair tuple of const char* and const char*
 ///
 void k_attica__metadata_set_headers(void* self, libqt_list headers);
 

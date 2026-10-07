@@ -116,9 +116,9 @@ bool q_openglshader_compile_source_code(void* self, const char* source);
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#compileSourceCode)
 ///
 /// @param self QOpenGLShader*
-/// @param source char*
+/// @param source const char*
 ///
-bool q_openglshader_compile_source_code2(void* self, char* source);
+bool q_openglshader_compile_source_code2(void* self, const char* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#compileSourceCode)
 ///
@@ -136,11 +136,11 @@ bool q_openglshader_compile_source_file(void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#sourceCode)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QOpenGLShader*
 ///
-char* q_openglshader_source_code(const void* self);
+const char* q_openglshader_source_code(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#isCompiled)
 ///
@@ -1142,9 +1142,9 @@ bool q_openglshaderprogram_add_shader_from_source_code(void* self, int32_t type,
 ///
 /// @param self QOpenGLShaderProgram*
 /// @param type flag of enum QOpenGLShader__ShaderTypeBit
-/// @param source char*
+/// @param source const char*
 ///
-bool q_openglshaderprogram_add_shader_from_source_code2(void* self, int32_t type, char* source);
+bool q_openglshaderprogram_add_shader_from_source_code2(void* self, int32_t type, const char* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#addShaderFromSourceCode)
 ///
@@ -1174,9 +1174,9 @@ bool q_openglshaderprogram_add_cacheable_shader_from_source_code(void* self, int
 ///
 /// @param self QOpenGLShaderProgram*
 /// @param type flag of enum QOpenGLShader__ShaderTypeBit
-/// @param source char*
+/// @param source const char*
 ///
-bool q_openglshaderprogram_add_cacheable_shader_from_source_code2(void* self, int32_t type, char* source);
+bool q_openglshaderprogram_add_cacheable_shader_from_source_code2(void* self, int32_t type, const char* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#addCacheableShaderFromSourceCode)
 ///
@@ -1321,10 +1321,10 @@ void q_openglshaderprogram_bind_attribute_location(void* self, const char* name,
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#bindAttributeLocation)
 ///
 /// @param self QOpenGLShaderProgram*
-/// @param name char*
+/// @param name const char*
 /// @param location int
 ///
-void q_openglshaderprogram_bind_attribute_location2(void* self, char* name, int location);
+void q_openglshaderprogram_bind_attribute_location2(void* self, const char* name, int location);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#bindAttributeLocation)
 ///
@@ -1344,9 +1344,9 @@ int32_t q_openglshaderprogram_attribute_location(const void* self, const char* n
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#attributeLocation)
 ///
 /// @param self const QOpenGLShaderProgram*
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglshaderprogram_attribute_location2(const void* self, char* name);
+int32_t q_openglshaderprogram_attribute_location2(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#attributeLocation)
 ///
@@ -1659,9 +1659,9 @@ int32_t q_openglshaderprogram_uniform_location(const void* self, const char* nam
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#uniformLocation)
 ///
 /// @param self const QOpenGLShaderProgram*
-/// @param name char*
+/// @param name const char*
 ///
-int32_t q_openglshaderprogram_uniform_location2(const void* self, char* name);
+int32_t q_openglshaderprogram_uniform_location2(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#uniformLocation)
 ///

@@ -52,18 +52,18 @@ QSslCertificate* q_sslcertificate_new4(void* device, int32_t format);
 
 /// q_sslcertificate_new5 constructs a new QSslCertificate object.
 ///
-/// @param data char*
+/// @param data const char*
 ///
-QSslCertificate* q_sslcertificate_new5(char* data);
+QSslCertificate* q_sslcertificate_new5(const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html)
 
 /// q_sslcertificate_new6 constructs a new QSslCertificate object.
 ///
-/// @param data char*
+/// @param data const char*
 /// @param format enum QSsl__EncodingFormat
 ///
-QSslCertificate* q_sslcertificate_new6(char* data, int32_t format);
+QSslCertificate* q_sslcertificate_new6(const char* data, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#operator-eq)
 ///
@@ -119,27 +119,27 @@ void q_sslcertificate_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#version)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSslCertificate*
 ///
-char* q_sslcertificate_version(const void* self);
+const char* q_sslcertificate_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#serialNumber)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSslCertificate*
 ///
-char* q_sslcertificate_serial_number(const void* self);
+const char* q_sslcertificate_serial_number(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#digest)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSslCertificate*
 ///
-char* q_sslcertificate_digest(const void* self);
+const char* q_sslcertificate_digest(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#issuerInfo)
 ///
@@ -155,9 +155,9 @@ const char** q_sslcertificate_issuer_info(const void* self, int32_t info);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self const QSslCertificate*
-/// @param attribute char*
+/// @param attribute const char*
 ///
-const char** q_sslcertificate_issuer_info2(const void* self, char* attribute);
+const char** q_sslcertificate_issuer_info2(const void* self, const char* attribute);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#subjectInfo)
 ///
@@ -173,9 +173,9 @@ const char** q_sslcertificate_subject_info(const void* self, int32_t info);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self const QSslCertificate*
-/// @param attribute char*
+/// @param attribute const char*
 ///
-const char** q_sslcertificate_subject_info2(const void* self, char* attribute);
+const char** q_sslcertificate_subject_info2(const void* self, const char* attribute);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#issuerDisplayName)
 ///
@@ -258,19 +258,19 @@ libqt_list q_sslcertificate_extensions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#toPem)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSslCertificate*
 ///
-char* q_sslcertificate_to_pem(const void* self);
+const char* q_sslcertificate_to_pem(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#toDer)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSslCertificate*
 ///
-char* q_sslcertificate_to_der(const void* self);
+const char* q_sslcertificate_to_der(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#toText)
 ///
@@ -298,11 +298,11 @@ libqt_list q_sslcertificate_from_device(void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#fromData)
 ///
-/// @param data char*
+/// @param data const char*
 ///
 /// @return libqt_list of QSslCertificate*
 ///
-libqt_list q_sslcertificate_from_data(char* data);
+libqt_list q_sslcertificate_from_data(const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#verify)
 ///
@@ -328,12 +328,12 @@ void* q_sslcertificate_handle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#digest)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSslCertificate*
 /// @param algorithm enum QCryptographicHash__Algorithm
 ///
-char* q_sslcertificate_digest1(const void* self, int32_t algorithm);
+const char* q_sslcertificate_digest1(const void* self, int32_t algorithm);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#fromPath)
 ///
@@ -365,12 +365,12 @@ libqt_list q_sslcertificate_from_device2(void* device, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#fromData)
 ///
-/// @param data char*
+/// @param data const char*
 /// @param format enum QSsl__EncodingFormat
 ///
 /// @return libqt_list of QSslCertificate*
 ///
-libqt_list q_sslcertificate_from_data2(char* data, int32_t format);
+libqt_list q_sslcertificate_from_data2(const char* data, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#verify)
 ///
@@ -396,9 +396,9 @@ bool q_sslcertificate_import_pkcs124(void* device, void* key, void* cert, libqt_
 /// @param key QSslKey*
 /// @param cert QSslCertificate*
 /// @param caCertificates libqt_list of QSslCertificate*
-/// @param passPhrase char*
+/// @param passPhrase const char*
 ///
-bool q_sslcertificate_import_pkcs125(void* device, void* key, void* cert, libqt_list caCertificates, char* passPhrase);
+bool q_sslcertificate_import_pkcs125(void* device, void* key, void* cert, libqt_list caCertificates, const char* passPhrase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificate.html#dtor.QSslCertificate)
 ///

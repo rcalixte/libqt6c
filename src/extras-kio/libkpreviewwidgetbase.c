@@ -896,14 +896,14 @@ void k_previewwidgetbase_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_previewwidgetbase_save_geometry(const void* self) {
+const char* k_previewwidgetbase_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_previewwidgetbase_restore_geometry(void* self, char* geometry) {
+bool k_previewwidgetbase_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1893,11 +1893,11 @@ void k_previewwidgetbase_on_hide_event(void* self, void (*callback)(void*, void*
     KPreviewWidgetBase_OnHideEvent((KPreviewWidgetBase*)self, (intptr_t)callback);
 }
 
-bool k_previewwidgetbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_previewwidgetbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KPreviewWidgetBase_NativeEvent((KPreviewWidgetBase*)self, qstring(eventType), message, result);
 }
 
-bool k_previewwidgetbase_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_previewwidgetbase_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KPreviewWidgetBase_SuperNativeEvent((KPreviewWidgetBase*)self, qstring(eventType), message, result);
 }
 

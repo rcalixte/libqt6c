@@ -25,7 +25,7 @@ void k_archivefile_set_size(void* self, int64_t s) {
     KArchiveFile_SetSize((KArchiveFile*)self, s);
 }
 
-char* k_archivefile_data(const void* self) {
+const char* k_archivefile_data(const void* self) {
     libqt_string _str = KArchiveFile_Data((KArchiveFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -36,7 +36,7 @@ void k_archivefile_on_data(void* self, libqt_string (*callback)(const void*)) {
     KArchiveFile_OnData((KArchiveFile*)self, (intptr_t)callback);
 }
 
-char* k_archivefile_super_data(const void* self) {
+const char* k_archivefile_super_data(const void* self) {
     libqt_string _str = KArchiveFile_SuperData((KArchiveFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

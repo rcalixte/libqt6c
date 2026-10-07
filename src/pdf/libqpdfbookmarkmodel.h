@@ -250,7 +250,7 @@ int32_t q_pdfbookmarkmodel_super_column_count(const void* self, const void* pare
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -260,7 +260,7 @@ int32_t q_pdfbookmarkmodel_super_column_count(const void* self, const void* pare
 ///
 /// @param self const QPdfBookmarkModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_pdfbookmarkmodel_role_names(const void* self);
 
@@ -269,7 +269,7 @@ libqt_map q_pdfbookmarkmodel_role_names(const void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback libqt_map of int to char* func(const QPdfBookmarkModel* self)
+/// @param callback libqt_map of int to const char* func(const QPdfBookmarkModel* self)
 ///
 void q_pdfbookmarkmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
@@ -279,7 +279,7 @@ void q_pdfbookmarkmodel_on_role_names(void* self, libqt_map (*callback)(const vo
 ///
 /// @param self const QPdfBookmarkModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_pdfbookmarkmodel_super_role_names(const void* self);
 

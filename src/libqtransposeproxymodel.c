@@ -955,7 +955,7 @@ void q_transposeproxymodel_on_supported_drop_actions(void* self, int32_t (*callb
     QTransposeProxyModel_OnSupportedDropActions((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_transposeproxymodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_transposeproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QTransposeProxyModel_RoleNames((QTransposeProxyModel*)self);
     libqt_map _ret;
@@ -988,7 +988,7 @@ libqt_map /* of int to char* */ q_transposeproxymodel_role_names(const void* sel
     return _ret;
 }
 
-libqt_map /* of int to char* */ q_transposeproxymodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_transposeproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QTransposeProxyModel_SuperRoleNames((QTransposeProxyModel*)self);
     libqt_map _ret;
@@ -1021,7 +1021,7 @@ libqt_map /* of int to char* */ q_transposeproxymodel_super_role_names(const voi
     return _ret;
 }
 
-void q_transposeproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_transposeproxymodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     QTransposeProxyModel_OnRoleNames((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 

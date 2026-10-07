@@ -2870,20 +2870,20 @@ void q_lineedit_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QLineEdit*
 ///
-char* q_lineedit_save_geometry(const void* self);
+const char* q_lineedit_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QLineEdit*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_lineedit_restore_geometry(void* self, char* geometry);
+bool q_lineedit_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4693,11 +4693,11 @@ void q_lineedit_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_lineedit_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_lineedit_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4706,11 +4706,11 @@ bool q_lineedit_native_event(void* self, char* eventType, void* message, intptr_
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_lineedit_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_lineedit_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

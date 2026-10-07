@@ -246,7 +246,7 @@ void q_childevent_delete(void* self) {
     QChildEvent_Delete((QChildEvent*)(self));
 }
 
-QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_new(char* name) {
+QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_new(const char* name) {
     return QDynamicPropertyChangeEvent_New(qstring(name));
 }
 
@@ -262,7 +262,7 @@ QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_super_clone(const void
     return QDynamicPropertyChangeEvent_SuperClone((QDynamicPropertyChangeEvent*)self);
 }
 
-char* q_dynamicpropertychangeevent_property_name(const void* self) {
+const char* q_dynamicpropertychangeevent_property_name(const void* self) {
     libqt_string _str = QDynamicPropertyChangeEvent_PropertyName((QDynamicPropertyChangeEvent*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

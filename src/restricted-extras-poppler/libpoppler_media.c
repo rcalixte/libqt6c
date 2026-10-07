@@ -24,7 +24,7 @@ bool q_poppler__mediarendition_is_embedded(const void* self) {
     return Poppler__MediaRendition_IsEmbedded((Poppler__MediaRendition*)self);
 }
 
-char* q_poppler__mediarendition_data(const void* self) {
+const char* q_poppler__mediarendition_data(const void* self) {
     libqt_string _str = Poppler__MediaRendition_Data((Poppler__MediaRendition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

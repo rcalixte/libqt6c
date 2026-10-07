@@ -32,7 +32,7 @@ void k_filemetadata__writedata_add(void* self, int32_t property, const void* val
     KFileMetaData__WriteData_Add((KFileMetaData__WriteData*)self, property, (QVariant*)value);
 }
 
-void k_filemetadata__writedata_add_image_data(void* self, libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to char* */ images) {
+void k_filemetadata__writedata_add_image_data(void* self, libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to const char* */ images) {
     // Convert libqt_map to QMap<KFileMetaData::EmbeddedImageData::ImageType,QByteArray>
     libqt_map images_ret;
     images_ret.len = images.len;
@@ -49,7 +49,7 @@ void k_filemetadata__writedata_add_image_data(void* self, libqt_map /* of enum K
     }
     int32_t* images_karr = (int32_t*)images.keys;
     int32_t* images_kdest = (int32_t*)images_ret.keys;
-    char** images_varr = (char**)images.values;
+    const char** images_varr = (const char**)images.values;
     libqt_string* images_vdest = (libqt_string*)images_ret.values;
     for (size_t i = 0; i < images_ret.len; ++i) {
         images_kdest[i] = images_karr[i];
@@ -99,7 +99,7 @@ libqt_map /* of enum KFileMetaData__Property__Property to QVariant** */ k_fileme
     return _ret;
 }
 
-libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to char* */ k_filemetadata__writedata_image_data(const void* self) {
+libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to const char* */ k_filemetadata__writedata_image_data(const void* self) {
     // Convert QMap<KFileMetaData::EmbeddedImageData::ImageType,QByteArray> to libqt_map
     libqt_map _out = KFileMetaData__WriteData_ImageData((KFileMetaData__WriteData*)self);
     libqt_map _ret;

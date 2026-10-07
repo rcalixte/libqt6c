@@ -269,7 +269,7 @@ void q_texttospeechengine_on_saying_word(void* self, void (*callback)(void*, con
     QTextToSpeechEngine_Connect_SayingWord((QTextToSpeechEngine*)self, (intptr_t)callback);
 }
 
-void q_texttospeechengine_synthesized(void* self, const void* format, char* data) {
+void q_texttospeechengine_synthesized(void* self, const void* format, const char* data) {
     QTextToSpeechEngine_Synthesized((QTextToSpeechEngine*)self, (QAudioFormat*)format, qstring(data));
 }
 

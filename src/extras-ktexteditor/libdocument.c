@@ -94,7 +94,7 @@ const char* k_texteditor__document_mime_type(void* self) {
     return _ret;
 }
 
-char* k_texteditor__document_checksum(const void* self) {
+const char* k_texteditor__document_checksum(const void* self) {
     libqt_string _str = KTextEditor__Document_Checksum((KTextEditor__Document*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -921,7 +921,7 @@ bool k_texteditor__document_open_stream(void* self, const char* mimeType, const 
     return KParts__ReadOnlyPart_OpenStream((KParts__ReadOnlyPart*)self, qstring(mimeType), (QUrl*)url);
 }
 
-bool k_texteditor__document_write_stream(void* self, char* data) {
+bool k_texteditor__document_write_stream(void* self, const char* data) {
     return KParts__ReadOnlyPart_WriteStream((KParts__ReadOnlyPart*)self, qstring(data));
 }
 

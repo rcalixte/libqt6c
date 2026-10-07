@@ -845,7 +845,7 @@ void q_scilexerfortran77_on_disconnect_notify(void* self, void (*callback)(void*
     QsciLexerFortran77_OnDisconnectNotify((QsciLexerFortran77*)self, (intptr_t)callback);
 }
 
-char* q_scilexerfortran77_text_as_bytes(const void* self, const char* text) {
+const char* q_scilexerfortran77_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciLexerFortran77_TextAsBytes((QsciLexerFortran77*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

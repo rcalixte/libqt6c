@@ -29,7 +29,7 @@ const char* k_io__davjob_tr(const char* s) {
     return _ret;
 }
 
-char* k_io__davjob_response_data(const void* self) {
+const char* k_io__davjob_response_data(const void* self) {
     libqt_string _str = KIO__DavJob_ResponseData((KIO__DavJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -62,7 +62,7 @@ void k_io__davjob_set_async_data_enabled(void* self, bool enabled) {
     KIO__TransferJob_SetAsyncDataEnabled((KIO__TransferJob*)self, enabled);
 }
 
-void k_io__davjob_send_async_data(void* self, char* data) {
+void k_io__davjob_send_async_data(void* self, const char* data) {
     KIO__TransferJob_SendAsyncData((KIO__TransferJob*)self, qstring(data));
 }
 
@@ -81,7 +81,7 @@ void k_io__davjob_set_total_size(void* self, uintptr_t bytes) {
     KIO__TransferJob_SetTotalSize((KIO__TransferJob*)self, bytes);
 }
 
-void k_io__davjob_data(void* self, void* job, char* data) {
+void k_io__davjob_data(void* self, void* job, const char* data) {
     KIO__TransferJob_Data((KIO__TransferJob*)self, (KIO__Job*)job, qstring(data));
 }
 
@@ -89,7 +89,7 @@ void k_io__davjob_on_data(void* self, void (*callback)(void*, void*, libqt_strin
     KIO__TransferJob_Connect_Data((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
-void k_io__davjob_data_req(void* self, void* job, char* data) {
+void k_io__davjob_data_req(void* self, void* job, const char* data) {
     KIO__TransferJob_DataReq((KIO__TransferJob*)self, (KIO__Job*)job, qstring(data));
 }
 

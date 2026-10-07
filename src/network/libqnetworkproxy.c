@@ -251,7 +251,7 @@ void q_networkproxy_set_header(void* self, int32_t header, const void* value) {
     QNetworkProxy_SetHeader((QNetworkProxy*)self, header, (QVariant*)value);
 }
 
-bool q_networkproxy_has_raw_header(const void* self, char* headerName) {
+bool q_networkproxy_has_raw_header(const void* self, const char* headerName) {
     return QNetworkProxy_HasRawHeader((QNetworkProxy*)self, qstring(headerName));
 }
 
@@ -272,14 +272,14 @@ const char** q_networkproxy_raw_header_list(const void* self) {
     return _ret;
 }
 
-char* q_networkproxy_raw_header(const void* self, char* headerName) {
+const char* q_networkproxy_raw_header(const void* self, const char* headerName) {
     libqt_string _str = QNetworkProxy_RawHeader((QNetworkProxy*)self, qstring(headerName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_networkproxy_set_raw_header(void* self, char* headerName, char* value) {
+void q_networkproxy_set_raw_header(void* self, const char* headerName, const char* value) {
     QNetworkProxy_SetRawHeader((QNetworkProxy*)self, qstring(headerName), qstring(value));
 }
 

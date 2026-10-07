@@ -918,7 +918,7 @@ void q_scilexercustom_on_disconnect_notify(void* self, void (*callback)(void*, c
     QsciLexerCustom_OnDisconnectNotify((QsciLexerCustom*)self, (intptr_t)callback);
 }
 
-char* q_scilexercustom_text_as_bytes(const void* self, const char* text) {
+const char* q_scilexercustom_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciLexerCustom_TextAsBytes((QsciLexerCustom*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -421,7 +421,7 @@ QModelIndex* k_fileplacesmodel_super_parent(const void* self, const void* child)
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -431,7 +431,7 @@ QModelIndex* k_fileplacesmodel_super_parent(const void* self, const void* child)
 ///
 /// @param self const KFilePlacesModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_fileplacesmodel_role_names(const void* self);
 
@@ -440,7 +440,7 @@ libqt_map k_fileplacesmodel_role_names(const void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KFilePlacesModel*
-/// @param callback libqt_map of int to char* func(const KFilePlacesModel* self)
+/// @param callback libqt_map of int to const char* func(const KFilePlacesModel* self)
 ///
 void k_fileplacesmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
@@ -450,7 +450,7 @@ void k_fileplacesmodel_on_role_names(void* self, libqt_map (*callback)(const voi
 ///
 /// @param self const KFilePlacesModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_fileplacesmodel_super_role_names(const void* self);
 

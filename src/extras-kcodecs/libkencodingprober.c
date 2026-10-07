@@ -21,7 +21,7 @@ void k_encodingprober_reset(void* self) {
     KEncodingProber_Reset((KEncodingProber*)self);
 }
 
-int32_t k_encodingprober_feed(void* self, char* data) {
+int32_t k_encodingprober_feed(void* self, const char* data) {
     return KEncodingProber_Feed((KEncodingProber*)self, qstring(data));
 }
 
@@ -33,7 +33,7 @@ int32_t k_encodingprober_state(const void* self) {
     return KEncodingProber_State((KEncodingProber*)self);
 }
 
-char* k_encodingprober_encoding(const void* self) {
+const char* k_encodingprober_encoding(const void* self) {
     libqt_string _str = KEncodingProber_Encoding((KEncodingProber*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

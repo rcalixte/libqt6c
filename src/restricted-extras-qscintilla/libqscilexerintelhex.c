@@ -878,7 +878,7 @@ void q_scilexerintelhex_on_disconnect_notify(void* self, void (*callback)(void*,
     QsciLexerIntelHex_OnDisconnectNotify((QsciLexerIntelHex*)self, (intptr_t)callback);
 }
 
-char* q_scilexerintelhex_text_as_bytes(const void* self, const char* text) {
+const char* q_scilexerintelhex_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciLexerIntelHex_TextAsBytes((QsciLexerIntelHex*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

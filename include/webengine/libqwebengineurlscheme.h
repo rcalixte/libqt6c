@@ -18,9 +18,9 @@ QWebEngineUrlScheme* q_webengineurlscheme_new();
 
 /// q_webengineurlscheme_new2 constructs a new QWebEngineUrlScheme object.
 ///
-/// @param name char*
+/// @param name const char*
 ///
-QWebEngineUrlScheme* q_webengineurlscheme_new2(char* name);
+QWebEngineUrlScheme* q_webengineurlscheme_new2(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html)
 
@@ -53,18 +53,18 @@ bool q_webengineurlscheme_operator_not_equal(const void* self, const void* that)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QWebEngineUrlScheme*
 ///
-char* q_webengineurlscheme_name(const void* self);
+const char* q_webengineurlscheme_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#setName)
 ///
 /// @param self QWebEngineUrlScheme*
-/// @param newValue char*
+/// @param newValue const char*
 ///
-void q_webengineurlscheme_set_name(void* self, char* newValue);
+void q_webengineurlscheme_set_name(void* self, const char* newValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#syntax)
 ///
@@ -117,9 +117,9 @@ void q_webengineurlscheme_register_scheme(const void* scheme);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#schemeByName)
 ///
-/// @param name char*
+/// @param name const char*
 ///
-QWebEngineUrlScheme* q_webengineurlscheme_scheme_by_name(char* name);
+QWebEngineUrlScheme* q_webengineurlscheme_scheme_by_name(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#dtor.QWebEngineUrlScheme)
 ///

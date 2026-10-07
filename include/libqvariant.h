@@ -122,9 +122,9 @@ QVariant* q_variant_new14(const void* bitarray);
 
 /// q_variant_new15 constructs a new QVariant object.
 ///
-/// @param bytearray char*
+/// @param bytearray const char*
 ///
-QVariant* q_variant_new15(char* bytearray);
+QVariant* q_variant_new15(const char* bytearray);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
@@ -338,9 +338,9 @@ QVariant* q_variant_new41(const char* str);
 
 /// q_variant_new42 constructs a new QVariant object.
 ///
-/// @param string char*
+/// @param string const char*
 ///
-QVariant* q_variant_new42(char* string);
+QVariant* q_variant_new42(const char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
@@ -514,11 +514,11 @@ double q_variant_to_real(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QVariant*
 ///
-char* q_variant_to_byte_array(const void* self);
+const char* q_variant_to_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#toBitArray)
 ///

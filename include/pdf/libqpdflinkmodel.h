@@ -106,7 +106,7 @@ QPdfDocument* q_pdflinkmodel_document(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -116,7 +116,7 @@ QPdfDocument* q_pdflinkmodel_document(const void* self);
 ///
 /// @param self const QPdfLinkModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_pdflinkmodel_role_names(const void* self);
 
@@ -125,7 +125,7 @@ libqt_map q_pdflinkmodel_role_names(const void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfLinkModel*
-/// @param callback libqt_map of int to char* func(const QPdfLinkModel* self)
+/// @param callback libqt_map of int to const char* func(const QPdfLinkModel* self)
 ///
 void q_pdflinkmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
@@ -135,7 +135,7 @@ void q_pdflinkmodel_on_role_names(void* self, libqt_map (*callback)(const void*)
 ///
 /// @param self const QPdfLinkModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_pdflinkmodel_super_role_names(const void* self);
 

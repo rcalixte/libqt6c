@@ -2297,20 +2297,20 @@ void k_selector_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KSelector*
 ///
-char* k_selector_save_geometry(const void* self);
+const char* k_selector_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KSelector*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_selector_restore_geometry(void* self, char* geometry);
+bool k_selector_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4625,11 +4625,11 @@ void k_selector_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KSelector*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_selector_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_selector_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4638,11 +4638,11 @@ bool k_selector_native_event(void* self, char* eventType, void* message, intptr_
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_selector_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_selector_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -7697,20 +7697,20 @@ void k_gradientselector_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KGradientSelector*
 ///
-char* k_gradientselector_save_geometry(const void* self);
+const char* k_gradientselector_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KGradientSelector*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_gradientselector_restore_geometry(void* self, char* geometry);
+bool k_gradientselector_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -10225,11 +10225,11 @@ void k_gradientselector_on_hide_event(void* self, void (*callback)(void*, void*)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_gradientselector_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_gradientselector_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -10238,11 +10238,11 @@ bool k_gradientselector_native_event(void* self, char* eventType, void* message,
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_gradientselector_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_gradientselector_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

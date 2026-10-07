@@ -1704,7 +1704,6 @@ typedef struct QQmlProperty QQmlProperty;
 typedef struct QQmlPropertyMap QQmlPropertyMap;
 typedef struct QQmlPropertyValueSource QQmlPropertyValueSource;
 typedef struct QQmlScriptString QQmlScriptString;
-typedef struct QQmlTypeNotAvailable QQmlTypeNotAvailable;
 typedef struct QQmlTypesExtensionInterface QQmlTypesExtensionInterface;
 typedef struct QQmlWebChannel QQmlWebChannel;
 typedef struct QQuaternion QQuaternion;

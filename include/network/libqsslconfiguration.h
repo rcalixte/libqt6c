@@ -255,18 +255,18 @@ bool q_sslconfiguration_test_ssl_option(const void* self, int32_t option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#sessionTicket)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSslConfiguration*
 ///
-char* q_sslconfiguration_session_ticket(const void* self);
+const char* q_sslconfiguration_session_ticket(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setSessionTicket)
 ///
 /// @param self QSslConfiguration*
-/// @param sessionTicket char*
+/// @param sessionTicket const char*
 ///
-void q_sslconfiguration_set_session_ticket(void* self, char* sessionTicket);
+void q_sslconfiguration_set_session_ticket(void* self, const char* sessionTicket);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#sessionTicketLifeTimeHint)
 ///
@@ -303,18 +303,18 @@ libqt_list q_sslconfiguration_supported_elliptic_curves();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#preSharedKeyIdentityHint)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSslConfiguration*
 ///
-char* q_sslconfiguration_pre_shared_key_identity_hint(const void* self);
+const char* q_sslconfiguration_pre_shared_key_identity_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setPreSharedKeyIdentityHint)
 ///
 /// @param self QSslConfiguration*
-/// @param hint char*
+/// @param hint const char*
 ///
-void q_sslconfiguration_set_pre_shared_key_identity_hint(void* self, char* hint);
+void q_sslconfiguration_set_pre_shared_key_identity_hint(void* self, const char* hint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#diffieHellmanParameters)
 ///
@@ -334,7 +334,7 @@ void q_sslconfiguration_set_diffie_hellman_parameters(void* self, const void* dh
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of char* to QVariant*
+/// // libqt_map of const char* to QVariant*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     free(((QVariant*)map.values)[i]);
@@ -345,17 +345,17 @@ void q_sslconfiguration_set_diffie_hellman_parameters(void* self, const void* dh
 ///
 /// @param self const QSslConfiguration*
 ///
-/// @return libqt_map of char* to QVariant*
+/// @return libqt_map of const char* to QVariant*
 ///
 libqt_map q_sslconfiguration_backend_configuration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setBackendConfigurationOption)
 ///
 /// @param self QSslConfiguration*
-/// @param name char*
+/// @param name const char*
 /// @param value QVariant*
 ///
-void q_sslconfiguration_set_backend_configuration_option(void* self, char* name, const void* value);
+void q_sslconfiguration_set_backend_configuration_option(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setBackendConfiguration)
 ///
@@ -452,11 +452,11 @@ const char** q_sslconfiguration_allowed_next_protocols(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#nextNegotiatedProtocol)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSslConfiguration*
 ///
-char* q_sslconfiguration_next_negotiated_protocol(const void* self);
+const char* q_sslconfiguration_next_negotiated_protocol(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#nextProtocolNegotiationStatus)
 ///
@@ -486,7 +486,7 @@ bool q_sslconfiguration_add_ca_certificates3(void* self, const char* path, int32
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setBackendConfiguration)
 ///
 /// @param self QSslConfiguration*
-/// @param backendConfiguration libqt_map of char* to QVariant*
+/// @param backendConfiguration libqt_map of const char* to QVariant*
 ///
 void q_sslconfiguration_set_backend_configuration1(void* self, libqt_map backendConfiguration);
 

@@ -69,27 +69,27 @@ const char* q_storageinfo_root_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#device)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QStorageInfo*
 ///
-char* q_storageinfo_device(const void* self);
+const char* q_storageinfo_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#subvolume)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QStorageInfo*
 ///
-char* q_storageinfo_subvolume(const void* self);
+const char* q_storageinfo_subvolume(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#fileSystemType)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QStorageInfo*
 ///
-char* q_storageinfo_file_system_type(const void* self);
+const char* q_storageinfo_file_system_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#name)
 ///

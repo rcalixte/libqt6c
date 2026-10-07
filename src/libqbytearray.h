@@ -12,98 +12,98 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 int
 ///
-char* q_bytearray_number(int param1);
+const char* q_bytearray_number(int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 uint32_t
 ///
-char* q_bytearray_number2(uint32_t param1);
+const char* q_bytearray_number2(uint32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 long
 ///
-char* q_bytearray_number3(long param1);
+const char* q_bytearray_number3(long param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 uintptr_t
 ///
-char* q_bytearray_number4(uintptr_t param1);
+const char* q_bytearray_number4(uintptr_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 long long
 ///
-char* q_bytearray_number5(long long param1);
+const char* q_bytearray_number5(long long param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 uintptr_t
 ///
-char* q_bytearray_number6(uintptr_t param1);
+const char* q_bytearray_number6(uintptr_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 double
 ///
-char* q_bytearray_number7(double param1);
+const char* q_bytearray_number7(double param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#fromRawData)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param data const char*
 /// @param size intptr_t
 ///
-char* q_bytearray_from_raw_data(const char* data, intptr_t size);
+const char* q_bytearray_from_raw_data(const char* data, intptr_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#fromBase64Encoding)
 ///
-/// @param base64 char*
+/// @param base64 const char*
 ///
-QByteArray__FromBase64Result* q_bytearray_from_base64_encoding(char* base64);
+QByteArray__FromBase64Result* q_bytearray_from_base64_encoding(const char* base64);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#fromBase64)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param base64 char*
+/// @param base64 const char*
 ///
-char* q_bytearray_from_base64(char* base64);
+const char* q_bytearray_from_base64(const char* base64);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#fromHex)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param hexEncoded char*
+/// @param hexEncoded const char*
 ///
-char* q_bytearray_from_hex(char* hexEncoded);
+const char* q_bytearray_from_hex(const char* hexEncoded);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#fromPercentEncoding)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param pctEncoded char*
+/// @param pctEncoded const char*
 ///
-char* q_bytearray_from_percent_encoding(char* pctEncoded);
+const char* q_bytearray_from_percent_encoding(const char* pctEncoded);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#maxSize)
 ///
@@ -111,139 +111,139 @@ intptr_t q_bytearray_max_size2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 int
 /// @param base int
 ///
-char* q_bytearray_number22(int param1, int base);
+const char* q_bytearray_number22(int param1, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 uint32_t
 /// @param base int
 ///
-char* q_bytearray_number23(uint32_t param1, int base);
+const char* q_bytearray_number23(uint32_t param1, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 long
 /// @param base int
 ///
-char* q_bytearray_number24(long param1, int base);
+const char* q_bytearray_number24(long param1, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 uintptr_t
 /// @param base int
 ///
-char* q_bytearray_number25(uintptr_t param1, int base);
+const char* q_bytearray_number25(uintptr_t param1, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 long long
 /// @param base int
 ///
-char* q_bytearray_number26(long long param1, int base);
+const char* q_bytearray_number26(long long param1, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 uintptr_t
 /// @param base int
 ///
-char* q_bytearray_number27(uintptr_t param1, int base);
+const char* q_bytearray_number27(uintptr_t param1, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 double
 /// @param format char
 ///
-char* q_bytearray_number28(double param1, char format);
+const char* q_bytearray_number28(double param1, char format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#number)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 double
 /// @param format char
 /// @param precision int
 ///
-char* q_bytearray_number32(double param1, char format, int precision);
+const char* q_bytearray_number32(double param1, char format, int precision);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#fromBase64Encoding)
 ///
-/// @param base64 char*
+/// @param base64 const char*
 /// @param options flag of enum QByteArray__Base64Option
 ///
-QByteArray__FromBase64Result* q_bytearray_from_base64_encoding2(char* base64, int32_t options);
+QByteArray__FromBase64Result* q_bytearray_from_base64_encoding2(const char* base64, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#fromBase64)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param base64 char*
+/// @param base64 const char*
 /// @param options flag of enum QByteArray__Base64Option
 ///
-char* q_bytearray_from_base642(char* base64, int32_t options);
+const char* q_bytearray_from_base642(const char* base64, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#fromPercentEncoding)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param pctEncoded char*
+/// @param pctEncoded const char*
 /// @param percent char
 ///
-char* q_bytearray_from_percent_encoding2(char* pctEncoded, char percent);
+const char* q_bytearray_from_percent_encoding2(const char* pctEncoded, char percent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#qCompress)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param data unsigned char*
 /// @param nbytes intptr_t
 /// @param compressionLevel int
 ///
-char* q_qbytearray_q_compress(unsigned char* data, intptr_t nbytes, int compressionLevel);
+const char* q_qbytearray_q_compress(unsigned char* data, intptr_t nbytes, int compressionLevel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#qUncompress)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param data unsigned char*
 /// @param nbytes intptr_t
 ///
-char* q_qbytearray_q_uncompress(unsigned char* data, intptr_t nbytes);
+const char* q_qbytearray_q_uncompress(unsigned char* data, intptr_t nbytes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#qCompress)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param data char*
+/// @param data const char*
 /// @param compressionLevel int
 ///
-char* q_qbytearray_q_compress2(char* data, int compressionLevel);
+const char* q_qbytearray_q_compress2(const char* data, int compressionLevel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#qUncompress)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param data char*
+/// @param data const char*
 ///
-char* q_qbytearray_q_uncompress2(char* data);
+const char* q_qbytearray_q_uncompress2(const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray.html#qHash)
 ///
@@ -268,18 +268,18 @@ QByteArray__FromBase64Result* q_bytearray__frombase64result_new2(const void* par
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#decoded-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QByteArray__FromBase64Result*
 ///
-char* q_bytearray__frombase64result_decoded(const void* self);
+const char* q_bytearray__frombase64result_decoded(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#decoded-var)
 ///
 /// @param self QByteArray__FromBase64Result*
-/// @param decoded char*
+/// @param decoded const char*
 ///
-void q_bytearray__frombase64result_set_decoded(void* self, char* decoded);
+void q_bytearray__frombase64result_set_decoded(void* self, const char* decoded);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#decodingStatus-var)
 ///
@@ -311,11 +311,11 @@ bool q_bytearray__frombase64result_to_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#operator-2a)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QByteArray__FromBase64Result*
 ///
-char* q_bytearray__frombase64result_operator_multiply(void* self);
+const char* q_bytearray__frombase64result_operator_multiply(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearray-frombase64result.html#operator-2a)
 ///

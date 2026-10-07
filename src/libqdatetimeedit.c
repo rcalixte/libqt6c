@@ -1421,14 +1421,14 @@ void q_datetimeedit_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_datetimeedit_save_geometry(const void* self) {
+const char* q_datetimeedit_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_datetimeedit_restore_geometry(void* self, char* geometry) {
+bool q_datetimeedit_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2370,11 +2370,11 @@ void q_datetimeedit_on_drop_event(void* self, void (*callback)(void*, void*)) {
     QDateTimeEdit_OnDropEvent((QDateTimeEdit*)self, (intptr_t)callback);
 }
 
-bool q_datetimeedit_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_datetimeedit_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QDateTimeEdit_NativeEvent((QDateTimeEdit*)self, qstring(eventType), message, result);
 }
 
-bool q_datetimeedit_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_datetimeedit_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QDateTimeEdit_SuperNativeEvent((QDateTimeEdit*)self, qstring(eventType), message, result);
 }
 
@@ -3753,14 +3753,14 @@ void q_timeedit_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_timeedit_save_geometry(const void* self) {
+const char* q_timeedit_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_timeedit_restore_geometry(void* self, char* geometry) {
+bool q_timeedit_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -4900,11 +4900,11 @@ void q_timeedit_on_drop_event(void* self, void (*callback)(void*, void*)) {
     QTimeEdit_OnDropEvent((QTimeEdit*)self, (intptr_t)callback);
 }
 
-bool q_timeedit_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_timeedit_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QTimeEdit_NativeEvent((QTimeEdit*)self, qstring(eventType), message, result);
 }
 
-bool q_timeedit_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_timeedit_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QTimeEdit_SuperNativeEvent((QTimeEdit*)self, qstring(eventType), message, result);
 }
 
@@ -6283,14 +6283,14 @@ void q_dateedit_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_dateedit_save_geometry(const void* self) {
+const char* q_dateedit_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_dateedit_restore_geometry(void* self, char* geometry) {
+bool q_dateedit_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -7430,11 +7430,11 @@ void q_dateedit_on_drop_event(void* self, void (*callback)(void*, void*)) {
     QDateEdit_OnDropEvent((QDateEdit*)self, (intptr_t)callback);
 }
 
-bool q_dateedit_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_dateedit_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QDateEdit_NativeEvent((QDateEdit*)self, qstring(eventType), message, result);
 }
 
-bool q_dateedit_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_dateedit_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QDateEdit_SuperNativeEvent((QDateEdit*)self, qstring(eventType), message, result);
 }
 

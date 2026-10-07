@@ -100,7 +100,7 @@ const char* k_nscore__providersmodel_tr(const char* s);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -110,7 +110,7 @@ const char* k_nscore__providersmodel_tr(const char* s);
 ///
 /// @param self const KNSCore__ProvidersModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_nscore__providersmodel_role_names(const void* self);
 
@@ -119,7 +119,7 @@ libqt_map k_nscore__providersmodel_role_names(const void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KNSCore__ProvidersModel*
-/// @param callback libqt_map of int to char* func(const KNSCore__ProvidersModel* self)
+/// @param callback libqt_map of int to const char* func(const KNSCore__ProvidersModel* self)
 ///
 void k_nscore__providersmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
@@ -129,7 +129,7 @@ void k_nscore__providersmodel_on_role_names(void* self, libqt_map (*callback)(co
 ///
 /// @param self const KNSCore__ProvidersModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_nscore__providersmodel_super_role_names(const void* self);
 

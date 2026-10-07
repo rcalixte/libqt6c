@@ -151,11 +151,11 @@ bool q_colorspace_is_valid_target(const void* self) {
     return QColorSpace_IsValidTarget((QColorSpace*)self);
 }
 
-QColorSpace* q_colorspace_from_icc_profile(char* iccProfile) {
+QColorSpace* q_colorspace_from_icc_profile(const char* iccProfile) {
     return QColorSpace_FromIccProfile(qstring(iccProfile));
 }
 
-char* q_colorspace_icc_profile(const void* self) {
+const char* q_colorspace_icc_profile(const void* self) {
     libqt_string _str = QColorSpace_IccProfile((QColorSpace*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

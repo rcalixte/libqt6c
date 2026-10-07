@@ -39,11 +39,11 @@ QJsonDocument* q_restreply_read_json(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#readBody)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QRestReply*
 ///
-char* q_restreply_read_body(void* self);
+const char* q_restreply_read_body(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#readText)
 ///

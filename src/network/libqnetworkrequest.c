@@ -81,14 +81,14 @@ const char** q_networkrequest_raw_header_list(const void* self) {
     return _ret;
 }
 
-char* q_networkrequest_raw_header(const void* self, const char* headerName) {
+const char* q_networkrequest_raw_header(const void* self, const char* headerName) {
     libqt_string _str = QNetworkRequest_RawHeader((QNetworkRequest*)self, headerName);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_networkrequest_set_raw_header(void* self, char* headerName, char* value) {
+void q_networkrequest_set_raw_header(void* self, const char* headerName, const char* value) {
     QNetworkRequest_SetRawHeader((QNetworkRequest*)self, qstring(headerName), qstring(value));
 }
 

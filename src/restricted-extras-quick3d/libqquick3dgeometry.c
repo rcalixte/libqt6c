@@ -59,14 +59,14 @@ const char* q_quick3dgeometry_tr(const char* s) {
     return _ret;
 }
 
-char* q_quick3dgeometry_vertex_data(const void* self) {
+const char* q_quick3dgeometry_vertex_data(const void* self) {
     libqt_string _str = QQuick3DGeometry_VertexData((QQuick3DGeometry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_quick3dgeometry_index_data(const void* self) {
+const char* q_quick3dgeometry_index_data(const void* self) {
     libqt_string _str = QQuick3DGeometry_IndexData((QQuick3DGeometry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -97,19 +97,19 @@ int32_t q_quick3dgeometry_stride(const void* self) {
     return QQuick3DGeometry_Stride((QQuick3DGeometry*)self);
 }
 
-void q_quick3dgeometry_set_vertex_data(void* self, char* data) {
+void q_quick3dgeometry_set_vertex_data(void* self, const char* data) {
     QQuick3DGeometry_SetVertexData((QQuick3DGeometry*)self, qstring(data));
 }
 
-void q_quick3dgeometry_set_vertex_data2(void* self, int offset, char* data) {
+void q_quick3dgeometry_set_vertex_data2(void* self, int offset, const char* data) {
     QQuick3DGeometry_SetVertexData2((QQuick3DGeometry*)self, offset, qstring(data));
 }
 
-void q_quick3dgeometry_set_index_data(void* self, char* data) {
+void q_quick3dgeometry_set_index_data(void* self, const char* data) {
     QQuick3DGeometry_SetIndexData((QQuick3DGeometry*)self, qstring(data));
 }
 
-void q_quick3dgeometry_set_index_data2(void* self, int offset, char* data) {
+void q_quick3dgeometry_set_index_data2(void* self, int offset, const char* data) {
     QQuick3DGeometry_SetIndexData2((QQuick3DGeometry*)self, offset, qstring(data));
 }
 
@@ -164,18 +164,18 @@ void q_quick3dgeometry_add_subset(void* self, int offset, int count, const void*
     QQuick3DGeometry_AddSubset((QQuick3DGeometry*)self, offset, count, (QVector3D*)boundsMin, (QVector3D*)boundsMax);
 }
 
-char* q_quick3dgeometry_target_data(const void* self) {
+const char* q_quick3dgeometry_target_data(const void* self) {
     libqt_string _str = QQuick3DGeometry_TargetData((QQuick3DGeometry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_quick3dgeometry_set_target_data(void* self, char* data) {
+void q_quick3dgeometry_set_target_data(void* self, const char* data) {
     QQuick3DGeometry_SetTargetData((QQuick3DGeometry*)self, qstring(data));
 }
 
-void q_quick3dgeometry_set_target_data2(void* self, int offset, char* data) {
+void q_quick3dgeometry_set_target_data2(void* self, int offset, const char* data) {
     QQuick3DGeometry_SetTargetData2((QQuick3DGeometry*)self, offset, qstring(data));
 }
 

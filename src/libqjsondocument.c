@@ -84,11 +84,11 @@ QVariant* q_jsondocument_to_variant(const void* self) {
     return QJsonDocument_ToVariant((QJsonDocument*)self);
 }
 
-QJsonDocument* q_jsondocument_from_json(char* json) {
+QJsonDocument* q_jsondocument_from_json(const char* json) {
     return QJsonDocument_FromJson(qstring(json));
 }
 
-char* q_jsondocument_to_json(const void* self) {
+const char* q_jsondocument_to_json(const void* self) {
     libqt_string _str = QJsonDocument_ToJson((QJsonDocument*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -131,7 +131,7 @@ const QJsonValue* q_jsondocument_operator_subscript2(const void* self, const cha
     return QJsonDocument_OperatorSubscript2((QJsonDocument*)self, qstring(key));
 }
 
-const QJsonValue* q_jsondocument_operator_subscript3(const void* self, char* key) {
+const QJsonValue* q_jsondocument_operator_subscript3(const void* self, const char* key) {
     return QJsonDocument_OperatorSubscript3((QJsonDocument*)self, qstring(key));
 }
 
@@ -143,11 +143,11 @@ bool q_jsondocument_is_null(const void* self) {
     return QJsonDocument_IsNull((QJsonDocument*)self);
 }
 
-QJsonDocument* q_jsondocument_from_json2(char* json, void* error) {
+QJsonDocument* q_jsondocument_from_json2(const char* json, void* error) {
     return QJsonDocument_FromJson2(qstring(json), (QJsonParseError*)error);
 }
 
-char* q_jsondocument_to_json1(const void* self, int32_t format) {
+const char* q_jsondocument_to_json1(const void* self, int32_t format) {
     libqt_string _str = QJsonDocument_ToJson1((QJsonDocument*)self, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

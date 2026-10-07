@@ -707,11 +707,11 @@ QInputMethod* q_application_input_method();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#platformFunction)
 ///
-/// @param function char*
+/// @param function const char*
 ///
 /// @return void (*QFunctionPointer)()
 ///
-QFunctionPointer q_application_platform_function(char* function);
+QFunctionPointer q_application_platform_function(const char* function);
 
 /// Inherited from QGuiApplication
 ///

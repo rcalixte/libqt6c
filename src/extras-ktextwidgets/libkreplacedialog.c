@@ -1126,14 +1126,14 @@ void k_replacedialog_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_replacedialog_save_geometry(const void* self) {
+const char* k_replacedialog_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_replacedialog_restore_geometry(void* self, char* geometry) {
+bool k_replacedialog_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2183,11 +2183,11 @@ void k_replacedialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KReplaceDialog_OnHideEvent((KReplaceDialog*)self, (intptr_t)callback);
 }
 
-bool k_replacedialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_replacedialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KReplaceDialog_NativeEvent((KReplaceDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_replacedialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_replacedialog_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KReplaceDialog_SuperNativeEvent((KReplaceDialog*)self, qstring(eventType), message, result);
 }
 

@@ -55,7 +55,7 @@ const char* q_qmlfile_data(const void* self) {
     return QQmlFile_Data((QQmlFile*)self);
 }
 
-char* q_qmlfile_data_byte_array(const void* self) {
+const char* q_qmlfile_data_byte_array(const void* self) {
     libqt_string _str = QQmlFile_DataByteArray((QQmlFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

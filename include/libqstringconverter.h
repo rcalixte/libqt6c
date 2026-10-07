@@ -123,21 +123,21 @@ const char* q_stringencoder_name_for_encoding(int32_t e);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForData)
 ///
-/// @param data char*
+/// @param data const char*
 ///
 /// @return enum QStringConverter__Encoding (Returns -1 for an invalid value)
 ///
-int32_t q_stringencoder_encoding_for_data(char* data);
+int32_t q_stringencoder_encoding_for_data(const char* data);
 
 /// Inherited from QStringConverter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForHtml)
 ///
-/// @param data char*
+/// @param data const char*
 ///
 /// @return enum QStringConverter__Encoding (Returns -1 for an invalid value)
 ///
-int32_t q_stringencoder_encoding_for_html(char* data);
+int32_t q_stringencoder_encoding_for_html(const char* data);
 
 /// Inherited from QStringConverter
 ///
@@ -206,15 +206,15 @@ intptr_t q_stringdecoder_required_space(const void* self, intptr_t inputLength);
 ///
 /// @param self QStringDecoder*
 /// @param out QChar*
-/// @param ba char*
+/// @param ba const char*
 ///
-QChar* q_stringdecoder_append_to_buffer(void* self, void* out, char* ba);
+QChar* q_stringdecoder_append_to_buffer(void* self, void* out, const char* ba);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringdecoder.html#decoderForHtml)
 ///
-/// @param data char*
+/// @param data const char*
 ///
-QStringDecoder* q_stringdecoder_decoder_for_html(char* data);
+QStringDecoder* q_stringdecoder_decoder_for_html(const char* data);
 
 /// Inherited from QStringConverter
 ///
@@ -274,21 +274,21 @@ const char* q_stringdecoder_name_for_encoding(int32_t e);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForData)
 ///
-/// @param data char*
+/// @param data const char*
 ///
 /// @return enum QStringConverter__Encoding (Returns -1 for an invalid value)
 ///
-int32_t q_stringdecoder_encoding_for_data(char* data);
+int32_t q_stringdecoder_encoding_for_data(const char* data);
 
 /// Inherited from QStringConverter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForHtml)
 ///
-/// @param data char*
+/// @param data const char*
 ///
 /// @return enum QStringConverter__Encoding (Returns -1 for an invalid value)
 ///
-int32_t q_stringdecoder_encoding_for_html(char* data);
+int32_t q_stringdecoder_encoding_for_html(const char* data);
 
 /// Inherited from QStringConverter
 ///

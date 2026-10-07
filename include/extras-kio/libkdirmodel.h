@@ -610,7 +610,7 @@ void k_dirmodel_super_sort(void* self, int column, int32_t order);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -620,7 +620,7 @@ void k_dirmodel_super_sort(void* self, int column, int32_t order);
 ///
 /// @param self const KDirModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_dirmodel_role_names(const void* self);
 
@@ -629,7 +629,7 @@ libqt_map k_dirmodel_role_names(const void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDirModel*
-/// @param callback libqt_map of int to char* func(const KDirModel* self)
+/// @param callback libqt_map of int to const char* func(const KDirModel* self)
 ///
 void k_dirmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
@@ -639,7 +639,7 @@ void k_dirmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 ///
 /// @param self const KDirModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_dirmodel_super_role_names(const void* self);
 

@@ -761,11 +761,11 @@ uint32_t q_font__tag_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont-tag.html#toString)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QFont__Tag*
 ///
-char* q_font__tag_to_string(const void* self);
+const char* q_font__tag_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfont-tag.html#fromValue)
 ///

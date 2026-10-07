@@ -35,18 +35,18 @@ QImageReader* q_imagereader_new3(const char* fileName);
 /// q_imagereader_new4 constructs a new QImageReader object.
 ///
 /// @param device QIODevice*
-/// @param format char*
+/// @param format const char*
 ///
-QImageReader* q_imagereader_new4(void* device, char* format);
+QImageReader* q_imagereader_new4(void* device, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html)
 
 /// q_imagereader_new5 constructs a new QImageReader object.
 ///
 /// @param fileName const char*
-/// @param format char*
+/// @param format const char*
 ///
-QImageReader* q_imagereader_new5(const char* fileName, char* format);
+QImageReader* q_imagereader_new5(const char* fileName, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -59,17 +59,17 @@ const char* q_imagereader_tr(const char* sourceText);
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#setFormat)
 ///
 /// @param self QImageReader*
-/// @param format char*
+/// @param format const char*
 ///
-void q_imagereader_set_format(void* self, char* format);
+void q_imagereader_set_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#format)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QImageReader*
 ///
-char* q_imagereader_format(const void* self);
+const char* q_imagereader_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#setAutoDetectImageFormat)
 ///
@@ -250,11 +250,11 @@ bool q_imagereader_auto_transform(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#subType)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QImageReader*
 ///
-char* q_imagereader_sub_type(const void* self);
+const char* q_imagereader_sub_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#supportedSubTypes)
 ///
@@ -351,19 +351,19 @@ bool q_imagereader_supports_option(const void* self, int32_t option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#imageFormat)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param fileName const char*
 ///
-char* q_imagereader_image_format2(const char* fileName);
+const char* q_imagereader_image_format2(const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#imageFormat)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param device QIODevice*
 ///
-char* q_imagereader_image_format3(void* device);
+const char* q_imagereader_image_format3(void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#supportedImageFormats)
 ///
@@ -381,9 +381,9 @@ const char** q_imagereader_supported_mime_types();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param mimeType char*
+/// @param mimeType const char*
 ///
-const char** q_imagereader_image_formats_for_mime_type(char* mimeType);
+const char** q_imagereader_image_formats_for_mime_type(const char* mimeType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagereader.html#allocationLimit)
 ///

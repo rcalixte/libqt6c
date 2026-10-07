@@ -61,12 +61,12 @@ QWidget* q_itemeditorfactory_super_create_editor(const void* self, int userType,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#valuePropertyName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QItemEditorFactory*
 /// @param userType int
 ///
-char* q_itemeditorfactory_value_property_name(const void* self, int userType);
+const char* q_itemeditorfactory_value_property_name(const void* self, int userType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#valuePropertyName)
 ///
@@ -84,7 +84,7 @@ void q_itemeditorfactory_on_value_property_name(void* self, libqt_string (*callb
 /// @param self const QItemEditorFactory*
 /// @param userType int
 ///
-char* q_itemeditorfactory_super_value_property_name(const void* self, int userType);
+const char* q_itemeditorfactory_super_value_property_name(const void* self, int userType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemeditorfactory.html#registerEditor)
 ///

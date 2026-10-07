@@ -388,11 +388,11 @@ uint8_t q_dnstlsassociationrecord_match_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QDnsTlsAssociationRecord*
 ///
-char* q_dnstlsassociationrecord_value(const void* self);
+const char* q_dnstlsassociationrecord_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#dtor.QDnsTlsAssociationRecord)
 ///

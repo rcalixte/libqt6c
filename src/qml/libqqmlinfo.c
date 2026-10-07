@@ -111,11 +111,11 @@ QQmlInfo* q_qmlinfo_operator_shift_left16(void* self, const char* t) {
     return QQmlInfo_OperatorShiftLeft16((QQmlInfo*)self, qstring(t));
 }
 
-QQmlInfo* q_qmlinfo_operator_shift_left17(void* self, char* t) {
+QQmlInfo* q_qmlinfo_operator_shift_left17(void* self, const char* t) {
     return QQmlInfo_OperatorShiftLeft17((QQmlInfo*)self, qstring(t));
 }
 
-QQmlInfo* q_qmlinfo_operator_shift_left18(void* self, char* t) {
+QQmlInfo* q_qmlinfo_operator_shift_left18(void* self, const char* t) {
     return QQmlInfo_OperatorShiftLeft18((QQmlInfo*)self, qstring(t));
 }
 
@@ -195,11 +195,11 @@ QDebug* q_qmlinfo_maybe_quote(void* self) {
     return QDebug_MaybeQuote((QDebug*)self);
 }
 
-QDebug* q_qmlinfo_operator_shift_left23(void* self, char* t) {
+QDebug* q_qmlinfo_operator_shift_left23(void* self, const char* t) {
     return QDebug_OperatorShiftLeft23((QDebug*)self, qstring(t));
 }
 
-QDebug* q_qmlinfo_operator_shift_left24(void* self, char* t) {
+QDebug* q_qmlinfo_operator_shift_left24(void* self, const char* t) {
     return QDebug_OperatorShiftLeft24((QDebug*)self, qstring(t));
 }
 

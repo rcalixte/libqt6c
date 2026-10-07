@@ -1267,11 +1267,11 @@ void q_rasterwindow_on_tablet_event(void* self, void (*callback)(void*, void*)) 
     QRasterWindow_OnTabletEvent((QRasterWindow*)self, (intptr_t)callback);
 }
 
-bool q_rasterwindow_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_rasterwindow_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QRasterWindow_NativeEvent((QRasterWindow*)self, qstring(eventType), message, result);
 }
 
-bool q_rasterwindow_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_rasterwindow_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QRasterWindow_SuperNativeEvent((QRasterWindow*)self, qstring(eventType), message, result);
 }
 

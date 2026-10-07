@@ -2,7 +2,7 @@
 #include "libkuitsetup.hpp"
 #include "libkuitsetup.h"
 
-KuitSetup* k_uit_setup_for_domain(char* domain) {
+KuitSetup* k_uit_setup_for_domain(const char* domain) {
     return Kuit_SetupForDomain(qstring(domain));
 }
 

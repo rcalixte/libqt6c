@@ -1025,7 +1025,7 @@ void k_extracolumnsproxymodel_on_supported_drop_actions(void* self, int32_t (*ca
     KExtraColumnsProxyModel_OnSupportedDropActions((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_extracolumnsproxymodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_extracolumnsproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KExtraColumnsProxyModel_RoleNames((KExtraColumnsProxyModel*)self);
     libqt_map _ret;
@@ -1058,7 +1058,7 @@ libqt_map /* of int to char* */ k_extracolumnsproxymodel_role_names(const void* 
     return _ret;
 }
 
-libqt_map /* of int to char* */ k_extracolumnsproxymodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_extracolumnsproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KExtraColumnsProxyModel_SuperRoleNames((KExtraColumnsProxyModel*)self);
     libqt_map _ret;
@@ -1091,7 +1091,7 @@ libqt_map /* of int to char* */ k_extracolumnsproxymodel_super_role_names(const 
     return _ret;
 }
 
-void k_extracolumnsproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_extracolumnsproxymodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     KExtraColumnsProxyModel_OnRoleNames((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 

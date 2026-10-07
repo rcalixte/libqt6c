@@ -21,12 +21,12 @@ const char* k_io_build_error_string(int errorCode, const char* errorText);
 
 /// [Upstream resources](https://api.kde.org/kio.html#rawErrorDetail)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param errorCode int
 /// @param errorText const char*
 /// @param reqUrl QUrl*
 /// @param method int
 ///
-char* k_io_raw_error_detail(int errorCode, const char* errorText, const void* reqUrl, int method);
+const char* k_io_raw_error_detail(int errorCode, const char* errorText, const void* reqUrl, int method);
 #endif

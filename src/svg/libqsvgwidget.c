@@ -101,7 +101,7 @@ void q_svgwidget_load(void* self, const char* file) {
     QSvgWidget_Load((QSvgWidget*)self, qstring(file));
 }
 
-void q_svgwidget_load2(void* self, char* contents) {
+void q_svgwidget_load2(void* self, const char* contents) {
     QSvgWidget_Load2((QSvgWidget*)self, qstring(contents));
 }
 
@@ -905,14 +905,14 @@ void q_svgwidget_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_svgwidget_save_geometry(const void* self) {
+const char* q_svgwidget_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_svgwidget_restore_geometry(void* self, char* geometry) {
+bool q_svgwidget_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1878,11 +1878,11 @@ void q_svgwidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QSvgWidget_OnHideEvent((QSvgWidget*)self, (intptr_t)callback);
 }
 
-bool q_svgwidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_svgwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QSvgWidget_NativeEvent((QSvgWidget*)self, qstring(eventType), message, result);
 }
 
-bool q_svgwidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_svgwidget_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QSvgWidget_SuperNativeEvent((QSvgWidget*)self, qstring(eventType), message, result);
 }
 

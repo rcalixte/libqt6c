@@ -255,14 +255,14 @@ bool q_metaobject_check_connect_args2(const void* signal, const void* method) {
     return QMetaObject_CheckConnectArgs2((QMetaMethod*)signal, (QMetaMethod*)method);
 }
 
-char* q_metaobject_normalized_signature(const char* method) {
+const char* q_metaobject_normalized_signature(const char* method) {
     libqt_string _str = QMetaObject_NormalizedSignature(method);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_metaobject_normalized_type(const char* type) {
+const char* q_metaobject_normalized_type(const char* type) {
     libqt_string _str = QMetaObject_NormalizedType(type);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -2097,20 +2097,20 @@ void k_replacedialog_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KReplaceDialog*
 ///
-char* k_replacedialog_save_geometry(const void* self);
+const char* k_replacedialog_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KReplaceDialog*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_replacedialog_restore_geometry(void* self, char* geometry);
+bool k_replacedialog_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4658,11 +4658,11 @@ void k_replacedialog_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KReplaceDialog*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_replacedialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_replacedialog_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4671,11 +4671,11 @@ bool k_replacedialog_native_event(void* self, char* eventType, void* message, in
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KReplaceDialog*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_replacedialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_replacedialog_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

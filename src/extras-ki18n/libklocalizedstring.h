@@ -183,23 +183,23 @@ KLocalizedString* k_localizedstring_ignore_markup(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#untranslatedText)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KLocalizedString*
 ///
-char* k_localizedstring_untranslated_text(const void* self);
+const char* k_localizedstring_untranslated_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#setApplicationDomain)
 ///
-/// @param domain char*
+/// @param domain const char*
 ///
-void k_localizedstring_set_application_domain(char* domain);
+void k_localizedstring_set_application_domain(const char* domain);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#applicationDomain)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-char* k_localizedstring_application_domain();
+const char* k_localizedstring_application_domain();
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#languages)
 ///
@@ -231,18 +231,18 @@ libqt_list k_localizedstring_available_application_translations();
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#availableDomainTranslations)
 ///
-/// @param domain char*
+/// @param domain const char*
 ///
 /// @return libqt_list set of const char*
 ///
-libqt_list k_localizedstring_available_domain_translations(char* domain);
+libqt_list k_localizedstring_available_domain_translations(const char* domain);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#addDomainLocaleDir)
 ///
-/// @param domain char*
+/// @param domain const char*
 /// @param path const char*
 ///
-void k_localizedstring_add_domain_locale_dir(char* domain, const char* path);
+void k_localizedstring_add_domain_locale_dir(const char* domain, const char* path);
 
 /// [Upstream resources](https://api.kde.org/klocalizedstring.html#localizedFilePath)
 ///

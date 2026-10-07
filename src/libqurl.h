@@ -102,17 +102,17 @@ const char* q_url_to_display_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toEncoded)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QUrl*
 ///
-char* q_url_to_encoded(const void* self);
+const char* q_url_to_encoded(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromEncoded)
 ///
-/// @param input char*
+/// @param input const char*
 ///
-QUrl* q_url_from_encoded(char* input);
+QUrl* q_url_from_encoded(const char* input);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromUserInput)
 ///
@@ -377,33 +377,33 @@ bool q_url_is_detached(const void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 char*
+/// @param param1 const char*
 ///
-const char* q_url_from_percent_encoding(char* param1);
+const char* q_url_from_percent_encoding(const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toPercentEncoding)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 const char*
 ///
-char* q_url_to_percent_encoding(const char* param1);
+const char* q_url_to_percent_encoding(const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromAce)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param domain char*
+/// @param domain const char*
 ///
-const char* q_url_from_ace(char* domain);
+const char* q_url_from_ace(const char* domain);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toAce)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param domain const char*
 ///
-char* q_url_to_ace(const char* domain);
+const char* q_url_to_ace(const char* domain);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#idnWhitelist)
 ///
@@ -443,10 +443,10 @@ void q_url_set_url2(void* self, const char* url, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromEncoded)
 ///
-/// @param input char*
+/// @param input const char*
 /// @param mode enum QUrl__ParsingMode
 ///
-QUrl* q_url_from_encoded2(char* input, int32_t mode);
+QUrl* q_url_from_encoded2(const char* input, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromUserInput)
 ///
@@ -617,40 +617,40 @@ void q_url_set_fragment2(void* self, const char* fragment, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toPercentEncoding)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 const char*
-/// @param exclude char*
+/// @param exclude const char*
 ///
-char* q_url_to_percent_encoding2(const char* param1, char* exclude);
+const char* q_url_to_percent_encoding2(const char* param1, const char* exclude);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toPercentEncoding)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 const char*
-/// @param exclude char*
-/// @param include char*
+/// @param exclude const char*
+/// @param include const char*
 ///
-char* q_url_to_percent_encoding3(const char* param1, char* exclude, char* include);
+const char* q_url_to_percent_encoding3(const char* param1, const char* exclude, const char* include);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromAce)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param domain char*
+/// @param domain const char*
 /// @param options flag of enum QUrl__AceProcessingOption
 ///
-const char* q_url_from_ace2(char* domain, uint32_t options);
+const char* q_url_from_ace2(const char* domain, uint32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#toAce)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param domain const char*
 /// @param options flag of enum QUrl__AceProcessingOption
 ///
-char* q_url_to_ace2(const char* domain, uint32_t options);
+const char* q_url_to_ace2(const char* domain, uint32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qurl.html#fromStringList)
 ///

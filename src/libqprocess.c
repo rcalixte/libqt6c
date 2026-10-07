@@ -404,14 +404,14 @@ bool q_process_wait_for_finished(void* self) {
     return QProcess_WaitForFinished((QProcess*)self);
 }
 
-char* q_process_read_all_standard_output(void* self) {
+const char* q_process_read_all_standard_output(void* self) {
     libqt_string _str = QProcess_ReadAllStandardOutput((QProcess*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_process_read_all_standard_error(void* self) {
+const char* q_process_read_all_standard_error(void* self) {
     libqt_string _str = QProcess_ReadAllStandardError((QProcess*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -763,14 +763,14 @@ int64_t q_process_read(void* self, char* data, int64_t maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* q_process_read2(void* self, int64_t maxlen) {
+const char* q_process_read2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_process_read_all(void* self) {
+const char* q_process_read_all(void* self) {
     libqt_string _str = QIODevice_ReadAll((QIODevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -781,7 +781,7 @@ int64_t q_process_read_line(void* self, char* data, int64_t maxlen) {
     return QIODevice_ReadLine((QIODevice*)self, data, maxlen);
 }
 
-char* q_process_read_line2(void* self) {
+const char* q_process_read_line2(void* self) {
     libqt_string _str = QIODevice_ReadLine2((QIODevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -812,7 +812,7 @@ int64_t q_process_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-int64_t q_process_write3(void* self, char* data) {
+int64_t q_process_write3(void* self, const char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
@@ -820,7 +820,7 @@ int64_t q_process_peek(void* self, char* data, int64_t maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* q_process_peek2(void* self, int64_t maxlen) {
+const char* q_process_peek2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -898,7 +898,7 @@ void q_process_on_read_channel_finished(void* self, void (*callback)(void*)) {
     QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
-char* q_process_read_line1(void* self, int64_t maxlen) {
+const char* q_process_read_line1(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_ReadLine1((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

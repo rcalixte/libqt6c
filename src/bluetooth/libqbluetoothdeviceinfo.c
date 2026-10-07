@@ -84,18 +84,18 @@ libqt_list /* of uint16_t */ q_bluetoothdeviceinfo_manufacturer_ids(const void* 
     return _arr;
 }
 
-char* q_bluetoothdeviceinfo_manufacturer_data(const void* self, uint16_t manufacturerId) {
+const char* q_bluetoothdeviceinfo_manufacturer_data(const void* self, uint16_t manufacturerId) {
     libqt_string _str = QBluetoothDeviceInfo_ManufacturerData((QBluetoothDeviceInfo*)self, manufacturerId);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_bluetoothdeviceinfo_set_manufacturer_data(void* self, uint16_t manufacturerId, char* data) {
+bool q_bluetoothdeviceinfo_set_manufacturer_data(void* self, uint16_t manufacturerId, const char* data) {
     return QBluetoothDeviceInfo_SetManufacturerData((QBluetoothDeviceInfo*)self, manufacturerId, qstring(data));
 }
 
-libqt_map /* of uint16_t to char** */ q_bluetoothdeviceinfo_manufacturer_data2(const void* self) {
+libqt_map /* of uint16_t to const char** */ q_bluetoothdeviceinfo_manufacturer_data2(const void* self) {
     // Convert QMultiHash<unsigned short,QByteArray> to libqt_map
     libqt_map _out = QBluetoothDeviceInfo_ManufacturerData2((QBluetoothDeviceInfo*)self);
     libqt_map _ret;
@@ -161,18 +161,18 @@ libqt_list /* of QBluetoothUuid* */ q_bluetoothdeviceinfo_service_ids(const void
     return _arr;
 }
 
-char* q_bluetoothdeviceinfo_service_data(const void* self, const void* serviceId) {
+const char* q_bluetoothdeviceinfo_service_data(const void* self, const void* serviceId) {
     libqt_string _str = QBluetoothDeviceInfo_ServiceData((QBluetoothDeviceInfo*)self, (QBluetoothUuid*)serviceId);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_bluetoothdeviceinfo_set_service_data(void* self, const void* serviceId, char* data) {
+bool q_bluetoothdeviceinfo_set_service_data(void* self, const void* serviceId, const char* data) {
     return QBluetoothDeviceInfo_SetServiceData((QBluetoothDeviceInfo*)self, (QBluetoothUuid*)serviceId, qstring(data));
 }
 
-libqt_map /* of QBluetoothUuid* to char** */ q_bluetoothdeviceinfo_service_data2(const void* self) {
+libqt_map /* of QBluetoothUuid* to const char** */ q_bluetoothdeviceinfo_service_data2(const void* self) {
     // Convert QMultiHash<QBluetoothUuid,QByteArray> to libqt_map
     libqt_map _out = QBluetoothDeviceInfo_ServiceData2((QBluetoothDeviceInfo*)self);
     libqt_map _ret;

@@ -30,7 +30,7 @@ bool q_audiodevice_is_null(const void* self) {
     return QAudioDevice_IsNull((QAudioDevice*)self);
 }
 
-char* q_audiodevice_id(const void* self) {
+const char* q_audiodevice_id(const void* self) {
     libqt_string _str = QAudioDevice_Id((QAudioDevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

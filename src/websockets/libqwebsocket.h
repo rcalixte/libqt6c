@@ -324,9 +324,9 @@ int64_t q_websocket_send_text_message(void* self, const char* message);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#sendBinaryMessage)
 ///
 /// @param self QWebSocket*
-/// @param data char*
+/// @param data const char*
 ///
-int64_t q_websocket_send_binary_message(void* self, char* data);
+int64_t q_websocket_send_binary_message(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#ignoreSslErrors)
 ///
@@ -572,10 +572,10 @@ void q_websocket_on_text_frame_received(void* self, void (*callback)(void*, cons
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#binaryFrameReceived)
 ///
 /// @param self QWebSocket*
-/// @param frame char*
+/// @param frame const char*
 /// @param isLastFrame bool
 ///
-void q_websocket_binary_frame_received(void* self, char* frame, bool isLastFrame);
+void q_websocket_binary_frame_received(void* self, const char* frame, bool isLastFrame);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#binaryFrameReceived)
 ///
@@ -601,9 +601,9 @@ void q_websocket_on_text_message_received(void* self, void (*callback)(void*, co
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#binaryMessageReceived)
 ///
 /// @param self QWebSocket*
-/// @param message char*
+/// @param message const char*
 ///
-void q_websocket_binary_message_received(void* self, char* message);
+void q_websocket_binary_message_received(void* self, const char* message);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#binaryMessageReceived)
 ///
@@ -644,9 +644,9 @@ void q_websocket_on_error_occurred(void* self, void (*callback)(void*, int32_t))
 ///
 /// @param self QWebSocket*
 /// @param elapsedTime uint64_t
-/// @param payload char*
+/// @param payload const char*
 ///
-void q_websocket_pong(void* self, uint64_t elapsedTime, char* payload);
+void q_websocket_pong(void* self, uint64_t elapsedTime, const char* payload);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#pong)
 ///
@@ -794,9 +794,9 @@ void q_websocket_close2(void* self, int32_t closeCode, const char* reason);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#ping)
 ///
 /// @param self QWebSocket*
-/// @param payload char*
+/// @param payload const char*
 ///
-void q_websocket_ping1(void* self, char* payload);
+void q_websocket_ping1(void* self, const char* payload);
 
 /// Inherited from QObject
 ///

@@ -32,7 +32,7 @@ void k_io__filejob_read(void* self, uintptr_t size) {
     KIO__FileJob_Read((KIO__FileJob*)self, size);
 }
 
-void k_io__filejob_write(void* self, char* data) {
+void k_io__filejob_write(void* self, const char* data) {
     KIO__FileJob_Write((KIO__FileJob*)self, qstring(data));
 }
 
@@ -52,7 +52,7 @@ uintptr_t k_io__filejob_size(void* self) {
     return KIO__FileJob_Size((KIO__FileJob*)self);
 }
 
-void k_io__filejob_data(void* self, void* job, char* data) {
+void k_io__filejob_data(void* self, void* job, const char* data) {
     KIO__FileJob_Data((KIO__FileJob*)self, (KIO__Job*)job, qstring(data));
 }
 

@@ -2269,7 +2269,7 @@ void k_rearrangecolumnsproxymodel_on_supported_drop_actions(void* self, int32_t 
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2281,7 +2281,7 @@ void k_rearrangecolumnsproxymodel_on_supported_drop_actions(void* self, int32_t 
 ///
 /// @param self const KRearrangeColumnsProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_rearrangecolumnsproxymodel_role_names(const void* self);
 
@@ -2292,7 +2292,7 @@ libqt_map k_rearrangecolumnsproxymodel_role_names(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2304,7 +2304,7 @@ libqt_map k_rearrangecolumnsproxymodel_role_names(const void* self);
 ///
 /// @param self const KRearrangeColumnsProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_rearrangecolumnsproxymodel_super_role_names(const void* self);
 
@@ -2315,7 +2315,7 @@ libqt_map k_rearrangecolumnsproxymodel_super_role_names(const void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRearrangeColumnsProxyModel*
-/// @param callback libqt_map of int to char* func(KRearrangeColumnsProxyModel* self)
+/// @param callback libqt_map of int to const char* func(KRearrangeColumnsProxyModel* self)
 ///
 void k_rearrangecolumnsproxymodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 

@@ -114,17 +114,17 @@ QUrl* k_urlnavigator_location_url(const void* self);
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#saveLocationState)
 ///
 /// @param self KUrlNavigator*
-/// @param state char*
+/// @param state const char*
 ///
-void k_urlnavigator_save_location_state(void* self, char* state);
+void k_urlnavigator_save_location_state(void* self, const char* state);
 
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#locationState)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KUrlNavigator*
 ///
-char* k_urlnavigator_location_state(const void* self);
+const char* k_urlnavigator_location_state(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#goBack)
 ///
@@ -751,12 +751,12 @@ QUrl* k_urlnavigator_location_url1(const void* self, int historyIndex);
 
 /// [Upstream resources](https://api.kde.org/kurlnavigator.html#locationState)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KUrlNavigator*
 /// @param historyIndex int
 ///
-char* k_urlnavigator_location_state1(const void* self, int historyIndex);
+const char* k_urlnavigator_location_state1(const void* self, int historyIndex);
 
 /// Inherited from QWidget
 ///
@@ -2378,20 +2378,20 @@ void k_urlnavigator_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KUrlNavigator*
 ///
-char* k_urlnavigator_save_geometry(const void* self);
+const char* k_urlnavigator_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KUrlNavigator*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_urlnavigator_restore_geometry(void* self, char* geometry);
+bool k_urlnavigator_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4516,11 +4516,11 @@ void k_urlnavigator_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KUrlNavigator*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_urlnavigator_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_urlnavigator_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4529,11 +4529,11 @@ bool k_urlnavigator_native_event(void* self, char* eventType, void* message, int
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KUrlNavigator*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_urlnavigator_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_urlnavigator_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

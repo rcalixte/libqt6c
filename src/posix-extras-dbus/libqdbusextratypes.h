@@ -26,9 +26,9 @@ QDBusObjectPath* q_dbusobjectpath_new2(const char* path);
 
 /// q_dbusobjectpath_new3 constructs a new QDBusObjectPath object.
 ///
-/// @param path char*
+/// @param path const char*
 ///
-QDBusObjectPath* q_dbusobjectpath_new3(char* path);
+QDBusObjectPath* q_dbusobjectpath_new3(const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusobjectpath.html)
 
@@ -123,9 +123,9 @@ QDBusSignature* q_dbussignature_new2(const char* signature);
 
 /// q_dbussignature_new3 constructs a new QDBusSignature object.
 ///
-/// @param signature char*
+/// @param signature const char*
 ///
-QDBusSignature* q_dbussignature_new3(char* signature);
+QDBusSignature* q_dbussignature_new3(const char* signature);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbussignature.html)
 

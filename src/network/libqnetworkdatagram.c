@@ -6,7 +6,7 @@ QNetworkDatagram* q_networkdatagram_new() {
     return QNetworkDatagram_New();
 }
 
-QNetworkDatagram* q_networkdatagram_new2(char* data) {
+QNetworkDatagram* q_networkdatagram_new2(const char* data) {
     return QNetworkDatagram_New2(qstring(data));
 }
 
@@ -14,11 +14,11 @@ QNetworkDatagram* q_networkdatagram_new3(const void* other) {
     return QNetworkDatagram_New3((QNetworkDatagram*)other);
 }
 
-QNetworkDatagram* q_networkdatagram_new4(char* data, const void* destinationAddress) {
+QNetworkDatagram* q_networkdatagram_new4(const char* data, const void* destinationAddress) {
     return QNetworkDatagram_New4(qstring(data), (QHostAddress*)destinationAddress);
 }
 
-QNetworkDatagram* q_networkdatagram_new5(char* data, const void* destinationAddress, uint16_t port) {
+QNetworkDatagram* q_networkdatagram_new5(const char* data, const void* destinationAddress, uint16_t port) {
     return QNetworkDatagram_New5(qstring(data), (QHostAddress*)destinationAddress, port);
 }
 
@@ -82,18 +82,18 @@ void q_networkdatagram_set_hop_limit(void* self, int count) {
     QNetworkDatagram_SetHopLimit((QNetworkDatagram*)self, count);
 }
 
-char* q_networkdatagram_data(const void* self) {
+const char* q_networkdatagram_data(const void* self) {
     libqt_string _str = QNetworkDatagram_Data((QNetworkDatagram*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_networkdatagram_set_data(void* self, char* data) {
+void q_networkdatagram_set_data(void* self, const char* data) {
     QNetworkDatagram_SetData((QNetworkDatagram*)self, qstring(data));
 }
 
-QNetworkDatagram* q_networkdatagram_make_reply(const void* self, char* payload) {
+QNetworkDatagram* q_networkdatagram_make_reply(const void* self, const char* payload) {
     return QNetworkDatagram_MakeReply((QNetworkDatagram*)self, qstring(payload));
 }
 

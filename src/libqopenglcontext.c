@@ -380,7 +380,7 @@ void q_openglcontext_swap_buffers(void* self, void* surface) {
     QOpenGLContext_SwapBuffers((QOpenGLContext*)self, (QSurface*)surface);
 }
 
-QFunctionPointer q_openglcontext_get_proc_address(const void* self, char* procName) {
+QFunctionPointer q_openglcontext_get_proc_address(const void* self, const char* procName) {
     return (QFunctionPointer)QOpenGLContext_GetProcAddress((QOpenGLContext*)self, qstring(procName));
 }
 
@@ -408,11 +408,11 @@ QOpenGLExtraFunctions* q_openglcontext_extra_functions(const void* self) {
     return QOpenGLContext_ExtraFunctions((QOpenGLContext*)self);
 }
 
-libqt_list /* set of char* */ q_openglcontext_extensions(const void* self) {
+libqt_list /* set of const char* */ q_openglcontext_extensions(const void* self) {
     return QOpenGLContext_Extensions((QOpenGLContext*)self);
 }
 
-bool q_openglcontext_has_extension(const void* self, char* extension) {
+bool q_openglcontext_has_extension(const void* self, const char* extension) {
     return QOpenGLContext_HasExtension((QOpenGLContext*)self, qstring(extension));
 }
 

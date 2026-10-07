@@ -257,24 +257,24 @@ void q_quickwebengineprofile_set_url_request_interceptor(void* self, void* inter
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwebengineprofile.html#urlSchemeHandler)
 ///
 /// @param self const QQuickWebEngineProfile*
-/// @param param1 char*
+/// @param param1 const char*
 ///
-const QWebEngineUrlSchemeHandler* q_quickwebengineprofile_url_scheme_handler(const void* self, char* param1);
+const QWebEngineUrlSchemeHandler* q_quickwebengineprofile_url_scheme_handler(const void* self, const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwebengineprofile.html#installUrlSchemeHandler)
 ///
 /// @param self QQuickWebEngineProfile*
-/// @param scheme char*
+/// @param scheme const char*
 /// @param param2 QWebEngineUrlSchemeHandler*
 ///
-void q_quickwebengineprofile_install_url_scheme_handler(void* self, char* scheme, void* param2);
+void q_quickwebengineprofile_install_url_scheme_handler(void* self, const char* scheme, void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwebengineprofile.html#removeUrlScheme)
 ///
 /// @param self QQuickWebEngineProfile*
-/// @param scheme char*
+/// @param scheme const char*
 ///
-void q_quickwebengineprofile_remove_url_scheme(void* self, char* scheme);
+void q_quickwebengineprofile_remove_url_scheme(void* self, const char* scheme);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickwebengineprofile.html#removeUrlSchemeHandler)
 ///

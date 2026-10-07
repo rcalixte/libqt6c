@@ -820,7 +820,7 @@ void q_scilexercoffeescript_on_disconnect_notify(void* self, void (*callback)(vo
     QsciLexerCoffeeScript_OnDisconnectNotify((QsciLexerCoffeeScript*)self, (intptr_t)callback);
 }
 
-char* q_scilexercoffeescript_text_as_bytes(const void* self, const char* text) {
+const char* q_scilexercoffeescript_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciLexerCoffeeScript_TextAsBytes((QsciLexerCoffeeScript*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

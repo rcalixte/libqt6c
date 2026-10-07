@@ -113,42 +113,42 @@ uintptr_t k_windowinfo_group_leader(const void* self) {
     return KWindowInfo_GroupLeader((KWindowInfo*)self);
 }
 
-char* k_windowinfo_window_class_class(const void* self) {
+const char* k_windowinfo_window_class_class(const void* self) {
     libqt_string _str = KWindowInfo_WindowClassClass((KWindowInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_windowinfo_window_class_name(const void* self) {
+const char* k_windowinfo_window_class_name(const void* self) {
     libqt_string _str = KWindowInfo_WindowClassName((KWindowInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_windowinfo_window_role(const void* self) {
+const char* k_windowinfo_window_role(const void* self) {
     libqt_string _str = KWindowInfo_WindowRole((KWindowInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_windowinfo_client_machine(const void* self) {
+const char* k_windowinfo_client_machine(const void* self) {
     libqt_string _str = KWindowInfo_ClientMachine((KWindowInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_windowinfo_desktop_file_name(const void* self) {
+const char* k_windowinfo_desktop_file_name(const void* self) {
     libqt_string _str = KWindowInfo_DesktopFileName((KWindowInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_windowinfo_gtk_application_id(const void* self) {
+const char* k_windowinfo_gtk_application_id(const void* self) {
     libqt_string _str = KWindowInfo_GtkApplicationId((KWindowInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -159,14 +159,14 @@ int32_t k_windowinfo_pid(const void* self) {
     return KWindowInfo_Pid((KWindowInfo*)self);
 }
 
-char* k_windowinfo_application_menu_service_name(const void* self) {
+const char* k_windowinfo_application_menu_service_name(const void* self) {
     libqt_string _str = KWindowInfo_ApplicationMenuServiceName((KWindowInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_windowinfo_application_menu_object_path(const void* self) {
+const char* k_windowinfo_application_menu_object_path(const void* self) {
     libqt_string _str = KWindowInfo_ApplicationMenuObjectPath((KWindowInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

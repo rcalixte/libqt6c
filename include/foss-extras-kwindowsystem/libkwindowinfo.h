@@ -147,51 +147,51 @@ uintptr_t k_windowinfo_group_leader(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#windowClassClass)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KWindowInfo*
 ///
-char* k_windowinfo_window_class_class(const void* self);
+const char* k_windowinfo_window_class_class(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#windowClassName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KWindowInfo*
 ///
-char* k_windowinfo_window_class_name(const void* self);
+const char* k_windowinfo_window_class_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#windowRole)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KWindowInfo*
 ///
-char* k_windowinfo_window_role(const void* self);
+const char* k_windowinfo_window_role(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#clientMachine)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KWindowInfo*
 ///
-char* k_windowinfo_client_machine(const void* self);
+const char* k_windowinfo_client_machine(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#desktopFileName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KWindowInfo*
 ///
-char* k_windowinfo_desktop_file_name(const void* self);
+const char* k_windowinfo_desktop_file_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#gtkApplicationId)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KWindowInfo*
 ///
-char* k_windowinfo_gtk_application_id(const void* self);
+const char* k_windowinfo_gtk_application_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#pid)
 ///
@@ -201,19 +201,19 @@ int32_t k_windowinfo_pid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#applicationMenuServiceName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KWindowInfo*
 ///
-char* k_windowinfo_application_menu_service_name(const void* self);
+const char* k_windowinfo_application_menu_service_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#applicationMenuObjectPath)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KWindowInfo*
 ///
-char* k_windowinfo_application_menu_object_path(const void* self);
+const char* k_windowinfo_application_menu_object_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowinfo.html#operator-eq)
 ///

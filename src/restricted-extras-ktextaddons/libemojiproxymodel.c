@@ -1206,7 +1206,7 @@ void k_textemoticonscore__emojiproxymodel_on_supported_drag_actions(void* self, 
     TextEmoticonsCore__EmojiProxyModel_OnSupportedDragActions((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_textemoticonscore__emojiproxymodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_textemoticonscore__emojiproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = TextEmoticonsCore__EmojiProxyModel_RoleNames((TextEmoticonsCore__EmojiProxyModel*)self);
     libqt_map _ret;
@@ -1239,7 +1239,7 @@ libqt_map /* of int to char* */ k_textemoticonscore__emojiproxymodel_role_names(
     return _ret;
 }
 
-libqt_map /* of int to char* */ k_textemoticonscore__emojiproxymodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_textemoticonscore__emojiproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = TextEmoticonsCore__EmojiProxyModel_SuperRoleNames((TextEmoticonsCore__EmojiProxyModel*)self);
     libqt_map _ret;
@@ -1272,7 +1272,7 @@ libqt_map /* of int to char* */ k_textemoticonscore__emojiproxymodel_super_role_
     return _ret;
 }
 
-void k_textemoticonscore__emojiproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_textemoticonscore__emojiproxymodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     TextEmoticonsCore__EmojiProxyModel_OnRoleNames((TextEmoticonsCore__EmojiProxyModel*)self, (intptr_t)callback);
 }
 

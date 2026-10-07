@@ -153,14 +153,14 @@ bool q_sslconfiguration_test_ssl_option(const void* self, int32_t option) {
     return QSslConfiguration_TestSslOption((QSslConfiguration*)self, option);
 }
 
-char* q_sslconfiguration_session_ticket(const void* self) {
+const char* q_sslconfiguration_session_ticket(const void* self) {
     libqt_string _str = QSslConfiguration_SessionTicket((QSslConfiguration*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_sslconfiguration_set_session_ticket(void* self, char* sessionTicket) {
+void q_sslconfiguration_set_session_ticket(void* self, const char* sessionTicket) {
     QSslConfiguration_SetSessionTicket((QSslConfiguration*)self, qstring(sessionTicket));
 }
 
@@ -186,14 +186,14 @@ libqt_list /* of QSslEllipticCurve* */ q_sslconfiguration_supported_elliptic_cur
     return _arr;
 }
 
-char* q_sslconfiguration_pre_shared_key_identity_hint(const void* self) {
+const char* q_sslconfiguration_pre_shared_key_identity_hint(const void* self) {
     libqt_string _str = QSslConfiguration_PreSharedKeyIdentityHint((QSslConfiguration*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_sslconfiguration_set_pre_shared_key_identity_hint(void* self, char* hint) {
+void q_sslconfiguration_set_pre_shared_key_identity_hint(void* self, const char* hint) {
     QSslConfiguration_SetPreSharedKeyIdentityHint((QSslConfiguration*)self, qstring(hint));
 }
 
@@ -205,7 +205,7 @@ void q_sslconfiguration_set_diffie_hellman_parameters(void* self, const void* dh
     QSslConfiguration_SetDiffieHellmanParameters((QSslConfiguration*)self, (QSslDiffieHellmanParameters*)dhparams);
 }
 
-libqt_map /* of char* to QVariant* */ q_sslconfiguration_backend_configuration(const void* self) {
+libqt_map /* of const char* to QVariant* */ q_sslconfiguration_backend_configuration(const void* self) {
     // Convert QMap<QByteArray,QVariant> to libqt_map
     libqt_map _out = QSslConfiguration_BackendConfiguration((QSslConfiguration*)self);
     libqt_map _ret;
@@ -238,7 +238,7 @@ libqt_map /* of char* to QVariant* */ q_sslconfiguration_backend_configuration(c
     return _ret;
 }
 
-void q_sslconfiguration_set_backend_configuration_option(void* self, char* name, const void* value) {
+void q_sslconfiguration_set_backend_configuration_option(void* self, const char* name, const void* value) {
     QSslConfiguration_SetBackendConfigurationOption((QSslConfiguration*)self, qstring(name), (QVariant*)value);
 }
 
@@ -325,7 +325,7 @@ const char** q_sslconfiguration_allowed_next_protocols(const void* self) {
     return _ret;
 }
 
-char* q_sslconfiguration_next_negotiated_protocol(const void* self) {
+const char* q_sslconfiguration_next_negotiated_protocol(const void* self) {
     libqt_string _str = QSslConfiguration_NextNegotiatedProtocol((QSslConfiguration*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -344,7 +344,7 @@ bool q_sslconfiguration_add_ca_certificates3(void* self, const char* path, int32
     return QSslConfiguration_AddCaCertificates3((QSslConfiguration*)self, qstring(path), format, syntax);
 }
 
-void q_sslconfiguration_set_backend_configuration1(void* self, libqt_map /* of char* to QVariant* */ backendConfiguration) {
+void q_sslconfiguration_set_backend_configuration1(void* self, libqt_map /* of const char* to QVariant* */ backendConfiguration) {
     // Convert libqt_map to QMap<QByteArray,QVariant>
     libqt_map backendConfiguration_ret;
     backendConfiguration_ret.len = backendConfiguration.len;
@@ -359,7 +359,7 @@ void q_sslconfiguration_set_backend_configuration1(void* self, libqt_map /* of c
         fprintf(stderr, "Failed to allocate memory for map values in q_sslconfiguration_set_backend_configuration1\n");
         abort();
     }
-    char** backendConfiguration_karr = (char**)backendConfiguration.keys;
+    const char** backendConfiguration_karr = (const char**)backendConfiguration.keys;
     libqt_string* backendConfiguration_kdest = (libqt_string*)backendConfiguration_ret.keys;
     QVariant** backendConfiguration_varr = (QVariant**)backendConfiguration.values;
     QVariant** backendConfiguration_vdest = (QVariant**)backendConfiguration_ret.values;

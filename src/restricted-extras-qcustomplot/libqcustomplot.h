@@ -33810,20 +33810,20 @@ void q_customplot_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QCustomPlot*
 ///
-char* q_customplot_save_geometry(const void* self);
+const char* q_customplot_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QCustomPlot*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_customplot_restore_geometry(void* self, char* geometry);
+bool q_customplot_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -35915,11 +35915,11 @@ void q_customplot_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QCustomPlot*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_customplot_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_customplot_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -35928,11 +35928,11 @@ bool q_customplot_native_event(void* self, char* eventType, void* message, intpt
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QCustomPlot*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_customplot_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_customplot_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

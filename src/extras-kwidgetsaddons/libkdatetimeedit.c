@@ -1279,14 +1279,14 @@ void k_datetimeedit_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_datetimeedit_save_geometry(const void* self) {
+const char* k_datetimeedit_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_datetimeedit_restore_geometry(void* self, char* geometry) {
+bool k_datetimeedit_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2240,11 +2240,11 @@ void k_datetimeedit_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KDateTimeEdit_OnHideEvent((KDateTimeEdit*)self, (intptr_t)callback);
 }
 
-bool k_datetimeedit_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_datetimeedit_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KDateTimeEdit_NativeEvent((KDateTimeEdit*)self, qstring(eventType), message, result);
 }
 
-bool k_datetimeedit_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_datetimeedit_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KDateTimeEdit_SuperNativeEvent((KDateTimeEdit*)self, qstring(eventType), message, result);
 }
 

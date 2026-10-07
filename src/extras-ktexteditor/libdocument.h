@@ -129,11 +129,11 @@ const char* k_texteditor__document_mime_type(void* self);
 ///
 /// @warning Use caution when calling this method as it might not be defined.
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KTextEditor__Document*
 ///
-char* k_texteditor__document_checksum(const void* self);
+const char* k_texteditor__document_checksum(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#documentNameChanged)
 ///
@@ -1575,9 +1575,9 @@ bool k_texteditor__document_open_stream(void* self, const char* mimeType, const 
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#writeStream)
 ///
 /// @param self KTextEditor__Document*
-/// @param data char*
+/// @param data const char*
 ///
-bool k_texteditor__document_write_stream(void* self, char* data);
+bool k_texteditor__document_write_stream(void* self, const char* data);
 
 /// Inherited from KParts::ReadOnlyPart
 ///

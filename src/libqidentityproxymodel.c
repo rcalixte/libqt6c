@@ -988,7 +988,7 @@ void q_identityproxymodel_on_supported_drop_actions(void* self, int32_t (*callba
     QIdentityProxyModel_OnSupportedDropActions((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_identityproxymodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_identityproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QIdentityProxyModel_RoleNames((QIdentityProxyModel*)self);
     libqt_map _ret;
@@ -1021,7 +1021,7 @@ libqt_map /* of int to char* */ q_identityproxymodel_role_names(const void* self
     return _ret;
 }
 
-libqt_map /* of int to char* */ q_identityproxymodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_identityproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QIdentityProxyModel_SuperRoleNames((QIdentityProxyModel*)self);
     libqt_map _ret;
@@ -1054,7 +1054,7 @@ libqt_map /* of int to char* */ q_identityproxymodel_super_role_names(const void
     return _ret;
 }
 
-void q_identityproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_identityproxymodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     QIdentityProxyModel_OnRoleNames((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 

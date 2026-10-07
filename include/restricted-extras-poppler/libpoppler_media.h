@@ -40,11 +40,11 @@ bool q_poppler__mediarendition_is_embedded(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MediaRendition.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Poppler__MediaRendition*
 ///
-char* q_poppler__mediarendition_data(const void* self);
+const char* q_poppler__mediarendition_data(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1MediaRendition.html)
 ///

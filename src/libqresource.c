@@ -61,7 +61,7 @@ int64_t q_resource_uncompressed_size(const void* self) {
     return QResource_UncompressedSize((QResource*)self);
 }
 
-char* q_resource_uncompressed_data(const void* self) {
+const char* q_resource_uncompressed_data(const void* self) {
     libqt_string _str = QResource_UncompressedData((QResource*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

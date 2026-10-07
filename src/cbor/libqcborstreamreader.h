@@ -36,9 +36,9 @@ QCborStreamReader* q_cborstreamreader_new3(unsigned char* data, intptr_t lenVal)
 
 /// q_cborstreamreader_new4 constructs a new QCborStreamReader object.
 ///
-/// @param data char*
+/// @param data const char*
 ///
-QCborStreamReader* q_cborstreamreader_new4(char* data);
+QCborStreamReader* q_cborstreamreader_new4(const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html)
 
@@ -64,9 +64,9 @@ QIODevice* q_cborstreamreader_device(const void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#addData)
 ///
 /// @param self QCborStreamReader*
-/// @param data char*
+/// @param data const char*
 ///
-void q_cborstreamreader_add_data(void* self, char* data);
+void q_cborstreamreader_add_data(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#addData)
 ///
@@ -309,16 +309,16 @@ bool q_cborstreamreader_read_and_append_to_string(void* self, const char* dst);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#readAndAppendToUtf8String)
 ///
 /// @param self QCborStreamReader*
-/// @param dst char*
+/// @param dst const char*
 ///
-bool q_cborstreamreader_read_and_append_to_utf8_string(void* self, char* dst);
+bool q_cborstreamreader_read_and_append_to_utf8_string(void* self, const char* dst);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#readAndAppendToByteArray)
 ///
 /// @param self QCborStreamReader*
-/// @param dst char*
+/// @param dst const char*
 ///
-bool q_cborstreamreader_read_and_append_to_byte_array(void* self, char* dst);
+bool q_cborstreamreader_read_and_append_to_byte_array(void* self, const char* dst);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#currentStringChunkSize)
 ///
@@ -390,19 +390,19 @@ const char* q_cborstreamreader_read_all_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#readAllUtf8String)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QCborStreamReader*
 ///
-char* q_cborstreamreader_read_all_utf8_string(void* self);
+const char* q_cborstreamreader_read_all_utf8_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#readAllByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QCborStreamReader*
 ///
-char* q_cborstreamreader_read_all_byte_array(void* self);
+const char* q_cborstreamreader_read_all_byte_array(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#next)
 ///

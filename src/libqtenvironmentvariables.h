@@ -12,11 +12,11 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtenvironmentvariables.html#qgetenv)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param varName const char*
 ///
-char* q_qtenvironmentvariables_qgetenv(const char* varName);
+const char* q_qtenvironmentvariables_qgetenv(const char* varName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtenvironmentvariables.html#qEnvironmentVariable)
 ///
@@ -38,9 +38,9 @@ const char* q_qtenvironmentvariables_q_environment_variable2(const char* varName
 /// [Upstream resources](https://doc.qt.io/qt-6/qtenvironmentvariables.html#qputenv)
 ///
 /// @param varName const char*
-/// @param value char*
+/// @param value const char*
 ///
-bool q_qtenvironmentvariables_qputenv(const char* varName, char* value);
+bool q_qtenvironmentvariables_qputenv(const char* varName, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtenvironmentvariables.html#qunsetenv)
 ///

@@ -118,7 +118,7 @@ void q_webengineview_set_html(void* self, const char* html) {
     QWebEngineView_SetHtml((QWebEngineView*)self, qstring(html));
 }
 
-void q_webengineview_set_content(void* self, char* data) {
+void q_webengineview_set_content(void* self, const char* data) {
     QWebEngineView_SetContent((QWebEngineView*)self, qstring(data));
 }
 
@@ -208,7 +208,7 @@ void q_webengineview_print_to_pdf(void* self, const char* filePath) {
     QWebEngineView_PrintToPdf((QWebEngineView*)self, qstring(filePath));
 }
 
-void q_webengineview_print_to_pdf2(void* self, void (*resultCallback)(char* funcparam1)) {
+void q_webengineview_print_to_pdf2(void* self, void (*resultCallback)(const char* funcparam1)) {
     QWebEngineView_PrintToPdf2((QWebEngineView*)self, (intptr_t)resultCallback);
 }
 
@@ -474,11 +474,11 @@ void q_webengineview_set_html2(void* self, const char* html, const void* baseUrl
     QWebEngineView_SetHtml2((QWebEngineView*)self, qstring(html), (QUrl*)baseUrl);
 }
 
-void q_webengineview_set_content2(void* self, char* data, const char* mimeType) {
+void q_webengineview_set_content2(void* self, const char* data, const char* mimeType) {
     QWebEngineView_SetContent2((QWebEngineView*)self, qstring(data), qstring(mimeType));
 }
 
-void q_webengineview_set_content3(void* self, char* data, const char* mimeType, const void* baseUrl) {
+void q_webengineview_set_content3(void* self, const char* data, const char* mimeType, const void* baseUrl) {
     QWebEngineView_SetContent3((QWebEngineView*)self, qstring(data), qstring(mimeType), (QUrl*)baseUrl);
 }
 
@@ -502,11 +502,11 @@ void q_webengineview_print_to_pdf3(void* self, const char* filePath, const void*
     QWebEngineView_PrintToPdf3((QWebEngineView*)self, qstring(filePath), (QPageLayout*)layout, (QPageRanges*)ranges);
 }
 
-void q_webengineview_print_to_pdf23(void* self, void (*resultCallback)(char* funcparam1), const void* layout) {
+void q_webengineview_print_to_pdf23(void* self, void (*resultCallback)(const char* funcparam1), const void* layout) {
     QWebEngineView_PrintToPdf23((QWebEngineView*)self, (intptr_t)resultCallback, (QPageLayout*)layout);
 }
 
-void q_webengineview_print_to_pdf32(void* self, void (*resultCallback)(char* funcparam1), const void* layout, const void* ranges) {
+void q_webengineview_print_to_pdf32(void* self, void (*resultCallback)(const char* funcparam1), const void* layout, const void* ranges) {
     QWebEngineView_PrintToPdf32((QWebEngineView*)self, (intptr_t)resultCallback, (QPageLayout*)layout, (QPageRanges*)ranges);
 }
 
@@ -1284,14 +1284,14 @@ void q_webengineview_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_webengineview_save_geometry(const void* self) {
+const char* q_webengineview_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_webengineview_restore_geometry(void* self, char* geometry) {
+bool q_webengineview_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2161,11 +2161,11 @@ void q_webengineview_on_action_event(void* self, void (*callback)(void*, void*))
     QWebEngineView_OnActionEvent((QWebEngineView*)self, (intptr_t)callback);
 }
 
-bool q_webengineview_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_webengineview_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QWebEngineView_NativeEvent((QWebEngineView*)self, qstring(eventType), message, result);
 }
 
-bool q_webengineview_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_webengineview_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QWebEngineView_SuperNativeEvent((QWebEngineView*)self, qstring(eventType), message, result);
 }
 

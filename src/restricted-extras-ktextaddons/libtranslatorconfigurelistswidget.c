@@ -860,14 +860,14 @@ void k_texttranslator__translatorconfigurelistswidget_set_geometry2(void* self, 
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_texttranslator__translatorconfigurelistswidget_save_geometry(const void* self) {
+const char* k_texttranslator__translatorconfigurelistswidget_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_texttranslator__translatorconfigurelistswidget_restore_geometry(void* self, char* geometry) {
+bool k_texttranslator__translatorconfigurelistswidget_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1857,11 +1857,11 @@ void k_texttranslator__translatorconfigurelistswidget_on_hide_event(void* self, 
     TextTranslator__TranslatorConfigureListsWidget_OnHideEvent((TextTranslator__TranslatorConfigureListsWidget*)self, (intptr_t)callback);
 }
 
-bool k_texttranslator__translatorconfigurelistswidget_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_texttranslator__translatorconfigurelistswidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return TextTranslator__TranslatorConfigureListsWidget_NativeEvent((TextTranslator__TranslatorConfigureListsWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_texttranslator__translatorconfigurelistswidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_texttranslator__translatorconfigurelistswidget_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return TextTranslator__TranslatorConfigureListsWidget_SuperNativeEvent((TextTranslator__TranslatorConfigureListsWidget*)self, qstring(eventType), message, result);
 }
 

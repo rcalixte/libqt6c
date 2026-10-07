@@ -76,9 +76,9 @@ void k_io__commandlauncherjob_set_desktop_name(void* self, const char* desktopNa
 /// [Upstream resources](https://api.kde.org/kio-commandlauncherjob.html#setStartupId)
 ///
 /// @param self KIO__CommandLauncherJob*
-/// @param startupId char*
+/// @param startupId const char*
 ///
-void k_io__commandlauncherjob_set_startup_id(void* self, char* startupId);
+void k_io__commandlauncherjob_set_startup_id(void* self, const char* startupId);
 
 /// [Upstream resources](https://api.kde.org/kio-commandlauncherjob.html#setWorkingDirectory)
 ///

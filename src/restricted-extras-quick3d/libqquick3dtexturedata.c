@@ -66,7 +66,7 @@ const char* q_quick3dtexturedata_texture_data(const void* self) {
     return _ret;
 }
 
-void q_quick3dtexturedata_set_texture_data(void* self, char* data) {
+void q_quick3dtexturedata_set_texture_data(void* self, const char* data) {
     QQuick3DTextureData_SetTextureData((QQuick3DTextureData*)self, qstring(data));
 }
 

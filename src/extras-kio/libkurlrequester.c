@@ -1099,14 +1099,14 @@ void k_urlrequester_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_urlrequester_save_geometry(const void* self) {
+const char* k_urlrequester_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_urlrequester_restore_geometry(void* self, char* geometry) {
+bool k_urlrequester_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2096,11 +2096,11 @@ void k_urlrequester_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KUrlRequester_OnHideEvent((KUrlRequester*)self, (intptr_t)callback);
 }
 
-bool k_urlrequester_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_urlrequester_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KUrlRequester_NativeEvent((KUrlRequester*)self, qstring(eventType), message, result);
 }
 
-bool k_urlrequester_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_urlrequester_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KUrlRequester_SuperNativeEvent((KUrlRequester*)self, qstring(eventType), message, result);
 }
 
@@ -3331,14 +3331,14 @@ void k_urlcomborequester_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_urlcomborequester_save_geometry(const void* self) {
+const char* k_urlcomborequester_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_urlcomborequester_restore_geometry(void* self, char* geometry) {
+bool k_urlcomborequester_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -4364,11 +4364,11 @@ void k_urlcomborequester_on_hide_event(void* self, void (*callback)(void*, void*
     KUrlComboRequester_OnHideEvent((KUrlComboRequester*)self, (intptr_t)callback);
 }
 
-bool k_urlcomborequester_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_urlcomborequester_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KUrlComboRequester_NativeEvent((KUrlComboRequester*)self, qstring(eventType), message, result);
 }
 
-bool k_urlcomborequester_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_urlcomborequester_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KUrlComboRequester_SuperNativeEvent((KUrlComboRequester*)self, qstring(eventType), message, result);
 }
 

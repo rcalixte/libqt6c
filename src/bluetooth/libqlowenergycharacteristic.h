@@ -45,11 +45,11 @@ QBluetoothUuid* q_lowenergycharacteristic_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristic.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QLowEnergyCharacteristic*
 ///
-char* q_lowenergycharacteristic_value(const void* self);
+const char* q_lowenergycharacteristic_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristic.html#properties)
 ///

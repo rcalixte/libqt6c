@@ -1166,14 +1166,14 @@ void q_abstractbutton_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_abstractbutton_save_geometry(const void* self) {
+const char* q_abstractbutton_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_abstractbutton_restore_geometry(void* self, char* geometry) {
+bool q_abstractbutton_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2055,11 +2055,11 @@ void q_abstractbutton_on_hide_event(void* self, void (*callback)(void*, void*)) 
     QAbstractButton_OnHideEvent((QAbstractButton*)self, (intptr_t)callback);
 }
 
-bool q_abstractbutton_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_abstractbutton_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QAbstractButton_NativeEvent((QAbstractButton*)self, qstring(eventType), message, result);
 }
 
-bool q_abstractbutton_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_abstractbutton_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QAbstractButton_SuperNativeEvent((QAbstractButton*)self, qstring(eventType), message, result);
 }
 

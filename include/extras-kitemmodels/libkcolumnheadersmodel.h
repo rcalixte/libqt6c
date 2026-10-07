@@ -154,7 +154,7 @@ QVariant* k_columnheadersmodel_super_data(const void* self, const void* index, i
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -164,7 +164,7 @@ QVariant* k_columnheadersmodel_super_data(const void* self, const void* index, i
 ///
 /// @param self const KColumnHeadersModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_columnheadersmodel_role_names(const void* self);
 
@@ -173,7 +173,7 @@ libqt_map k_columnheadersmodel_role_names(const void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KColumnHeadersModel*
-/// @param callback libqt_map of int to char* func(const KColumnHeadersModel* self)
+/// @param callback libqt_map of int to const char* func(const KColumnHeadersModel* self)
 ///
 void k_columnheadersmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
@@ -183,7 +183,7 @@ void k_columnheadersmodel_on_role_names(void* self, libqt_map (*callback)(const 
 ///
 /// @param self const KColumnHeadersModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_columnheadersmodel_super_role_names(const void* self);
 

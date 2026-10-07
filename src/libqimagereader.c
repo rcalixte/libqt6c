@@ -19,11 +19,11 @@ QImageReader* q_imagereader_new3(const char* fileName) {
     return QImageReader_New3(qstring(fileName));
 }
 
-QImageReader* q_imagereader_new4(void* device, char* format) {
+QImageReader* q_imagereader_new4(void* device, const char* format) {
     return QImageReader_New4((QIODevice*)device, qstring(format));
 }
 
-QImageReader* q_imagereader_new5(const char* fileName, char* format) {
+QImageReader* q_imagereader_new5(const char* fileName, const char* format) {
     return QImageReader_New5(qstring(fileName), qstring(format));
 }
 
@@ -34,11 +34,11 @@ const char* q_imagereader_tr(const char* sourceText) {
     return _ret;
 }
 
-void q_imagereader_set_format(void* self, char* format) {
+void q_imagereader_set_format(void* self, const char* format) {
     QImageReader_SetFormat((QImageReader*)self, qstring(format));
 }
 
-char* q_imagereader_format(const void* self) {
+const char* q_imagereader_format(const void* self) {
     libqt_string _str = QImageReader_Format((QImageReader*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -168,7 +168,7 @@ bool q_imagereader_auto_transform(const void* self) {
     return QImageReader_AutoTransform((QImageReader*)self);
 }
 
-char* q_imagereader_sub_type(const void* self) {
+const char* q_imagereader_sub_type(const void* self) {
     libqt_string _str = QImageReader_SubType((QImageReader*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -247,14 +247,14 @@ bool q_imagereader_supports_option(const void* self, int32_t option) {
     return QImageReader_SupportsOption((QImageReader*)self, option);
 }
 
-char* q_imagereader_image_format2(const char* fileName) {
+const char* q_imagereader_image_format2(const char* fileName) {
     libqt_string _str = QImageReader_ImageFormat2(qstring(fileName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_imagereader_image_format3(void* device) {
+const char* q_imagereader_image_format3(void* device) {
     libqt_string _str = QImageReader_ImageFormat3((QIODevice*)device);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -295,7 +295,7 @@ const char** q_imagereader_supported_mime_types() {
     return _ret;
 }
 
-const char** q_imagereader_image_formats_for_mime_type(char* mimeType) {
+const char** q_imagereader_image_formats_for_mime_type(const char* mimeType) {
     libqt_list _arr = QImageReader_ImageFormatsForMimeType(qstring(mimeType));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));

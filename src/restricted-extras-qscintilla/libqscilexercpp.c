@@ -920,7 +920,7 @@ void q_scilexercpp_on_disconnect_notify(void* self, void (*callback)(void*, cons
     QsciLexerCPP_OnDisconnectNotify((QsciLexerCPP*)self, (intptr_t)callback);
 }
 
-char* q_scilexercpp_text_as_bytes(const void* self, const char* text) {
+const char* q_scilexercpp_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciLexerCPP_TextAsBytes((QsciLexerCPP*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -19,9 +19,9 @@ QLowEnergyDescriptorData* q_lowenergydescriptordata_new();
 /// q_lowenergydescriptordata_new2 constructs a new QLowEnergyDescriptorData object.
 ///
 /// @param uuid QBluetoothUuid*
-/// @param value char*
+/// @param value const char*
 ///
-QLowEnergyDescriptorData* q_lowenergydescriptordata_new2(const void* uuid, char* value);
+QLowEnergyDescriptorData* q_lowenergydescriptordata_new2(const void* uuid, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html)
 
@@ -40,18 +40,18 @@ void q_lowenergydescriptordata_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QLowEnergyDescriptorData*
 ///
-char* q_lowenergydescriptordata_value(const void* self);
+const char* q_lowenergydescriptordata_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#setValue)
 ///
 /// @param self QLowEnergyDescriptorData*
-/// @param value char*
+/// @param value const char*
 ///
-void q_lowenergydescriptordata_set_value(void* self, char* value);
+void q_lowenergydescriptordata_set_value(void* self, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#uuid)
 ///

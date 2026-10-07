@@ -60,7 +60,7 @@ void k_filemetadata__extractionresult_on_add_type(void* self, void (*callback)(v
     KFileMetaData__ExtractionResult_OnAddType((KFileMetaData__ExtractionResult*)self, (intptr_t)callback);
 }
 
-libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to char* */ k_filemetadata__extractionresult_image_data(const void* self) {
+libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to const char* */ k_filemetadata__extractionresult_image_data(const void* self) {
     // Convert QMap<KFileMetaData::EmbeddedImageData::ImageType,QByteArray> to libqt_map
     libqt_map _out = KFileMetaData__ExtractionResult_ImageData((KFileMetaData__ExtractionResult*)self);
     libqt_map _ret;

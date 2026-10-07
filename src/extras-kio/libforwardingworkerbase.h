@@ -12,11 +12,11 @@
 
 /// k_io__forwardingworkerbase_new constructs a new KIO::ForwardingWorkerBase object.
 ///
-/// @param protocol char*
-/// @param poolSocket char*
-/// @param appSocket char*
+/// @param protocol const char*
+/// @param poolSocket const char*
+/// @param appSocket const char*
 ///
-KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_new(char* protocol, char* poolSocket, char* appSocket);
+KIO__ForwardingWorkerBase* k_io__forwardingworkerbase_new(const char* protocol, const char* poolSocket, const char* appSocket);
 
 /// Upcasts to a KIO::WorkerBase object
 ///
@@ -998,9 +998,9 @@ void k_io__forwardingworkerbase_dispatch_loop(void* self);
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#data)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__forwardingworkerbase_data(void* self, char* data);
+void k_io__forwardingworkerbase_data(void* self, const char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -1335,9 +1335,9 @@ void k_io__forwardingworkerbase_set_timeout_special_command(void* self, int time
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#readData)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param buffer char*
+/// @param buffer const char*
 ///
-int32_t k_io__forwardingworkerbase_read_data(void* self, char* buffer);
+int32_t k_io__forwardingworkerbase_read_data(void* self, const char* buffer);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -1399,9 +1399,9 @@ bool k_io__forwardingworkerbase_cache_authentication(void* self, const void* inf
 /// @param self KIO__ForwardingWorkerBase*
 /// @param expected1 int
 /// @param expected2 int
-/// @param data char*
+/// @param data const char*
 ///
-int32_t k_io__forwardingworkerbase_wait_for_answer(void* self, int expected1, int expected2, char* data);
+int32_t k_io__forwardingworkerbase_wait_for_answer(void* self, int expected1, int expected2, const char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -1578,9 +1578,9 @@ const char* k_io__forwardingworkerbase_config_value22(const void* self, const ch
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param timeout int
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__forwardingworkerbase_set_timeout_special_command2(void* self, int timeout, char* data);
+void k_io__forwardingworkerbase_set_timeout_special_command2(void* self, int timeout, const char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -1599,10 +1599,10 @@ int32_t k_io__forwardingworkerbase_open_password_dialog2(void* self, void* info,
 /// @param self KIO__ForwardingWorkerBase*
 /// @param expected1 int
 /// @param expected2 int
-/// @param data char*
+/// @param data const char*
 /// @param pCmd int*
 ///
-int32_t k_io__forwardingworkerbase_wait_for_answer4(void* self, int expected1, int expected2, char* data, int* pCmd);
+int32_t k_io__forwardingworkerbase_wait_for_answer4(void* self, int expected1, int expected2, const char* data, int* pCmd);
 
 /// Inherited from QObject
 ///
@@ -2050,9 +2050,9 @@ void k_io__forwardingworkerbase_on_read(void* self, KIO__WorkerResult* (*callbac
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param data char*
+/// @param data const char*
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_write(void* self, char* data);
+KIO__WorkerResult* k_io__forwardingworkerbase_write(void* self, const char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2061,9 +2061,9 @@ KIO__WorkerResult* k_io__forwardingworkerbase_write(void* self, char* data);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param data char*
+/// @param data const char*
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_super_write(void* self, char* data);
+KIO__WorkerResult* k_io__forwardingworkerbase_super_write(void* self, const char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2227,9 +2227,9 @@ void k_io__forwardingworkerbase_on_chown(void* self, KIO__WorkerResult* (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param data char*
+/// @param data const char*
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_special(void* self, char* data);
+KIO__WorkerResult* k_io__forwardingworkerbase_special(void* self, const char* data);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2238,9 +2238,9 @@ KIO__WorkerResult* k_io__forwardingworkerbase_special(void* self, char* data);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param data char*
+/// @param data const char*
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_super_special(void* self, char* data);
+KIO__WorkerResult* k_io__forwardingworkerbase_super_special(void* self, const char* data);
 
 /// Inherited from KIO::WorkerBase
 ///

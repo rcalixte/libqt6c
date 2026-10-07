@@ -124,9 +124,9 @@ QNetworkReply* k_attica__platformdependent_post(void* self, const void* request,
 ///
 /// @param self Attica__PlatformDependent*
 /// @param request QNetworkRequest*
-/// @param data char*
+/// @param data const char*
 ///
-QNetworkReply* k_attica__platformdependent_post2(void* self, const void* request, char* data);
+QNetworkReply* k_attica__platformdependent_post2(void* self, const void* request, const char* data);
 
 /// [Upstream resources](https://api.kde.org/attica-platformdependent.html#setNam)
 ///

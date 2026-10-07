@@ -16,7 +16,7 @@ QRawFont* q_rawfont_new2(const char* fileName, double pixelSize) {
     return QRawFont_New2(qstring(fileName), pixelSize);
 }
 
-QRawFont* q_rawfont_new3(char* fontData, double pixelSize) {
+QRawFont* q_rawfont_new3(const char* fontData, double pixelSize) {
     return QRawFont_New3(qstring(fontData), pixelSize);
 }
 
@@ -28,7 +28,7 @@ QRawFont* q_rawfont_new5(const char* fileName, double pixelSize, int32_t hinting
     return QRawFont_New5(qstring(fileName), pixelSize, hintingPreference);
 }
 
-QRawFont* q_rawfont_new6(char* fontData, double pixelSize, int32_t hintingPreference) {
+QRawFont* q_rawfont_new6(const char* fontData, double pixelSize, int32_t hintingPreference) {
     return QRawFont_New6(qstring(fontData), pixelSize, hintingPreference);
 }
 
@@ -169,7 +169,7 @@ void q_rawfont_load_from_file(void* self, const char* fileName, double pixelSize
     QRawFont_LoadFromFile((QRawFont*)self, qstring(fileName), pixelSize, hintingPreference);
 }
 
-void q_rawfont_load_from_data(void* self, char* fontData, double pixelSize, int32_t hintingPreference) {
+void q_rawfont_load_from_data(void* self, const char* fontData, double pixelSize, int32_t hintingPreference) {
     QRawFont_LoadFromData((QRawFont*)self, qstring(fontData), pixelSize, hintingPreference);
 }
 
@@ -186,14 +186,14 @@ libqt_list /* of enum QFontDatabase__WritingSystem */ q_rawfont_supported_writin
     return _arr;
 }
 
-char* q_rawfont_font_table(const void* self, const char* tagName) {
+const char* q_rawfont_font_table(const void* self, const char* tagName) {
     libqt_string _str = QRawFont_FontTable((QRawFont*)self, tagName);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_rawfont_font_table2(const void* self, void* tag) {
+const char* q_rawfont_font_table2(const void* self, void* tag) {
     libqt_string _str = QRawFont_FontTable2((QRawFont*)self, (QFont__Tag*)tag);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

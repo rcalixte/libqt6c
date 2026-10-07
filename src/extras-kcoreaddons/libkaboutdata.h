@@ -607,9 +607,9 @@ KAboutData* k_aboutdata_set_program_logo(void* self, const void* image);
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#setVersion)
 ///
 /// @param self KAboutData*
-/// @param version char*
+/// @param version const char*
 ///
-KAboutData* k_aboutdata_set_version(void* self, char* version);
+KAboutData* k_aboutdata_set_version(void* self, const char* version);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#setShortDescription)
 ///
@@ -672,23 +672,23 @@ KAboutData* k_aboutdata_set_homepage(void* self, const char* homepage);
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#setBugAddress)
 ///
 /// @param self KAboutData*
-/// @param bugAddress char*
+/// @param bugAddress const char*
 ///
-KAboutData* k_aboutdata_set_bug_address(void* self, char* bugAddress);
+KAboutData* k_aboutdata_set_bug_address(void* self, const char* bugAddress);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#setOrganizationDomain)
 ///
 /// @param self KAboutData*
-/// @param domain char*
+/// @param domain const char*
 ///
-KAboutData* k_aboutdata_set_organization_domain(void* self, char* domain);
+KAboutData* k_aboutdata_set_organization_domain(void* self, const char* domain);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#setProductName)
 ///
 /// @param self KAboutData*
-/// @param name char*
+/// @param name const char*
 ///
-KAboutData* k_aboutdata_set_product_name(void* self, char* name);
+KAboutData* k_aboutdata_set_product_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#componentName)
 ///

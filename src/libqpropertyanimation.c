@@ -12,7 +12,7 @@ QPropertyAnimation* q_propertyanimation_new() {
     return QPropertyAnimation_New();
 }
 
-QPropertyAnimation* q_propertyanimation_new2(void* target, char* propertyName) {
+QPropertyAnimation* q_propertyanimation_new2(void* target, const char* propertyName) {
     return QPropertyAnimation_New2((QObject*)target, qstring(propertyName));
 }
 
@@ -20,7 +20,7 @@ QPropertyAnimation* q_propertyanimation_new3(void* parent) {
     return QPropertyAnimation_New3((QObject*)parent);
 }
 
-QPropertyAnimation* q_propertyanimation_new4(void* target, char* propertyName, void* parent) {
+QPropertyAnimation* q_propertyanimation_new4(void* target, const char* propertyName, void* parent) {
     return QPropertyAnimation_New4((QObject*)target, qstring(propertyName), (QObject*)parent);
 }
 
@@ -75,14 +75,14 @@ void q_propertyanimation_set_target_object(void* self, void* target) {
     QPropertyAnimation_SetTargetObject((QPropertyAnimation*)self, (QObject*)target);
 }
 
-char* q_propertyanimation_property_name(const void* self) {
+const char* q_propertyanimation_property_name(const void* self) {
     libqt_string _str = QPropertyAnimation_PropertyName((QPropertyAnimation*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_propertyanimation_set_property_name(void* self, char* propertyName) {
+void q_propertyanimation_set_property_name(void* self, const char* propertyName) {
     QPropertyAnimation_SetPropertyName((QPropertyAnimation*)self, qstring(propertyName));
 }
 

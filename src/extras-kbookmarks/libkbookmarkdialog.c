@@ -957,14 +957,14 @@ void k_bookmarkdialog_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_bookmarkdialog_save_geometry(const void* self) {
+const char* k_bookmarkdialog_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_bookmarkdialog_restore_geometry(void* self, char* geometry) {
+bool k_bookmarkdialog_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2014,11 +2014,11 @@ void k_bookmarkdialog_on_hide_event(void* self, void (*callback)(void*, void*)) 
     KBookmarkDialog_OnHideEvent((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
-bool k_bookmarkdialog_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_bookmarkdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KBookmarkDialog_NativeEvent((KBookmarkDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_bookmarkdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_bookmarkdialog_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KBookmarkDialog_SuperNativeEvent((KBookmarkDialog*)self, qstring(eventType), message, result);
 }
 

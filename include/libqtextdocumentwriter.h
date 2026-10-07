@@ -19,9 +19,9 @@ QTextDocumentWriter* q_textdocumentwriter_new();
 /// q_textdocumentwriter_new2 constructs a new QTextDocumentWriter object.
 ///
 /// @param device QIODevice*
-/// @param format char*
+/// @param format const char*
 ///
-QTextDocumentWriter* q_textdocumentwriter_new2(void* device, char* format);
+QTextDocumentWriter* q_textdocumentwriter_new2(void* device, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html)
 
@@ -36,24 +36,24 @@ QTextDocumentWriter* q_textdocumentwriter_new3(const char* fileName);
 /// q_textdocumentwriter_new4 constructs a new QTextDocumentWriter object.
 ///
 /// @param fileName const char*
-/// @param format char*
+/// @param format const char*
 ///
-QTextDocumentWriter* q_textdocumentwriter_new4(const char* fileName, char* format);
+QTextDocumentWriter* q_textdocumentwriter_new4(const char* fileName, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#setFormat)
 ///
 /// @param self QTextDocumentWriter*
-/// @param format char*
+/// @param format const char*
 ///
-void q_textdocumentwriter_set_format(void* self, char* format);
+void q_textdocumentwriter_set_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#format)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QTextDocumentWriter*
 ///
-char* q_textdocumentwriter_format(const void* self);
+const char* q_textdocumentwriter_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#setDevice)
 ///

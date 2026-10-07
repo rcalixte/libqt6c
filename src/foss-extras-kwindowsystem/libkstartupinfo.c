@@ -61,26 +61,26 @@ void k_startupinfo_app_started() {
     KStartupInfo_AppStarted();
 }
 
-void k_startupinfo_app_started2(char* startup_id) {
+void k_startupinfo_app_started2(const char* startup_id) {
     KStartupInfo_AppStarted2(qstring(startup_id));
 }
 
-void k_startupinfo_set_startup_id(char* startup_id) {
+void k_startupinfo_set_startup_id(const char* startup_id) {
     KStartupInfo_SetStartupId(qstring(startup_id));
 }
 
-void k_startupinfo_set_new_startup_id(void* window, char* startup_id) {
+void k_startupinfo_set_new_startup_id(void* window, const char* startup_id) {
     KStartupInfo_SetNewStartupId((QWindow*)window, qstring(startup_id));
 }
 
-char* k_startupinfo_create_new_startup_id() {
+const char* k_startupinfo_create_new_startup_id() {
     libqt_string _str = KStartupInfo_CreateNewStartupId();
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_startupinfo_create_new_startup_id_for_timestamp(uint32_t timestamp) {
+const char* k_startupinfo_create_new_startup_id_for_timestamp(uint32_t timestamp) {
     libqt_string _str = KStartupInfo_CreateNewStartupIdForTimestamp(timestamp);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -151,7 +151,7 @@ void k_startupinfo_set_timeout(void* self, uint32_t secs) {
     KStartupInfo_SetTimeout((KStartupInfo*)self, secs);
 }
 
-char* k_startupinfo_window_startup_id(uintptr_t w) {
+const char* k_startupinfo_window_startup_id(uintptr_t w) {
     libqt_string _str = KStartupInfo_WindowStartupId(w);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -560,7 +560,7 @@ bool k_startupinfoid_operator_lesser(const void* self, const void* id) {
     return KStartupInfoId_OperatorLesser((KStartupInfoId*)self, (KStartupInfoId*)id);
 }
 
-void k_startupinfoid_init_id1(void* self, char* id) {
+void k_startupinfoid_init_id1(void* self, const char* id) {
     KStartupInfoId_InitId1((KStartupInfoId*)self, qstring(id));
 }
 
@@ -649,7 +649,7 @@ int32_t k_startupinfodata_desktop(const void* self) {
     return KStartupInfoData_Desktop((KStartupInfoData*)self);
 }
 
-void k_startupinfodata_set_w_m_class(void* self, char* wmclass) {
+void k_startupinfodata_set_w_m_class(void* self, const char* wmclass) {
     KStartupInfoData_SetWMClass((KStartupInfoData*)self, qstring(wmclass));
 }
 
@@ -660,7 +660,7 @@ const char* k_startupinfodata_find_w_m_class(const void* self) {
     return _ret;
 }
 
-char* k_startupinfodata_w_m_class(const void* self) {
+const char* k_startupinfodata_w_m_class(const void* self) {
     libqt_string _str = KStartupInfoData_WMClass((KStartupInfoData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -684,7 +684,7 @@ void k_startupinfodata_set_hostname(void* self) {
     KStartupInfoData_SetHostname((KStartupInfoData*)self);
 }
 
-char* k_startupinfodata_hostname(const void* self) {
+const char* k_startupinfodata_hostname(const void* self) {
     libqt_string _str = KStartupInfoData_Hostname((KStartupInfoData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -734,7 +734,7 @@ void k_startupinfodata_operator_assign(void* self, const void* data) {
     KStartupInfoData_OperatorAssign((KStartupInfoData*)self, (KStartupInfoData*)data);
 }
 
-void k_startupinfodata_set_hostname1(void* self, char* hostname) {
+void k_startupinfodata_set_hostname1(void* self, const char* hostname) {
     KStartupInfoData_SetHostname1((KStartupInfoData*)self, qstring(hostname));
 }
 
