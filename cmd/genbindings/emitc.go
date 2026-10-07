@@ -275,13 +275,9 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 	}
 
 	if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" ||
-		p.ParameterType == "QLatin1String" || p.ParameterType == "QLatin1StringView" {
-		return "char*"
-	}
-
-	if p.ParameterType == "QString" || p.ParameterType == "QByteArrayView" ||
-		p.ParameterType == "QStringView" || p.ParameterType == "SignOn::MethodName" ||
-		p.ParameterType == "QAnyStringView" {
+		p.ParameterType == "QLatin1String" || p.ParameterType == "QLatin1StringView" ||
+		p.ParameterType == "QString" || p.ParameterType == "QStringView" ||
+		p.ParameterType == "SignOn::MethodName" || p.ParameterType == "QAnyStringView" {
 		return "const char*"
 	}
 
@@ -571,14 +567,8 @@ func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) str
 
 		if isQMulti {
 			if inner == "QString" || inner == "QByteArray" {
-				var maybeConst, freeType string
-				if inner == "QString" {
-					maybeConst = "const "
-					freeType = "libqt_"
-				}
-
-				innerFree = "\n///     for (size_t j = 0; ((" + maybeConst + "char**)map" + deRef + "values)[i][j] != NULL; j++)"
-				innerFree += "\n///         " + freeType + "free((map" + deRef + "values)[i][j]);"
+				innerFree = "\n///     for (size_t j = 0; ((const char**)map" + deRef + "values)[i][j] != NULL; j++)"
+				innerFree += "\n///         libqt_free((map" + deRef + "values)[i][j]);"
 
 			} else if IsKnownClass(inner) {
 				innerFree = "\n///     for (size_t j = 0; ((" + inner + "**)map" + deRef + "values)[i][j] != NULL; j++)"
