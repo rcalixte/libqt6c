@@ -1134,20 +1134,20 @@ KIO__SimpleJob* k_io_symlink(const char* target, const void* dest, int32_t flags
 /// [Upstream resources](https://api.kde.org/kio.html#special)
 ///
 /// @param url QUrl*
-/// @param data char*
+/// @param data const char*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__SimpleJob* k_io_special(const void* url, char* data, int32_t flags);
+KIO__SimpleJob* k_io_special(const void* url, const char* data, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#mount)
 ///
 /// @param ro bool
-/// @param fstype char*
+/// @param fstype const char*
 /// @param dev const char*
 /// @param point const char*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__SimpleJob* k_io_mount(bool ro, char* fstype, const char* dev, const char* point, int32_t flags);
+KIO__SimpleJob* k_io_mount(bool ro, const char* fstype, const char* dev, const char* point, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#unmount)
 ///

@@ -45,7 +45,7 @@ void q_networkcachemetadata_set_url(void* self, const void* url) {
     QNetworkCacheMetaData_SetUrl((QNetworkCacheMetaData*)self, (QUrl*)url);
 }
 
-libqt_list /* of libqt_pair tuple of char* and char* */ q_networkcachemetadata_raw_headers(const void* self) {
+libqt_list /* of libqt_pair tuple of const char* and const char* */ q_networkcachemetadata_raw_headers(const void* self) {
     libqt_list _arr = QNetworkCacheMetaData_RawHeaders((QNetworkCacheMetaData*)self);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -61,7 +61,7 @@ libqt_list /* of libqt_pair tuple of char* and char* */ q_networkcachemetadata_r
     return _arr;
 }
 
-void q_networkcachemetadata_set_raw_headers(void* self, libqt_list /* of libqt_pair tuple of char* and char* */ headers) {
+void q_networkcachemetadata_set_raw_headers(void* self, libqt_list /* of libqt_pair tuple of const char* and const char* */ headers) {
     libqt_pair* headers_pairs = (libqt_pair*)malloc(headers.len * sizeof(libqt_pair));
     if (headers_pairs == NULL) {
         fprintf(stderr, "Failed to allocate memory for string pairs in q_networkcachemetadata_set_raw_headers\n");

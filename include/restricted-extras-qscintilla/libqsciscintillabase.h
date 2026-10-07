@@ -807,13 +807,13 @@ bool q_sciscintillabase_super_can_insert_from_mime_data(const void* self, const 
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciScintillaBase*
 /// @param source QMimeData*
 /// @param rectangular bool*
 ///
-char* q_sciscintillabase_from_mime_data(const void* self, const void* source, bool* rectangular);
+const char* q_sciscintillabase_from_mime_data(const void* self, const void* source, bool* rectangular);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -832,15 +832,15 @@ void q_sciscintillabase_on_from_mime_data(void* self, libqt_string (*callback)(c
 /// @param source QMimeData*
 /// @param rectangular bool*
 ///
-char* q_sciscintillabase_super_from_mime_data(const void* self, const void* source, bool* rectangular);
+const char* q_sciscintillabase_super_from_mime_data(const void* self, const void* source, bool* rectangular);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self const QsciScintillaBase*
-/// @param text char*
+/// @param text const char*
 /// @param rectangular bool
 ///
-QMimeData* q_sciscintillabase_to_mime_data(const void* self, char* text, bool rectangular);
+QMimeData* q_sciscintillabase_to_mime_data(const void* self, const char* text, bool rectangular);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -856,10 +856,10 @@ void q_sciscintillabase_on_to_mime_data(void* self, QMimeData* (*callback)(const
 /// Base class method implementation
 ///
 /// @param self const QsciScintillaBase*
-/// @param text char*
+/// @param text const char*
 /// @param rectangular bool
 ///
-QMimeData* q_sciscintillabase_super_to_mime_data(const void* self, char* text, bool rectangular);
+QMimeData* q_sciscintillabase_super_to_mime_data(const void* self, const char* text, bool rectangular);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -1348,12 +1348,12 @@ void q_sciscintillabase_set_scroll_bars(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciScintillaBase*
 /// @param text const char*
 ///
-char* q_sciscintillabase_text_as_bytes(const void* self, const char* text);
+const char* q_sciscintillabase_text_as_bytes(const void* self, const char* text);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -3305,20 +3305,20 @@ void q_sciscintillabase_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciScintillaBase*
 ///
-char* q_sciscintillabase_save_geometry(const void* self);
+const char* q_sciscintillabase_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QsciScintillaBase*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_sciscintillabase_restore_geometry(void* self, char* geometry);
+bool q_sciscintillabase_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -5412,11 +5412,11 @@ void q_sciscintillabase_on_hide_event(void* self, void (*callback)(void*, void*)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciScintillaBase*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_sciscintillabase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_sciscintillabase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -5425,11 +5425,11 @@ bool q_sciscintillabase_native_event(void* self, char* eventType, void* message,
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QsciScintillaBase*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_sciscintillabase_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_sciscintillabase_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

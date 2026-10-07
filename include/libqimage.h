@@ -817,9 +817,9 @@ bool q_image_load2(void* self, const char* fileName);
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///
 /// @param self QImage*
-/// @param data char*
+/// @param data const char*
 ///
-bool q_image_load_from_data(void* self, char* data);
+bool q_image_load_from_data(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///
@@ -832,9 +832,9 @@ bool q_image_load_from_data2(void* self, unsigned char* buf, int lenVal);
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///
 /// @param self QImage*
-/// @param data char*
+/// @param data const char*
 ///
-bool q_image_load_from_data3(void* self, char* data);
+bool q_image_load_from_data3(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#save)
 ///
@@ -852,9 +852,9 @@ bool q_image_save2(const void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#fromData)
 ///
-/// @param data char*
+/// @param data const char*
 ///
-QImage* q_image_from_data(char* data);
+QImage* q_image_from_data(const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#fromData)
 ///
@@ -865,9 +865,9 @@ QImage* q_image_from_data2(unsigned char* data, int size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#fromData)
 ///
-/// @param data char*
+/// @param data const char*
 ///
-QImage* q_image_from_data3(char* data);
+QImage* q_image_from_data3(const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#cacheKey)
 ///
@@ -1270,10 +1270,10 @@ bool q_image_load22(void* self, const char* fileName, const char* format);
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///
 /// @param self QImage*
-/// @param data char*
+/// @param data const char*
 /// @param format const char*
 ///
-bool q_image_load_from_data22(void* self, char* data, const char* format);
+bool q_image_load_from_data22(void* self, const char* data, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///
@@ -1287,10 +1287,10 @@ bool q_image_load_from_data32(void* self, unsigned char* buf, int lenVal, const 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///
 /// @param self QImage*
-/// @param data char*
+/// @param data const char*
 /// @param format const char*
 ///
-bool q_image_load_from_data23(void* self, char* data, const char* format);
+bool q_image_load_from_data23(void* self, const char* data, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#save)
 ///
@@ -1328,10 +1328,10 @@ bool q_image_save32(const void* self, void* device, const char* format, int qual
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#fromData)
 ///
-/// @param data char*
+/// @param data const char*
 /// @param format const char*
 ///
-QImage* q_image_from_data22(char* data, const char* format);
+QImage* q_image_from_data22(const char* data, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#fromData)
 ///
@@ -1343,10 +1343,10 @@ QImage* q_image_from_data32(unsigned char* data, int size, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#fromData)
 ///
-/// @param data char*
+/// @param data const char*
 /// @param format const char*
 ///
-QImage* q_image_from_data23(char* data, const char* format);
+QImage* q_image_from_data23(const char* data, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#text)
 ///

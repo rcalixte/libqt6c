@@ -115,9 +115,9 @@ void q_webengineframe_print_to_pdf(void* self, const char* filePath);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#printToPdf)
 ///
 /// @param self QWebEngineFrame*
-/// @param callback void func(char* param1)
+/// @param callback void func(const char* param1)
 ///
-void q_webengineframe_print_to_pdf2(void* self, void (*callback)(char* funcparam1));
+void q_webengineframe_print_to_pdf2(void* self, void (*callback)(const char* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#printToPdf)
 ///

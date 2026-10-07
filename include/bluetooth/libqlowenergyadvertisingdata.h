@@ -52,9 +52,9 @@ uint16_t q_lowenergyadvertisingdata_invalid_manufacturer_id();
 ///
 /// @param self QLowEnergyAdvertisingData*
 /// @param id uint16_t
-/// @param data char*
+/// @param data const char*
 ///
-void q_lowenergyadvertisingdata_set_manufacturer_data(void* self, uint16_t id, char* data);
+void q_lowenergyadvertisingdata_set_manufacturer_data(void* self, uint16_t id, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#manufacturerId)
 ///
@@ -64,11 +64,11 @@ uint16_t q_lowenergyadvertisingdata_manufacturer_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#manufacturerData)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QLowEnergyAdvertisingData*
 ///
-char* q_lowenergyadvertisingdata_manufacturer_data(const void* self);
+const char* q_lowenergyadvertisingdata_manufacturer_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#setIncludePowerLevel)
 ///
@@ -116,17 +116,17 @@ libqt_list q_lowenergyadvertisingdata_services(const void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#setRawData)
 ///
 /// @param self QLowEnergyAdvertisingData*
-/// @param data char*
+/// @param data const char*
 ///
-void q_lowenergyadvertisingdata_set_raw_data(void* self, char* data);
+void q_lowenergyadvertisingdata_set_raw_data(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#rawData)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QLowEnergyAdvertisingData*
 ///
-char* q_lowenergyadvertisingdata_raw_data(const void* self);
+const char* q_lowenergyadvertisingdata_raw_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#swap)
 ///

@@ -2013,7 +2013,7 @@ void k_pagemodel_on_span(void* self, QSize* (*callback)(const void*, const void*
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2025,7 +2025,7 @@ void k_pagemodel_on_span(void* self, QSize* (*callback)(const void*, const void*
 ///
 /// @param self const KPageModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_pagemodel_role_names(const void* self);
 
@@ -2036,7 +2036,7 @@ libqt_map k_pagemodel_role_names(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -2048,7 +2048,7 @@ libqt_map k_pagemodel_role_names(const void* self);
 ///
 /// @param self const KPageModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_pagemodel_super_role_names(const void* self);
 
@@ -2059,7 +2059,7 @@ libqt_map k_pagemodel_super_role_names(const void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageModel*
-/// @param callback libqt_map of int to char* func(KPageModel* self)
+/// @param callback libqt_map of int to const char* func(KPageModel* self)
 ///
 void k_pagemodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 

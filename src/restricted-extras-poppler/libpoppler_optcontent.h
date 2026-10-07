@@ -473,7 +473,7 @@ QSize* q_poppler__optcontentmodel_span(const void* self, const void* index);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -483,7 +483,7 @@ QSize* q_poppler__optcontentmodel_span(const void* self, const void* index);
 ///
 /// @param self const Poppler__OptContentModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_poppler__optcontentmodel_role_names(const void* self);
 

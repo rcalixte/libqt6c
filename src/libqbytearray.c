@@ -1,81 +1,81 @@
 #include "libqbytearray.hpp"
 #include "libqbytearray.h"
 
-char* q_bytearray_number(int param1) {
+const char* q_bytearray_number(int param1) {
     libqt_string _str = QByteArray_Number(param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number2(uint32_t param1) {
+const char* q_bytearray_number2(uint32_t param1) {
     libqt_string _str = QByteArray_Number2(param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number3(long param1) {
+const char* q_bytearray_number3(long param1) {
     libqt_string _str = QByteArray_Number3(param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number4(uintptr_t param1) {
+const char* q_bytearray_number4(uintptr_t param1) {
     libqt_string _str = QByteArray_Number4(param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number5(long long param1) {
+const char* q_bytearray_number5(long long param1) {
     libqt_string _str = QByteArray_Number5(param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number6(uintptr_t param1) {
+const char* q_bytearray_number6(uintptr_t param1) {
     libqt_string _str = QByteArray_Number6(param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number7(double param1) {
+const char* q_bytearray_number7(double param1) {
     libqt_string _str = QByteArray_Number7(param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_from_raw_data(const char* data, intptr_t size) {
+const char* q_bytearray_from_raw_data(const char* data, intptr_t size) {
     libqt_string _str = QByteArray_FromRawData(data, size);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QByteArray__FromBase64Result* q_bytearray_from_base64_encoding(char* base64) {
+QByteArray__FromBase64Result* q_bytearray_from_base64_encoding(const char* base64) {
     return QByteArray_FromBase64Encoding(qstring(base64));
 }
 
-char* q_bytearray_from_base64(char* base64) {
+const char* q_bytearray_from_base64(const char* base64) {
     libqt_string _str = QByteArray_FromBase64(qstring(base64));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_from_hex(char* hexEncoded) {
+const char* q_bytearray_from_hex(const char* hexEncoded) {
     libqt_string _str = QByteArray_FromHex(qstring(hexEncoded));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_from_percent_encoding(char* pctEncoded) {
+const char* q_bytearray_from_percent_encoding(const char* pctEncoded) {
     libqt_string _str = QByteArray_FromPercentEncoding(qstring(pctEncoded));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -86,102 +86,102 @@ intptr_t q_bytearray_max_size2() {
     return QByteArray_MaxSize2();
 }
 
-char* q_bytearray_number22(int param1, int base) {
+const char* q_bytearray_number22(int param1, int base) {
     libqt_string _str = QByteArray_Number22(param1, base);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number23(uint32_t param1, int base) {
+const char* q_bytearray_number23(uint32_t param1, int base) {
     libqt_string _str = QByteArray_Number23(param1, base);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number24(long param1, int base) {
+const char* q_bytearray_number24(long param1, int base) {
     libqt_string _str = QByteArray_Number24(param1, base);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number25(uintptr_t param1, int base) {
+const char* q_bytearray_number25(uintptr_t param1, int base) {
     libqt_string _str = QByteArray_Number25(param1, base);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number26(long long param1, int base) {
+const char* q_bytearray_number26(long long param1, int base) {
     libqt_string _str = QByteArray_Number26(param1, base);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number27(uintptr_t param1, int base) {
+const char* q_bytearray_number27(uintptr_t param1, int base) {
     libqt_string _str = QByteArray_Number27(param1, base);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number28(double param1, char format) {
+const char* q_bytearray_number28(double param1, char format) {
     libqt_string _str = QByteArray_Number28(param1, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_number32(double param1, char format, int precision) {
+const char* q_bytearray_number32(double param1, char format, int precision) {
     libqt_string _str = QByteArray_Number32(param1, format, precision);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QByteArray__FromBase64Result* q_bytearray_from_base64_encoding2(char* base64, int32_t options) {
+QByteArray__FromBase64Result* q_bytearray_from_base64_encoding2(const char* base64, int32_t options) {
     return QByteArray_FromBase64Encoding2(qstring(base64), options);
 }
 
-char* q_bytearray_from_base642(char* base64, int32_t options) {
+const char* q_bytearray_from_base642(const char* base64, int32_t options) {
     libqt_string _str = QByteArray_FromBase642(qstring(base64), options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_bytearray_from_percent_encoding2(char* pctEncoded, char percent) {
+const char* q_bytearray_from_percent_encoding2(const char* pctEncoded, char percent) {
     libqt_string _str = QByteArray_FromPercentEncoding2(qstring(pctEncoded), percent);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_qbytearray_q_compress(unsigned char* data, intptr_t nbytes, int compressionLevel) {
+const char* q_qbytearray_q_compress(unsigned char* data, intptr_t nbytes, int compressionLevel) {
     libqt_string _str = qbytearray_QCompress(data, nbytes, compressionLevel);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_qbytearray_q_uncompress(unsigned char* data, intptr_t nbytes) {
+const char* q_qbytearray_q_uncompress(unsigned char* data, intptr_t nbytes) {
     libqt_string _str = qbytearray_QUncompress(data, nbytes);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_qbytearray_q_compress2(char* data, int compressionLevel) {
+const char* q_qbytearray_q_compress2(const char* data, int compressionLevel) {
     libqt_string _str = qbytearray_QCompress2(qstring(data), compressionLevel);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_qbytearray_q_uncompress2(char* data) {
+const char* q_qbytearray_q_uncompress2(const char* data) {
     libqt_string _str = qbytearray_QUncompress2(qstring(data));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -200,14 +200,14 @@ QByteArray__FromBase64Result* q_bytearray__frombase64result_new2(const void* par
     return QByteArray__FromBase64Result_New2((QByteArray__FromBase64Result*)param1);
 }
 
-char* q_bytearray__frombase64result_decoded(const void* self) {
+const char* q_bytearray__frombase64result_decoded(const void* self) {
     libqt_string decoded_str = QByteArray__FromBase64Result_Decoded((QByteArray__FromBase64Result*)self);
     char* decoded_ret = qstring_to_char(decoded_str);
     libqt_string_free(&decoded_str);
     return decoded_ret;
 }
 
-void q_bytearray__frombase64result_set_decoded(void* self, char* decoded) {
+void q_bytearray__frombase64result_set_decoded(void* self, const char* decoded) {
     QByteArray__FromBase64Result_SetDecoded((QByteArray__FromBase64Result*)self, qstring(decoded));
 }
 
@@ -227,7 +227,7 @@ bool q_bytearray__frombase64result_to_bool(const void* self) {
     return QByteArray__FromBase64Result_ToBool((QByteArray__FromBase64Result*)self);
 }
 
-char* q_bytearray__frombase64result_operator_multiply(void* self) {
+const char* q_bytearray__frombase64result_operator_multiply(void* self) {
     libqt_string _str = QByteArray__FromBase64Result_OperatorMultiply((QByteArray__FromBase64Result*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

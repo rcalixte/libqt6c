@@ -925,7 +925,7 @@ void k_selectionproxymodel_on_supported_drag_actions(void* self, int32_t (*callb
     KSelectionProxyModel_OnSupportedDragActions((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_selectionproxymodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_selectionproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KSelectionProxyModel_RoleNames((KSelectionProxyModel*)self);
     libqt_map _ret;
@@ -958,7 +958,7 @@ libqt_map /* of int to char* */ k_selectionproxymodel_role_names(const void* sel
     return _ret;
 }
 
-libqt_map /* of int to char* */ k_selectionproxymodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_selectionproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KSelectionProxyModel_SuperRoleNames((KSelectionProxyModel*)self);
     libqt_map _ret;
@@ -991,7 +991,7 @@ libqt_map /* of int to char* */ k_selectionproxymodel_super_role_names(const voi
     return _ret;
 }
 
-void k_selectionproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_selectionproxymodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     KSelectionProxyModel_OnRoleNames((KSelectionProxyModel*)self, (intptr_t)callback);
 }
 

@@ -15,11 +15,11 @@ QTimeZone* q_timezone_new3(int offsetSeconds) {
     return QTimeZone_New3(offsetSeconds);
 }
 
-QTimeZone* q_timezone_new4(char* ianaId) {
+QTimeZone* q_timezone_new4(const char* ianaId) {
     return QTimeZone_New4(qstring(ianaId));
 }
 
-QTimeZone* q_timezone_new5(char* zoneId, int offsetSeconds, const char* name, const char* abbreviation) {
+QTimeZone* q_timezone_new5(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation) {
     return QTimeZone_New5(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation));
 }
 
@@ -27,11 +27,11 @@ QTimeZone* q_timezone_new6(const void* other) {
     return QTimeZone_New6((QTimeZone*)other);
 }
 
-QTimeZone* q_timezone_new7(char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, uint16_t territory) {
+QTimeZone* q_timezone_new7(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, uint16_t territory) {
     return QTimeZone_New7(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation), territory);
 }
 
-QTimeZone* q_timezone_new8(char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, uint16_t territory, const char* comment) {
+QTimeZone* q_timezone_new8(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, uint16_t territory, const char* comment) {
     return QTimeZone_New8(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation), territory, qstring(comment));
 }
 
@@ -75,11 +75,11 @@ QTimeZone* q_timezone_as_backend_zone(const void* self) {
     return QTimeZone_AsBackendZone((QTimeZone*)self);
 }
 
-bool q_timezone_has_alternative_name(const void* self, char* alias) {
+bool q_timezone_has_alternative_name(const void* self, const char* alias) {
     return QTimeZone_HasAlternativeName((QTimeZone*)self, qstring(alias));
 }
 
-char* q_timezone_id(const void* self) {
+const char* q_timezone_id(const void* self) {
     libqt_string _str = QTimeZone_Id((QTimeZone*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -163,7 +163,7 @@ libqt_list /* of QTimeZone__OffsetData* */ q_timezone_transitions(const void* se
     return _arr;
 }
 
-char* q_timezone_system_time_zone_id() {
+const char* q_timezone_system_time_zone_id() {
     libqt_string _str = QTimeZone_SystemTimeZoneId();
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -178,7 +178,7 @@ QTimeZone* q_timezone_utc() {
     return QTimeZone_Utc();
 }
 
-bool q_timezone_is_time_zone_id_available(char* ianaId) {
+bool q_timezone_is_time_zone_id_available(const char* ianaId) {
     return QTimeZone_IsTimeZoneIdAvailable(qstring(ianaId));
 }
 
@@ -233,28 +233,28 @@ const char** q_timezone_available_time_zone_ids3(int offsetSeconds) {
     return _ret;
 }
 
-char* q_timezone_iana_id_to_windows_id(char* ianaId) {
+const char* q_timezone_iana_id_to_windows_id(const char* ianaId) {
     libqt_string _str = QTimeZone_IanaIdToWindowsId(qstring(ianaId));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_timezone_windows_id_to_default_iana_id(char* windowsId) {
+const char* q_timezone_windows_id_to_default_iana_id(const char* windowsId) {
     libqt_string _str = QTimeZone_WindowsIdToDefaultIanaId(qstring(windowsId));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_timezone_windows_id_to_default_iana_id2(char* windowsId, uint16_t territory) {
+const char* q_timezone_windows_id_to_default_iana_id2(const char* windowsId, uint16_t territory) {
     libqt_string _str = QTimeZone_WindowsIdToDefaultIanaId2(qstring(windowsId), territory);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_timezone_windows_id_to_iana_ids(char* windowsId) {
+const char** q_timezone_windows_id_to_iana_ids(const char* windowsId) {
     libqt_list _arr = QTimeZone_WindowsIdToIanaIds(qstring(windowsId));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -271,7 +271,7 @@ const char** q_timezone_windows_id_to_iana_ids(char* windowsId) {
     return _ret;
 }
 
-const char** q_timezone_windows_id_to_iana_ids2(char* windowsId, uint16_t territory) {
+const char** q_timezone_windows_id_to_iana_ids2(const char* windowsId, uint16_t territory) {
     libqt_list _arr = QTimeZone_WindowsIdToIanaIds2(qstring(windowsId), territory);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));

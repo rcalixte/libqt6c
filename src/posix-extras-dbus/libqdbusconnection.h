@@ -292,9 +292,9 @@ void q_dbusconnection_disconnect_from_peer(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#localMachineId)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-char* q_dbusconnection_local_machine_id();
+const char* q_dbusconnection_local_machine_id();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#sessionBus)
 ///

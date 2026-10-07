@@ -46,9 +46,9 @@ void k_io__filejob_read(void* self, uintptr_t size);
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#write)
 ///
 /// @param self KIO__FileJob*
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__filejob_write(void* self, char* data);
+void k_io__filejob_write(void* self, const char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#close)
 ///
@@ -80,9 +80,9 @@ uintptr_t k_io__filejob_size(void* self);
 ///
 /// @param self KIO__FileJob*
 /// @param job KIO__Job*
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__filejob_data(void* self, void* job, char* data);
+void k_io__filejob_data(void* self, void* job, const char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#data)
 ///

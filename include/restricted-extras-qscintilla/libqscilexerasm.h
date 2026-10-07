@@ -2125,27 +2125,27 @@ void q_scilexerasm_on_disconnect_notify(void* self, void (*callback)(void*, cons
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerAsm*
 /// @param text const char*
 ///
-char* q_scilexerasm_text_as_bytes(const void* self, const char* text);
+const char* q_scilexerasm_text_as_bytes(const void* self, const char* text);
 
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self const QsciLexerAsm*
 /// @param text const char*
 ///
-char* q_scilexerasm_super_text_as_bytes(const void* self, const char* text);
+const char* q_scilexerasm_super_text_as_bytes(const void* self, const char* text);
 
 /// Inherited from QsciLexer
 ///

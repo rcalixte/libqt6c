@@ -128,7 +128,7 @@ int32_t k_filemetadata__simpleextractionresult_input_flags(const void* self) {
     return KFileMetaData__ExtractionResult_InputFlags((KFileMetaData__ExtractionResult*)self);
 }
 
-libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to char* */ k_filemetadata__simpleextractionresult_image_data(const void* self) {
+libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to const char* */ k_filemetadata__simpleextractionresult_image_data(const void* self) {
     // Convert QMap<KFileMetaData::EmbeddedImageData::ImageType,QByteArray> to libqt_map
     libqt_map _out = KFileMetaData__ExtractionResult_ImageData((KFileMetaData__ExtractionResult*)self);
     libqt_map _ret;

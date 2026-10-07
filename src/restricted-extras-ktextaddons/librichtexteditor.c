@@ -1801,14 +1801,14 @@ void k_textcustomeditor__richtexteditor_set_geometry2(void* self, const void* ge
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_textcustomeditor__richtexteditor_save_geometry(const void* self) {
+const char* k_textcustomeditor__richtexteditor_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_textcustomeditor__richtexteditor_restore_geometry(void* self, char* geometry) {
+bool k_textcustomeditor__richtexteditor_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2926,11 +2926,11 @@ void k_textcustomeditor__richtexteditor_on_hide_event(void* self, void (*callbac
     TextCustomEditor__RichTextEditor_OnHideEvent((TextCustomEditor__RichTextEditor*)self, (intptr_t)callback);
 }
 
-bool k_textcustomeditor__richtexteditor_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_textcustomeditor__richtexteditor_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return TextCustomEditor__RichTextEditor_NativeEvent((TextCustomEditor__RichTextEditor*)self, qstring(eventType), message, result);
 }
 
-bool k_textcustomeditor__richtexteditor_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_textcustomeditor__richtexteditor_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return TextCustomEditor__RichTextEditor_SuperNativeEvent((TextCustomEditor__RichTextEditor*)self, qstring(eventType), message, result);
 }
 

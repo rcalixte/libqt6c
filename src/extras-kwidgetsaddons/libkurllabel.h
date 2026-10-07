@@ -2580,20 +2580,20 @@ void k_urllabel_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KUrlLabel*
 ///
-char* k_urllabel_save_geometry(const void* self);
+const char* k_urllabel_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KUrlLabel*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_urllabel_restore_geometry(void* self, char* geometry);
+bool k_urllabel_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4949,11 +4949,11 @@ void k_urllabel_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_urllabel_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_urllabel_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4962,11 +4962,11 @@ bool k_urllabel_native_event(void* self, char* eventType, void* message, intptr_
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_urllabel_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_urllabel_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

@@ -877,7 +877,7 @@ void q_scilexermarkdown_on_disconnect_notify(void* self, void (*callback)(void*,
     QsciLexerMarkdown_OnDisconnectNotify((QsciLexerMarkdown*)self, (intptr_t)callback);
 }
 
-char* q_scilexermarkdown_text_as_bytes(const void* self, const char* text) {
+const char* q_scilexermarkdown_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciLexerMarkdown_TextAsBytes((QsciLexerMarkdown*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -112,19 +112,19 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier_cookie_generator_
 ///
 /// @param self QDtlsClientVerifier*
 /// @param socket QUdpSocket*
-/// @param dgram char*
+/// @param dgram const char*
 /// @param address QHostAddress*
 /// @param port uint16_t
 ///
-bool q_dtlsclientverifier_verify_client(void* self, void* socket, char* dgram, const void* address, uint16_t port);
+bool q_dtlsclientverifier_verify_client(void* self, void* socket, const char* dgram, const void* address, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtlsclientverifier.html#verifiedHello)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QDtlsClientVerifier*
 ///
-char* q_dtlsclientverifier_verified_hello(const void* self);
+const char* q_dtlsclientverifier_verified_hello(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtlsclientverifier.html#dtlsError)
 ///
@@ -1227,19 +1227,19 @@ int32_t q_dtls_session_protocol(const void* self);
 ///
 /// @param self QDtls*
 /// @param socket QUdpSocket*
-/// @param dgram char*
+/// @param dgram const char*
 ///
-int64_t q_dtls_write_datagram_encrypted(void* self, void* socket, char* dgram);
+int64_t q_dtls_write_datagram_encrypted(void* self, void* socket, const char* dgram);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#decryptDatagram)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDtls*
 /// @param socket QUdpSocket*
-/// @param dgram char*
+/// @param dgram const char*
 ///
-char* q_dtls_decrypt_datagram(void* self, void* socket, char* dgram);
+const char* q_dtls_decrypt_datagram(void* self, void* socket, const char* dgram);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#dtlsError)
 ///
@@ -1331,9 +1331,9 @@ bool q_dtls_set_peer3(void* self, const void* address, uint16_t port, const char
 ///
 /// @param self QDtls*
 /// @param socket QUdpSocket*
-/// @param dgram char*
+/// @param dgram const char*
 ///
-bool q_dtls_do_handshake2(void* self, void* socket, char* dgram);
+bool q_dtls_do_handshake2(void* self, void* socket, const char* dgram);
 
 /// Inherited from QObject
 ///
@@ -2173,9 +2173,9 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparamet
 /// q_dtlsclientverifier__generatorparameters_new2 constructs a new QDtlsClientVerifier::GeneratorParameters object.
 ///
 /// @param a enum QCryptographicHash__Algorithm
-/// @param s char*
+/// @param s const char*
 ///
-QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new2(int32_t a, char* s);
+QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new2(int32_t a, const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtlsclientverifier-generatorparameters.html)
 
@@ -2202,18 +2202,18 @@ void q_dtlsclientverifier__generatorparameters_set_hash(void* self, int32_t hash
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtlsclientverifier-generatorparameters.html#secret-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QDtlsClientVerifier__GeneratorParameters*
 ///
-char* q_dtlsclientverifier__generatorparameters_secret(const void* self);
+const char* q_dtlsclientverifier__generatorparameters_secret(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtlsclientverifier-generatorparameters.html#secret-var)
 ///
 /// @param self QDtlsClientVerifier__GeneratorParameters*
-/// @param secret char*
+/// @param secret const char*
 ///
-void q_dtlsclientverifier__generatorparameters_set_secret(void* self, char* secret);
+void q_dtlsclientverifier__generatorparameters_set_secret(void* self, const char* secret);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtlsclientverifier-generatorparameters.html#operator-eq)
 ///

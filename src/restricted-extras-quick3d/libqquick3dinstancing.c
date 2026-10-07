@@ -61,7 +61,7 @@ const char* q_quick3dinstancing_tr(const char* s) {
     return _ret;
 }
 
-char* q_quick3dinstancing_instance_buffer(void* self, int* instanceCount) {
+const char* q_quick3dinstancing_instance_buffer(void* self, int* instanceCount) {
     libqt_string _str = QQuick3DInstancing_InstanceBuffer((QQuick3DInstancing*)self, instanceCount);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -152,7 +152,7 @@ void q_quick3dinstancing_on_depth_sorting_enabled_changed(void* self, void (*cal
     QQuick3DInstancing_Connect_DepthSortingEnabledChanged((QQuick3DInstancing*)self, (intptr_t)callback);
 }
 
-char* q_quick3dinstancing_get_instance_buffer(void* self, int* instanceCount) {
+const char* q_quick3dinstancing_get_instance_buffer(void* self, int* instanceCount) {
     libqt_string _str = QQuick3DInstancing_GetInstanceBuffer((QQuick3DInstancing*)self, instanceCount);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

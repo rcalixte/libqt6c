@@ -925,7 +925,7 @@ void k_nscore__itemsmodel_on_span(void* self, QSize* (*callback)(const void*, co
     KNSCore__ItemsModel_OnSpan((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_nscore__itemsmodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_nscore__itemsmodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KNSCore__ItemsModel_RoleNames((KNSCore__ItemsModel*)self);
     libqt_map _ret;
@@ -958,7 +958,7 @@ libqt_map /* of int to char* */ k_nscore__itemsmodel_role_names(const void* self
     return _ret;
 }
 
-libqt_map /* of int to char* */ k_nscore__itemsmodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_nscore__itemsmodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KNSCore__ItemsModel_SuperRoleNames((KNSCore__ItemsModel*)self);
     libqt_map _ret;
@@ -991,7 +991,7 @@ libqt_map /* of int to char* */ k_nscore__itemsmodel_super_role_names(const void
     return _ret;
 }
 
-void k_nscore__itemsmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_nscore__itemsmodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     KNSCore__ItemsModel_OnRoleNames((KNSCore__ItemsModel*)self, (intptr_t)callback);
 }
 

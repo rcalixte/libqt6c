@@ -924,14 +924,14 @@ void q_designerpropertyeditorinterface_set_geometry2(void* self, const void* geo
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_designerpropertyeditorinterface_save_geometry(const void* self) {
+const char* q_designerpropertyeditorinterface_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_designerpropertyeditorinterface_restore_geometry(void* self, char* geometry) {
+bool q_designerpropertyeditorinterface_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -1921,11 +1921,11 @@ void q_designerpropertyeditorinterface_on_hide_event(void* self, void (*callback
     QDesignerPropertyEditorInterface_OnHideEvent((QDesignerPropertyEditorInterface*)self, (intptr_t)callback);
 }
 
-bool q_designerpropertyeditorinterface_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_designerpropertyeditorinterface_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QDesignerPropertyEditorInterface_NativeEvent((QDesignerPropertyEditorInterface*)self, qstring(eventType), message, result);
 }
 
-bool q_designerpropertyeditorinterface_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_designerpropertyeditorinterface_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QDesignerPropertyEditorInterface_SuperNativeEvent((QDesignerPropertyEditorInterface*)self, qstring(eventType), message, result);
 }
 

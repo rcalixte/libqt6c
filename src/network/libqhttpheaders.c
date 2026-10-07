@@ -73,14 +73,14 @@ void q_httpheaders_remove_at(void* self, intptr_t i) {
     QHttpHeaders_RemoveAt((QHttpHeaders*)self, i);
 }
 
-char* q_httpheaders_value(const void* self, const char* name) {
+const char* q_httpheaders_value(const void* self, const char* name) {
     libqt_string _str = QHttpHeaders_Value((QHttpHeaders*)self, name);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_httpheaders_value2(const void* self, int32_t name) {
+const char* q_httpheaders_value2(const void* self, int32_t name) {
     libqt_string _str = QHttpHeaders_Value2((QHttpHeaders*)self, name);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -121,28 +121,28 @@ const char** q_httpheaders_values2(const void* self, int32_t name) {
     return _ret;
 }
 
-char* q_httpheaders_value_at(const void* self, intptr_t i) {
+const char* q_httpheaders_value_at(const void* self, intptr_t i) {
     libqt_string _str = QHttpHeaders_ValueAt((QHttpHeaders*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_httpheaders_name_at(const void* self, intptr_t i) {
+const char* q_httpheaders_name_at(const void* self, intptr_t i) {
     libqt_string _str = QHttpHeaders_NameAt((QHttpHeaders*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_httpheaders_combined_value(const void* self, const char* name) {
+const char* q_httpheaders_combined_value(const void* self, const char* name) {
     libqt_string _str = QHttpHeaders_CombinedValue((QHttpHeaders*)self, name);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_httpheaders_combined_value2(const void* self, int32_t name) {
+const char* q_httpheaders_combined_value2(const void* self, int32_t name) {
     libqt_string _str = QHttpHeaders_CombinedValue2((QHttpHeaders*)self, name);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -161,14 +161,14 @@ bool q_httpheaders_is_empty(const void* self) {
     return QHttpHeaders_IsEmpty((QHttpHeaders*)self);
 }
 
-char* q_httpheaders_well_known_header_name(int32_t name) {
+const char* q_httpheaders_well_known_header_name(int32_t name) {
     libqt_string _str = QHttpHeaders_WellKnownHeaderName(name);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QHttpHeaders* q_httpheaders_from_list_of_pairs(libqt_list /* of libqt_pair tuple of char* and char* */ headers) {
+QHttpHeaders* q_httpheaders_from_list_of_pairs(libqt_list /* of libqt_pair tuple of const char* and const char* */ headers) {
     libqt_pair* headers_pairs = (libqt_pair*)malloc(headers.len * sizeof(libqt_pair));
     if (headers_pairs == NULL) {
         fprintf(stderr, "Failed to allocate memory for string pairs in q_httpheaders_from_list_of_pairs\n");
@@ -191,7 +191,7 @@ QHttpHeaders* q_httpheaders_from_list_of_pairs(libqt_list /* of libqt_pair tuple
     return QHttpHeaders_FromListOfPairs(headers_list);
 }
 
-QHttpHeaders* q_httpheaders_from_multi_map(libqt_map /* of char* to char** */ headers) {
+QHttpHeaders* q_httpheaders_from_multi_map(libqt_map /* of const char* to const char** */ headers) {
     // Convert libqt_map to QMultiMap<QByteArray,QByteArray>
     libqt_map headers_ret;
     headers_ret.len = headers.len;
@@ -206,13 +206,13 @@ QHttpHeaders* q_httpheaders_from_multi_map(libqt_map /* of char* to char** */ he
         fprintf(stderr, "Failed to allocate memory for map values in q_httpheaders_from_multi_map\n");
         abort();
     }
-    char** headers_karr = (char**)headers.keys;
+    const char** headers_karr = (const char**)headers.keys;
     libqt_string* headers_kdest = (libqt_string*)headers_ret.keys;
-    char*** headers_varr = (char***)headers.values;
+    const char*** headers_varr = (const char***)headers.values;
     libqt_list* headers_vdest = (libqt_list*)headers_ret.values;
     for (size_t i = 0; i < headers_ret.len; ++i) {
         headers_kdest[i] = qstring(headers_karr[i]);
-        char** headers_array = headers_varr[i];
+        const char** headers_array = headers_varr[i];
         size_t headers_value_count = libqt_strv_length((const char**)headers_array);
         libqt_string* headers_value_strings = (libqt_string*)malloc(headers_value_count * sizeof(libqt_string));
         if (headers_value_strings == NULL) {
@@ -236,7 +236,7 @@ QHttpHeaders* q_httpheaders_from_multi_map(libqt_map /* of char* to char** */ he
     return _out;
 }
 
-QHttpHeaders* q_httpheaders_from_multi_hash(libqt_map /* of char* to char** */ headers) {
+QHttpHeaders* q_httpheaders_from_multi_hash(libqt_map /* of const char* to const char** */ headers) {
     // Convert libqt_map to QMultiHash<QByteArray,QByteArray>
     libqt_map headers_ret;
     headers_ret.len = headers.len;
@@ -251,13 +251,13 @@ QHttpHeaders* q_httpheaders_from_multi_hash(libqt_map /* of char* to char** */ h
         fprintf(stderr, "Failed to allocate memory for map values in q_httpheaders_from_multi_hash\n");
         abort();
     }
-    char** headers_karr = (char**)headers.keys;
+    const char** headers_karr = (const char**)headers.keys;
     libqt_string* headers_kdest = (libqt_string*)headers_ret.keys;
-    char*** headers_varr = (char***)headers.values;
+    const char*** headers_varr = (const char***)headers.values;
     libqt_list* headers_vdest = (libqt_list*)headers_ret.values;
     for (size_t i = 0; i < headers_ret.len; ++i) {
         headers_kdest[i] = qstring(headers_karr[i]);
-        char** headers_array = headers_varr[i];
+        const char** headers_array = headers_varr[i];
         size_t headers_value_count = libqt_strv_length((const char**)headers_array);
         libqt_string* headers_value_strings = (libqt_string*)malloc(headers_value_count * sizeof(libqt_string));
         if (headers_value_strings == NULL) {
@@ -281,7 +281,7 @@ QHttpHeaders* q_httpheaders_from_multi_hash(libqt_map /* of char* to char** */ h
     return _out;
 }
 
-libqt_list /* of libqt_pair tuple of char* and char* */ q_httpheaders_to_list_of_pairs(const void* self) {
+libqt_list /* of libqt_pair tuple of const char* and const char* */ q_httpheaders_to_list_of_pairs(const void* self) {
     libqt_list _arr = QHttpHeaders_ToListOfPairs((QHttpHeaders*)self);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -297,7 +297,7 @@ libqt_list /* of libqt_pair tuple of char* and char* */ q_httpheaders_to_list_of
     return _arr;
 }
 
-libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(const void* self) {
+libqt_map /* of const char* to const char** */ q_httpheaders_to_multi_map(const void* self) {
     // Convert QMultiMap<QByteArray,QByteArray> to libqt_map
     libqt_map _out = QHttpHeaders_ToMultiMap((QHttpHeaders*)self);
     libqt_map _ret;
@@ -386,7 +386,7 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(const void* self) 
     return _ret;
 }
 
-libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(const void* self) {
+libqt_map /* of const char* to const char** */ q_httpheaders_to_multi_hash(const void* self) {
     // Convert QMultiHash<QByteArray,QByteArray> to libqt_map
     libqt_map _out = QHttpHeaders_ToMultiHash((QHttpHeaders*)self);
     libqt_map _ret;
@@ -475,14 +475,14 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(const void* self)
     return _ret;
 }
 
-char* q_httpheaders_value22(const void* self, const char* name, char* defaultValue) {
+const char* q_httpheaders_value22(const void* self, const char* name, const char* defaultValue) {
     libqt_string _str = QHttpHeaders_Value22((QHttpHeaders*)self, name, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_httpheaders_value23(const void* self, int32_t name, char* defaultValue) {
+const char* q_httpheaders_value23(const void* self, int32_t name, const char* defaultValue) {
     libqt_string _str = QHttpHeaders_Value23((QHttpHeaders*)self, name, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

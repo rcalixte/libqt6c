@@ -1105,12 +1105,12 @@ bool q_scilexer_super_write_properties(const void* self, void* qs, const char* p
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexer*
 /// @param text const char*
 ///
-char* q_scilexer_text_as_bytes(const void* self, const char* text);
+const char* q_scilexer_text_as_bytes(const void* self, const char* text);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///

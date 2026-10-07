@@ -80,9 +80,9 @@ void k_io__applicationlauncherjob_set_suggested_file_name(void* self, const char
 /// [Upstream resources](https://api.kde.org/kio-applicationlauncherjob.html#setStartupId)
 ///
 /// @param self KIO__ApplicationLauncherJob*
-/// @param startupId char*
+/// @param startupId const char*
 ///
-void k_io__applicationlauncherjob_set_startup_id(void* self, char* startupId);
+void k_io__applicationlauncherjob_set_startup_id(void* self, const char* startupId);
 
 /// [Upstream resources](https://api.kde.org/kio-applicationlauncherjob.html#start)
 ///

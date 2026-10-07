@@ -193,16 +193,16 @@ QQmlInfo* q_qmlinfo_operator_shift_left16(void* self, const char* t);
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo.html#operator-lt-lt)
 ///
 /// @param self QQmlInfo*
-/// @param t char*
+/// @param t const char*
 ///
-QQmlInfo* q_qmlinfo_operator_shift_left17(void* self, char* t);
+QQmlInfo* q_qmlinfo_operator_shift_left17(void* self, const char* t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo.html#operator-lt-lt)
 ///
 /// @param self QQmlInfo*
-/// @param t char*
+/// @param t const char*
 ///
-QQmlInfo* q_qmlinfo_operator_shift_left18(void* self, char* t);
+QQmlInfo* q_qmlinfo_operator_shift_left18(void* self, const char* t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo.html#operator-lt-lt)
 ///
@@ -362,18 +362,18 @@ QDebug* q_qmlinfo_maybe_quote(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// @param self QQmlInfo*
-/// @param t char*
+/// @param t const char*
 ///
-QDebug* q_qmlinfo_operator_shift_left23(void* self, char* t);
+QDebug* q_qmlinfo_operator_shift_left23(void* self, const char* t);
 
 /// Inherited from QDebug
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// @param self QQmlInfo*
-/// @param t char*
+/// @param t const char*
 ///
-QDebug* q_qmlinfo_operator_shift_left24(void* self, char* t);
+QDebug* q_qmlinfo_operator_shift_left24(void* self, const char* t);
 
 /// Inherited from QDebug
 ///

@@ -104,25 +104,25 @@ void q_webenginehttprequest_set_url(void* self, const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#postData)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QWebEngineHttpRequest*
 ///
-char* q_webenginehttprequest_post_data(const void* self);
+const char* q_webenginehttprequest_post_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setPostData)
 ///
 /// @param self QWebEngineHttpRequest*
-/// @param postData char*
+/// @param postData const char*
 ///
-void q_webenginehttprequest_set_post_data(void* self, char* postData);
+void q_webenginehttprequest_set_post_data(void* self, const char* postData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#hasHeader)
 ///
 /// @param self const QWebEngineHttpRequest*
-/// @param headerName char*
+/// @param headerName const char*
 ///
-bool q_webenginehttprequest_has_header(const void* self, char* headerName);
+bool q_webenginehttprequest_has_header(const void* self, const char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#headers)
 ///
@@ -134,27 +134,27 @@ const char** q_webenginehttprequest_headers(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#header)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QWebEngineHttpRequest*
-/// @param headerName char*
+/// @param headerName const char*
 ///
-char* q_webenginehttprequest_header(const void* self, char* headerName);
+const char* q_webenginehttprequest_header(const void* self, const char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setHeader)
 ///
 /// @param self QWebEngineHttpRequest*
-/// @param headerName char*
-/// @param value char*
+/// @param headerName const char*
+/// @param value const char*
 ///
-void q_webenginehttprequest_set_header(void* self, char* headerName, char* value);
+void q_webenginehttprequest_set_header(void* self, const char* headerName, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#unsetHeader)
 ///
 /// @param self QWebEngineHttpRequest*
-/// @param headerName char*
+/// @param headerName const char*
 ///
-void q_webenginehttprequest_unset_header(void* self, char* headerName);
+void q_webenginehttprequest_unset_header(void* self, const char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginehttprequest.html#dtor.QWebEngineHttpRequest)
 ///

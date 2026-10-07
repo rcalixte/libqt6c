@@ -651,7 +651,7 @@ void q_sslsocket_set_private_key3(void* self, const char* fileName, int32_t algo
     QSslSocket_SetPrivateKey3((QSslSocket*)self, qstring(fileName), algorithm, format);
 }
 
-void q_sslsocket_set_private_key4(void* self, const char* fileName, int32_t algorithm, int32_t format, char* passPhrase) {
+void q_sslsocket_set_private_key4(void* self, const char* fileName, int32_t algorithm, int32_t format, const char* passPhrase) {
     QSslSocket_SetPrivateKey4((QSslSocket*)self, qstring(fileName), algorithm, format, qstring(passPhrase));
 }
 
@@ -892,14 +892,14 @@ int64_t q_sslsocket_read(void* self, char* data, int64_t maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* q_sslsocket_read2(void* self, int64_t maxlen) {
+const char* q_sslsocket_read2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_sslsocket_read_all(void* self) {
+const char* q_sslsocket_read_all(void* self) {
     libqt_string _str = QIODevice_ReadAll((QIODevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -910,7 +910,7 @@ int64_t q_sslsocket_read_line(void* self, char* data, int64_t maxlen) {
     return QIODevice_ReadLine((QIODevice*)self, data, maxlen);
 }
 
-char* q_sslsocket_read_line2(void* self) {
+const char* q_sslsocket_read_line2(void* self) {
     libqt_string _str = QIODevice_ReadLine2((QIODevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -941,7 +941,7 @@ int64_t q_sslsocket_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-int64_t q_sslsocket_write3(void* self, char* data) {
+int64_t q_sslsocket_write3(void* self, const char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
@@ -949,7 +949,7 @@ int64_t q_sslsocket_peek(void* self, char* data, int64_t maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* q_sslsocket_peek2(void* self, int64_t maxlen) {
+const char* q_sslsocket_peek2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1027,7 +1027,7 @@ void q_sslsocket_on_read_channel_finished(void* self, void (*callback)(void*)) {
     QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
-char* q_sslsocket_read_line1(void* self, int64_t maxlen) {
+const char* q_sslsocket_read_line1(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_ReadLine1((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -215,7 +215,7 @@ void k_configskeletonitem_delete(void* self) {
     KConfigSkeletonItem_Delete((KConfigSkeletonItem*)(self));
 }
 
-KPropertySkeletonItem* k_propertyskeletonitem_new(void* object, char* propertyName, const void* defaultValue) {
+KPropertySkeletonItem* k_propertyskeletonitem_new(void* object, const char* propertyName, const void* defaultValue) {
     return KPropertySkeletonItem_New((QObject*)object, qstring(propertyName), (QVariant*)defaultValue);
 }
 

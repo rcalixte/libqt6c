@@ -1165,7 +1165,7 @@ void q_sortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*call
     QSortFilterProxyModel_OnSupportedDragActions((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_sortfilterproxymodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_sortfilterproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QSortFilterProxyModel_RoleNames((QSortFilterProxyModel*)self);
     libqt_map _ret;
@@ -1198,7 +1198,7 @@ libqt_map /* of int to char* */ q_sortfilterproxymodel_role_names(const void* se
     return _ret;
 }
 
-libqt_map /* of int to char* */ q_sortfilterproxymodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_sortfilterproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QSortFilterProxyModel_SuperRoleNames((QSortFilterProxyModel*)self);
     libqt_map _ret;
@@ -1231,7 +1231,7 @@ libqt_map /* of int to char* */ q_sortfilterproxymodel_super_role_names(const vo
     return _ret;
 }
 
-void q_sortfilterproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_sortfilterproxymodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     QSortFilterProxyModel_OnRoleNames((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 

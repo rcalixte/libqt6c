@@ -259,7 +259,7 @@ uint8_t q_dnstlsassociationrecord_match_type(const void* self) {
     return QDnsTlsAssociationRecord_MatchType((QDnsTlsAssociationRecord*)self);
 }
 
-char* q_dnstlsassociationrecord_value(const void* self) {
+const char* q_dnstlsassociationrecord_value(const void* self) {
     libqt_string _str = QDnsTlsAssociationRecord_Value((QDnsTlsAssociationRecord*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -70,10 +70,10 @@ int32_t q_webengineloadinginfo_error_code(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of char* to char**
+/// // libqt_map of const char* to const char**
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++)
-///         free((map.values)[i][j]);
+///     for (size_t j = 0; ((const char**)map.values)[i][j] != NULL; j++)
+///         libqt_free((map.values)[i][j]);
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
 /// }
@@ -83,7 +83,7 @@ int32_t q_webengineloadinginfo_error_code(const void* self);
 ///
 /// @param self const QWebEngineLoadingInfo*
 ///
-/// @return libqt_map of char* to char**
+/// @return libqt_map of const char* to const char**
 ///
 libqt_map q_webengineloadinginfo_response_headers(const void* self);
 

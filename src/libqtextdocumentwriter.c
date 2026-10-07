@@ -8,7 +8,7 @@ QTextDocumentWriter* q_textdocumentwriter_new() {
     return QTextDocumentWriter_New();
 }
 
-QTextDocumentWriter* q_textdocumentwriter_new2(void* device, char* format) {
+QTextDocumentWriter* q_textdocumentwriter_new2(void* device, const char* format) {
     return QTextDocumentWriter_New2((QIODevice*)device, qstring(format));
 }
 
@@ -16,15 +16,15 @@ QTextDocumentWriter* q_textdocumentwriter_new3(const char* fileName) {
     return QTextDocumentWriter_New3(qstring(fileName));
 }
 
-QTextDocumentWriter* q_textdocumentwriter_new4(const char* fileName, char* format) {
+QTextDocumentWriter* q_textdocumentwriter_new4(const char* fileName, const char* format) {
     return QTextDocumentWriter_New4(qstring(fileName), qstring(format));
 }
 
-void q_textdocumentwriter_set_format(void* self, char* format) {
+void q_textdocumentwriter_set_format(void* self, const char* format) {
     QTextDocumentWriter_SetFormat((QTextDocumentWriter*)self, qstring(format));
 }
 
-char* q_textdocumentwriter_format(const void* self) {
+const char* q_textdocumentwriter_format(const void* self) {
     libqt_string _str = QTextDocumentWriter_Format((QTextDocumentWriter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

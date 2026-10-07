@@ -578,7 +578,7 @@ bool q_scilexer_super_write_properties(const void* self, void* qs, const char* p
     return QsciLexer_SuperWriteProperties((QsciLexer*)self, (QSettings*)qs, qstring(prefix));
 }
 
-char* q_scilexer_text_as_bytes(const void* self, const char* text) {
+const char* q_scilexer_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciLexer_TextAsBytes((QsciLexer*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -70,7 +70,7 @@ QVariant* q_virtualkeyboardselectionlistmodel_data(const void* self, const void*
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -80,7 +80,7 @@ QVariant* q_virtualkeyboardselectionlistmodel_data(const void* self, const void*
 ///
 /// @param self const QVirtualKeyboardSelectionListModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_virtualkeyboardselectionlistmodel_role_names(const void* self);
 

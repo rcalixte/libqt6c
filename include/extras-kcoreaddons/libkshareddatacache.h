@@ -46,9 +46,9 @@ void k_shareddatacache_set_eviction_policy(void* self, int32_t newPolicy);
 ///
 /// @param self KSharedDataCache*
 /// @param key const char*
-/// @param data char*
+/// @param data const char*
 ///
-bool k_shareddatacache_insert(void* self, const char* key, char* data);
+bool k_shareddatacache_insert(void* self, const char* key, const char* data);
 
 /// [Upstream resources](https://api.kde.org/kshareddatacache.html#clear)
 ///

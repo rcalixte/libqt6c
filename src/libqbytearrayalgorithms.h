@@ -99,8 +99,8 @@ int32_t q_qbytearrayalgorithms_qstrnicmp2(const char* param1, intptr_t param2, c
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayalgorithms.html#qChecksum)
 ///
-/// @param data char*
+/// @param data const char*
 /// @param standard enum Qt__ChecksumType
 ///
-uint16_t q_qbytearrayalgorithms_q_checksum(char* data, int32_t standard);
+uint16_t q_qbytearrayalgorithms_q_checksum(const char* data, int32_t standard);
 #endif

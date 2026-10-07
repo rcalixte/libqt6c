@@ -38,11 +38,11 @@ const char* k_io__davjob_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kio-davjob.html#responseData)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KIO__DavJob*
 ///
-char* k_io__davjob_response_data(const void* self);
+const char* k_io__davjob_response_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -94,9 +94,9 @@ void k_io__davjob_set_async_data_enabled(void* self, bool enabled);
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#sendAsyncData)
 ///
 /// @param self KIO__DavJob*
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__davjob_send_async_data(void* self, char* data);
+void k_io__davjob_send_async_data(void* self, const char* data);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -131,9 +131,9 @@ void k_io__davjob_set_total_size(void* self, uintptr_t bytes);
 ///
 /// @param self KIO__DavJob*
 /// @param job KIO__Job*
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__davjob_data(void* self, void* job, char* data);
+void k_io__davjob_data(void* self, void* job, const char* data);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -150,9 +150,9 @@ void k_io__davjob_on_data(void* self, void (*callback)(void*, void*, libqt_strin
 ///
 /// @param self KIO__DavJob*
 /// @param job KIO__Job*
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__davjob_data_req(void* self, void* job, char* data);
+void k_io__davjob_data_req(void* self, void* job, const char* data);
 
 /// Inherited from KIO::TransferJob
 ///

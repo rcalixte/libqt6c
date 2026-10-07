@@ -65,9 +65,9 @@ bool q_dbusmetatype_demarshall(const void* param1, void* id, void* data);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#registerCustomType)
 ///
 /// @param type QMetaType*
-/// @param signature char*
+/// @param signature const char*
 ///
-void q_dbusmetatype_register_custom_type(void* type, char* signature);
+void q_dbusmetatype_register_custom_type(void* type, const char* signature);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#signatureToMetaType)
 ///

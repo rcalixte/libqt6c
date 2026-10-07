@@ -914,7 +914,7 @@ void q_scilexerasm_on_disconnect_notify(void* self, void (*callback)(void*, cons
     QsciLexerAsm_OnDisconnectNotify((QsciLexerAsm*)self, (intptr_t)callback);
 }
 
-char* q_scilexerasm_text_as_bytes(const void* self, const char* text) {
+const char* q_scilexerasm_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciLexerAsm_TextAsBytes((QsciLexerAsm*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

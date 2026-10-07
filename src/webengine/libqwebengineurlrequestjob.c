@@ -29,7 +29,7 @@ QUrl* q_webengineurlrequestjob_request_url(const void* self) {
     return QWebEngineUrlRequestJob_RequestUrl((QWebEngineUrlRequestJob*)self);
 }
 
-char* q_webengineurlrequestjob_request_method(const void* self) {
+const char* q_webengineurlrequestjob_request_method(const void* self) {
     libqt_string _str = QWebEngineUrlRequestJob_RequestMethod((QWebEngineUrlRequestJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -40,7 +40,7 @@ QUrl* q_webengineurlrequestjob_initiator(const void* self) {
     return QWebEngineUrlRequestJob_Initiator((QWebEngineUrlRequestJob*)self);
 }
 
-libqt_map /* of char* to char* */ q_webengineurlrequestjob_request_headers(const void* self) {
+libqt_map /* of const char* to const char* */ q_webengineurlrequestjob_request_headers(const void* self) {
     // Convert QMap<QByteArray,QByteArray> to libqt_map
     libqt_map _out = QWebEngineUrlRequestJob_RequestHeaders((QWebEngineUrlRequestJob*)self);
     libqt_map _ret;
@@ -99,7 +99,7 @@ QIODevice* q_webengineurlrequestjob_request_body(const void* self) {
     return QWebEngineUrlRequestJob_RequestBody((QWebEngineUrlRequestJob*)self);
 }
 
-void q_webengineurlrequestjob_reply(void* self, char* contentType, void* device) {
+void q_webengineurlrequestjob_reply(void* self, const char* contentType, void* device) {
     QWebEngineUrlRequestJob_Reply((QWebEngineUrlRequestJob*)self, qstring(contentType), (QIODevice*)device);
 }
 
@@ -111,7 +111,7 @@ void q_webengineurlrequestjob_redirect(void* self, const void* url) {
     QWebEngineUrlRequestJob_Redirect((QWebEngineUrlRequestJob*)self, (QUrl*)url);
 }
 
-void q_webengineurlrequestjob_set_additional_response_headers(const void* self, libqt_map /* of char* to char** */ additionalResponseHeaders) {
+void q_webengineurlrequestjob_set_additional_response_headers(const void* self, libqt_map /* of const char* to const char** */ additionalResponseHeaders) {
     // Convert libqt_map to QMultiMap<QByteArray,QByteArray>
     libqt_map additionalResponseHeaders_ret;
     additionalResponseHeaders_ret.len = additionalResponseHeaders.len;
@@ -126,13 +126,13 @@ void q_webengineurlrequestjob_set_additional_response_headers(const void* self, 
         fprintf(stderr, "Failed to allocate memory for map values in q_webengineurlrequestjob_set_additional_response_headers\n");
         abort();
     }
-    char** additionalResponseHeaders_karr = (char**)additionalResponseHeaders.keys;
+    const char** additionalResponseHeaders_karr = (const char**)additionalResponseHeaders.keys;
     libqt_string* additionalResponseHeaders_kdest = (libqt_string*)additionalResponseHeaders_ret.keys;
-    char*** additionalResponseHeaders_varr = (char***)additionalResponseHeaders.values;
+    const char*** additionalResponseHeaders_varr = (const char***)additionalResponseHeaders.values;
     libqt_list* additionalResponseHeaders_vdest = (libqt_list*)additionalResponseHeaders_ret.values;
     for (size_t i = 0; i < additionalResponseHeaders_ret.len; ++i) {
         additionalResponseHeaders_kdest[i] = qstring(additionalResponseHeaders_karr[i]);
-        char** additionalResponseHeaders_array = additionalResponseHeaders_varr[i];
+        const char** additionalResponseHeaders_array = additionalResponseHeaders_varr[i];
         size_t additionalResponseHeaders_value_count = libqt_strv_length((const char**)additionalResponseHeaders_array);
         libqt_string* additionalResponseHeaders_value_strings = (libqt_string*)malloc(additionalResponseHeaders_value_count * sizeof(libqt_string));
         if (additionalResponseHeaders_value_strings == NULL) {

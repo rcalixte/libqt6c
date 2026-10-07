@@ -37,7 +37,7 @@ int32_t q_webengineloadinginfo_error_code(const void* self) {
     return QWebEngineLoadingInfo_ErrorCode((QWebEngineLoadingInfo*)self);
 }
 
-libqt_map /* of char* to char** */ q_webengineloadinginfo_response_headers(const void* self) {
+libqt_map /* of const char* to const char** */ q_webengineloadinginfo_response_headers(const void* self) {
     // Convert QMultiMap<QByteArray,QByteArray> to libqt_map
     libqt_map _out = QWebEngineLoadingInfo_ResponseHeaders((QWebEngineLoadingInfo*)self);
     libqt_map _ret;

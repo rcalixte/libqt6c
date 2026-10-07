@@ -497,7 +497,7 @@ int32_t q_poppler__certificateinfo_version(const void* self) {
     return Poppler__CertificateInfo_Version((Poppler__CertificateInfo*)self);
 }
 
-char* q_poppler__certificateinfo_serial_number(const void* self) {
+const char* q_poppler__certificateinfo_serial_number(const void* self) {
     libqt_string _str = Poppler__CertificateInfo_SerialNumber((Poppler__CertificateInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -537,7 +537,7 @@ int32_t q_poppler__certificateinfo_key_usage_extensions(const void* self) {
     return Poppler__CertificateInfo_KeyUsageExtensions((Poppler__CertificateInfo*)self);
 }
 
-char* q_poppler__certificateinfo_public_key(const void* self) {
+const char* q_poppler__certificateinfo_public_key(const void* self) {
     libqt_string _str = Poppler__CertificateInfo_PublicKey((Poppler__CertificateInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -564,7 +564,7 @@ int32_t q_poppler__certificateinfo_certificate_type(const void* self) {
     return Poppler__CertificateInfo_CertificateType((Poppler__CertificateInfo*)self);
 }
 
-char* q_poppler__certificateinfo_certificate_data(const void* self) {
+const char* q_poppler__certificateinfo_certificate_data(const void* self) {
     libqt_string _str = Poppler__CertificateInfo_CertificateData((Poppler__CertificateInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -635,7 +635,7 @@ time_t q_poppler__signaturevalidationinfo_signing_time(const void* self) {
     return (int)Poppler__SignatureValidationInfo_SigningTime((Poppler__SignatureValidationInfo*)self);
 }
 
-char* q_poppler__signaturevalidationinfo_signature(const void* self) {
+const char* q_poppler__signaturevalidationinfo_signature(const void* self) {
     libqt_string _str = Poppler__SignatureValidationInfo_Signature((Poppler__SignatureValidationInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

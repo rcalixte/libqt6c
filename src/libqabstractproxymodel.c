@@ -479,7 +479,7 @@ int32_t q_abstractproxymodel_super_supported_drop_actions(const void* self) {
     return QAbstractProxyModel_SuperSupportedDropActions((QAbstractProxyModel*)self);
 }
 
-libqt_map /* of int to char* */ q_abstractproxymodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_abstractproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QAbstractProxyModel_RoleNames((QAbstractProxyModel*)self);
     libqt_map _ret;
@@ -512,11 +512,11 @@ libqt_map /* of int to char* */ q_abstractproxymodel_role_names(const void* self
     return _ret;
 }
 
-void q_abstractproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_abstractproxymodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     QAbstractProxyModel_OnRoleNames((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_abstractproxymodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_abstractproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QAbstractProxyModel_SuperRoleNames((QAbstractProxyModel*)self);
     libqt_map _ret;

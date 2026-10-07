@@ -44,18 +44,18 @@ void q_lowenergycharacteristicdata_set_uuid(void* self, const void* uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristicdata.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QLowEnergyCharacteristicData*
 ///
-char* q_lowenergycharacteristicdata_value(const void* self);
+const char* q_lowenergycharacteristicdata_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristicdata.html#setValue)
 ///
 /// @param self QLowEnergyCharacteristicData*
-/// @param value char*
+/// @param value const char*
 ///
-void q_lowenergycharacteristicdata_set_value(void* self, char* value);
+void q_lowenergycharacteristicdata_set_value(void* self, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristicdata.html#properties)
 ///

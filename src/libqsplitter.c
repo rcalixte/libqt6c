@@ -155,14 +155,14 @@ void q_splitter_set_sizes(void* self, libqt_list /* of int */ list) {
     QSplitter_SetSizes((QSplitter*)self, list);
 }
 
-char* q_splitter_save_state(const void* self) {
+const char* q_splitter_save_state(const void* self) {
     libqt_string _str = QSplitter_SaveState((QSplitter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_splitter_restore_state(void* self, char* state) {
+bool q_splitter_restore_state(void* self, const char* state) {
     return QSplitter_RestoreState((QSplitter*)self, qstring(state));
 }
 
@@ -1122,14 +1122,14 @@ void q_splitter_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_splitter_save_geometry(const void* self) {
+const char* q_splitter_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_splitter_restore_geometry(void* self, char* geometry) {
+bool q_splitter_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2083,11 +2083,11 @@ void q_splitter_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QSplitter_OnHideEvent((QSplitter*)self, (intptr_t)callback);
 }
 
-bool q_splitter_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_splitter_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QSplitter_NativeEvent((QSplitter*)self, qstring(eventType), message, result);
 }
 
-bool q_splitter_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_splitter_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QSplitter_SuperNativeEvent((QSplitter*)self, qstring(eventType), message, result);
 }
 
@@ -3234,14 +3234,14 @@ void q_splitterhandle_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_splitterhandle_save_geometry(const void* self) {
+const char* q_splitterhandle_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_splitterhandle_restore_geometry(void* self, char* geometry) {
+bool q_splitterhandle_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -4147,11 +4147,11 @@ void q_splitterhandle_on_hide_event(void* self, void (*callback)(void*, void*)) 
     QSplitterHandle_OnHideEvent((QSplitterHandle*)self, (intptr_t)callback);
 }
 
-bool q_splitterhandle_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_splitterhandle_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QSplitterHandle_NativeEvent((QSplitterHandle*)self, qstring(eventType), message, result);
 }
 
-bool q_splitterhandle_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_splitterhandle_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QSplitterHandle_SuperNativeEvent((QSplitterHandle*)self, qstring(eventType), message, result);
 }
 

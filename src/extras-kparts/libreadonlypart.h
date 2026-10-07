@@ -201,9 +201,9 @@ bool k_parts__readonlypart_open_stream(void* self, const char* mimeType, const v
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#writeStream)
 ///
 /// @param self KParts__ReadOnlyPart*
-/// @param data char*
+/// @param data const char*
 ///
-bool k_parts__readonlypart_write_stream(void* self, char* data);
+bool k_parts__readonlypart_write_stream(void* self, const char* data);
 
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#closeStream)
 ///

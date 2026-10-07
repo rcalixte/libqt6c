@@ -61,7 +61,7 @@ const char* k_nscore__providersmodel_tr(const char* s) {
     return _ret;
 }
 
-libqt_map /* of int to char* */ k_nscore__providersmodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_nscore__providersmodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KNSCore__ProvidersModel_RoleNames((KNSCore__ProvidersModel*)self);
     libqt_map _ret;
@@ -94,11 +94,11 @@ libqt_map /* of int to char* */ k_nscore__providersmodel_role_names(const void* 
     return _ret;
 }
 
-void k_nscore__providersmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_nscore__providersmodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     KNSCore__ProvidersModel_OnRoleNames((KNSCore__ProvidersModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_nscore__providersmodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_nscore__providersmodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KNSCore__ProvidersModel_SuperRoleNames((KNSCore__ProvidersModel*)self);
     libqt_map _ret;

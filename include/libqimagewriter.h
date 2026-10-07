@@ -19,9 +19,9 @@ QImageWriter* q_imagewriter_new();
 /// q_imagewriter_new2 constructs a new QImageWriter object.
 ///
 /// @param device QIODevice*
-/// @param format char*
+/// @param format const char*
 ///
-QImageWriter* q_imagewriter_new2(void* device, char* format);
+QImageWriter* q_imagewriter_new2(void* device, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html)
 
@@ -36,9 +36,9 @@ QImageWriter* q_imagewriter_new3(const char* fileName);
 /// q_imagewriter_new4 constructs a new QImageWriter object.
 ///
 /// @param fileName const char*
-/// @param format char*
+/// @param format const char*
 ///
-QImageWriter* q_imagewriter_new4(const char* fileName, char* format);
+QImageWriter* q_imagewriter_new4(const char* fileName, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -51,17 +51,17 @@ const char* q_imagewriter_tr(const char* sourceText);
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#setFormat)
 ///
 /// @param self QImageWriter*
-/// @param format char*
+/// @param format const char*
 ///
-void q_imagewriter_set_format(void* self, char* format);
+void q_imagewriter_set_format(void* self, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#format)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QImageWriter*
 ///
-char* q_imagewriter_format(const void* self);
+const char* q_imagewriter_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#setDevice)
 ///
@@ -120,17 +120,17 @@ int32_t q_imagewriter_compression(const void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#setSubType)
 ///
 /// @param self QImageWriter*
-/// @param type char*
+/// @param type const char*
 ///
-void q_imagewriter_set_sub_type(void* self, char* type);
+void q_imagewriter_set_sub_type(void* self, const char* type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#subType)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QImageWriter*
 ///
-char* q_imagewriter_sub_type(const void* self);
+const char* q_imagewriter_sub_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimagewriter.html#supportedSubTypes)
 ///
@@ -241,9 +241,9 @@ const char** q_imagewriter_supported_mime_types();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param mimeType char*
+/// @param mimeType const char*
 ///
-const char** q_imagewriter_image_formats_for_mime_type(char* mimeType);
+const char** q_imagewriter_image_formats_for_mime_type(const char* mimeType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

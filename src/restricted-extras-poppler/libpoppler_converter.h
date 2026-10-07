@@ -480,33 +480,33 @@ void q_poppler__pdfconverter__newsignaturedata_set_field_partial_name(void* self
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-char* q_poppler__pdfconverter__newsignaturedata_document_owner_password(const void* self);
+const char* q_poppler__pdfconverter__newsignaturedata_document_owner_password(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
 /// @param self Poppler__PDFConverter__NewSignatureData*
-/// @param password char*
+/// @param password const char*
 ///
-void q_poppler__pdfconverter__newsignaturedata_set_document_owner_password(void* self, char* password);
+void q_poppler__pdfconverter__newsignaturedata_set_document_owner_password(void* self, const char* password);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Poppler__PDFConverter__NewSignatureData*
 ///
-char* q_poppler__pdfconverter__newsignaturedata_document_user_password(const void* self);
+const char* q_poppler__pdfconverter__newsignaturedata_document_user_password(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///
 /// @param self Poppler__PDFConverter__NewSignatureData*
-/// @param password char*
+/// @param password const char*
 ///
-void q_poppler__pdfconverter__newsignaturedata_set_document_user_password(void* self, char* password);
+void q_poppler__pdfconverter__newsignaturedata_set_document_user_password(void* self, const char* password);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1PDFConverter_1_1NewSignatureData.html)
 ///

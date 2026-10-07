@@ -19,9 +19,9 @@ QPropertyAnimation* q_propertyanimation_new();
 /// q_propertyanimation_new2 constructs a new QPropertyAnimation object.
 ///
 /// @param target QObject*
-/// @param propertyName char*
+/// @param propertyName const char*
 ///
-QPropertyAnimation* q_propertyanimation_new2(void* target, char* propertyName);
+QPropertyAnimation* q_propertyanimation_new2(void* target, const char* propertyName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html)
 
@@ -36,10 +36,10 @@ QPropertyAnimation* q_propertyanimation_new3(void* parent);
 /// q_propertyanimation_new4 constructs a new QPropertyAnimation object.
 ///
 /// @param target QObject*
-/// @param propertyName char*
+/// @param propertyName const char*
 /// @param parent QObject*
 ///
-QPropertyAnimation* q_propertyanimation_new4(void* target, char* propertyName, void* parent);
+QPropertyAnimation* q_propertyanimation_new4(void* target, const char* propertyName, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -129,18 +129,18 @@ void q_propertyanimation_set_target_object(void* self, void* target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#propertyName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QPropertyAnimation*
 ///
-char* q_propertyanimation_property_name(const void* self);
+const char* q_propertyanimation_property_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#setPropertyName)
 ///
 /// @param self QPropertyAnimation*
-/// @param propertyName char*
+/// @param propertyName const char*
 ///
-void q_propertyanimation_set_property_name(void* self, char* propertyName);
+void q_propertyanimation_set_property_name(void* self, const char* propertyName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyanimation.html#event)
 ///

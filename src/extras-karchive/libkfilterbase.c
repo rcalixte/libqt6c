@@ -62,7 +62,7 @@ void k_filterbase_on_read_header(void* self, bool (*callback)(void*)) {
     KFilterBase_OnReadHeader((KFilterBase*)self, (intptr_t)callback);
 }
 
-bool k_filterbase_write_header(void* self, char* filename) {
+bool k_filterbase_write_header(void* self, const char* filename) {
     return KFilterBase_WriteHeader((KFilterBase*)self, qstring(filename));
 }
 

@@ -59,9 +59,9 @@ void k_io__transferjob_set_async_data_enabled(void* self, bool enabled);
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#sendAsyncData)
 ///
 /// @param self KIO__TransferJob*
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__transferjob_send_async_data(void* self, char* data);
+void k_io__transferjob_send_async_data(void* self, const char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#mimetype)
 ///
@@ -88,9 +88,9 @@ void k_io__transferjob_set_total_size(void* self, uintptr_t bytes);
 ///
 /// @param self KIO__TransferJob*
 /// @param job KIO__Job*
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__transferjob_data(void* self, void* job, char* data);
+void k_io__transferjob_data(void* self, void* job, const char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#data)
 ///
@@ -103,9 +103,9 @@ void k_io__transferjob_on_data(void* self, void (*callback)(void*, void*, libqt_
 ///
 /// @param self KIO__TransferJob*
 /// @param job KIO__Job*
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__transferjob_data_req(void* self, void* job, char* data);
+void k_io__transferjob_data_req(void* self, void* job, const char* data);
 
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#dataReq)
 ///
@@ -1264,10 +1264,10 @@ KIO__TransferJob* k_io_put(const void* url, int permissions, int32_t flags);
 /// [Upstream resources](https://api.kde.org/kio.html#http_post)
 ///
 /// @param url QUrl*
-/// @param postData char*
+/// @param postData const char*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__TransferJob* k_io_http_post(const void* url, char* postData, int32_t flags);
+KIO__TransferJob* k_io_http_post(const void* url, const char* postData, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#http_post)
 ///

@@ -106,9 +106,9 @@ const char* q_quick3dtexturedata_texture_data(const void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dtexturedata.html#setTextureData)
 ///
 /// @param self QQuick3DTextureData*
-/// @param data char*
+/// @param data const char*
 ///
-void q_quick3dtexturedata_set_texture_data(void* self, char* data);
+void q_quick3dtexturedata_set_texture_data(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dtexturedata.html#size)
 ///

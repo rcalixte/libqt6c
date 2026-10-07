@@ -62,7 +62,7 @@ void k_terminallauncherjob_set_working_directory(void* self, const char* working
     KTerminalLauncherJob_SetWorkingDirectory((KTerminalLauncherJob*)self, qstring(workingDirectory));
 }
 
-void k_terminallauncherjob_set_startup_id(void* self, char* startupId) {
+void k_terminallauncherjob_set_startup_id(void* self, const char* startupId) {
     KTerminalLauncherJob_SetStartupId((KTerminalLauncherJob*)self, qstring(startupId));
 }
 

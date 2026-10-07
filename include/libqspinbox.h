@@ -2274,20 +2274,20 @@ void q_spinbox_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSpinBox*
 ///
-char* q_spinbox_save_geometry(const void* self);
+const char* q_spinbox_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QSpinBox*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_spinbox_restore_geometry(void* self, char* geometry);
+bool q_spinbox_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4876,11 +4876,11 @@ void q_spinbox_on_drop_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSpinBox*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_spinbox_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_spinbox_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4889,11 +4889,11 @@ bool q_spinbox_native_event(void* self, char* eventType, void* message, intptr_t
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSpinBox*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_spinbox_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_spinbox_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -7911,20 +7911,20 @@ void q_doublespinbox_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QDoubleSpinBox*
 ///
-char* q_doublespinbox_save_geometry(const void* self);
+const char* q_doublespinbox_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QDoubleSpinBox*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_doublespinbox_restore_geometry(void* self, char* geometry);
+bool q_doublespinbox_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -10546,11 +10546,11 @@ void q_doublespinbox_on_drop_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QDoubleSpinBox*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_doublespinbox_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_doublespinbox_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -10559,11 +10559,11 @@ bool q_doublespinbox_native_event(void* self, char* eventType, void* message, in
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QDoubleSpinBox*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_doublespinbox_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_doublespinbox_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

@@ -15,7 +15,7 @@ QCborStreamReader* q_cborstreamreader_new3(unsigned char* data, intptr_t lenVal)
     return QCborStreamReader_New3(data, lenVal);
 }
 
-QCborStreamReader* q_cborstreamreader_new4(char* data) {
+QCborStreamReader* q_cborstreamreader_new4(const char* data) {
     return QCborStreamReader_New4(qstring(data));
 }
 
@@ -31,7 +31,7 @@ QIODevice* q_cborstreamreader_device(const void* self) {
     return QCborStreamReader_Device((QCborStreamReader*)self);
 }
 
-void q_cborstreamreader_add_data(void* self, char* data) {
+void q_cborstreamreader_add_data(void* self, const char* data) {
     QCborStreamReader_AddData((QCborStreamReader*)self, qstring(data));
 }
 
@@ -187,11 +187,11 @@ bool q_cborstreamreader_read_and_append_to_string(void* self, const char* dst) {
     return QCborStreamReader_ReadAndAppendToString((QCborStreamReader*)self, qstring(dst));
 }
 
-bool q_cborstreamreader_read_and_append_to_utf8_string(void* self, char* dst) {
+bool q_cborstreamreader_read_and_append_to_utf8_string(void* self, const char* dst) {
     return QCborStreamReader_ReadAndAppendToUtf8String((QCborStreamReader*)self, qstring(dst));
 }
 
-bool q_cborstreamreader_read_and_append_to_byte_array(void* self, char* dst) {
+bool q_cborstreamreader_read_and_append_to_byte_array(void* self, const char* dst) {
     return QCborStreamReader_ReadAndAppendToByteArray((QCborStreamReader*)self, qstring(dst));
 }
 
@@ -238,14 +238,14 @@ const char* q_cborstreamreader_read_all_string(void* self) {
     return _ret;
 }
 
-char* q_cborstreamreader_read_all_utf8_string(void* self) {
+const char* q_cborstreamreader_read_all_utf8_string(void* self) {
     libqt_string _str = QCborStreamReader_ReadAllUtf8String((QCborStreamReader*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_cborstreamreader_read_all_byte_array(void* self) {
+const char* q_cborstreamreader_read_all_byte_array(void* self) {
     libqt_string _str = QCborStreamReader_ReadAllByteArray((QCborStreamReader*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -79,7 +79,7 @@ QVariant* q_webenginehistorymodel_data(const void* self, const void* index, int 
     return QWebEngineHistoryModel_Data((QWebEngineHistoryModel*)self, (QModelIndex*)index, role);
 }
 
-libqt_map /* of int to char* */ q_webenginehistorymodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_webenginehistorymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QWebEngineHistoryModel_RoleNames((QWebEngineHistoryModel*)self);
     libqt_map _ret;

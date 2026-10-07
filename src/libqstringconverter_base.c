@@ -25,11 +25,11 @@ const char* q_stringconverter_name_for_encoding(int32_t e) {
     return QStringConverter_NameForEncoding(e);
 }
 
-int32_t q_stringconverter_encoding_for_data(char* data) {
+int32_t q_stringconverter_encoding_for_data(const char* data) {
     return QStringConverter_EncodingForData(qstring(data));
 }
 
-int32_t q_stringconverter_encoding_for_html(char* data) {
+int32_t q_stringconverter_encoding_for_html(const char* data) {
     return QStringConverter_EncodingForHtml(qstring(data));
 }
 

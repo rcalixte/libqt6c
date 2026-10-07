@@ -66,7 +66,7 @@ void k_io__commandlauncherjob_set_desktop_name(void* self, const char* desktopNa
     KIO__CommandLauncherJob_SetDesktopName((KIO__CommandLauncherJob*)self, qstring(desktopName));
 }
 
-void k_io__commandlauncherjob_set_startup_id(void* self, char* startupId) {
+void k_io__commandlauncherjob_set_startup_id(void* self, const char* startupId) {
     KIO__CommandLauncherJob_SetStartupId((KIO__CommandLauncherJob*)self, qstring(startupId));
 }
 

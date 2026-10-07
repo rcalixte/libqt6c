@@ -34,7 +34,7 @@ QJSValue* q_jsvalue_new7(const char* value) {
     return QJSValue_New7(qstring(value));
 }
 
-QJSValue* q_jsvalue_new8(char* value) {
+QJSValue* q_jsvalue_new8(const char* value) {
     return QJSValue_New8(qstring(value));
 }
 

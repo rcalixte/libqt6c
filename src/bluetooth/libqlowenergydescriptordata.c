@@ -6,7 +6,7 @@ QLowEnergyDescriptorData* q_lowenergydescriptordata_new() {
     return QLowEnergyDescriptorData_New();
 }
 
-QLowEnergyDescriptorData* q_lowenergydescriptordata_new2(const void* uuid, char* value) {
+QLowEnergyDescriptorData* q_lowenergydescriptordata_new2(const void* uuid, const char* value) {
     return QLowEnergyDescriptorData_New2((QBluetoothUuid*)uuid, qstring(value));
 }
 
@@ -18,14 +18,14 @@ void q_lowenergydescriptordata_operator_assign(void* self, const void* other) {
     QLowEnergyDescriptorData_OperatorAssign((QLowEnergyDescriptorData*)self, (QLowEnergyDescriptorData*)other);
 }
 
-char* q_lowenergydescriptordata_value(const void* self) {
+const char* q_lowenergydescriptordata_value(const void* self) {
     libqt_string _str = QLowEnergyDescriptorData_Value((QLowEnergyDescriptorData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_lowenergydescriptordata_set_value(void* self, char* value) {
+void q_lowenergydescriptordata_set_value(void* self, const char* value) {
     QLowEnergyDescriptorData_SetValue((QLowEnergyDescriptorData*)self, qstring(value));
 }
 

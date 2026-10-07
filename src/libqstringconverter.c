@@ -55,11 +55,11 @@ const char* q_stringencoder_name_for_encoding(int32_t e) {
     return QStringConverter_NameForEncoding(e);
 }
 
-int32_t q_stringencoder_encoding_for_data(char* data) {
+int32_t q_stringencoder_encoding_for_data(const char* data) {
     return QStringConverter_EncodingForData(qstring(data));
 }
 
-int32_t q_stringencoder_encoding_for_html(char* data) {
+int32_t q_stringencoder_encoding_for_html(const char* data) {
     return QStringConverter_EncodingForHtml(qstring(data));
 }
 
@@ -108,11 +108,11 @@ intptr_t q_stringdecoder_required_space(const void* self, intptr_t inputLength) 
     return QStringDecoder_RequiredSpace((QStringDecoder*)self, inputLength);
 }
 
-QChar* q_stringdecoder_append_to_buffer(void* self, void* out, char* ba) {
+QChar* q_stringdecoder_append_to_buffer(void* self, void* out, const char* ba) {
     return QStringDecoder_AppendToBuffer((QStringDecoder*)self, (QChar*)out, qstring(ba));
 }
 
-QStringDecoder* q_stringdecoder_decoder_for_html(char* data) {
+QStringDecoder* q_stringdecoder_decoder_for_html(const char* data) {
     return QStringDecoder_DecoderForHtml(qstring(data));
 }
 
@@ -140,11 +140,11 @@ const char* q_stringdecoder_name_for_encoding(int32_t e) {
     return QStringConverter_NameForEncoding(e);
 }
 
-int32_t q_stringdecoder_encoding_for_data(char* data) {
+int32_t q_stringdecoder_encoding_for_data(const char* data) {
     return QStringConverter_EncodingForData(qstring(data));
 }
 
-int32_t q_stringdecoder_encoding_for_html(char* data) {
+int32_t q_stringdecoder_encoding_for_html(const char* data) {
     return QStringConverter_EncodingForHtml(qstring(data));
 }
 

@@ -341,18 +341,18 @@ libqt_list q_filedialog_sidebar_urls(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#saveState)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QFileDialog*
 ///
-char* q_filedialog_save_state(const void* self);
+const char* q_filedialog_save_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#restoreState)
 ///
 /// @param self QFileDialog*
-/// @param state char*
+/// @param state const char*
 ///
-bool q_filedialog_restore_state(void* self, char* state);
+bool q_filedialog_restore_state(void* self, const char* state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#setDefaultSuffix)
 ///
@@ -680,16 +680,16 @@ libqt_list q_filedialog_get_open_file_urls();
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileContent)
 ///
 /// @param nameFilter const char*
-/// @param fileContentsReady void func(const char* param1, char* param2)
+/// @param fileContentsReady void func(const char* param1, const char* param2)
 ///
-void q_filedialog_get_open_file_content(const char* nameFilter, void (*fileContentsReady)(const char* funcparam1, char* funcparam2));
+void q_filedialog_get_open_file_content(const char* nameFilter, void (*fileContentsReady)(const char* funcparam1, const char* funcparam2));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#saveFileContent)
 ///
-/// @param fileContent char*
+/// @param fileContent const char*
 /// @param fileNameHint const char*
 ///
-void q_filedialog_save_file_content(char* fileContent, const char* fileNameHint);
+void q_filedialog_save_file_content(const char* fileContent, const char* fileNameHint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#done)
 ///
@@ -1084,18 +1084,18 @@ libqt_list q_filedialog_get_open_file_urls4(void* parent, const char* caption, c
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileContent)
 ///
 /// @param nameFilter const char*
-/// @param fileContentsReady void func(const char* param1, char* param2)
+/// @param fileContentsReady void func(const char* param1, const char* param2)
 /// @param parent QWidget*
 ///
-void q_filedialog_get_open_file_content3(const char* nameFilter, void (*fileContentsReady)(const char* funcparam1, char* funcparam2), void* parent);
+void q_filedialog_get_open_file_content3(const char* nameFilter, void (*fileContentsReady)(const char* funcparam1, const char* funcparam2), void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#saveFileContent)
 ///
-/// @param fileContent char*
+/// @param fileContent const char*
 /// @param fileNameHint const char*
 /// @param parent QWidget*
 ///
-void q_filedialog_save_file_content3(char* fileContent, const char* fileNameHint, void* parent);
+void q_filedialog_save_file_content3(const char* fileContent, const char* fileNameHint, void* parent);
 
 /// Inherited from QDialog
 ///
@@ -2820,20 +2820,20 @@ void q_filedialog_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QFileDialog*
 ///
-char* q_filedialog_save_geometry(const void* self);
+const char* q_filedialog_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QFileDialog*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_filedialog_restore_geometry(void* self, char* geometry);
+bool q_filedialog_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -5317,11 +5317,11 @@ void q_filedialog_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_filedialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_filedialog_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -5330,11 +5330,11 @@ bool q_filedialog_native_event(void* self, char* eventType, void* message, intpt
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_filedialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_filedialog_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

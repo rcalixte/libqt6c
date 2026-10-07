@@ -869,7 +869,7 @@ void q_scilexermatlab_on_disconnect_notify(void* self, void (*callback)(void*, c
     QsciLexerMatlab_OnDisconnectNotify((QsciLexerMatlab*)self, (intptr_t)callback);
 }
 
-char* q_scilexermatlab_text_as_bytes(const void* self, const char* text) {
+const char* q_scilexermatlab_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciLexerMatlab_TextAsBytes((QsciLexerMatlab*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

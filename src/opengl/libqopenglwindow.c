@@ -1385,11 +1385,11 @@ void q_openglwindow_on_tablet_event(void* self, void (*callback)(void*, void*)) 
     QOpenGLWindow_OnTabletEvent((QOpenGLWindow*)self, (intptr_t)callback);
 }
 
-bool q_openglwindow_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_openglwindow_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QOpenGLWindow_NativeEvent((QOpenGLWindow*)self, qstring(eventType), message, result);
 }
 
-bool q_openglwindow_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_openglwindow_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QOpenGLWindow_SuperNativeEvent((QOpenGLWindow*)self, qstring(eventType), message, result);
 }
 

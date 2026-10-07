@@ -117,7 +117,7 @@ const char* q_bluetoothuuid_to_string(const void* self) {
     return _ret;
 }
 
-char* q_bluetoothuuid_to_byte_array(const void* self) {
+const char* q_bluetoothuuid_to_byte_array(const void* self) {
     libqt_string _str = QUuid_ToByteArray((QUuid*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -128,7 +128,7 @@ QUuid__Id128Bytes* q_bluetoothuuid_to_bytes(const void* self) {
     return QUuid_ToBytes((QUuid*)self);
 }
 
-char* q_bluetoothuuid_to_rfc4122(const void* self) {
+const char* q_bluetoothuuid_to_rfc4122(const void* self) {
     libqt_string _str = QUuid_ToRfc4122((QUuid*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -139,7 +139,7 @@ QUuid* q_bluetoothuuid_from_bytes(void* bytes) {
     return QUuid_FromBytes(bytes);
 }
 
-QUuid* q_bluetoothuuid_from_rfc4122(char* param1) {
+QUuid* q_bluetoothuuid_from_rfc4122(const char* param1) {
     return QUuid_FromRfc4122(qstring(param1));
 }
 
@@ -151,11 +151,11 @@ QUuid* q_bluetoothuuid_create_uuid() {
     return QUuid_CreateUuid();
 }
 
-QUuid* q_bluetoothuuid_create_uuid_v5(void* ns, char* baseData) {
+QUuid* q_bluetoothuuid_create_uuid_v5(void* ns, const char* baseData) {
     return QUuid_CreateUuidV5((QUuid*)ns, qstring(baseData));
 }
 
-QUuid* q_bluetoothuuid_create_uuid_v3(void* ns, char* baseData) {
+QUuid* q_bluetoothuuid_create_uuid_v3(void* ns, const char* baseData) {
     return QUuid_CreateUuidV3((QUuid*)ns, qstring(baseData));
 }
 
@@ -198,7 +198,7 @@ const char* q_bluetoothuuid_to_string1(const void* self, int32_t mode) {
     return _ret;
 }
 
-char* q_bluetoothuuid_to_byte_array1(const void* self, int32_t mode) {
+const char* q_bluetoothuuid_to_byte_array1(const void* self, int32_t mode) {
     libqt_string _str = QUuid_ToByteArray1((QUuid*)self, mode);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

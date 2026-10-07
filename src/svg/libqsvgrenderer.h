@@ -26,9 +26,9 @@ QSvgRenderer* q_svgrenderer_new2(const char* filename);
 
 /// q_svgrenderer_new3 constructs a new QSvgRenderer object.
 ///
-/// @param contents char*
+/// @param contents const char*
 ///
-QSvgRenderer* q_svgrenderer_new3(char* contents);
+QSvgRenderer* q_svgrenderer_new3(const char* contents);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvgrenderer.html)
 
@@ -59,10 +59,10 @@ QSvgRenderer* q_svgrenderer_new6(const char* filename, void* parent);
 
 /// q_svgrenderer_new7 constructs a new QSvgRenderer object.
 ///
-/// @param contents char*
+/// @param contents const char*
 /// @param parent QObject*
 ///
-QSvgRenderer* q_svgrenderer_new7(char* contents, void* parent);
+QSvgRenderer* q_svgrenderer_new7(const char* contents, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvgrenderer.html)
 
@@ -302,9 +302,9 @@ bool q_svgrenderer_load(void* self, const char* filename);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvgrenderer.html#load)
 ///
 /// @param self QSvgRenderer*
-/// @param contents char*
+/// @param contents const char*
 ///
-bool q_svgrenderer_load2(void* self, char* contents);
+bool q_svgrenderer_load2(void* self, const char* contents);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvgrenderer.html#load)
 ///

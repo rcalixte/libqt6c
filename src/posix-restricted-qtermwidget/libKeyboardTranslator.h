@@ -285,26 +285,26 @@ void k_onsole__keyboardtranslator__entry_set_command(void* self, int32_t command
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Konsole__KeyboardTranslator__Entry*
 ///
-char* k_onsole__keyboardtranslator__entry_text(const void* self);
+const char* k_onsole__keyboardtranslator__entry_text(const void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__KeyboardTranslator__Entry*
-/// @param text char*
+/// @param text const char*
 ///
-void k_onsole__keyboardtranslator__entry_set_text(void* self, char* text);
+void k_onsole__keyboardtranslator__entry_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Konsole__KeyboardTranslator__Entry*
 ///
-char* k_onsole__keyboardtranslator__entry_escaped_text(const void* self);
+const char* k_onsole__keyboardtranslator__entry_escaped_text(const void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -420,41 +420,41 @@ void k_onsole__keyboardtranslator__entry_operator_assign(void* self, const void*
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Konsole__KeyboardTranslator__Entry*
 /// @param expandWildCards bool
 ///
-char* k_onsole__keyboardtranslator__entry_text1(const void* self, bool expandWildCards);
+const char* k_onsole__keyboardtranslator__entry_text1(const void* self, bool expandWildCards);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Konsole__KeyboardTranslator__Entry*
 /// @param expandWildCards bool
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-char* k_onsole__keyboardtranslator__entry_text2(const void* self, bool expandWildCards, int32_t modifiers);
+const char* k_onsole__keyboardtranslator__entry_text2(const void* self, bool expandWildCards, int32_t modifiers);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Konsole__KeyboardTranslator__Entry*
 /// @param expandWildCards bool
 ///
-char* k_onsole__keyboardtranslator__entry_escaped_text1(const void* self, bool expandWildCards);
+const char* k_onsole__keyboardtranslator__entry_escaped_text1(const void* self, bool expandWildCards);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Konsole__KeyboardTranslator__Entry*
 /// @param expandWildCards bool
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-char* k_onsole__keyboardtranslator__entry_escaped_text2(const void* self, bool expandWildCards, int32_t modifiers);
+const char* k_onsole__keyboardtranslator__entry_escaped_text2(const void* self, bool expandWildCards, int32_t modifiers);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///

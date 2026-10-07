@@ -3612,20 +3612,20 @@ void k_richtextwidget_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KRichTextWidget*
 ///
-char* k_richtextwidget_save_geometry(const void* self);
+const char* k_richtextwidget_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KRichTextWidget*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_richtextwidget_restore_geometry(void* self, char* geometry);
+bool k_richtextwidget_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -6763,11 +6763,11 @@ void k_richtextwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KRichTextWidget*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_richtextwidget_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_richtextwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -6776,11 +6776,11 @@ bool k_richtextwidget_native_event(void* self, char* eventType, void* message, i
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KRichTextWidget*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_richtextwidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_richtextwidget_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

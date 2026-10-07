@@ -874,7 +874,7 @@ void k_colorschememodel_on_span(void* self, QSize* (*callback)(const void*, cons
     KColorSchemeModel_OnSpan((KColorSchemeModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_colorschememodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_colorschememodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KColorSchemeModel_RoleNames((KColorSchemeModel*)self);
     libqt_map _ret;
@@ -907,7 +907,7 @@ libqt_map /* of int to char* */ k_colorschememodel_role_names(const void* self) 
     return _ret;
 }
 
-libqt_map /* of int to char* */ k_colorschememodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_colorschememodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KColorSchemeModel_SuperRoleNames((KColorSchemeModel*)self);
     libqt_map _ret;
@@ -940,7 +940,7 @@ libqt_map /* of int to char* */ k_colorschememodel_super_role_names(const void* 
     return _ret;
 }
 
-void k_colorschememodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_colorschememodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     KColorSchemeModel_OnRoleNames((KColorSchemeModel*)self, (intptr_t)callback);
 }
 

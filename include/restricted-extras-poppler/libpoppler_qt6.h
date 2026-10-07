@@ -223,11 +223,11 @@ QDateTime* q_poppler__embeddedfile_create_date(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Poppler__EmbeddedFile*
 ///
-char* q_poppler__embeddedfile_checksum(const void* self);
+const char* q_poppler__embeddedfile_checksum(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
@@ -239,11 +239,11 @@ const char* q_poppler__embeddedfile_mime_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self Poppler__EmbeddedFile*
 ///
-char* q_poppler__embeddedfile_data(void* self);
+const char* q_poppler__embeddedfile_data(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1EmbeddedFile.html)
 ///
@@ -831,9 +831,9 @@ Poppler__Document* q_poppler__document_load2(void* device);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param fileContents char*
+/// @param fileContents const char*
 ///
-Poppler__Document* q_poppler__document_load_from_data(char* fileContents);
+Poppler__Document* q_poppler__document_load_from_data(const char* fileContents);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -882,10 +882,10 @@ int32_t q_poppler__document_text_direction(const void* self);
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
 /// @param self Poppler__Document*
-/// @param ownerPassword char*
-/// @param userPassword char*
+/// @param ownerPassword const char*
+/// @param userPassword const char*
 ///
-bool q_poppler__document_unlock(void* self, char* ownerPassword, char* userPassword);
+bool q_poppler__document_unlock(void* self, const char* ownerPassword, const char* userPassword);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1143,12 +1143,12 @@ Poppler__FontIterator* q_poppler__document_new_font_iterator(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Poppler__Document*
 /// @param fi Poppler__FontInfo*
 ///
-char* q_poppler__document_font_data(const void* self, const void* fi);
+const char* q_poppler__document_font_data(const void* self, const void* fi);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1322,47 +1322,47 @@ void q_poppler__document_set_x_ref_reconstructed_callback(void* self, void (*cal
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
 /// @param filePath const char*
-/// @param ownerPassword char*
+/// @param ownerPassword const char*
 ///
-Poppler__Document* q_poppler__document_load22(const char* filePath, char* ownerPassword);
+Poppler__Document* q_poppler__document_load22(const char* filePath, const char* ownerPassword);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
 /// @param filePath const char*
-/// @param ownerPassword char*
-/// @param userPassword char*
+/// @param ownerPassword const char*
+/// @param userPassword const char*
 ///
-Poppler__Document* q_poppler__document_load3(const char* filePath, char* ownerPassword, char* userPassword);
+Poppler__Document* q_poppler__document_load3(const char* filePath, const char* ownerPassword, const char* userPassword);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
 /// @param device QIODevice*
-/// @param ownerPassword char*
+/// @param ownerPassword const char*
 ///
-Poppler__Document* q_poppler__document_load23(void* device, char* ownerPassword);
+Poppler__Document* q_poppler__document_load23(void* device, const char* ownerPassword);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
 /// @param device QIODevice*
-/// @param ownerPassword char*
-/// @param userPassword char*
+/// @param ownerPassword const char*
+/// @param userPassword const char*
 ///
-Poppler__Document* q_poppler__document_load32(void* device, char* ownerPassword, char* userPassword);
+Poppler__Document* q_poppler__document_load32(void* device, const char* ownerPassword, const char* userPassword);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param fileContents char*
-/// @param ownerPassword char*
+/// @param fileContents const char*
+/// @param ownerPassword const char*
 ///
-Poppler__Document* q_poppler__document_load_from_data2(char* fileContents, char* ownerPassword);
+Poppler__Document* q_poppler__document_load_from_data2(const char* fileContents, const char* ownerPassword);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
-/// @param fileContents char*
-/// @param ownerPassword char*
-/// @param userPassword char*
+/// @param fileContents const char*
+/// @param ownerPassword const char*
+/// @param userPassword const char*
 ///
-Poppler__Document* q_poppler__document_load_from_data3(char* fileContents, char* ownerPassword, char* userPassword);
+Poppler__Document* q_poppler__document_load_from_data3(const char* fileContents, const char* ownerPassword, const char* userPassword);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
@@ -1407,11 +1407,11 @@ const char* q_poppler__soundobject_url(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundObject.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const Poppler__SoundObject*
 ///
-char* q_poppler__soundobject_data(const void* self);
+const char* q_poppler__soundobject_data(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SoundObject.html)
 ///

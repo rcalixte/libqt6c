@@ -77,7 +77,7 @@ QVariant* q_variant_new14(const void* bitarray) {
     return QVariant_New14((QBitArray*)bitarray);
 }
 
-QVariant* q_variant_new15(char* bytearray) {
+QVariant* q_variant_new15(const char* bytearray) {
     return QVariant_New15(qstring(bytearray));
 }
 
@@ -249,7 +249,7 @@ QVariant* q_variant_new41(const char* str) {
     return QVariant_New41(str);
 }
 
-QVariant* q_variant_new42(char* string) {
+QVariant* q_variant_new42(const char* string) {
     return QVariant_New42(qstring(string));
 }
 
@@ -357,7 +357,7 @@ double q_variant_to_real(const void* self) {
     return QVariant_ToReal((QVariant*)self);
 }
 
-char* q_variant_to_byte_array(const void* self) {
+const char* q_variant_to_byte_array(const void* self) {
     libqt_string _str = QVariant_ToByteArray((QVariant*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

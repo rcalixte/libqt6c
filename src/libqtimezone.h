@@ -34,20 +34,20 @@ QTimeZone* q_timezone_new3(int offsetSeconds);
 
 /// q_timezone_new4 constructs a new QTimeZone object.
 ///
-/// @param ianaId char*
+/// @param ianaId const char*
 ///
-QTimeZone* q_timezone_new4(char* ianaId);
+QTimeZone* q_timezone_new4(const char* ianaId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html)
 
 /// q_timezone_new5 constructs a new QTimeZone object.
 ///
-/// @param zoneId char*
+/// @param zoneId const char*
 /// @param offsetSeconds int
 /// @param name const char*
 /// @param abbreviation const char*
 ///
-QTimeZone* q_timezone_new5(char* zoneId, int offsetSeconds, const char* name, const char* abbreviation);
+QTimeZone* q_timezone_new5(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html)
 
@@ -61,26 +61,26 @@ QTimeZone* q_timezone_new6(const void* other);
 
 /// q_timezone_new7 constructs a new QTimeZone object.
 ///
-/// @param zoneId char*
+/// @param zoneId const char*
 /// @param offsetSeconds int
 /// @param name const char*
 /// @param abbreviation const char*
 /// @param territory enum QLocale__Country
 ///
-QTimeZone* q_timezone_new7(char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, uint16_t territory);
+QTimeZone* q_timezone_new7(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, uint16_t territory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html)
 
 /// q_timezone_new8 constructs a new QTimeZone object.
 ///
-/// @param zoneId char*
+/// @param zoneId const char*
 /// @param offsetSeconds int
 /// @param name const char*
 /// @param abbreviation const char*
 /// @param territory enum QLocale__Country
 /// @param comment const char*
 ///
-QTimeZone* q_timezone_new8(char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, uint16_t territory, const char* comment);
+QTimeZone* q_timezone_new8(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, uint16_t territory, const char* comment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#operator-eq)
 ///
@@ -149,17 +149,17 @@ QTimeZone* q_timezone_as_backend_zone(const void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#hasAlternativeName)
 ///
 /// @param self const QTimeZone*
-/// @param alias char*
+/// @param alias const char*
 ///
-bool q_timezone_has_alternative_name(const void* self, char* alias);
+bool q_timezone_has_alternative_name(const void* self, const char* alias);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QTimeZone*
 ///
-char* q_timezone_id(const void* self);
+const char* q_timezone_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#territory)
 ///
@@ -285,9 +285,9 @@ libqt_list q_timezone_transitions(const void* self, const void* fromDateTime, co
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#systemTimeZoneId)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-char* q_timezone_system_time_zone_id();
+const char* q_timezone_system_time_zone_id();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#systemTimeZone)
 ///
@@ -299,9 +299,9 @@ QTimeZone* q_timezone_utc();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#isTimeZoneIdAvailable)
 ///
-/// @param ianaId char*
+/// @param ianaId const char*
 ///
-bool q_timezone_is_time_zone_id_available(char* ianaId);
+bool q_timezone_is_time_zone_id_available(const char* ianaId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#availableTimeZoneIds)
 ///
@@ -327,45 +327,45 @@ const char** q_timezone_available_time_zone_ids3(int offsetSeconds);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#ianaIdToWindowsId)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param ianaId char*
+/// @param ianaId const char*
 ///
-char* q_timezone_iana_id_to_windows_id(char* ianaId);
+const char* q_timezone_iana_id_to_windows_id(const char* ianaId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#windowsIdToDefaultIanaId)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param windowsId char*
+/// @param windowsId const char*
 ///
-char* q_timezone_windows_id_to_default_iana_id(char* windowsId);
+const char* q_timezone_windows_id_to_default_iana_id(const char* windowsId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#windowsIdToDefaultIanaId)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param windowsId char*
+/// @param windowsId const char*
 /// @param territory enum QLocale__Country
 ///
-char* q_timezone_windows_id_to_default_iana_id2(char* windowsId, uint16_t territory);
+const char* q_timezone_windows_id_to_default_iana_id2(const char* windowsId, uint16_t territory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#windowsIdToIanaIds)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param windowsId char*
+/// @param windowsId const char*
 ///
-const char** q_timezone_windows_id_to_iana_ids(char* windowsId);
+const char** q_timezone_windows_id_to_iana_ids(const char* windowsId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#windowsIdToIanaIds)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param windowsId char*
+/// @param windowsId const char*
 /// @param territory enum QLocale__Country
 ///
-const char** q_timezone_windows_id_to_iana_ids2(char* windowsId, uint16_t territory);
+const char** q_timezone_windows_id_to_iana_ids2(const char* windowsId, uint16_t territory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///

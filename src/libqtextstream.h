@@ -26,18 +26,18 @@ QTextStream* q_textstream_new2(void* device);
 
 /// q_textstream_new3 constructs a new QTextStream object.
 ///
-/// @param array char*
+/// @param array const char*
 ///
-QTextStream* q_textstream_new3(char* array);
+QTextStream* q_textstream_new3(const char* array);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html)
 
 /// q_textstream_new4 constructs a new QTextStream object.
 ///
-/// @param array char*
+/// @param array const char*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
-QTextStream* q_textstream_new4(char* array, int32_t openMode);
+QTextStream* q_textstream_new4(const char* array, int32_t openMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setEncoding)
 ///
@@ -392,9 +392,9 @@ QTextStream* q_textstream_operator_shift_right14(void* self, const char* s);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
 /// @param self QTextStream*
-/// @param array char*
+/// @param array const char*
 ///
-QTextStream* q_textstream_operator_shift_right15(void* self, char* array);
+QTextStream* q_textstream_operator_shift_right15(void* self, const char* array);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
@@ -504,16 +504,16 @@ QTextStream* q_textstream_operator_shift_left15(void* self, const char* s);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
 /// @param self QTextStream*
-/// @param s char*
+/// @param s const char*
 ///
-QTextStream* q_textstream_operator_shift_left16(void* self, char* s);
+QTextStream* q_textstream_operator_shift_left16(void* self, const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
 /// @param self QTextStream*
-/// @param array char*
+/// @param array const char*
 ///
-QTextStream* q_textstream_operator_shift_left17(void* self, char* array);
+QTextStream* q_textstream_operator_shift_left17(void* self, const char* array);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///

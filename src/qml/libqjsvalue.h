@@ -66,9 +66,9 @@ QJSValue* q_jsvalue_new7(const char* value);
 
 /// q_jsvalue_new8 constructs a new QJSValue object.
 ///
-/// @param value char*
+/// @param value const char*
 ///
-QJSValue* q_jsvalue_new8(char* value);
+QJSValue* q_jsvalue_new8(const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html)
 

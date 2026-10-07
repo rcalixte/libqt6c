@@ -1287,14 +1287,14 @@ void k_urllabel_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_urllabel_save_geometry(const void* self) {
+const char* k_urllabel_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_urllabel_restore_geometry(void* self, char* geometry) {
+bool k_urllabel_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2272,11 +2272,11 @@ void k_urllabel_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KUrlLabel_OnHideEvent((KUrlLabel*)self, (intptr_t)callback);
 }
 
-bool k_urllabel_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_urllabel_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KUrlLabel_NativeEvent((KUrlLabel*)self, qstring(eventType), message, result);
 }
 
-bool k_urllabel_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_urllabel_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KUrlLabel_SuperNativeEvent((KUrlLabel*)self, qstring(eventType), message, result);
 }
 

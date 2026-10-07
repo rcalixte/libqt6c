@@ -1984,27 +1984,27 @@ void q_scilexerbatch_on_disconnect_notify(void* self, void (*callback)(void*, co
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerBatch*
 /// @param text const char*
 ///
-char* q_scilexerbatch_text_as_bytes(const void* self, const char* text);
+const char* q_scilexerbatch_text_as_bytes(const void* self, const char* text);
 
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self const QsciLexerBatch*
 /// @param text const char*
 ///
-char* q_scilexerbatch_super_text_as_bytes(const void* self, const char* text);
+const char* q_scilexerbatch_super_text_as_bytes(const void* self, const char* text);
 
 /// Inherited from QsciLexer
 ///

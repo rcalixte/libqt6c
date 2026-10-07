@@ -120,7 +120,7 @@ void k_checkableproxymodel_super_set_source_model(void* self, void* sourceModel)
     KCheckableProxyModel_SuperSetSourceModel((KCheckableProxyModel*)self, (QAbstractItemModel*)sourceModel);
 }
 
-libqt_map /* of int to char* */ k_checkableproxymodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_checkableproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KCheckableProxyModel_RoleNames((KCheckableProxyModel*)self);
     libqt_map _ret;
@@ -153,11 +153,11 @@ libqt_map /* of int to char* */ k_checkableproxymodel_role_names(const void* sel
     return _ret;
 }
 
-void k_checkableproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_checkableproxymodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     KCheckableProxyModel_OnRoleNames((KCheckableProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_checkableproxymodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_checkableproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KCheckableProxyModel_SuperRoleNames((KCheckableProxyModel*)self);
     libqt_map _ret;

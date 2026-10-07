@@ -246,7 +246,7 @@ QSize* q_poppler__optcontentmodel_span(const void* self, const void* index) {
     return QAbstractItemModel_Span((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-libqt_map /* of int to char* */ q_poppler__optcontentmodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_poppler__optcontentmodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QAbstractItemModel_RoleNames((QAbstractItemModel*)self);
     libqt_map _ret;

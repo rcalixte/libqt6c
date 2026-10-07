@@ -19,7 +19,7 @@ const char** k_emailaddress_split_address_list(const char* aStr) {
     return _ret;
 }
 
-int32_t k_emailaddress_split_address(char* address, char* displayName, char* addrSpec, char* comment) {
+int32_t k_emailaddress_split_address(const char* address, const char* displayName, const char* addrSpec, const char* comment) {
     return KEmailAddress_SplitAddress(qstring(address), qstring(displayName), qstring(addrSpec), qstring(comment));
 }
 
@@ -53,14 +53,14 @@ const char* k_emailaddress_simple_email_address_error_msg() {
     return _ret;
 }
 
-char* k_emailaddress_extract_email_address(char* address) {
+const char* k_emailaddress_extract_email_address(const char* address) {
     libqt_string _str = KEmailAddress_ExtractEmailAddress(qstring(address));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_emailaddress_extract_email_address2(char* address, const char* errorMessage) {
+const char* k_emailaddress_extract_email_address2(const char* address, const char* errorMessage) {
     libqt_string _str = KEmailAddress_ExtractEmailAddress2(qstring(address), qstring(errorMessage));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -81,14 +81,14 @@ const char* k_emailaddress_extract_email_address4(const char* address, const cha
     return _ret;
 }
 
-char* k_emailaddress_first_email_address(char* addresses) {
+const char* k_emailaddress_first_email_address(const char* addresses) {
     libqt_string _str = KEmailAddress_FirstEmailAddress(qstring(addresses));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_emailaddress_first_email_address2(char* addresses, const char* errorMessage) {
+const char* k_emailaddress_first_email_address2(const char* addresses, const char* errorMessage) {
     libqt_string _str = KEmailAddress_FirstEmailAddress2(qstring(addresses), qstring(errorMessage));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

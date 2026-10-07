@@ -52,7 +52,7 @@ const char* q_uuid_to_string(const void* self) {
     return _ret;
 }
 
-char* q_uuid_to_byte_array(const void* self) {
+const char* q_uuid_to_byte_array(const void* self) {
     libqt_string _str = QUuid_ToByteArray((QUuid*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -63,7 +63,7 @@ QUuid__Id128Bytes* q_uuid_to_bytes(const void* self) {
     return QUuid_ToBytes((QUuid*)self);
 }
 
-char* q_uuid_to_rfc4122(const void* self) {
+const char* q_uuid_to_rfc4122(const void* self) {
     libqt_string _str = QUuid_ToRfc4122((QUuid*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -74,7 +74,7 @@ QUuid* q_uuid_from_bytes(void* bytes) {
     return QUuid_FromBytes(bytes);
 }
 
-QUuid* q_uuid_from_rfc4122(char* param1) {
+QUuid* q_uuid_from_rfc4122(const char* param1) {
     return QUuid_FromRfc4122(qstring(param1));
 }
 
@@ -86,11 +86,11 @@ QUuid* q_uuid_create_uuid() {
     return QUuid_CreateUuid();
 }
 
-QUuid* q_uuid_create_uuid_v5(void* ns, char* baseData) {
+QUuid* q_uuid_create_uuid_v5(void* ns, const char* baseData) {
     return QUuid_CreateUuidV5((QUuid*)ns, qstring(baseData));
 }
 
-QUuid* q_uuid_create_uuid_v3(void* ns, char* baseData) {
+QUuid* q_uuid_create_uuid_v3(void* ns, const char* baseData) {
     return QUuid_CreateUuidV3((QUuid*)ns, qstring(baseData));
 }
 
@@ -133,7 +133,7 @@ const char* q_uuid_to_string1(const void* self, int32_t mode) {
     return _ret;
 }
 
-char* q_uuid_to_byte_array1(const void* self, int32_t mode) {
+const char* q_uuid_to_byte_array1(const void* self, int32_t mode) {
     libqt_string _str = QUuid_ToByteArray1((QUuid*)self, mode);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -164,7 +164,7 @@ QUuid__Id128Bytes* q_uuid__id128bytes_new2(const void* param1) {
     return QUuid__Id128Bytes_New2((QUuid__Id128Bytes*)param1);
 }
 
-char* q_uuid__id128bytes_to_q_byte_array_view(const void* self) {
+const char* q_uuid__id128bytes_to_q_byte_array_view(const void* self) {
     libqt_string _str = QUuid__Id128Bytes_ToQByteArrayView((QUuid__Id128Bytes*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

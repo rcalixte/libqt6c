@@ -79,18 +79,18 @@ void q_webenginehttprequest_set_url(void* self, const void* url) {
     QWebEngineHttpRequest_SetUrl((QWebEngineHttpRequest*)self, (QUrl*)url);
 }
 
-char* q_webenginehttprequest_post_data(const void* self) {
+const char* q_webenginehttprequest_post_data(const void* self) {
     libqt_string _str = QWebEngineHttpRequest_PostData((QWebEngineHttpRequest*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_webenginehttprequest_set_post_data(void* self, char* postData) {
+void q_webenginehttprequest_set_post_data(void* self, const char* postData) {
     QWebEngineHttpRequest_SetPostData((QWebEngineHttpRequest*)self, qstring(postData));
 }
 
-bool q_webenginehttprequest_has_header(const void* self, char* headerName) {
+bool q_webenginehttprequest_has_header(const void* self, const char* headerName) {
     return QWebEngineHttpRequest_HasHeader((QWebEngineHttpRequest*)self, qstring(headerName));
 }
 
@@ -111,18 +111,18 @@ const char** q_webenginehttprequest_headers(const void* self) {
     return _ret;
 }
 
-char* q_webenginehttprequest_header(const void* self, char* headerName) {
+const char* q_webenginehttprequest_header(const void* self, const char* headerName) {
     libqt_string _str = QWebEngineHttpRequest_Header((QWebEngineHttpRequest*)self, qstring(headerName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_webenginehttprequest_set_header(void* self, char* headerName, char* value) {
+void q_webenginehttprequest_set_header(void* self, const char* headerName, const char* value) {
     QWebEngineHttpRequest_SetHeader((QWebEngineHttpRequest*)self, qstring(headerName), qstring(value));
 }
 
-void q_webenginehttprequest_unset_header(void* self, char* headerName) {
+void q_webenginehttprequest_unset_header(void* self, const char* headerName) {
     QWebEngineHttpRequest_UnsetHeader((QWebEngineHttpRequest*)self, qstring(headerName));
 }
 

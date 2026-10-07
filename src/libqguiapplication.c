@@ -232,7 +232,7 @@ QInputMethod* q_guiapplication_input_method() {
     return QGuiApplication_InputMethod();
 }
 
-QFunctionPointer q_guiapplication_platform_function(char* function) {
+QFunctionPointer q_guiapplication_platform_function(const char* function) {
     return (QFunctionPointer)QGuiApplication_PlatformFunction(qstring(function));
 }
 

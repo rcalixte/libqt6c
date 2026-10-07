@@ -90,11 +90,11 @@ const char* k_zipfileentry_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KZipFileEntry*
 ///
-char* k_zipfileentry_data(const void* self);
+const char* k_zipfileentry_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#data)
 ///
@@ -111,7 +111,7 @@ void k_zipfileentry_on_data(void* self, libqt_string (*callback)(const void*));
 ///
 /// @param self const KZipFileEntry*
 ///
-char* k_zipfileentry_super_data(const void* self);
+const char* k_zipfileentry_super_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#createDevice)
 ///

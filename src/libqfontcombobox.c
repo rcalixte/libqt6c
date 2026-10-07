@@ -1311,14 +1311,14 @@ void q_fontcombobox_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_fontcombobox_save_geometry(const void* self) {
+const char* q_fontcombobox_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_fontcombobox_restore_geometry(void* self, char* geometry) {
+bool q_fontcombobox_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2368,11 +2368,11 @@ void q_fontcombobox_on_drop_event(void* self, void (*callback)(void*, void*)) {
     QFontComboBox_OnDropEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
-bool q_fontcombobox_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_fontcombobox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QFontComboBox_NativeEvent((QFontComboBox*)self, qstring(eventType), message, result);
 }
 
-bool q_fontcombobox_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_fontcombobox_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QFontComboBox_SuperNativeEvent((QFontComboBox*)self, qstring(eventType), message, result);
 }
 

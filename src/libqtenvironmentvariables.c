@@ -1,7 +1,7 @@
 #include "libqtenvironmentvariables.hpp"
 #include "libqtenvironmentvariables.h"
 
-char* q_qtenvironmentvariables_qgetenv(const char* varName) {
+const char* q_qtenvironmentvariables_qgetenv(const char* varName) {
     libqt_string _str = qtenvironmentvariables_Qgetenv(varName);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -22,7 +22,7 @@ const char* q_qtenvironmentvariables_q_environment_variable2(const char* varName
     return _ret;
 }
 
-bool q_qtenvironmentvariables_qputenv(const char* varName, char* value) {
+bool q_qtenvironmentvariables_qputenv(const char* varName, const char* value) {
     return qtenvironmentvariables_Qputenv(varName, qstring(value));
 }
 

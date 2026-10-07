@@ -54,19 +54,19 @@ void q_metamethod_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#methodSignature)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaMethod*
 ///
-char* q_metamethod_method_signature(const void* self);
+const char* q_metamethod_method_signature(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaMethod*
 ///
-char* q_metamethod_name(const void* self);
+const char* q_metamethod_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#typeName)
 ///
@@ -125,12 +125,12 @@ const char** q_metamethod_parameter_types(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#parameterTypeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaMethod*
 /// @param index int
 ///
-char* q_metamethod_parameter_type_name(const void* self, int index);
+const char* q_metamethod_parameter_type_name(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#parameterNames)
 ///
@@ -1172,12 +1172,12 @@ int32_t q_metaenum_keys_to_value(const void* self, const char* keys);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#valueToKeys)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaEnum*
 /// @param value int
 ///
-char* q_metaenum_value_to_keys(const void* self, int value);
+const char* q_metaenum_value_to_keys(const void* self, int value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#enclosingMetaObject)
 ///

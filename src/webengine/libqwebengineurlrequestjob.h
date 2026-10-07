@@ -44,11 +44,11 @@ QUrl* q_webengineurlrequestjob_request_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#requestMethod)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QWebEngineUrlRequestJob*
 ///
-char* q_webengineurlrequestjob_request_method(const void* self);
+const char* q_webengineurlrequestjob_request_method(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#initiator)
 ///
@@ -61,7 +61,7 @@ QUrl* q_webengineurlrequestjob_initiator(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of char* to char*
+/// // libqt_map of const char* to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.keys[i]);
 ///     libqt_free(map.values[i]);
@@ -72,7 +72,7 @@ QUrl* q_webengineurlrequestjob_initiator(const void* self);
 ///
 /// @param self const QWebEngineUrlRequestJob*
 ///
-/// @return libqt_map of char* to char*
+/// @return libqt_map of const char* to const char*
 ///
 libqt_map q_webengineurlrequestjob_request_headers(const void* self);
 
@@ -85,10 +85,10 @@ QIODevice* q_webengineurlrequestjob_request_body(const void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#reply)
 ///
 /// @param self QWebEngineUrlRequestJob*
-/// @param contentType char*
+/// @param contentType const char*
 /// @param device QIODevice*
 ///
-void q_webengineurlrequestjob_reply(void* self, char* contentType, void* device);
+void q_webengineurlrequestjob_reply(void* self, const char* contentType, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#fail)
 ///
@@ -107,7 +107,7 @@ void q_webengineurlrequestjob_redirect(void* self, const void* url);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#setAdditionalResponseHeaders)
 ///
 /// @param self const QWebEngineUrlRequestJob*
-/// @param additionalResponseHeaders libqt_map of char* to char**
+/// @param additionalResponseHeaders libqt_map of const char* to const char**
 ///
 void q_webengineurlrequestjob_set_additional_response_headers(const void* self, libqt_map additionalResponseHeaders);
 

@@ -301,11 +301,11 @@ QInputMethod* q_guiapplication_input_method();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#platformFunction)
 ///
-/// @param function char*
+/// @param function const char*
 ///
 /// @return void (*QFunctionPointer)()
 ///
-QFunctionPointer q_guiapplication_platform_function(char* function);
+QFunctionPointer q_guiapplication_platform_function(const char* function);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setQuitOnLastWindowClosed)
 ///

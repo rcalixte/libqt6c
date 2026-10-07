@@ -157,7 +157,7 @@ QDateTime* q_poppler__embeddedfile_create_date(const void* self) {
     return Poppler__EmbeddedFile_CreateDate((Poppler__EmbeddedFile*)self);
 }
 
-char* q_poppler__embeddedfile_checksum(const void* self) {
+const char* q_poppler__embeddedfile_checksum(const void* self) {
     libqt_string _str = Poppler__EmbeddedFile_Checksum((Poppler__EmbeddedFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -171,7 +171,7 @@ const char* q_poppler__embeddedfile_mime_type(const void* self) {
     return _ret;
 }
 
-char* q_poppler__embeddedfile_data(void* self) {
+const char* q_poppler__embeddedfile_data(void* self) {
     libqt_string _str = Poppler__EmbeddedFile_Data((Poppler__EmbeddedFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -471,7 +471,7 @@ Poppler__Document* q_poppler__document_load2(void* device) {
     return Poppler__Document_Load2((QIODevice*)device);
 }
 
-Poppler__Document* q_poppler__document_load_from_data(char* fileContents) {
+Poppler__Document* q_poppler__document_load_from_data(const char* fileContents) {
     return Poppler__Document_LoadFromData(qstring(fileContents));
 }
 
@@ -499,7 +499,7 @@ int32_t q_poppler__document_text_direction(const void* self) {
     return Poppler__Document_TextDirection((Poppler__Document*)self);
 }
 
-bool q_poppler__document_unlock(void* self, char* ownerPassword, char* userPassword) {
+bool q_poppler__document_unlock(void* self, const char* ownerPassword, const char* userPassword) {
     return Poppler__Document_Unlock((Poppler__Document*)self, qstring(ownerPassword), qstring(userPassword));
 }
 
@@ -686,7 +686,7 @@ Poppler__FontIterator* q_poppler__document_new_font_iterator(const void* self) {
     return Poppler__Document_NewFontIterator((Poppler__Document*)self);
 }
 
-char* q_poppler__document_font_data(const void* self, const void* fi) {
+const char* q_poppler__document_font_data(const void* self, const void* fi) {
     libqt_string _str = Poppler__Document_FontData((Poppler__Document*)self, (Poppler__FontInfo*)fi);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -809,27 +809,27 @@ void q_poppler__document_set_x_ref_reconstructed_callback(void* self, void (*cal
     Poppler__Document_SetXRefReconstructedCallback((Poppler__Document*)self, (intptr_t)callback);
 }
 
-Poppler__Document* q_poppler__document_load22(const char* filePath, char* ownerPassword) {
+Poppler__Document* q_poppler__document_load22(const char* filePath, const char* ownerPassword) {
     return Poppler__Document_Load22(qstring(filePath), qstring(ownerPassword));
 }
 
-Poppler__Document* q_poppler__document_load3(const char* filePath, char* ownerPassword, char* userPassword) {
+Poppler__Document* q_poppler__document_load3(const char* filePath, const char* ownerPassword, const char* userPassword) {
     return Poppler__Document_Load3(qstring(filePath), qstring(ownerPassword), qstring(userPassword));
 }
 
-Poppler__Document* q_poppler__document_load23(void* device, char* ownerPassword) {
+Poppler__Document* q_poppler__document_load23(void* device, const char* ownerPassword) {
     return Poppler__Document_Load23((QIODevice*)device, qstring(ownerPassword));
 }
 
-Poppler__Document* q_poppler__document_load32(void* device, char* ownerPassword, char* userPassword) {
+Poppler__Document* q_poppler__document_load32(void* device, const char* ownerPassword, const char* userPassword) {
     return Poppler__Document_Load32((QIODevice*)device, qstring(ownerPassword), qstring(userPassword));
 }
 
-Poppler__Document* q_poppler__document_load_from_data2(char* fileContents, char* ownerPassword) {
+Poppler__Document* q_poppler__document_load_from_data2(const char* fileContents, const char* ownerPassword) {
     return Poppler__Document_LoadFromData2(qstring(fileContents), qstring(ownerPassword));
 }
 
-Poppler__Document* q_poppler__document_load_from_data3(char* fileContents, char* ownerPassword, char* userPassword) {
+Poppler__Document* q_poppler__document_load_from_data3(const char* fileContents, const char* ownerPassword, const char* userPassword) {
     return Poppler__Document_LoadFromData3(qstring(fileContents), qstring(ownerPassword), qstring(userPassword));
 }
 
@@ -856,7 +856,7 @@ const char* q_poppler__soundobject_url(const void* self) {
     return _ret;
 }
 
-char* q_poppler__soundobject_data(const void* self) {
+const char* q_poppler__soundobject_data(const void* self) {
     libqt_string _str = Poppler__SoundObject_Data((Poppler__SoundObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

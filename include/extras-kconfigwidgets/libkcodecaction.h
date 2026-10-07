@@ -156,9 +156,9 @@ bool k_codecaction_set_current_codec(void* self, const char* codecName);
 /// [Upstream resources](https://api.kde.org/kcodecaction.html#codecNameTriggered)
 ///
 /// @param self KCodecAction*
-/// @param name char*
+/// @param name const char*
 ///
-void k_codecaction_codec_name_triggered(void* self, char* name);
+void k_codecaction_codec_name_triggered(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kcodecaction.html#codecNameTriggered)
 ///

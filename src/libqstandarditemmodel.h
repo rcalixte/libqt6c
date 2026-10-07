@@ -929,7 +929,7 @@ const char* q_standarditemmodel_tr(const char* s);
 /// [Upstream resources](https://doc.qt.io/qt-6/qstandarditemmodel.html#setItemRoleNames)
 ///
 /// @param self QStandardItemModel*
-/// @param roleNames libqt_map of int to char*
+/// @param roleNames libqt_map of int to const char*
 ///
 void q_standarditemmodel_set_item_role_names(void* self, libqt_map roleNames);
 
@@ -938,7 +938,7 @@ void q_standarditemmodel_set_item_role_names(void* self, libqt_map roleNames);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -948,7 +948,7 @@ void q_standarditemmodel_set_item_role_names(void* self, libqt_map roleNames);
 ///
 /// @param self const QStandardItemModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_standarditemmodel_role_names(const void* self);
 
@@ -957,7 +957,7 @@ libqt_map q_standarditemmodel_role_names(const void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback libqt_map of int to char* func(const QStandardItemModel* self)
+/// @param callback libqt_map of int to const char* func(const QStandardItemModel* self)
 ///
 void q_standarditemmodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
@@ -967,7 +967,7 @@ void q_standarditemmodel_on_role_names(void* self, libqt_map (*callback)(const v
 ///
 /// @param self const QStandardItemModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map q_standarditemmodel_super_role_names(const void* self);
 

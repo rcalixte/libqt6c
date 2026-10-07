@@ -129,18 +129,18 @@ void q_signaltransition_set_sender_object(void* self, const void* sender);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsignaltransition.html#signal)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSignalTransition*
 ///
-char* q_signaltransition_signal(const void* self);
+const char* q_signaltransition_signal(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsignaltransition.html#setSignal)
 ///
 /// @param self QSignalTransition*
-/// @param signal char*
+/// @param signal const char*
 ///
-void q_signaltransition_set_signal(void* self, char* signal);
+void q_signaltransition_set_signal(void* self, const char* signal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsignaltransition.html#eventTest)
 ///

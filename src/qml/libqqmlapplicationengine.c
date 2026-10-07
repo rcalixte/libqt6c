@@ -143,7 +143,7 @@ void q_qmlapplicationengine_set_extra_file_selectors(void* self, const char* ext
     free(extraFileSelectors_qstr);
 }
 
-void q_qmlapplicationengine_load_data(void* self, char* data) {
+void q_qmlapplicationengine_load_data(void* self, const char* data) {
     QQmlApplicationEngine_LoadData((QQmlApplicationEngine*)self, qstring(data));
 }
 
@@ -177,7 +177,7 @@ const char* q_qmlapplicationengine_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_qmlapplicationengine_load_data2(void* self, char* data, const void* url) {
+void q_qmlapplicationengine_load_data2(void* self, const char* data, const void* url) {
     QQmlApplicationEngine_LoadData2((QQmlApplicationEngine*)self, qstring(data), (QUrl*)url);
 }
 

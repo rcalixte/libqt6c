@@ -45,6 +45,6 @@ int32_t q_qbytearrayalgorithms_qstrnicmp2(const char* param1, intptr_t param2, c
     return qbytearrayalgorithms_Qstrnicmp2(param1, param2, param3, param4);
 }
 
-uint16_t q_qbytearrayalgorithms_q_checksum(char* data, int32_t standard) {
+uint16_t q_qbytearrayalgorithms_q_checksum(const char* data, int32_t standard) {
     return qbytearrayalgorithms_QChecksum(qstring(data), standard);
 }

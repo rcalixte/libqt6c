@@ -172,9 +172,9 @@ void q_webengineview_set_html(void* self, const char* html);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#setContent)
 ///
 /// @param self QWebEngineView*
-/// @param data char*
+/// @param data const char*
 ///
-void q_webengineview_set_content(void* self, char* data);
+void q_webengineview_set_content(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#history)
 ///
@@ -316,9 +316,9 @@ void q_webengineview_print_to_pdf(void* self, const char* filePath);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#printToPdf)
 ///
 /// @param self QWebEngineView*
-/// @param resultCallback void func(char* param1)
+/// @param resultCallback void func(const char* param1)
 ///
-void q_webengineview_print_to_pdf2(void* self, void (*resultCallback)(char* funcparam1));
+void q_webengineview_print_to_pdf2(void* self, void (*resultCallback)(const char* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#print)
 ///
@@ -812,19 +812,19 @@ void q_webengineview_set_html2(void* self, const char* html, const void* baseUrl
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#setContent)
 ///
 /// @param self QWebEngineView*
-/// @param data char*
+/// @param data const char*
 /// @param mimeType const char*
 ///
-void q_webengineview_set_content2(void* self, char* data, const char* mimeType);
+void q_webengineview_set_content2(void* self, const char* data, const char* mimeType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#setContent)
 ///
 /// @param self QWebEngineView*
-/// @param data char*
+/// @param data const char*
 /// @param mimeType const char*
 /// @param baseUrl QUrl*
 ///
-void q_webengineview_set_content3(void* self, char* data, const char* mimeType, const void* baseUrl);
+void q_webengineview_set_content3(void* self, const char* data, const char* mimeType, const void* baseUrl);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#triggerPageAction)
 ///
@@ -871,19 +871,19 @@ void q_webengineview_print_to_pdf3(void* self, const char* filePath, const void*
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#printToPdf)
 ///
 /// @param self QWebEngineView*
-/// @param resultCallback void func(char* param1)
+/// @param resultCallback void func(const char* param1)
 /// @param layout QPageLayout*
 ///
-void q_webengineview_print_to_pdf23(void* self, void (*resultCallback)(char* funcparam1), const void* layout);
+void q_webengineview_print_to_pdf23(void* self, void (*resultCallback)(const char* funcparam1), const void* layout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#printToPdf)
 ///
 /// @param self QWebEngineView*
-/// @param resultCallback void func(char* param1)
+/// @param resultCallback void func(const char* param1)
 /// @param layout QPageLayout*
 /// @param ranges QPageRanges*
 ///
-void q_webengineview_print_to_pdf32(void* self, void (*resultCallback)(char* funcparam1), const void* layout, const void* ranges);
+void q_webengineview_print_to_pdf32(void* self, void (*resultCallback)(const char* funcparam1), const void* layout, const void* ranges);
 
 /// Inherited from QWidget
 ///
@@ -2513,20 +2513,20 @@ void q_webengineview_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QWebEngineView*
 ///
-char* q_webengineview_save_geometry(const void* self);
+const char* q_webengineview_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QWebEngineView*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_webengineview_restore_geometry(void* self, char* geometry);
+bool q_webengineview_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4585,11 +4585,11 @@ void q_webengineview_on_action_event(void* self, void (*callback)(void*, void*))
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_webengineview_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_webengineview_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4598,11 +4598,11 @@ bool q_webengineview_native_event(void* self, char* eventType, void* message, in
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_webengineview_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_webengineview_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

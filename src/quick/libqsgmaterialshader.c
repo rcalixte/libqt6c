@@ -138,7 +138,7 @@ float q_sgmaterialshader__renderstate_device_pixel_ratio(const void* self) {
     return QSGMaterialShader__RenderState_DevicePixelRatio((QSGMaterialShader__RenderState*)self);
 }
 
-char* q_sgmaterialshader__renderstate_uniform_data(void* self) {
+const char* q_sgmaterialshader__renderstate_uniform_data(void* self) {
     libqt_string _str = QSGMaterialShader__RenderState_UniformData((QSGMaterialShader__RenderState*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

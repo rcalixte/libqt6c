@@ -126,11 +126,11 @@ bool q_cameradevice_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#id)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QCameraDevice*
 ///
-char* q_cameradevice_id(const void* self);
+const char* q_cameradevice_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcameradevice.html#description)
 ///

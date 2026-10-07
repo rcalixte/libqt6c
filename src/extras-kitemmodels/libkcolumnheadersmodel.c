@@ -85,7 +85,7 @@ QVariant* k_columnheadersmodel_super_data(const void* self, const void* index, i
     return KColumnHeadersModel_SuperData((KColumnHeadersModel*)self, (QModelIndex*)index, role);
 }
 
-libqt_map /* of int to char* */ k_columnheadersmodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_columnheadersmodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KColumnHeadersModel_RoleNames((KColumnHeadersModel*)self);
     libqt_map _ret;
@@ -118,11 +118,11 @@ libqt_map /* of int to char* */ k_columnheadersmodel_role_names(const void* self
     return _ret;
 }
 
-void k_columnheadersmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_columnheadersmodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     KColumnHeadersModel_OnRoleNames((KColumnHeadersModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_columnheadersmodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_columnheadersmodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KColumnHeadersModel_SuperRoleNames((KColumnHeadersModel*)self);
     libqt_map _ret;

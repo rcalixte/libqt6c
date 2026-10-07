@@ -75,7 +75,7 @@ void q_lowenergyservice_read_characteristic(void* self, const void* characterist
     QLowEnergyService_ReadCharacteristic((QLowEnergyService*)self, (QLowEnergyCharacteristic*)characteristic);
 }
 
-void q_lowenergyservice_write_characteristic(void* self, const void* characteristic, char* newValue) {
+void q_lowenergyservice_write_characteristic(void* self, const void* characteristic, const char* newValue) {
     QLowEnergyService_WriteCharacteristic((QLowEnergyService*)self, (QLowEnergyCharacteristic*)characteristic, qstring(newValue));
 }
 
@@ -87,7 +87,7 @@ void q_lowenergyservice_read_descriptor(void* self, const void* descriptor) {
     QLowEnergyService_ReadDescriptor((QLowEnergyService*)self, (QLowEnergyDescriptor*)descriptor);
 }
 
-void q_lowenergyservice_write_descriptor(void* self, const void* descriptor, char* newValue) {
+void q_lowenergyservice_write_descriptor(void* self, const void* descriptor, const char* newValue) {
     QLowEnergyService_WriteDescriptor((QLowEnergyService*)self, (QLowEnergyDescriptor*)descriptor, qstring(newValue));
 }
 
@@ -99,7 +99,7 @@ void q_lowenergyservice_on_state_changed(void* self, void (*callback)(void*, int
     QLowEnergyService_Connect_StateChanged((QLowEnergyService*)self, (intptr_t)callback);
 }
 
-void q_lowenergyservice_characteristic_changed(void* self, const void* info, char* value) {
+void q_lowenergyservice_characteristic_changed(void* self, const void* info, const char* value) {
     QLowEnergyService_CharacteristicChanged((QLowEnergyService*)self, (QLowEnergyCharacteristic*)info, qstring(value));
 }
 
@@ -107,7 +107,7 @@ void q_lowenergyservice_on_characteristic_changed(void* self, void (*callback)(v
     QLowEnergyService_Connect_CharacteristicChanged((QLowEnergyService*)self, (intptr_t)callback);
 }
 
-void q_lowenergyservice_characteristic_read(void* self, const void* info, char* value) {
+void q_lowenergyservice_characteristic_read(void* self, const void* info, const char* value) {
     QLowEnergyService_CharacteristicRead((QLowEnergyService*)self, (QLowEnergyCharacteristic*)info, qstring(value));
 }
 
@@ -115,7 +115,7 @@ void q_lowenergyservice_on_characteristic_read(void* self, void (*callback)(void
     QLowEnergyService_Connect_CharacteristicRead((QLowEnergyService*)self, (intptr_t)callback);
 }
 
-void q_lowenergyservice_characteristic_written(void* self, const void* info, char* value) {
+void q_lowenergyservice_characteristic_written(void* self, const void* info, const char* value) {
     QLowEnergyService_CharacteristicWritten((QLowEnergyService*)self, (QLowEnergyCharacteristic*)info, qstring(value));
 }
 
@@ -123,7 +123,7 @@ void q_lowenergyservice_on_characteristic_written(void* self, void (*callback)(v
     QLowEnergyService_Connect_CharacteristicWritten((QLowEnergyService*)self, (intptr_t)callback);
 }
 
-void q_lowenergyservice_descriptor_read(void* self, const void* info, char* value) {
+void q_lowenergyservice_descriptor_read(void* self, const void* info, const char* value) {
     QLowEnergyService_DescriptorRead((QLowEnergyService*)self, (QLowEnergyDescriptor*)info, qstring(value));
 }
 
@@ -131,7 +131,7 @@ void q_lowenergyservice_on_descriptor_read(void* self, void (*callback)(void*, c
     QLowEnergyService_Connect_DescriptorRead((QLowEnergyService*)self, (intptr_t)callback);
 }
 
-void q_lowenergyservice_descriptor_written(void* self, const void* info, char* value) {
+void q_lowenergyservice_descriptor_written(void* self, const void* info, const char* value) {
     QLowEnergyService_DescriptorWritten((QLowEnergyService*)self, (QLowEnergyDescriptor*)info, qstring(value));
 }
 
@@ -165,7 +165,7 @@ void q_lowenergyservice_discover_details1(void* self, int32_t mode) {
     QLowEnergyService_DiscoverDetails1((QLowEnergyService*)self, mode);
 }
 
-void q_lowenergyservice_write_characteristic3(void* self, const void* characteristic, char* newValue, int32_t mode) {
+void q_lowenergyservice_write_characteristic3(void* self, const void* characteristic, const char* newValue, int32_t mode) {
     QLowEnergyService_WriteCharacteristic3((QLowEnergyService*)self, (QLowEnergyCharacteristic*)characteristic, qstring(newValue), mode);
 }
 

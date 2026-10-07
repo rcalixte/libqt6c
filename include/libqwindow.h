@@ -1683,11 +1683,11 @@ void q_window_super_tablet_event(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
 ///
 /// @param self QWindow*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_window_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_window_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
 ///
@@ -1703,11 +1703,11 @@ void q_window_on_native_event(void* self, bool (*callback)(void*, libqt_string, 
 /// Base class method implementation
 ///
 /// @param self QWindow*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_window_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_window_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

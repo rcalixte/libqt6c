@@ -19,7 +19,7 @@ QJsonDocument* q_restreply_read_json(void* self) {
     return QRestReply_ReadJson((QRestReply*)self);
 }
 
-char* q_restreply_read_body(void* self) {
+const char* q_restreply_read_body(void* self) {
     libqt_string _str = QRestReply_ReadBody((QRestReply*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

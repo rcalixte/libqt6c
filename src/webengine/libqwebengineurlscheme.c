@@ -5,7 +5,7 @@ QWebEngineUrlScheme* q_webengineurlscheme_new() {
     return QWebEngineUrlScheme_New();
 }
 
-QWebEngineUrlScheme* q_webengineurlscheme_new2(char* name) {
+QWebEngineUrlScheme* q_webengineurlscheme_new2(const char* name) {
     return QWebEngineUrlScheme_New2(qstring(name));
 }
 
@@ -25,14 +25,14 @@ bool q_webengineurlscheme_operator_not_equal(const void* self, const void* that)
     return QWebEngineUrlScheme_OperatorNotEqual((QWebEngineUrlScheme*)self, (QWebEngineUrlScheme*)that);
 }
 
-char* q_webengineurlscheme_name(const void* self) {
+const char* q_webengineurlscheme_name(const void* self) {
     libqt_string _str = QWebEngineUrlScheme_Name((QWebEngineUrlScheme*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_webengineurlscheme_set_name(void* self, char* newValue) {
+void q_webengineurlscheme_set_name(void* self, const char* newValue) {
     QWebEngineUrlScheme_SetName((QWebEngineUrlScheme*)self, qstring(newValue));
 }
 
@@ -64,7 +64,7 @@ void q_webengineurlscheme_register_scheme(const void* scheme) {
     QWebEngineUrlScheme_RegisterScheme((QWebEngineUrlScheme*)scheme);
 }
 
-QWebEngineUrlScheme* q_webengineurlscheme_scheme_by_name(char* name) {
+QWebEngineUrlScheme* q_webengineurlscheme_scheme_by_name(const char* name) {
     return QWebEngineUrlScheme_SchemeByName(qstring(name));
 }
 

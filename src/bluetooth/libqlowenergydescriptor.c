@@ -18,7 +18,7 @@ bool q_lowenergydescriptor_is_valid(const void* self) {
     return QLowEnergyDescriptor_IsValid((QLowEnergyDescriptor*)self);
 }
 
-char* q_lowenergydescriptor_value(const void* self) {
+const char* q_lowenergydescriptor_value(const void* self) {
     libqt_string _str = QLowEnergyDescriptor_Value((QLowEnergyDescriptor*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

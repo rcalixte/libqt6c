@@ -97,19 +97,19 @@ const char* q_quick3dgeometry_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dgeometry.html#vertexData)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QQuick3DGeometry*
 ///
-char* q_quick3dgeometry_vertex_data(const void* self);
+const char* q_quick3dgeometry_vertex_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dgeometry.html#indexData)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QQuick3DGeometry*
 ///
-char* q_quick3dgeometry_index_data(const void* self);
+const char* q_quick3dgeometry_index_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dgeometry.html#attributeCount)
 ///
@@ -153,32 +153,32 @@ int32_t q_quick3dgeometry_stride(const void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dgeometry.html#setVertexData)
 ///
 /// @param self QQuick3DGeometry*
-/// @param data char*
+/// @param data const char*
 ///
-void q_quick3dgeometry_set_vertex_data(void* self, char* data);
+void q_quick3dgeometry_set_vertex_data(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dgeometry.html#setVertexData)
 ///
 /// @param self QQuick3DGeometry*
 /// @param offset int
-/// @param data char*
+/// @param data const char*
 ///
-void q_quick3dgeometry_set_vertex_data2(void* self, int offset, char* data);
+void q_quick3dgeometry_set_vertex_data2(void* self, int offset, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dgeometry.html#setIndexData)
 ///
 /// @param self QQuick3DGeometry*
-/// @param data char*
+/// @param data const char*
 ///
-void q_quick3dgeometry_set_index_data(void* self, char* data);
+void q_quick3dgeometry_set_index_data(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dgeometry.html#setIndexData)
 ///
 /// @param self QQuick3DGeometry*
 /// @param offset int
-/// @param data char*
+/// @param data const char*
 ///
-void q_quick3dgeometry_set_index_data2(void* self, int offset, char* data);
+void q_quick3dgeometry_set_index_data2(void* self, int offset, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dgeometry.html#setStride)
 ///
@@ -273,26 +273,26 @@ void q_quick3dgeometry_add_subset(void* self, int offset, int count, const void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dgeometry.html#targetData)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QQuick3DGeometry*
 ///
-char* q_quick3dgeometry_target_data(const void* self);
+const char* q_quick3dgeometry_target_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dgeometry.html#setTargetData)
 ///
 /// @param self QQuick3DGeometry*
-/// @param data char*
+/// @param data const char*
 ///
-void q_quick3dgeometry_set_target_data(void* self, char* data);
+void q_quick3dgeometry_set_target_data(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dgeometry.html#setTargetData)
 ///
 /// @param self QQuick3DGeometry*
 /// @param offset int
-/// @param data char*
+/// @param data const char*
 ///
-void q_quick3dgeometry_set_target_data2(void* self, int offset, char* data);
+void q_quick3dgeometry_set_target_data2(void* self, int offset, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dgeometry.html#targetAttribute)
 ///

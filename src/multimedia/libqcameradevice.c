@@ -70,7 +70,7 @@ bool q_cameradevice_is_null(const void* self) {
     return QCameraDevice_IsNull((QCameraDevice*)self);
 }
 
-char* q_cameradevice_id(const void* self) {
+const char* q_cameradevice_id(const void* self) {
     libqt_string _str = QCameraDevice_Id((QCameraDevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

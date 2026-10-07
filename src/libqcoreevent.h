@@ -487,9 +487,9 @@ void q_childevent_delete(void* self);
 
 /// q_dynamicpropertychangeevent_new constructs a new QDynamicPropertyChangeEvent object.
 ///
-/// @param name char*
+/// @param name const char*
 ///
-QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_new(char* name);
+QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_new(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html#clone)
 ///
@@ -516,11 +516,11 @@ QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_super_clone(const void
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html#propertyName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QDynamicPropertyChangeEvent*
 ///
-char* q_dynamicpropertychangeevent_property_name(const void* self);
+const char* q_dynamicpropertychangeevent_property_name(const void* self);
 
 /// Inherited from QEvent
 ///

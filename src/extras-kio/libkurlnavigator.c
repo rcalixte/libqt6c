@@ -75,11 +75,11 @@ QUrl* k_urlnavigator_location_url(const void* self) {
     return KUrlNavigator_LocationUrl((KUrlNavigator*)self);
 }
 
-void k_urlnavigator_save_location_state(void* self, char* state) {
+void k_urlnavigator_save_location_state(void* self, const char* state) {
     KUrlNavigator_SaveLocationState((KUrlNavigator*)self, qstring(state));
 }
 
-char* k_urlnavigator_location_state(const void* self) {
+const char* k_urlnavigator_location_state(const void* self) {
     libqt_string _str = KUrlNavigator_LocationState((KUrlNavigator*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -459,7 +459,7 @@ QUrl* k_urlnavigator_location_url1(const void* self, int historyIndex) {
     return KUrlNavigator_LocationUrl1((KUrlNavigator*)self, historyIndex);
 }
 
-char* k_urlnavigator_location_state1(const void* self, int historyIndex) {
+const char* k_urlnavigator_location_state1(const void* self, int historyIndex) {
     libqt_string _str = KUrlNavigator_LocationState1((KUrlNavigator*)self, historyIndex);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1236,14 +1236,14 @@ void k_urlnavigator_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_urlnavigator_save_geometry(const void* self) {
+const char* k_urlnavigator_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_urlnavigator_restore_geometry(void* self, char* geometry) {
+bool k_urlnavigator_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2137,11 +2137,11 @@ void k_urlnavigator_on_hide_event(void* self, void (*callback)(void*, void*)) {
     KUrlNavigator_OnHideEvent((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-bool k_urlnavigator_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_urlnavigator_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KUrlNavigator_NativeEvent((KUrlNavigator*)self, qstring(eventType), message, result);
 }
 
-bool k_urlnavigator_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool k_urlnavigator_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return KUrlNavigator_SuperNativeEvent((KUrlNavigator*)self, qstring(eventType), message, result);
 }
 

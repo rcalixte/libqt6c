@@ -1450,14 +1450,14 @@ void q_undoview_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_undoview_save_geometry(const void* self) {
+const char* q_undoview_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_undoview_restore_geometry(void* self, char* geometry) {
+bool q_undoview_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -3049,11 +3049,11 @@ void q_undoview_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QUndoView_OnHideEvent((QUndoView*)self, (intptr_t)callback);
 }
 
-bool q_undoview_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_undoview_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QUndoView_NativeEvent((QUndoView*)self, qstring(eventType), message, result);
 }
 
-bool q_undoview_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_undoview_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QUndoView_SuperNativeEvent((QUndoView*)self, qstring(eventType), message, result);
 }
 

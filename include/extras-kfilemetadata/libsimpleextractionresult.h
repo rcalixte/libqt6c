@@ -201,7 +201,7 @@ int32_t k_filemetadata__simpleextractionresult_input_flags(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to char*
+/// // libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -211,7 +211,7 @@ int32_t k_filemetadata__simpleextractionresult_input_flags(const void* self);
 ///
 /// @param self const KFileMetaData__SimpleExtractionResult*
 ///
-/// @return libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to char*
+/// @return libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to const char*
 ///
 libqt_map k_filemetadata__simpleextractionresult_image_data(const void* self);
 

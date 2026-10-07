@@ -168,15 +168,15 @@ void q_quickwebengineprofile_set_url_request_interceptor(void* self, void* inter
     QQuickWebEngineProfile_SetUrlRequestInterceptor((QQuickWebEngineProfile*)self, (QWebEngineUrlRequestInterceptor*)interceptor);
 }
 
-const QWebEngineUrlSchemeHandler* q_quickwebengineprofile_url_scheme_handler(const void* self, char* param1) {
+const QWebEngineUrlSchemeHandler* q_quickwebengineprofile_url_scheme_handler(const void* self, const char* param1) {
     return QQuickWebEngineProfile_UrlSchemeHandler((QQuickWebEngineProfile*)self, qstring(param1));
 }
 
-void q_quickwebengineprofile_install_url_scheme_handler(void* self, char* scheme, void* param2) {
+void q_quickwebengineprofile_install_url_scheme_handler(void* self, const char* scheme, void* param2) {
     QQuickWebEngineProfile_InstallUrlSchemeHandler((QQuickWebEngineProfile*)self, qstring(scheme), (QWebEngineUrlSchemeHandler*)param2);
 }
 
-void q_quickwebengineprofile_remove_url_scheme(void* self, char* scheme) {
+void q_quickwebengineprofile_remove_url_scheme(void* self, const char* scheme) {
     QQuickWebEngineProfile_RemoveUrlScheme((QQuickWebEngineProfile*)self, qstring(scheme));
 }
 

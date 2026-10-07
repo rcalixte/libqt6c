@@ -187,11 +187,11 @@ void q_abstracteventdispatcher_remove_native_event_filter(void* self, void* filt
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#filterNativeEvent)
 ///
 /// @param self QAbstractEventDispatcher*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_abstracteventdispatcher_filter_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_abstracteventdispatcher_filter_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#aboutToBlock)
 ///
@@ -849,11 +849,11 @@ void q_abstracteventdispatcherv2_remove_native_event_filter(void* self, void* fi
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#filterNativeEvent)
 ///
 /// @param self QAbstractEventDispatcherV2*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_abstracteventdispatcherv2_filter_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_abstracteventdispatcherv2_filter_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QAbstractEventDispatcher
 ///

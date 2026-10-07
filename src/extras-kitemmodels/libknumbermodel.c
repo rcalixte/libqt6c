@@ -121,7 +121,7 @@ QVariant* k_numbermodel_super_data(const void* self, const void* index, int role
     return KNumberModel_SuperData((KNumberModel*)self, (QModelIndex*)index, role);
 }
 
-libqt_map /* of int to char* */ k_numbermodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_numbermodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KNumberModel_RoleNames((KNumberModel*)self);
     libqt_map _ret;
@@ -154,11 +154,11 @@ libqt_map /* of int to char* */ k_numbermodel_role_names(const void* self) {
     return _ret;
 }
 
-void k_numbermodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_numbermodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     KNumberModel_OnRoleNames((KNumberModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_numbermodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_numbermodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KNumberModel_SuperRoleNames((KNumberModel*)self);
     libqt_map _ret;

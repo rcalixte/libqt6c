@@ -2556,20 +2556,20 @@ void q_mdiarea_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMdiArea*
 ///
-char* q_mdiarea_save_geometry(const void* self);
+const char* q_mdiarea_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QMdiArea*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_mdiarea_restore_geometry(void* self, char* geometry);
+bool q_mdiarea_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4859,11 +4859,11 @@ void q_mdiarea_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_mdiarea_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_mdiarea_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4872,11 +4872,11 @@ bool q_mdiarea_native_event(void* self, char* eventType, void* message, intptr_t
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_mdiarea_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_mdiarea_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

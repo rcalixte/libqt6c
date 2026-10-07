@@ -225,7 +225,7 @@ void k_checkableproxymodel_super_set_source_model(void* self, void* sourceModel)
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of int to char*
+/// // libqt_map of int to const char*
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     libqt_free(map.values[i]);
 /// }
@@ -235,7 +235,7 @@ void k_checkableproxymodel_super_set_source_model(void* self, void* sourceModel)
 ///
 /// @param self const KCheckableProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_checkableproxymodel_role_names(const void* self);
 
@@ -244,7 +244,7 @@ libqt_map k_checkableproxymodel_role_names(const void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCheckableProxyModel*
-/// @param callback libqt_map of int to char* func(const KCheckableProxyModel* self)
+/// @param callback libqt_map of int to const char* func(const KCheckableProxyModel* self)
 ///
 void k_checkableproxymodel_on_role_names(void* self, libqt_map (*callback)(const void*));
 
@@ -254,7 +254,7 @@ void k_checkableproxymodel_on_role_names(void* self, libqt_map (*callback)(const
 ///
 /// @param self const KCheckableProxyModel*
 ///
-/// @return libqt_map of int to char*
+/// @return libqt_map of int to const char*
 ///
 libqt_map k_checkableproxymodel_super_role_names(const void* self);
 

@@ -122,14 +122,14 @@ bool q_mimedata_has_color(const void* self) {
     return QMimeData_HasColor((QMimeData*)self);
 }
 
-char* q_mimedata_data(const void* self, const char* mimetype) {
+const char* q_mimedata_data(const void* self, const char* mimetype) {
     libqt_string _str = QMimeData_Data((QMimeData*)self, qstring(mimetype));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_mimedata_set_data(void* self, const char* mimetype, char* data) {
+void q_mimedata_set_data(void* self, const char* mimetype, const char* data) {
     QMimeData_SetData((QMimeData*)self, qstring(mimetype), qstring(data));
 }
 

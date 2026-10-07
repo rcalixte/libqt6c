@@ -209,7 +209,7 @@ bool q_sqlquerymodel_super_can_fetch_more(const void* self, const void* parent) 
     return QSqlQueryModel_SuperCanFetchMore((QSqlQueryModel*)self, (QModelIndex*)parent);
 }
 
-libqt_map /* of int to char* */ q_sqlquerymodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_sqlquerymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QSqlQueryModel_RoleNames((QSqlQueryModel*)self);
     libqt_map _ret;
@@ -242,11 +242,11 @@ libqt_map /* of int to char* */ q_sqlquerymodel_role_names(const void* self) {
     return _ret;
 }
 
-void q_sqlquerymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void q_sqlquerymodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     QSqlQueryModel_OnRoleNames((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_sqlquerymodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ q_sqlquerymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QSqlQueryModel_SuperRoleNames((QSqlQueryModel*)self);
     libqt_map _ret;

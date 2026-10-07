@@ -1411,7 +1411,7 @@ void k_pagewidgetmodel_on_span(void* self, QSize* (*callback)(const void*, const
     KPageWidgetModel_OnSpan((KPageWidgetModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_pagewidgetmodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_pagewidgetmodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KPageWidgetModel_RoleNames((KPageWidgetModel*)self);
     libqt_map _ret;
@@ -1444,7 +1444,7 @@ libqt_map /* of int to char* */ k_pagewidgetmodel_role_names(const void* self) {
     return _ret;
 }
 
-libqt_map /* of int to char* */ k_pagewidgetmodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_pagewidgetmodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KPageWidgetModel_SuperRoleNames((KPageWidgetModel*)self);
     libqt_map _ret;
@@ -1477,7 +1477,7 @@ libqt_map /* of int to char* */ k_pagewidgetmodel_super_role_names(const void* s
     return _ret;
 }
 
-void k_pagewidgetmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_pagewidgetmodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     KPageWidgetModel_OnRoleNames((KPageWidgetModel*)self, (intptr_t)callback);
 }
 

@@ -281,25 +281,25 @@ void q_poppler__pdfconverter__newsignaturedata_set_field_partial_name(void* self
     Poppler__PDFConverter__NewSignatureData_SetFieldPartialName((Poppler__PDFConverter__NewSignatureData*)self, qstring(name));
 }
 
-char* q_poppler__pdfconverter__newsignaturedata_document_owner_password(const void* self) {
+const char* q_poppler__pdfconverter__newsignaturedata_document_owner_password(const void* self) {
     libqt_string _str = Poppler__PDFConverter__NewSignatureData_DocumentOwnerPassword((Poppler__PDFConverter__NewSignatureData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_poppler__pdfconverter__newsignaturedata_set_document_owner_password(void* self, char* password) {
+void q_poppler__pdfconverter__newsignaturedata_set_document_owner_password(void* self, const char* password) {
     Poppler__PDFConverter__NewSignatureData_SetDocumentOwnerPassword((Poppler__PDFConverter__NewSignatureData*)self, qstring(password));
 }
 
-char* q_poppler__pdfconverter__newsignaturedata_document_user_password(const void* self) {
+const char* q_poppler__pdfconverter__newsignaturedata_document_user_password(const void* self) {
     libqt_string _str = Poppler__PDFConverter__NewSignatureData_DocumentUserPassword((Poppler__PDFConverter__NewSignatureData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_poppler__pdfconverter__newsignaturedata_set_document_user_password(void* self, char* password) {
+void q_poppler__pdfconverter__newsignaturedata_set_document_user_password(void* self, const char* password) {
     Poppler__PDFConverter__NewSignatureData_SetDocumentUserPassword((Poppler__PDFConverter__NewSignatureData*)self, qstring(password));
 }
 

@@ -263,18 +263,18 @@ void q_splitter_set_sizes(void* self, libqt_list list);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#saveState)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSplitter*
 ///
-char* q_splitter_save_state(const void* self);
+const char* q_splitter_save_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#restoreState)
 ///
 /// @param self QSplitter*
-/// @param state char*
+/// @param state const char*
 ///
-bool q_splitter_restore_state(void* self, char* state);
+bool q_splitter_restore_state(void* self, const char* state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsplitter.html#handleWidth)
 ///
@@ -2262,20 +2262,20 @@ void q_splitter_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSplitter*
 ///
-char* q_splitter_save_geometry(const void* self);
+const char* q_splitter_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QSplitter*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_splitter_restore_geometry(void* self, char* geometry);
+bool q_splitter_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4565,11 +4565,11 @@ void q_splitter_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_splitter_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_splitter_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4578,11 +4578,11 @@ bool q_splitter_native_event(void* self, char* eventType, void* message, intptr_
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_splitter_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_splitter_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -7308,20 +7308,20 @@ void q_splitterhandle_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QSplitterHandle*
 ///
-char* q_splitterhandle_save_geometry(const void* self);
+const char* q_splitterhandle_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QSplitterHandle*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_splitterhandle_restore_geometry(void* self, char* geometry);
+bool q_splitterhandle_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
@@ -9479,11 +9479,11 @@ void q_splitterhandle_on_hide_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_splitterhandle_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_splitterhandle_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -9492,11 +9492,11 @@ bool q_splitterhandle_native_event(void* self, char* eventType, void* message, i
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_splitterhandle_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_splitterhandle_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///

@@ -94,11 +94,11 @@ const char* q_qmlfile_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#dataByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QQmlFile*
 ///
-char* q_qmlfile_data_byte_array(const void* self);
+const char* q_qmlfile_data_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#load)
 ///

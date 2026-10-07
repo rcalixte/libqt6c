@@ -26,7 +26,7 @@ QWidget* q_itemeditorfactory_super_create_editor(const void* self, int userType,
     return QItemEditorFactory_SuperCreateEditor((QItemEditorFactory*)self, userType, (QWidget*)parent);
 }
 
-char* q_itemeditorfactory_value_property_name(const void* self, int userType) {
+const char* q_itemeditorfactory_value_property_name(const void* self, int userType) {
     libqt_string _str = QItemEditorFactory_ValuePropertyName((QItemEditorFactory*)self, userType);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -37,7 +37,7 @@ void q_itemeditorfactory_on_value_property_name(void* self, libqt_string (*callb
     QItemEditorFactory_OnValuePropertyName((QItemEditorFactory*)self, (intptr_t)callback);
 }
 
-char* q_itemeditorfactory_super_value_property_name(const void* self, int userType) {
+const char* q_itemeditorfactory_super_value_property_name(const void* self, int userType) {
     libqt_string _str = QItemEditorFactory_SuperValuePropertyName((QItemEditorFactory*)self, userType);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

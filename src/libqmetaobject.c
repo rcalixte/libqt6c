@@ -30,14 +30,14 @@ void q_metamethod_move_assign(void* self, void* other) {
     QMetaMethod_MoveAssign((QMetaMethod*)self, (QMetaMethod*)other);
 }
 
-char* q_metamethod_method_signature(const void* self) {
+const char* q_metamethod_method_signature(const void* self) {
     libqt_string _str = QMetaMethod_MethodSignature((QMetaMethod*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_metamethod_name(const void* self) {
+const char* q_metamethod_name(const void* self) {
     libqt_string _str = QMetaMethod_Name((QMetaMethod*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -89,7 +89,7 @@ const char** q_metamethod_parameter_types(const void* self) {
     return _ret;
 }
 
-char* q_metamethod_parameter_type_name(const void* self, int index) {
+const char* q_metamethod_parameter_type_name(const void* self, int index) {
     libqt_string _str = QMetaMethod_ParameterTypeName((QMetaMethod*)self, index);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -481,7 +481,7 @@ int32_t q_metaenum_keys_to_value(const void* self, const char* keys) {
     return QMetaEnum_KeysToValue((QMetaEnum*)self, keys);
 }
 
-char* q_metaenum_value_to_keys(const void* self, int value) {
+const char* q_metaenum_value_to_keys(const void* self, int value) {
     libqt_string _str = QMetaEnum_ValueToKeys((QMetaEnum*)self, value);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

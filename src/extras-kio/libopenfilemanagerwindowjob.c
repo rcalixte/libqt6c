@@ -67,14 +67,14 @@ void k_io__openfilemanagerwindowjob_set_highlight_urls(void* self, libqt_list /*
     KIO__OpenFileManagerWindowJob_SetHighlightUrls((KIO__OpenFileManagerWindowJob*)self, highlightUrls);
 }
 
-char* k_io__openfilemanagerwindowjob_startup_id(const void* self) {
+const char* k_io__openfilemanagerwindowjob_startup_id(const void* self) {
     libqt_string _str = KIO__OpenFileManagerWindowJob_StartupId((KIO__OpenFileManagerWindowJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_io__openfilemanagerwindowjob_set_startup_id(void* self, char* startupId) {
+void k_io__openfilemanagerwindowjob_set_startup_id(void* self, const char* startupId) {
     KIO__OpenFileManagerWindowJob_SetStartupId((KIO__OpenFileManagerWindowJob*)self, qstring(startupId));
 }
 
@@ -678,6 +678,6 @@ void k_io__openfilemanagerwindowjob_delete(void* self) {
     KIO__OpenFileManagerWindowJob_Delete((KIO__OpenFileManagerWindowJob*)(self));
 }
 
-KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list /* of QUrl* */ urls, char* asn) {
+KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list /* of QUrl* */ urls, const char* asn) {
     return KIO_HighlightInFileManager(urls, qstring(asn));
 }

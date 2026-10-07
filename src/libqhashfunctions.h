@@ -128,10 +128,10 @@ size_t q_qhashfunctions_q_hash19(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhashfunctions.html#qHash)
 ///
-/// @param key char*
+/// @param key const char*
 /// @param seed size_t
 ///
-size_t q_qhashfunctions_q_hash20(char* key, size_t seed);
+size_t q_qhashfunctions_q_hash20(const char* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhashfunctions.html#qHash)
 ///
@@ -156,10 +156,10 @@ size_t q_qhashfunctions_q_hash24(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhashfunctions.html#qHash)
 ///
-/// @param key char*
+/// @param key const char*
 /// @param seed size_t
 ///
-size_t q_qhashfunctions_q_hash25(char* key, size_t seed);
+size_t q_qhashfunctions_q_hash25(const char* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhashfunctions.html#qHash)
 ///

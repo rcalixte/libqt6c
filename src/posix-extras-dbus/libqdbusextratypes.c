@@ -10,7 +10,7 @@ QDBusObjectPath* q_dbusobjectpath_new2(const char* path) {
     return QDBusObjectPath_New2(path);
 }
 
-QDBusObjectPath* q_dbusobjectpath_new3(char* path) {
+QDBusObjectPath* q_dbusobjectpath_new3(const char* path) {
     return QDBusObjectPath_New3(qstring(path));
 }
 
@@ -65,7 +65,7 @@ QDBusSignature* q_dbussignature_new2(const char* signature) {
     return QDBusSignature_New2(signature);
 }
 
-QDBusSignature* q_dbussignature_new3(char* signature) {
+QDBusSignature* q_dbussignature_new3(const char* signature) {
     return QDBusSignature_New3(qstring(signature));
 }
 

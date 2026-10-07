@@ -103,7 +103,7 @@ void q_datawidgetmapper_add_mapping(void* self, void* widget, int section) {
     QDataWidgetMapper_AddMapping((QDataWidgetMapper*)self, (QWidget*)widget, section);
 }
 
-void q_datawidgetmapper_add_mapping2(void* self, void* widget, int section, char* propertyName) {
+void q_datawidgetmapper_add_mapping2(void* self, void* widget, int section, const char* propertyName) {
     QDataWidgetMapper_AddMapping2((QDataWidgetMapper*)self, (QWidget*)widget, section, qstring(propertyName));
 }
 
@@ -115,7 +115,7 @@ int32_t q_datawidgetmapper_mapped_section(const void* self, void* widget) {
     return QDataWidgetMapper_MappedSection((QDataWidgetMapper*)self, (QWidget*)widget);
 }
 
-char* q_datawidgetmapper_mapped_property_name(const void* self, void* widget) {
+const char* q_datawidgetmapper_mapped_property_name(const void* self, void* widget) {
     libqt_string _str = QDataWidgetMapper_MappedPropertyName((QDataWidgetMapper*)self, (QWidget*)widget);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

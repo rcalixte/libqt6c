@@ -18,7 +18,7 @@ QSvgRenderer* q_svgrenderer_new2(const char* filename) {
     return QSvgRenderer_New2(qstring(filename));
 }
 
-QSvgRenderer* q_svgrenderer_new3(char* contents) {
+QSvgRenderer* q_svgrenderer_new3(const char* contents) {
     return QSvgRenderer_New3(qstring(contents));
 }
 
@@ -34,7 +34,7 @@ QSvgRenderer* q_svgrenderer_new6(const char* filename, void* parent) {
     return QSvgRenderer_New6(qstring(filename), (QObject*)parent);
 }
 
-QSvgRenderer* q_svgrenderer_new7(char* contents, void* parent) {
+QSvgRenderer* q_svgrenderer_new7(const char* contents, void* parent) {
     return QSvgRenderer_New7(qstring(contents), (QObject*)parent);
 }
 
@@ -177,7 +177,7 @@ bool q_svgrenderer_load(void* self, const char* filename) {
     return QSvgRenderer_Load((QSvgRenderer*)self, qstring(filename));
 }
 
-bool q_svgrenderer_load2(void* self, char* contents) {
+bool q_svgrenderer_load2(void* self, const char* contents) {
     return QSvgRenderer_Load2((QSvgRenderer*)self, qstring(contents));
 }
 

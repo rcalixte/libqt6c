@@ -149,30 +149,30 @@ libqt_list q_bluetoothdeviceinfo_manufacturer_ids(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#manufacturerData)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QBluetoothDeviceInfo*
 /// @param manufacturerId uint16_t
 ///
-char* q_bluetoothdeviceinfo_manufacturer_data(const void* self, uint16_t manufacturerId);
+const char* q_bluetoothdeviceinfo_manufacturer_data(const void* self, uint16_t manufacturerId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#setManufacturerData)
 ///
 /// @param self QBluetoothDeviceInfo*
 /// @param manufacturerId uint16_t
-/// @param data char*
+/// @param data const char*
 ///
-bool q_bluetoothdeviceinfo_set_manufacturer_data(void* self, uint16_t manufacturerId, char* data);
+bool q_bluetoothdeviceinfo_set_manufacturer_data(void* self, uint16_t manufacturerId, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#manufacturerData)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of uint16_t to char**
+/// // libqt_map of uint16_t to const char**
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++)
-///         free((map.values)[i][j]);
+///     for (size_t j = 0; ((const char**)map.values)[i][j] != NULL; j++)
+///         libqt_free((map.values)[i][j]);
 ///     libqt_free(map.values[i]);
 /// }
 /// free(map.keys);
@@ -181,7 +181,7 @@ bool q_bluetoothdeviceinfo_set_manufacturer_data(void* self, uint16_t manufactur
 ///
 /// @param self const QBluetoothDeviceInfo*
 ///
-/// @return libqt_map of uint16_t to char**
+/// @return libqt_map of uint16_t to const char**
 ///
 libqt_map q_bluetoothdeviceinfo_manufacturer_data2(const void* self);
 
@@ -195,30 +195,30 @@ libqt_list q_bluetoothdeviceinfo_service_ids(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#serviceData)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QBluetoothDeviceInfo*
 /// @param serviceId QBluetoothUuid*
 ///
-char* q_bluetoothdeviceinfo_service_data(const void* self, const void* serviceId);
+const char* q_bluetoothdeviceinfo_service_data(const void* self, const void* serviceId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#setServiceData)
 ///
 /// @param self QBluetoothDeviceInfo*
 /// @param serviceId QBluetoothUuid*
-/// @param data char*
+/// @param data const char*
 ///
-bool q_bluetoothdeviceinfo_set_service_data(void* self, const void* serviceId, char* data);
+bool q_bluetoothdeviceinfo_set_service_data(void* self, const void* serviceId, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#serviceData)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of QBluetoothUuid* to char**
+/// // libqt_map of QBluetoothUuid* to const char**
 /// for (size_t i = 0; i < map.len; ++i) {
-///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++)
-///         free((map.values)[i][j]);
+///     for (size_t j = 0; ((const char**)map.values)[i][j] != NULL; j++)
+///         libqt_free((map.values)[i][j]);
 ///     free(((QBluetoothUuid*)map.keys)[i]);
 ///     libqt_free(map.values[i]);
 /// }
@@ -228,7 +228,7 @@ bool q_bluetoothdeviceinfo_set_service_data(void* self, const void* serviceId, c
 ///
 /// @param self const QBluetoothDeviceInfo*
 ///
-/// @return libqt_map of QBluetoothUuid* to char**
+/// @return libqt_map of QBluetoothUuid* to const char**
 ///
 libqt_map q_bluetoothdeviceinfo_service_data2(const void* self);
 

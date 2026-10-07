@@ -83,7 +83,7 @@ bool k_configdialogmanager_is_default(const void* self) {
     return KConfigDialogManager_IsDefault((KConfigDialogManager*)self);
 }
 
-libqt_map* /* of const char* to char* */ k_configdialogmanager_property_map() {
+libqt_map* /* of const char* to const char* */ k_configdialogmanager_property_map() {
     // Convert QHash<QString,QByteArray> to libqt_map
     libqt_map* _out = KConfigDialogManager_PropertyMap();
     libqt_map* _ret = (libqt_map*)malloc(sizeof(libqt_map));
@@ -170,28 +170,28 @@ bool k_configdialogmanager_parse_children(void* self, const void* widget, bool t
     return KConfigDialogManager_ParseChildren((KConfigDialogManager*)self, (QWidget*)widget, trackChanges);
 }
 
-char* k_configdialogmanager_get_user_property(const void* self, const void* widget) {
+const char* k_configdialogmanager_get_user_property(const void* self, const void* widget) {
     libqt_string _str = KConfigDialogManager_GetUserProperty((KConfigDialogManager*)self, (QWidget*)widget);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_configdialogmanager_get_custom_property(const void* self, const void* widget) {
+const char* k_configdialogmanager_get_custom_property(const void* self, const void* widget) {
     libqt_string _str = KConfigDialogManager_GetCustomProperty((KConfigDialogManager*)self, (QWidget*)widget);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_configdialogmanager_get_user_property_changed_signal(const void* self, const void* widget) {
+const char* k_configdialogmanager_get_user_property_changed_signal(const void* self, const void* widget) {
     libqt_string _str = KConfigDialogManager_GetUserPropertyChangedSignal((KConfigDialogManager*)self, (QWidget*)widget);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_configdialogmanager_get_custom_property_changed_signal(const void* self, const void* widget) {
+const char* k_configdialogmanager_get_custom_property_changed_signal(const void* self, const void* widget) {
     libqt_string _str = KConfigDialogManager_GetCustomPropertyChangedSignal((KConfigDialogManager*)self, (QWidget*)widget);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -381,10 +381,10 @@ void k_configskeletonitem_delete(void* self);
 /// k_propertyskeletonitem_new constructs a new KPropertySkeletonItem object.
 ///
 /// @param object QObject*
-/// @param propertyName char*
+/// @param propertyName const char*
 /// @param defaultValue QVariant*
 ///
-KPropertySkeletonItem* k_propertyskeletonitem_new(void* object, char* propertyName, const void* defaultValue);
+KPropertySkeletonItem* k_propertyskeletonitem_new(void* object, const char* propertyName, const void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html)
 

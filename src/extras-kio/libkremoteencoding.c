@@ -10,35 +10,35 @@ KRemoteEncoding* k_remoteencoding_new2(const char* name) {
     return KRemoteEncoding_New2(name);
 }
 
-const char* k_remoteencoding_decode(const void* self, char* name) {
+const char* k_remoteencoding_decode(const void* self, const char* name) {
     libqt_string _str = KRemoteEncoding_Decode((KRemoteEncoding*)self, qstring(name));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_remoteencoding_encode(const void* self, const char* name) {
+const char* k_remoteencoding_encode(const void* self, const char* name) {
     libqt_string _str = KRemoteEncoding_Encode((KRemoteEncoding*)self, qstring(name));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_remoteencoding_encode2(const void* self, const void* url) {
+const char* k_remoteencoding_encode2(const void* self, const void* url) {
     libqt_string _str = KRemoteEncoding_Encode2((KRemoteEncoding*)self, (QUrl*)url);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_remoteencoding_directory(const void* self, const void* url) {
+const char* k_remoteencoding_directory(const void* self, const void* url) {
     libqt_string _str = KRemoteEncoding_Directory((KRemoteEncoding*)self, (QUrl*)url);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_remoteencoding_file_name(const void* self, const void* url) {
+const char* k_remoteencoding_file_name(const void* self, const void* url) {
     libqt_string _str = KRemoteEncoding_FileName((KRemoteEncoding*)self, (QUrl*)url);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -65,7 +65,7 @@ void k_remoteencoding_super_virtual_hook(void* self, int id, void* data) {
     KRemoteEncoding_SuperVirtualHook((KRemoteEncoding*)self, id, data);
 }
 
-char* k_remoteencoding_directory2(const void* self, const void* url, bool ignore_trailing_slash) {
+const char* k_remoteencoding_directory2(const void* self, const void* url, bool ignore_trailing_slash) {
     libqt_string _str = KRemoteEncoding_Directory2((KRemoteEncoding*)self, (QUrl*)url, ignore_trailing_slash);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

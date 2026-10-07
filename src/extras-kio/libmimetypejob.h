@@ -86,9 +86,9 @@ void k_io__mimetypejob_set_async_data_enabled(void* self, bool enabled);
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#sendAsyncData)
 ///
 /// @param self KIO__MimetypeJob*
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__mimetypejob_send_async_data(void* self, char* data);
+void k_io__mimetypejob_send_async_data(void* self, const char* data);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -123,9 +123,9 @@ void k_io__mimetypejob_set_total_size(void* self, uintptr_t bytes);
 ///
 /// @param self KIO__MimetypeJob*
 /// @param job KIO__Job*
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__mimetypejob_data(void* self, void* job, char* data);
+void k_io__mimetypejob_data(void* self, void* job, const char* data);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -142,9 +142,9 @@ void k_io__mimetypejob_on_data(void* self, void (*callback)(void*, void*, libqt_
 ///
 /// @param self KIO__MimetypeJob*
 /// @param job KIO__Job*
-/// @param data char*
+/// @param data const char*
 ///
-void k_io__mimetypejob_data_req(void* self, void* job, char* data);
+void k_io__mimetypejob_data_req(void* self, void* job, const char* data);
 
 /// Inherited from KIO::TransferJob
 ///

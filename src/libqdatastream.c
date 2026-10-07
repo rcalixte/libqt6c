@@ -11,7 +11,7 @@ QDataStream* q_datastream_new2(void* param1) {
     return QDataStream_New2((QIODevice*)param1);
 }
 
-QDataStream* q_datastream_new3(char* param1) {
+QDataStream* q_datastream_new3(const char* param1) {
     return QDataStream_New3(qstring(param1));
 }
 

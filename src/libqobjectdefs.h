@@ -463,19 +463,19 @@ bool q_metaobject_check_connect_args2(const void* signal, const void* method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#normalizedSignature)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param method const char*
 ///
-char* q_metaobject_normalized_signature(const char* method);
+const char* q_metaobject_normalized_signature(const char* method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#normalizedType)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param type const char*
 ///
-char* q_metaobject_normalized_type(const char* type);
+const char* q_metaobject_normalized_type(const char* type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#connect)
 ///

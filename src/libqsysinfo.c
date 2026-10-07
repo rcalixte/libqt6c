@@ -80,14 +80,14 @@ const char* q_sysinfo_machine_host_name() {
     return _ret;
 }
 
-char* q_sysinfo_machine_unique_id() {
+const char* q_sysinfo_machine_unique_id() {
     libqt_string _str = QSysInfo_MachineUniqueId();
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_sysinfo_boot_unique_id() {
+const char* q_sysinfo_boot_unique_id() {
     libqt_string _str = QSysInfo_BootUniqueId();
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

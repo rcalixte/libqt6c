@@ -552,9 +552,9 @@ void q_texttospeechengine_on_saying_word(void* self, void (*callback)(void*, con
 ///
 /// @param self QTextToSpeechEngine*
 /// @param format QAudioFormat*
-/// @param data char*
+/// @param data const char*
 ///
-void q_texttospeechengine_synthesized(void* self, const void* format, char* data);
+void q_texttospeechengine_synthesized(void* self, const void* format, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeechengine.html#synthesized)
 ///

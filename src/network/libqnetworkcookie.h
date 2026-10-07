@@ -26,18 +26,18 @@ QNetworkCookie* q_networkcookie_new2(const void* other);
 
 /// q_networkcookie_new3 constructs a new QNetworkCookie object.
 ///
-/// @param name char*
+/// @param name const char*
 ///
-QNetworkCookie* q_networkcookie_new3(char* name);
+QNetworkCookie* q_networkcookie_new3(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html)
 
 /// q_networkcookie_new4 constructs a new QNetworkCookie object.
 ///
-/// @param name char*
-/// @param value char*
+/// @param name const char*
+/// @param value const char*
 ///
-QNetworkCookie* q_networkcookie_new4(char* name, char* value);
+QNetworkCookie* q_networkcookie_new4(const char* name, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#operator-eq)
 ///
@@ -159,41 +159,41 @@ void q_networkcookie_set_path(void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QNetworkCookie*
 ///
-char* q_networkcookie_name(const void* self);
+const char* q_networkcookie_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#setName)
 ///
 /// @param self QNetworkCookie*
-/// @param cookieName char*
+/// @param cookieName const char*
 ///
-void q_networkcookie_set_name(void* self, char* cookieName);
+void q_networkcookie_set_name(void* self, const char* cookieName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QNetworkCookie*
 ///
-char* q_networkcookie_value(const void* self);
+const char* q_networkcookie_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#setValue)
 ///
 /// @param self QNetworkCookie*
-/// @param value char*
+/// @param value const char*
 ///
-void q_networkcookie_set_value(void* self, char* value);
+void q_networkcookie_set_value(void* self, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#toRawForm)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QNetworkCookie*
 ///
-char* q_networkcookie_to_raw_form(const void* self);
+const char* q_networkcookie_to_raw_form(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#hasSameIdentifier)
 ///
@@ -211,20 +211,20 @@ void q_networkcookie_normalize(void* self, const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#parseCookies)
 ///
-/// @param cookieString char*
+/// @param cookieString const char*
 ///
 /// @return libqt_list of QNetworkCookie*
 ///
-libqt_list q_networkcookie_parse_cookies(char* cookieString);
+libqt_list q_networkcookie_parse_cookies(const char* cookieString);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#toRawForm)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QNetworkCookie*
 /// @param form enum QNetworkCookie__RawForm
 ///
-char* q_networkcookie_to_raw_form1(const void* self, int32_t form);
+const char* q_networkcookie_to_raw_form1(const void* self, int32_t form);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkcookie.html#dtor.QNetworkCookie)
 ///

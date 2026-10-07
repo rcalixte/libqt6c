@@ -436,9 +436,9 @@ bool k_parts__readwritepart_open_stream(void* self, const char* mimeType, const 
 /// [Upstream resources](https://api.kde.org/kparts-readonlypart.html#writeStream)
 ///
 /// @param self KParts__ReadWritePart*
-/// @param data char*
+/// @param data const char*
 ///
-bool k_parts__readwritepart_write_stream(void* self, char* data);
+bool k_parts__readwritepart_write_stream(void* self, const char* data);
 
 /// Inherited from KParts::ReadOnlyPart
 ///

@@ -180,7 +180,7 @@ int32_t q_nmeasatelliteinfosource_super_parse_satellites_in_use_from_nmea(void* 
     return QNmeaSatelliteInfoSource_SuperParseSatellitesInUseFromNmea((QNmeaSatelliteInfoSource*)self, data, size, pnrsInUse);
 }
 
-int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea2(void* self, char* data, libqt_list /* of int */ pnrsInUse) {
+int32_t q_nmeasatelliteinfosource_parse_satellites_in_use_from_nmea2(void* self, const char* data, libqt_list /* of int */ pnrsInUse) {
     return QNmeaSatelliteInfoSource_ParseSatellitesInUseFromNmea2((QNmeaSatelliteInfoSource*)self, qstring(data), pnrsInUse);
 }
 
@@ -196,7 +196,7 @@ int32_t q_nmeasatelliteinfosource_super_parse_satellite_info_from_nmea(void* sel
     return QNmeaSatelliteInfoSource_SuperParseSatelliteInfoFromNmea((QNmeaSatelliteInfoSource*)self, data, size, infos, system);
 }
 
-int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea2(void* self, char* data, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system) {
+int32_t q_nmeasatelliteinfosource_parse_satellite_info_from_nmea2(void* self, const char* data, libqt_list /* of QGeoSatelliteInfo* */ infos, int32_t* system) {
     return QNmeaSatelliteInfoSource_ParseSatelliteInfoFromNmea2((QNmeaSatelliteInfoSource*)self, qstring(data), infos, system);
 }
 

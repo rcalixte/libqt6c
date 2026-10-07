@@ -39,11 +39,11 @@ void k_encodingprober_reset(void* self);
 /// [Upstream resources](https://api.kde.org/kencodingprober.html#feed)
 ///
 /// @param self KEncodingProber*
-/// @param data char*
+/// @param data const char*
 ///
 /// @return enum KEncodingProber__ProberState
 ///
-int32_t k_encodingprober_feed(void* self, char* data);
+int32_t k_encodingprober_feed(void* self, const char* data);
 
 /// [Upstream resources](https://api.kde.org/kencodingprober.html#feed)
 ///
@@ -65,11 +65,11 @@ int32_t k_encodingprober_state(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kencodingprober.html#encoding)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KEncodingProber*
 ///
-char* k_encodingprober_encoding(const void* self);
+const char* k_encodingprober_encoding(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kencodingprober.html#confidence)
 ///

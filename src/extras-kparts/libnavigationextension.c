@@ -126,7 +126,7 @@ const char* k_parts__navigationextension_action_text(const void* self, const cha
     return _ret;
 }
 
-libqt_map* /* of char* to char* */ k_parts__navigationextension_action_slot_map() {
+libqt_map* /* of const char* to const char* */ k_parts__navigationextension_action_slot_map() {
     // Convert QMap<QByteArray,QByteArray> to libqt_map
     libqt_map* _out = KParts__NavigationExtension_ActionSlotMap();
     libqt_map* _ret = (libqt_map*)malloc(sizeof(libqt_map));

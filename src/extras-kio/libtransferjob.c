@@ -42,7 +42,7 @@ void k_io__transferjob_set_async_data_enabled(void* self, bool enabled) {
     KIO__TransferJob_SetAsyncDataEnabled((KIO__TransferJob*)self, enabled);
 }
 
-void k_io__transferjob_send_async_data(void* self, char* data) {
+void k_io__transferjob_send_async_data(void* self, const char* data) {
     KIO__TransferJob_SendAsyncData((KIO__TransferJob*)self, qstring(data));
 }
 
@@ -61,7 +61,7 @@ void k_io__transferjob_set_total_size(void* self, uintptr_t bytes) {
     KIO__TransferJob_SetTotalSize((KIO__TransferJob*)self, bytes);
 }
 
-void k_io__transferjob_data(void* self, void* job, char* data) {
+void k_io__transferjob_data(void* self, void* job, const char* data) {
     KIO__TransferJob_Data((KIO__TransferJob*)self, (KIO__Job*)job, qstring(data));
 }
 
@@ -69,7 +69,7 @@ void k_io__transferjob_on_data(void* self, void (*callback)(void*, void*, libqt_
     KIO__TransferJob_Connect_Data((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
-void k_io__transferjob_data_req(void* self, void* job, char* data) {
+void k_io__transferjob_data_req(void* self, void* job, const char* data) {
     KIO__TransferJob_DataReq((KIO__TransferJob*)self, (KIO__Job*)job, qstring(data));
 }
 
@@ -700,7 +700,7 @@ KIO__TransferJob* k_io_put(const void* url, int permissions, int32_t flags) {
     return KIO_Put((QUrl*)url, permissions, flags);
 }
 
-KIO__TransferJob* k_io_http_post(const void* url, char* postData, int32_t flags) {
+KIO__TransferJob* k_io_http_post(const void* url, const char* postData, int32_t flags) {
     return KIO_HttpPost((QUrl*)url, qstring(postData), flags);
 }
 

@@ -97,12 +97,12 @@ const char* q_quick3dinstancing_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#instanceBuffer)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QQuick3DInstancing*
 /// @param instanceCount int*
 ///
-char* q_quick3dinstancing_instance_buffer(void* self, int* instanceCount);
+const char* q_quick3dinstancing_instance_buffer(void* self, int* instanceCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#instanceCountOverride)
 ///
@@ -247,12 +247,12 @@ void q_quick3dinstancing_on_depth_sorting_enabled_changed(void* self, void (*cal
 ///
 /// @warning This method must be implemented with `q_quick3dinstancing_on_get_instance_buffer` before it can be called.
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QQuick3DInstancing*
 /// @param instanceCount int*
 ///
-char* q_quick3dinstancing_get_instance_buffer(void* self, int* instanceCount);
+const char* q_quick3dinstancing_get_instance_buffer(void* self, int* instanceCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#getInstanceBuffer)
 ///

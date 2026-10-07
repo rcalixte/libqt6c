@@ -94,15 +94,15 @@ const char* q_sysinfo_machine_host_name();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#machineUniqueId)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-char* q_sysinfo_machine_unique_id();
+const char* q_sysinfo_machine_unique_id();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#bootUniqueId)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-char* q_sysinfo_boot_unique_id();
+const char* q_sysinfo_boot_unique_id();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsysinfo.html#dtor.QSysInfo)
 ///

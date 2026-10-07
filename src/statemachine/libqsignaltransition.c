@@ -74,14 +74,14 @@ void q_signaltransition_set_sender_object(void* self, const void* sender) {
     QSignalTransition_SetSenderObject((QSignalTransition*)self, (QObject*)sender);
 }
 
-char* q_signaltransition_signal(const void* self) {
+const char* q_signaltransition_signal(const void* self) {
     libqt_string _str = QSignalTransition_Signal((QSignalTransition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_signaltransition_set_signal(void* self, char* signal) {
+void q_signaltransition_set_signal(void* self, const char* signal) {
     QSignalTransition_SetSignal((QSignalTransition*)self, qstring(signal));
 }
 

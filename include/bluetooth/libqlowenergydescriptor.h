@@ -37,11 +37,11 @@ bool q_lowenergydescriptor_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptor.html#value)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QLowEnergyDescriptor*
 ///
-char* q_lowenergydescriptor_value(const void* self);
+const char* q_lowenergydescriptor_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptor.html#uuid)
 ///

@@ -131,18 +131,18 @@ KLocalizedString* k_localizedstring_ignore_markup(const void* self) {
     return KLocalizedString_IgnoreMarkup((KLocalizedString*)self);
 }
 
-char* k_localizedstring_untranslated_text(const void* self) {
+const char* k_localizedstring_untranslated_text(const void* self) {
     libqt_string _str = KLocalizedString_UntranslatedText((KLocalizedString*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_localizedstring_set_application_domain(char* domain) {
+void k_localizedstring_set_application_domain(const char* domain) {
     KLocalizedString_SetApplicationDomain(qstring(domain));
 }
 
-char* k_localizedstring_application_domain() {
+const char* k_localizedstring_application_domain() {
     libqt_string _str = KLocalizedString_ApplicationDomain();
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -192,11 +192,11 @@ libqt_list /* set of const char* */ k_localizedstring_available_application_tran
     return KLocalizedString_AvailableApplicationTranslations();
 }
 
-libqt_list /* set of const char* */ k_localizedstring_available_domain_translations(char* domain) {
+libqt_list /* set of const char* */ k_localizedstring_available_domain_translations(const char* domain) {
     return KLocalizedString_AvailableDomainTranslations(qstring(domain));
 }
 
-void k_localizedstring_add_domain_locale_dir(char* domain, const char* path) {
+void k_localizedstring_add_domain_locale_dir(const char* domain, const char* path) {
     KLocalizedString_AddDomainLocaleDir(qstring(domain), qstring(path));
 }
 

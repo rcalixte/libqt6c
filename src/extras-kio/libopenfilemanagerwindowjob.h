@@ -112,18 +112,18 @@ void k_io__openfilemanagerwindowjob_set_highlight_urls(void* self, libqt_list hi
 
 /// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#startupId)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KIO__OpenFileManagerWindowJob*
 ///
-char* k_io__openfilemanagerwindowjob_startup_id(const void* self);
+const char* k_io__openfilemanagerwindowjob_startup_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#setStartupId)
 ///
 /// @param self KIO__OpenFileManagerWindowJob*
-/// @param startupId char*
+/// @param startupId const char*
 ///
-void k_io__openfilemanagerwindowjob_set_startup_id(void* self, char* startupId);
+void k_io__openfilemanagerwindowjob_set_startup_id(void* self, const char* startupId);
 
 /// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#start)
 ///
@@ -1871,9 +1871,9 @@ void k_io__openfilemanagerwindowjob_delete(void* self);
 /// [Upstream resources](https://api.kde.org/kio.html#highlightInFileManager)
 ///
 /// @param urls libqt_list of QUrl*
-/// @param asn char*
+/// @param asn const char*
 ///
-KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list urls, char* asn);
+KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list urls, const char* asn);
 
 /// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#public-types)
 

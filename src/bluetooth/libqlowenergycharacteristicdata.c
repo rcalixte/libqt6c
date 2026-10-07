@@ -23,14 +23,14 @@ void q_lowenergycharacteristicdata_set_uuid(void* self, const void* uuid) {
     QLowEnergyCharacteristicData_SetUuid((QLowEnergyCharacteristicData*)self, (QBluetoothUuid*)uuid);
 }
 
-char* q_lowenergycharacteristicdata_value(const void* self) {
+const char* q_lowenergycharacteristicdata_value(const void* self) {
     libqt_string _str = QLowEnergyCharacteristicData_Value((QLowEnergyCharacteristicData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_lowenergycharacteristicdata_set_value(void* self, char* value) {
+void q_lowenergycharacteristicdata_set_value(void* self, const char* value) {
     QLowEnergyCharacteristicData_SetValue((QLowEnergyCharacteristicData*)self, qstring(value));
 }
 

@@ -152,9 +152,9 @@ QCborValue* q_cborvalue_new8(uint8_t st);
 
 /// q_cborvalue_new9 constructs a new QCborValue object.
 ///
-/// @param ba char*
+/// @param ba const char*
 ///
-QCborValue* q_cborvalue_new9(char* ba);
+QCborValue* q_cborvalue_new9(const char* ba);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
@@ -176,9 +176,9 @@ QCborValue* q_cborvalue_new11(const char* s);
 
 /// q_cborvalue_new12 constructs a new QCborValue object.
 ///
-/// @param s char*
+/// @param s const char*
 ///
-QCborValue* q_cborvalue_new12(char* s);
+QCborValue* q_cborvalue_new12(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
@@ -463,11 +463,11 @@ QCborValue* q_cborvalue_tagged_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QCborValue*
 ///
-char* q_cborvalue_to_byte_array(const void* self);
+const char* q_cborvalue_to_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toString)
 ///
@@ -537,9 +537,9 @@ const QCborValue* q_cborvalue_operator_subscript(const void* self, const char* k
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
 /// @param self const QCborValue*
-/// @param key char*
+/// @param key const char*
 ///
-const QCborValue* q_cborvalue_operator_subscript2(const void* self, char* key);
+const QCborValue* q_cborvalue_operator_subscript2(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
@@ -558,9 +558,9 @@ QCborValueRef* q_cborvalue_operator_subscript4(void* self, int64_t key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
 /// @param self QCborValue*
-/// @param key char*
+/// @param key const char*
 ///
-QCborValueRef* q_cborvalue_operator_subscript5(void* self, char* key);
+QCborValueRef* q_cborvalue_operator_subscript5(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
@@ -608,9 +608,9 @@ QCborValue* q_cborvalue_from_cbor(void* reader);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
-/// @param ba char*
+/// @param ba const char*
 ///
-QCborValue* q_cborvalue_from_cbor2(char* ba);
+QCborValue* q_cborvalue_from_cbor2(const char* ba);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
@@ -628,11 +628,11 @@ QCborValue* q_cborvalue_from_cbor4(unsigned char* data, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QCborValue*
 ///
-char* q_cborvalue_to_cbor(const void* self);
+const char* q_cborvalue_to_cbor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
@@ -697,12 +697,12 @@ QCborValue* q_cborvalue_tagged_value1(const void* self, const void* defaultValue
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QCborValue*
-/// @param defaultValue char*
+/// @param defaultValue const char*
 ///
-char* q_cborvalue_to_byte_array1(const void* self, char* defaultValue);
+const char* q_cborvalue_to_byte_array1(const void* self, const char* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toString)
 ///
@@ -743,10 +743,10 @@ QUuid* q_cborvalue_to_uuid1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
-/// @param ba char*
+/// @param ba const char*
 /// @param error QCborParserError*
 ///
-QCborValue* q_cborvalue_from_cbor22(char* ba, void* error);
+QCborValue* q_cborvalue_from_cbor22(const char* ba, void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
@@ -766,12 +766,12 @@ QCborValue* q_cborvalue_from_cbor33(unsigned char* data, intptr_t lenVal, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QCborValue*
 /// @param opt flag of enum QCborValue__EncodingOption
 ///
-char* q_cborvalue_to_cbor1(const void* self, int32_t opt);
+const char* q_cborvalue_to_cbor1(const void* self, int32_t opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
@@ -991,11 +991,11 @@ double q_cborvalueconstref_to_double(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QCborValueConstRef*
 ///
-char* q_cborvalueconstref_to_byte_array(const void* self);
+const char* q_cborvalueconstref_to_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toString)
 ///
@@ -1065,9 +1065,9 @@ const QCborValue* q_cborvalueconstref_operator_subscript(const void* self, const
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator-5b-5d)
 ///
 /// @param self const QCborValueConstRef*
-/// @param key char*
+/// @param key const char*
 ///
-const QCborValue* q_cborvalueconstref_operator_subscript2(const void* self, char* key);
+const QCborValue* q_cborvalueconstref_operator_subscript2(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator-5b-5d)
 ///
@@ -1097,11 +1097,11 @@ QJsonValue* q_cborvalueconstref_to_json_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toCbor)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QCborValueConstRef*
 ///
-char* q_cborvalueconstref_to_cbor(const void* self);
+const char* q_cborvalueconstref_to_cbor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toCbor)
 ///
@@ -1166,12 +1166,12 @@ double q_cborvalueconstref_to_double1(const void* self, double defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QCborValueConstRef*
-/// @param defaultValue char*
+/// @param defaultValue const char*
 ///
-char* q_cborvalueconstref_to_byte_array1(const void* self, char* defaultValue);
+const char* q_cborvalueconstref_to_byte_array1(const void* self, const char* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toString)
 ///
@@ -1212,12 +1212,12 @@ QUuid* q_cborvalueconstref_to_uuid1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toCbor)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QCborValueConstRef*
 /// @param opt flag of enum QCborValue__EncodingOption
 ///
-char* q_cborvalueconstref_to_cbor1(const void* self, int32_t opt);
+const char* q_cborvalueconstref_to_cbor1(const void* self, int32_t opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toCbor)
 ///
@@ -1292,9 +1292,9 @@ QCborValueRef* q_cborvalueref_operator_subscript(void* self, int64_t key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///
 /// @param self QCborValueRef*
-/// @param key char*
+/// @param key const char*
 ///
-QCborValueRef* q_cborvalueref_operator_subscript2(void* self, char* key);
+QCborValueRef* q_cborvalueref_operator_subscript2(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///
@@ -1480,11 +1480,11 @@ double q_cborvalueref_to_double(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QCborValueRef*
 ///
-char* q_cborvalueref_to_byte_array(const void* self);
+const char* q_cborvalueref_to_byte_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toString)
 ///
@@ -1554,9 +1554,9 @@ const QCborValue* q_cborvalueref_operator_subscript4(const void* self, const cha
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///
 /// @param self const QCborValueRef*
-/// @param key char*
+/// @param key const char*
 ///
-const QCborValue* q_cborvalueref_operator_subscript5(const void* self, char* key);
+const QCborValue* q_cborvalueref_operator_subscript5(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///
@@ -1586,11 +1586,11 @@ QJsonValue* q_cborvalueref_to_json_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toCbor)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QCborValueRef*
 ///
-char* q_cborvalueref_to_cbor(void* self);
+const char* q_cborvalueref_to_cbor(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toCbor)
 ///
@@ -1655,12 +1655,12 @@ double q_cborvalueref_to_double1(const void* self, double defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toByteArray)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QCborValueRef*
-/// @param defaultValue char*
+/// @param defaultValue const char*
 ///
-char* q_cborvalueref_to_byte_array1(const void* self, char* defaultValue);
+const char* q_cborvalueref_to_byte_array1(const void* self, const char* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toString)
 ///
@@ -1701,12 +1701,12 @@ QUuid* q_cborvalueref_to_uuid1(const void* self, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toCbor)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QCborValueRef*
 /// @param opt flag of enum QCborValue__EncodingOption
 ///
-char* q_cborvalueref_to_cbor1(void* self, int32_t opt);
+const char* q_cborvalueref_to_cbor1(void* self, int32_t opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toCbor)
 ///

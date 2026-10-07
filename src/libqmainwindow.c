@@ -258,14 +258,14 @@ void q_mainwindow_resize_docks(void* self, libqt_list /* of QDockWidget* */ dock
     QMainWindow_ResizeDocks((QMainWindow*)self, docks, sizes, orientation);
 }
 
-char* q_mainwindow_save_state(const void* self) {
+const char* q_mainwindow_save_state(const void* self) {
     libqt_string _str = QMainWindow_SaveState((QMainWindow*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_mainwindow_restore_state(void* self, char* state) {
+bool q_mainwindow_restore_state(void* self, const char* state) {
     return QMainWindow_RestoreState((QMainWindow*)self, qstring(state));
 }
 
@@ -359,14 +359,14 @@ void q_mainwindow_add_tool_bar_break1(void* self, int32_t area) {
     QMainWindow_AddToolBarBreak1((QMainWindow*)self, area);
 }
 
-char* q_mainwindow_save_state1(const void* self, int version) {
+const char* q_mainwindow_save_state1(const void* self, int version) {
     libqt_string _str = QMainWindow_SaveState1((QMainWindow*)self, version);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_mainwindow_restore_state2(void* self, char* state, int version) {
+bool q_mainwindow_restore_state2(void* self, const char* state, int version) {
     return QMainWindow_RestoreState2((QMainWindow*)self, qstring(state), version);
 }
 
@@ -1144,14 +1144,14 @@ void q_mainwindow_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_mainwindow_save_geometry(const void* self) {
+const char* q_mainwindow_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_mainwindow_restore_geometry(void* self, char* geometry) {
+bool q_mainwindow_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -2117,11 +2117,11 @@ void q_mainwindow_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QMainWindow_OnHideEvent((QMainWindow*)self, (intptr_t)callback);
 }
 
-bool q_mainwindow_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_mainwindow_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QMainWindow_NativeEvent((QMainWindow*)self, qstring(eventType), message, result);
 }
 
-bool q_mainwindow_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_mainwindow_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QMainWindow_SuperNativeEvent((QMainWindow*)self, qstring(eventType), message, result);
 }
 

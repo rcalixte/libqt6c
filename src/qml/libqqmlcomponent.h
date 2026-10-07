@@ -435,10 +435,10 @@ void q_qmlcomponent_load_from_module(void* self, const char* uri, const char* ty
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcomponent.html#setData)
 ///
 /// @param self QQmlComponent*
-/// @param param1 char*
+/// @param param1 const char*
 /// @param baseUrl QUrl*
 ///
-void q_qmlcomponent_set_data(void* self, char* param1, const void* baseUrl);
+void q_qmlcomponent_set_data(void* self, const char* param1, const void* baseUrl);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcomponent.html#statusChanged)
 ///

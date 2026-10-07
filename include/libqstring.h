@@ -18,9 +18,9 @@ intptr_t q_string_max_size();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param ba char*
+/// @param ba const char*
 ///
-const char* q_string_from_latin1(char* ba);
+const char* q_string_from_latin1(const char* ba);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#fromLatin1)
 ///
@@ -35,9 +35,9 @@ const char* q_string_from_latin12(const char* str, intptr_t size);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param utf8 char*
+/// @param utf8 const char*
 ///
-const char* q_string_from_utf8(char* utf8);
+const char* q_string_from_utf8(const char* utf8);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#fromUtf8)
 ///
@@ -52,9 +52,9 @@ const char* q_string_from_utf82(const char* utf8, intptr_t size);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param ba char*
+/// @param ba const char*
 ///
-const char* q_string_from_local8_bit(char* ba);
+const char* q_string_from_local8_bit(const char* ba);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#fromLocal8Bit)
 ///
@@ -100,16 +100,16 @@ int32_t q_string_compare5(const char* s1, const char* s2);
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
 ///
 /// @param s1 const char*
-/// @param s2 char*
+/// @param s2 const char*
 ///
-int32_t q_string_compare6(const char* s1, char* s2);
+int32_t q_string_compare6(const char* s1, const char* s2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
 ///
-/// @param s1 char*
+/// @param s1 const char*
 /// @param s2 const char*
 ///
-int32_t q_string_compare7(char* s1, const char* s2);
+int32_t q_string_compare7(const char* s1, const char* s2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
 ///
@@ -224,18 +224,18 @@ int32_t q_string_compare32(const char* s1, const char* s2, int32_t cs);
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
 ///
 /// @param s1 const char*
-/// @param s2 char*
-/// @param cs enum Qt__CaseSensitivity
-///
-int32_t q_string_compare33(const char* s1, char* s2, int32_t cs);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
-///
-/// @param s1 char*
 /// @param s2 const char*
 /// @param cs enum Qt__CaseSensitivity
 ///
-int32_t q_string_compare34(char* s1, const char* s2, int32_t cs);
+int32_t q_string_compare33(const char* s1, const char* s2, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
+///
+/// @param s1 const char*
+/// @param s2 const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+int32_t q_string_compare34(const char* s1, const char* s2, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
 ///

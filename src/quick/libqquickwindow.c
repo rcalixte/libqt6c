@@ -1493,11 +1493,11 @@ void q_quickwindow_on_touch_event(void* self, void (*callback)(void*, void*)) {
     QQuickWindow_OnTouchEvent((QQuickWindow*)self, (intptr_t)callback);
 }
 
-bool q_quickwindow_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_quickwindow_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QQuickWindow_NativeEvent((QQuickWindow*)self, qstring(eventType), message, result);
 }
 
-bool q_quickwindow_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_quickwindow_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QQuickWindow_SuperNativeEvent((QQuickWindow*)self, qstring(eventType), message, result);
 }
 

@@ -108,9 +108,9 @@ void k_terminallauncherjob_set_working_directory(void* self, const char* working
 /// [Upstream resources](https://api.kde.org/kterminallauncherjob.html#setStartupId)
 ///
 /// @param self KTerminalLauncherJob*
-/// @param startupId char*
+/// @param startupId const char*
 ///
-void k_terminallauncherjob_set_startup_id(void* self, char* startupId);
+void k_terminallauncherjob_set_startup_id(void* self, const char* startupId);
 
 /// [Upstream resources](https://api.kde.org/kterminallauncherjob.html#setProcessEnvironment)
 ///

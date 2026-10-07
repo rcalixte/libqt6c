@@ -190,20 +190,20 @@ bool q_mimedata_has_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMimeData*
 /// @param mimetype const char*
 ///
-char* q_mimedata_data(const void* self, const char* mimetype);
+const char* q_mimedata_data(const void* self, const char* mimetype);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#setData)
 ///
 /// @param self QMimeData*
 /// @param mimetype const char*
-/// @param data char*
+/// @param data const char*
 ///
-void q_mimedata_set_data(void* self, const char* mimetype, char* data);
+void q_mimedata_set_data(void* self, const char* mimetype, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#removeFormat)
 ///

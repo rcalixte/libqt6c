@@ -2618,20 +2618,20 @@ void k_texteditor__view_set_geometry2(void* self, const void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KTextEditor__View*
 ///
-char* k_texteditor__view_save_geometry(const void* self);
+const char* k_texteditor__view_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self KTextEditor__View*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool k_texteditor__view_restore_geometry(void* self, char* geometry);
+bool k_texteditor__view_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///

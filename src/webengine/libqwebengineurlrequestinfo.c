@@ -23,7 +23,7 @@ QUrl* q_webengineurlrequestinfo_initiator(const void* self) {
     return QWebEngineUrlRequestInfo_Initiator((QWebEngineUrlRequestInfo*)self);
 }
 
-char* q_webengineurlrequestinfo_request_method(const void* self) {
+const char* q_webengineurlrequestinfo_request_method(const void* self) {
     libqt_string _str = QWebEngineUrlRequestInfo_RequestMethod((QWebEngineUrlRequestInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -46,11 +46,11 @@ void q_webengineurlrequestinfo_redirect(void* self, const void* url) {
     QWebEngineUrlRequestInfo_Redirect((QWebEngineUrlRequestInfo*)self, (QUrl*)url);
 }
 
-void q_webengineurlrequestinfo_set_http_header(void* self, char* name, char* value) {
+void q_webengineurlrequestinfo_set_http_header(void* self, const char* name, const char* value) {
     QWebEngineUrlRequestInfo_SetHttpHeader((QWebEngineUrlRequestInfo*)self, qstring(name), qstring(value));
 }
 
-libqt_map /* of char* to char* */ q_webengineurlrequestinfo_http_headers(const void* self) {
+libqt_map /* of const char* to const char* */ q_webengineurlrequestinfo_http_headers(const void* self) {
     // Convert QHash<QByteArray,QByteArray> to libqt_map
     libqt_map _out = QWebEngineUrlRequestInfo_HttpHeaders((QWebEngineUrlRequestInfo*)self);
     libqt_map _ret;

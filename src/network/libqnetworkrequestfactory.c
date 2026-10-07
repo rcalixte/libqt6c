@@ -71,14 +71,14 @@ void q_networkrequestfactory_clear_common_headers(void* self) {
     QNetworkRequestFactory_ClearCommonHeaders((QNetworkRequestFactory*)self);
 }
 
-char* q_networkrequestfactory_bearer_token(const void* self) {
+const char* q_networkrequestfactory_bearer_token(const void* self) {
     libqt_string _str = QNetworkRequestFactory_BearerToken((QNetworkRequestFactory*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_networkrequestfactory_set_bearer_token(void* self, char* token) {
+void q_networkrequestfactory_set_bearer_token(void* self, const char* token) {
     QNetworkRequestFactory_SetBearerToken((QNetworkRequestFactory*)self, qstring(token));
 }
 

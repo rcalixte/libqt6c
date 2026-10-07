@@ -177,9 +177,9 @@ void q_datawidgetmapper_add_mapping(void* self, void* widget, int section);
 /// @param self QDataWidgetMapper*
 /// @param widget QWidget*
 /// @param section int
-/// @param propertyName char*
+/// @param propertyName const char*
 ///
-void q_datawidgetmapper_add_mapping2(void* self, void* widget, int section, char* propertyName);
+void q_datawidgetmapper_add_mapping2(void* self, void* widget, int section, const char* propertyName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#removeMapping)
 ///
@@ -197,12 +197,12 @@ int32_t q_datawidgetmapper_mapped_section(const void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#mappedPropertyName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QDataWidgetMapper*
 /// @param widget QWidget*
 ///
-char* q_datawidgetmapper_mapped_property_name(const void* self, void* widget);
+const char* q_datawidgetmapper_mapped_property_name(const void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatawidgetmapper.html#mappedWidgetAt)
 ///

@@ -1406,18 +1406,18 @@ void q_widget_set_geometry2(void* self, const void* geometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QWidget*
 ///
-char* q_widget_save_geometry(const void* self);
+const char* q_widget_save_geometry(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
 /// @param self QWidget*
-/// @param geometry char*
+/// @param geometry const char*
 ///
-bool q_widget_restore_geometry(void* self, char* geometry);
+bool q_widget_restore_geometry(void* self, const char* geometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
@@ -2646,11 +2646,11 @@ void q_widget_super_hide_event(void* self, void* event);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// @param self QWidget*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_widget_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_widget_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
@@ -2666,11 +2666,11 @@ void q_widget_on_native_event(void* self, bool (*callback)(void*, libqt_string, 
 /// Base class method implementation
 ///
 /// @param self QWidget*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_widget_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_widget_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///

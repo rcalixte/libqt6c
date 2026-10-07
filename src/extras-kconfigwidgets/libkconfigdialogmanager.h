@@ -140,7 +140,7 @@ bool k_configdialogmanager_is_default(const void* self);
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map* of const char* to char*
+/// // libqt_map* of const char* to const char*
 /// for (size_t i = 0; i < map->len; ++i) {
 ///     libqt_free(map->keys[i]);
 ///     libqt_free(map->values[i]);
@@ -150,7 +150,7 @@ bool k_configdialogmanager_is_default(const void* self);
 /// free(map);
 /// ```
 ///
-/// @return libqt_map* of const char* to char*
+/// @return libqt_map* of const char* to const char*
 ///
 libqt_map* k_configdialogmanager_property_map();
 
@@ -196,39 +196,39 @@ bool k_configdialogmanager_parse_children(void* self, const void* widget, bool t
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KConfigDialogManager*
 /// @param widget QWidget*
 ///
-char* k_configdialogmanager_get_user_property(const void* self, const void* widget);
+const char* k_configdialogmanager_get_user_property(const void* self, const void* widget);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KConfigDialogManager*
 /// @param widget QWidget*
 ///
-char* k_configdialogmanager_get_custom_property(const void* self, const void* widget);
+const char* k_configdialogmanager_get_custom_property(const void* self, const void* widget);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KConfigDialogManager*
 /// @param widget QWidget*
 ///
-char* k_configdialogmanager_get_user_property_changed_signal(const void* self, const void* widget);
+const char* k_configdialogmanager_get_user_property_changed_signal(const void* self, const void* widget);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KConfigDialogManager*
 /// @param widget QWidget*
 ///
-char* k_configdialogmanager_get_custom_property_changed_signal(const void* self, const void* widget);
+const char* k_configdialogmanager_get_custom_property_changed_signal(const void* self, const void* widget);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#setProperty)
 ///

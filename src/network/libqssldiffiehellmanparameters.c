@@ -26,7 +26,7 @@ void q_ssldiffiehellmanparameters_swap(void* self, void* other) {
     QSslDiffieHellmanParameters_Swap((QSslDiffieHellmanParameters*)self, (QSslDiffieHellmanParameters*)other);
 }
 
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded(char* encoded) {
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded(const char* encoded) {
     return QSslDiffieHellmanParameters_FromEncoded(qstring(encoded));
 }
 
@@ -53,7 +53,7 @@ const char* q_ssldiffiehellmanparameters_error_string(const void* self) {
     return _ret;
 }
 
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(char* encoded, int32_t format) {
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(const char* encoded, int32_t format) {
     return QSslDiffieHellmanParameters_FromEncoded22(qstring(encoded), format);
 }
 

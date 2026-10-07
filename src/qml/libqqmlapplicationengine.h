@@ -195,9 +195,9 @@ void q_qmlapplicationengine_set_extra_file_selectors(void* self, const char* ext
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlapplicationengine.html#loadData)
 ///
 /// @param self QQmlApplicationEngine*
-/// @param data char*
+/// @param data const char*
 ///
-void q_qmlapplicationengine_load_data(void* self, char* data);
+void q_qmlapplicationengine_load_data(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlapplicationengine.html#objectCreated)
 ///
@@ -250,10 +250,10 @@ const char* q_qmlapplicationengine_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlapplicationengine.html#loadData)
 ///
 /// @param self QQmlApplicationEngine*
-/// @param data char*
+/// @param data const char*
 /// @param url QUrl*
 ///
-void q_qmlapplicationengine_load_data2(void* self, char* data, const void* url);
+void q_qmlapplicationengine_load_data2(void* self, const char* data, const void* url);
 
 /// Inherited from QQmlEngine
 ///

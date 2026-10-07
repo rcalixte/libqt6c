@@ -8,7 +8,7 @@ QImageWriter* q_imagewriter_new() {
     return QImageWriter_New();
 }
 
-QImageWriter* q_imagewriter_new2(void* device, char* format) {
+QImageWriter* q_imagewriter_new2(void* device, const char* format) {
     return QImageWriter_New2((QIODevice*)device, qstring(format));
 }
 
@@ -16,7 +16,7 @@ QImageWriter* q_imagewriter_new3(const char* fileName) {
     return QImageWriter_New3(qstring(fileName));
 }
 
-QImageWriter* q_imagewriter_new4(const char* fileName, char* format) {
+QImageWriter* q_imagewriter_new4(const char* fileName, const char* format) {
     return QImageWriter_New4(qstring(fileName), qstring(format));
 }
 
@@ -27,11 +27,11 @@ const char* q_imagewriter_tr(const char* sourceText) {
     return _ret;
 }
 
-void q_imagewriter_set_format(void* self, char* format) {
+void q_imagewriter_set_format(void* self, const char* format) {
     QImageWriter_SetFormat((QImageWriter*)self, qstring(format));
 }
 
-char* q_imagewriter_format(const void* self) {
+const char* q_imagewriter_format(const void* self) {
     libqt_string _str = QImageWriter_Format((QImageWriter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -73,11 +73,11 @@ int32_t q_imagewriter_compression(const void* self) {
     return QImageWriter_Compression((QImageWriter*)self);
 }
 
-void q_imagewriter_set_sub_type(void* self, char* type) {
+void q_imagewriter_set_sub_type(void* self, const char* type) {
     QImageWriter_SetSubType((QImageWriter*)self, qstring(type));
 }
 
-char* q_imagewriter_sub_type(const void* self) {
+const char* q_imagewriter_sub_type(const void* self) {
     libqt_string _str = QImageWriter_SubType((QImageWriter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -186,7 +186,7 @@ const char** q_imagewriter_supported_mime_types() {
     return _ret;
 }
 
-const char** q_imagewriter_image_formats_for_mime_type(char* mimeType) {
+const char** q_imagewriter_image_formats_for_mime_type(const char* mimeType) {
     libqt_list _arr = QImageWriter_ImageFormatsForMimeType(qstring(mimeType));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));

@@ -882,7 +882,7 @@ int32_t q_domdocument_node_type(const void* self) {
     return QDomDocument_NodeType((QDomDocument*)self);
 }
 
-bool q_domdocument_set_content(void* self, char* text, bool namespaceProcessing) {
+bool q_domdocument_set_content(void* self, const char* text, bool namespaceProcessing) {
     return QDomDocument_SetContent((QDomDocument*)self, qstring(text), namespaceProcessing);
 }
 
@@ -917,7 +917,7 @@ const char* q_domdocument_to_string(const void* self) {
     return _ret;
 }
 
-char* q_domdocument_to_byte_array(const void* self) {
+const char* q_domdocument_to_byte_array(const void* self) {
     libqt_string _str = QDomDocument_ToByteArray((QDomDocument*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -943,7 +943,7 @@ const char* q_domdocument_to_string1(const void* self, int indent) {
     return _ret;
 }
 
-char* q_domdocument_to_byte_array1(const void* self, int indent) {
+const char* q_domdocument_to_byte_array1(const void* self, int indent) {
     libqt_string _str = QDomDocument_ToByteArray1((QDomDocument*)self, indent);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

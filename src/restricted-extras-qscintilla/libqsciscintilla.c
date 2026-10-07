@@ -190,7 +190,7 @@ int32_t q_sciscintilla_brace_matching(const void* self) {
     return QsciScintilla_BraceMatching((QsciScintilla*)self);
 }
 
-char* q_sciscintilla_bytes(const void* self, int start, int end) {
+const char* q_sciscintilla_bytes(const void* self, int start, int end) {
     libqt_string _str = QsciScintilla_Bytes((QsciScintilla*)self, start, end);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -3343,14 +3343,14 @@ void q_sciscintilla_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* q_sciscintilla_save_geometry(const void* self) {
+const char* q_sciscintilla_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_sciscintilla_restore_geometry(void* self, char* geometry) {
+bool q_sciscintilla_restore_geometry(void* self, const char* geometry) {
     return QWidget_RestoreGeometry((QWidget*)self, qstring(geometry));
 }
 
@@ -3968,14 +3968,14 @@ void q_sciscintilla_on_can_insert_from_mime_data(void* self, bool (*callback)(co
     QsciScintilla_OnCanInsertFromMimeData((QsciScintilla*)self, (intptr_t)callback);
 }
 
-char* q_sciscintilla_from_mime_data(const void* self, const void* source, bool* rectangular) {
+const char* q_sciscintilla_from_mime_data(const void* self, const void* source, bool* rectangular) {
     libqt_string _str = QsciScintilla_FromMimeData((QsciScintilla*)self, (QMimeData*)source, (bool*)rectangular);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_sciscintilla_super_from_mime_data(const void* self, const void* source, bool* rectangular) {
+const char* q_sciscintilla_super_from_mime_data(const void* self, const void* source, bool* rectangular) {
     libqt_string _str = QsciScintilla_SuperFromMimeData((QsciScintilla*)self, (QMimeData*)source, (bool*)rectangular);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -3986,11 +3986,11 @@ void q_sciscintilla_on_from_mime_data(void* self, libqt_string (*callback)(const
     QsciScintilla_OnFromMimeData((QsciScintilla*)self, (intptr_t)callback);
 }
 
-QMimeData* q_sciscintilla_to_mime_data(const void* self, char* text, bool rectangular) {
+QMimeData* q_sciscintilla_to_mime_data(const void* self, const char* text, bool rectangular) {
     return QsciScintilla_ToMimeData((QsciScintilla*)self, qstring(text), rectangular);
 }
 
-QMimeData* q_sciscintilla_super_to_mime_data(const void* self, char* text, bool rectangular) {
+QMimeData* q_sciscintilla_super_to_mime_data(const void* self, const char* text, bool rectangular) {
     return QsciScintilla_SuperToMimeData((QsciScintilla*)self, qstring(text), rectangular);
 }
 
@@ -4454,11 +4454,11 @@ void q_sciscintilla_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QsciScintilla_OnHideEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
-bool q_sciscintilla_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_sciscintilla_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QsciScintilla_NativeEvent((QsciScintilla*)self, qstring(eventType), message, result);
 }
 
-bool q_sciscintilla_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+bool q_sciscintilla_super_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
     return QsciScintilla_SuperNativeEvent((QsciScintilla*)self, qstring(eventType), message, result);
 }
 
@@ -4578,7 +4578,7 @@ void q_sciscintilla_set_scroll_bars(void* self) {
     QsciScintilla_SetScrollBars((QsciScintilla*)self);
 }
 
-char* q_sciscintilla_text_as_bytes(const void* self, const char* text) {
+const char* q_sciscintilla_text_as_bytes(const void* self, const char* text) {
     libqt_string _str = QsciScintilla_TextAsBytes((QsciScintilla*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

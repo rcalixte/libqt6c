@@ -264,7 +264,7 @@ int32_t k_descendantsproxymodel_super_column_count(const void* self, const void*
     return KDescendantsProxyModel_SuperColumnCount((KDescendantsProxyModel*)self, (QModelIndex*)index);
 }
 
-libqt_map /* of int to char* */ k_descendantsproxymodel_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_descendantsproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KDescendantsProxyModel_RoleNames((KDescendantsProxyModel*)self);
     libqt_map _ret;
@@ -297,11 +297,11 @@ libqt_map /* of int to char* */ k_descendantsproxymodel_role_names(const void* s
     return _ret;
 }
 
-void k_descendantsproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+void k_descendantsproxymodel_on_role_names(void* self, libqt_map /* of int to const char* */ (*callback)(const void*)) {
     KDescendantsProxyModel_OnRoleNames((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_descendantsproxymodel_super_role_names(const void* self) {
+libqt_map /* of int to const char* */ k_descendantsproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KDescendantsProxyModel_SuperRoleNames((KDescendantsProxyModel*)self);
     libqt_map _ret;

@@ -12,81 +12,81 @@
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#quotedPrintableEncode)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param in char*
+/// @param in const char*
 /// @param useCRLF bool
 ///
-char* k_codecs_quoted_printable_encode(char* in, bool useCRLF);
+const char* k_codecs_quoted_printable_encode(const char* in, bool useCRLF);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#quotedPrintableEncode)
 ///
-/// @param in char*
-/// @param out char*
+/// @param in const char*
+/// @param out const char*
 /// @param useCRLF bool
 ///
-void k_codecs_quoted_printable_encode2(char* in, char* out, bool useCRLF);
+void k_codecs_quoted_printable_encode2(const char* in, const char* out, bool useCRLF);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#quotedPrintableDecode)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param in char*
+/// @param in const char*
 ///
-char* k_codecs_quoted_printable_decode(char* in);
+const char* k_codecs_quoted_printable_decode(const char* in);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#quotedPrintableDecode)
 ///
-/// @param in char*
-/// @param out char*
+/// @param in const char*
+/// @param out const char*
 ///
-void k_codecs_quoted_printable_decode2(char* in, char* out);
+void k_codecs_quoted_printable_decode2(const char* in, const char* out);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#uudecode)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param in char*
+/// @param in const char*
 ///
-char* k_codecs_uudecode(char* in);
+const char* k_codecs_uudecode(const char* in);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#uudecode)
 ///
-/// @param in char*
-/// @param out char*
+/// @param in const char*
+/// @param out const char*
 ///
-void k_codecs_uudecode2(char* in, char* out);
+void k_codecs_uudecode2(const char* in, const char* out);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#base64Encode)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param in char*
+/// @param in const char*
 ///
-char* k_codecs_base64_encode(char* in);
+const char* k_codecs_base64_encode(const char* in);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#base64Encode)
 ///
-/// @param in char*
-/// @param out char*
+/// @param in const char*
+/// @param out const char*
 /// @param insertLFs bool
 ///
-void k_codecs_base64_encode2(char* in, char* out, bool insertLFs);
+void k_codecs_base64_encode2(const char* in, const char* out, bool insertLFs);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#base64Decode)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param in char*
+/// @param in const char*
 ///
-char* k_codecs_base64_decode(char* in);
+const char* k_codecs_base64_decode(const char* in);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#base64Decode)
 ///
-/// @param in char*
-/// @param out char*
+/// @param in const char*
+/// @param out const char*
 ///
-void k_codecs_base64_decode2(char* in, char* out);
+void k_codecs_base64_decode2(const char* in, const char* out);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#decodeRFC2047String)
 ///
@@ -98,28 +98,28 @@ const char* k_codecs_decode_r_f_c2047_string(const char* text);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#encodeRFC2047String)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param src const char*
-/// @param charset char*
+/// @param charset const char*
 ///
-char* k_codecs_encode_r_f_c2047_string(const char* src, char* charset);
+const char* k_codecs_encode_r_f_c2047_string(const char* src, const char* charset);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#base45Decode)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param in char*
+/// @param in const char*
 ///
-char* k_codecs_base45_decode(char* in);
+const char* k_codecs_base45_decode(const char* in);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html)
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#codecForName)
 ///
-/// @param name char*
+/// @param name const char*
 ///
-KCodecs__Codec* k_codecs__codec_codec_for_name(char* name);
+KCodecs__Codec* k_codecs__codec_codec_for_name(const char* name);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#maxEncodedSizeFor)
 ///
@@ -183,21 +183,21 @@ bool k_codecs__codec_decode(const void* self, const char* scursor, const char* s
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#encode)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KCodecs__Codec*
-/// @param src char*
+/// @param src const char*
 ///
-char* k_codecs__codec_encode2(const void* self, char* src);
+const char* k_codecs__codec_encode2(const void* self, const char* src);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#decode)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KCodecs__Codec*
-/// @param src char*
+/// @param src const char*
 ///
-char* k_codecs__codec_decode2(const void* self, char* src);
+const char* k_codecs__codec_decode2(const void* self, const char* src);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#name)
 ///
@@ -211,23 +211,23 @@ const char* k_codecs__codec_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#encode)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KCodecs__Codec*
-/// @param src char*
+/// @param src const char*
 /// @param newline enum KCodecs__Codec__NewlineType
 ///
-char* k_codecs__codec_encode22(const void* self, char* src, int32_t newline);
+const char* k_codecs__codec_encode22(const void* self, const char* src, int32_t newline);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#decode)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KCodecs__Codec*
-/// @param src char*
+/// @param src const char*
 /// @param newline enum KCodecs__Codec__NewlineType
 ///
-char* k_codecs__codec_decode22(const void* self, char* src, int32_t newline);
+const char* k_codecs__codec_decode22(const void* self, const char* src, int32_t newline);
 
 /// Delete this object from C++ memory.
 ///

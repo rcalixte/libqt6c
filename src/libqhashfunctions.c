@@ -72,7 +72,7 @@ size_t q_qhashfunctions_q_hash19(const void* key, size_t seed) {
     return qhashfunctions_QHash19((QChar*)key, seed);
 }
 
-size_t q_qhashfunctions_q_hash20(char* key, size_t seed) {
+size_t q_qhashfunctions_q_hash20(const char* key, size_t seed) {
     return qhashfunctions_QHash20(qstring(key), seed);
 }
 
@@ -88,7 +88,7 @@ size_t q_qhashfunctions_q_hash24(const void* key, size_t seed) {
     return qhashfunctions_QHash24((QBitArray*)key, seed);
 }
 
-size_t q_qhashfunctions_q_hash25(char* key, size_t seed) {
+size_t q_qhashfunctions_q_hash25(const char* key, size_t seed) {
     return qhashfunctions_QHash25(qstring(key), seed);
 }
 

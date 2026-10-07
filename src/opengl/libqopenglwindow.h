@@ -3046,11 +3046,11 @@ void q_openglwindow_on_tablet_event(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QOpenGLWindow*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_openglwindow_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_openglwindow_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWindow
 ///
@@ -3059,11 +3059,11 @@ bool q_openglwindow_native_event(void* self, char* eventType, void* message, int
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QOpenGLWindow*
-/// @param eventType char*
+/// @param eventType const char*
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_openglwindow_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_openglwindow_super_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWindow
 ///
