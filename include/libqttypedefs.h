@@ -1411,15 +1411,20 @@ typedef struct QMetaAssociation QMetaAssociation;
 typedef struct QMetaClassInfo QMetaClassInfo;
 typedef struct QMetaContainer QMetaContainer;
 typedef struct QMetaEnum QMetaEnum;
+typedef struct QMetaEnumBuilder QMetaEnumBuilder;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaMethodArgument QMetaMethodArgument;
+typedef struct QMetaMethodBuilder QMetaMethodBuilder;
 typedef struct QMetaMethodReturnArgument QMetaMethodReturnArgument;
 typedef struct QMetaObject QMetaObject;
+typedef struct QMetaObjectBuilder QMetaObjectBuilder;
 typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QMetaObject__Data QMetaObject__Data;
 typedef struct QMetaObject__SuperData QMetaObject__SuperData;
 typedef struct QMetaProperty QMetaProperty;
+typedef struct QMetaPropertyBuilder QMetaPropertyBuilder;
 typedef struct QMetaSequence QMetaSequence;
+typedef struct QMetaStringTable QMetaStringTable;
 typedef struct QMetaType QMetaType;
 typedef struct QMethodRawArguments QMethodRawArguments;
 typedef struct QMicrophonePermission QMicrophonePermission;
@@ -2331,6 +2336,7 @@ typedef void (*QFunctionPointer)();
 typedef void (*QAccessible__UpdateHandler)(void* funcparam1);
 typedef void (*QLoggingCategory__CategoryFilter)(void* funcparam1);
 typedef void (*QAccessible__RootObjectHandler)(void* funcparam1);
+typedef void (*QMetaObjectBuilder__StaticMetacallFunction)(void* funcparam1, int32_t funcparam2, int funcparam3, void* funcparam4);
 typedef void (*KCrash__HandlerType)(int funcparam1);
 
 #endif
