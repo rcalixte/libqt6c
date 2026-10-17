@@ -67,8 +67,6 @@ uint32_t q_picture_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpicture.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QPicture*
 ///
 const char* q_picture_data(const void* self);

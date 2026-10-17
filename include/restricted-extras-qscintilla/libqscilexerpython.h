@@ -97,15 +97,11 @@ const char* q_scilexerpython_tr(const char* s);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPython.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexerPython*
 ///
 const char* q_scilexerpython_language(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPython.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerPython*
 ///
@@ -126,8 +122,6 @@ const char** q_scilexerpython_auto_completion_word_separators(const void* self);
 int32_t q_scilexerpython_block_lookback(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPython.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerPython*
 ///
@@ -191,8 +185,6 @@ void q_scilexerpython_on_indentation_guide_view(void* self, int32_t (*callback)(
 int32_t q_scilexerpython_super_indentation_guide_view(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPython.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerPython*
 /// @param set int
@@ -423,8 +415,6 @@ const char* q_scilexerpython_tr2(const char* s, const char* c);
 const char* q_scilexerpython_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPython.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerPython*
 /// @param style int*
@@ -1106,8 +1096,6 @@ void q_scilexerpython_on_lexer_id(void* self, int32_t (*callback)(const void*));
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerPython*
@@ -1117,8 +1105,6 @@ const char* q_scilexerpython_auto_completion_fillups(const void* self);
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1141,8 +1127,6 @@ void q_scilexerpython_on_auto_completion_fillups(void* self, const char* (*callb
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerPython*
@@ -1153,8 +1137,6 @@ const char* q_scilexerpython_block_end(const void* self, int* style);
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1178,8 +1160,6 @@ void q_scilexerpython_on_block_end(void* self, const char* (*callback)(const voi
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerPython*
@@ -1190,8 +1170,6 @@ const char* q_scilexerpython_block_start_keyword(const void* self, int* style);
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1584,8 +1562,6 @@ void q_scilexerpython_on_style_bits_needed(void* self, int32_t (*callback)(const
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerPython*
@@ -1595,8 +1571,6 @@ const char* q_scilexerpython_word_characters(const void* self);
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

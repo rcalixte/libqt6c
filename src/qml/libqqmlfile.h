@@ -86,8 +86,6 @@ int64_t q_qmlfile_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlfile.html#data)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QQmlFile*
 ///
 const char* q_qmlfile_data(const void* self);

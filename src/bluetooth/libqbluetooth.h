@@ -18,8 +18,6 @@ const QMetaObject* q_bluetooth_get_enum_meta_object(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetooth.html#qt_getEnumName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param param1 enum QBluetooth__Security
 ///
 const char* q_bluetooth_get_enum_name(int32_t param1);
@@ -31,8 +29,6 @@ const char* q_bluetooth_get_enum_name(int32_t param1);
 const QMetaObject* q_bluetooth_get_enum_meta_object2(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetooth.html#qt_getEnumName)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum QBluetooth__AttAccessConstraint
 ///

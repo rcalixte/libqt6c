@@ -81,8 +81,6 @@ int32_t q_metatype_type2(const char* typeName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#typeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param type int
 ///
 const char* q_metatype_type_name(int type);
@@ -192,8 +190,6 @@ int32_t q_metatype_flags(const void* self);
 const QMetaObject* q_metatype_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#name)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaType*
 ///

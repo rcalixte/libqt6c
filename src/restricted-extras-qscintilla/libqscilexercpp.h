@@ -106,15 +106,11 @@ const char* q_scilexercpp_tr(const char* s);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexerCPP*
 ///
 const char* q_scilexercpp_language(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerCPP*
 ///
@@ -130,23 +126,17 @@ const char** q_scilexercpp_auto_completion_word_separators(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexerCPP*
 ///
 const char* q_scilexercpp_block_end(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexerCPP*
 ///
 const char* q_scilexercpp_block_start(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerCPP*
 ///
@@ -159,8 +149,6 @@ const char* q_scilexercpp_block_start_keyword(const void* self);
 int32_t q_scilexercpp_brace_style(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerCPP*
 ///
@@ -195,8 +183,6 @@ QFont* q_scilexercpp_default_font(const void* self, int style);
 QColor* q_scilexercpp_default_paper(const void* self, int style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerCPP*
 /// @param set int
@@ -488,8 +474,6 @@ const char* q_scilexercpp_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexerCPP*
 /// @param style int*
 ///
@@ -497,16 +481,12 @@ const char* q_scilexercpp_block_end1(const void* self, int* style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexerCPP*
 /// @param style int*
 ///
 const char* q_scilexercpp_block_start1(const void* self, int* style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCPP.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerCPP*
 /// @param style int*
@@ -1188,8 +1168,6 @@ void q_scilexercpp_on_lexer_id(void* self, int32_t (*callback)(const void*));
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerCPP*
@@ -1199,8 +1177,6 @@ const char* q_scilexercpp_auto_completion_fillups(const void* self);
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

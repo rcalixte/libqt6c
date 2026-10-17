@@ -97,15 +97,11 @@ const char* q_scilexermatlab_tr(const char* s);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMatlab.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexerMatlab*
 ///
 const char* q_scilexermatlab_language(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMatlab.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerMatlab*
 ///
@@ -126,8 +122,6 @@ QColor* q_scilexermatlab_default_color(const void* self, int style);
 QFont* q_scilexermatlab_default_font(const void* self, int style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMatlab.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerMatlab*
 /// @param set int
@@ -845,8 +839,6 @@ void q_scilexermatlab_on_lexer_id(void* self, int32_t (*callback)(const void*));
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerMatlab*
@@ -856,8 +848,6 @@ const char* q_scilexermatlab_auto_completion_fillups(const void* self);
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -915,8 +905,6 @@ void q_scilexermatlab_on_auto_completion_word_separators(void* self, const char*
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerMatlab*
@@ -927,8 +915,6 @@ const char* q_scilexermatlab_block_end(const void* self, int* style);
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -983,8 +969,6 @@ void q_scilexermatlab_on_block_lookback(void* self, int32_t (*callback)(const vo
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerMatlab*
@@ -995,8 +979,6 @@ const char* q_scilexermatlab_block_start(const void* self, int* style);
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1020,8 +1002,6 @@ void q_scilexermatlab_on_block_start(void* self, const char* (*callback)(const v
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerMatlab*
@@ -1032,8 +1012,6 @@ const char* q_scilexermatlab_block_start_keyword(const void* self, int* style);
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1552,8 +1530,6 @@ void q_scilexermatlab_on_style_bits_needed(void* self, int32_t (*callback)(const
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerMatlab*
@@ -1563,8 +1539,6 @@ const char* q_scilexermatlab_word_characters(const void* self);
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

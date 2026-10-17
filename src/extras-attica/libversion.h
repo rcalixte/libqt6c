@@ -24,7 +24,5 @@ uint32_t k_attica_version_release();
 
 /// [Upstream resources](https://api.kde.org/attica.html#versionString)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 const char* k_attica_version_string();
 #endif

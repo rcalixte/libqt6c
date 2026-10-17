@@ -97,15 +97,11 @@ const char* q_scilexerpascal_tr(const char* s);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPascal.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexerPascal*
 ///
 const char* q_scilexerpascal_language(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPascal.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerPascal*
 ///
@@ -121,23 +117,17 @@ const char** q_scilexerpascal_auto_completion_word_separators(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPascal.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexerPascal*
 ///
 const char* q_scilexerpascal_block_end(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPascal.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexerPascal*
 ///
 const char* q_scilexerpascal_block_start(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPascal.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerPascal*
 ///
@@ -178,8 +168,6 @@ QFont* q_scilexerpascal_default_font(const void* self, int style);
 QColor* q_scilexerpascal_default_paper(const void* self, int style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPascal.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerPascal*
 /// @param set int
@@ -344,8 +332,6 @@ const char* q_scilexerpascal_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPascal.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexerPascal*
 /// @param style int*
 ///
@@ -353,16 +339,12 @@ const char* q_scilexerpascal_block_end1(const void* self, int* style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPascal.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexerPascal*
 /// @param style int*
 ///
 const char* q_scilexerpascal_block_start1(const void* self, int* style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerPascal.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexerPascal*
 /// @param style int*
@@ -1044,8 +1026,6 @@ void q_scilexerpascal_on_lexer_id(void* self, int32_t (*callback)(const void*));
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerPascal*
@@ -1055,8 +1035,6 @@ const char* q_scilexerpascal_auto_completion_fillups(const void* self);
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1510,8 +1488,6 @@ void q_scilexerpascal_on_style_bits_needed(void* self, int32_t (*callback)(const
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self const QsciLexerPascal*
@@ -1521,8 +1497,6 @@ const char* q_scilexerpascal_word_characters(const void* self);
 /// Inherited from QsciLexer
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///

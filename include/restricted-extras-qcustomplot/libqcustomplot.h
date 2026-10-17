@@ -30,8 +30,6 @@ const QMetaObject* q_cp_get_enum_meta_object(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param param1 enum QCP__ExportPen
 ///
 const char* q_cp_get_enum_name(int32_t param1);
@@ -43,8 +41,6 @@ const char* q_cp_get_enum_name(int32_t param1);
 const QMetaObject* q_cp_get_enum_meta_object2(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum QCP__ResolutionUnit
 ///
@@ -58,8 +54,6 @@ const QMetaObject* q_cp_get_enum_meta_object3(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param param1 enum QCP__SignDomain
 ///
 const char* q_cp_get_enum_name3(int32_t param1);
@@ -71,8 +65,6 @@ const char* q_cp_get_enum_name3(int32_t param1);
 const QMetaObject* q_cp_get_enum_meta_object4(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum QCP__MarginSide
 ///
@@ -86,8 +78,6 @@ const QMetaObject* q_cp_get_enum_meta_object5(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param param1 flag of enum QCP__MarginSide
 ///
 const char* q_cp_get_enum_name5(int32_t param1);
@@ -99,8 +89,6 @@ const char* q_cp_get_enum_name5(int32_t param1);
 const QMetaObject* q_cp_get_enum_meta_object6(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum QCP__AntialiasedElement
 ///
@@ -114,8 +102,6 @@ const QMetaObject* q_cp_get_enum_meta_object7(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param param1 flag of enum QCP__AntialiasedElement
 ///
 const char* q_cp_get_enum_name7(int32_t param1);
@@ -127,8 +113,6 @@ const char* q_cp_get_enum_name7(int32_t param1);
 const QMetaObject* q_cp_get_enum_meta_object8(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum QCP__PlottingHint
 ///
@@ -142,8 +126,6 @@ const QMetaObject* q_cp_get_enum_meta_object9(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param param1 flag of enum QCP__PlottingHint
 ///
 const char* q_cp_get_enum_name9(int32_t param1);
@@ -155,8 +137,6 @@ const char* q_cp_get_enum_name9(int32_t param1);
 const QMetaObject* q_cp_get_enum_meta_object10(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum QCP__Interaction
 ///
@@ -170,8 +150,6 @@ const QMetaObject* q_cp_get_enum_meta_object11(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param param1 flag of enum QCP__Interaction
 ///
 const char* q_cp_get_enum_name11(int32_t param1);
@@ -184,8 +162,6 @@ const QMetaObject* q_cp_get_enum_meta_object12(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param param1 enum QCP__SelectionRectMode
 ///
 const char* q_cp_get_enum_name12(int32_t param1);
@@ -197,8 +173,6 @@ const char* q_cp_get_enum_name12(int32_t param1);
 const QMetaObject* q_cp_get_enum_meta_object13(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 enum QCP__SelectionType
 ///

@@ -99,8 +99,6 @@ const char* q_scilexer_tr(const char* s);
 ///
 /// @warning This method must be implemented with `q_scilexer_on_language` before it can be called.
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexer*
 ///
 const char* q_scilexer_language(const void* self);
@@ -115,8 +113,6 @@ const char* q_scilexer_language(const void* self);
 void q_scilexer_on_language(void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexer*
 ///
@@ -169,8 +165,6 @@ int32_t q_scilexer_super_lexer_id(const void* self);
 QsciAbstractAPIs* q_scilexer_apis(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexer*
 ///
@@ -226,8 +220,6 @@ int32_t q_scilexer_auto_indent_style(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexer*
 /// @param style int*
 ///
@@ -276,8 +268,6 @@ int32_t q_scilexer_super_block_lookback(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciLexer*
 /// @param style int*
 ///
@@ -302,8 +292,6 @@ void q_scilexer_on_block_start(void* self, const char* (*callback)(const void*, 
 const char* q_scilexer_super_block_start(const void* self, int* style);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexer*
 /// @param style int*
@@ -477,8 +465,6 @@ void q_scilexer_on_indentation_guide_view(void* self, int32_t (*callback)(const 
 int32_t q_scilexer_super_indentation_guide_view(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexer*
 /// @param set int
@@ -810,8 +796,6 @@ void q_scilexer_on_style_bits_needed(void* self, int32_t (*callback)(const void*
 int32_t q_scilexer_super_style_bits_needed(const void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QsciLexer*
 ///

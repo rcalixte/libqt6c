@@ -70,8 +70,6 @@ const char* q_metamethod_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#typeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QMetaMethod*
 ///
 const char* q_metamethod_type_name(const void* self);
@@ -141,8 +139,6 @@ const char* q_metamethod_parameter_type_name(const void* self, int index);
 const char** q_metamethod_parameter_names(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethod.html#tag)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaMethod*
 ///
@@ -1085,15 +1081,11 @@ void q_metaenum_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QMetaEnum*
 ///
 const char* q_metaenum_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#enumName)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaEnum*
 ///
@@ -1125,8 +1117,6 @@ int32_t q_metaenum_key_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#key)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QMetaEnum*
 /// @param index int
 ///
@@ -1141,8 +1131,6 @@ int32_t q_metaenum_value(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#scope)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QMetaEnum*
 ///
 const char* q_metaenum_scope(const void* self);
@@ -1155,8 +1143,6 @@ const char* q_metaenum_scope(const void* self);
 int32_t q_metaenum_key_to_value(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaenum.html#valueToKey)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaEnum*
 /// @param value int
@@ -1253,15 +1239,11 @@ void q_metaproperty_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QMetaProperty*
 ///
 const char* q_metaproperty_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaproperty.html#typeName)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaProperty*
 ///
@@ -1542,15 +1524,11 @@ void q_metaclassinfo_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaclassinfo.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QMetaClassInfo*
 ///
 const char* q_metaclassinfo_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaclassinfo.html#value)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaClassInfo*
 ///

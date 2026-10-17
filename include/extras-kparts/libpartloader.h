@@ -18,8 +18,6 @@ const QMetaObject* k_parts_get_enum_meta_object(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kparts.html#qt_getEnumName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param param1 enum KParts__PartCapability
 ///
 const char* k_parts_get_enum_name(int32_t param1);
@@ -31,8 +29,6 @@ const char* k_parts_get_enum_name(int32_t param1);
 const QMetaObject* k_parts_get_enum_meta_object2(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kparts.html#qt_getEnumName)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 flag of enum KParts__PartCapability
 ///

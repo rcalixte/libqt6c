@@ -708,8 +708,6 @@ const char* k_aboutdata_product_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#internalProductName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const KAboutData*
 ///
 const char* k_aboutdata_internal_product_name(const void* self);
@@ -732,8 +730,6 @@ const char* k_aboutdata_organization_domain(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#internalProgramName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const KAboutData*
 ///
 const char* k_aboutdata_internal_program_name(const void* self);
@@ -753,8 +749,6 @@ QVariant* k_aboutdata_program_logo(const void* self);
 const char* k_aboutdata_version(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#internalVersion)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KAboutData*
 ///
@@ -785,8 +779,6 @@ const char* k_aboutdata_homepage(const void* self);
 const char* k_aboutdata_bug_address(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#internalBugAddress)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KAboutData*
 ///

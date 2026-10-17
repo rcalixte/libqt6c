@@ -58,8 +58,6 @@ bool k_lazylocalizedstring_is_empty(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#untranslatedText)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const KLazyLocalizedString*
 ///
 const char* k_lazylocalizedstring_untranslated_text(const void* self);

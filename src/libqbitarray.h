@@ -212,8 +212,6 @@ void q_bitarray_truncate(void* self, intptr_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#bits)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QBitArray*
 ///
 const char* q_bitarray_bits(const void* self);

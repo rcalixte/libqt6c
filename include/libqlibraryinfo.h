@@ -40,8 +40,6 @@ void q_libraryinfo_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#build)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 const char* q_libraryinfo_build();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html#isDebugBuild)

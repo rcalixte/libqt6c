@@ -1503,8 +1503,6 @@ const char* q_sciscintilla_word_at_point(const void* self, const void* point);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QsciScintilla*
 ///
 const char* q_sciscintilla_word_characters(const void* self);
