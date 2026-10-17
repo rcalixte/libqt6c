@@ -526,7 +526,8 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 
 func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) string {
 	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" || p.ParameterType == "QStringView" ||
-		p.ParameterType == "QLatin1String" || p.ParameterType == "QLatin1StringView" || strings.HasPrefix(returnType, "char*") || strings.HasPrefix(returnType, "const char*") {
+		p.ParameterType == "QLatin1String" || p.ParameterType == "QLatin1StringView" || strings.HasPrefix(returnType, "char*") || strings.HasPrefix(returnType, "const char*") &&
+		p.ParameterType != "char" {
 		freeMethod := ifv(returnType == "const char*", "libqt_", "") + "free()"
 		return "\n/// @warning Caller is responsible for freeing the returned memory using `" + freeMethod + "`\n///"
 
@@ -1934,13 +1935,14 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 
 		if len(c.Ctors) > 0 || len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 ||
 			(len(c.DirectInherits) > 0 && len(collectInheritedMethodsForC(c.DirectInherits[0], map[string]struct{}{c.ClassName: {}}, &cfs)) > 0) {
-			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
+			maybeHyphen := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
+			maybeHyphen = ifv(strings.Contains(src.Filename, "QtDataVis"), "-qtdatavis", maybeHyphen)
 
 			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP")) ||
 				(strings.Contains(src.Filename, "accounts-qt") && cStructName[0] != 'Q') ||
 				(strings.Contains(src.Filename, "signon-qt") && cStructName[0] != 'Q')
 
-			pageName := ifv(isSpecialCase, cStructName, getPageName(cStructName)) + maybeCharts
+			pageName := ifv(isSpecialCase, cStructName, getPageName(cStructName)) + maybeHyphen
 			ctorPageUrl = "\n\n" + cfs.getPageUrl(QtPage, pageName, "", cStructName)
 			ret.WriteString(ctorPageUrl)
 		}
@@ -2165,8 +2167,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				subjectURL = ""
 			}
 			if subjectURL != "" {
-				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
-				pageURL := cfs.getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
+				maybeHyphen := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
+				maybeHyphen = ifv(strings.Contains(src.Filename, "QtDataVis") && inheritedFrom == "" && subjectURL != "qobject", "-qtdatavis", maybeHyphen)
+				pageURL := cfs.getPageUrl(QtPage, subjectURL+maybeHyphen, cmdURL, className)
 				docCommentUrl = "\n" + pageURL + "///"
 				ret.WriteString(docCommentUrl)
 			}
@@ -2386,8 +2389,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			if m.IsVariable {
 				cmdURL = m.VariableFieldName + "-var"
 			}
-			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "", "-qtcharts", "")
-			pageURL := cfs.getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
+			maybeHyphen := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "", "-qtcharts", "")
+			maybeHyphen = ifv(strings.Contains(src.Filename, "QtDataVis") && inheritedFrom == "", "-qtdatavis", maybeHyphen)
+			pageURL := cfs.getPageUrl(QtPage, subjectURL+maybeHyphen, cmdURL, className)
 			documentationURL := "\n" + pageURL + "///"
 
 			// Add a package-private function to call the C++ base class method
@@ -2473,8 +2477,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				cmdURL = m.VariableFieldName + "-var"
 			}
 			if subjectURL != "" {
-				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
-				pageURL := cfs.getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
+				maybeHyphen := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
+				maybeHyphen = ifv(strings.Contains(src.Filename, "QtDataVis") && inheritedFrom == "" && subjectURL != "qobject", "-qtdatavis", maybeHyphen)
+				pageURL := cfs.getPageUrl(QtPage, subjectURL+maybeHyphen, cmdURL, className)
 				docCommentUrl = "\n" + pageURL + "///\n"
 			}
 
@@ -2488,7 +2493,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 		}
 
 		if c.CanDelete && !isBindingRemoved(cStructName) && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
-			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
+			maybeHyphen := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
+			maybeHyphen = ifv(strings.Contains(src.Filename, "QtDataVis"), "-qtdatavis", maybeHyphen)
 			var maybeMacro, maybeEndMacro string
 			if c.ClassName == "QProcess::UnixProcessParameters" {
 				// Windows hacks for QProcess
@@ -2500,7 +2506,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				(strings.Contains(src.Filename, "accounts-qt") && cStructName[0] != 'Q') ||
 				(strings.Contains(src.Filename, "signon-qt") && cStructName[0] != 'Q')
 
-			pageUrl := cfs.getPageUrl(DtorPage, ifv(isSpecialCase, cStructName, getPageName(cStructName))+maybeCharts, "", cStructName)
+			pageUrl := cfs.getPageUrl(DtorPage, ifv(isSpecialCase, cStructName, getPageName(cStructName))+maybeHyphen, "", cStructName)
 			ret.WriteString(maybeMacro + ifv(pageUrl != "", "\n"+pageUrl+"///\n", "\n") +
 				"/// Delete this object from C++ memory.\n///\n" +
 				"/// @param self " + cStructName + "*\n///\n" +
@@ -2511,8 +2517,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 	var maybeUrl string
 
 	if len(src.Enums) > 0 {
-		maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
-		pageName := getPageName(cfs.currentHeaderName) + maybeCharts
+		maybeHyphen := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
+		maybeHyphen = ifv(strings.Contains(src.Filename, "QtDataVis"), "-qtdatavis", maybeHyphen)
+		pageName := getPageName(cfs.currentHeaderName) + maybeHyphen
 		pageUrl := cfs.getPageUrl(EnumPage, pageName, "", cfs.currentHeaderName)
 		maybeUrl = ifv(pageUrl != "", "\n\n"+pageUrl, "")
 	}
