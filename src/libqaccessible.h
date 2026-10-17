@@ -2379,15 +2379,11 @@ void q_accessibleannouncementevent_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-h.html#qAccessibleRoleString)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param role enum QAccessible__Role
 ///
 const char* q_qaccessible_h_q_accessible_role_string(int32_t role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible-h.html#qAccessibleEventString)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param event enum QAccessible__Event
 ///

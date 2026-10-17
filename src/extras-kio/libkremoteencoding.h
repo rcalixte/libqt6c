@@ -69,8 +69,6 @@ const char* k_remoteencoding_file_name(const void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kremoteencoding.html#encoding)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const KRemoteEncoding*
 ///
 const char* k_remoteencoding_encoding(const void* self);

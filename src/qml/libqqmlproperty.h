@@ -146,8 +146,6 @@ int32_t q_qmlproperty_property_type_category(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#propertyTypeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QQmlProperty*
 ///
 const char* q_qmlproperty_property_type_name(const void* self);

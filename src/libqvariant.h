@@ -387,8 +387,6 @@ int32_t q_variant_type_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#typeName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QVariant*
 ///
 const char* q_variant_type_name(const void* self);
@@ -751,8 +749,6 @@ void q_variant_save(const void* self, void* ds);
 int32_t q_variant_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#typeToName)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param typeId int
 ///

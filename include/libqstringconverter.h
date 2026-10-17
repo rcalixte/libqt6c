@@ -93,8 +93,6 @@ bool q_stringencoder_has_error(const void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QStringEncoder*
 ///
 const char* q_stringencoder_name(const void* self);
@@ -112,8 +110,6 @@ int32_t q_stringencoder_encoding_for_name(const char* name);
 /// Inherited from QStringConverter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param e enum QStringConverter__Encoding
 ///
@@ -244,8 +240,6 @@ bool q_stringdecoder_has_error(const void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QStringDecoder*
 ///
 const char* q_stringdecoder_name(const void* self);
@@ -263,8 +257,6 @@ int32_t q_stringdecoder_encoding_for_name(const char* name);
 /// Inherited from QStringConverter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param e enum QStringConverter__Encoding
 ///

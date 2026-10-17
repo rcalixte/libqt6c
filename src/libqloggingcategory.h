@@ -42,8 +42,6 @@ bool q_loggingcategory_is_critical_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qloggingcategory.html#categoryName)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QLoggingCategory*
 ///
 const char* q_loggingcategory_category_name(const void* self);

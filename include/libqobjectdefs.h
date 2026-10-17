@@ -12,8 +12,6 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobjectdefs.html#qFlagLocation)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param method const char*
 ///
 const char* q_qobjectdefs_q_flag_location(const char* method);
@@ -86,8 +84,6 @@ void q_genericargument_move_assign(void* self, void* other);
 void* q_genericargument_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericargument.html#name)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QGenericArgument*
 ///
@@ -174,8 +170,6 @@ void* q_genericreturnargument_data(const void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericargument.html#name)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QGenericReturnArgument*
 ///
 const char* q_genericreturnargument_name(const void* self);
@@ -191,8 +185,6 @@ void q_genericreturnargument_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethodargument.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethodargument.html#name-var)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaMethodArgument*
 ///
@@ -216,8 +208,6 @@ void q_metamethodargument_delete(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethodreturnargument.html)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethodreturnargument.html#name-var)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaMethodReturnArgument*
 ///
@@ -253,8 +243,6 @@ QMetaObject* q_metaobject_new();
 QMetaObject* q_metaobject_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#className)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMetaObject*
 ///

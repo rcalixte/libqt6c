@@ -53,8 +53,6 @@ void q_messagelogcontext_set_line(void* self, int line);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogcontext.html#file-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QMessageLogContext*
 ///
 const char* q_messagelogcontext_file(const void* self);
@@ -68,8 +66,6 @@ void q_messagelogcontext_set_file(void* self, const char* file);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogcontext.html#function-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const QMessageLogContext*
 ///
 const char* q_messagelogcontext_function(const void* self);
@@ -82,8 +78,6 @@ const char* q_messagelogcontext_function(const void* self);
 void q_messagelogcontext_set_function(void* self, const char* function);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessagelogcontext.html#category-var)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const QMessageLogContext*
 ///

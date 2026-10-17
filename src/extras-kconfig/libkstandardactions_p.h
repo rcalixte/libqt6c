@@ -98,8 +98,6 @@ void k_standardactions__kstandardactionsinfo_set_id_accel(void* self, int32_t id
 
 /// [Upstream resources](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#psLabel-var)
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const KStandardActions__KStandardActionsInfo*
 ///
 const char* k_standardactions__kstandardactionsinfo_ps_label(const void* self);
@@ -112,8 +110,6 @@ const char* k_standardactions__kstandardactionsinfo_ps_label(const void* self);
 void k_standardactions__kstandardactionsinfo_set_ps_label(void* self, const char* psLabel);
 
 /// [Upstream resources](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#psToolTip-var)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self const KStandardActions__KStandardActionsInfo*
 ///

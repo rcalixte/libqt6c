@@ -203,8 +203,6 @@ const char* k_codecs__codec_decode2(const void* self, const char* src);
 ///
 /// @warning Use caution when calling this method as it might not be defined.
 ///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
 /// @param self const KCodecs__Codec*
 ///
 const char* k_codecs__codec_name(const void* self);
