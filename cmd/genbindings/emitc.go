@@ -393,7 +393,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 	case "quint128":
 		ret = "__uint128_t"
 	// cross-platform and opaque external types
-	case "DBusError", "NSMenu", "QNativeInterface::QX11Application::Display", "XEvent",
+	case "DBusError", "NSMenu", "QNativeInterface::QX11Application::Display", "QPlatformNativeInterface", "XEvent",
 		"wl_compositor", "wl_display", "wl_keyboard", "wl_pointer", "wl_seat", "wl_touch":
 		ret = "void"
 
@@ -887,8 +887,9 @@ func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 		returnComment = "/// @return " + rt.FunctionPointer.ReturnType.renderReturnTypeC(cfs, false, false) + " (*" + rt.renderFunctionType() + ")(" + strings.TrimSpace(cfs.emitParametersC(rt.FunctionPointer.Parameters, false)) + ")"
 	} else if rt.IsStdOptional && IsKnownClass(rt.ParameterType) {
 		returnComment = "/// @return " + rt.RenderTypeC(cfs, true, true, true) + " (NOTE: This pointer value could be `NULL`.)"
-	} else if rt.Pointer && (rt.ParameterType == "NSMenu" || strings.HasPrefix(rt.ParameterType, "wl_") ||
-		rt.ParameterType == "XEvent" || strings.HasPrefix(rt.ParameterType, "xcb_")) {
+	} else if rt.Pointer && (rt.ParameterType == "NSMenu" || rt.ParameterType == "QPlatformNativeInterface" ||
+		strings.HasPrefix(rt.ParameterType, "wl_") || rt.ParameterType == "XEvent" ||
+		strings.HasPrefix(rt.ParameterType, "xcb_")) {
 		returnComment = "/// @return " + rt.ParameterType + "* (NOTE: This pointer value could be `NULL`.)"
 	}
 
@@ -1672,8 +1673,9 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			return assignExpr + rvalue + ";"
 		}
 
-	} else if rt.Pointer && (rt.ParameterType == "NSMenu" || strings.HasPrefix(rt.ParameterType, "wl_") ||
-		rt.ParameterType == "XEvent" || strings.HasPrefix(rt.ParameterType, "xcb_")) {
+	} else if rt.Pointer && (rt.ParameterType == "NSMenu" || rt.ParameterType == "QPlatformNativeInterface" ||
+		strings.HasPrefix(rt.ParameterType, "wl_") || rt.ParameterType == "XEvent" ||
+		strings.HasPrefix(rt.ParameterType, "xcb_")) {
 		return assignExpr + rvalue + ";"
 
 	} else if reflect.TypeFor[string]().Kind() == reflect.String {

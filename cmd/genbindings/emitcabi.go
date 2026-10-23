@@ -1859,6 +1859,8 @@ extern "C" {
 		ret.WriteString("typedef struct XEvent XEvent;")
 	case "qdbuserror.h":
 		ret.WriteString("typedef struct DBusError DBusError;")
+	case "qguiapplication.h":
+		ret.WriteString("typedef struct QPlatformNativeInterface QPlatformNativeInterface;")
 	case "qguiapplication_platform.h":
 		ret.WriteString("typedef struct _XDisplay Display;")
 		ret.WriteString("typedef struct xcb_connection_t xcb_connection_t;")

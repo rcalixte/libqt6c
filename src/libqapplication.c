@@ -459,6 +459,10 @@ QInputMethod* q_application_input_method() {
     return QGuiApplication_InputMethod();
 }
 
+void* q_application_platform_native_interface() {
+    return QGuiApplication_PlatformNativeInterface();
+}
+
 QFunctionPointer q_application_platform_function(const char* function) {
     return (QFunctionPointer)QGuiApplication_PlatformFunction(qstring(function));
 }

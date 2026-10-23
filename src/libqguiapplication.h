@@ -299,6 +299,12 @@ bool q_guiapplication_desktop_settings_aware();
 ///
 QInputMethod* q_guiapplication_input_method();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#platformNativeInterface)
+///
+/// @return QPlatformNativeInterface* (NOTE: This pointer value could be `NULL`.)
+///
+void* q_guiapplication_platform_native_interface();
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#platformFunction)
 ///
 /// @param function const char*
