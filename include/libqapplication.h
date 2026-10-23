@@ -705,6 +705,14 @@ QInputMethod* q_application_input_method();
 
 /// Inherited from QGuiApplication
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#platformNativeInterface)
+///
+/// @return QPlatformNativeInterface* (NOTE: This pointer value could be `NULL`.)
+///
+void* q_application_platform_native_interface();
+
+/// Inherited from QGuiApplication
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#platformFunction)
 ///
 /// @param function const char*
