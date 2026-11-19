@@ -80,10 +80,10 @@ bool QSaveFile_DirectWriteFallback(const QSaveFile* self) {
     return self->directWriteFallback();
 }
 
-long long QSaveFile_WriteData(QSaveFile* self, const char* data, long long lenVal) {
+long long QSaveFile_WriteData(QSaveFile* self, const char* data, long long len) {
     auto* vqsavefile = dynamic_cast<VirtualQSaveFile*>(self);
     if (vqsavefile) {
-        return static_cast<long long>(vqsavefile->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqsavefile->writeData(data, static_cast<qint64>(len)));
     }
     qFatal("Error: Protected method QSaveFile::writeData called without a directly constructed type");
 }
@@ -152,9 +152,9 @@ void QSaveFile_OnOpen(QSaveFile* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-long long QSaveFile_SuperWriteData(QSaveFile* self, const char* data, long long lenVal) {
+long long QSaveFile_SuperWriteData(QSaveFile* self, const char* data, long long len) {
     if (auto* vqsavefile = dynamic_cast<VirtualQSaveFile*>(self)) {
-        return static_cast<long long>(vqsavefile->QSaveFile::writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqsavefile->QSaveFile::writeData(data, static_cast<qint64>(len)));
     } else
         qFatal("Error: Protected virtual method QSaveFile::writeData called without a directly constructed type");
 }

@@ -25,8 +25,8 @@ int32_t k_encodingprober_feed(void* self, const char* data) {
     return KEncodingProber_Feed((KEncodingProber*)self, qstring(data));
 }
 
-int32_t k_encodingprober_feed2(void* self, const char* data, intptr_t lenVal) {
-    return KEncodingProber_Feed2((KEncodingProber*)self, data, lenVal);
+int32_t k_encodingprober_feed2(void* self, const char* data, intptr_t len) {
+    return KEncodingProber_Feed2((KEncodingProber*)self, data, len);
 }
 
 int32_t k_encodingprober_state(const void* self) {

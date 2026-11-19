@@ -166,8 +166,8 @@ bool q_fontmetrics_operator_not_equal(const void* self, const void* other) {
     return QFontMetrics_OperatorNotEqual((QFontMetrics*)self, (QFontMetrics*)other);
 }
 
-int32_t q_fontmetrics_horizontal_advance22(const void* self, const char* param1, int lenVal) {
-    return QFontMetrics_HorizontalAdvance22((QFontMetrics*)self, qstring(param1), lenVal);
+int32_t q_fontmetrics_horizontal_advance22(const void* self, const char* param1, int len) {
+    return QFontMetrics_HorizontalAdvance22((QFontMetrics*)self, qstring(param1), len);
 }
 
 QRect* q_fontmetrics_bounding_rect42(const void* self, const void* r, int flags, const char* text, int tabstops) {

@@ -73,9 +73,9 @@ void q_bytearraymatcher_set_pattern(void* self, const char* pattern);
 ///
 /// @param self const QByteArrayMatcher*
 /// @param str const char*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 ///
-intptr_t q_bytearraymatcher_index_in(const void* self, const char* str, intptr_t lenVal);
+intptr_t q_bytearraymatcher_index_in(const void* self, const char* str, intptr_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///
@@ -96,10 +96,10 @@ const char* q_bytearraymatcher_pattern(const void* self);
 ///
 /// @param self const QByteArrayMatcher*
 /// @param str const char*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 /// @param from intptr_t
 ///
-intptr_t q_bytearraymatcher_index_in3(const void* self, const char* str, intptr_t lenVal, intptr_t from);
+intptr_t q_bytearraymatcher_index_in3(const void* self, const char* str, intptr_t len, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///

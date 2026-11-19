@@ -554,9 +554,9 @@ bool q_wavedecoder_is_transaction_started(const void* self);
 ///
 /// @param self QWaveDecoder*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_wavedecoder_write(void* self, const char* data, int64_t lenVal);
+int64_t q_wavedecoder_write(void* self, const char* data, int64_t len);
 
 /// Inherited from QIODevice
 ///

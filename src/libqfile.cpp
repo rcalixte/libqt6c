@@ -440,19 +440,19 @@ void QFile_OnReadData(QFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-long long QFile_WriteData(QFile* self, const char* data, long long lenVal) {
+long long QFile_WriteData(QFile* self, const char* data, long long len) {
     auto* vqfile = dynamic_cast<VirtualQFile*>(self);
     if (vqfile) {
-        return static_cast<long long>(vqfile->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqfile->writeData(data, static_cast<qint64>(len)));
     } else {
         qFatal("Error: Protected virtual method QFile::writeData called without a directly constructed type");
     }
 }
 
 // Base class handler implementation
-long long QFile_SuperWriteData(QFile* self, const char* data, long long lenVal) {
+long long QFile_SuperWriteData(QFile* self, const char* data, long long len) {
     if (auto* vqfile = dynamic_cast<VirtualQFile*>(self)) {
-        return static_cast<long long>(vqfile->QFile::writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqfile->QFile::writeData(data, static_cast<qint64>(len)));
     } else
         qFatal("Error: Protected virtual method QFile::writeData called without a directly constructed type");
 }

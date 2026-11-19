@@ -121,8 +121,8 @@ const char* q_bitarray_bits(const void* self) {
     return QBitArray_Bits((QBitArray*)self);
 }
 
-QBitArray* q_bitarray_from_bits(const char* data, intptr_t lenVal) {
-    return QBitArray_FromBits(data, lenVal);
+QBitArray* q_bitarray_from_bits(const char* data, intptr_t len) {
+    return QBitArray_FromBits(data, len);
 }
 
 uint32_t q_bitarray_to_u_int32(const void* self, int32_t endianness) {

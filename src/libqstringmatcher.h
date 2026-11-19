@@ -27,9 +27,9 @@ QStringMatcher* q_stringmatcher_new2(const char* pattern);
 /// q_stringmatcher_new3 constructs a new QStringMatcher object.
 ///
 /// @param uc QChar*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 ///
-QStringMatcher* q_stringmatcher_new3(const void* uc, intptr_t lenVal);
+QStringMatcher* q_stringmatcher_new3(const void* uc, intptr_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html)
 
@@ -61,10 +61,10 @@ QStringMatcher* q_stringmatcher_new6(const char* pattern, int32_t cs);
 /// q_stringmatcher_new7 constructs a new QStringMatcher object.
 ///
 /// @param uc QChar*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 /// @param cs enum Qt__CaseSensitivity
 ///
-QStringMatcher* q_stringmatcher_new7(const void* uc, intptr_t lenVal, int32_t cs);
+QStringMatcher* q_stringmatcher_new7(const void* uc, intptr_t len, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html)
 

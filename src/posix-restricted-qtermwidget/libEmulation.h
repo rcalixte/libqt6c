@@ -315,22 +315,22 @@ void k_onsole__emulation_on_send_string(void* self, void (*callback)(void*, cons
 ///
 /// @param self Konsole__Emulation*
 /// @param buffer const char*
-/// @param lenVal int
+/// @param len int
 ///
-void k_onsole__emulation_receive_data(void* self, const char* buffer, int lenVal);
+void k_onsole__emulation_receive_data(void* self, const char* buffer, int len);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
 /// @param data const char*
-/// @param lenVal int
+/// @param len int
 ///
-void k_onsole__emulation_send_data(void* self, const char* data, int lenVal);
+void k_onsole__emulation_send_data(void* self, const char* data, int len);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void func(Konsole__Emulation* self, const char* data, int lenVal)
+/// @param callback void func(Konsole__Emulation* self, const char* data, int len)
 ///
 void k_onsole__emulation_on_send_data(void* self, void (*callback)(void*, const char*, int));
 

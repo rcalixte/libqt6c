@@ -551,16 +551,16 @@ int64_t q_process_super_read_data(void* self, char* data, int64_t maxlen) {
     return QProcess_SuperReadData((QProcess*)self, data, maxlen);
 }
 
-int64_t q_process_write_data(void* self, const char* data, int64_t lenVal) {
-    return QProcess_WriteData((QProcess*)self, data, lenVal);
+int64_t q_process_write_data(void* self, const char* data, int64_t len) {
+    return QProcess_WriteData((QProcess*)self, data, len);
 }
 
 void q_process_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {
     QProcess_OnWriteData((QProcess*)self, (intptr_t)callback);
 }
 
-int64_t q_process_super_write_data(void* self, const char* data, int64_t lenVal) {
-    return QProcess_SuperWriteData((QProcess*)self, data, lenVal);
+int64_t q_process_super_write_data(void* self, const char* data, int64_t len) {
+    return QProcess_SuperWriteData((QProcess*)self, data, len);
 }
 
 const char* q_process_tr2(const char* s, const char* c) {
@@ -804,8 +804,8 @@ bool q_process_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-int64_t q_process_write(void* self, const char* data, int64_t lenVal) {
-    return QIODevice_Write((QIODevice*)self, data, lenVal);
+int64_t q_process_write(void* self, const char* data, int64_t len) {
+    return QIODevice_Write((QIODevice*)self, data, len);
 }
 
 int64_t q_process_write2(void* self, const char* data) {

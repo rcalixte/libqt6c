@@ -724,9 +724,9 @@ bool k_autosavefile_is_transaction_started(const void* self);
 ///
 /// @param self KAutoSaveFile*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t k_autosavefile_write(void* self, const char* data, int64_t lenVal);
+int64_t k_autosavefile_write(void* self, const char* data, int64_t len);
 
 /// Inherited from QIODevice
 ///
@@ -1744,9 +1744,9 @@ void k_autosavefile_on_read_data(void* self, int64_t (*callback)(void*, char*, i
 ///
 /// @param self KAutoSaveFile*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t k_autosavefile_write_data(void* self, const char* data, int64_t lenVal);
+int64_t k_autosavefile_write_data(void* self, const char* data, int64_t len);
 
 /// Inherited from QFileDevice
 ///
@@ -1756,9 +1756,9 @@ int64_t k_autosavefile_write_data(void* self, const char* data, int64_t lenVal);
 ///
 /// @param self KAutoSaveFile*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t k_autosavefile_super_write_data(void* self, const char* data, int64_t lenVal);
+int64_t k_autosavefile_super_write_data(void* self, const char* data, int64_t len);
 
 /// Inherited from QFileDevice
 ///
@@ -1767,7 +1767,7 @@ int64_t k_autosavefile_super_write_data(void* self, const char* data, int64_t le
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param callback int64_t func(KAutoSaveFile* self, const char* data, int64_t lenVal)
+/// @param callback int64_t func(KAutoSaveFile* self, const char* data, int64_t len)
 ///
 void k_autosavefile_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 

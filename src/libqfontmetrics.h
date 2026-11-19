@@ -288,9 +288,9 @@ bool q_fontmetrics_operator_not_equal(const void* self, const void* other);
 ///
 /// @param self const QFontMetrics*
 /// @param param1 const char*
-/// @param lenVal int
+/// @param len int
 ///
-int32_t q_fontmetrics_horizontal_advance22(const void* self, const char* param1, int lenVal);
+int32_t q_fontmetrics_horizontal_advance22(const void* self, const char* param1, int len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
 ///

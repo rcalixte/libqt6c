@@ -383,8 +383,8 @@ bool q_temporaryfile_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-int64_t q_temporaryfile_write(void* self, const char* data, int64_t lenVal) {
-    return QIODevice_Write((QIODevice*)self, data, lenVal);
+int64_t q_temporaryfile_write(void* self, const char* data, int64_t len) {
+    return QIODevice_Write((QIODevice*)self, data, len);
 }
 
 int64_t q_temporaryfile_write2(void* self, const char* data) {
@@ -813,12 +813,12 @@ void q_temporaryfile_on_read_data(void* self, int64_t (*callback)(void*, char*, 
     QTemporaryFile_OnReadData((QTemporaryFile*)self, (intptr_t)callback);
 }
 
-int64_t q_temporaryfile_write_data(void* self, const char* data, int64_t lenVal) {
-    return QTemporaryFile_WriteData((QTemporaryFile*)self, data, lenVal);
+int64_t q_temporaryfile_write_data(void* self, const char* data, int64_t len) {
+    return QTemporaryFile_WriteData((QTemporaryFile*)self, data, len);
 }
 
-int64_t q_temporaryfile_super_write_data(void* self, const char* data, int64_t lenVal) {
-    return QTemporaryFile_SuperWriteData((QTemporaryFile*)self, data, lenVal);
+int64_t q_temporaryfile_super_write_data(void* self, const char* data, int64_t len) {
+    return QTemporaryFile_SuperWriteData((QTemporaryFile*)self, data, len);
 }
 
 void q_temporaryfile_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {

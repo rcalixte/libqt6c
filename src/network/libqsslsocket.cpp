@@ -637,10 +637,10 @@ long long QSslSocket_SkipData(QSslSocket* self, long long maxSize) {
     qFatal("Error: Protected method QSslSocket::skipData called without a directly constructed type");
 }
 
-long long QSslSocket_WriteData(QSslSocket* self, const char* data, long long lenVal) {
+long long QSslSocket_WriteData(QSslSocket* self, const char* data, long long len) {
     auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
     if (vqsslsocket) {
-        return static_cast<long long>(vqsslsocket->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqsslsocket->writeData(data, static_cast<qint64>(len)));
     }
     qFatal("Error: Protected method QSslSocket::writeData called without a directly constructed type");
 }
@@ -988,9 +988,9 @@ void QSslSocket_OnSkipData(QSslSocket* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-long long QSslSocket_SuperWriteData(QSslSocket* self, const char* data, long long lenVal) {
+long long QSslSocket_SuperWriteData(QSslSocket* self, const char* data, long long len) {
     if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
-        return static_cast<long long>(vqsslsocket->QSslSocket::writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqsslsocket->QSslSocket::writeData(data, static_cast<qint64>(len)));
     } else
         qFatal("Error: Protected virtual method QSslSocket::writeData called without a directly constructed type");
 }

@@ -7,12 +7,12 @@ QCborStreamReader* q_cborstreamreader_new() {
     return QCborStreamReader_New();
 }
 
-QCborStreamReader* q_cborstreamreader_new2(const char* data, intptr_t lenVal) {
-    return QCborStreamReader_New2(data, lenVal);
+QCborStreamReader* q_cborstreamreader_new2(const char* data, intptr_t len) {
+    return QCborStreamReader_New2(data, len);
 }
 
-QCborStreamReader* q_cborstreamreader_new3(unsigned char* data, intptr_t lenVal) {
-    return QCborStreamReader_New3(data, lenVal);
+QCborStreamReader* q_cborstreamreader_new3(unsigned char* data, intptr_t len) {
+    return QCborStreamReader_New3(data, len);
 }
 
 QCborStreamReader* q_cborstreamreader_new4(const char* data) {
@@ -35,12 +35,12 @@ void q_cborstreamreader_add_data(void* self, const char* data) {
     QCborStreamReader_AddData((QCborStreamReader*)self, qstring(data));
 }
 
-void q_cborstreamreader_add_data2(void* self, const char* data, intptr_t lenVal) {
-    QCborStreamReader_AddData2((QCborStreamReader*)self, data, lenVal);
+void q_cborstreamreader_add_data2(void* self, const char* data, intptr_t len) {
+    QCborStreamReader_AddData2((QCborStreamReader*)self, data, len);
 }
 
-void q_cborstreamreader_add_data3(void* self, unsigned char* data, intptr_t lenVal) {
-    QCborStreamReader_AddData3((QCborStreamReader*)self, data, lenVal);
+void q_cborstreamreader_add_data3(void* self, unsigned char* data, intptr_t len) {
+    QCborStreamReader_AddData3((QCborStreamReader*)self, data, len);
 }
 
 void q_cborstreamreader_reparse(void* self) {

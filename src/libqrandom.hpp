@@ -20,7 +20,7 @@ typedef struct QRandomGenerator64 QRandomGenerator64;
 #endif
 
 QRandomGenerator* QRandomGenerator_New();
-QRandomGenerator* QRandomGenerator_New2(const unsigned int* seedBuffer, ptrdiff_t lenVal);
+QRandomGenerator* QRandomGenerator_New2(const unsigned int* seedBuffer, ptrdiff_t len);
 QRandomGenerator* QRandomGenerator_New3(const unsigned int* begin, const unsigned int* end);
 QRandomGenerator* QRandomGenerator_New4(const QRandomGenerator* other);
 QRandomGenerator* QRandomGenerator_New5(unsigned int seedValue);
@@ -54,7 +54,7 @@ void QRandomGenerator_Seed1(QRandomGenerator* self, unsigned int s);
 void QRandomGenerator_Delete(QRandomGenerator* self);
 
 QRandomGenerator64* QRandomGenerator64_New();
-QRandomGenerator64* QRandomGenerator64_New2(const unsigned int* seedBuffer, ptrdiff_t lenVal);
+QRandomGenerator64* QRandomGenerator64_New2(const unsigned int* seedBuffer, ptrdiff_t len);
 QRandomGenerator64* QRandomGenerator64_New3(const unsigned int* begin, const unsigned int* end);
 QRandomGenerator64* QRandomGenerator64_New4(const QRandomGenerator* other);
 QRandomGenerator64* QRandomGenerator64_New5(const QRandomGenerator64* param1);

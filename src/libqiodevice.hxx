@@ -278,10 +278,10 @@ class VirtualQIODevice : public QIODevice {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual qint64 writeData(const char* data, qint64 lenVal) override {
+    virtual qint64 writeData(const char* data, qint64 len) override {
         if (qiodevice_writedata_callback) {
             const char* cbval1 = (const char*)data;
-            long long cbval2 = static_cast<long long>(lenVal);
+            long long cbval2 = static_cast<long long>(len);
             long long callback_ret = qiodevice_writedata_callback(this, cbval1, cbval2);
             return static_cast<qint64>(callback_ret);
         }

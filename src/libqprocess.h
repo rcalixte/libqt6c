@@ -772,16 +772,16 @@ int64_t q_process_super_read_data(void* self, char* data, int64_t maxlen);
 ///
 /// @param self QProcess*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_process_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_process_write_data(void* self, const char* data, int64_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#writeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QProcess*
-/// @param callback int64_t func(QProcess* self, const char* data, int64_t lenVal)
+/// @param callback int64_t func(QProcess* self, const char* data, int64_t len)
 ///
 void q_process_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
@@ -791,9 +791,9 @@ void q_process_on_write_data(void* self, int64_t (*callback)(void*, const char*,
 ///
 /// @param self QProcess*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_process_super_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_process_super_write_data(void* self, const char* data, int64_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1137,9 +1137,9 @@ bool q_process_is_transaction_started(const void* self);
 ///
 /// @param self QProcess*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_process_write(void* self, const char* data, int64_t lenVal);
+int64_t q_process_write(void* self, const char* data, int64_t len);
 
 /// Inherited from QIODevice
 ///

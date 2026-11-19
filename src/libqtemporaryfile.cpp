@@ -342,19 +342,19 @@ void QTemporaryFile_OnReadData(QTemporaryFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-long long QTemporaryFile_WriteData(QTemporaryFile* self, const char* data, long long lenVal) {
+long long QTemporaryFile_WriteData(QTemporaryFile* self, const char* data, long long len) {
     auto* vqtemporaryfile = dynamic_cast<VirtualQTemporaryFile*>(self);
     if (vqtemporaryfile) {
-        return static_cast<long long>(vqtemporaryfile->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqtemporaryfile->writeData(data, static_cast<qint64>(len)));
     } else {
         qFatal("Error: Protected virtual method QTemporaryFile::writeData called without a directly constructed type");
     }
 }
 
 // Base class handler implementation
-long long QTemporaryFile_SuperWriteData(QTemporaryFile* self, const char* data, long long lenVal) {
+long long QTemporaryFile_SuperWriteData(QTemporaryFile* self, const char* data, long long len) {
     if (auto* vqtemporaryfile = dynamic_cast<VirtualQTemporaryFile*>(self)) {
-        return static_cast<long long>(vqtemporaryfile->QTemporaryFile::writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqtemporaryfile->QTemporaryFile::writeData(data, static_cast<qint64>(len)));
     } else
         qFatal("Error: Protected virtual method QTemporaryFile::writeData called without a directly constructed type");
 }

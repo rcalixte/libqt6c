@@ -641,9 +641,9 @@ bool q_tcpsocket_is_transaction_started(const void* self);
 ///
 /// @param self QTcpSocket*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_tcpsocket_write(void* self, const char* data, int64_t lenVal);
+int64_t q_tcpsocket_write(void* self, const char* data, int64_t len);
 
 /// Inherited from QIODevice
 ///
@@ -1933,9 +1933,9 @@ void q_tcpsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 ///
 /// @param self QTcpSocket*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_tcpsocket_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_tcpsocket_write_data(void* self, const char* data, int64_t len);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1945,9 +1945,9 @@ int64_t q_tcpsocket_write_data(void* self, const char* data, int64_t lenVal);
 ///
 /// @param self QTcpSocket*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_tcpsocket_super_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_tcpsocket_super_write_data(void* self, const char* data, int64_t len);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1956,7 +1956,7 @@ int64_t q_tcpsocket_super_write_data(void* self, const char* data, int64_t lenVa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback int64_t func(QTcpSocket* self, const char* data, int64_t lenVal)
+/// @param callback int64_t func(QTcpSocket* self, const char* data, int64_t len)
 ///
 void q_tcpsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 

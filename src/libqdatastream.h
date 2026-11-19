@@ -292,48 +292,48 @@ void q_datastream_operator_shift_left13(void* self, const char* str);
 ///
 /// @param self QDataStream*
 /// @param param1 char*
-/// @param lenVal uint32_t*
+/// @param len uint32_t*
 ///
-QDataStream* q_datastream_read_bytes(void* self, char* param1, uint32_t* lenVal);
+QDataStream* q_datastream_read_bytes(void* self, char* param1, uint32_t* len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#readBytes)
 ///
 /// @param self QDataStream*
 /// @param param1 char*
-/// @param lenVal long long*
+/// @param len long long*
 ///
-QDataStream* q_datastream_read_bytes2(void* self, char* param1, long long* lenVal);
+QDataStream* q_datastream_read_bytes2(void* self, char* param1, long long* len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#readRawData)
 ///
 /// @param self QDataStream*
 /// @param param1 char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_datastream_read_raw_data(void* self, char* param1, int64_t lenVal);
+int64_t q_datastream_read_raw_data(void* self, char* param1, int64_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#writeBytes)
 ///
 /// @param self QDataStream*
 /// @param param1 const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-void q_datastream_write_bytes(void* self, const char* param1, int64_t lenVal);
+void q_datastream_write_bytes(void* self, const char* param1, int64_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#writeRawData)
 ///
 /// @param self QDataStream*
 /// @param param1 const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_datastream_write_raw_data(void* self, const char* param1, int64_t lenVal);
+int64_t q_datastream_write_raw_data(void* self, const char* param1, int64_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#skipRawData)
 ///
 /// @param self QDataStream*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_datastream_skip_raw_data(void* self, int64_t lenVal);
+int64_t q_datastream_skip_raw_data(void* self, int64_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#startTransaction)
 ///

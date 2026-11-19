@@ -278,16 +278,16 @@ int64_t k_compressiondevice_super_read_data(void* self, char* data, int64_t maxl
 ///
 /// @param self KCompressionDevice*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t k_compressiondevice_write_data(void* self, const char* data, int64_t lenVal);
+int64_t k_compressiondevice_write_data(void* self, const char* data, int64_t len);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#writeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KCompressionDevice*
-/// @param callback int64_t func(KCompressionDevice* self, const char* data, int64_t lenVal)
+/// @param callback int64_t func(KCompressionDevice* self, const char* data, int64_t len)
 ///
 void k_compressiondevice_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
@@ -297,9 +297,9 @@ void k_compressiondevice_on_write_data(void* self, int64_t (*callback)(void*, co
 ///
 /// @param self KCompressionDevice*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t k_compressiondevice_super_write_data(void* self, const char* data, int64_t lenVal);
+int64_t k_compressiondevice_super_write_data(void* self, const char* data, int64_t len);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#filterBase)
 ///
@@ -524,9 +524,9 @@ bool k_compressiondevice_is_transaction_started(const void* self);
 ///
 /// @param self KCompressionDevice*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t k_compressiondevice_write(void* self, const char* data, int64_t lenVal);
+int64_t k_compressiondevice_write(void* self, const char* data, int64_t len);
 
 /// Inherited from QIODevice
 ///

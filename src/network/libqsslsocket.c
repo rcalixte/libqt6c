@@ -597,16 +597,16 @@ int64_t q_sslsocket_super_skip_data(void* self, int64_t maxSize) {
     return QSslSocket_SuperSkipData((QSslSocket*)self, maxSize);
 }
 
-int64_t q_sslsocket_write_data(void* self, const char* data, int64_t lenVal) {
-    return QSslSocket_WriteData((QSslSocket*)self, data, lenVal);
+int64_t q_sslsocket_write_data(void* self, const char* data, int64_t len) {
+    return QSslSocket_WriteData((QSslSocket*)self, data, len);
 }
 
 void q_sslsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {
     QSslSocket_OnWriteData((QSslSocket*)self, (intptr_t)callback);
 }
 
-int64_t q_sslsocket_super_write_data(void* self, const char* data, int64_t lenVal) {
-    return QSslSocket_SuperWriteData((QSslSocket*)self, data, lenVal);
+int64_t q_sslsocket_super_write_data(void* self, const char* data, int64_t len) {
+    return QSslSocket_SuperWriteData((QSslSocket*)self, data, len);
 }
 
 const char* q_sslsocket_tr2(const char* s, const char* c) {
@@ -933,8 +933,8 @@ bool q_sslsocket_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-int64_t q_sslsocket_write(void* self, const char* data, int64_t lenVal) {
-    return QIODevice_Write((QIODevice*)self, data, lenVal);
+int64_t q_sslsocket_write(void* self, const char* data, int64_t len) {
+    return QIODevice_Write((QIODevice*)self, data, len);
 }
 
 int64_t q_sslsocket_write2(void* self, const char* data) {

@@ -89,9 +89,9 @@ void k_wordwrap_draw_truncate_text(void* p, int x, int y, int maxW, const char* 
 /// @param r QRect*
 /// @param flags int
 /// @param str const char*
-/// @param lenVal int
+/// @param len int
 ///
-KWordWrap* k_wordwrap_format_text5(void* fm, const void* r, int flags, const char* str, int lenVal);
+KWordWrap* k_wordwrap_format_text5(void* fm, const void* r, int flags, const char* str, int len);
 
 /// [Upstream resources](https://api.kde.org/kwordwrap.html#truncatedString)
 ///

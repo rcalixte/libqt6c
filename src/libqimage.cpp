@@ -469,8 +469,8 @@ bool QImage_LoadFromData(QImage* self, libqt_string data) {
     return self->loadFromData(data_QByteArrayView);
 }
 
-bool QImage_LoadFromData2(QImage* self, const unsigned char* buf, int lenVal) {
-    return self->loadFromData(static_cast<const uchar*>(buf), static_cast<int>(lenVal));
+bool QImage_LoadFromData2(QImage* self, const unsigned char* buf, int len) {
+    return self->loadFromData(static_cast<const uchar*>(buf), static_cast<int>(len));
 }
 
 bool QImage_LoadFromData3(QImage* self, const libqt_string data) {
@@ -704,8 +704,8 @@ bool QImage_LoadFromData22(QImage* self, libqt_string data, const char* format) 
     return self->loadFromData(data_QByteArrayView, format);
 }
 
-bool QImage_LoadFromData32(QImage* self, const unsigned char* buf, int lenVal, const char* format) {
-    return self->loadFromData(static_cast<const uchar*>(buf), static_cast<int>(lenVal), format);
+bool QImage_LoadFromData32(QImage* self, const unsigned char* buf, int len, const char* format) {
+    return self->loadFromData(static_cast<const uchar*>(buf), static_cast<int>(len), format);
 }
 
 bool QImage_LoadFromData23(QImage* self, const libqt_string data, const char* format) {

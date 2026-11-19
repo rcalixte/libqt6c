@@ -772,9 +772,9 @@ bool q_bluetoothsocket_is_transaction_started(const void* self);
 ///
 /// @param self QBluetoothSocket*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_bluetoothsocket_write(void* self, const char* data, int64_t lenVal);
+int64_t q_bluetoothsocket_write(void* self, const char* data, int64_t len);
 
 /// Inherited from QIODevice
 ///

@@ -10,8 +10,8 @@ QStringMatcher* q_stringmatcher_new2(const char* pattern) {
     return QStringMatcher_New2(qstring(pattern));
 }
 
-QStringMatcher* q_stringmatcher_new3(const void* uc, intptr_t lenVal) {
-    return QStringMatcher_New3((QChar*)uc, lenVal);
+QStringMatcher* q_stringmatcher_new3(const void* uc, intptr_t len) {
+    return QStringMatcher_New3((QChar*)uc, len);
 }
 
 QStringMatcher* q_stringmatcher_new4(const char* pattern) {
@@ -26,8 +26,8 @@ QStringMatcher* q_stringmatcher_new6(const char* pattern, int32_t cs) {
     return QStringMatcher_New6(qstring(pattern), cs);
 }
 
-QStringMatcher* q_stringmatcher_new7(const void* uc, intptr_t lenVal, int32_t cs) {
-    return QStringMatcher_New7((QChar*)uc, lenVal, cs);
+QStringMatcher* q_stringmatcher_new7(const void* uc, intptr_t len, int32_t cs) {
+    return QStringMatcher_New7((QChar*)uc, len, cs);
 }
 
 QStringMatcher* q_stringmatcher_new8(const char* pattern, int32_t cs) {

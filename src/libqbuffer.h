@@ -122,9 +122,9 @@ void q_buffer_set_data(void* self, const char* data);
 ///
 /// @param self QBuffer*
 /// @param data const char*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 ///
-void q_buffer_set_data2(void* self, const char* data, intptr_t lenVal);
+void q_buffer_set_data2(void* self, const char* data, intptr_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#data)
 ///
@@ -380,16 +380,16 @@ int64_t q_buffer_super_read_data(void* self, char* data, int64_t maxlen);
 ///
 /// @param self QBuffer*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_buffer_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_buffer_write_data(void* self, const char* data, int64_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#writeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback int64_t func(QBuffer* self, const char* data, int64_t lenVal)
+/// @param callback int64_t func(QBuffer* self, const char* data, int64_t len)
 ///
 void q_buffer_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
@@ -399,9 +399,9 @@ void q_buffer_on_write_data(void* self, int64_t (*callback)(void*, const char*, 
 ///
 /// @param self QBuffer*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_buffer_super_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_buffer_super_write_data(void* self, const char* data, int64_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -620,9 +620,9 @@ bool q_buffer_is_transaction_started(const void* self);
 ///
 /// @param self QBuffer*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_buffer_write(void* self, const char* data, int64_t lenVal);
+int64_t q_buffer_write(void* self, const char* data, int64_t len);
 
 /// Inherited from QIODevice
 ///

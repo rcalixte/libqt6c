@@ -426,9 +426,9 @@ bool q_filedevice_is_transaction_started(const void* self);
 ///
 /// @param self QFileDevice*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_filedevice_write(void* self, const char* data, int64_t lenVal);
+int64_t q_filedevice_write(void* self, const char* data, int64_t len);
 
 /// Inherited from QIODevice
 ///

@@ -76,8 +76,8 @@ void q_buffer_set_data(void* self, const char* data) {
     QBuffer_SetData((QBuffer*)self, qstring(data));
 }
 
-void q_buffer_set_data2(void* self, const char* data, intptr_t lenVal) {
-    QBuffer_SetData2((QBuffer*)self, data, lenVal);
+void q_buffer_set_data2(void* self, const char* data, intptr_t len) {
+    QBuffer_SetData2((QBuffer*)self, data, len);
 }
 
 const char* q_buffer_data(const void* self) {
@@ -207,16 +207,16 @@ int64_t q_buffer_super_read_data(void* self, char* data, int64_t maxlen) {
     return QBuffer_SuperReadData((QBuffer*)self, data, maxlen);
 }
 
-int64_t q_buffer_write_data(void* self, const char* data, int64_t lenVal) {
-    return QBuffer_WriteData((QBuffer*)self, data, lenVal);
+int64_t q_buffer_write_data(void* self, const char* data, int64_t len) {
+    return QBuffer_WriteData((QBuffer*)self, data, len);
 }
 
 void q_buffer_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {
     QBuffer_OnWriteData((QBuffer*)self, (intptr_t)callback);
 }
 
-int64_t q_buffer_super_write_data(void* self, const char* data, int64_t lenVal) {
-    return QBuffer_SuperWriteData((QBuffer*)self, data, lenVal);
+int64_t q_buffer_super_write_data(void* self, const char* data, int64_t len) {
+    return QBuffer_SuperWriteData((QBuffer*)self, data, len);
 }
 
 const char* q_buffer_tr2(const char* s, const char* c) {
@@ -330,8 +330,8 @@ bool q_buffer_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-int64_t q_buffer_write(void* self, const char* data, int64_t lenVal) {
-    return QIODevice_Write((QIODevice*)self, data, lenVal);
+int64_t q_buffer_write(void* self, const char* data, int64_t len) {
+    return QIODevice_Write((QIODevice*)self, data, len);
 }
 
 int64_t q_buffer_write2(void* self, const char* data) {

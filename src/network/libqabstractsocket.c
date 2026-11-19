@@ -432,16 +432,16 @@ int64_t q_abstractsocket_super_skip_data(void* self, int64_t maxSize) {
     return QAbstractSocket_SuperSkipData((QAbstractSocket*)self, maxSize);
 }
 
-int64_t q_abstractsocket_write_data(void* self, const char* data, int64_t lenVal) {
-    return QAbstractSocket_WriteData((QAbstractSocket*)self, data, lenVal);
+int64_t q_abstractsocket_write_data(void* self, const char* data, int64_t len) {
+    return QAbstractSocket_WriteData((QAbstractSocket*)self, data, len);
 }
 
 void q_abstractsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {
     QAbstractSocket_OnWriteData((QAbstractSocket*)self, (intptr_t)callback);
 }
 
-int64_t q_abstractsocket_super_write_data(void* self, const char* data, int64_t lenVal) {
-    return QAbstractSocket_SuperWriteData((QAbstractSocket*)self, data, lenVal);
+int64_t q_abstractsocket_super_write_data(void* self, const char* data, int64_t len) {
+    return QAbstractSocket_SuperWriteData((QAbstractSocket*)self, data, len);
 }
 
 void q_abstractsocket_set_socket_state(void* self, int32_t state) {
@@ -595,8 +595,8 @@ bool q_abstractsocket_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-int64_t q_abstractsocket_write(void* self, const char* data, int64_t lenVal) {
-    return QIODevice_Write((QIODevice*)self, data, lenVal);
+int64_t q_abstractsocket_write(void* self, const char* data, int64_t len) {
+    return QIODevice_Write((QIODevice*)self, data, len);
 }
 
 int64_t q_abstractsocket_write2(void* self, const char* data) {

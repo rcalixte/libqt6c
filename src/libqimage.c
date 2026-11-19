@@ -439,8 +439,8 @@ bool q_image_load_from_data(void* self, const char* data) {
     return QImage_LoadFromData((QImage*)self, qstring(data));
 }
 
-bool q_image_load_from_data2(void* self, unsigned char* buf, int lenVal) {
-    return QImage_LoadFromData2((QImage*)self, buf, lenVal);
+bool q_image_load_from_data2(void* self, unsigned char* buf, int len) {
+    return QImage_LoadFromData2((QImage*)self, buf, len);
 }
 
 bool q_image_load_from_data3(void* self, const char* data) {
@@ -695,8 +695,8 @@ bool q_image_load_from_data22(void* self, const char* data, const char* format) 
     return QImage_LoadFromData22((QImage*)self, qstring(data), format);
 }
 
-bool q_image_load_from_data32(void* self, unsigned char* buf, int lenVal, const char* format) {
-    return QImage_LoadFromData32((QImage*)self, buf, lenVal, format);
+bool q_image_load_from_data32(void* self, unsigned char* buf, int len, const char* format) {
+    return QImage_LoadFromData32((QImage*)self, buf, len, format);
 }
 
 bool q_image_load_from_data23(void* self, const char* data, const char* format) {

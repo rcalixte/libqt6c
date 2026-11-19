@@ -552,10 +552,10 @@ long long QProcess_ReadData(QProcess* self, char* data, long long maxlen) {
     qFatal("Error: Protected method QProcess::readData called without a directly constructed type");
 }
 
-long long QProcess_WriteData(QProcess* self, const char* data, long long lenVal) {
+long long QProcess_WriteData(QProcess* self, const char* data, long long len) {
     auto* vqprocess = dynamic_cast<VirtualQProcess*>(self);
     if (vqprocess) {
-        return static_cast<long long>(vqprocess->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqprocess->writeData(data, static_cast<qint64>(len)));
     }
     qFatal("Error: Protected method QProcess::writeData called without a directly constructed type");
 }
@@ -800,9 +800,9 @@ void QProcess_OnReadData(QProcess* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-long long QProcess_SuperWriteData(QProcess* self, const char* data, long long lenVal) {
+long long QProcess_SuperWriteData(QProcess* self, const char* data, long long len) {
     if (auto* vqprocess = dynamic_cast<VirtualQProcess*>(self)) {
-        return static_cast<long long>(vqprocess->QProcess::writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqprocess->QProcess::writeData(data, static_cast<qint64>(len)));
     } else
         qFatal("Error: Protected virtual method QProcess::writeData called without a directly constructed type");
 }

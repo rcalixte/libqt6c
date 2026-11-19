@@ -350,9 +350,9 @@ double q_linef_length(const void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#setLength)
 ///
 /// @param self QLineF*
-/// @param lenVal double
+/// @param len double
 ///
-void q_linef_set_length(void* self, double lenVal);
+void q_linef_set_length(void* self, double len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlinef.html#angle)
 ///

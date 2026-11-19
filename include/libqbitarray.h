@@ -219,9 +219,9 @@ const char* q_bitarray_bits(const void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#fromBits)
 ///
 /// @param data const char*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 ///
-QBitArray* q_bitarray_from_bits(const char* data, intptr_t lenVal);
+QBitArray* q_bitarray_from_bits(const char* data, intptr_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#toUInt32)
 ///

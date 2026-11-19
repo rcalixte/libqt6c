@@ -213,9 +213,9 @@ bool k_localizedtranslator_load2(void* self, const void* locale, const char* fil
 ///
 /// @param self KLocalizedTranslator*
 /// @param data unsigned char*
-/// @param lenVal int
+/// @param len int
 ///
-bool k_localizedtranslator_load3(void* self, unsigned char* data, int lenVal);
+bool k_localizedtranslator_load3(void* self, unsigned char* data, int len);
 
 /// Inherited from QTranslator
 ///
@@ -292,10 +292,10 @@ bool k_localizedtranslator_load5(void* self, const void* locale, const char* fil
 ///
 /// @param self KLocalizedTranslator*
 /// @param data unsigned char*
-/// @param lenVal int
+/// @param len int
 /// @param directory const char*
 ///
-bool k_localizedtranslator_load34(void* self, unsigned char* data, int lenVal, const char* directory);
+bool k_localizedtranslator_load34(void* self, unsigned char* data, int len, const char* directory);
 
 /// Inherited from QObject
 ///

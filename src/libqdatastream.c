@@ -163,28 +163,28 @@ void q_datastream_operator_shift_left13(void* self, const char* str) {
     QDataStream_OperatorShiftLeft13((QDataStream*)self, str);
 }
 
-QDataStream* q_datastream_read_bytes(void* self, char* param1, uint32_t* lenVal) {
-    return QDataStream_ReadBytes((QDataStream*)self, param1, lenVal);
+QDataStream* q_datastream_read_bytes(void* self, char* param1, uint32_t* len) {
+    return QDataStream_ReadBytes((QDataStream*)self, param1, len);
 }
 
-QDataStream* q_datastream_read_bytes2(void* self, char* param1, long long* lenVal) {
-    return QDataStream_ReadBytes2((QDataStream*)self, param1, lenVal);
+QDataStream* q_datastream_read_bytes2(void* self, char* param1, long long* len) {
+    return QDataStream_ReadBytes2((QDataStream*)self, param1, len);
 }
 
-int64_t q_datastream_read_raw_data(void* self, char* param1, int64_t lenVal) {
-    return QDataStream_ReadRawData((QDataStream*)self, param1, lenVal);
+int64_t q_datastream_read_raw_data(void* self, char* param1, int64_t len) {
+    return QDataStream_ReadRawData((QDataStream*)self, param1, len);
 }
 
-void q_datastream_write_bytes(void* self, const char* param1, int64_t lenVal) {
-    QDataStream_WriteBytes((QDataStream*)self, param1, lenVal);
+void q_datastream_write_bytes(void* self, const char* param1, int64_t len) {
+    QDataStream_WriteBytes((QDataStream*)self, param1, len);
 }
 
-int64_t q_datastream_write_raw_data(void* self, const char* param1, int64_t lenVal) {
-    return QDataStream_WriteRawData((QDataStream*)self, param1, lenVal);
+int64_t q_datastream_write_raw_data(void* self, const char* param1, int64_t len) {
+    return QDataStream_WriteRawData((QDataStream*)self, param1, len);
 }
 
-int64_t q_datastream_skip_raw_data(void* self, int64_t lenVal) {
-    return QDataStream_SkipRawData((QDataStream*)self, lenVal);
+int64_t q_datastream_skip_raw_data(void* self, int64_t len) {
+    return QDataStream_SkipRawData((QDataStream*)self, len);
 }
 
 void q_datastream_start_transaction(void* self) {
