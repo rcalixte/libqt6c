@@ -1,4 +1,9 @@
 
+### 6.8.2 rev95 (19 November 2026)
+
+* Update reserved words (#179)
+* Unblock QPlatformNativeInterface (#177)
+
 ### 6.8.2 rev94 (17 October 2026)
 
 * Add [Qt Data Visualization](https://doc.qt.io/qt-6/qtdatavisualization-index.html) (#176)
