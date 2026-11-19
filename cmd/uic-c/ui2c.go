@@ -1330,9 +1330,13 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 			cClass = cClassMethodPrefix(itemClass)
 			var assignStr string
 			for i := range itm.Properties {
-				if itm.Properties[i].Name == "text" && itm.Properties[i].StringVal.Notr || len(itm.Items) > 0 {
-					assignStr = itemClass + "* " + targetSelf + " = "
-					break
+				if (itm.Properties[i].Name == "text" || itm.Properties[i].Name == "whatsThis") && itm.Properties[i].StringVal.Notr || len(itm.Items) > 0 {
+					for j := range itm.Items {
+						if itm.Items[j].Properties[i].StringVal.Notr {
+							assignStr = itemClass + "* " + targetSelf + " = "
+							break
+						}
+					}
 				}
 			}
 			ret.WriteString(assignStr + cClass + "_new3(ui->" + w.Name + ");\n")
@@ -1403,6 +1407,25 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 					emit = strings.Join(parts, "|")
 				}
 				ret.WriteString(cClass + "_set_flags(" + targetSelf + ", " + emit + ");\n")
+			case "toolTip":
+				if !prop.StringVal.Notr {
+					if _, ok := seenItems[targetSelf]; !ok {
+						seenItems[targetSelf] = struct{}{}
+						maybeItemCol := ""
+						if wClass == "QTreeWidget" {
+							maybeItemCol = ", " + strconv.Itoa(itemTextNum)
+						}
+						ret.WriteString(itemClass + "* " + targetSelf + " = " + wClassC + "_item(ui->" + w.Name + maybeItemCol + ", " + strconv.Itoa(ItemWidgetCounter) + "); // auxiliary to q_coreapplication_translate " + w.Name + " " + cClassMethodPrefix(wClass) + "\n")
+					}
+				}
+				ret.WriteString(writtenString(cClass+"_set_tool_tip("+targetSelf+", ", generateString(prop.StringVal), ");\n", prop.StringVal.Notr, true))
+			case "whatsThis":
+				if wClass == "QTreeWidget" {
+					itemCol := min(max(itemTextNum-1, 0), len(w.Columns)-1)
+					ret.WriteString(writtenString(cClass+"_set_whats_this("+targetSelf+", "+strconv.Itoa(itemCol)+", ", generateString(prop.StringVal), ");\n", prop.StringVal.Notr, true))
+				} else {
+					ret.WriteString(writtenString(cClass+"_set_whats_this("+targetSelf+", ", generateString(prop.StringVal), ");\n", prop.StringVal.Notr, true))
+				}
 			default:
 				ret.WriteString("/* UIC: no handler for item property '" + prop.Name + "' */\n")
 			}
