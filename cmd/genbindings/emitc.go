@@ -23,7 +23,7 @@ func cComment(s string) string {
 // not language-reserved words, but binding-reserved words
 func reservedWordC(s string) bool {
 	switch s {
-	case "const", "default", "int", "len", "new", "null",
+	case "const", "default", "int", "new", "null",
 		"restrict", "select", "self", "suspend":
 		return true
 	default:

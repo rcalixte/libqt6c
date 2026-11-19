@@ -56,8 +56,8 @@ void QBuffer_SetData(QBuffer* self, const libqt_string data) {
     self->setData(data_QByteArray);
 }
 
-void QBuffer_SetData2(QBuffer* self, const char* data, ptrdiff_t lenVal) {
-    self->setData(data, (qsizetype)(lenVal));
+void QBuffer_SetData2(QBuffer* self, const char* data, ptrdiff_t len) {
+    self->setData(data, (qsizetype)(len));
 }
 
 libqt_string QBuffer_Data(const QBuffer* self) {
@@ -119,10 +119,10 @@ long long QBuffer_ReadData(QBuffer* self, char* data, long long maxlen) {
     qFatal("Error: Protected method QBuffer::readData called without a directly constructed type");
 }
 
-long long QBuffer_WriteData(QBuffer* self, const char* data, long long lenVal) {
+long long QBuffer_WriteData(QBuffer* self, const char* data, long long len) {
     auto* vqbuffer = dynamic_cast<VirtualQBuffer*>(self);
     if (vqbuffer) {
-        return static_cast<long long>(vqbuffer->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqbuffer->writeData(data, static_cast<qint64>(len)));
     }
     qFatal("Error: Protected method QBuffer::writeData called without a directly constructed type");
 }
@@ -280,9 +280,9 @@ void QBuffer_OnReadData(QBuffer* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-long long QBuffer_SuperWriteData(QBuffer* self, const char* data, long long lenVal) {
+long long QBuffer_SuperWriteData(QBuffer* self, const char* data, long long len) {
     if (auto* vqbuffer = dynamic_cast<VirtualQBuffer*>(self)) {
-        return static_cast<long long>(vqbuffer->QBuffer::writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqbuffer->QBuffer::writeData(data, static_cast<qint64>(len)));
     } else
         qFatal("Error: Protected virtual method QBuffer::writeData called without a directly constructed type");
 }

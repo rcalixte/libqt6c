@@ -46,8 +46,8 @@ void k_wordwrap_draw_truncate_text(void* p, int x, int y, int maxW, const char* 
     KWordWrap_DrawTruncateText((QPainter*)p, x, y, maxW, qstring(t));
 }
 
-KWordWrap* k_wordwrap_format_text5(void* fm, const void* r, int flags, const char* str, int lenVal) {
-    return KWordWrap_FormatText5((QFontMetrics*)fm, (QRect*)r, flags, qstring(str), lenVal);
+KWordWrap* k_wordwrap_format_text5(void* fm, const void* r, int flags, const char* str, int len) {
+    return KWordWrap_FormatText5((QFontMetrics*)fm, (QRect*)r, flags, qstring(str), len);
 }
 
 const char* k_wordwrap_truncated_string1(const void* self, bool dots) {

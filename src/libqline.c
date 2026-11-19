@@ -194,8 +194,8 @@ double q_linef_length(const void* self) {
     return QLineF_Length((QLineF*)self);
 }
 
-void q_linef_set_length(void* self, double lenVal) {
-    QLineF_SetLength((QLineF*)self, lenVal);
+void q_linef_set_length(void* self, double len) {
+    QLineF_SetLength((QLineF*)self, len);
 }
 
 double q_linef_angle(const void* self) {

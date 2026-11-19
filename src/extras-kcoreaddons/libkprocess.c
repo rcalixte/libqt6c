@@ -747,8 +747,8 @@ bool k_process_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-int64_t k_process_write(void* self, const char* data, int64_t lenVal) {
-    return QIODevice_Write((QIODevice*)self, data, lenVal);
+int64_t k_process_write(void* self, const char* data, int64_t len) {
+    return QIODevice_Write((QIODevice*)self, data, len);
 }
 
 int64_t k_process_write2(void* self, const char* data) {
@@ -1141,12 +1141,12 @@ void k_process_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_
     KProcess_OnReadData((KProcess*)self, (intptr_t)callback);
 }
 
-int64_t k_process_write_data(void* self, const char* data, int64_t lenVal) {
-    return KProcess_WriteData((KProcess*)self, data, lenVal);
+int64_t k_process_write_data(void* self, const char* data, int64_t len) {
+    return KProcess_WriteData((KProcess*)self, data, len);
 }
 
-int64_t k_process_super_write_data(void* self, const char* data, int64_t lenVal) {
-    return KProcess_SuperWriteData((KProcess*)self, data, lenVal);
+int64_t k_process_super_write_data(void* self, const char* data, int64_t len) {
+    return KProcess_SuperWriteData((KProcess*)self, data, len);
 }
 
 void k_process_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {

@@ -326,8 +326,8 @@ bool q_tcpsocket_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-int64_t q_tcpsocket_write(void* self, const char* data, int64_t lenVal) {
-    return QIODevice_Write((QIODevice*)self, data, lenVal);
+int64_t q_tcpsocket_write(void* self, const char* data, int64_t len) {
+    return QIODevice_Write((QIODevice*)self, data, len);
 }
 
 int64_t q_tcpsocket_write2(void* self, const char* data) {
@@ -864,12 +864,12 @@ void q_tcpsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t)) {
     QTcpSocket_OnSkipData((QTcpSocket*)self, (intptr_t)callback);
 }
 
-int64_t q_tcpsocket_write_data(void* self, const char* data, int64_t lenVal) {
-    return QTcpSocket_WriteData((QTcpSocket*)self, data, lenVal);
+int64_t q_tcpsocket_write_data(void* self, const char* data, int64_t len) {
+    return QTcpSocket_WriteData((QTcpSocket*)self, data, len);
 }
 
-int64_t q_tcpsocket_super_write_data(void* self, const char* data, int64_t lenVal) {
-    return QTcpSocket_SuperWriteData((QTcpSocket*)self, data, lenVal);
+int64_t q_tcpsocket_super_write_data(void* self, const char* data, int64_t len) {
+    return QTcpSocket_SuperWriteData((QTcpSocket*)self, data, len);
 }
 
 void q_tcpsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {

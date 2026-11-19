@@ -31,9 +31,9 @@ QChar* k_charsets_from_entity(const char* str);
 /// [Upstream resources](https://api.kde.org/kcharsets.html#fromEntity)
 ///
 /// @param str const char*
-/// @param lenVal int*
+/// @param len int*
 ///
-QChar* k_charsets_from_entity2(const char* str, int* lenVal);
+QChar* k_charsets_from_entity2(const char* str, int* len);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#toEntity)
 ///

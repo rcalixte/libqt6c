@@ -249,14 +249,14 @@ class VirtualQFile final : public QFile {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual qint64 writeData(const char* data, qint64 lenVal) override {
+    virtual qint64 writeData(const char* data, qint64 len) override {
         if (qfile_writedata_callback) {
             const char* cbval1 = (const char*)data;
-            long long cbval2 = static_cast<long long>(lenVal);
+            long long cbval2 = static_cast<long long>(len);
             long long callback_ret = qfile_writedata_callback(this, cbval1, cbval2);
             return static_cast<qint64>(callback_ret);
         }
-        return QFile::writeData(data, lenVal);
+        return QFile::writeData(data, len);
     }
 
     // Virtual method for C ABI access and custom callback
@@ -413,7 +413,7 @@ class VirtualQFile final : public QFile {
 
     // Friend functions
     friend long long QFile_SuperReadData(QFile* self, char* data, long long maxlen);
-    friend long long QFile_SuperWriteData(QFile* self, const char* data, long long lenVal);
+    friend long long QFile_SuperWriteData(QFile* self, const char* data, long long len);
     friend long long QFile_SuperReadLineData(QFile* self, char* data, long long maxlen);
     friend long long QFile_SuperSkipData(QFile* self, long long maxSize);
     friend void QFile_SuperTimerEvent(QFile* self, QTimerEvent* event);

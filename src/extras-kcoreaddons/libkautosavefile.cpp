@@ -370,19 +370,19 @@ void KAutoSaveFile_OnReadData(KAutoSaveFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-long long KAutoSaveFile_WriteData(KAutoSaveFile* self, const char* data, long long lenVal) {
+long long KAutoSaveFile_WriteData(KAutoSaveFile* self, const char* data, long long len) {
     auto* vkautosavefile = dynamic_cast<VirtualKAutoSaveFile*>(self);
     if (vkautosavefile) {
-        return static_cast<long long>(vkautosavefile->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vkautosavefile->writeData(data, static_cast<qint64>(len)));
     } else {
         qFatal("Error: Protected virtual method KAutoSaveFile::writeData called without a directly constructed type");
     }
 }
 
 // Base class handler implementation
-long long KAutoSaveFile_SuperWriteData(KAutoSaveFile* self, const char* data, long long lenVal) {
+long long KAutoSaveFile_SuperWriteData(KAutoSaveFile* self, const char* data, long long len) {
     if (auto* vkautosavefile = dynamic_cast<VirtualKAutoSaveFile*>(self)) {
-        return static_cast<long long>(vkautosavefile->KAutoSaveFile::writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vkautosavefile->KAutoSaveFile::writeData(data, static_cast<qint64>(len)));
     } else
         qFatal("Error: Protected virtual method KAutoSaveFile::writeData called without a directly constructed type");
 }

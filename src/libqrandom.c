@@ -5,8 +5,8 @@ QRandomGenerator* q_randomgenerator_new() {
     return QRandomGenerator_New();
 }
 
-QRandomGenerator* q_randomgenerator_new2(uint32_t* seedBuffer, intptr_t lenVal) {
-    return QRandomGenerator_New2(seedBuffer, lenVal);
+QRandomGenerator* q_randomgenerator_new2(uint32_t* seedBuffer, intptr_t len) {
+    return QRandomGenerator_New2(seedBuffer, len);
 }
 
 QRandomGenerator* q_randomgenerator_new3(uint32_t* begin, uint32_t* end) {
@@ -137,8 +137,8 @@ QRandomGenerator64* q_randomgenerator64_new() {
     return QRandomGenerator64_New();
 }
 
-QRandomGenerator64* q_randomgenerator64_new2(uint32_t* seedBuffer, intptr_t lenVal) {
-    return QRandomGenerator64_New2(seedBuffer, lenVal);
+QRandomGenerator64* q_randomgenerator64_new2(uint32_t* seedBuffer, intptr_t len) {
+    return QRandomGenerator64_New2(seedBuffer, len);
 }
 
 QRandomGenerator64* q_randomgenerator64_new3(uint32_t* begin, uint32_t* end) {

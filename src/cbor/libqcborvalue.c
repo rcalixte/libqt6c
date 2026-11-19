@@ -369,12 +369,12 @@ QCborValue* q_cborvalue_from_cbor2(const char* ba) {
     return QCborValue_FromCbor2(qstring(ba));
 }
 
-QCborValue* q_cborvalue_from_cbor3(const char* data, intptr_t lenVal) {
-    return QCborValue_FromCbor3(data, lenVal);
+QCborValue* q_cborvalue_from_cbor3(const char* data, intptr_t len) {
+    return QCborValue_FromCbor3(data, len);
 }
 
-QCborValue* q_cborvalue_from_cbor4(unsigned char* data, intptr_t lenVal) {
-    return QCborValue_FromCbor4(data, lenVal);
+QCborValue* q_cborvalue_from_cbor4(unsigned char* data, intptr_t len) {
+    return QCborValue_FromCbor4(data, len);
 }
 
 const char* q_cborvalue_to_cbor(const void* self) {
@@ -453,12 +453,12 @@ QCborValue* q_cborvalue_from_cbor22(const char* ba, void* error) {
     return QCborValue_FromCbor22(qstring(ba), (QCborParserError*)error);
 }
 
-QCborValue* q_cborvalue_from_cbor32(const char* data, intptr_t lenVal, void* error) {
-    return QCborValue_FromCbor32(data, lenVal, (QCborParserError*)error);
+QCborValue* q_cborvalue_from_cbor32(const char* data, intptr_t len, void* error) {
+    return QCborValue_FromCbor32(data, len, (QCborParserError*)error);
 }
 
-QCborValue* q_cborvalue_from_cbor33(unsigned char* data, intptr_t lenVal, void* error) {
-    return QCborValue_FromCbor33(data, lenVal, (QCborParserError*)error);
+QCborValue* q_cborvalue_from_cbor33(unsigned char* data, intptr_t len, void* error) {
+    return QCborValue_FromCbor33(data, len, (QCborParserError*)error);
 }
 
 const char* q_cborvalue_to_cbor1(const void* self, int32_t opt) {

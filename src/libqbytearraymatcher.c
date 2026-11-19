@@ -33,8 +33,8 @@ void q_bytearraymatcher_set_pattern(void* self, const char* pattern) {
     QByteArrayMatcher_SetPattern((QByteArrayMatcher*)self, qstring(pattern));
 }
 
-intptr_t q_bytearraymatcher_index_in(const void* self, const char* str, intptr_t lenVal) {
-    return QByteArrayMatcher_IndexIn((QByteArrayMatcher*)self, str, lenVal);
+intptr_t q_bytearraymatcher_index_in(const void* self, const char* str, intptr_t len) {
+    return QByteArrayMatcher_IndexIn((QByteArrayMatcher*)self, str, len);
 }
 
 intptr_t q_bytearraymatcher_index_in2(const void* self, const char* data) {
@@ -48,8 +48,8 @@ const char* q_bytearraymatcher_pattern(const void* self) {
     return _ret;
 }
 
-intptr_t q_bytearraymatcher_index_in3(const void* self, const char* str, intptr_t lenVal, intptr_t from) {
-    return QByteArrayMatcher_IndexIn3((QByteArrayMatcher*)self, str, lenVal, from);
+intptr_t q_bytearraymatcher_index_in3(const void* self, const char* str, intptr_t len, intptr_t from) {
+    return QByteArrayMatcher_IndexIn3((QByteArrayMatcher*)self, str, len, from);
 }
 
 intptr_t q_bytearraymatcher_index_in22(const void* self, const char* data, intptr_t from) {

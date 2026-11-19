@@ -179,8 +179,8 @@ bool QIODevice_IsTransactionStarted(const QIODevice* self) {
     return self->isTransactionStarted();
 }
 
-long long QIODevice_Write(QIODevice* self, const char* data, long long lenVal) {
-    return static_cast<long long>(self->write(data, static_cast<qint64>(lenVal)));
+long long QIODevice_Write(QIODevice* self, const char* data, long long len) {
+    return static_cast<long long>(self->write(data, static_cast<qint64>(len)));
 }
 
 long long QIODevice_Write2(QIODevice* self, const char* data) {
@@ -347,10 +347,10 @@ long long QIODevice_SkipData(QIODevice* self, long long maxSize) {
     qFatal("Error: Protected method QIODevice::skipData called without a directly constructed type");
 }
 
-long long QIODevice_WriteData(QIODevice* self, const char* data, long long lenVal) {
+long long QIODevice_WriteData(QIODevice* self, const char* data, long long len) {
     auto* vqiodevice = dynamic_cast<VirtualQIODevice*>(self);
     if (vqiodevice) {
-        return static_cast<long long>(vqiodevice->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqiodevice->writeData(data, static_cast<qint64>(len)));
     }
     qFatal("Error: Protected method QIODevice::writeData called without a directly constructed type");
 }

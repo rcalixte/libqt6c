@@ -1043,9 +1043,9 @@ bool k_process_is_transaction_started(const void* self);
 ///
 /// @param self KProcess*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t k_process_write(void* self, const char* data, int64_t lenVal);
+int64_t k_process_write(void* self, const char* data, int64_t len);
 
 /// Inherited from QIODevice
 ///
@@ -1931,9 +1931,9 @@ void k_process_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_
 ///
 /// @param self KProcess*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t k_process_write_data(void* self, const char* data, int64_t lenVal);
+int64_t k_process_write_data(void* self, const char* data, int64_t len);
 
 /// Inherited from QProcess
 ///
@@ -1943,9 +1943,9 @@ int64_t k_process_write_data(void* self, const char* data, int64_t lenVal);
 ///
 /// @param self KProcess*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t k_process_super_write_data(void* self, const char* data, int64_t lenVal);
+int64_t k_process_super_write_data(void* self, const char* data, int64_t len);
 
 /// Inherited from QProcess
 ///
@@ -1954,7 +1954,7 @@ int64_t k_process_super_write_data(void* self, const char* data, int64_t lenVal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback int64_t func(KProcess* self, const char* data, int64_t lenVal)
+/// @param callback int64_t func(KProcess* self, const char* data, int64_t len)
 ///
 void k_process_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 

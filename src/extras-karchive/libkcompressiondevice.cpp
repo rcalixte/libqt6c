@@ -90,10 +90,10 @@ long long KCompressionDevice_ReadData(KCompressionDevice* self, char* data, long
     qFatal("Error: Protected method KCompressionDevice::readData called without a directly constructed type");
 }
 
-long long KCompressionDevice_WriteData(KCompressionDevice* self, const char* data, long long lenVal) {
+long long KCompressionDevice_WriteData(KCompressionDevice* self, const char* data, long long len) {
     auto* vkcompressiondevice = dynamic_cast<VirtualKCompressionDevice*>(self);
     if (vkcompressiondevice) {
-        return static_cast<long long>(vkcompressiondevice->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vkcompressiondevice->writeData(data, static_cast<qint64>(len)));
     }
     qFatal("Error: Protected method KCompressionDevice::writeData called without a directly constructed type");
 }
@@ -190,9 +190,9 @@ void KCompressionDevice_OnReadData(KCompressionDevice* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-long long KCompressionDevice_SuperWriteData(KCompressionDevice* self, const char* data, long long lenVal) {
+long long KCompressionDevice_SuperWriteData(KCompressionDevice* self, const char* data, long long len) {
     if (auto* vkcompressiondevice = dynamic_cast<VirtualKCompressionDevice*>(self)) {
-        return static_cast<long long>(vkcompressiondevice->KCompressionDevice::writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vkcompressiondevice->KCompressionDevice::writeData(data, static_cast<qint64>(len)));
     } else
         qFatal("Error: Protected virtual method KCompressionDevice::writeData called without a directly constructed type");
 }

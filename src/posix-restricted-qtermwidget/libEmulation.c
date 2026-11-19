@@ -165,12 +165,12 @@ void k_onsole__emulation_on_send_string(void* self, void (*callback)(void*, cons
     Konsole__Emulation_OnSendString((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_receive_data(void* self, const char* buffer, int lenVal) {
-    Konsole__Emulation_ReceiveData((Konsole__Emulation*)self, buffer, lenVal);
+void k_onsole__emulation_receive_data(void* self, const char* buffer, int len) {
+    Konsole__Emulation_ReceiveData((Konsole__Emulation*)self, buffer, len);
 }
 
-void k_onsole__emulation_send_data(void* self, const char* data, int lenVal) {
-    Konsole__Emulation_SendData((Konsole__Emulation*)self, data, lenVal);
+void k_onsole__emulation_send_data(void* self, const char* data, int len) {
+    Konsole__Emulation_SendData((Konsole__Emulation*)self, data, len);
 }
 
 void k_onsole__emulation_on_send_data(void* self, void (*callback)(void*, const char*, int)) {

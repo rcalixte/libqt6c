@@ -147,16 +147,16 @@ int64_t k_compressiondevice_super_read_data(void* self, char* data, int64_t maxl
     return KCompressionDevice_SuperReadData((KCompressionDevice*)self, data, maxlen);
 }
 
-int64_t k_compressiondevice_write_data(void* self, const char* data, int64_t lenVal) {
-    return KCompressionDevice_WriteData((KCompressionDevice*)self, data, lenVal);
+int64_t k_compressiondevice_write_data(void* self, const char* data, int64_t len) {
+    return KCompressionDevice_WriteData((KCompressionDevice*)self, data, len);
 }
 
 void k_compressiondevice_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {
     KCompressionDevice_OnWriteData((KCompressionDevice*)self, (intptr_t)callback);
 }
 
-int64_t k_compressiondevice_super_write_data(void* self, const char* data, int64_t lenVal) {
-    return KCompressionDevice_SuperWriteData((KCompressionDevice*)self, data, lenVal);
+int64_t k_compressiondevice_super_write_data(void* self, const char* data, int64_t len) {
+    return KCompressionDevice_SuperWriteData((KCompressionDevice*)self, data, len);
 }
 
 KFilterBase* k_compressiondevice_filter_base(void* self) {
@@ -274,8 +274,8 @@ bool k_compressiondevice_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-int64_t k_compressiondevice_write(void* self, const char* data, int64_t lenVal) {
-    return QIODevice_Write((QIODevice*)self, data, lenVal);
+int64_t k_compressiondevice_write(void* self, const char* data, int64_t len) {
+    return QIODevice_Write((QIODevice*)self, data, len);
 }
 
 int64_t k_compressiondevice_write2(void* self, const char* data) {

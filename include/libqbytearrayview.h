@@ -22,5 +22,5 @@ intptr_t q_bytearrayview_max_size2();
 /// @param len intptr_t
 /// @param standard enum Qt__ChecksumType
 ///
-uint16_t q_qbytearrayview_q_checksum(const char* s, intptr_t _len, int32_t standard);
+uint16_t q_qbytearrayview_q_checksum(const char* s, intptr_t len, int32_t standard);
 #endif

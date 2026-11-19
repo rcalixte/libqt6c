@@ -18,8 +18,8 @@ QChar* k_charsets_from_entity(const char* str) {
     return KCharsets_FromEntity(qstring(str));
 }
 
-QChar* k_charsets_from_entity2(const char* str, int* lenVal) {
-    return KCharsets_FromEntity2(qstring(str), lenVal);
+QChar* k_charsets_from_entity2(const char* str, int* len) {
+    return KCharsets_FromEntity2(qstring(str), len);
 }
 
 const char* k_charsets_to_entity(const void* ch) {

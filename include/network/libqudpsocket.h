@@ -182,11 +182,11 @@ int64_t q_udpsocket_write_datagram(void* self, const void* datagram);
 ///
 /// @param self QUdpSocket*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 /// @param host QHostAddress*
 /// @param port uint16_t
 ///
-int64_t q_udpsocket_write_datagram2(void* self, const char* data, int64_t lenVal, const void* host, uint16_t port);
+int64_t q_udpsocket_write_datagram2(void* self, const char* data, int64_t len, const void* host, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qudpsocket.html#writeDatagram)
 ///
@@ -762,9 +762,9 @@ bool q_udpsocket_is_transaction_started(const void* self);
 ///
 /// @param self QUdpSocket*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_udpsocket_write(void* self, const char* data, int64_t lenVal);
+int64_t q_udpsocket_write(void* self, const char* data, int64_t len);
 
 /// Inherited from QIODevice
 ///
@@ -2054,9 +2054,9 @@ void q_udpsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 ///
 /// @param self QUdpSocket*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_udpsocket_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_udpsocket_write_data(void* self, const char* data, int64_t len);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2066,9 +2066,9 @@ int64_t q_udpsocket_write_data(void* self, const char* data, int64_t lenVal);
 ///
 /// @param self QUdpSocket*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_udpsocket_super_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_udpsocket_super_write_data(void* self, const char* data, int64_t len);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2077,7 +2077,7 @@ int64_t q_udpsocket_super_write_data(void* self, const char* data, int64_t lenVa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback int64_t func(QUdpSocket* self, const char* data, int64_t lenVal)
+/// @param callback int64_t func(QUdpSocket* self, const char* data, int64_t len)
 ///
 void q_udpsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 

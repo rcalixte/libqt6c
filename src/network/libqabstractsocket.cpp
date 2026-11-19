@@ -307,10 +307,10 @@ long long QAbstractSocket_SkipData(QAbstractSocket* self, long long maxSize) {
     qFatal("Error: Protected method QAbstractSocket::skipData called without a directly constructed type");
 }
 
-long long QAbstractSocket_WriteData(QAbstractSocket* self, const char* data, long long lenVal) {
+long long QAbstractSocket_WriteData(QAbstractSocket* self, const char* data, long long len) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket) {
-        return static_cast<long long>(vqabstractsocket->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqabstractsocket->writeData(data, static_cast<qint64>(len)));
     }
     qFatal("Error: Protected method QAbstractSocket::writeData called without a directly constructed type");
 }
@@ -592,9 +592,9 @@ void QAbstractSocket_OnSkipData(QAbstractSocket* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-long long QAbstractSocket_SuperWriteData(QAbstractSocket* self, const char* data, long long lenVal) {
+long long QAbstractSocket_SuperWriteData(QAbstractSocket* self, const char* data, long long len) {
     if (auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self)) {
-        return static_cast<long long>(vqabstractsocket->QAbstractSocket::writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqabstractsocket->QAbstractSocket::writeData(data, static_cast<qint64>(len)));
     } else
         qFatal("Error: Protected virtual method QAbstractSocket::writeData called without a directly constructed type");
 }

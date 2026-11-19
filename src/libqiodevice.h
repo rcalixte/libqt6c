@@ -504,9 +504,9 @@ bool q_iodevice_is_transaction_started(const void* self);
 ///
 /// @param self QIODevice*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_iodevice_write(void* self, const char* data, int64_t lenVal);
+int64_t q_iodevice_write(void* self, const char* data, int64_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
@@ -784,16 +784,16 @@ int64_t q_iodevice_super_skip_data(void* self, int64_t maxSize);
 ///
 /// @param self QIODevice*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_iodevice_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_iodevice_write_data(void* self, const char* data, int64_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#writeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback int64_t func(QIODevice* self, const char* data, int64_t lenVal)
+/// @param callback int64_t func(QIODevice* self, const char* data, int64_t len)
 ///
 void q_iodevice_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 

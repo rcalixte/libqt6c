@@ -186,9 +186,9 @@ bool q_translator_load2(void* self, const void* locale, const char* filename);
 ///
 /// @param self QTranslator*
 /// @param data unsigned char*
-/// @param lenVal int
+/// @param len int
 ///
-bool q_translator_load3(void* self, unsigned char* data, int lenVal);
+bool q_translator_load3(void* self, unsigned char* data, int len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -270,10 +270,10 @@ bool q_translator_load5(void* self, const void* locale, const char* filename, co
 ///
 /// @param self QTranslator*
 /// @param data unsigned char*
-/// @param lenVal int
+/// @param len int
 /// @param directory const char*
 ///
-bool q_translator_load34(void* self, unsigned char* data, int lenVal, const char* directory);
+bool q_translator_load34(void* self, unsigned char* data, int len, const char* directory);
 
 /// Inherited from QObject
 ///

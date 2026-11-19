@@ -19,9 +19,9 @@ QRandomGenerator* q_randomgenerator_new();
 /// q_randomgenerator_new2 constructs a new QRandomGenerator object.
 ///
 /// @param seedBuffer uint32_t*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 ///
-QRandomGenerator* q_randomgenerator_new2(uint32_t* seedBuffer, intptr_t lenVal);
+QRandomGenerator* q_randomgenerator_new2(uint32_t* seedBuffer, intptr_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html)
 
@@ -245,9 +245,9 @@ QRandomGenerator64* q_randomgenerator64_new();
 /// q_randomgenerator64_new2 constructs a new QRandomGenerator64 object.
 ///
 /// @param seedBuffer uint32_t*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 ///
-QRandomGenerator64* q_randomgenerator64_new2(uint32_t* seedBuffer, intptr_t lenVal);
+QRandomGenerator64* q_randomgenerator64_new2(uint32_t* seedBuffer, intptr_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator64.html)
 

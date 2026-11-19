@@ -371,14 +371,14 @@ class VirtualQTcpSocket final : public QTcpSocket {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual qint64 writeData(const char* data, qint64 lenVal) override {
+    virtual qint64 writeData(const char* data, qint64 len) override {
         if (qtcpsocket_writedata_callback) {
             const char* cbval1 = (const char*)data;
-            long long cbval2 = static_cast<long long>(lenVal);
+            long long cbval2 = static_cast<long long>(len);
             long long callback_ret = qtcpsocket_writedata_callback(this, cbval1, cbval2);
             return static_cast<qint64>(callback_ret);
         }
-        return QTcpSocket::writeData(data, lenVal);
+        return QTcpSocket::writeData(data, len);
     }
 
     // Virtual method for C ABI access and custom callback
@@ -525,7 +525,7 @@ class VirtualQTcpSocket final : public QTcpSocket {
     friend long long QTcpSocket_SuperReadData(QTcpSocket* self, char* data, long long maxlen);
     friend long long QTcpSocket_SuperReadLineData(QTcpSocket* self, char* data, long long maxlen);
     friend long long QTcpSocket_SuperSkipData(QTcpSocket* self, long long maxSize);
-    friend long long QTcpSocket_SuperWriteData(QTcpSocket* self, const char* data, long long lenVal);
+    friend long long QTcpSocket_SuperWriteData(QTcpSocket* self, const char* data, long long len);
     friend void QTcpSocket_SuperTimerEvent(QTcpSocket* self, QTimerEvent* event);
     friend void QTcpSocket_SuperChildEvent(QTcpSocket* self, QChildEvent* event);
     friend void QTcpSocket_SuperCustomEvent(QTcpSocket* self, QEvent* event);

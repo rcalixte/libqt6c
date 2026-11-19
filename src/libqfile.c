@@ -403,8 +403,8 @@ bool q_file_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-int64_t q_file_write(void* self, const char* data, int64_t lenVal) {
-    return QIODevice_Write((QIODevice*)self, data, lenVal);
+int64_t q_file_write(void* self, const char* data, int64_t len) {
+    return QIODevice_Write((QIODevice*)self, data, len);
 }
 
 int64_t q_file_write2(void* self, const char* data) {
@@ -785,12 +785,12 @@ void q_file_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t))
     QFile_OnReadData((QFile*)self, (intptr_t)callback);
 }
 
-int64_t q_file_write_data(void* self, const char* data, int64_t lenVal) {
-    return QFile_WriteData((QFile*)self, data, lenVal);
+int64_t q_file_write_data(void* self, const char* data, int64_t len) {
+    return QFile_WriteData((QFile*)self, data, len);
 }
 
-int64_t q_file_super_write_data(void* self, const char* data, int64_t lenVal) {
-    return QFile_SuperWriteData((QFile*)self, data, lenVal);
+int64_t q_file_super_write_data(void* self, const char* data, int64_t len) {
+    return QFile_SuperWriteData((QFile*)self, data, len);
 }
 
 void q_file_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {

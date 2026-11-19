@@ -98,9 +98,9 @@ QModelRoleDataSpan* q_modelroledataspan_new4(void* modelRoleData);
 /// q_modelroledataspan_new5 constructs a new QModelRoleDataSpan object.
 ///
 /// @param modelRoleData QModelRoleData*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 ///
-QModelRoleDataSpan* q_modelroledataspan_new5(void* modelRoleData, intptr_t lenVal);
+QModelRoleDataSpan* q_modelroledataspan_new5(void* modelRoleData, intptr_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmodelroledataspan.html)
 

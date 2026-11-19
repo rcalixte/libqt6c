@@ -825,9 +825,9 @@ bool q_image_load_from_data(void* self, const char* data);
 ///
 /// @param self QImage*
 /// @param buf unsigned char*
-/// @param lenVal int
+/// @param len int
 ///
-bool q_image_load_from_data2(void* self, unsigned char* buf, int lenVal);
+bool q_image_load_from_data2(void* self, unsigned char* buf, int len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///
@@ -1279,10 +1279,10 @@ bool q_image_load_from_data22(void* self, const char* data, const char* format);
 ///
 /// @param self QImage*
 /// @param buf unsigned char*
-/// @param lenVal int
+/// @param len int
 /// @param format const char*
 ///
-bool q_image_load_from_data32(void* self, unsigned char* buf, int lenVal, const char* format);
+bool q_image_load_from_data32(void* self, unsigned char* buf, int len, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///

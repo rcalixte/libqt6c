@@ -111,8 +111,8 @@ int64_t q_udpsocket_write_datagram(void* self, const void* datagram) {
     return QUdpSocket_WriteDatagram((QUdpSocket*)self, (QNetworkDatagram*)datagram);
 }
 
-int64_t q_udpsocket_write_datagram2(void* self, const char* data, int64_t lenVal, const void* host, uint16_t port) {
-    return QUdpSocket_WriteDatagram2((QUdpSocket*)self, data, lenVal, (QHostAddress*)host, port);
+int64_t q_udpsocket_write_datagram2(void* self, const char* data, int64_t len, const void* host, uint16_t port) {
+    return QUdpSocket_WriteDatagram2((QUdpSocket*)self, data, len, (QHostAddress*)host, port);
 }
 
 int64_t q_udpsocket_write_datagram3(void* self, const char* datagram, const void* host, uint16_t port) {
@@ -392,8 +392,8 @@ bool q_udpsocket_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-int64_t q_udpsocket_write(void* self, const char* data, int64_t lenVal) {
-    return QIODevice_Write((QIODevice*)self, data, lenVal);
+int64_t q_udpsocket_write(void* self, const char* data, int64_t len) {
+    return QIODevice_Write((QIODevice*)self, data, len);
 }
 
 int64_t q_udpsocket_write2(void* self, const char* data) {
@@ -930,12 +930,12 @@ void q_udpsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t)) {
     QUdpSocket_OnSkipData((QUdpSocket*)self, (intptr_t)callback);
 }
 
-int64_t q_udpsocket_write_data(void* self, const char* data, int64_t lenVal) {
-    return QUdpSocket_WriteData((QUdpSocket*)self, data, lenVal);
+int64_t q_udpsocket_write_data(void* self, const char* data, int64_t len) {
+    return QUdpSocket_WriteData((QUdpSocket*)self, data, len);
 }
 
-int64_t q_udpsocket_super_write_data(void* self, const char* data, int64_t lenVal) {
-    return QUdpSocket_SuperWriteData((QUdpSocket*)self, data, lenVal);
+int64_t q_udpsocket_super_write_data(void* self, const char* data, int64_t len) {
+    return QUdpSocket_SuperWriteData((QUdpSocket*)self, data, len);
 }
 
 void q_udpsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {

@@ -286,9 +286,9 @@ bool q_pixmap_load(void* self, const char* fileName);
 ///
 /// @param self QPixmap*
 /// @param buf unsigned char*
-/// @param lenVal uint32_t
+/// @param len uint32_t
 ///
-bool q_pixmap_load_from_data(void* self, unsigned char* buf, uint32_t lenVal);
+bool q_pixmap_load_from_data(void* self, unsigned char* buf, uint32_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#loadFromData)
 ///
@@ -557,20 +557,20 @@ bool q_pixmap_load3(void* self, const char* fileName, const char* format, int32_
 ///
 /// @param self QPixmap*
 /// @param buf unsigned char*
-/// @param lenVal uint32_t
+/// @param len uint32_t
 /// @param format const char*
 ///
-bool q_pixmap_load_from_data3(void* self, unsigned char* buf, uint32_t lenVal, const char* format);
+bool q_pixmap_load_from_data3(void* self, unsigned char* buf, uint32_t len, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#loadFromData)
 ///
 /// @param self QPixmap*
 /// @param buf unsigned char*
-/// @param lenVal uint32_t
+/// @param len uint32_t
 /// @param format const char*
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-bool q_pixmap_load_from_data4(void* self, unsigned char* buf, uint32_t lenVal, const char* format, int32_t flags);
+bool q_pixmap_load_from_data4(void* self, unsigned char* buf, uint32_t len, const char* format, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#loadFromData)
 ///

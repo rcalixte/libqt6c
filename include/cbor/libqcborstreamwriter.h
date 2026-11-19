@@ -110,17 +110,17 @@ void q_cborstreamwriter_append13(void* self, double d);
 ///
 /// @param self QCborStreamWriter*
 /// @param data const char*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 ///
-void q_cborstreamwriter_append_byte_string(void* self, const char* data, intptr_t lenVal);
+void q_cborstreamwriter_append_byte_string(void* self, const char* data, intptr_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#appendTextString)
 ///
 /// @param self QCborStreamWriter*
 /// @param utf8 const char*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 ///
-void q_cborstreamwriter_append_text_string(void* self, const char* utf8, intptr_t lenVal);
+void q_cborstreamwriter_append_text_string(void* self, const char* utf8, intptr_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///

@@ -394,19 +394,19 @@ void KProcess_OnReadData(KProcess* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-long long KProcess_WriteData(KProcess* self, const char* data, long long lenVal) {
+long long KProcess_WriteData(KProcess* self, const char* data, long long len) {
     auto* vkprocess = dynamic_cast<VirtualKProcess*>(self);
     if (vkprocess) {
-        return static_cast<long long>(vkprocess->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vkprocess->writeData(data, static_cast<qint64>(len)));
     } else {
         qFatal("Error: Protected virtual method KProcess::writeData called without a directly constructed type");
     }
 }
 
 // Base class handler implementation
-long long KProcess_SuperWriteData(KProcess* self, const char* data, long long lenVal) {
+long long KProcess_SuperWriteData(KProcess* self, const char* data, long long len) {
     if (auto* vkprocess = dynamic_cast<VirtualKProcess*>(self)) {
-        return static_cast<long long>(vkprocess->KProcess::writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vkprocess->KProcess::writeData(data, static_cast<qint64>(len)));
     } else
         qFatal("Error: Protected virtual method KProcess::writeData called without a directly constructed type");
 }

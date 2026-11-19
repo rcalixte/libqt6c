@@ -47,7 +47,7 @@ QModelRoleDataSpan* QModelRoleDataSpan_New(const QModelRoleDataSpan* other);
 QModelRoleDataSpan* QModelRoleDataSpan_New2(QModelRoleDataSpan* other);
 QModelRoleDataSpan* QModelRoleDataSpan_New3();
 QModelRoleDataSpan* QModelRoleDataSpan_New4(QModelRoleData* modelRoleData);
-QModelRoleDataSpan* QModelRoleDataSpan_New5(QModelRoleData* modelRoleData, ptrdiff_t lenVal);
+QModelRoleDataSpan* QModelRoleDataSpan_New5(QModelRoleData* modelRoleData, ptrdiff_t len);
 QModelRoleDataSpan* QModelRoleDataSpan_New6(const QModelRoleDataSpan* param1);
 void QModelRoleDataSpan_CopyAssign(QModelRoleDataSpan* self, QModelRoleDataSpan* other);
 void QModelRoleDataSpan_MoveAssign(QModelRoleDataSpan* self, QModelRoleDataSpan* other);

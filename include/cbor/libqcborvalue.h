@@ -615,16 +615,16 @@ QCborValue* q_cborvalue_from_cbor2(const char* ba);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// @param data const char*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 ///
-QCborValue* q_cborvalue_from_cbor3(const char* data, intptr_t lenVal);
+QCborValue* q_cborvalue_from_cbor3(const char* data, intptr_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// @param data unsigned char*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 ///
-QCborValue* q_cborvalue_from_cbor4(unsigned char* data, intptr_t lenVal);
+QCborValue* q_cborvalue_from_cbor4(unsigned char* data, intptr_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
@@ -751,18 +751,18 @@ QCborValue* q_cborvalue_from_cbor22(const char* ba, void* error);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// @param data const char*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 /// @param error QCborParserError*
 ///
-QCborValue* q_cborvalue_from_cbor32(const char* data, intptr_t lenVal, void* error);
+QCborValue* q_cborvalue_from_cbor32(const char* data, intptr_t len, void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// @param data unsigned char*
-/// @param lenVal intptr_t
+/// @param len intptr_t
 /// @param error QCborParserError*
 ///
-QCborValue* q_cborvalue_from_cbor33(unsigned char* data, intptr_t lenVal, void* error);
+QCborValue* q_cborvalue_from_cbor33(unsigned char* data, intptr_t len, void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///

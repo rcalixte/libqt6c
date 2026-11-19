@@ -109,8 +109,8 @@ bool q_translator_load2(void* self, const void* locale, const char* filename) {
     return QTranslator_Load2((QTranslator*)self, (QLocale*)locale, qstring(filename));
 }
 
-bool q_translator_load3(void* self, unsigned char* data, int lenVal) {
-    return QTranslator_Load3((QTranslator*)self, data, lenVal);
+bool q_translator_load3(void* self, unsigned char* data, int len) {
+    return QTranslator_Load3((QTranslator*)self, data, len);
 }
 
 const char* q_translator_tr2(const char* s, const char* c) {
@@ -151,8 +151,8 @@ bool q_translator_load5(void* self, const void* locale, const char* filename, co
     return QTranslator_Load5((QTranslator*)self, (QLocale*)locale, qstring(filename), qstring(prefix), qstring(directory), qstring(suffix));
 }
 
-bool q_translator_load34(void* self, unsigned char* data, int lenVal, const char* directory) {
-    return QTranslator_Load34((QTranslator*)self, data, lenVal, qstring(directory));
+bool q_translator_load34(void* self, unsigned char* data, int len, const char* directory) {
+    return QTranslator_Load34((QTranslator*)self, data, len, qstring(directory));
 }
 
 const char* q_translator_object_name(const void* self) {

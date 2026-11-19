@@ -734,9 +734,9 @@ bool q_file_is_transaction_started(const void* self);
 ///
 /// @param self QFile*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_file_write(void* self, const char* data, int64_t lenVal);
+int64_t q_file_write(void* self, const char* data, int64_t len);
 
 /// Inherited from QIODevice
 ///
@@ -1587,9 +1587,9 @@ void q_file_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t))
 ///
 /// @param self QFile*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_file_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_file_write_data(void* self, const char* data, int64_t len);
 
 /// Inherited from QFileDevice
 ///
@@ -1599,9 +1599,9 @@ int64_t q_file_write_data(void* self, const char* data, int64_t lenVal);
 ///
 /// @param self QFile*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_file_super_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_file_super_write_data(void* self, const char* data, int64_t len);
 
 /// Inherited from QFileDevice
 ///
@@ -1610,7 +1610,7 @@ int64_t q_file_super_write_data(void* self, const char* data, int64_t lenVal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFile*
-/// @param callback int64_t func(QFile* self, const char* data, int64_t lenVal)
+/// @param callback int64_t func(QFile* self, const char* data, int64_t len)
 ///
 void q_file_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 

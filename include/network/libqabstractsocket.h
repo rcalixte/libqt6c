@@ -821,16 +821,16 @@ int64_t q_abstractsocket_super_skip_data(void* self, int64_t maxSize);
 ///
 /// @param self QAbstractSocket*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_abstractsocket_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_abstractsocket_write_data(void* self, const char* data, int64_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#writeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback int64_t func(QAbstractSocket* self, const char* data, int64_t lenVal)
+/// @param callback int64_t func(QAbstractSocket* self, const char* data, int64_t len)
 ///
 void q_abstractsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
@@ -840,9 +840,9 @@ void q_abstractsocket_on_write_data(void* self, int64_t (*callback)(void*, const
 ///
 /// @param self QAbstractSocket*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_abstractsocket_super_write_data(void* self, const char* data, int64_t lenVal);
+int64_t q_abstractsocket_super_write_data(void* self, const char* data, int64_t len);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketState)
 ///
@@ -1134,9 +1134,9 @@ bool q_abstractsocket_is_transaction_started(const void* self);
 ///
 /// @param self QAbstractSocket*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param len int64_t
 ///
-int64_t q_abstractsocket_write(void* self, const char* data, int64_t lenVal);
+int64_t q_abstractsocket_write(void* self, const char* data, int64_t len);
 
 /// Inherited from QIODevice
 ///

@@ -339,9 +339,9 @@ bool q_bitmap_load(void* self, const char* fileName);
 ///
 /// @param self QBitmap*
 /// @param buf unsigned char*
-/// @param lenVal uint32_t
+/// @param len uint32_t
 ///
-bool q_bitmap_load_from_data(void* self, unsigned char* buf, uint32_t lenVal);
+bool q_bitmap_load_from_data(void* self, unsigned char* buf, uint32_t len);
 
 /// Inherited from QPixmap
 ///
@@ -602,10 +602,10 @@ bool q_bitmap_load3(void* self, const char* fileName, const char* format, int32_
 ///
 /// @param self QBitmap*
 /// @param buf unsigned char*
-/// @param lenVal uint32_t
+/// @param len uint32_t
 /// @param format const char*
 ///
-bool q_bitmap_load_from_data3(void* self, unsigned char* buf, uint32_t lenVal, const char* format);
+bool q_bitmap_load_from_data3(void* self, unsigned char* buf, uint32_t len, const char* format);
 
 /// Inherited from QPixmap
 ///
@@ -613,11 +613,11 @@ bool q_bitmap_load_from_data3(void* self, unsigned char* buf, uint32_t lenVal, c
 ///
 /// @param self QBitmap*
 /// @param buf unsigned char*
-/// @param lenVal uint32_t
+/// @param len uint32_t
 /// @param format const char*
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-bool q_bitmap_load_from_data4(void* self, unsigned char* buf, uint32_t lenVal, const char* format, int32_t flags);
+bool q_bitmap_load_from_data4(void* self, unsigned char* buf, uint32_t len, const char* format, int32_t flags);
 
 /// Inherited from QPixmap
 ///

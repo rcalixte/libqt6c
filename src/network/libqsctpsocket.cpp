@@ -433,19 +433,19 @@ void QSctpSocket_OnSkipData(QSctpSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-long long QSctpSocket_WriteData(QSctpSocket* self, const char* data, long long lenVal) {
+long long QSctpSocket_WriteData(QSctpSocket* self, const char* data, long long len) {
     auto* vqsctpsocket = dynamic_cast<VirtualQSctpSocket*>(self);
     if (vqsctpsocket) {
-        return static_cast<long long>(vqsctpsocket->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqsctpsocket->writeData(data, static_cast<qint64>(len)));
     } else {
         qFatal("Error: Protected virtual method QSctpSocket::writeData called without a directly constructed type");
     }
 }
 
 // Base class handler implementation
-long long QSctpSocket_SuperWriteData(QSctpSocket* self, const char* data, long long lenVal) {
+long long QSctpSocket_SuperWriteData(QSctpSocket* self, const char* data, long long len) {
     if (auto* vqsctpsocket = dynamic_cast<VirtualQSctpSocket*>(self)) {
-        return static_cast<long long>(vqsctpsocket->QSctpSocket::writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(vqsctpsocket->QSctpSocket::writeData(data, static_cast<qint64>(len)));
     } else
         qFatal("Error: Protected virtual method QSctpSocket::writeData called without a directly constructed type");
 }

@@ -286,8 +286,8 @@ bool q_iodevice_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-int64_t q_iodevice_write(void* self, const char* data, int64_t lenVal) {
-    return QIODevice_Write((QIODevice*)self, data, lenVal);
+int64_t q_iodevice_write(void* self, const char* data, int64_t len) {
+    return QIODevice_Write((QIODevice*)self, data, len);
 }
 
 int64_t q_iodevice_write2(void* self, const char* data) {
@@ -436,8 +436,8 @@ int64_t q_iodevice_super_skip_data(void* self, int64_t maxSize) {
     return QIODevice_SuperSkipData((QIODevice*)self, maxSize);
 }
 
-int64_t q_iodevice_write_data(void* self, const char* data, int64_t lenVal) {
-    return QIODevice_WriteData((QIODevice*)self, data, lenVal);
+int64_t q_iodevice_write_data(void* self, const char* data, int64_t len) {
+    return QIODevice_WriteData((QIODevice*)self, data, len);
 }
 
 void q_iodevice_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {
